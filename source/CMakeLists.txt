@@ -34,6 +34,7 @@ IF(WIN32)
 		StateId.h 
 		TraceState.h 
 		ScriptGenerator.h
+		StateType.h
 	)
 	
 	source_group("Header Files" FILES *.h)

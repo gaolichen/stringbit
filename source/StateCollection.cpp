@@ -63,3 +63,15 @@ const TraceState& StateCollection::GetFermionState(int bits, int index) const
 {
 	return stateList[bits][2 * index + 1];
 }
+
+const TraceState& StateCollection::GetState(int bits, int index, StateType type) const
+{
+	if (type == Boson)
+	{
+		return GetBosonState(bits, index);
+	}
+	else
+	{
+		return GetFermionState(bits, index);
+	}
+}

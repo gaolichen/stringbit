@@ -6,16 +6,17 @@
 #include <fstream>
 using namespace std;
 
-ScriptGenerator::ScriptGenerator()
+ScriptGenerator::ScriptGenerator(string rootFolder, StateType stateType)
 {
-	// ..
+	this->rootFolder = rootFolder;
+	this->type = stateType;
 }
 
-void ScriptGenerator::OutputHamToMatlab(int bits, bool invert, string folder)
+void ScriptGenerator::OutputHamToMatlab(int bits, bool invert)
 {
 	Hamiltonian ham(1, invert);
 	vector<vector<Coefficient> > rem, imm;
-	ham.Matrix(bits, rem, imm);
+	ham.Matrix(bits, type, rem, imm);
 
 	string function;
 	if (!invert)
@@ -27,7 +28,7 @@ void ScriptGenerator::OutputHamToMatlab(int bits, bool invert, string folder)
 		function = "pham" + ToString(bits);
 	}
 
-	string file = folder + "\\" + function + ".m";
+	string file = rootFolder + "\\" + function + ".m";
 	ofstream ofs(file.c_str());
 	ofs << "function f = " << function << "(N)" << endl;
 	ofs << "f=[" << endl;
@@ -86,7 +87,7 @@ void ScriptGenerator::OutputHamToLaTeX(vector<int> bits, vector<double> scales, 
 		ofs << "\\[" << endl;
 
 		vector<vector<Coefficient> > rem, imm;
-		ham.Matrix(bits[i], rem, imm);
+		ham.Matrix(bits[i], type, rem, imm);
 		
 		string s(rem.size(), 'c');
 		ofs << "\\left(\\scalemath{" << scales[i] <<"}" << endl;
@@ -131,6 +132,11 @@ void ScriptGenerator::GroupStates(int bits, vector<vector<int> >& states)
 	StateCollection* sc = StateCollection::Inst();
 	int n = sc->StateNumber(bits);
 	int b = 0;
+	if (type == Fermion)
+	{
+		b = 1;
+	}
+
 	vector<int> v;
 	if (bits < 5)
 	{
@@ -144,13 +150,13 @@ void ScriptGenerator::GroupStates(int bits, vector<vector<int> >& states)
 	{
 		for (int j = 0; j < n; j++)
 		{
-			if (sc->GetBosonState(bits, j).FermionNumber() == b)
+			if (sc->GetState(bits, j, type).FermionNumber() == b)
 			{
 				v.push_back(j);
 			}
 			else
 			{
-				b = sc->GetBosonState(bits, j).FermionNumber();
+				b = sc->GetState(bits, j, type).FermionNumber();
 				states.push_back(v);
 				v.clear();
 				v.push_back(j);
@@ -232,7 +238,7 @@ void ScriptGenerator::OutputNormToLaTeX(int minBits, int maxBits, string filenam
 					{
 						ofs << " & "; 
 					}
-					ofs << calc.Calculate(sc->GetBosonState(i, states[j][k]), sc->GetBosonState(i, states[j][h])).ToLaTeX(i);
+					ofs << calc.Calculate(sc->GetState(i, states[j][k], type), sc->GetState(i, states[j][h], type)).ToLaTeX(i);
 				}
 
 				if (k + 1 != states[j].size())
@@ -258,7 +264,7 @@ void ScriptGenerator::OutputNormToLaTeX(int minBits, int maxBits, string filenam
 	ofs.close();
 }
 
-void ScriptGenerator::OutputStateToLaTeX(int minBit, int maxBit, int type, string filename)
+void ScriptGenerator::OutputStateToLaTeX(int minBit, int maxBit, string filename)
 {
 	ofstream ofs(filename.c_str());
 	ofs << "\\documentclass[english]{article}" << endl;
@@ -271,7 +277,7 @@ void ScriptGenerator::OutputStateToLaTeX(int minBit, int maxBit, int type, strin
 	for (int i = minBit; i <= maxBit; i++)
 	{
 		ofs << "\\subsection*{" << i << " bits}" << endl << endl;
-		if ((type & 1) == 1)
+		if (type == Boson)
 		{
 			ofs << StateCollection::Inst()->StateNumber(i) << " bosonic states" << endl;
 			ofs << "\\begin{itemize}" << endl;
@@ -283,7 +289,7 @@ void ScriptGenerator::OutputStateToLaTeX(int minBit, int maxBit, int type, strin
 			ofs << "\\end{itemize}" << endl;
 		}
 
-		if ((type & 2) == 2)
+		if (type == Fermion)
 		{
 			ofs << StateCollection::Inst()->StateNumber(i) << " fermionic states" << endl;
 			ofs << "\\begin{itemize}" << endl;
@@ -300,15 +306,16 @@ void ScriptGenerator::OutputStateToLaTeX(int minBit, int maxBit, int type, strin
 	ofs.close();
 }
 
-void ScriptGenerator::OutputNormToMatlab(int bits, string folder, bool output)
+void ScriptGenerator::OutputNormToMatlab(int bits)
 {
 	StateCollection* sc = StateCollection::Inst();
 	BruteForceCalculator calc;
 	vector<vector<int> > states;
 	GroupStates(bits, states);
 
+	bool output = (bits >= 10);
 	string function = "norm" + ToString(bits);
-	string file = folder + "\\" + function + ".m";
+	string file = rootFolder + "\\" + function + ".m";
 	ofstream ofs(file.c_str());
 	ofs << "function f = " << function << "(N)" << endl;
 	for (int i = 0; i < states.size(); i++)

@@ -82,7 +82,7 @@ void Hamiltonian::Apply(const TraceState& state, MixState& real, MixState& imagi
 	}
 }
 
-void Hamiltonian::Matrix(int bits, vector<vector<Coefficient> >& rem, vector<vector<Coefficient> >& imm)
+void Hamiltonian::Matrix(int bits, StateType type, vector<vector<Coefficient> >& rem, vector<vector<Coefficient> >& imm)
 {
 	int n = StateCollection::Inst()->StateNumber(bits);
 	map<StateId, Coefficient>::const_iterator it;
@@ -99,7 +99,7 @@ void Hamiltonian::Matrix(int bits, vector<vector<Coefficient> >& rem, vector<vec
 
 	for (int i = 0; i < n; i++)
 	{
-		const TraceState& state = StateCollection::Inst()->GetBosonState(bits, i);
+		const TraceState& state = StateCollection::Inst()->GetState(bits, i, type);
 		MixState re, im;
 		Apply(state, re, im);
 		for (it = re.Begin(); it != re.End(); ++it)

@@ -12,8 +12,12 @@
 #include "Hamiltonian.h"
 #include "NormCalculator.h"
 #include "ScriptGenerator.h"
+#include "StateType.h"
 
 using namespace std;
+
+//string scriptFolder = "E:\\Dropbox\\proj\\stringbit\\script";
+string scriptFolder = "D:\\proj\\stringbit\\temp";
 
 void TestHamiltonianMultiTrace(TraceState& state)
 {
@@ -41,7 +45,7 @@ void OutputHamiltonianMatrix(int bits)
 {
 	Hamiltonian ham;
 	vector<vector<Coefficient> > rem, imm;
-	ham.Matrix(bits, rem, imm);
+	ham.Matrix(bits, Boson, rem, imm);
 	cout << bits << " bits Hamiltonian: " <<endl;
 	//for (int i = 0; i < rem.size(); i++)
 	//{
@@ -66,7 +70,8 @@ void OutputHamToLatex()
 	int arr[6] = {2, 3, 4, 5, 6, 7};
 	double scale[6] = {1.0, 1.0, 1.0, 1, 0.57, 0.27};
 	vector<int> bits(arr, arr + 6);
-	ScriptGenerator sc;
+	StateType type = Boson;
+	ScriptGenerator sc(scriptFolder, type);
 	sc.OutputHamToLaTeX(bits, vector<double>(scale, scale + 6), "E:\\Dropbox\\proj\\stringbit\\hamiltonian.tex");
 }
 
@@ -111,47 +116,38 @@ void TestNormCalculator()
 }
 
 void GenerateMatlabScript()
-{
-	//string scriptFolder = "E:\\Dropbox\\proj\\stringbit\\script";
-	string scriptFolder = "D:\\proj\\stringbit\\temp";
-	ScriptGenerator sc;
+{	
+	ScriptGenerator sc(scriptFolder, Boson);
 
 	Stopwatch watch;
 	
 	watch.Start();
 	bool invert = false;
-	sc.OutputHamToMatlab(3, invert, scriptFolder);
-	sc.OutputHamToMatlab(4, invert, scriptFolder);
-	sc.OutputHamToMatlab(5, invert, scriptFolder);
-	sc.OutputHamToMatlab(6, invert, scriptFolder);
-	sc.OutputHamToMatlab(7, invert, scriptFolder);
-	sc.OutputHamToMatlab(8, invert, scriptFolder);
-	sc.OutputHamToMatlab(9, invert, scriptFolder);
-	sc.OutputHamToMatlab(10, invert, scriptFolder);
-	sc.OutputHamToMatlab(11, invert, scriptFolder);
+	StateType type = Boson;
+	for (int i = 3; i <= StateGenerator::MAX_BIT_TO_GENERATE; i++)
+	{
+		sc.OutputHamToMatlab(i, invert);
+	}
 
-	//sc.OutputNormToMatlab(3, scriptFolder, false);
-	//sc.OutputNormToMatlab(4, scriptFolder, false);
-	//sc.OutputNormToMatlab(5, scriptFolder, false);
-	//sc.OutputNormToMatlab(6, scriptFolder, false);
-	//sc.OutputNormToMatlab(7, scriptFolder, false);
-	//sc.OutputNormToMatlab(8, scriptFolder, false);
-	//sc.OutputNormToMatlab(9, scriptFolder, false);
-	//sc.OutputNormToMatlab(10, scriptFolder, true);
-	//sc.OutputNormToMatlab(11, scriptFolder, true);
+	//for (int i = 3; i <= StateGenerator::MAX_BIT_TO_GENERATE; i++)
+	for (int i = 3; i <= 9; i++)
+	{
+		//sc.OutputNormToMatlab(i);
+	}
 
 	cout << "Time: " << watch.Stop() << " seconds." << endl;
 }
 
 void GenerateLaTeX()
 {
-	//ScriptGenerator sg;
+	//ScriptGenerator sg1(scriptFolder, Boson);
+	//ScriptGenerator sg2(scriptFolder, Fermion);
 	//string filename = "E:\\Dropbox\\proj\\stringbit\\boson-states-1-7.tex";
-	//sg.OutputStateToLaTeX(1, 7, 1, filename);
+	//sg1.OutputStateToLaTeX(1, 7, filename);
 	//filename = "E:\\Dropbox\\proj\\stringbit\\fermion-states-1-7.tex";
-	//sg.OutputStateToLaTeX(1, 7, 2, filename);
+	//sg2.OutputStateToLaTeX(1, 7, filename);
 	//OutputHamToLatex();
-	//sg.OutputNormToLaTeX(2, 7, "E:\\Dropbox\\proj\\stringbit\\norms-2-7.tex");
+	//sg1.OutputNormToLaTeX(2, 7, "E:\\Dropbox\\proj\\stringbit\\norms-2-7.tex");
 }
 
 int main()

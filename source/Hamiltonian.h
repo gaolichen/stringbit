@@ -3,6 +3,7 @@
 #include "StateCollection.h"
 #include "SingleTrace.h"
 #include "TraceState.h"
+#include "StateType.h"
 
 class Hamiltonian
 {
@@ -18,5 +19,5 @@ public:
 	~Hamiltonian();
 
 	void Apply(const TraceState& state, MixState& real, MixState& imaginary);
-	void Matrix(int bits, vector<vector<Coefficient> >& rem, vector<vector<Coefficient> >& imm);
+	void Matrix(int bits, StateType type, vector<vector<Coefficient> >& rem, vector<vector<Coefficient> >& imm);
 };

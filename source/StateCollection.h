@@ -3,6 +3,7 @@
 #include <vector>
 #include "TraceState.h"
 #include "StateId.h"
+#include "StateType.h"
 using namespace std;
 
 class StateCollection
@@ -20,4 +21,5 @@ public:
 	int StateNumber(int bits) const;
 	const TraceState& GetBosonState(int bits, int index) const;
 	const TraceState& GetFermionState(int bits, int index) const;
+	const TraceState& GetState(int bits, int index, StateType type) const;
 };
