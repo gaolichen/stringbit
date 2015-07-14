@@ -17,7 +17,8 @@
 using namespace std;
 
 //string scriptFolder = "E:\\Dropbox\\proj\\stringbit\\script";
-string scriptFolder = "D:\\proj\\stringbit\\temp";
+//string scriptFolder = "D:\\proj\\stringbit\\temp";
+string scriptFolder = "D:\\proj\\stringbit\\matlab";
 
 void TestHamiltonianMultiTrace(TraceState& state)
 {
@@ -115,15 +116,14 @@ void TestNormCalculator()
 	cout << calc.Calculate(a, b) << endl;;
 }
 
-void GenerateMatlabScript()
+void GenerateMatlabScript(StateType type)
 {	
-	ScriptGenerator sc(scriptFolder, Boson);
+	ScriptGenerator sc(scriptFolder, type);
 
 	Stopwatch watch;
 	
 	watch.Start();
 	bool invert = false;
-	StateType type = Boson;
 	for (int i = 3; i <= StateGenerator::MAX_BIT_TO_GENERATE; i++)
 	{
 		sc.OutputHamToMatlab(i, invert);
@@ -132,7 +132,7 @@ void GenerateMatlabScript()
 	//for (int i = 3; i <= StateGenerator::MAX_BIT_TO_GENERATE; i++)
 	for (int i = 3; i <= 9; i++)
 	{
-		//sc.OutputNormToMatlab(i);
+		sc.OutputNormToMatlab(i);
 	}
 
 	cout << "Time: " << watch.Stop() << " seconds." << endl;
@@ -176,6 +176,7 @@ int main()
 	//OutputHamiltonianMatrix(11);
 
 	//GenerateLaTeX();
-	GenerateMatlabScript();
+	//GenerateMatlabScript(Fermion);
+	GenerateMatlabScript(Fermion);
 	return 0;
 }

@@ -8,7 +8,15 @@ using namespace std;
 
 ScriptGenerator::ScriptGenerator(string rootFolder, StateType stateType)
 {
-	this->rootFolder = rootFolder;
+	if (stateType == Boson)
+	{
+		this->rootFolder = rootFolder + "\\boson";
+	}
+	else
+	{
+		this->rootFolder = rootFolder + "\\fermion";
+	}
+
 	this->type = stateType;
 }
 
@@ -335,7 +343,7 @@ void ScriptGenerator::OutputNormToMatlab(int bits)
 				{
 					ofs << ", ";
 				}
-				ofs << calc.Calculate(sc->GetBosonState(bits, states[i][k]), sc->GetBosonState(bits, states[i][h])).ToMatlab(bits);
+				ofs << calc.Calculate(sc->GetState(bits, states[i][k], type), sc->GetState(bits, states[i][h], type)).ToMatlab(bits);
 			}
 
 			if (k + 1 != states[i].size())
