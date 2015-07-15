@@ -10,11 +10,11 @@ ScriptGenerator::ScriptGenerator(string rootFolder, StateType stateType)
 {
 	if (stateType == Boson)
 	{
-		this->rootFolder = rootFolder + "\\boson";
+		this->rootFolder = CombinePath(rootFolder, "boson");
 	}
 	else
 	{
-		this->rootFolder = rootFolder + "\\fermion";
+		this->rootFolder = CombinePath(rootFolder, "fermion");
 	}
 
 	this->type = stateType;
@@ -36,7 +36,7 @@ void ScriptGenerator::OutputHamToMatlab(int bits, bool invert)
 		function = "pham" + ToString(bits);
 	}
 
-	string file = rootFolder + "\\" + function + ".m";
+	string file = CombinePath(rootFolder, function + ".m");
 	ofstream ofs(file.c_str());
 	ofs << "function f = " << function << "(N)" << endl;
 	ofs << "f=[" << endl;
@@ -323,7 +323,7 @@ void ScriptGenerator::OutputNormToMatlab(int bits)
 
 	bool output = (bits >= 10);
 	string function = "norm" + ToString(bits);
-	string file = rootFolder + "\\" + function + ".m";
+	string file = CombinePath(rootFolder, function + ".m");
 	ofstream ofs(file.c_str());
 	ofs << "function f = " << function << "(N)" << endl;
 	for (int i = 0; i < states.size(); i++)

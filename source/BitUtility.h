@@ -21,6 +21,7 @@ int PickBits(int n, int bitNumber);
 int InverseNumber(const vector<int>& v);
 int BuildMask(int trace, int bitNumber);
 int Gcd(int a, int b);
+string CombinePath(string path1, string path2);
 
 template<class T> string ToString(T a)
 {

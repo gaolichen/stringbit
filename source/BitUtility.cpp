@@ -57,6 +57,11 @@ int Gcd(int a, int b)
 	return Gcd(b, a % b);
 }
 
+string CombinePath(string path1, string path2)
+{
+	return path1 + "/" + path2;
+}
+
 Stopwatch::Stopwatch()
 {
 	start = 0;

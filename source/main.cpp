@@ -16,9 +16,11 @@
 
 using namespace std;
 
-//string scriptFolder = "E:\\Dropbox\\proj\\stringbit\\script";
-//string scriptFolder = "D:\\proj\\stringbit\\temp";
+#if WIN32
 string scriptFolder = "D:\\proj\\stringbit\\matlab";
+#else
+string scriptFolder = ".";
+#endif
 
 void TestHamiltonianMultiTrace(TraceState& state)
 {
