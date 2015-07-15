@@ -17,7 +17,7 @@
 using namespace std;
 
 #if WIN32
-string scriptFolder = "D:\\proj\\stringbit\\matlab";
+string scriptFolder = ".";
 #else
 string scriptFolder = ".";
 #endif
@@ -118,23 +118,23 @@ void TestNormCalculator()
 	cout << calc.Calculate(a, b) << endl;;
 }
 
-void GenerateMatlabScript(StateType type)
+void GenerateMatlabScript(StateType type, bool inverted)
 {	
+	int xi = 1;
 	ScriptGenerator sc(scriptFolder, type);
+	Hamiltonian ham(xi, inverted);
 
 	Stopwatch watch;
-	
 	watch.Start();
-	bool invert = false;
 	for (int i = 3; i <= StateGenerator::MAX_BIT_TO_GENERATE; i++)
 	{
-		sc.OutputHamToMatlab(i, invert);
+		sc.OutputHamToMatlab(i, ham);
 	}
 
 	//for (int i = 3; i <= StateGenerator::MAX_BIT_TO_GENERATE; i++)
 	for (int i = 3; i <= 9; i++)
 	{
-		sc.OutputNormToMatlab(i);
+		//sc.OutputNormToMatlab(i);
 	}
 
 	cout << "Time: " << watch.Stop() << " seconds." << endl;
@@ -178,7 +178,7 @@ int main()
 	//OutputHamiltonianMatrix(11);
 
 	//GenerateLaTeX();
-	//GenerateMatlabScript(Fermion);
-	GenerateMatlabScript(Fermion);
+	GenerateMatlabScript(Fermion, true);
+	//GenerateMatlabScript(Boson, true);
 	return 0;
 }

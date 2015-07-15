@@ -3,18 +3,20 @@
 
 Hamiltonian::Hamiltonian()
 {
-	Init(1, false);
+	this->inverted = false;
+	Init(1);
 }
 
 Hamiltonian::Hamiltonian(int xi1, bool invert)
 {
-	Init(xi1, invert);
+	this->inverted = invert;
+	Init(xi1);
 }
 
-void Hamiltonian::Init(int xi1, bool invert)
+void Hamiltonian::Init(int xi1)
 {
 	int a = 1;
-	if (invert)
+	if (inverted)
 	{
 		a = -1;
 	}
@@ -40,7 +42,7 @@ void Hamiltonian::Init(int xi1, bool invert)
 	imaginaryOps.push_back(new HamOperatorA(HamOperator::AA, HamOperator::BB));
 	imPrefactor.push_back(2 * a);
 
-	if (invert)
+	if (inverted)
 	{
 		int i = (2 + 2* xi1 - 2) * a;
 		realOps.push_back(new HamOperatorB(HamOperator::AA, HamOperator::AA));

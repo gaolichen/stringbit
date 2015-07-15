@@ -20,14 +20,14 @@ ScriptGenerator::ScriptGenerator(string rootFolder, StateType stateType)
 	this->type = stateType;
 }
 
-void ScriptGenerator::OutputHamToMatlab(int bits, bool invert)
+void ScriptGenerator::OutputHamToMatlab(int bits, Hamiltonian& ham)
 {
-	Hamiltonian ham(1, invert);
+//	Hamiltonian ham(1, invert);
 	vector<vector<Coefficient> > rem, imm;
 	ham.Matrix(bits, type, rem, imm);
 
 	string function;
-	if (!invert)
+	if (!ham.Inverted())
 	{
 		function = "ham" + ToString(bits);
 	}
@@ -37,6 +37,7 @@ void ScriptGenerator::OutputHamToMatlab(int bits, bool invert)
 	}
 
 	string file = CombinePath(rootFolder, function + ".m");
+	cout << file << endl;
 	ofstream ofs(file.c_str());
 	ofs << "function f = " << function << "(N)" << endl;
 	ofs << "f=[" << endl;
