@@ -8,7 +8,7 @@ cmake_minimum_required (VERSION 2.8.7)
 
 
 project (stringbit)
-
+SET (CMAKE_BUILD_TYPE Release)
 
 # Recurse into the "Hello" and "Demo" subdirectories. This does not actually
 
