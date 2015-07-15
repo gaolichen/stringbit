@@ -120,7 +120,7 @@ void TestNormCalculator()
 
 void GenerateMatlabScript(StateType type, bool inverted)
 {	
-	int xi = 1;
+	int xi = 2;
 	ScriptGenerator sc(scriptFolder, type);
 	Hamiltonian ham(xi, inverted);
 
@@ -179,6 +179,6 @@ int main()
 
 	//GenerateLaTeX();
 	GenerateMatlabScript(Fermion, true);
-	//GenerateMatlabScript(Boson, true);
+	GenerateMatlabScript(Boson, true);
 	return 0;
 }
