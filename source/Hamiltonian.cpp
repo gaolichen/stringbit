@@ -21,8 +21,10 @@ void Hamiltonian::Init(int xi1)
 		a = -1;
 	}
 
+	int aaaa = (2 + 2 * xi1 - 2) * a;
+
 	realOps.push_back(new HamOperatorA(HamOperator::AA, HamOperator::AA));
-	rePrefactors.push_back((2 + 2* xi1 - 2) * a);
+	rePrefactors.push_back(aaaa);
 	realOps.push_back(new HamOperatorA(HamOperator::BB, HamOperator::BB));
 	rePrefactors.push_back((-2 + 2* xi1 - 2) * a);
 	realOps.push_back(new HamOperatorA(HamOperator::AB, HamOperator::BA));
@@ -42,15 +44,14 @@ void Hamiltonian::Init(int xi1)
 	imaginaryOps.push_back(new HamOperatorA(HamOperator::AA, HamOperator::BB));
 	imPrefactor.push_back(2 * a);
 
-	if (inverted)
+	if (aaaa < 0)
 	{
-		int i = (2 + 2* xi1 - 2) * a;
 		realOps.push_back(new HamOperatorB(HamOperator::AA, HamOperator::AA));
-		rePrefactors.push_back(-i);
+		rePrefactors.push_back(-aaaa);
 		realOps.push_back(new HamOperatorB(HamOperator::BA, HamOperator::BA));
-		rePrefactors.push_back(-i);
+		rePrefactors.push_back(-aaaa);
 		realOps.push_back(new HamOperatorB(HamOperator::AB, HamOperator::BA));
-		rePrefactors.push_back(i);
+		rePrefactors.push_back(aaaa);
 	}
 }
 

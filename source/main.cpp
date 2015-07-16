@@ -118,9 +118,8 @@ void TestNormCalculator()
 	cout << calc.Calculate(a, b) << endl;;
 }
 
-void GenerateMatlabScript(StateType type, bool inverted)
+void GenerateMatlabScript(StateType type, int xi, bool inverted)
 {	
-	int xi = 2;
 	ScriptGenerator sc(scriptFolder, type);
 	Hamiltonian ham(xi, inverted);
 
@@ -178,7 +177,10 @@ int main()
 	//OutputHamiltonianMatrix(11);
 
 	//GenerateLaTeX();
-	GenerateMatlabScript(Fermion, true);
-	GenerateMatlabScript(Boson, true);
+	int xi1 = -10;
+	GenerateMatlabScript(Fermion, xi1, true);	
+	GenerateMatlabScript(Fermion, xi1, false);
+	GenerateMatlabScript(Boson, xi1, true);
+	GenerateMatlabScript(Boson, xi1, false);
 	return 0;
 }
