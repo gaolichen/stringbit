@@ -125,9 +125,11 @@ void GenerateMatlabScript(StateType type, int xi, bool inverted)
 
 	Stopwatch watch;
 	watch.Start();
-	for (int i = 3; i <= StateGenerator::MAX_BIT_TO_GENERATE; i++)
+	//for (int i = 3; i <= StateGenerator::MAX_BIT_TO_GENERATE; i++)
+	for (int i = 3; i <= 3; i++)
 	{
-		sc.OutputHamToMatlab(i, ham);
+		//sc.OutputHamToMatlab(i, ham);
+		sc.OutputHamToMatlab(i, inverted);
 	}
 
 	//for (int i = 3; i <= StateGenerator::MAX_BIT_TO_GENERATE; i++)

@@ -22,4 +22,6 @@ public:
 	inline bool Inverted() { return inverted; };
 	void Apply(const TraceState& state, MixState& real, MixState& imaginary);
 	void Matrix(int bits, StateType type, vector<vector<Coefficient> >& rem, vector<vector<Coefficient> >& imm);
+	void AddReadOp(HamOperator *op, int prefactor);
+	void AddImaginaryOp(HamOperator *op, int prefactor);
 };

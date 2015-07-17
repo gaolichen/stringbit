@@ -4,7 +4,7 @@
 Hamiltonian::Hamiltonian()
 {
 	this->inverted = false;
-	Init(1);
+	//Init(1);
 }
 
 Hamiltonian::Hamiltonian(int xi1, bool invert)
@@ -66,6 +66,18 @@ Hamiltonian::~Hamiltonian()
 	{
 		delete imaginaryOps[i];
 	}
+}
+
+void Hamiltonian::AddReadOp(HamOperator *op, int prefactor)
+{
+	this->realOps.push_back(op);
+	this->rePrefactors.push_back(prefactor);
+}
+
+void Hamiltonian::AddImaginaryOp(HamOperator *op, int prefactor)
+{
+	this->imaginaryOps.push_back(op);
+	this->imPrefactor.push_back(prefactor);
 }
 
 void Hamiltonian::Apply(const TraceState& state, MixState& real, MixState& imaginary)
