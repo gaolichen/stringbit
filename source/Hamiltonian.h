@@ -13,10 +13,10 @@ private:
 	vector<int> rePrefactors;
 	vector<int> imPrefactor;
 	bool inverted;
-	void Init(int xi1);
+	void Init(int xi);
 public:
 	Hamiltonian();
-	Hamiltonian(int xi1, bool invert);
+	Hamiltonian(int xi, bool invert);
 	~Hamiltonian();
 
 	inline bool Inverted() { return inverted; };

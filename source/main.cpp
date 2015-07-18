@@ -182,10 +182,10 @@ int main()
 	//OutputHamiltonianMatrix(11);
 
 	//GenerateLaTeX();
-	int xi1 = -10;
-	GenerateMatlabScript(Fermion, xi1, true);	
-	GenerateMatlabScript(Fermion, xi1, false);
-	GenerateMatlabScript(Boson, xi1, true);
-	GenerateMatlabScript(Boson, xi1, false);
+	int xi = -10;
+	GenerateMatlabScript(Fermion, xi, true);	
+	GenerateMatlabScript(Fermion, xi, false);
+	GenerateMatlabScript(Boson, xi, true);
+	GenerateMatlabScript(Boson, xi, false);
 	return 0;
 }
