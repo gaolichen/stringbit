@@ -13,10 +13,12 @@ private:
 	StateType type;
 	void GroupStates(int bits, vector<vector<int> >& states);
 	double NormMatrixScale(int bits, int index);
+#ifdef HAM_PARAMETER
 	Hamiltonian h0;
 	Hamiltonian deltaH;
 	Hamiltonian hPrime;
 	void InitHamiltonians();
+#endif
 	void HamToMatlab(int bits, Hamiltonian& ham, ofstream& os);
 public:
 	ScriptGenerator(string rootFolder, StateType stateType);

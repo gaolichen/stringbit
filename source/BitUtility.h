@@ -5,6 +5,8 @@
 #include <time.h>
 using namespace std;
 
+//#define HAM_PARAMETER
+
 #if WIN32
 typedef __int64 i64;
 #else

@@ -18,9 +18,12 @@ ScriptGenerator::ScriptGenerator(string rootFolder, StateType stateType)
 	}
 
 	this->type = stateType;
+#ifdef HAM_PARAMETER
 	InitHamiltonians();
+#endif
 }
 
+#ifdef HAM_PARAMETER
 void ScriptGenerator::InitHamiltonians()
 {
 	h0.AddReadOp(new HamOperatorA(HamOperator::AA, HamOperator::AA), 2);
@@ -44,37 +47,6 @@ void ScriptGenerator::InitHamiltonians()
 	deltaH.AddReadOp(new BitNumberHamOperator(), -2);
 }
 
-void ScriptGenerator::HamToMatlab(int bits, Hamiltonian& ham, ofstream& os)
-{
-	vector<vector<Coefficient> > rem, imm;
-	ham.Matrix(bits, type, rem, imm);
-
-	os << "[" << endl;
-	for (int j = 0; j < rem.size(); j++)
-	{
-		os << "   ";
-		for (int k = 0; k < rem[j].size(); k++)
-		{
-			os << ' ';
-			if (!imm[j][k].IsZero())
-			{
-				os << imm[j][k] << "*1i";
-			}
-			else
-			{
-				os << rem[j][k];
-			}
-		}
-
-		if (j != rem.size() - 1)
-		{
-			os << ";" << endl;
-		}
-	}
-
-	os << "]";
-}
-
 void ScriptGenerator::OutputHamToMatlab(int bits, bool inverted)
 {
 	string function;
@@ -82,12 +54,12 @@ void ScriptGenerator::OutputHamToMatlab(int bits, bool inverted)
 	if (!inverted)
 	{
 		sign = "";
-		function = "ham" + ToString(bits);
+		function = "tham" + ToString(bits);
 	}
 	else
 	{
 		sign = "-";
-		function = "pham" + ToString(bits);
+		function = "tpham" + ToString(bits);
 	}
 
 	string file = CombinePath(rootFolder, function + ".m");
@@ -124,10 +96,44 @@ void ScriptGenerator::OutputHamToMatlab(int bits, bool inverted)
 	ofs.close();
 }
 
+#endif
+
+void ScriptGenerator::HamToMatlab(int bits, Hamiltonian& ham, ofstream& os)
+{
+        vector<vector<Coefficient> > rem, imm;
+        ham.Matrix(bits, type, rem, imm);
+
+        os << "[" << endl;
+        for (int j = 0; j < rem.size(); j++)
+        {
+                os << "   ";
+                for (int k = 0; k < rem[j].size(); k++)
+                {
+                        os << ' ';
+                        if (!imm[j][k].IsZero())
+                        {
+                                os << imm[j][k] << "*1i";
+                        }
+                        else
+                        {
+                                os << rem[j][k];
+                        }
+                }
+
+                if (j != rem.size() - 1)
+                {
+                        os << ";" << endl;
+                }
+        }
+
+        os << "]";
+}
+
+
 void ScriptGenerator::OutputHamToMatlab(int bits, Hamiltonian& ham)
 {
-	vector<vector<Coefficient> > rem, imm;
-	ham.Matrix(bits, type, rem, imm);
+	//vector<vector<Coefficient> > rem, imm;
+	//ham.Matrix(bits, type, rem, imm);
 
 	string function;
 	if (!ham.Inverted())
@@ -143,8 +149,11 @@ void ScriptGenerator::OutputHamToMatlab(int bits, Hamiltonian& ham)
 	cout << file << endl;
 	ofstream ofs(file.c_str());
 	ofs << "function f = " << function << "(N)" << endl;
-	ofs << "f=[" << endl;
-	
+	ofs << "f=";
+	HamToMatlab(bits, ham, ofs);
+	ofs << ";" << endl;
+
+	/*
 	for (int j = 0; j < rem.size(); j++)
 	{
 		ofs << "   ";
@@ -167,7 +176,7 @@ void ScriptGenerator::OutputHamToMatlab(int bits, Hamiltonian& ham)
 		}
 	}
 
-	ofs << "];" << endl;
+	ofs << "];" << endl;*/
 	ofs << "end" << endl;
 
 	ofs.close();

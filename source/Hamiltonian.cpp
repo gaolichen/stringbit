@@ -4,13 +4,19 @@
 Hamiltonian::Hamiltonian()
 {
 	this->inverted = false;
-	//Init(1);
+#ifdef HAM_PARAMETER
+#else
+	Init(1);
+#endif
 }
 
 Hamiltonian::Hamiltonian(int xi1, bool invert)
 {
 	this->inverted = invert;
+#ifdef HAM_PARAMETER
+#else
 	Init(xi1);
+#endif
 }
 
 void Hamiltonian::Init(int xi1)
