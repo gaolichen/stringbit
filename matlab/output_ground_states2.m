@@ -1,6 +1,6 @@
-function output_ground_states(root)
+function output_ground_states2(root)
     cd(root);
-    fid=fopen('ground_states.txt','w');
+    fid=fopen('ground_states2.txt','w');
 
     addpath('../..');
     addpath('..');
@@ -16,7 +16,7 @@ function output_ground_states(root)
         fprintf(fid, '%s\n', xi);
 
         for bit = 3 : 11
-            [e, f0, f1] = get_ground_state(bit, 10000);
+            [e, f0, f1] = get_ground_state2(bit, 10000);
             fprintf(fid, '%d %d %d\n', bit, size(f0, 1), size(f1, 1));
             fprintf(fid, '%f\t%f\n', real(e(1)), real(e(2)));
 

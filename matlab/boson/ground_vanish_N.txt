@@ -1,5 +1,4 @@
-boson
-xi=0
+0
 ground_vanish_N
  3  1.0
  4  1.0
@@ -20,7 +19,7 @@ ground_vanish_N2
  9  3.0
 10  3.0
 11  3.0
-xi=1
+1
 ground_vanish_N
  3  1.0
  4  2.0
@@ -41,7 +40,7 @@ ground_vanish_N2
  9  3.0
 10  3.0
 11  3.0
-xi=5
+5
 ground_vanish_N
  3  2.0
  4  3.0
@@ -62,7 +61,7 @@ ground_vanish_N2
  9  3.0
 10  3.0
 11  3.0
-xi=10
+10
 ground_vanish_N
  3  2.0
  4  3.0
@@ -83,7 +82,7 @@ ground_vanish_N2
  9  3.0
 10  3.0
 11  3.0
-xi=n1
+-1
 ground_vanish_N
  3  1.0
  4  1.0
@@ -104,7 +103,7 @@ ground_vanish_N2
  9  2.0
 10  2.0
 11  2.0
-xi=n5
+-5
 ground_vanish_N
  3  1.0
  4  2.0
@@ -125,7 +124,7 @@ ground_vanish_N2
  9  8.0
 10  9.0
 11 10.0
-xi=n10
+-10
 ground_vanish_N
  3  1.0
  4  2.0

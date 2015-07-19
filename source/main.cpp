@@ -136,7 +136,7 @@ void GenerateMatlabScript(StateType type, int xi, bool inverted)
 	}
 
 	//for (int i = 3; i <= StateGenerator::MAX_BIT_TO_GENERATE; i++)
-	for (int i = 3; i <= 9; i++)
+	for (int i = 3; i <= 11; i++)
 	{
 		//sc.OutputNormToMatlab(i);
 	}
