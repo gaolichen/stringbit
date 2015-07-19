@@ -1,11 +1,10 @@
 # Add executable called "helloDemo" that is built from the source files
 
-SET(STRBIT_SRCS 
+SET(STRBIT_LIB_SRCS 
 	BitUtility.cpp 
 	Coefficient.cpp
 	Hamiltonian.cpp
 	HamOperator.cpp
-	main.cpp
 	MixedTrace.cpp
 	MixState.cpp
 	NormCalculator.cpp
@@ -18,7 +17,7 @@ SET(STRBIT_SRCS
 	ScriptGenerator.cpp)
 
 IF(WIN32)
-	SET(STRBIT_SRCS 
+	SET(STRBIT_LIB_SRCS 
 		${STRBIT_SRCS}
 		BitUtility.h 
 		Coefficient.h 
@@ -40,9 +39,16 @@ IF(WIN32)
 	source_group("Header Files" FILES *.h)
 ENDIF(WIN32)
 
+SET(STRBIT_MAIN_SRCS
+	${STRBIT_LIB_SRCS}
+	main.cpp)
 
+SET(PRINT_GROUND_SRCS
+	${STRBIT_LIB_SRCS}
+	PrintGround.cpp)
 
-add_executable (strbit ${STRBIT_SRCS})
+add_executable (strbit ${STRBIT_MAIN_SRCS})
+add_executable (prtground ${PRINT_GROUND_SRCS})
 
 
 # Link the executable to the Hello library. Since the Hello library has
