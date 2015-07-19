@@ -275,7 +275,7 @@ string Polynomial::ToLaTeX(int orderToDeduct) const
 			oss << "\\frac{" << c << "}{N"; 
 			if (orderToDeduct - i > 1)
 			{
-				oss << '^'<< (orderToDeduct - i);
+				oss << "^{"<< (orderToDeduct - i) << "}";
 			}
 			oss << "}";
 		}
