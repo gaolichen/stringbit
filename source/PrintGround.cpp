@@ -9,11 +9,14 @@
 #include "NormCalculator.h"
 #include "StateGenerator.h"
 #include "BitUtility.h"
+#include "StateType.h"
 
 using namespace std;
 
 map<pair<int, int>,  double> vanishN;
 map<pair<int, int>,  double> vanishN2;
+StateType typeToPrint = StateType::Boson;
+string filePrefix;
 
 struct StateInfo
 {
@@ -60,7 +63,7 @@ struct StateList
 		}
 
 		os << "\\begin{itemize}" << endl;
-                os << "\\item Trace states of $\\mathcal{O}\\left(";
+		os << "\\item Trace states of $\\mathcal{O}\\left(";
 		if (order == 0)
 		{
 			os << 1;
@@ -71,34 +74,34 @@ struct StateList
 		}
 		os  << "\\right)$ contribution to M=" << M << " ground state";
 
-                if (leadingOrder.size() > 50)
-                {
-                        os << " (Only top 50 are listed)";
-                }
-                os << endl;
-                os << "\\end{itemize}" << endl;
+		if (leadingOrder.size() > 50)
+		{
+			os << " (Only top 50 are listed)";
+		}
+		os << endl;
+		os << "\\end{itemize}" << endl;
 
 		// create table
-                os << "\\begin{center}" << endl;
-                os << "\\begin{tabular}{|c|c|c|c|}" << endl;
-                os << "\\hline " << endl;
-                os << "Trace State & $\\bar{b}$ Number & State Norm & Amplitude\\tabularnewline" << endl;
-                os << "\\hline " << endl;
-                os << "\\hline " << endl;
+		os << "\\begin{center}" << endl;
+		os << "\\begin{tabular}{|c|c|c|c|}" << endl;
+		os << "\\hline " << endl;
+		os << "Trace State & $\\bar{b}$ Number & State Norm & Amplitude\\tabularnewline" << endl;
+		os << "\\hline " << endl;
+		os << "\\hline " << endl;
 		int count = min(limit, (int)list.size());
 
-                for (int i = 0; i < count; i++)
-                {
-                        StateInfo& info = list[i];
-                        TraceState ts = sc->GetBosonState(M, info.Id - 1);
-                        os << "$" << ts.ToLaTeX() << "$ & " << ts.FermionNumber();
+		for (int i = 0; i < count; i++)
+		{
+			StateInfo& info = list[i];
+			TraceState ts = sc->GetState(M, info.Id - 1, typeToPrint);
+			os << "$" << ts.ToLaTeX() << "$ & " << ts.FermionNumber();
 			os << " & $" << nc.Calculate(ts, ts).ToLaTeX(M);
-                        os << "$ & " << info.Amplitude << "\\tabularnewline" << endl;
-                        os << "\\hline " << endl;
-                }
+			os << "$ & " << info.Amplitude << "\\tabularnewline" << endl;
+			os << "\\hline " << endl;
+		}
 
-                os << "\\end{tabular}" << endl;
-                os << "\\par\\end{center}" << endl << endl;
+		os << "\\end{tabular}" << endl;
+		os << "\\par\\end{center}" << endl << endl;
 	}
 
 	void ToLatex(ofstream& os)
@@ -150,15 +153,15 @@ void PrintHam(int xi, ofstream& os)
 	os << "The Hamiltonian is" << endl << endl;
 	os << "\\begin{eqnarray*}" << endl;
 	os << "H & = & \\frac{2}{N}\\mathrm{Tr}\\left[\\left(\\bar{a}^{2}-i\\bar{b}^{2}\\right)a^{2}-\\left(\\bar{b}^{2}" << endl;
-	os << "i\\bar{a}^{2}\\right)b^{2}+\\left(\\bar{a}\\bar{b}+\\bar{b}\\bar{a}\\right)ba+\\left(\\bar{a}\\bar{b}-" << endl;
+	os << "-i\\bar{a}^{2}\\right)b^{2}+\\left(\\bar{a}\\bar{b}+\\bar{b}\\bar{a}\\right)ba+\\left(\\bar{a}\\bar{b}-" << endl;
 	os << "\\bar{b}\\bar{a}\\right)ab\\right]\\\\" << endl;
 	if (xi != 0)
 	{
 		os << " &  &";
 		if (xi > 0) os << " + ";
 		else os << " - ";
-		os << "\\frac{2";
-		os << abs(xi);
+		os << "\\frac{";
+		os << abs(2*xi);
 		os <<  "}{N}\\mathrm{Tr}\\left[\\bar{a}\\bar{b}ba+\\bar{b}\\bar{a}ab+\\bar{a}^{2}a^{2}+\\bar{b}^{2}b^{2}-" << endl;
 		os << "M\\right]\\\\" << endl;
 	}
@@ -173,9 +176,9 @@ void PrintHam(int xi, ofstream& os)
 }
 
 
-void ReadVanishN(char *file)
+void ReadVanishN(string file)
 {
-	ifstream ifs(file);
+	ifstream ifs(file.c_str());
 	char line[256];
 
 	int xi;
@@ -205,31 +208,16 @@ void ReadVanishN(char *file)
 	ifs.close();
 }
 
-int main(int argc, char *argv[])
+void PrintGround(string root, string file, map<pair<int, int>,  double>& vn)
 {
-	if (argc < 4)
-	{
-		cout << "Argument required!" << endl;
-		return -1;
-	}
-
-	StateGenerator generator;
-	generator.GenerateAllStates();
-	generator.InitStateCollection(StateCollection::Inst());
-
-	ifstream ifs(argv[1]);
-	ReadVanishN(argv[2]);
-	cout << argv[1] << endl;
-	cout << argv[2] << endl;
-	cout << argv[3] << endl;
-	string folder = argv[3];
-	
+	string path = root + "/" + file;
+	ifstream ifs(path.c_str());
 	int xi;
 	while (ifs >> xi)
 	{
-		string file = folder + "/xi=" + ToString(xi) + ".tex";
-
-		ofstream ofs(file.c_str());
+		string tex = root + "/" + filePrefix + "_xi=" + ToString(xi) + ".tex";
+		cout << tex << endl;
+		ofstream ofs(tex.c_str());
 		int stateId;
 		int bit, size1, size2;
 		double e0, e1, amplitude;
@@ -266,6 +254,43 @@ int main(int argc, char *argv[])
 	}
 
 	ifs.close();
+
+}
+
+int main(int argc, char *argv[])
+{
+	if (argc < 3)
+	{
+		cout << "Usage:" << endl;
+		cout << "prtground some_folder boson" << endl;
+		cout << "prtground some_folder fermion" << endl;
+		return -1;
+	}
+
+	string root = argv[1];
+	if (root.back() == '/' || root.back() == '\\')
+	{
+		root = root.substr(0, root.length() - 1);
+	}
+	string stype = argv[2];
+	if (stype == "fermion")
+	{
+		typeToPrint = StateType::Fermion;
+	}
+
+	StateGenerator generator;
+	generator.GenerateAllStates();
+	generator.InitStateCollection(StateCollection::Inst());
+
+	string groundStateFile1 = "ground_states.txt";
+	string groundStateFile2 = "ground_states2.txt";
+	string groundVanishNFile = root + "/ground_vanish_N.txt";
+	ReadVanishN(groundVanishNFile);
+
+	filePrefix = "ground_state";
+	PrintGround(root, groundStateFile1, vanishN);
+	filePrefix = "ground_state2";
+	PrintGround(root, groundStateFile2, vanishN2);
 
 	return 0;
 }
