@@ -16,6 +16,7 @@ using namespace std;
 map<pair<int, int>,  double> vanishN;
 map<pair<int, int>,  double> vanishN2;
 StateType typeToPrint = StateType::Boson;
+bool inverted;
 string filePrefix;
 
 struct StateInfo
@@ -152,13 +153,18 @@ void PrintHam(int xi, ofstream& os)
 {
 	os << "The Hamiltonian is" << endl << endl;
 	os << "\\begin{eqnarray*}" << endl;
-	os << "H & = & \\frac{2}{N}\\mathrm{Tr}\\left[\\left(\\bar{a}^{2}-i\\bar{b}^{2}\\right)a^{2}-\\left(\\bar{b}^{2}" << endl;
+	os << "H & = &";
+	if (inverted)
+	{
+		os << "-";
+	}
+	os << "\\frac{2}{N}\\mathrm{Tr}\\left[\\left(\\bar{a}^{2}-i\\bar{b}^{2}\\right)a^{2}-\\left(\\bar{b}^{2}" << endl;
 	os << "-i\\bar{a}^{2}\\right)b^{2}+\\left(\\bar{a}\\bar{b}+\\bar{b}\\bar{a}\\right)ba+\\left(\\bar{a}\\bar{b}-" << endl;
 	os << "\\bar{b}\\bar{a}\\right)ab\\right]\\\\" << endl;
 	if (xi != 0)
 	{
 		os << " &  &";
-		if (xi > 0) os << " + ";
+		if (inverted != (xi > 0)) os << " + ";
 		else os << " - ";
 		os << "\\frac{";
 		os << abs(2*xi);
@@ -166,9 +172,12 @@ void PrintHam(int xi, ofstream& os)
 		os << "M\\right]\\\\" << endl;
 	}
 
-	if (xi < -1)
+	int a = 2*xi + 2;
+	if (inverted) a = -a;
+
+	if (a < 0)
 	{
-		os << " &  & +\\frac{" << -(2*xi + 2) << "}{N}" << endl;
+		os << " &  & +\\frac{" << -a << "}{N}" << endl;
 		os << "\\mathrm{Tr}\\left[\\bar{a}a\\bar{a}a+\\bar{b}b\\bar{a}a-\\bar{a}b\\bar{b}a\\right]" << endl;
 	}
 	
@@ -288,8 +297,10 @@ int main(int argc, char *argv[])
 	ReadVanishN(groundVanishNFile);
 
 	filePrefix = "ground_state";
+	inverted = false;
 	PrintGround(root, groundStateFile1, vanishN);
 	filePrefix = "ground_state2";
+	inverted = true;
 	PrintGround(root, groundStateFile2, vanishN2);
 
 	return 0;
