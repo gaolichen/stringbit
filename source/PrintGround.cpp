@@ -106,13 +106,13 @@ struct StateList
 		os << "\\subsubsection*{$M=" << M << ",\\, E=" << E0 << "$}" << endl;
 		os << "Ground state vanishes at $N=";
 		double n = vanishN[make_pair(Xi, M)];
-		if (abs(n - round(n)) < 1e-8)
+		if (abs(n - floor(n)) < 1e-8)
 		{
 			os <<(int)n;
 		}
 		else
 		{
-			os << (int)round(n) << ".5";
+			os << (int)floor(n) << ".5";
 		}
 		os << "$." << endl;
 
@@ -224,7 +224,6 @@ int main(int argc, char *argv[])
 	cout << argv[3] << endl;
 	string folder = argv[3];
 	
-	char line[256];
 	int xi;
 	while (ifs >> xi)
 	{
