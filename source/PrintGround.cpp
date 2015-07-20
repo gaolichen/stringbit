@@ -15,7 +15,7 @@ using namespace std;
 
 map<pair<int, int>,  double> vanishN;
 map<pair<int, int>,  double> vanishN2;
-StateType typeToPrint = StateType::Boson;
+StateType typeToPrint;
 bool inverted;
 string filePrefix;
 
@@ -277,14 +277,18 @@ int main(int argc, char *argv[])
 	}
 
 	string root = argv[1];
-	if (root.back() == '/' || root.back() == '\\')
+	if (root[root.length() - 1] == '/' || root[root.length() - 1] == '\\')
 	{
 		root = root.substr(0, root.length() - 1);
 	}
 	string stype = argv[2];
 	if (stype == "fermion")
 	{
-		typeToPrint = StateType::Fermion;
+		typeToPrint = Fermion;
+	}
+	else
+	{
+		typeToPrint = Boson;
 	}
 
 	StateGenerator generator;
