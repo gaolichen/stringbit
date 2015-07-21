@@ -1,4 +1,4 @@
-function f = plot_states(bits, statenumber, points, ylims)
+function plot_states(bits, statenumber, points, ylims)
     if nargin < 3
         % by default, pick 100 points.
         points = 100;
@@ -68,53 +68,46 @@ function f = plot_states(bits, statenumber, points, ylims)
         end
     end
     
-    C = cell(1, statenumber);
+    %C = {};
     D = {};
-    cnt = 1;
+    figure(1); cla;
+    hold on;
     for i = 1 : statenumber
-        %C = cat(2, C, X, Y(:, i));
         st = 1;
-        isComplex = Nonzero(Yi(1, i));
-        for j = 2 : size(Yi, 1)
-            isNonzero = Nonzero(Yi(j, i));
-            if isComplex ~= isNonzero
-                fprintf('%d\n', j);
-                C{1, cnt} = X(st : j - 1);
-                cnt = cnt + 1;
-                C{1, cnt} = Y(st : j - 1, i)';
-                cnt = cnt + 1;
-                if isComplex
-                    %C = cat(2, C, X(st : j - 1), Y(st : j - 1, i)', '--');
-                    C{1, cnt} = '--';
-                    cnt = cnt + 1;
+        solidLine = IsPositive(Z(1, i));
+        for j = 2 : length(X)
+            positive = IsPositive(Z(j, i));
+            if solidLine ~= positive
+                if solidLine
+                    plot(X(st:j), Y(st:j, i), 'Color', PickColor(i));
                 else
-                    %C = cat(2, C, X(st : j - 1), Y(st : j - 1, i)');
+                    plot(X(st:j), Y(st:j, i), 'Color', PickColor(i), 'LineStyle', ':');
                 end
-                isComplex = isNonzero;
+                solidLine = positive;
                 st = j;
             end
         end
-        if isComplex
-            C = cat(2, C, X(st : size(X, 1)), Y(st : size(Y, 1), i)', '--');
+        
+        if solidLine
+            plot(X(st : length(X)), Y(st : length(X), i), 'Color', PickColor(i));
         else
-            C = cat(2, C, X(st : size(X, 1)), Y(st : size(Y, 1), i)');
+            plot(X(st : length(X)), Y(st : length(X), i), 'Color', PickColor(i), 'LineStyle', ':');
         end
         D = cat(2, D, X, Z(:, i));
     end
-    f = C;
-%     figure;
-%     plot(C{:});
-%     title(strcat({'Lowest '},  num2str(statenumber), ' Energy States for M=', num2str(bits)));
-%     ylabel('E');
-%     xlabel('1/N');
-%     ax1 = gca;
-%     set(ax1, 'XTick', [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5]);
-%     if length(ylims) == 4
-%         ylim([ylims(1) ylims(2)]);
-%     else
-%         ylim auto;
-%     end
-%     
+    %figure;
+    %plot(C{:});
+    title(strcat({'Lowest '},  num2str(statenumber), ' Energy States for M=', num2str(bits)));
+    ylabel('E');
+    xlabel('1/N');
+    ax1 = gca;
+    set(ax1, 'XTick', [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5]);
+    if length(ylims) == 4
+        ylim([ylims(1) ylims(2)]);
+    else
+        ylim auto;
+    end
+    
 %     figure;
 %     plot(D{:});
 %     title(strcat({'Norm of Lowest '}, num2str(statenumber), ' Energy States for M=', num2str(bits)));
@@ -129,8 +122,28 @@ function f = plot_states(bits, statenumber, points, ylims)
 %     end    
 end
 
-function f = Nonzero(a)
-    f = abs(a) > 1e-6;
+function f = IsPositive(a)
+    f = a > 1e-6;
+end
+
+function c = PickColor(index)
+    if index == 1
+        c = 'r';
+    elseif index == 2
+        c = 'k';
+    elseif index == 3
+        c = 'g';
+    elseif index == 4
+        c = 'b';
+    elseif index == 5
+        c = 'm';
+    elseif index == 6
+        c = 'c';
+    elseif index == 7
+        c = 'y';
+    else
+        c = 'w';
+    end
 end
 
     
