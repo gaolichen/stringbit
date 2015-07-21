@@ -1,4 +1,4 @@
-function plot_states(bits, statenumber, points, ylims)
+function f = plot_states(bits, statenumber, points, ylims)
     if nargin < 3
         % by default, pick 100 points.
         points = 100;
@@ -68,35 +68,70 @@ function plot_states(bits, statenumber, points, ylims)
         end
     end
     
-    C = {};
+    C = cell(1, statenumber);
     D = {};
+    cnt = 1;
     for i = 1 : statenumber
-        C = cat(2, C, X, Y(:, i));
+        %C = cat(2, C, X, Y(:, i));
+        st = 1;
+        isComplex = Nonzero(Yi(1, i));
+        for j = 2 : size(Yi, 1)
+            isNonzero = Nonzero(Yi(j, i));
+            if isComplex ~= isNonzero
+                fprintf('%d\n', j);
+                C{1, cnt} = X(st : j - 1);
+                cnt = cnt + 1;
+                C{1, cnt} = Y(st : j - 1, i)';
+                cnt = cnt + 1;
+                if isComplex
+                    %C = cat(2, C, X(st : j - 1), Y(st : j - 1, i)', '--');
+                    C{1, cnt} = '--';
+                    cnt = cnt + 1;
+                else
+                    %C = cat(2, C, X(st : j - 1), Y(st : j - 1, i)');
+                end
+                isComplex = isNonzero;
+                st = j;
+            end
+        end
+        if isComplex
+            C = cat(2, C, X(st : size(X, 1)), Y(st : size(Y, 1), i)', '--');
+        else
+            C = cat(2, C, X(st : size(X, 1)), Y(st : size(Y, 1), i)');
+        end
         D = cat(2, D, X, Z(:, i));
     end
-    figure;
-    plot(C{:});
-    title(strcat({'Lowest '},  num2str(statenumber), ' Energy States for M=', num2str(bits)));
-    ylabel('E');
-    xlabel('1/N');
-    ax1 = gca;
-    set(ax1, 'XTick', [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5]);
-    if length(ylims) == 4
-        ylim([ylims(1) ylims(2)]);
-    else
-        ylim auto;
-    end
-    
-    figure;
-    plot(D{:});
-    title(strcat({'Norm of Lowest '}, num2str(statenumber), ' Energy States for M=', num2str(bits)));
-    ylabel('Norm');
-    xlabel('1/N');
-    ax2 = gca;
-    set(ax2, 'XTick', [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5]);
-    if length(ylims) == 4
-        ylim([ylims(3) ylims(4)]);
-    else
-        ylim auto;
-    end
+    f = C;
+%     figure;
+%     plot(C{:});
+%     title(strcat({'Lowest '},  num2str(statenumber), ' Energy States for M=', num2str(bits)));
+%     ylabel('E');
+%     xlabel('1/N');
+%     ax1 = gca;
+%     set(ax1, 'XTick', [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5]);
+%     if length(ylims) == 4
+%         ylim([ylims(1) ylims(2)]);
+%     else
+%         ylim auto;
+%     end
+%     
+%     figure;
+%     plot(D{:});
+%     title(strcat({'Norm of Lowest '}, num2str(statenumber), ' Energy States for M=', num2str(bits)));
+%     ylabel('Norm');
+%     xlabel('1/N');
+%     ax2 = gca;
+%     set(ax2, 'XTick', [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5]);
+%     if length(ylims) == 4
+%         ylim([ylims(3) ylims(4)]);
+%     else
+%         ylim auto;
+%     end    
 end
+
+function f = Nonzero(a)
+    f = abs(a) > 1e-6;
+end
+
+    
+  
