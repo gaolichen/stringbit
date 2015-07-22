@@ -15,6 +15,9 @@ function plot_states(bits, statenumber, points, ylims)
     slopeY = zeros(1, statenumber);
     slopeZ = zeros(1, statenumber);
     slopeYi = zeros(1, statenumber);
+    complexLines = [];
+    currComplexLines = [];
+    
 %     nextNorm = zeros(1, statenumber);
     
     for i = 1 : length(X)
@@ -47,7 +50,27 @@ function plot_states(bits, statenumber, points, ylims)
             end
         end
         
+        % check the complexLines.
+        for j = size(currComplexLines, 1) : -1 : 1
+            currComplexLines(j, 4) = i;
+            line1 = currComplexLines(j, 1);
+            line2 = currComplexLines(j, 2);
+            if IsZero(Y(i, line1) - Y(i, line2)) && IsZero(Yi(i, line1) + Yi(i, line2))
+                % do nothing
+            else
+                complexLines = cat(1, complexLines, currComplexLines(j,:));
+                currComplexLines(j,:) = [];
+            end
+        end
+        
         for j = 1 : statenumber
+            if NonZero(Yi(i, j))
+                for k = j + 1 : statenumber
+                    if IsZero(Yi(i, k) + Yi(i, j))
+                        % 
+                    end
+                end
+            end
             if i == 1
                 slopeY(j) = Y(i, j);
                 slopeZ(j) = Z(i, j);
@@ -121,6 +144,14 @@ function plot_states(bits, statenumber, points, ylims)
 %         ylim auto;
 %     end    
 end
+
+function f = NonZero(a)
+    f = abs(a) > 1e-6;
+end
+
+    function f = IsZero(a)
+        f = abs(a) < 1e-6;
+    end
 
 function f = IsPositive(a)
     f = a > 1e-6;
