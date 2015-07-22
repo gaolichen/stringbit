@@ -17,6 +17,7 @@ function plot_states(bits, statenumber, points, ylims)
     slopeYi = zeros(1, statenumber);
     complexLines = [];
     currComplexLines = [];
+    inComplexLines = zeros(1, statenumber);
     
 %     nextNorm = zeros(1, statenumber);
     
@@ -58,19 +59,31 @@ function plot_states(bits, statenumber, points, ylims)
             if IsZero(Y(i, line1) - Y(i, line2)) && IsZero(Yi(i, line1) + Yi(i, line2))
                 % do nothing
             else
+                % the current complexLine ends, move it to complexLines.
                 complexLines = cat(1, complexLines, currComplexLines(j,:));
                 currComplexLines(j,:) = [];
+                inComplexLines(line1) = 0;
+                inComplexLines(line2) = 0;
             end
         end
         
         for j = 1 : statenumber
-            if NonZero(Yi(i, j))
+            % if it's complex and not in inComplexLines 
+            if NonZero(Yi(i, j)) && ~inComplexLines(j)
                 for k = j + 1 : statenumber
-                    if IsZero(Yi(i, k) + Yi(i, j))
-                        % 
+                    % If they conjugate to each other.
+                    if IsZero(Yi(i, k) + Yi(i, j)) && IsZero(Y(i, k) - Y(i, j))
+                        if inComplexLines(k)
+                            fprintf('dotted line conflicts...');
+                        end
+                        inComplexLines(k) = 1;
+                        inComplexLines(j) = 1;
+                        currComplexLines = cat(1, currComplexLines, [j k i i]);
+                        break;
                     end
                 end
             end
+            
             if i == 1
                 slopeY(j) = Y(i, j);
                 slopeZ(j) = Z(i, j);
@@ -91,24 +104,60 @@ function plot_states(bits, statenumber, points, ylims)
         end
     end
     
-    %C = {};
+    % move the remaining currComplines to complexLines
+    for i = 1 : size(currComplexLines, 1)
+        complexLines = cat(1, complexLines, currComplexLines(i,:));
+    end
+    
+    % segments{i}: contains the segment should be excluded for state i.
+    % segments{i}(2k-1): the beginning of the k-th exclude segment.
+    % segments{i}(2k): the end of the k-th exclude segment
+    segments = cell(1, statenumber);
+    for i = 1 : statenumber
+        segments{i} = 1:length(X);
+    end
+    for i = 1 : size(complexLines, 1)
+        segments{complexLines(i, 2)} = cat(1, segments{complexLines(i, 2)}, [complexLines(i, 3) complexLines(i, 4)]);
+    end
+    % if no excluded segments, let the beginning of 
+    for i = 1 : statenumber
+        if size(segments{i}, 1) == 0
+            segments{i} = length(X) + 1;
+        end
+    end
+    
     D = {};
     figure(1); cla;
     hold on;
     for i = 1 : statenumber
         st = 1;
+        j = 1;
         solidLine = IsPositive(Z(1, i));
-        for j = 2 : length(X)
+        stop = 1;
+        %for j = 2 : length(X)
+        while j <= length(X)
             positive = IsPositive(Z(j, i));
-            if solidLine ~= positive
+            if j == segments{i}(stop) || solidLine ~= positive
+                % plot the line
                 if solidLine
                     plot(X(st:j), Y(st:j, i), 'Color', PickColor(i));
                 else
                     plot(X(st:j), Y(st:j, i), 'Color', PickColor(i), 'LineStyle', ':');
                 end
-                solidLine = positive;
-                st = j;
+                
+                if j == segments{i}(stop)
+                    j = segments{i}(stop + 1);
+                    st = j;
+                    stop = stop + 2;
+                    if j + 1 <= length(X)
+                        solidLine = IsPositive(Z(j + 1, i));
+                    end
+                else
+                    st = j;
+                    solidLine = positive;
+                end
             end
+            j = j + 1;
         end
         
         if solidLine
