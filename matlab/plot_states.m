@@ -69,7 +69,7 @@ function plot_states(bits, statenumber, points, ylims)
         
         for j = 1 : statenumber
             % if it's complex and not in inComplexLines 
-            if NonZero(Yi(i, j)) && ~inComplexLines(j)
+            if ~IsZero(Yi(i, j)) && ~inComplexLines(j)
                 for k = j + 1 : statenumber
                     % If they conjugate to each other.
                     if IsZero(Yi(i, k) + Yi(i, j)) && IsZero(Y(i, k) - Y(i, j))
@@ -109,61 +109,76 @@ function plot_states(bits, statenumber, points, ylims)
         complexLines = cat(1, complexLines, currComplexLines(i,:));
     end
     
+%     for i = 1 : size(complexLines, 1)
+%         fprintf('%d %d %f %f\n', complexLines(i, 1), complexLines(i, 2), X(complexLines(i, 3)), X(complexLines(i, 4)));
+%     end
+    
     % segments{i}: contains the segment should be excluded for state i.
     % segments{i}(2k-1): the beginning of the k-th exclude segment.
     % segments{i}(2k): the end of the k-th exclude segment
     segments = cell(1, statenumber);
     for i = 1 : statenumber
-        segments{i} = 1:length(X);
+        segments{i} = [];
     end
     for i = 1 : size(complexLines, 1)
-        segments{complexLines(i, 2)} = cat(1, segments{complexLines(i, 2)}, [complexLines(i, 3) complexLines(i, 4)]);
+        segments{complexLines(i, 2)} = [segments{complexLines(i, 2)}, [complexLines(i, 3) complexLines(i, 4)]];
     end
-    % if no excluded segments, let the beginning of 
+    % Append length(X) + 1 to the end for every line.
     for i = 1 : statenumber
-        if size(segments{i}, 1) == 0
-            segments{i} = length(X) + 1;
-        end
+        segments{i} = [segments{i}, length(X) + 1];
     end
     
+%     for i = 1 : statenumber
+%         fprintf('%d: ', i);
+%         for j = 1 : size(segments{i}, 2)
+%             if segments{i}(j) <= length(X)
+%                 fprintf('%f ', X(segments{i}(j)));
+%             else
+%                 fprintf('end ');
+%             end
+%         end
+%         fprintf('\n');
+%     end
+    
     D = {};
-    figure(1); cla;
+    figure; cla;
     hold on;
     for i = 1 : statenumber
         st = 1;
         j = 1;
-        solidLine = IsPositive(Z(1, i));
-        stop = 1;
-        %for j = 2 : length(X)
+        
+        % lineType:
+        % 0 for unset; 
+        % 1 for solid line; 
+        % 2 for dotted line
+        lineType = 0;
+        k = 1;
         while j <= length(X)
-            positive = IsPositive(Z(j, i));
-            if j == segments{i}(stop) || solidLine ~= positive
-                % plot the line
-                if solidLine
-                    plot(X(st:j), Y(st:j, i), 'Color', PickColor(i));
-                else
-                    plot(X(st:j), Y(st:j, i), 'Color', PickColor(i), 'LineStyle', ':');
-                end
-                
-                if j == segments{i}(stop)
-                    j = segments{i}(stop + 1);
-                    st = j;
-                    stop = stop + 2;
-                    if j + 1 <= length(X)
-                        solidLine = IsPositive(Z(j + 1, i));
-                    end
-                else
-                    st = j;
-                    solidLine = positive;
-                end
+            if j == segments{i}(2 * k - 1);
+                % when j is the start point of a excluded segments
+                % plot here.
+                plot(X(st:j), Y(st:j, i), 'Color', PickColor(i), 'LineStyle', PickLineStyle(lineType), 'LineWidth', PickLineWidth(lineType));
+                j = segments{i}(2 * k);
+                k = k + 1;
+                % reset lineType
+                lineType = 0;
+            elseif lineType == 0
+                % if lineType is not set.
+                st = j;
+                lineType = GetLineType(Z(j, i));
+            elseif lineType ~= GetLineType(Z(j, i))
+                % if the current line type does not match.
+                % plot
+                plot(X(st:j), Y(st:j, i), 'Color', PickColor(i), 'LineStyle', PickLineStyle(lineType), 'LineWidth', PickLineWidth(lineType));
+                lineType = GetLineType(Z(j, i));
+                st = j;
             end
             j = j + 1;
         end
         
-        if solidLine
-            plot(X(st : length(X)), Y(st : length(X), i), 'Color', PickColor(i));
-        else
-            plot(X(st : length(X)), Y(st : length(X), i), 'Color', PickColor(i), 'LineStyle', ':');
+        % plot the last part.
+        if lineType ~= 0 && st <= length(X)
+            plot(X(st:length(X)), Y(st:length(X), i), 'Color', PickColor(i), 'LineStyle', PickLineStyle(lineType),'LineWidth', PickLineWidth(lineType));
         end
         D = cat(2, D, X, Z(:, i));
     end
@@ -194,19 +209,44 @@ function plot_states(bits, statenumber, points, ylims)
 %     end    
 end
 
-function f = NonZero(a)
-    f = abs(a) > 1e-6;
+function f = IsZero(a)
+    f = abs(a) < 1e-6;
 end
 
-    function f = IsZero(a)
-        f = abs(a) < 1e-6;
+function f = GetLineType(norm)
+    % for positive norm, return type 1 (solid line)
+    % for non-positive norm, return type 2 (dotted line)
+    if norm > 1e-6
+        f = 1;
+    else
+        f = 2;
     end
-
-function f = IsPositive(a)
-    f = a > 1e-6;
 end
 
-function c = PickColor(index)
+function f = PickLineStyle(lineType)
+    if lineType == 1
+        f = '-';
+    elseif lineType == 2
+        f = '--';
+    else
+        fprintf('Unexpected line type: %d', lineType);
+        f = '-';
+    end
+end
+
+function f = PickLineWidth(lineType)
+    if lineType == 1
+        f = 0.5;
+    elseif lineType == 2
+        f = 1;
+    else
+        fprintf('Unexpected line type: %d', lineType);
+        f = 0.5;
+    end
+end
+
+function c = PickColor(n)
+    index = mod(n, 10) + 1;
     if index == 1
         c = 'r';
     elseif index == 2
@@ -220,9 +260,13 @@ function c = PickColor(index)
     elseif index == 6
         c = 'c';
     elseif index == 7
-        c = 'y';
+        c = [0.7 0.7 0.7];
+    elseif index == 8
+        c = [0.7 0.4 1];
+    elseif index == 9
+        c = [0.6 0 0.3];
     else
-        c = 'w';
+        c = [1 0.5 0];
     end
 end
 
