@@ -1,10 +1,10 @@
-function plot_states(bits, statenumber, points, ylims)
+function plot_states(bits, statenumber, points, filename)
     if nargin < 3
         % by default, pick 100 points.
         points = 100;
     end
     if nargin < 4
-        ylims = [];
+        filename = '';
     end
     
     minN = 1/1.5;
@@ -140,8 +140,8 @@ function plot_states(bits, statenumber, points, ylims)
 %         fprintf('\n');
 %     end
     
-    D = {};
-    figure; cla;
+%    D = {};
+    fig = figure; cla;
     hold on;
     for i = 1 : statenumber
         st = 1;
@@ -180,19 +180,18 @@ function plot_states(bits, statenumber, points, ylims)
         if lineType ~= 0 && st <= length(X)
             plot(X(st:length(X)), Y(st:length(X), i), 'Color', PickColor(i), 'LineStyle', PickLineStyle(lineType),'LineWidth', PickLineWidth(lineType));
         end
-        D = cat(2, D, X, Z(:, i));
+%        D = cat(2, D, X, Z(:, i));
     end
-    %figure;
-    %plot(C{:});
     title(strcat({'Lowest '},  num2str(statenumber), ' Energy States for M=', num2str(bits)));
     ylabel('E');
     xlabel('1/N');
     ax1 = gca;
     set(ax1, 'XTick', [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5]);
-    if length(ylims) == 4
-        ylim([ylims(1) ylims(2)]);
-    else
-        ylim auto;
+    ylim auto;
+    
+    if ~strcmp(filename, '')
+        saveas(fig, filename);
+        close(fig);
     end
     
 %     figure;
@@ -227,7 +226,7 @@ function f = PickLineStyle(lineType)
     if lineType == 1
         f = '-';
     elseif lineType == 2
-        f = '--';
+        f = '-.';
     else
         fprintf('Unexpected line type: %d', lineType);
         f = '-';
@@ -246,7 +245,10 @@ function f = PickLineWidth(lineType)
 end
 
 function c = PickColor(n)
-    index = mod(n, 10) + 1;
+    index = mod(n, 10);
+    if index == 0
+        index = 10;
+    end
     if index == 1
         c = 'r';
     elseif index == 2
