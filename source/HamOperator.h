@@ -14,7 +14,7 @@ private:
 	MixState& ApplyOn(const SingleTrace& single);
 	MixState& ApplyOn(const SingleTrace& single1, const SingleTrace& single2);
 protected:
-	void AddState(TraceState& state, int parity, MixState& res);
+	void AddState(TraceState& state, int parity, MixState& res, bool decreaseOrder = false);
 	virtual void ApplyOnSingle(const SingleTrace& single, MixState& res) = 0;
 	virtual void ApplyOnTwoSingle(const SingleTrace& single1, const SingleTrace& single2, MixState& res) = 0;
 public:

@@ -66,7 +66,7 @@ MixState& HamOperator::ApplyOn(const SingleTrace& single1, const SingleTrace& si
 	return cache2[key];
 }
 
-void HamOperator::AddState(TraceState& state, int parity, MixState& res)
+void HamOperator::AddState(TraceState& state, int parity, MixState& res, bool decreaseOrder)
 {
 	Coefficient coef = state.Normalize();
 	StateId id = StateCollection::Inst()->GetId(state);
@@ -78,6 +78,11 @@ void HamOperator::AddState(TraceState& state, int parity, MixState& res)
 	if (parity % 2 == 1)
 	{
 		coef.Opposite();
+	}
+	
+	if (decreaseOrder)
+	{
+		coef.DecreaseOrder();
 	}
 
 	res.AddState(id, coef);
@@ -95,7 +100,35 @@ void BitNumberHamOperator::ApplyOn(const TraceState& state, MixState& res)
 
 void BitNumberHamOperator::ApplyOnSingle(const SingleTrace& single, MixState& res)
 {
-	//.. do nothing
+	// for single trace of length 1, the operator do not make contribution
+	if (single.BitNumber() == 1)
+	{
+		return;
+	}
+
+	SingleTrace a, b;
+	int n = single.BitNumber();
+	for (int i = 0; i < n; i++)
+	{
+		single.Split(i, a, b);
+		TraceState state;
+		int parity = 0;
+		if (single.Bit(i) == 0)
+		{
+			// if ith bit is bosonic
+			state.AddTrace(SingleTrace(1, 0));
+		}
+		else
+		{
+			// if ith bit is fermionic
+			state.AddTrace(SingleTrace(1, 1));
+			parity += a.FermiNumber();
+		}
+
+		state.AddTrace(SingleTrace::Merge(a, b));
+		// TODO: need to consider 1/N factor.
+		AddState(state, parity, res, true);
+	}
 }
 
 void BitNumberHamOperator::ApplyOnTwoSingle(const SingleTrace& single1, const SingleTrace& single2, MixState& res)

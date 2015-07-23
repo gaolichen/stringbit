@@ -4,24 +4,25 @@
 using namespace std;
 
 Coefficient::Coefficient()
+	:N(0), One(0), InvN(0)
 {
-	Coefficient(0, 0);
 }
 
-Coefficient::Coefficient(int n, int one)
-	:N(n), One(one)
+Coefficient::Coefficient(int n, int one, int invN)
+	:N(n), One(one), InvN(invN)
 {
 }
 
 Coefficient Coefficient::operator+ (const Coefficient& a) const
 {
-	return Coefficient(N + a.N, One + a.One);
+	return Coefficient(N + a.N, One + a.One, InvN + a.InvN);
 }
 
 Coefficient& Coefficient::operator+= (const Coefficient& a)
 {
 	this->N += a.N;
 	this->One += a.One;
+	this->InvN += a.InvN;
 
 	return *this;
 }
@@ -30,29 +31,44 @@ void Coefficient::Opposite()
 {
 	N = -N;
 	One = -One;
+	InvN = -InvN;
+}
+
+void Coefficient::DecreaseOrder()
+{
+	if (InvN != 0)
+	{
+		cout << "DecreaseOrder(): Unexpected: InvN should be 0.";
+	}
+
+	InvN = One;
+	One = N;
+	N = 0;
 }
 
 bool Coefficient::IsZero() const
 {
-	return N == 0 && One == 0;
+	return N == 0 && One == 0 && InvN == 0;
 }
 
 Coefficient& Coefficient::operator*= (int n)
 {
 	N *= n;
 	One *= n;
+	InvN *= n;
 
 	return *this;
 }
 
 Coefficient operator* (const Coefficient& a, int n)
 {
-	return Coefficient(a.N * n, a.One * n);
+	return Coefficient(a.N * n, a.One * n, a.InvN * n);
 }
 
 ostream& operator<<(ostream& os, const Coefficient& coef)
 {
-	if (coef.N == 0 && coef.One == 0)
+	// TODO: handle InvN.
+	if (coef.IsZero())
 	{
 		os << "0";
 	}
@@ -80,8 +96,8 @@ ostream& operator<<(ostream& os, const Coefficient& coef)
 
 string Coefficient::ToLatex() const
 {
-	
-	if (N == 0 && One == 0)
+	// TODO: handle InvN.
+	if (IsZero())
 	{
 		return "0";
 	}

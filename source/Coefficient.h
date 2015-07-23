@@ -6,11 +6,13 @@ struct Coefficient
 {
 	int N;
 	int One;
+	int InvN;
 	Coefficient();
-	Coefficient(int n, int one);
+	Coefficient(int n, int one, int invN = 0);
 	Coefficient& operator+= (const Coefficient& a);
 	Coefficient operator+ (const Coefficient& a) const;
 	void Opposite();
+	void DecreaseOrder();
 	bool IsZero() const;
 	string ToLatex() const;
 	friend ostream& operator<<(ostream& os, const Coefficient& coef);
