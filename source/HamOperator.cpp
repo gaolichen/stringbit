@@ -94,8 +94,20 @@ BitNumberHamOperator::BitNumberHamOperator()
 
 void BitNumberHamOperator::ApplyOn(const TraceState& state, MixState& res)
 {
+	HamOperator::ApplyOn(state, res);
+
+	// only those trace of length grater than 1 is countted in Number operator.
 	StateId id = StateCollection::Inst()->GetId(state);
-	res.AddState(id, Coefficient(0, state.TotalBits()));
+	int m = 0;
+	for (int i = 0; i < state.TraceNumber(); i++)
+	{
+		if (state.Trace(i).BitNumber() > 1)
+		{
+			m += state.Trace(i).BitNumber();
+		}
+	}
+
+	res.AddState(id, Coefficient(m, 0));
 }
 
 void BitNumberHamOperator::ApplyOnSingle(const SingleTrace& single, MixState& res)
