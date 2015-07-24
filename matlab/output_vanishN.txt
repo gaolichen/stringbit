@@ -1,0 +1,107 @@
+>> output_vanishN('boson')
+processing xi=0 ...
+ground_vanish_N
+ground_vanish_N2
+Warning: Only 1 of the 2 requested eigenvalues converged. 
+> In eigs>processEUPDinfo at 1340
+  In eigs at 357
+  In lowest_energies2 at 2
+  In ground_vanish_N2 at 11
+  In output_vanishN at 28 
+MATLAB:eigs:ARPACKroutineErrorMinus14: Error with ARPACK routine zneupd:
+ znaupd did not find any eigenvalues to sufficient accuracy.
+bit=11 n=3.500000
+processing xi=1 ...
+ground_vanish_N
+Warning: Only 1 of the 2 requested eigenvalues converged. 
+> In eigs>processEUPDinfo at 1340
+  In eigs at 357
+  In lowest_energies at 2
+  In ground_vanish_N at 11
+  In output_vanishN at 21 
+ground_vanish_N2
+Warning: Only 1 of the 2 requested eigenvalues converged. 
+> In eigs>processEUPDinfo at 1340
+  In eigs at 357
+  In lowest_energies2 at 2
+  In ground_vanish_N2 at 11
+  In output_vanishN at 28 
+processing xi=5 ...
+ground_vanish_N
+ground_vanish_N2
+Warning: Only 1 of the 2 requested eigenvalues converged. 
+> In eigs>processEUPDinfo at 1340
+  In eigs at 357
+  In lowest_energies2 at 2
+  In ground_vanish_N2 at 11
+  In output_vanishN at 28 
+MATLAB:eigs:ARPACKroutineErrorMinus14: Error with ARPACK routine zneupd:
+ znaupd did not find any eigenvalues to sufficient accuracy.
+bit=8 n=4.000000
+MATLAB:eigs:ARPACKroutineErrorMinus14: Error with ARPACK routine zneupd:
+ znaupd did not find any eigenvalues to sufficient accuracy.
+bit=8 n=3.500000
+Warning: Only 1 of the 2 requested eigenvalues converged. 
+> In eigs>processEUPDinfo at 1340
+  In eigs at 357
+  In lowest_energies2 at 2
+  In ground_vanish_N2 at 11
+  In output_vanishN at 28 
+MATLAB:eigs:ARPACKroutineErrorMinus14: Error with ARPACK routine zneupd:
+ znaupd did not find any eigenvalues to sufficient accuracy.
+bit=9 n=1.000000
+MATLAB:eigs:ARPACKroutineErrorMinus14: Error with ARPACK routine zneupd:
+ znaupd did not find any eigenvalues to sufficient accuracy.
+bit=9 n=0.500000
+MATLAB:eigs:ARPACKroutineErrorMinus14: Error with ARPACK routine zneupd:
+ znaupd did not find any eigenvalues to sufficient accuracy.
+bit=10 n=5.000000
+MATLAB:eigs:ARPACKroutineErrorMinus14: Error with ARPACK routine zneupd:
+ znaupd did not find any eigenvalues to sufficient accuracy.
+bit=10 n=4.500000
+MATLAB:eigs:ARPACKroutineErrorMinus14: Error with ARPACK routine zneupd:
+ znaupd did not find any eigenvalues to sufficient accuracy.
+bit=10 n=4.000000
+processing xi=10 ...
+ground_vanish_N
+ground_vanish_N2
+Warning: Only 1 of the 2 requested eigenvalues converged. 
+> In eigs>processEUPDinfo at 1340
+  In eigs at 357
+  In lowest_energies2 at 2
+  In ground_vanish_N2 at 11
+  In output_vanishN at 28 
+MATLAB:eigs:ARPACKroutineErrorMinus14: Error with ARPACK routine zneupd:
+ znaupd did not find any eigenvalues to sufficient accuracy.
+bit=10 n=6.500000
+MATLAB:eigs:ARPACKroutineErrorMinus14: Error with ARPACK routine zneupd:
+ znaupd did not find any eigenvalues to sufficient accuracy.
+bit=10 n=6.000000
+MATLAB:eigs:ARPACKroutineErrorMinus14: Error with ARPACK routine zneupd:
+ znaupd did not find any eigenvalues to sufficient accuracy.
+bit=10 n=5.500000
+processing xi=n1 ...
+ground_vanish_N
+MATLAB:eigs:ARPACKroutineErrorMinus14: Error with ARPACK routine zneupd:
+ znaupd did not find any eigenvalues to sufficient accuracy.
+bit=11 n=2.500000
+Warning: Only 1 of the 2 requested eigenvalues converged. 
+> In eigs>processEUPDinfo at 1340
+  In eigs at 357
+  In lowest_energies at 2
+  In ground_vanish_N at 11
+  In output_vanishN at 21 
+ground_vanish_N2
+processing xi=n5 ...
+ground_vanish_N
+Warning: Only 1 of the 2 requested eigenvalues converged. 
+> In eigs>processEUPDinfo at 1340
+  In eigs at 357
+  In lowest_energies at 2
+  In ground_vanish_N at 11
+  In output_vanishN at 21 
+ground_vanish_N2
+processing xi=n10 ...
+ground_vanish_N
+ground_vanish_N2
+

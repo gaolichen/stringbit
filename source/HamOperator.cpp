@@ -124,7 +124,7 @@ void BitNumberHamOperator::ApplyOnSingle(const SingleTrace& single, MixState& re
 	{
 		single.Split(i, a, b);
 		TraceState state;
-		int parity = 0;
+		int parity = -1;
 		if (single.Bit(i) == 0)
 		{
 			// if ith bit is bosonic
@@ -138,8 +138,7 @@ void BitNumberHamOperator::ApplyOnSingle(const SingleTrace& single, MixState& re
 		}
 
 		state.AddTrace(SingleTrace::Merge(a, b));
-		// TODO: need to consider 1/N factor.
-		AddState(state, parity, res, true);
+		AddState(state, parity, res, false);
 	}
 }
 

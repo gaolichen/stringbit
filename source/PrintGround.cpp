@@ -198,8 +198,8 @@ void ReadVanishN(string file)
 		for (int i = 3; i <= 11; i++)
 		{
 			int bit;
-			double n;
-			ifs >> bit >> n;
+			double n, re, im, norm;
+			ifs >> bit >> n >> re >> im >> norm;
 			vanishN[make_pair(xi, bit)] = n;
 		}
 		
@@ -208,8 +208,8 @@ void ReadVanishN(string file)
 		for (int i = 3; i <= 11; i++)
 		{
 			int bit;
-			double n;
-			ifs >> bit >> n;
+			double n, re, im, norm;
+			ifs >> bit >> n >> re >> im >> norm;
 			vanishN2[make_pair(xi, bit)] = n;
 		}
 	}

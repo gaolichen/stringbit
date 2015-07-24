@@ -20,14 +20,14 @@ function output_vanishN(root)
         fprintf(fid, 'ground_vanish_N\n');
         res = ground_vanish_N(11);
         for j = 1 : size(res, 1)
-            fprintf(fid, '%2.0f %4.1f\n', res(j, 1), res(j, 2));
+            fprintf(fid, '%2.0f %4.1f %f %f %f\n', res(j, 1), res(j, 2), res(j, 3), res(j, 4), res(j, 5));
         end
 
         fprintf('ground_vanish_N2\n');
         fprintf(fid, 'ground_vanish_N2\n');
         res = ground_vanish_N2(11);
         for j = 1 : size(res, 1)
-            fprintf(fid, '%2.0f %4.1f\n', res(j, 1), res(j, 2));
+            fprintf(fid, '%2.0f %4.1f %f %f %f\n', res(j, 1), res(j, 2), res(j, 3), res(j, 4), res(j, 5));
         end
 
         cd('..');
