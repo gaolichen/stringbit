@@ -67,28 +67,39 @@ Coefficient operator* (const Coefficient& a, int n)
 
 ostream& operator<<(ostream& os, const Coefficient& coef)
 {
-	// TODO: handle InvN.
 	if (coef.IsZero())
 	{
 		os << "0";
+		return os;
 	}
-	else if (coef.N != 0 && coef.One != 0)
+
+	int v[3] = {coef.N, coef.One, coef.InvN};
+	bool isFirst = true;
+	for (int i = 0; i < 3; i++)
 	{
-		os << coef.N;
-		if (coef.One > 0)
+		if (v[i] == 0) continue;
+		if (isFirst)
 		{
-			os << "+";
+			os << v[i];
+			isFirst = false;
+		}
+		else
+		{
+			if (v[i] > 0)
+			{
+				os << "+";
+			}
+			os << v[i];
 		}
 
-		os << coef.One << "/N";
-	}
-	else if (coef.N != 0)
-	{
-		os << coef.N;
-	}
-	else
-	{
-		os << coef.One << "/N";
+		if (i == 1)
+		{
+			os << "/N";
+		}
+		else if (i == 2)
+		{
+			os << "/N^2";
+		}
 	}
 
     return os;
@@ -96,32 +107,38 @@ ostream& operator<<(ostream& os, const Coefficient& coef)
 
 string Coefficient::ToLatex() const
 {
-	// TODO: handle InvN.
 	if (IsZero())
 	{
 		return "0";
 	}
-	ostringstream oss;
-	if (N != 0)
-	{
-		oss << N;
-	}
 
-	if (One != 0)
+	int v[3] = {N, One, InvN};
+	bool isFirst = false;
+
+	ostringstream oss;
+	for (int i = 0; i < 3; i++)
 	{
-		if (One > 0)
-		{
-			if (N != 0)
-			{
-				oss << "+";
-			}
-		}
-		else
+		if (v[i] == 0) continue;
+		if (v[i] < 0)
 		{
 			oss << "-";
 		}
+		else if (!isFirst)
+		{
+			oss << "+";
+		}
 
-		oss <<"\\frac{" << abs(One) << "}{N}";
+		isFirst = false;
+		if (i == 0)
+		{
+			oss << abs(v[i]);
+		}
+		else
+		{
+			oss << "\\frac{" << abs(v[i]) << "}{N";
+			if (i == 2) oss << "^2}";
+			else oss << "}";
+		}
 	}
 
 	return oss.str();
