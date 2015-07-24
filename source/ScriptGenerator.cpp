@@ -132,9 +132,6 @@ void ScriptGenerator::HamToMatlab(int bits, Hamiltonian& ham, ofstream& os)
 
 void ScriptGenerator::OutputHamToMatlab(int bits, Hamiltonian& ham)
 {
-	//vector<vector<Coefficient> > rem, imm;
-	//ham.Matrix(bits, type, rem, imm);
-
 	string function;
 	if (!ham.Inverted())
 	{

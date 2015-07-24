@@ -128,7 +128,7 @@ void BitNumberHamOperator::ApplyOnSingle(const SingleTrace& single, MixState& re
 		if (single.Bit(i) == 0)
 		{
 			// if ith bit is bosonic
-			state.AddTrace(SingleTrace(1, 0));
+			state.AddTrace(SingleTrace(0, 1));
 		}
 		else
 		{
