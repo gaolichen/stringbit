@@ -11,6 +11,7 @@ private:
 	int mask;
 public:
 	SingleTrace();
+	SingleTrace(string trace);
 	SingleTrace(int trace, int bitNumber);
 	int BitNumber() const;
 	int Bit(int index) const;

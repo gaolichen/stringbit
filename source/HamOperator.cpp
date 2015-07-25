@@ -97,7 +97,6 @@ void BitNumberHamOperator::ApplyOn(const TraceState& state, MixState& res)
 	HamOperator::ApplyOn(state, res);
 
 	// only those trace of length grater than 1 is countted in Number operator.
-	StateId id = StateCollection::Inst()->GetId(state);
 	int m = 0;
 	for (int i = 0; i < state.TraceNumber(); i++)
 	{
@@ -107,7 +106,22 @@ void BitNumberHamOperator::ApplyOn(const TraceState& state, MixState& res)
 		}
 	}
 
-	res.AddState(id, Coefficient(m, 0));
+	TraceState ts = state;
+	Coefficient coef = ts.Normalize();
+	StateId id = StateCollection::Inst()->GetId(ts);
+
+	if (coef.One == -1)
+	{
+		res.AddState(id, Coefficient(-m, 0));
+	}
+	else if (coef.One == 1)
+	{
+		res.AddState(id, Coefficient(m, 0));
+	}
+	else
+	{
+		cout << "BitNumberHamOperator::ApplyOn(): Unexpected coef.One = " << coef.One << endl;
+	}
 }
 
 void BitNumberHamOperator::ApplyOnSingle(const SingleTrace& single, MixState& res)
@@ -124,7 +138,7 @@ void BitNumberHamOperator::ApplyOnSingle(const SingleTrace& single, MixState& re
 	{
 		single.Split(i, a, b);
 		TraceState state;
-		int parity = -1;
+		int parity = 1;
 		if (single.Bit(i) == 0)
 		{
 			// if ith bit is bosonic

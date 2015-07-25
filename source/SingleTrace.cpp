@@ -15,6 +15,20 @@ SingleTrace::SingleTrace(int trace, int bitNumber)
 	mask = BuildMask(trace, bitNumber);
 }
 
+SingleTrace::SingleTrace(string trace)
+{
+	int n = 0;
+	for (int i = 0; i < trace.length(); i++)
+	{
+		if (trace[i] == 'b')
+		{
+			n |= (1 << (trace.length() - i - 1));
+		}
+	}
+
+	mask = BuildMask(n, trace.length());
+}
+
 int SingleTrace::BitNumber() const
 {
 	return mask >> MAX_TRACE_BITS;

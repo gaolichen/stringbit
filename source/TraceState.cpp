@@ -2,6 +2,7 @@
 #include "TraceState.h"
 #include <vector>
 #include <algorithm>
+#include <string>
 using namespace std;
 
 TraceState::TraceState()
@@ -11,6 +12,19 @@ TraceState::TraceState()
 TraceState::TraceState(vector<SingleTrace>& traces)
 {
 	vs = traces;
+}
+
+TraceState::TraceState(string traces)
+{
+	int pos, next = -1;
+	do
+	{
+		pos = next + 1;
+		next = traces.find_first_of(',', pos);
+		if (next != string::npos)
+			vs.push_back(SingleTrace(traces.substr(pos, next - pos)));
+		else vs.push_back(SingleTrace(traces.substr(pos, next)));
+	} while (next != string::npos);
 }
 
 int TraceState::FermionNumber() const

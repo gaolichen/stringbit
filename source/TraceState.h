@@ -12,6 +12,7 @@ private:
 	vector<SingleTrace> vs;
 public:
 	TraceState();
+	TraceState(string);
 	TraceState(vector<SingleTrace> &);
 	int TraceNumber() const;
 	int FermionNumber() const;

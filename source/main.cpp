@@ -22,14 +22,37 @@ string scriptFolder = ".";
 string scriptFolder = ".";
 #endif
 
-void TestHamiltonianMultiTrace(TraceState& state)
+void TestHamiltonian()
 {
+	TraceState state("a,ab");
 	Hamiltonian ham;
 	MixState re, im;
 	ham.Apply(state, re, im);
 	cout << "H" << state << "|0> = ";
 	cout << re.ToString();
 	cout <<" + i{" << im.ToString() << "}" << endl;
+}
+
+void TestHamOperator()
+{
+	HamOperator *op;
+	op = new BitNumberHamOperator();
+
+	TraceState state("a,aabbb");
+	MixState res;
+	op->ApplyOn(state, res);
+	cout << "H" << state << "|0> = ";
+	cout << res.ToString() << endl;
+	delete op;
+}
+
+void TestTraceState()
+{
+	SingleTrace single("aaaab");
+	cout << single << endl;
+	
+	TraceState ts("aaa,ab");
+	cout << ts << endl;
 }
 
 void GenerateStates()
@@ -126,7 +149,7 @@ void GenerateMatlabScript(StateType type, int xi, bool inverted)
 	Stopwatch watch;
 	watch.Start();
 	for (int i = 3; i <= StateGenerator::MAX_BIT_TO_GENERATE; i++)
-	//for (int i = 3; i <= 3; i++)
+	//for (int i = 3; i <= 9; i++)
 	{
 #ifdef HAM_PARAMETER
 		sc.OutputHamToMatlab(i, inverted);
@@ -159,6 +182,8 @@ void GenerateLaTeX()
 int main()
 {
 	GenerateStates();
+	//TestTraceState();
+	//TestHamOperator();
 	//CalculateNorm(3, false);
 	//CalculateNorm(4, false);
 	//CalculateNorm(5, false);
@@ -169,10 +194,7 @@ int main()
 	//CalculateNorm(10, false);
 	//TestNormCalculator();
 	
-	//TraceState state;
-	//state.AddTrace(SingleTrace(1, 2));
-	//state.AddTrace(SingleTrace(1, 1));
-	//TestHamiltonianMultiTrace(state);
+	//TestHamiltonian();
 	//OutputHamiltonianMatrix(2);
 	//OutputHamiltonianMatrix(3);
 	//OutputHamiltonianMatrix(4);
@@ -182,7 +204,7 @@ int main()
 	//OutputHamiltonianMatrix(11);
 
 	//GenerateLaTeX();
-	int xi = -10;
+	int xi = 10;
 	GenerateMatlabScript(Fermion, xi, true);	
 	GenerateMatlabScript(Fermion, xi, false);
 	GenerateMatlabScript(Boson, xi, true);
