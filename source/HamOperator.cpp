@@ -88,6 +88,12 @@ void HamOperator::AddState(TraceState& state, int parity, MixState& res, bool de
 	res.AddState(id, coef);
 }
 
+ostream& operator<<(ostream& os, const HamOperator& op)
+{
+	os << op.ToString();
+	return os;
+}
+
 BitNumberHamOperator::BitNumberHamOperator()
 {
 }
@@ -159,6 +165,11 @@ void BitNumberHamOperator::ApplyOnSingle(const SingleTrace& single, MixState& re
 void BitNumberHamOperator::ApplyOnTwoSingle(const SingleTrace& single1, const SingleTrace& single2, MixState& res)
 {
 	//.. do nothing.
+}
+
+string BitNumberHamOperator::ToString() const
+{
+	return "M";
 }
 
 HamOperatorA::HamOperatorA(int creator, int annihilator)
@@ -251,6 +262,10 @@ void HamOperatorA::ApplyOnTwoSingle(const SingleTrace& single1, const SingleTrac
 	}
 }
 
+string HamOperatorA::ToString() const
+{
+	return "Tr" + ToUpper(Bits2String(this->creator, 2)) + Bits2String(this->annihilator, 2);
+}
 
 HamOperatorB::HamOperatorB(int creator, int annihilator)
 {
@@ -365,4 +380,17 @@ void HamOperatorB::ApplyOnTwoSingle(const SingleTrace& single1, const SingleTrac
 			}
 		}
 	}
+}
+
+string HamOperatorB::ToString() const
+{
+	string a = ToUpper(Bits2String(this->creator, 2));
+	string b = Bits2String(this->annihilator, 2);
+	string ret = "Tr";
+	ret += a[0];
+	ret += b[0];
+	ret += a[1];
+	ret += b[1];
+
+	return ret;
 }

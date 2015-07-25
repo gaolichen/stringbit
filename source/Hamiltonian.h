@@ -24,4 +24,5 @@ public:
 	void Matrix(int bits, StateType type, vector<vector<Coefficient> >& rem, vector<vector<Coefficient> >& imm);
 	void AddReadOp(HamOperator *op, int prefactor);
 	void AddImaginaryOp(HamOperator *op, int prefactor);
+	friend ostream& operator<<(ostream& os, const Hamiltonian& ham);
 };

@@ -22,13 +22,13 @@ string scriptFolder = ".";
 string scriptFolder = ".";
 #endif
 
-void TestHamiltonian()
+void TestHamiltonian(int xi, bool inverted)
 {
-	TraceState state("a,ab");
-	Hamiltonian ham;
+	TraceState state("aaaba");
+	Hamiltonian ham(xi, inverted);
 	MixState re, im;
 	ham.Apply(state, re, im);
-	cout << "H" << state << "|0> = ";
+	cout << ham << state << "|0> = ";
 	cout << re.ToString();
 	cout <<" + i{" << im.ToString() << "}" << endl;
 }
@@ -148,8 +148,8 @@ void GenerateMatlabScript(StateType type, int xi, bool inverted)
 
 	Stopwatch watch;
 	watch.Start();
-	for (int i = 3; i <= StateGenerator::MAX_BIT_TO_GENERATE; i++)
-	//for (int i = 3; i <= 9; i++)
+	//for (int i = 3; i <= StateGenerator::MAX_BIT_TO_GENERATE; i++)
+	for (int i = 3; i <= 9; i++)
 	{
 #ifdef HAM_PARAMETER
 		sc.OutputHamToMatlab(i, inverted);
@@ -184,16 +184,17 @@ int main()
 	GenerateStates();
 	//TestTraceState();
 	//TestHamOperator();
-	//TestHamiltonian();
+	TestHamiltonian(0, true);
+	TestHamiltonian(1, true);
 	//CalculateNorm(3, false);
 	//TestNormCalculator();
 	//OutputHamiltonianMatrix(3);
 	//GenerateLaTeX();
 
-	int xi = 10;
-	//GenerateMatlabScript(Fermion, xi, true);	
-	//GenerateMatlabScript(Fermion, xi, false);
-	//GenerateMatlabScript(Boson, xi, true);
-	//GenerateMatlabScript(Boson, xi, false);
+	int xi = -5;
+	GenerateMatlabScript(Fermion, xi, true);
+	GenerateMatlabScript(Fermion, xi, false);
+	GenerateMatlabScript(Boson, xi, true);
+	GenerateMatlabScript(Boson, xi, false);
 	return 0;
 }

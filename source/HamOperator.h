@@ -24,6 +24,8 @@ public:
 	const static int BB = 3;
 	HamOperator();
 	virtual void ApplyOn(const TraceState& state, MixState& res);
+	virtual string ToString() const = 0;
+	friend ostream& operator<<(ostream& os, const HamOperator& op);
 };
 
 class BitNumberHamOperator : public HamOperator
@@ -34,6 +36,7 @@ protected:
 public:
 	BitNumberHamOperator();
 	virtual void ApplyOn(const TraceState& state, MixState& res);
+	virtual string ToString() const;
 };
 
 class HamOperatorA : public HamOperator
@@ -46,6 +49,7 @@ protected:
 	virtual void ApplyOnTwoSingle(const SingleTrace& single1, const SingleTrace& single2, MixState& res);
 public:
 	HamOperatorA(int creator, int annihilator);
+	virtual string ToString() const;
 };
 
 class HamOperatorB : public HamOperator
@@ -58,4 +62,5 @@ protected:
 	virtual void ApplyOnTwoSingle(const SingleTrace& single1, const SingleTrace& single2, MixState& res);
 public:
 	HamOperatorB(int creator, int annihilator);
+	virtual string ToString() const;
 };

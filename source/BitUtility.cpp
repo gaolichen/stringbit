@@ -62,6 +62,34 @@ string CombinePath(string path1, string path2)
 	return path1 + "/" + path2;
 }
 
+string Bits2String(int bits, int bitNumber)
+{
+	string ret(bitNumber, 'a');
+	for (int i = 0; i < bitNumber; i++)
+	{
+		if ((bits & (1 << i)) != 0)
+		{
+			ret[bitNumber - 1 - i] = char('b');
+		}
+	}
+
+	return ret;
+}
+
+string ToUpper(string s)
+{
+	string ret = s;
+	for (int i = 0; i < s.length(); i++)
+	{
+		if (s[i] >= 'a' && s[i] <= 'z')
+		{
+			ret[i] = char((s[i] - 'a') + 'A');
+		}
+	}
+
+	return ret;
+}
+
 Stopwatch::Stopwatch()
 {
 	start = 0;

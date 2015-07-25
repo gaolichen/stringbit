@@ -134,3 +134,35 @@ void Hamiltonian::Matrix(int bits, StateType type, vector<vector<Coefficient> >&
 		}
 	}
 }
+
+ostream& operator<<(ostream& os, const Hamiltonian& ham)
+{
+	bool isFirst = true;
+	for (int i = 0; i < ham.realOps.size(); i++)
+	{
+		if (ham.rePrefactors[i] == 0) continue;
+		if (!isFirst && ham.rePrefactors[i] > 0)
+		{
+			os << " + ";
+		}
+		os << ham.rePrefactors[i] << *ham.realOps[i];
+		isFirst = false;
+	}
+
+	os << " + i*{";
+
+	for (int i = 0; i < ham.imaginaryOps.size(); i++)
+	{
+		if (ham.imPrefactor[i] == 0) continue;
+		if (!isFirst && ham.imPrefactor[i] > 0)
+		{
+			os << " + ";
+		}
+		os << ham.imPrefactor[i] << *ham.realOps[i];
+		isFirst = false;
+	}
+
+	os << "}";
+
+	return os;
+}

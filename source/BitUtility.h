@@ -24,6 +24,8 @@ int InverseNumber(const vector<int>& v);
 int BuildMask(int trace, int bitNumber);
 int Gcd(int a, int b);
 string CombinePath(string path1, string path2);
+string Bits2String(int bits, int bitNumber);
+string ToUpper(string s);
 
 template<class T> string ToString(T a)
 {
