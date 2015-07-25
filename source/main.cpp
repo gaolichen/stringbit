@@ -60,7 +60,7 @@ void GenerateStates()
 	StateGenerator generator;
 	for (int i = 1; i <= StateGenerator::MAX_BIT_TO_COUNT; i++)
 	{
-		cout << i << "\t" << generator.SingleStateNumber(i) << "\t" << generator.BosonNumber(i) << endl;
+		//cout << i << "\t" << generator.SingleStateNumber(i) << "\t" << generator.BosonNumber(i) << endl;
 	}
 
 	generator.GenerateAllStates();
@@ -73,22 +73,22 @@ void OutputHamiltonianMatrix(int bits)
 	vector<vector<Coefficient> > rem, imm;
 	ham.Matrix(bits, Boson, rem, imm);
 	cout << bits << " bits Hamiltonian: " <<endl;
-	//for (int i = 0; i < rem.size(); i++)
-	//{
-	//	for (int j = 0; j < rem[i].size(); j++)
-	//	{
-	//		if (!imm[i][j].IsZero())
-	//		{
-	//			cout << imm[i][j] << "i ";
-	//		}
-	//		else
-	//		{
-	//			cout << rem[i][j] << " ";
-	//		}
-	//		
-	//	}
-	//	cout << endl;
-	//}
+	for (int i = 0; i < rem.size(); i++)
+	{
+		for (int j = 0; j < rem[i].size(); j++)
+		{
+			if (!imm[i][j].IsZero())
+			{
+				cout << imm[i][j] << "i ";
+			}
+			else
+			{
+				cout << rem[i][j] << " ";
+			}
+			
+		}
+		cout << endl;
+	}
 }
 
 void OutputHamToLatex()
@@ -169,14 +169,14 @@ void GenerateMatlabScript(StateType type, int xi, bool inverted)
 
 void GenerateLaTeX()
 {
-	//ScriptGenerator sg1(scriptFolder, Boson);
-	//ScriptGenerator sg2(scriptFolder, Fermion);
-	//string filename = "E:\\Dropbox\\proj\\stringbit\\boson-states-1-7.tex";
-	//sg1.OutputStateToLaTeX(1, 7, filename);
-	//filename = "E:\\Dropbox\\proj\\stringbit\\fermion-states-1-7.tex";
-	//sg2.OutputStateToLaTeX(1, 7, filename);
-	//OutputHamToLatex();
-	//sg1.OutputNormToLaTeX(2, 7, "E:\\Dropbox\\proj\\stringbit\\norms-2-7.tex");
+	ScriptGenerator sg1(scriptFolder, Boson);
+	ScriptGenerator sg2(scriptFolder, Fermion);
+	string filename = "E:\\Dropbox\\proj\\stringbit\\boson-states-1-7.tex";
+	sg1.OutputStateToLaTeX(1, 7, filename);
+	filename = "E:\\Dropbox\\proj\\stringbit\\fermion-states-1-7.tex";
+	sg2.OutputStateToLaTeX(1, 7, filename);
+	OutputHamToLatex();
+	sg1.OutputNormToLaTeX(2, 7, "E:\\Dropbox\\proj\\stringbit\\norms-2-7.tex");
 }
 
 int main()
@@ -184,30 +184,16 @@ int main()
 	GenerateStates();
 	//TestTraceState();
 	//TestHamOperator();
-	//CalculateNorm(3, false);
-	//CalculateNorm(4, false);
-	//CalculateNorm(5, false);
-	//CalculateNorm(6, false);
-	//CalculateNorm(7, false);
-	//CalculateNorm(8, false);
-	//CalculateNorm(9, false);
-	//CalculateNorm(10, false);
-	//TestNormCalculator();
-	
 	//TestHamiltonian();
-	//OutputHamiltonianMatrix(2);
+	//CalculateNorm(3, false);
+	//TestNormCalculator();
 	//OutputHamiltonianMatrix(3);
-	//OutputHamiltonianMatrix(4);
-	//OutputHamiltonianMatrix(5);
-	//OutputHamiltonianMatrix(6);
-	//OutputHamiltonianMatrix(7);
-	//OutputHamiltonianMatrix(11);
-
 	//GenerateLaTeX();
+
 	int xi = 10;
-	GenerateMatlabScript(Fermion, xi, true);	
-	GenerateMatlabScript(Fermion, xi, false);
-	GenerateMatlabScript(Boson, xi, true);
-	GenerateMatlabScript(Boson, xi, false);
+	//GenerateMatlabScript(Fermion, xi, true);	
+	//GenerateMatlabScript(Fermion, xi, false);
+	//GenerateMatlabScript(Boson, xi, true);
+	//GenerateMatlabScript(Boson, xi, false);
 	return 0;
 }
