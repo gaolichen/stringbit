@@ -12,7 +12,7 @@ struct Coefficient
 	Coefficient& operator+= (const Coefficient& a);
 	Coefficient operator+ (const Coefficient& a) const;
 	void Opposite();
-	void DecreaseOrder();
+	void ChangeOrder(int order2Change);
 	bool IsZero() const;
 	string ToLatex() const;
 	friend ostream& operator<<(ostream& os, const Coefficient& coef);

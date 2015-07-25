@@ -166,3 +166,37 @@ ostream& operator<<(ostream& os, const Hamiltonian& ham)
 
 	return os;
 }
+
+HamOperator* Hamiltonian::RealOp(int index)
+{
+	return realOps[index];
+}
+
+int Hamiltonian::RealOpSize()
+{
+	return realOps.size();
+}
+
+ZeroHamiltonian::ZeroHamiltonian()
+{
+	realOps.clear();
+	rePrefactors.clear();
+	imaginaryOps.clear();
+	imPrefactor.clear();
+	realOps.push_back(new HamOperatorA(HamOperator::AA, HamOperator::AA));
+	rePrefactors.push_back(1);
+	realOps.push_back(new HamOperatorA(HamOperator::BB, HamOperator::BB));
+	rePrefactors.push_back(1);
+	realOps.push_back(new HamOperatorA(HamOperator::AB, HamOperator::BA));
+	rePrefactors.push_back(1);
+	realOps.push_back(new HamOperatorA(HamOperator::BA, HamOperator::AB));
+	rePrefactors.push_back(1);
+	realOps.push_back(new BitNumberHamOperator());
+	rePrefactors.push_back(-1);
+	realOps.push_back(new HamOperatorB(HamOperator::AA, HamOperator::AA));
+	rePrefactors.push_back(-1);
+	realOps.push_back(new HamOperatorB(HamOperator::BA, HamOperator::BA));
+	rePrefactors.push_back(-1);
+	realOps.push_back(new HamOperatorB(HamOperator::AB, HamOperator::BA));
+	rePrefactors.push_back(1);
+}

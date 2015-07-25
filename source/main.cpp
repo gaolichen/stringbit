@@ -33,6 +33,26 @@ void TestHamiltonian(int xi, bool inverted)
 	cout <<" + i{" << im.ToString() << "}" << endl;
 }
 
+void TestZeroHamiltonian()
+{
+	ZeroHamiltonian ham;
+	MixState re, im;
+	TraceState state("aaaaaa");
+	ham.Apply(state, re, im);
+	cout << ham  << state << "|0> = ";
+	cout << re.ToString();
+	cout << " + i {" << im.ToString() << "}" << endl;
+
+	for (int i = 0; i < ham.RealOpSize(); i++)
+	{
+		HamOperator* op = ham.RealOp(i);
+		MixState ms;
+		op->ApplyOn(state, ms);
+		cout << *op << state << "|0> = ";
+		cout << ms.ToString() << endl; 
+	}
+}
+
 void TestHamOperator()
 {
 	HamOperator *op;
@@ -186,15 +206,16 @@ int main()
 	//TestHamOperator();
 	TestHamiltonian(0, true);
 	TestHamiltonian(1, true);
+	TestZeroHamiltonian();
 	//CalculateNorm(3, false);
 	//TestNormCalculator();
 	//OutputHamiltonianMatrix(3);
 	//GenerateLaTeX();
 
 	int xi = -5;
-	GenerateMatlabScript(Fermion, xi, true);
-	GenerateMatlabScript(Fermion, xi, false);
-	GenerateMatlabScript(Boson, xi, true);
-	GenerateMatlabScript(Boson, xi, false);
+	//GenerateMatlabScript(Fermion, xi, true);
+	//GenerateMatlabScript(Fermion, xi, false);
+	//GenerateMatlabScript(Boson, xi, true);
+	//GenerateMatlabScript(Boson, xi, false);
 	return 0;
 }

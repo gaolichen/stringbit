@@ -75,6 +75,12 @@ string MixState::ToString()
 		oss << it->second  << StateCollection::Inst()->GetState(it->first);
 		isFirst = false;
 	}
+	
+	// if all terms are zero.
+	if (isFirst)
+	{
+		oss << "0";
+	}
 
 	return oss.str();
 }

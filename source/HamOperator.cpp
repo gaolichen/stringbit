@@ -66,7 +66,7 @@ MixState& HamOperator::ApplyOn(const SingleTrace& single1, const SingleTrace& si
 	return cache2[key];
 }
 
-void HamOperator::AddState(TraceState& state, int parity, MixState& res, bool decreaseOrder)
+void HamOperator::AddState(TraceState& state, int parity, MixState& res, int order2Change)
 {
 	Coefficient coef = state.Normalize();
 	StateId id = StateCollection::Inst()->GetId(state);
@@ -80,9 +80,9 @@ void HamOperator::AddState(TraceState& state, int parity, MixState& res, bool de
 		coef.Opposite();
 	}
 	
-	if (decreaseOrder)
+	if (order2Change != 0)
 	{
-		coef.DecreaseOrder();
+		coef.ChangeOrder(order2Change);
 	}
 
 	res.AddState(id, coef);
@@ -324,7 +324,7 @@ void HamOperatorB::ApplyOnSingle(const SingleTrace& single, MixState& res)
 			TraceState state;
 			state.AddTrace(SingleTrace::Merge(a, d, c));
 			parity = c.FermiNumber() * (a2 + d.FermiNumber());
-			AddState(state, parity, res);
+			AddState(state, parity, res, 1);
 		}
 	}
 }

@@ -228,7 +228,7 @@ function f = PickLineStyle(lineType)
     elseif lineType == 2
         f = '-.';
     else
-        fprintf('Unexpected line type: %d', lineType);
+        fprintf('Unexpected line type: %d\n', lineType);
         f = '-';
     end
 end
@@ -239,7 +239,7 @@ function f = PickLineWidth(lineType)
     elseif lineType == 2
         f = 1;
     else
-        fprintf('Unexpected line type: %d', lineType);
+        fprintf('Unexpected line type: %d\n', lineType);
         f = 0.5;
     end
 end

@@ -34,16 +34,32 @@ void Coefficient::Opposite()
 	InvN = -InvN;
 }
 
-void Coefficient::DecreaseOrder()
+void Coefficient::ChangeOrder(int order2Change)
 {
-	if (InvN != 0)
+	if (order2Change == 0) return;
+	if (order2Change > 1 || order2Change < -1)
 	{
-		cout << "DecreaseOrder(): Unexpected: InvN should be 0.";
+		cout << "Only 1 or -1 order change is allowd." << endl;
+		return;
+	}
+	
+	if ((InvN != 0 && order2Change == -1) || (N != 0 and order2Change == 1))
+	{
+		cout << "ChangeOrder(): Unexpected: InvN or N should be 0.";
 	}
 
-	InvN = One;
-	One = N;
-	N = 0;
+	if (order2Change == -1)
+	{
+		InvN = One;
+		One = N;
+		N = 0;
+	}
+	else
+	{
+		N = One;
+		One = InvN;
+		InvN = 0;
+	}
 }
 
 bool Coefficient::IsZero() const
