@@ -43,7 +43,7 @@ void Coefficient::ChangeOrder(int order2Change)
 		return;
 	}
 	
-	if ((InvN != 0 && order2Change == -1) || (N != 0 and order2Change == 1))
+	if ((InvN != 0 && order2Change == -1) || (N != 0 && order2Change == 1))
 	{
 		cout << "ChangeOrder(): Unexpected: InvN or N should be 0.";
 	}
