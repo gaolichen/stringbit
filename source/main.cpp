@@ -161,19 +161,27 @@ void TestNormCalculator()
 	cout << calc.Calculate(a, b) << endl;;
 }
 
-void GenerateMatlabScript(StateType type, int xi, bool inverted)
+void GenerateHamMatlab(StateType type, int xi, bool inverted)
 {	
 	ScriptGenerator sc(scriptFolder, type);
 	Hamiltonian ham(xi, inverted);
 
 	Stopwatch watch;
 	watch.Start();
-	//for (int i = 3; i <= StateGenerator::MAX_BIT_TO_GENERATE; i++)
-	for (int i = 3; i <= 9; i++)
+	for (int i = 3; i <= StateGenerator::MAX_BIT_TO_GENERATE; i++)
+	//for (int i = 3; i <= 9; i++)
 	{
 		sc.OutputHamToMatlab(i, ham);
 	}
 
+	cout << "Time: " << watch.Stop() << " seconds." << endl;
+}
+
+void GenerateNormMatlab(StateType type)
+{
+	Stopwatch watch;
+	watch.Start();
+	ScriptGenerator sc(scriptFolder, type);
 	//for (int i = 3; i <= StateGenerator::MAX_BIT_TO_GENERATE; i++)
 	for (int i = 3; i <= 11; i++)
 	{
@@ -181,6 +189,23 @@ void GenerateMatlabScript(StateType type, int xi, bool inverted)
 	}
 
 	cout << "Time: " << watch.Stop() << " seconds." << endl;
+}
+
+void GenerateAllHamMatlab(int xi)
+{
+	if (xi < -1)
+	{
+		cout << "xi must be greater or equan than -1." << endl;
+	}
+
+	GenerateHamMatlab(Boson, xi, false);
+	GenerateHamMatlab(Fermion, xi, false);
+
+	if (xi >= 1)
+	{
+		GenerateHamMatlab(Boson, xi, true);
+		GenerateHamMatlab(Fermion, xi, true);
+	}
 }
 
 void GenerateLaTeX()
@@ -208,10 +233,7 @@ int main()
 	//OutputHamiltonianMatrix(3);
 	//GenerateLaTeX();
 
-	int xi = 0;
-	//GenerateMatlabScript(Fermion, xi, true);
-	GenerateMatlabScript(Fermion, xi, false);
-	//GenerateMatlabScript(Boson, xi, true);
-	GenerateMatlabScript(Boson, xi, false);
+	int xi = -1;
+	GenerateAllHamMatlab(xi);
 	return 0;
 }
