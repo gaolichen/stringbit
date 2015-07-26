@@ -109,7 +109,9 @@ struct StateList
 	{
 		os << "\\subsubsection*{$M=" << M << ",\\, E=" << E0 << "$}" << endl;
 		os << "Ground state vanishes at $N=";
-		double n = vanishN[make_pair(Xi, M)];
+		double n;
+		if (!inverted) n = vanishN[make_pair(Xi, M)];
+		else n = vanishN2[make_pair(Xi, M)];
 		if (abs(n - floor(n)) < 1e-8)
 		{
 			os <<(int)n;
@@ -164,7 +166,7 @@ void PrintHam(int xi, ofstream& os)
 	if (xi != 0)
 	{
 		os << " &  &";
-		if (inverted != (xi > 0)) os << " + ";
+		if (xi > 0) os << " + ";
 		else os << " - ";
 		os << "\\frac{";
 		os << abs(2*xi);
@@ -172,14 +174,14 @@ void PrintHam(int xi, ofstream& os)
 		os << "M\\right]\\\\" << endl;
 	}
 
-	int a = 2*xi + 2;
-	if (inverted) a = -a;
-
-	if (a < 0)
-	{
-		os << " &  & +\\frac{" << -a << "}{N}" << endl;
-		os << "\\mathrm{Tr}\\left[\\bar{a}a\\bar{a}a+\\bar{b}b\\bar{a}a-\\bar{a}b\\bar{b}a\\right]" << endl;
-	}
+//	int a = 2*xi + 2;
+//	if (inverted) a = -a;
+//
+//	if (a < 0)
+//	{
+//		os << " &  & +\\frac{" << -a << "}{N}" << endl;
+//		os << "\\mathrm{Tr}\\left[\\bar{a}a\\bar{a}a+\\bar{b}b\\bar{a}a-\\bar{a}b\\bar{b}a\\right]" << endl;
+//	}
 	
 	os << "\\end{eqnarray*}" << endl;
 }
