@@ -5,7 +5,7 @@ function output_vanishN(root)
     addpath('../..');
     addpath('..');
 
-    folders ={'xi=0' 'xi=1' 'xi=5' 'xi=10' 'xi=n1' 'xi=n5' 'xi=n10'};
+    folders ={'xi=0' 'xi=n1' 'xi=1' 'xi=2' 'xi=5' 'xi=10'};
     %folders ={'xi=0'};
 
     for i = 1 : size(folders, 2)
@@ -23,11 +23,13 @@ function output_vanishN(root)
             fprintf(fid, '%2.0f %4.1f %f %f %f\n', res(j, 1), res(j, 2), res(j, 3), res(j, 4), res(j, 5));
         end
 
-        fprintf('ground_vanish_N2\n');
-        fprintf(fid, 'ground_vanish_N2\n');
-        res = ground_vanish_N2(11);
-        for j = 1 : size(res, 1)
-            fprintf(fid, '%2.0f %4.1f %f %f %f\n', res(j, 1), res(j, 2), res(j, 3), res(j, 4), res(j, 5));
+        if i > 2
+            fprintf('ground_vanish_N2\n');
+            fprintf(fid, 'ground_vanish_N2\n');
+            res = ground_vanish_N2(11);
+            for j = 1 : size(res, 1)
+                fprintf(fid, '%2.0f %4.1f %f %f %f\n', res(j, 1), res(j, 2), res(j, 3), res(j, 4), res(j, 5));
+            end
         end
 
         cd('..');

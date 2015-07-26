@@ -5,7 +5,7 @@ function output_ground_states2(root)
     addpath('../..');
     addpath('..');
 
-    folders ={'xi=0' 'xi=1' 'xi=5' 'xi=10' 'xi=n1' 'xi=n5' 'xi=n10'};
+    folders ={'xi=1' 'xi=2' 'xi=5' 'xi=10'};
     %folders ={'xi=0'};
 
     for i = 1 : size(folders, 2)

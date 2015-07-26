@@ -203,14 +203,17 @@ void ReadVanishN(string file)
 			vanishN[make_pair(xi, bit)] = n;
 		}
 		
-		ifs.getline(line, 256);
-		ifs.getline(line, 256);
-		for (int i = 3; i <= 11; i++)
+		if (xi >= 1)
 		{
-			int bit;
-			double n, re, im, norm;
-			ifs >> bit >> n >> re >> im >> norm;
-			vanishN2[make_pair(xi, bit)] = n;
+			ifs.getline(line, 256);
+			ifs.getline(line, 256);
+			for (int i = 3; i <= 11; i++)
+			{
+				int bit;
+				double n, re, im, norm;
+				ifs >> bit >> n >> re >> im >> norm;
+				vanishN2[make_pair(xi, bit)] = n;
+			}
 		}
 	}
 
