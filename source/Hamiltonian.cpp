@@ -4,19 +4,13 @@
 Hamiltonian::Hamiltonian()
 {
 	this->inverted = false;
-#ifdef HAM_PARAMETER
-#else
 	Init(0);
-#endif
 }
 
 Hamiltonian::Hamiltonian(int xi, bool invert)
 {
 	this->inverted = invert;
-#ifdef HAM_PARAMETER
-#else
 	Init(xi);
-#endif
 }
 
 void Hamiltonian::Init(int xi)
@@ -27,38 +21,36 @@ void Hamiltonian::Init(int xi)
 		a = -1;
 	}
 
-	int aaaa = (2 + 2 * xi) * a;
-
 	realOps.push_back(new HamOperatorA(HamOperator::AA, HamOperator::AA));
-	rePrefactors.push_back(aaaa);
+	rePrefactors.push_back(2 * a + 2 * xi);
 	realOps.push_back(new HamOperatorA(HamOperator::BB, HamOperator::BB));
-	rePrefactors.push_back((-2 + 2* xi) * a);
+	rePrefactors.push_back(-2 * a + 2 * xi);
 	realOps.push_back(new HamOperatorA(HamOperator::AB, HamOperator::BA));
-	rePrefactors.push_back(2 * (xi + 1) * a);
+	rePrefactors.push_back(2 * a + 2 * xi);
 	realOps.push_back(new HamOperatorA(HamOperator::BA, HamOperator::BA));
 	rePrefactors.push_back(2 * a);
 	realOps.push_back(new HamOperatorA(HamOperator::AB, HamOperator::AB));
 	rePrefactors.push_back(2 * a);
 	realOps.push_back(new HamOperatorA(HamOperator::BA, HamOperator::AB));
-	rePrefactors.push_back(2 * (xi - 1) * a);
+	rePrefactors.push_back(2 * xi - 2 * a);
 
 	realOps.push_back(new BitNumberHamOperator());
-	rePrefactors.push_back(-2 * xi * a);
+	rePrefactors.push_back(-2 * xi);
 
 	imaginaryOps.push_back(new HamOperatorA(HamOperator::BB, HamOperator::AA));
 	imPrefactor.push_back(-2 * a);
 	imaginaryOps.push_back(new HamOperatorA(HamOperator::AA, HamOperator::BB));
 	imPrefactor.push_back(2 * a);
 
-	if (aaaa < 0)
-	{
-		realOps.push_back(new HamOperatorB(HamOperator::AA, HamOperator::AA));
-		rePrefactors.push_back(-aaaa);
-		realOps.push_back(new HamOperatorB(HamOperator::BA, HamOperator::BA));
-		rePrefactors.push_back(-aaaa);
-		realOps.push_back(new HamOperatorB(HamOperator::AB, HamOperator::BA));
-		rePrefactors.push_back(aaaa);
-	}
+	//if (aaaa < 0)
+	//{
+	//	realOps.push_back(new HamOperatorB(HamOperator::AA, HamOperator::AA));
+	//	rePrefactors.push_back(-aaaa);
+	//	realOps.push_back(new HamOperatorB(HamOperator::BA, HamOperator::BA));
+	//	rePrefactors.push_back(-aaaa);
+	//	realOps.push_back(new HamOperatorB(HamOperator::AB, HamOperator::BA));
+	//	rePrefactors.push_back(aaaa);
+	//}
 }
 
 Hamiltonian::~Hamiltonian()
@@ -76,12 +68,30 @@ Hamiltonian::~Hamiltonian()
 
 void Hamiltonian::AddReadOp(HamOperator *op, int prefactor)
 {
+	for (int i = 0; i < realOps.size(); i++)
+	{
+		if (*realOps[i] == *op)
+		{
+			rePrefactors[i] += prefactor;
+			return;
+		}
+	}
+
 	this->realOps.push_back(op);
 	this->rePrefactors.push_back(prefactor);
 }
 
 void Hamiltonian::AddImaginaryOp(HamOperator *op, int prefactor)
 {
+	for (int i = 0; i < realOps.size(); i++)
+	{
+		if (*imaginaryOps[i] == *op)
+		{
+			imPrefactor[i] += prefactor;
+			return;
+		}
+	}
+
 	this->imaginaryOps.push_back(op);
 	this->imPrefactor.push_back(prefactor);
 }

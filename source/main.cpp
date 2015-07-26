@@ -171,11 +171,7 @@ void GenerateMatlabScript(StateType type, int xi, bool inverted)
 	//for (int i = 3; i <= StateGenerator::MAX_BIT_TO_GENERATE; i++)
 	for (int i = 3; i <= 9; i++)
 	{
-#ifdef HAM_PARAMETER
-		sc.OutputHamToMatlab(i, inverted);
-#else
 		sc.OutputHamToMatlab(i, ham);
-#endif
 	}
 
 	//for (int i = 3; i <= StateGenerator::MAX_BIT_TO_GENERATE; i++)
@@ -212,10 +208,10 @@ int main()
 	//OutputHamiltonianMatrix(3);
 	//GenerateLaTeX();
 
-	int xi = -5;
+	int xi = 0;
 	//GenerateMatlabScript(Fermion, xi, true);
-	//GenerateMatlabScript(Fermion, xi, false);
+	GenerateMatlabScript(Fermion, xi, false);
 	//GenerateMatlabScript(Boson, xi, true);
-	//GenerateMatlabScript(Boson, xi, false);
+	GenerateMatlabScript(Boson, xi, false);
 	return 0;
 }

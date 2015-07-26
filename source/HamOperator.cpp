@@ -94,6 +94,11 @@ ostream& operator<<(ostream& os, const HamOperator& op)
 	return os;
 }
 
+bool operator == (const HamOperator& op1, const HamOperator& op2)
+{
+	return op1.ToString() == op2.ToString();
+}
+
 BitNumberHamOperator::BitNumberHamOperator()
 {
 }

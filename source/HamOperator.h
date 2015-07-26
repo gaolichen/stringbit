@@ -26,6 +26,7 @@ public:
 	virtual void ApplyOn(const TraceState& state, MixState& res);
 	virtual string ToString() const = 0;
 	friend ostream& operator<<(ostream& os, const HamOperator& op);
+	friend bool operator == (const HamOperator& op1, const HamOperator& op2);
 };
 
 class BitNumberHamOperator : public HamOperator
