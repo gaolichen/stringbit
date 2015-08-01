@@ -1,34 +1,41 @@
-function plot_states(bits, statenumber, points, filename)
+function plot_states(bits, statenumber, points, maxX, filename)
     if nargin < 3
         % by default, pick 100 points.
         points = 100;
     end
     if nargin < 4
+        maxX = 1.5;
+    end
+    if nargin < 5
         filename = '';
     end
     
-    minN = 1/1.5;
+    minN = 1/maxX;
+    xInterval = round(0.02/(maxX) * points);
     X = 0:1/minN/points:1/minN;
+    xStart = round((1/(1.5*bits)/maxX) * points);
     Y = zeros(length(X), statenumber);
     Yi = zeros(length(X), statenumber);
     Z = zeros(length(X), statenumber);
     slopeY = zeros(1, statenumber);
-    slopeZ = zeros(1, statenumber);
     slopeYi = zeros(1, statenumber);
+    lastReal = ones(1, statenumber);
     complexLines = [];
     currComplexLines = [];
     inComplexLines = zeros(1, statenumber);
+
+    for j = 1 : statenumber
+        lastReal(j) = xStart;
+    end
     
-%     nextNorm = zeros(1, statenumber);
-    
-    for i = 1 : length(X)
+    for i = xStart : length(X)
         if X(i) == 0
             n = Inf;
         else
             n = 1/X(i);
         end
         states = lowest_energies(bits, n, statenumber);
-        if i < 2
+        if i < xStart + 1
             for j = 1 : statenumber
                 Y(i, j) = states(j, 1);
                 Yi(i, j) = states(j, 2);
@@ -38,7 +45,7 @@ function plot_states(bits, statenumber, points, filename)
             mat = zeros(statenumber * statenumber, 3);
             for j = 1 : statenumber
                 for k = 1 : statenumber
-                    mat((j-1)*statenumber + k, 1) = norm([states(k, 1) - slopeY(j), states(k, 2) - slopeYi(j),  states(k, 3) - slopeZ(j)]);
+                    mat((j-1)*statenumber + k, 1) = norm([states(k, 1) - slopeY(j), states(k, 2) - slopeYi(j)]);
                     mat((j-1)*statenumber + k, 2) = j;
                     mat((j-1)*statenumber + k, 3) = k;
                 end
@@ -64,6 +71,8 @@ function plot_states(bits, statenumber, points, filename)
                 currComplexLines(j,:) = [];
                 inComplexLines(line1) = 0;
                 inComplexLines(line2) = 0;
+                lastReal(line1) = i;
+                lastReal(line2) = i;
             end
         end
         
@@ -84,23 +93,44 @@ function plot_states(bits, statenumber, points, filename)
                 end
             end
             
-            if i == 1
+            if inComplexLines(j)
                 slopeY(j) = Y(i, j);
-                slopeZ(j) = Z(i, j);
                 slopeYi(j) = Yi(i, j);
-%                 nextNorm(j) = 1.0;
-%             elseif i == 2
+            elseif i - lastReal(j) + 1 < 2 * xInterval
+                slopeY(j) = Y(i, j);
+                slopeYi(j) = Yi(i, j);
             else
-                slopeY(j) = 2 * Y(i, j) - Y(i - 1, j);
-                slopeZ(j) = 2 * Z(i, j) - Z(i - 1, j);
-                slopeYi(j) = 2 * Yi(i, j) - Yi(i - 1, j);
-%                 nextNorm(j) = norm([slopeY(j) - Y(i, j), slopeZ(j) - Z(i, j), slopeYi(j) - Yi(i, j), X(i) - X(i-1)]);
-%             else
-%                 slopeY(j) = 3 * Y(i, j) - 3 * Y(i - 1, j) + Y(i - 2, j);
-%                 slopeZ(j) = 3 * Z(i, j) - 3 * Z(i - 1, j) + Z(i - 2, j);
-%                 slopeYi(j) = 3 * Yi(i, j) - 3 * Yi(i - 1, j) + Yi(i - 2, j);
-%                 nextNorm(j) = norm([slopeY(j) - Y(i, j), slopeZ(j) - Z(i, j), slopeYi(j) - Yi(i, j), X(i) - X(i-1)]);
+                slopeY(j) = 2 * Y(i + 1 - xInterval, j) - Y(i + 1 - 2 * xInterval, j);
+                slopeYi(j) = 2 * Yi(i + 1 - xInterval, j) - Yi(i + 1 - 2 * xInterval, j);
+                if norm(slopeY(j) - Y(i, j), slopeYi(j) - Yi(i, j)) > 90 * X(2)
+                    slopeY(j) = Y(i, j);
+                    slopeYi(j) = Yi(i, j);
+                end
             end
+        end
+    end
+    
+    % process the beginning part. 
+    for i = xStart - 1 : -1 : 1
+        if X(i) == 0
+            n = Inf;
+        else
+            n = 1/X(i);
+        end
+        states = lowest_energies(bits, n, statenumber);
+        for j = 1 : statenumber
+            for k = 1 : statenumber
+                mat((j-1)*statenumber + k, 1) = norm([states(k, 1) - Y(i + 1, j), states(k, 2) - Yi(i + 1, j)]);
+                mat((j-1)*statenumber + k, 2) = j;
+                mat((j-1)*statenumber + k, 3) = k;
+            end
+        end
+        
+        res = find_match(mat, statenumber);
+        for j = 1 : statenumber
+            Y(i, j) = states(res(j), 1);
+            Yi(i, j) = states(res(j), 2);
+            Z(i, j) = states(res(j), 3);
         end
     end
     
@@ -157,7 +187,10 @@ function plot_states(bits, statenumber, points, filename)
             if j == segments{i}(2 * k - 1);
                 % when j is the start point of a excluded segments
                 % plot here.
-                plot(X(st:j), Y(st:j, i), 'Color', PickColor(i), 'LineStyle', PickLineStyle(lineType), 'LineWidth', PickLineWidth(lineType));
+                if lineType ~= 0
+                    plot(X(st:j), Y(st:j, i), 'Color', PickColor(i), 'LineStyle', PickLineStyle(lineType, X(j)), 'LineWidth', PickLineWidth(lineType));
+                end
+                
                 j = segments{i}(2 * k);
                 k = k + 1;
                 % reset lineType
@@ -169,7 +202,7 @@ function plot_states(bits, statenumber, points, filename)
             elseif lineType ~= GetLineType(Z(j, i))
                 % if the current line type does not match.
                 % plot
-                plot(X(st:j), Y(st:j, i), 'Color', PickColor(i), 'LineStyle', PickLineStyle(lineType), 'LineWidth', PickLineWidth(lineType));
+                plot(X(st:j), Y(st:j, i), 'Color', PickColor(i), 'LineStyle', PickLineStyle(lineType, X(j)), 'LineWidth', PickLineWidth(lineType));
                 lineType = GetLineType(Z(j, i));
                 st = j;
             end
@@ -178,7 +211,7 @@ function plot_states(bits, statenumber, points, filename)
         
         % plot the last part.
         if lineType ~= 0 && st <= length(X)
-            plot(X(st:length(X)), Y(st:length(X), i), 'Color', PickColor(i), 'LineStyle', PickLineStyle(lineType),'LineWidth', PickLineWidth(lineType));
+            plot(X(st:length(X)), Y(st:length(X), i), 'Color', PickColor(i), 'LineStyle', PickLineStyle(lineType, 0),'LineWidth', PickLineWidth(lineType));
         end
 %        D = cat(2, D, X, Z(:, i));
     end
@@ -187,6 +220,7 @@ function plot_states(bits, statenumber, points, filename)
     xlabel('1/N');
     ax1 = gca;
     set(ax1, 'XTick', [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5]);
+    xlim([0, maxX]);
     ylim auto;
     
     if ~strcmp(filename, '')
@@ -222,14 +256,14 @@ function f = GetLineType(norm)
     end
 end
 
-function f = PickLineStyle(lineType)
+function f = PickLineStyle(lineType, x)
     if lineType == 1
         f = '-';
     elseif lineType == 2
         f = '-.';
     else
-        fprintf('Unexpected line type: %d\n', lineType);
-        f = '-';
+        fprintf('Unexpected line type: %d x=%f\n', lineType, x);
+        f = ':';
     end
 end
 
