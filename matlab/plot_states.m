@@ -260,7 +260,7 @@ function f = PickLineStyle(lineType, x)
     if lineType == 1
         f = '-';
     elseif lineType == 2
-        f = '-.';
+        f = ':';
     else
         fprintf('Unexpected line type: %d x=%f\n', lineType, x);
         f = ':';
