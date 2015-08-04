@@ -19,6 +19,7 @@ function plot_states(bits, statenumber, points, maxX, filename)
     Z = zeros(length(X), statenumber);
     slopeY = zeros(1, statenumber);
     slopeYi = zeros(1, statenumber);
+    slopeZ = zeros(1, statenumber);
     lastReal = ones(1, statenumber);
     complexLines = [];
     currComplexLines = [];
@@ -45,7 +46,7 @@ function plot_states(bits, statenumber, points, maxX, filename)
             mat = zeros(statenumber * statenumber, 3);
             for j = 1 : statenumber
                 for k = 1 : statenumber
-                    mat((j-1)*statenumber + k, 1) = norm([states(k, 1) - slopeY(j), states(k, 2) - slopeYi(j)]);
+                    mat((j-1)*statenumber + k, 1) = norm([states(k, 1) - slopeY(j), states(k, 2) - slopeYi(j), states(k, 3) - slopeZ(j)]);
                     mat((j-1)*statenumber + k, 2) = j;
                     mat((j-1)*statenumber + k, 3) = k;
                 end
@@ -96,15 +97,19 @@ function plot_states(bits, statenumber, points, maxX, filename)
             if inComplexLines(j)
                 slopeY(j) = Y(i, j);
                 slopeYi(j) = Yi(i, j);
+                slopeZ(j) = Z(i, j);
             elseif i - lastReal(j) + 1 < 2 * xInterval
                 slopeY(j) = Y(i, j);
                 slopeYi(j) = Yi(i, j);
+                slopeZ(j) = Z(i, j);
             else
                 slopeY(j) = 2 * Y(i + 1 - xInterval, j) - Y(i + 1 - 2 * xInterval, j);
                 slopeYi(j) = 2 * Yi(i + 1 - xInterval, j) - Yi(i + 1 - 2 * xInterval, j);
+                slopeZ(j) = 2 * Z(i + 1 - xInterval, j) - Z(i + 1 - 2 * xInterval, j);
                 if norm(slopeY(j) - Y(i, j), slopeYi(j) - Yi(i, j)) > 90 * X(2)
                     slopeY(j) = Y(i, j);
                     slopeYi(j) = Yi(i, j);
+                    slopeZ(j) = Z(i, j);
                 end
             end
         end
