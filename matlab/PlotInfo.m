@@ -6,17 +6,19 @@ classdef PlotInfo
         StartX
         EndX
         StateId
-        LineStyle
+        LineType
         Color
     end
     
     methods
         function obj = PlotInfo(sx, ex, sid, linetype)
-            obj.StartX = sx;
-            obj.EndX = ex;
-            obj.StateId = sid;
-            obj.LineStyle = PickLineStyle(linetype);
-            obj.Color = PickColor(sid);
+            if nargin > 0
+                obj.StartX = sx;
+                obj.EndX = ex;
+                obj.StateId = sid;
+                obj.LineType = linetype;
+                obj.Color = PickColor(sid);
+            end
         end
         
         function obj = MixState(info, sid)
@@ -24,9 +26,12 @@ classdef PlotInfo
             obj = info;
             obj.Color = (c + obj.Color)/2;
         end
+        
+        function f = LineStyle(info)
+            f = PickLineStyle(info.LineType);
+        end
     end
 end
-
 
 function f = PickLineStyle(lineType)
     if lineType == 3
@@ -37,6 +42,7 @@ function f = PickLineStyle(lineType)
         f = '-';
     end
 end
+
 
 function c = PickColor(n)
     index = mod(n, 10);
@@ -54,13 +60,13 @@ function c = PickColor(n)
     elseif index == 5
         c = [1 0 1]; % 'm' megenta
     elseif index == 6
-        c = [0 1 1]; % 'c' cyan
+        c = [0.6 0 0.3];
     elseif index == 7
         c = [0.7 0.7 0.7];
     elseif index == 8
         c = [0.7 0.4 1];
     elseif index == 9
-        c = [0.6 0 0.3];
+        c = [0 1 1]; % 'c' cyan
     else
         c = [1 0.5 0];
     end

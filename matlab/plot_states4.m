@@ -133,7 +133,7 @@ function plot_states4(bits, statenumber, points, maxX, filename)
             for jj = 1 : statenumber
                 %fprintf('jj size=%d\n',  size(squeeze(states(jj,:)),2));
                 if isDegenerate(jj)
-                    fprintf('curr = %d ii=%d jj=%d kk=%d \n', curr, ii, jj, (ii-1)*statenumber + jj);
+                    %fprintf('curr = %d ii=%d jj=%d kk=%d \n', curr, ii, jj, (ii-1)*statenumber + jj);
                     dismat((ii-1)*statenumber + jj, 1) = norm([next(1)-states(jj,1), next(2)-states(jj,2)]);
                 else
                     dismat((ii-1)*statenumber + jj, 1) = norm([next(1)-states(jj,1), next(2)-states(jj,2), next(3)-states(jj,3)]);
@@ -146,28 +146,73 @@ function plot_states4(bits, statenumber, points, maxX, filename)
     end
 
     % break the lines into solid/dotted/dashed parts.
+    lines(1, 10 * statenumber) = PlotInfo();
+    lineNumber = 0;
     for staid = 1  : statenumber
+        % lineType:
+        % 0 for unset; 
+        % 1 for solid line; 
+        % 2 for dash-dot (complex) line
+        % 3 for dotted line
         lineType = 1;
         sx = 1;
-        for i = 1 : tot
+        i = 1;
+        while i <= tot
             if lineType == getLineType(staid, i)
-                continue;
+                i = i + 1;
             else
                 % save the current line
+                makenewline;
                 if lineType == 2
                     % for complex (dashed) line, we need to check
                     % duplicates.
-                else
-                    % for solid and dotted line, just save them.
+                    for j = lineNumber : -1 : 1
+                        if lines(j).LineType == 2 && abs(lines(j).StartX - i) <= 5 
+                            % check if the eigenvalues are conjugate to
+                            % each other.
+                            sid = lines(j).StateId;
+                            if isConjugate(sid, staid, i + 10)
+                                % this is not a new complex line.
+                                lines(j) = lines(j).MixState(staid);
+                                i = lines(j).EndX;
+                                sx = i;
+                                lineType = getLineType(staid, i);
+                                break;
+                            end
+                        end
+                    end
+                    
+                    %fprintf('j=%d\n', j);
+                    if j == 1
+                        fprintf('staid=%d, i=%d, re=%f, im=%f\n', staid, i, allstates(i, staid, 1), allstates(i, staid, 2));
+                    end
                 end
                 
-                % start a new line
-                lineType = getLineType(staid, i);
-                sx = i - 1;
+                i = i + 1;
             end
         end
         
         % save last line.
+        if sx < tot
+            i = i - 1;
+            makenewline;
+        end
+    end
+    
+    fprintf('total line segments: %d\n', lineNumber);
+%     for i = 1 : lineNumber
+%         disp(lines(i));
+%     end
+    
+    function makenewline
+        lineNumber = lineNumber + 1;  
+        lines(lineNumber) = PlotInfo(sx, i, staid, lineType);
+        lineType = getLineType(staid, i);
+        sx = i;
+    end
+    
+    function f = isConjugate(sid1, sid2, xpos)
+        f = IsEqual(allstates(xpos, sid1, 1), allstates(xpos, sid2, 1)) && IsEqual(allstates(xpos, sid1, 2), -allstates(xpos, sid2, 2));
     end
     
     function f = getLineType(stateid, xpos)
@@ -197,8 +242,6 @@ function plot_states4(bits, statenumber, points, maxX, filename)
         p1 = get(h1, 'pos');
         p2 = get(h2, 'pos');
         dx = (p2(1) - p1(1) - p1(3)) / 3;
-        %fprintf('dx = %f\n', dx);
-        
         p1(3) = p1(3) + dx;
         p2(1) = p2(1) - dx;
         p2(3) = p2(3) + dx;
@@ -215,8 +258,16 @@ function plot_states4(bits, statenumber, points, maxX, filename)
     
     function doplot(startX, endX, showTitle)
         hold on;
-        for ii = 1 : statenumber
-            plot(X(startX : endX), allstates(startX:endX,ii,1), 'Color', PickColor(ii));
+%         for ii = 1 : statenumber
+%             plot(X(startX : endX), allstates(startX:endX,ii,1), 'Color', PickColor(ii));
+%         end
+        for ii = 1 : lineNumber
+            info = lines(ii);
+            from = max(startX, info.StartX);
+            to = min(endX, info.EndX);
+            if from < to
+                plot(X(from:to), allstates(from:to, info.StateId, 1), 'Color', info.Color, 'LineStyle', info.LineStyle);
+            end
         end
 
         if showTitle
@@ -243,33 +294,6 @@ function f = IsEqual(a, b)
 end
    
 function f = IsNegative(a)
-    f = a <-1e-5;
+    f = (a < -1e-6);
 end
 
-function c = PickColor(n)
-    index = mod(n, 10);
-    if index == 0
-        index = 10;
-    end
-    if index == 1
-        c = 'r';
-    elseif index == 2
-        c = 'k';
-    elseif index == 3
-        c = 'g';
-    elseif index == 4
-        c = 'b';
-    elseif index == 5
-        c = 'm';
-    elseif index == 6
-        c = 'c';
-    elseif index == 7
-        c = [0.7 0.7 0.7];
-    elseif index == 8
-        c = [0.7 0.4 1];
-    elseif index == 9
-        c = [0.6 0 0.3];
-    else
-        c = [1 0.5 0];
-    end
-end
