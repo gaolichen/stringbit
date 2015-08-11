@@ -1,15 +1,13 @@
-function plot_states4(bits, statenumber, points, maxX, filename)
+function plot_states4(bits, statenumber, points, filename)
     if nargin < 3
         % by default, pick 100 points.
         points = 100;
     end
     if nargin < 4
-        maxX = 1.5;
-    end
-    if nargin < 5
         filename = '';
     end
     
+    maxX = 1.5;
     minN = 1/maxX;
     % X: the x-components
     X = 0:1/minN/points:1/minN;
@@ -37,9 +35,11 @@ function plot_states4(bits, statenumber, points, maxX, filename)
         
         if curr == midX
             allstates(midX,1:statenumber,:) = states(1:statenumber,:);
-            highestE = states(statenumber, 1);
-            lowestE = states(1, 1);
-            initGap = highestE - lowestE;
+            initHighestE = states(statenumber, 1);
+            initLowestE = states(1, 1);
+            highestE = initHighestE;
+            lowestE = initLowestE;
+            initGap = initHighestE - initLowestE;
         else
             build_dismat;
             res = find_match(dismat, statenumber);
@@ -51,7 +51,7 @@ function plot_states4(bits, statenumber, points, maxX, filename)
             lowestE = min(states(1, 1), lowestE);
             currGap = highestE - lowestE;
             
-            if currGap > 4 * initGap && newPlotStart == 0
+            if currGap > 3.5 * initGap && newPlotStart == 0
                 newPlotStart = curr;
             end
         end
@@ -146,7 +146,7 @@ function plot_states4(bits, statenumber, points, maxX, filename)
     end
 
     % break the lines into solid/dotted/dashed parts.
-    lines(1, 10 * statenumber) = PlotInfo();
+    lines(1, bits * statenumber) = PlotInfo();
     lineNumber = 0;
     for staid = 1  : statenumber
         % lineType:
@@ -166,28 +166,23 @@ function plot_states4(bits, statenumber, points, maxX, filename)
                 if lineType == 2
                     % for complex (dashed) line, we need to check
                     % duplicates.
-                    for j = lineNumber : -1 : 1
-                        if lines(j).LineType == 2 && abs(lines(j).StartX - i) <= 5 
-                            % check if the eigenvalues are conjugate to
-                            % each other.
-                            sid = lines(j).StateId;
-                            if isConjugate(sid, staid, i + 10)
-                                % this is not a new complex line.
+                    for j = lineNumber - 1 : -1 : 1
+                        if lines(j).LineType == 2 && lines(j).StateId ~= staid
+                            % check if two lines cover each other.
+                            if covers(j, lineNumber)
                                 lines(j) = lines(j).MixState(staid);
-                                i = lines(j).EndX;
-                                sx = i;
-                                lineType = getLineType(staid, i);
+                                lineNumber = lineNumber - 1;
+                                break;
+                            elseif covers(lineNumber, j)
+                                sid = lines(j).StateId;
+                                lines(j) = lines(lineNumber).MixState(sid);
+                                lineNumber = lineNumber - 1;
                                 break;
                             end
                         end
                     end
-                    
-                    %fprintf('j=%d\n', j);
-                    if j == 1
-                        fprintf('staid=%d, i=%d, re=%f, im=%f\n', staid, i, allstates(i, staid, 1), allstates(i, staid, 2));
-                    end
                 end
-                
+                lineType = getLineType(staid, i);
                 i = i + 1;
             end
         end
@@ -200,17 +195,26 @@ function plot_states4(bits, statenumber, points, maxX, filename)
     end
     
     fprintf('total line segments: %d\n', lineNumber);
-%     for i = 1 : lineNumber
-%         disp(lines(i));
-%     end
+
+    % return if two line segments cover each other.
+    function f = covers(l1, l2)
+        a = lines(l1);
+        b = lines(l2);
+        if a.StartX <= b.StartX && a.EndX >= b.EndX
+            f = isConjugate(a.StateId, b.StateId, b.StartX + 1) && isConjugate(a.StateId, b.StateId, b.EndX - 1);
+        else
+            f = 0;
+        end
+    end
     
+    % make new line segments.
     function makenewline
         lineNumber = lineNumber + 1;  
         lines(lineNumber) = PlotInfo(sx, i, staid, lineType);
-        lineType = getLineType(staid, i);
         sx = i;
     end
     
+    % return if two points on two lines are complex conjugate to each other.
     function f = isConjugate(sid1, sid2, xpos)
         f = IsEqual(allstates(xpos, sid1, 1), allstates(xpos, sid2, 1)) && IsEqual(allstates(xpos, sid1, 2), -allstates(xpos, sid2, 2));
     end
@@ -230,7 +234,7 @@ function plot_states4(bits, statenumber, points, maxX, filename)
 
     % plot results.
     fig = figure; cla;
-    if currGap < initGap * 9
+    if currGap < initGap * 8
         doplot(1, tot, true);
     else
         fprintf('newPlotStart = %d\n', newPlotStart);
@@ -258,28 +262,34 @@ function plot_states4(bits, statenumber, points, maxX, filename)
     
     function doplot(startX, endX, showTitle)
         hold on;
-%         for ii = 1 : statenumber
-%             plot(X(startX : endX), allstates(startX:endX,ii,1), 'Color', PickColor(ii));
-%         end
+        p = zeros(1, 3);
         for ii = 1 : lineNumber
             info = lines(ii);
             from = max(startX, info.StartX);
             to = min(endX, info.EndX);
             if from < to
-                plot(X(from:to), allstates(from:to, info.StateId, 1), 'Color', info.Color, 'LineStyle', info.LineStyle);
+                p(info.LineType) = plot(X(from:to), allstates(from:to, info.StateId, 1), 'Color', info.Color, 'LineStyle', info.LineStyle, 'LineWidth', info.LineWidth);
             end
         end
-
+        
         if showTitle
             title(strcat({'Lowest '},  num2str(statenumber), ' Energy States for M=', num2str(bits)));
+        else
+        end
+        
+        if highestE - initHighestE > initLowestE - lowestE
+            legendLocation = 'northwest';
+        else
+            legendLocation = 'southwest';
         end
         
         ax1 = gca;
         xlabel('1/N');
-        ylabel('E');
         if startX == 1
+            ylabel('E');
+            legend(p([1 2 3]),'positive norm', 'zero norm', 'negative norm', 'Location', legendLocation);
         else
-            set(ax1, 'YAxisLocation', 'right');
+            %set(ax1, 'YAxisLocation', 'right');
         end
         
         set(ax1, 'XTick', [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5]);

@@ -10,14 +10,12 @@ function plot_all(root, minBit, maxBit)
         for bit = minBit : maxBit
             if bit == 3
                 statenumber = 5;
-            elseif bit == 4
-                statenumber = 8;
             else
-                statenumber = 6;
+                statenumber = 8;
             end
             file = strcat('../', folders{i},'M=', num2str(bit), '.pdf');
             fprintf('Plotting %s ...\n', file);
-            plot_states(bit, statenumber, points, 1.5, file);
+            plot_states4(bit, statenumber, points, file);
         end
         cd('..');
     end

@@ -30,6 +30,10 @@ classdef PlotInfo
         function f = LineStyle(info)
             f = PickLineStyle(info.LineType);
         end
+        
+        function f = LineWidth(info)
+            f = PickLineWidth(info.LineType);
+        end
     end
 end
 
@@ -43,6 +47,15 @@ function f = PickLineStyle(lineType)
     end
 end
 
+function f = PickLineWidth(lineType)
+    if lineType == 1
+        f = 0.5;
+    elseif lineType == 2
+        f = 0.5;
+    else
+        f = 1;
+    end
+end
 
 function c = PickColor(n)
     index = mod(n, 10);
