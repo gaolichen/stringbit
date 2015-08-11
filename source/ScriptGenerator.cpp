@@ -98,39 +98,99 @@ void ScriptGenerator::OutputHamToMatlab(int bits, bool inverted)
 
 #endif
 
-void ScriptGenerator::HamToMatlab(int bits, Hamiltonian& ham, ofstream& os)
+void ScriptGenerator::VectorToMatlab(vector<int>& a, ofstream& ofs)
+{
+	ofs << "[";
+	for (int i = 0; i < a.size(); i++)
+	{
+		if (i > 0 && i % 20 == 0)
+		{
+			ofs << "..." << endl;
+			ofs << "\t";
+		}
+		
+		ofs << a[i] + 1 << " ";
+	}
+	
+	ofs << "];" << endl;
+}
+
+void ScriptGenerator::HamToMatlab(int bits, Hamiltonian& ham, ofstream& os, bool sparse)
 {
         vector<vector<Coefficient> > rem, imm;
         ham.Matrix(bits, type, rem, imm);
+	if (sparse)
+	{
+		vector<int> a, b;
+		for (int j = 0; j < rem.size(); j++)
+		{
+			for (int k = 0; k < rem[j].size(); k++)
+			{
+				if (imm[j][k].IsZero() && rem[j][k].IsZero()) continue;
+				a.push_back(j);
+				b.push_back(k);
+			}
+		}
+		
+		os << "a = ";
+		VectorToMatlab(a, os);
+		os << "b = ";
+		VectorToMatlab(b, os);
+		os << endl;
+		os << "v = [";
+		for (int i = 0; i < a.size(); i++)
+		{
+			if (i != 0 && i % 20 == 0)
+			{
+				os << "..." << endl;
+				os << "\t";
+			}
 
-        os << "[" << endl;
-        for (int j = 0; j < rem.size(); j++)
-        {
-                os << "   ";
-                for (int k = 0; k < rem[j].size(); k++)
-                {
-                        os << ' ';
-                        if (!imm[j][k].IsZero())
-                        {
-                                os << imm[j][k] << "*1i";
-                        }
-                        else
-                        {
-                                os << rem[j][k];
-                        }
-                }
+			int x = a[i];
+			int y = b[i];
+			if (!imm[x][y].IsZero())
+			{
+				os << imm[x][y] << "*1i ";
+			}
+			else
+			{
+				os << rem[x][y] << ' ';
+			}
+		}
+		os << "];" << endl;
+		
+	}
+	else
+	{
+	        os << "[" << endl;
+	        for (int j = 0; j < rem.size(); j++)
+	        {
+	                os << "   ";
+	                for (int k = 0; k < rem[j].size(); k++)
+	                {
+	                        os << ' ';
+	                        if (!imm[j][k].IsZero())
+	                        {
+	                                os << imm[j][k] << "*1i";
+	                        }
+	                        else
+	                        {
+	                                os << rem[j][k];
+	                        }
+        	        }
 
-                if (j != rem.size() - 1)
-                {
-                        os << ";" << endl;
-                }
-        }
+	                if (j != rem.size() - 1)
+	                {
+	                        os << ";" << endl;
+                	}
+        	}
 
-        os << "]";
+        	os << "]";
+	}
 }
 
 
-void ScriptGenerator::OutputHamToMatlab(int bits, Hamiltonian& ham)
+void ScriptGenerator::OutputHamToMatlab(int bits, Hamiltonian& ham, bool sparse)
 {
 	string function;
 	if (!ham.Inverted())
@@ -146,35 +206,19 @@ void ScriptGenerator::OutputHamToMatlab(int bits, Hamiltonian& ham)
 	cout << file << endl;
 	ofstream ofs(file.c_str());
 	ofs << "function f = " << function << "(N)" << endl;
-	ofs << "f=";
-	HamToMatlab(bits, ham, ofs);
-	ofs << ";" << endl;
-
-	/*
-	for (int j = 0; j < rem.size(); j++)
+	if (sparse)
 	{
-		ofs << "   ";
-		for (int k = 0; k < rem[j].size(); k++)
-		{
-			ofs << ' ';
-			if (!imm[j][k].IsZero())
-			{
-				ofs << imm[j][k] << "*1i";
-			}
-			else
-			{
-				ofs << rem[j][k];
-			}
-		}
-
-		if (j != rem.size() - 1)
-		{
-			ofs << ";" << endl;
-		}
+		HamToMatlab(bits, ham, ofs, sparse);
+		ofs << "f = sparse(a, b, v);" << endl;
+		ofs << "end" << endl;
 	}
-
-	ofs << "];" << endl;*/
-	ofs << "end" << endl;
+	else
+	{
+		ofs << "f=";
+		HamToMatlab(bits, ham, ofs);
+		ofs << ";" << endl;
+		ofs << "end" << endl;
+	}
 
 	ofs.close();
 }

@@ -24,7 +24,8 @@ function plot_states4(bits, statenumber, points, filename)
     dismat = zeros(statenumber * statenumber, 3);
     
     % midX: pick a point other than X(1) to start to avoid degenerate case.
-    midX = round((1/(1.5*bits)/maxX) * points);
+    %midX = min(10, round((1/(2*bits)/maxX) * points));
+    midX = round((1/(2*bits)/maxX) * points);
     newPlotStart = 0;
     
     % first go through midX to tot and connect lines.
@@ -260,9 +261,11 @@ function plot_states4(bits, statenumber, points, filename)
         close(fig);
     end
     
-    function doplot(startX, endX, showTitle)
-        hold on;
+    function doplot(startX, endX, singleplot)
         p = zeros(1, 3);
+        legendtitle = {'positive norm', 'zero norm', 'negative norm'};
+        
+        hold on;
         for ii = 1 : lineNumber
             info = lines(ii);
             from = max(startX, info.StartX);
@@ -272,9 +275,11 @@ function plot_states4(bits, statenumber, points, filename)
             end
         end
         
-        if showTitle
-            title(strcat({'Lowest '},  num2str(statenumber), ' Energy States for M=', num2str(bits)));
-        else
+        for ii = 3 : -1 : 1
+            if p(ii) == 0
+                p(ii) = [];
+                legendtitle(ii) = [];
+            end
         end
         
         if highestE - initHighestE > initLowestE - lowestE
@@ -283,16 +288,22 @@ function plot_states4(bits, statenumber, points, filename)
             legendLocation = 'southwest';
         end
         
+        legend(p(:),legendtitle{:}, 'Location', legendLocation);
+        
         ax1 = gca;
         xlabel('1/N');
         if startX == 1
-            ylabel('E');
-            legend(p([1 2 3]),'positive norm', 'zero norm', 'negative norm', 'Location', legendLocation);
+            ylabel('E');    
         else
             %set(ax1, 'YAxisLocation', 'right');
         end
         
-        set(ax1, 'XTick', [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5]);
+        if singleplot
+            title(strcat({'Lowest '},  num2str(statenumber), ' Energy States for M=', num2str(bits)));
+            set(ax1, 'XTick', [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5]);
+        else
+        end
+        
         xlim([X(startX), X(endX)]);
         ylim auto;
         hold off

@@ -19,11 +19,12 @@ private:
 	Hamiltonian hPrime;
 	void InitHamiltonians();
 #endif
-	void HamToMatlab(int bits, Hamiltonian& ham, ofstream& os);
+	void HamToMatlab(int bits, Hamiltonian& ham, ofstream& os, bool sparse = false);
+	void VectorToMatlab(vector<int>& a, ofstream& os);
 public:
 	ScriptGenerator(string rootFolder, StateType stateType);
 
-	void OutputHamToMatlab(int bits, Hamiltonian& ham);
+	void OutputHamToMatlab(int bits, Hamiltonian& ham, bool sparse = false);
 	void OutputHamToMatlab(int bits, bool inverted);
 	void OutputHamToLaTeX(vector<int> bits, vector<double> scales, string filename);
 	void OutputNormToLaTeX(int minBits, int maxBits, string filename);
