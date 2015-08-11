@@ -75,12 +75,15 @@ void TestTraceState()
 	cout << ts << endl;
 }
 
-void GenerateStates()
+void GenerateStates(bool output)
 {
 	StateGenerator generator;
 	for (int i = 1; i <= StateGenerator::MAX_BIT_TO_COUNT; i++)
 	{
-		//cout << i << "\t" << generator.SingleStateNumber(i) << "\t" << generator.BosonNumber(i) << endl;
+		if (output)
+		{
+			cout << i << "\t" << generator.SingleStateNumber(i) << "\t" << generator.BosonNumber(i) << endl;
+		}
 	}
 
 	generator.GenerateAllStates();
@@ -222,7 +225,7 @@ void GenerateLaTeX()
 
 int main()
 {
-	GenerateStates();
+	GenerateStates(true);
 	//TestTraceState();
 	//TestHamOperator();
 	TestHamiltonian(0, true);
@@ -234,6 +237,6 @@ int main()
 	//GenerateLaTeX();
 
 	int xi = -1;
-	GenerateAllHamMatlab(xi);
+	//GenerateAllHamMatlab(xi);
 	return 0;
 }

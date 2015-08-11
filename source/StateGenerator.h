@@ -13,8 +13,8 @@ private:
 	bool* myFlags;
 	bool visited[30][30][2];
 
-	vector<vector<vector<i64> > > stateNumbers;
-	vector<i64> singleTraceNumbers;
+	vector<vector<vector<snum> > > stateNumbers;
+	vector<snum> singleTraceNumbers;
 	vector<vector<SingleTrace> > singleFermions;
 	vector<vector<SingleTrace> > singleBosons;
 	vector<vector<vector<TraceState> > > fermions;
@@ -22,7 +22,7 @@ private:
 
 	void InitSingleTraceNumber();
 	void FindSingleStates(int n);
-	i64 StateNumbers(int bit, int remain, int b);
+	snum StateNumbers(int bit, int remain, int b);
 	void GeneratSingleStates();
 	static void DoPickFermion(vector<SingleTrace>& allstates, int index, int remain, vector<SingleTrace>& curr, vector<TraceState>& ret);
 	static void DoPickBoson(vector<SingleTrace>& allstates, int index, int remain, vector<SingleTrace>& curr, vector<TraceState>& ret);
@@ -37,9 +37,9 @@ public:
 	~StateGenerator();
 	
 	void GenerateAllStates();
-	i64 BosonNumber(int n);
-	i64 FermionNumber(int n);
-	i64 SingleStateNumber(int n);
+	snum BosonNumber(int n);
+	snum FermionNumber(int n);
+	snum SingleStateNumber(int n);
 	TraceState BosonState(int n, int index);
 	TraceState FermionState(int n, int index);
 	void InitStateCollection(StateCollection* collection);

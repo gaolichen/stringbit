@@ -15,11 +15,11 @@ int CyclicRotation(int n, int bitNumber)
 	return ((n & 1) << (bitNumber -1)) | (n >> 1);
 }
 
-i64 BinomialCoefficient(i64 a,i64 b)
+snum BinomialCoefficient(snum a,i64 b)
 {
 	if (b > a) return 0;
 	if (b + b > a) b = a - b;
-	i64 ret = 1;
+	snum ret = 1;
 	for (int i = 0; i < b; i++)
 	{
 		ret *= (a - i);

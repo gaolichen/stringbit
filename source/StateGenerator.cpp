@@ -6,10 +6,11 @@
 #include <cstring>
 
 using namespace std;
+//#define TEST_STATENUMBER
 
 StateGenerator::StateGenerator()
 {
-	vector<vector<i64> > numbers = vector<vector<i64> >(MAX_BIT_TO_COUNT + 1, vector<i64>(2, (i64)(-1)));
+	vector<vector<snum> > numbers = vector<vector<snum> >(MAX_BIT_TO_COUNT + 1, vector<snum>(2, (snum)(-1)));
 	stateNumbers.resize(MAX_BIT_TO_COUNT + 1, numbers);
 	myFlags = new bool[1 << MAX_BIT_TO_GENERATE];
 	InitSingleTraceNumber();
@@ -25,13 +26,16 @@ void StateGenerator::InitSingleTraceNumber()
 	singleTraceNumbers.resize(MAX_BIT_TO_COUNT + 1);
 	for (int m = 1; m <= MAX_BIT_TO_COUNT; m++)
 	{
+#ifdef TEST_STATENUMBER
+		singleTraceNumbers[m] = ((((i64)1) << (m - 1)) + m - 1) / m;
+#else
 		int p = m;
 		while (p % 2 == 0)
 		{
 			p /= 2;
 		}
 
-		i64 res = 0;
+		snum res = 0;
 		for (int i = 1; i <= p; i++)
 		{
 			int toShift = m / p * Gcd(i, p);
@@ -39,6 +43,7 @@ void StateGenerator::InitSingleTraceNumber()
 		}
 
 		singleTraceNumbers[m] = res / (2 * m);
+#endif
 	}
 }
 
@@ -86,22 +91,22 @@ void StateGenerator::FindSingleStates(int bit)
 	}
 }
 
-i64 StateGenerator::SingleStateNumber(int n)
+snum StateGenerator::SingleStateNumber(int n)
 {
 	return singleTraceNumbers[n];
 }
 
-i64 StateGenerator::BosonNumber(int n)
+snum StateGenerator::BosonNumber(int n)
 {
 	return StateNumbers(n, n, 0);
 }
 
-i64 StateGenerator::FermionNumber(int n)
+snum StateGenerator::FermionNumber(int n)
 {
 	return StateNumbers(n, n, 1);
 }
 
-i64 StateGenerator::StateNumbers(int bit, int remain, int b)
+snum StateGenerator::StateNumbers(int bit, int remain, int b)
 {
 	if (bit == 0)
 	{
@@ -114,7 +119,7 @@ i64 StateGenerator::StateNumbers(int bit, int remain, int b)
 		return 0;
 	}
 
-	i64 ret = stateNumbers[bit][remain][b];
+	snum ret = stateNumbers[bit][remain][b];
 	if (ret >= 0) return ret;
 	int a = remain / bit;
 
@@ -124,8 +129,8 @@ i64 StateGenerator::StateNumbers(int bit, int remain, int b)
 		{
 			//int n1 = BinomialCoefficient(singleFermions[bit].size(), i);
 			//int n2 = BinomialCoefficient(singleBosons[bit].size() - 1 + j, j);
-			i64 n1 = BinomialCoefficient(singleTraceNumbers[bit], (i64)i);
-			i64 n2 = BinomialCoefficient(singleTraceNumbers[bit] - 1 + j, (i64)j);
+			snum n1 = BinomialCoefficient(singleTraceNumbers[bit], (i64)i);
+			snum n2 = BinomialCoefficient(singleTraceNumbers[bit] - 1 + j, (i64)j);
 			ret += n1 * n2 * StateNumbers(bit - 1, remain - (i+j) * bit, (b+i)%2);
 		}
 		stateNumbers[bit][remain][b] = ret;
