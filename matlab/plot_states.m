@@ -1,4 +1,4 @@
-function plot_states4(bits, statenumber, points, filename)
+function plot_states(bits, statenumber, points, filename)
     if nargin < 3
         % by default, pick 100 points.
         points = 100;

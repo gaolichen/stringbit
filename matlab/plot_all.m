@@ -15,7 +15,7 @@ function plot_all(root, minBit, maxBit)
             end
             file = strcat('../', folders{i},'M=', num2str(bit), '.pdf');
             fprintf('Plotting %s ...\n', file);
-            plot_states4(bit, statenumber, points, file);
+            plot_states(bit, statenumber, points, file);
         end
         cd('..');
     end
