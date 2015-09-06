@@ -215,10 +215,11 @@ void GenerateLaTeX()
 {
 	ScriptGenerator sg1(scriptFolder, Boson);
 	ScriptGenerator sg2(scriptFolder, Fermion);
-	string filename = "E:\\Dropbox\\proj\\stringbit\\boson-states-1-7.tex";
-	sg1.OutputStateToLaTeX(1, 7, filename);
-	filename = "E:\\Dropbox\\proj\\stringbit\\fermion-states-1-7.tex";
-	sg2.OutputStateToLaTeX(1, 7, filename);
+	//string filename = "E:\\Dropbox\\proj\\stringbit\\boson-states-1-7.tex";
+	string filename = "boson-states-1-7.tex";
+	sg1.OutputStateToLaTeX(1, 7, filename, true);
+	filename = "fermion-states-1-7.tex";
+	sg2.OutputStateToLaTeX(1, 7, filename, true);
 	OutputHamToLatex();
 	sg1.OutputNormToLaTeX(2, 7, "E:\\Dropbox\\proj\\stringbit\\norms-2-7.tex");
 }

@@ -425,7 +425,19 @@ void ScriptGenerator::OutputNormToLaTeX(int minBits, int maxBits, string filenam
 	ofs.close();
 }
 
-void ScriptGenerator::OutputStateToLaTeX(int minBit, int maxBit, string filename)
+const TraceState& ScriptGenerator::GetState(int m, int index)
+{
+	if (type == Boson)
+	{
+		return StateCollection::Inst()->GetBosonState(m, index);
+	}
+	else
+	{
+		return StateCollection::Inst()->GetFermionState(m, index);
+	}
+}
+
+void ScriptGenerator::OutputStateToLaTeX(int minBit, int maxBit, string filename, bool compress)
 {
 	ofstream ofs(filename.c_str());
 	ofs << "\\documentclass[english]{article}" << endl;
@@ -433,31 +445,59 @@ void ScriptGenerator::OutputStateToLaTeX(int minBit, int maxBit, string filename
 
 	ofs << "\\usepackage[latin9]{inputenc}" << endl;
 	ofs << "\\usepackage{babel}" << endl;
+	ofs << "\\usepackage{amsmath}" << endl;
+	ofs << "\\allowdisplaybreaks" << endl;
 	ofs <<"\\begin{document}" << endl;
 
 	for (int i = minBit; i <= maxBit; i++)
 	{
 		ofs << "\\subsection*{" << i << " bits}" << endl << endl;
+		
 		if (type == Boson)
 		{
-			ofs << StateCollection::Inst()->StateNumber(i) << " bosonic states" << endl;
-			ofs << "\\begin{itemize}" << endl;
-			for (int j = 0; j < StateCollection::Inst()->StateNumber(i); j++)
-			{
-				ofs << "\\item $\\left|" << j + 1 << "\\right\\rangle=";
-				ofs << StateCollection::Inst()->GetBosonState(i, j).ToLaTeX() <<"$" <<  endl;
-			}
-			ofs << "\\end{itemize}" << endl;
+			ofs << StateCollection::Inst()->StateNumber(i) << " bosonic states:" << endl;
+		}
+		else
+		{
+			ofs << StateCollection::Inst()->StateNumber(i) << " fermionic states:" << endl;
 		}
 
-		if (type == Fermion)
+		if (compress)
 		{
-			ofs << StateCollection::Inst()->StateNumber(i) << " fermionic states" << endl;
+			int columns = 3;
+			if (StateCollection::Inst()->StateNumber(i) < columns)
+			{
+				columns = StateCollection::Inst()->StateNumber(i);
+			}
+
+			string cc = string(columns, 'l');
+			ofs << "\\begin{align}" << endl;
+			
+			for (int j = 0; j < StateCollection::Inst()->StateNumber(i); j++)
+			{
+				if (j % columns > 0)
+				{
+					ofs << " & ";
+				}
+				if (j > 0 && j % columns == 0)
+				{
+					ofs << " \\nonumber\\\\" << endl;
+				}
+				
+				ofs << "\\left|" <<  j + 1 << "\\right\\rangle &=";	
+				ofs << GetState(i, j).ToLaTeX();
+			}
+			
+			ofs << " \\nonumber" << endl;
+			ofs << "\\end{align}" << endl;
+		}
+		else
+		{
 			ofs << "\\begin{itemize}" << endl;
 			for (int j = 0; j < StateCollection::Inst()->StateNumber(i); j++)
 			{
 				ofs << "\\item $\\left|" << j + 1 << "\\right\\rangle=";
-				ofs << StateCollection::Inst()->GetFermionState(i, j).ToLaTeX() <<"$" <<  endl;
+				ofs << GetState(i, j).ToLaTeX() <<"$" <<  endl;
 			}
 			ofs << "\\end{itemize}" << endl;
 		}

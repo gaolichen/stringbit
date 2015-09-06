@@ -13,6 +13,7 @@ private:
 	StateType type;
 	void GroupStates(int bits, vector<vector<int> >& states);
 	double NormMatrixScale(int bits, int index);
+	const TraceState& GetState(int m, int index);
 #ifdef HAM_PARAMETER
 	Hamiltonian h0;
 	Hamiltonian deltaH;
@@ -29,5 +30,5 @@ public:
 	void OutputHamToLaTeX(vector<int> bits, vector<double> scales, string filename);
 	void OutputNormToLaTeX(int minBits, int maxBits, string filename);
 	void OutputNormToMatlab(int bits);
-	void OutputStateToLaTeX(int minBit, int maxBit, string filename);
+	void OutputStateToLaTeX(int minBit, int maxBit, string filename, bool compress = false);
 };
