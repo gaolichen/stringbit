@@ -1,11 +1,14 @@
-function plot_all2(root, minBit, maxBit)
+function plot_all2(root, minBit, maxBit, points)
+    if nargin < 4
+        % by default, pick 1500 points.
+        points = 1500;
+    end
     cd(root);
     addpath('../..');
     addpath('..');
     
     folders ={'xi=1' 'xi=2' 'xi=5' 'xi=10'};
     xis = [1,2,5,10];
-    points = 1000;
     for i = 1 : size(folders, 2)
         cd(folders{i});
         for bit = minBit : maxBit

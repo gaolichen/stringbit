@@ -1,9 +1,12 @@
-function plot_states(bits, statenumber, points, filename)
+function plot_states(bits, statenumber, points, xi, filename)
     if nargin < 3
         % by default, pick 100 points.
         points = 100;
     end
     if nargin < 4
+        xi = -1000;
+    end
+    if nargin < 5
         filename = '';
     end
     
@@ -50,16 +53,25 @@ function plot_states(bits, statenumber, points, filename)
             
             highestE = max(states(statenumber, 1), highestE);
             lowestE = min(states(1, 1), lowestE);
+            finalHighE = states(statenumber, 1);
+            finalLowE = states(1, 1);
             currGap = highestE - lowestE;
             
             if currGap > 3.5 * initGap && newPlotStart == 0
                 newPlotStart = curr;
+                midHighE = states(statenumber, 1);
+                midLowE = states(1, 1);
             end
         end
         
         nextPos;
     end
+    
     fprintf('initGap=%d currGap=%d\n', initGap, currGap);
+    if currGap <= 3.5 *initGap
+        midHighE = finalHighE;
+        midLowE = finalLowE;
+    end
     
     % set pos1 and pos2 = midX
     for i = 1 : statenumber
@@ -233,6 +245,28 @@ function plot_states(bits, statenumber, points, filename)
         end
     end
 
+    plainTitle = strcat({'Lowest '},  num2str(statenumber), {' Energy Levels for '});
+
+    if xi > -10
+        if xi == 0
+            texTitle = '$$H = H_{0},';
+        elseif xi == 1
+            texTitle = strcat('$$H = H_{0} + \Delta H,');
+        elseif xi == -1
+            texTitle = strcat('$$H = H_{0} - \Delta H,');
+        elseif xi > 0
+            texTitle = strcat('$$H = H_{0} +', num2str(xi), '\Delta H,');
+        else
+            texTitle = strcat('$$H = H_{0} ', num2str(xi), '\Delta H,');
+        end
+        
+        texTitle = strcat(texTitle, '\,M = ', num2str(bits), '$$');
+    else
+        texTitle = strcat('$$M = ', num2str(bits), '$$');
+    end
+    
+    texTitle = strcat(plainTitle, texTitle);
+
     % plot results.
     fig = figure; cla;
     if currGap < initGap * 8
@@ -253,7 +287,7 @@ function plot_states(bits, statenumber, points, filename)
         set(h1, 'pos', p1);
         set(h2, 'pos', p2);
         axes('Position',[0 0 1 1],'Visible','off');
-        text(0.45,0.95,strcat({'Lowest '},  num2str(statenumber), ' Energy States for M=', num2str(bits)));
+        text(0.35,0.95, texTitle, 'interpreter', 'latex');
     end
     
     if ~strcmp(filename, '')
@@ -282,10 +316,31 @@ function plot_states(bits, statenumber, points, filename)
             end
         end
         
-        if highestE - initHighestE > initLowestE - lowestE
-            legendLocation = 'northwest';
+        % place the legendLocation.
+        if startX == 1
+            highE1 = initHighestE;
+            highE2 = midHighE;
+            lowE1 = initLowestE;
+            lowE2 = midLowE;
         else
-            legendLocation = 'southwest';
+            highE1 = midHighE;
+            highE2 = finalHighE;
+            lowE1 = midLowE;
+            lowE2 = finalLowE;
+        end
+        
+        if abs(highE1-highE2) > abs(lowE1-lowE2)
+            if highE1 > highE2
+                legendLocation = 'northeast';
+            else
+                legendLocation = 'northwest';
+            end
+        else
+            if lowE1 > lowE2
+                legendLocation = 'southwest';
+            else
+                legendLocation = 'southeast';
+            end
         end
         
         legend(p(:),legendtitle{:}, 'Location', legendLocation);
@@ -299,7 +354,7 @@ function plot_states(bits, statenumber, points, filename)
         end
         
         if singleplot
-            title(strcat({'Lowest '},  num2str(statenumber), ' Energy States for M=', num2str(bits)));
+            title(texTitle, 'interpreter', 'latex');
             set(ax1, 'XTick', [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5]);
         else
         end
@@ -317,4 +372,3 @@ end
 function f = IsNegative(a)
     f = (a < -1e-6);
 end
-

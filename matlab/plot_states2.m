@@ -249,7 +249,7 @@ function plot_states2(bits, statenumber, points, xi, filename)
 
     if xi > -10
         if xi == 0
-            texTitle = '$$H = H_{0},';
+            texTitle = '$$H = -H_{0},';
         elseif xi == 1
             texTitle = strcat('$$H = -H_{0} + \Delta H,');
         elseif xi == -1
