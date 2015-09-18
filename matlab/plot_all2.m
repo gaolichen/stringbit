@@ -4,6 +4,7 @@ function plot_all2(root, minBit, maxBit)
     addpath('..');
     
     folders ={'xi=1' 'xi=2' 'xi=5' 'xi=10'};
+    xis = [1,2,5,10];
     points = 1000;
     for i = 1 : size(folders, 2)
         cd(folders{i});
@@ -15,7 +16,7 @@ function plot_all2(root, minBit, maxBit)
             end
             file = strcat('../', folders{i},'pM=', num2str(bit), '.pdf');
             fprintf('Plotting %s ...\n', file);
-            plot_states2(bit, statenumber, points, file);
+            plot_states2(bit, statenumber, points, xis(i), file);
         end
         cd('..');
     end
