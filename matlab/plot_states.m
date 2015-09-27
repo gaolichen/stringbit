@@ -76,9 +76,9 @@ function plot_states(bits, statenumber, points, mode, xi, filename)
         midLowE = finalLowE;
     end
     
-    % set pos1 and pos2 = midX
+    % set pos1=midX+1 and pos2 = midX
     for i = 1 : statenumber
-        pos1(i) = midX;
+        pos1(i) = midX + 1;
         pos2(i) = midX;
     end
     
