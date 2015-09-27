@@ -1,12 +1,15 @@
-function plot_states(bits, statenumber, points, xi, filename)
+function plot_states(bits, statenumber, points, mode, xi, filename)
     if nargin < 3
         % by default, pick 100 points.
         points = 100;
     end
     if nargin < 4
-        xi = -1000;
+        mode = 'sr';
     end
     if nargin < 5
+        xi = -1000;
+    end
+    if nargin < 6
         filename = '';
     end
     
@@ -34,7 +37,7 @@ function plot_states(bits, statenumber, points, xi, filename)
     % first go through midX to tot and connect lines.
     for curr = midX : tot
         n = 1/X(curr);
-        states = lowest_energies(bits, n, statenumber);
+        states = lowest_energies(bits, n, statenumber, mode);
         initDegenerate;
         
         if curr == midX
@@ -87,7 +90,7 @@ function plot_states(bits, statenumber, points, xi, filename)
             n = 1/X(curr);
         end
         
-        states = lowest_energies(bits, n, statenumber);
+        states = lowest_energies(bits, n, statenumber, mode);
         initDegenerate;
         build_dismat;
         res = find_match(dismat, statenumber);
@@ -245,7 +248,11 @@ function plot_states(bits, statenumber, points, xi, filename)
         end
     end
 
-    plainTitle = strcat({'Lowest '},  num2str(statenumber), {' Energy Levels for '});
+    if strcmp(mode, 'sr')
+        plainTitle = strcat({'Lowest '},  num2str(statenumber), {' Energy Levels for '});
+    else
+        plainTitle = strcat({'Highest '},  num2str(statenumber), {' Energy Levels for '});
+    end
 
     if xi > -10
         if xi == 0

@@ -1,4 +1,4 @@
-function plot_all(root, minBit, maxBit, points)
+function plot_allhigh(root, minBit, maxBit, points)
     if nargin < 4
         % by default, pick 1500 points.
         points = 1500;
@@ -13,14 +13,10 @@ function plot_all(root, minBit, maxBit, points)
     for i = 1 : size(folders, 2)
         cd(folders{i});
         for bit = minBit : maxBit
-            if bit == 3
-                statenumber = 5;
-            else
-                statenumber = 8;
-            end
-            file = strcat('../', folders{i},'M=', num2str(bit), '.pdf');
+            statenumber = 5;
+            file = strcat('../', folders{i},'M=', num2str(bit), '_lr', '.pdf');
             fprintf('Plotting %s ...\n', file);
-            plot_states(bit, statenumber, points, 'sr', xis(i), file);
+            plot_states(bit, statenumber, points, 'lr', xis(i), file);
         end
         cd('..');
     end
