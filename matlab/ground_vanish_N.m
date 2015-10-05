@@ -1,5 +1,5 @@
-function f = ground_vanish_N(maxBit, maxN)
-    if nargin < 2
+function f = ground_vanish_N(xi, maxBit, maxN)
+    if nargin < 3
         maxN = maxBit;
     end
     
@@ -8,7 +8,7 @@ function f = ground_vanish_N(maxBit, maxN)
         ret(bit - 2, 1) = bit;
         for n = min(bit, maxN) : -0.5 : 0.5
             try
-                state = lowest_energies(bit, n, 2);
+                state = lowest_energies(xi, bit, n, 2);
                 if state(1, 3) < 1e-8 || abs(state(1, 2)) > 1e-8
                     ret(bit - 2, 2) = n;
                     ret(bit - 2, 3) = state(1, 1);
@@ -25,7 +25,7 @@ function f = ground_vanish_N(maxBit, maxN)
         if ret(bit - 2, 2) == min(bit, maxN)
             for n = min(bit, maxN) + 0.5 : 0.5 : min(bit, maxN) + 5
                 try
-                    state = lowest_energies(bit, n, 2);
+                    state = lowest_energies(xi, bit, n, 2);
                     if state(1, 3) < 1e-8 || abs(state(1, 2)) > 1e-8
                         ret(bit - 2, 2) = n;
                         ret(bit - 2, 3) = state(1, 1);

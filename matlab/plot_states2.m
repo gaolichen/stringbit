@@ -1,13 +1,10 @@
-function plot_states2(bits, statenumber, points, mode, xi, filename)
-    if nargin < 3
+function plot_states2(xi, bits, statenumber, points, mode, filename)
+    if nargin < 4
         % by default, pick 100 points.
         points = 100;
     end
-    if nargin < 4
-        mode = 'sr';
-    end
     if nargin < 5
-        xi = -1000;
+        mode = 'sr';
     end
     if nargin < 6
         filename = '';
@@ -37,7 +34,7 @@ function plot_states2(bits, statenumber, points, mode, xi, filename)
     % first go through midX to tot and connect lines.
     for curr = midX : tot
         n = 1/X(curr);
-        states = lowest_energies2(bits, n, statenumber, mode);
+        states = lowest_energies2(xi, bits, n, statenumber, mode);
         initDegenerate;
         
         if curr == midX
@@ -90,7 +87,7 @@ function plot_states2(bits, statenumber, points, mode, xi, filename)
             n = 1/X(curr);
         end
         
-        states = lowest_energies2(bits, n, statenumber, mode);
+        states = lowest_energies2(xi, bits, n, statenumber, mode);
         initDegenerate;
         build_dismat;
         res = find_match(dismat, statenumber);
