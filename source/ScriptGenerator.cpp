@@ -193,14 +193,7 @@ void ScriptGenerator::HamToMatlab(int bits, Hamiltonian& ham, ofstream& os, bool
 void ScriptGenerator::OutputHamToMatlab(int bits, Hamiltonian& ham, bool sparse)
 {
 	string function;
-	if (!ham.Inverted())
-	{
-		function = "ham" + ToString(bits);
-	}
-	else
-	{
-		function = "pham" + ToString(bits);
-	}
+	function = ham.FilePrefix() + ToString(bits);
 
 	string file = CombinePath(rootFolder, function + ".m");
 	cout << file << endl;

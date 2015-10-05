@@ -3,55 +3,55 @@
 
 Hamiltonian::Hamiltonian()
 {
-	this->inverted = false;
-	Init(0);
+	//this->inverted = false;
+	//Init(0);
 }
 
-Hamiltonian::Hamiltonian(int xi, bool invert)
-{
-	this->inverted = invert;
-	Init(xi);
-}
-
-void Hamiltonian::Init(int xi)
-{
-	int a = 1;
-	if (inverted)
-	{
-		a = -1;
-	}
-
-	realOps.push_back(new HamOperatorA(HamOperator::AA, HamOperator::AA));
-	rePrefactors.push_back(2 * a + 2 * xi);
-	realOps.push_back(new HamOperatorA(HamOperator::BB, HamOperator::BB));
-	rePrefactors.push_back(-2 * a + 2 * xi);
-	realOps.push_back(new HamOperatorA(HamOperator::AB, HamOperator::BA));
-	rePrefactors.push_back(2 * a + 2 * xi);
-	realOps.push_back(new HamOperatorA(HamOperator::BA, HamOperator::BA));
-	rePrefactors.push_back(2 * a);
-	realOps.push_back(new HamOperatorA(HamOperator::AB, HamOperator::AB));
-	rePrefactors.push_back(2 * a);
-	realOps.push_back(new HamOperatorA(HamOperator::BA, HamOperator::AB));
-	rePrefactors.push_back(2 * xi - 2 * a);
-
-	realOps.push_back(new BitNumberHamOperator());
-	rePrefactors.push_back(-2 * xi);
-
-	imaginaryOps.push_back(new HamOperatorA(HamOperator::BB, HamOperator::AA));
-	imPrefactor.push_back(-2 * a);
-	imaginaryOps.push_back(new HamOperatorA(HamOperator::AA, HamOperator::BB));
-	imPrefactor.push_back(2 * a);
-
-	//if (aaaa < 0)
-	//{
-	//	realOps.push_back(new HamOperatorB(HamOperator::AA, HamOperator::AA));
-	//	rePrefactors.push_back(-aaaa);
-	//	realOps.push_back(new HamOperatorB(HamOperator::BA, HamOperator::BA));
-	//	rePrefactors.push_back(-aaaa);
-	//	realOps.push_back(new HamOperatorB(HamOperator::AB, HamOperator::BA));
-	//	rePrefactors.push_back(aaaa);
-	//}
-}
+//Hamiltonian::Hamiltonian(int xi, bool invert)
+//{
+//	this->inverted = invert;
+//	Init(xi);
+//}
+//
+//void Hamiltonian::Init(int xi)
+//{
+//	int a = 1;
+//	if (inverted)
+//	{
+//		a = -1;
+//	}
+//
+//	realOps.push_back(new HamOperatorA(HamOperator::AA, HamOperator::AA));
+//	rePrefactors.push_back(2 * a + 2 * xi);
+//	realOps.push_back(new HamOperatorA(HamOperator::BB, HamOperator::BB));
+//	rePrefactors.push_back(-2 * a + 2 * xi);
+//	realOps.push_back(new HamOperatorA(HamOperator::AB, HamOperator::BA));
+//	rePrefactors.push_back(2 * a + 2 * xi);
+//	realOps.push_back(new HamOperatorA(HamOperator::BA, HamOperator::BA));
+//	rePrefactors.push_back(2 * a);
+//	realOps.push_back(new HamOperatorA(HamOperator::AB, HamOperator::AB));
+//	rePrefactors.push_back(2 * a);
+//	realOps.push_back(new HamOperatorA(HamOperator::BA, HamOperator::AB));
+//	rePrefactors.push_back(2 * xi - 2 * a);
+//
+//	realOps.push_back(new BitNumberHamOperator());
+//	rePrefactors.push_back(-2 * xi);
+//
+//	imaginaryOps.push_back(new HamOperatorA(HamOperator::BB, HamOperator::AA));
+//	imPrefactor.push_back(-2 * a);
+//	imaginaryOps.push_back(new HamOperatorA(HamOperator::AA, HamOperator::BB));
+//	imPrefactor.push_back(2 * a);
+//
+//	//if (aaaa < 0)
+//	//{
+//	//	realOps.push_back(new HamOperatorB(HamOperator::AA, HamOperator::AA));
+//	//	rePrefactors.push_back(-aaaa);
+//	//	realOps.push_back(new HamOperatorB(HamOperator::BA, HamOperator::BA));
+//	//	rePrefactors.push_back(-aaaa);
+//	//	realOps.push_back(new HamOperatorB(HamOperator::AB, HamOperator::BA));
+//	//	rePrefactors.push_back(aaaa);
+//	//}
+//}
 
 Hamiltonian::~Hamiltonian()
 {
@@ -187,12 +187,51 @@ int Hamiltonian::RealOpSize()
 	return realOps.size();
 }
 
+H0Hamiltonian::H0Hamiltonian()
+{
+	filePrefix = "h0Ham";
+	realOps.push_back(new HamOperatorA(HamOperator::AA, HamOperator::AA));
+	rePrefactors.push_back(2);
+	realOps.push_back(new HamOperatorA(HamOperator::BB, HamOperator::BB));
+	rePrefactors.push_back(-2);
+	realOps.push_back(new HamOperatorA(HamOperator::AB, HamOperator::BA));
+	rePrefactors.push_back(2);
+	realOps.push_back(new HamOperatorA(HamOperator::BA, HamOperator::BA));
+	rePrefactors.push_back(2);
+	realOps.push_back(new HamOperatorA(HamOperator::AB, HamOperator::AB));
+	rePrefactors.push_back(2);
+	realOps.push_back(new HamOperatorA(HamOperator::BA, HamOperator::AB));
+	rePrefactors.push_back(-2);
+
+	imaginaryOps.push_back(new HamOperatorA(HamOperator::BB, HamOperator::AA));
+	imPrefactor.push_back(-2);
+	imaginaryOps.push_back(new HamOperatorA(HamOperator::AA, HamOperator::BB));
+	imPrefactor.push_back(2);
+}
+
+DeltaHamiltonian::DeltaHamiltonian()
+{
+	filePrefix = "deltaHam";
+
+	realOps.push_back(new HamOperatorA(HamOperator::AB, HamOperator::BA));
+	rePrefactors.push_back(2);
+
+	realOps.push_back(new HamOperatorA(HamOperator::BA, HamOperator::AB));
+	rePrefactors.push_back(2);
+
+	realOps.push_back(new HamOperatorA(HamOperator::AA, HamOperator::AA));
+	rePrefactors.push_back(2);
+
+	realOps.push_back(new HamOperatorA(HamOperator::BB, HamOperator::BB));
+	rePrefactors.push_back(2);
+
+	realOps.push_back(new BitNumberHamOperator());
+	rePrefactors.push_back(-2);
+}
+
 ZeroHamiltonian::ZeroHamiltonian()
 {
-	realOps.clear();
-	rePrefactors.clear();
-	imaginaryOps.clear();
-	imPrefactor.clear();
+	filePrefix = "zeroHam";
 	realOps.push_back(new HamOperatorA(HamOperator::AA, HamOperator::AA));
 	rePrefactors.push_back(1);
 	realOps.push_back(new HamOperatorA(HamOperator::BB, HamOperator::BB));
