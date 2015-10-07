@@ -1,6 +1,9 @@
-function multi_plot(xis, bits, statenumber, titles, args)
+function multi_plot(xis, bits, statenumber, titles, args, maxx)
     if nargin < 5
         args = {};
+    end
+    if nargin < 6
+        maxx = {};
     end
     
     filename = '';
@@ -22,7 +25,11 @@ function multi_plot(xis, bits, statenumber, titles, args)
                 h2 = subplot(row, 2, cnt);
             end
             
-            plot_states(xis(i), bits(j), statenumber, args);
+            if size(maxx, 2) > 0
+                plot_states(xis(i), bits(j), statenumber, [args {'maxx', maxx(cnt)}]);
+            else
+                plot_states(xis(i), bits(j), statenumber, args);
+            end
             
             title(titles{cnt}, 'interpreter', 'latex');
             if mod(cnt, 2) == 1
