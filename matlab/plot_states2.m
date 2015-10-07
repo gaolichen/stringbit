@@ -395,7 +395,7 @@ end
 
 function f = GetArg(argList, name, defaultValue)
     for i = 1 : 2 : size(argList, 2)
-        if strcmp(argList{i}, name)
+        if strcmpi(argList{i}, name)
             f = argList{i+1};
             return
         end
