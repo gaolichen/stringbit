@@ -1,13 +1,17 @@
-function plot_states2(xi, bits, statenumber, points, mode, filename)
+function plot_states2(xi, bits, statenumber, args)
     if nargin < 4
-        % by default, pick 100 points.
-        points = 100;
+        args = {};
     end
-    if nargin < 5
-        mode = 'sr';
-    end
-    if nargin < 6
-        filename = '';
+    
+    % by default, pick 100 points.
+    points = 100;
+    mode = 'sr';
+    filename = '';
+        
+    if size(args, 2) > 0
+        points = GetArg(args, 'points', points);
+        mode = GetArg(args, 'mode', mode);
+        filename = GetArg(args, 'file', filename);
     end
     
     maxX = 1.5;
@@ -375,4 +379,14 @@ end
    
 function f = IsNegative(a)
     f = (a < -1e-6);
+end
+
+function f = GetArg(argList, name, defaultValue)
+    for i = 1 : 2 : size(argList, 2)
+        if strcmp(argList{i}, name)
+            f = argList{i+1};
+            return
+        end
+    end
+    f = defaultValue;
 end

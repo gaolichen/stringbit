@@ -15,7 +15,7 @@ function plot_all2(minBit, maxBit, points)
             end
             file = strcat('nxi=', num2str(xis(i)),'M=', num2str(bit), '.pdf');
             fprintf('Plotting %s ...\n', file);
-            plot_states2(xis(i), bit, statenumber, points, 'sr', file);
+            plot_states2(xis(i), bit, statenumber, {'points', points, 'file', file, 'mode', 'sr'});
         end
     end
 end
