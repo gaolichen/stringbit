@@ -1,4 +1,4 @@
-function plot_states(xi, bits, statenumber, args)
+function f = plot_states(xi, bits, statenumber, args)
     if nargin < 4
         args = {};
     end
@@ -7,14 +7,17 @@ function plot_states(xi, bits, statenumber, args)
     points = 100;
     mode = 'sr';
     filename = '';
+    issubplot = 0;
+    maxX = 1.5;
         
     if size(args, 2) > 0
         points = GetArg(args, 'points', points);
         mode = GetArg(args, 'mode', mode);
         filename = GetArg(args, 'file', filename);
+        issubplot = GetArg(args, 'subplot', issubplot);
+        maxX = GetArg(args, 'maxx', maxX);
     end
         
-    maxX = 1.5;
     minN = 1/maxX;
     % X: the x-components
     X = 0:1/minN/points:1/minN;
@@ -276,8 +279,11 @@ function plot_states(xi, bits, statenumber, args)
     texTitle = strcat(plainTitle, texTitle);
 
     % plot results.
-    fig = figure; cla;
-    if currGap < initGap * 8
+    if issubplot == 0
+        fig = figure; cla;
+    end
+    
+    if issubplot || currGap < initGap * 8
         doplot(1, tot, true);
     else
         fprintf('newPlotStart = %d\n', newPlotStart);
@@ -298,7 +304,7 @@ function plot_states(xi, bits, statenumber, args)
         text(0.35,0.95, texTitle, 'interpreter', 'latex');
     end
     
-    if ~strcmp(filename, '')
+    if issubplot ==0 && ~strcmp(filename, '')
         saveas(fig, filename);
         close(fig);
     end
@@ -324,44 +330,51 @@ function plot_states(xi, bits, statenumber, args)
             end
         end
         
-        % place the legendLocation.
-        if startX == 1
-            highE1 = initHighestE;
-            highE2 = midHighE;
-            lowE1 = initLowestE;
-            lowE2 = midLowE;
-        else
-            highE1 = midHighE;
-            highE2 = finalHighE;
-            lowE1 = midLowE;
-            lowE2 = finalLowE;
-        end
-        
-        if abs(highE1-highE2) > abs(lowE1-lowE2)
-            if highE1 > highE2
-                legendLocation = 'northeast';
+        % do not generate legend is it is called by multi_plot function.
+        if issubplot == 0
+            % place the legendLocation.
+            if startX == 1
+                highE1 = initHighestE;
+                highE2 = midHighE;
+                lowE1 = initLowestE;
+                lowE2 = midLowE;
             else
-                legendLocation = 'northwest';
+                highE1 = midHighE;
+                highE2 = finalHighE;
+                lowE1 = midLowE;
+                lowE2 = finalLowE;
             end
-        else
-            if lowE1 > lowE2
-                legendLocation = 'southwest';
+
+            if abs(highE1-highE2) > abs(lowE1-lowE2)
+                if highE1 > highE2
+                    legendLocation = 'northeast';
+                else
+                    legendLocation = 'northwest';
+                end
             else
-                legendLocation = 'southeast';
+                if lowE1 > lowE2
+                    legendLocation = 'southwest';
+                else
+                    legendLocation = 'southeast';
+                end
             end
+            
+            legend(p(:),legendtitle{:}, 'Location', legendLocation);
         end
-        
-        legend(p(:),legendtitle{:}, 'Location', legendLocation);
         
         ax1 = gca;
-        xlabel('1/N');
-        if startX == 1
-            ylabel('E');    
-        else
-            %set(ax1, 'YAxisLocation', 'right');
+        
+        % dont generate lable for multi_plot
+        if issubplot == 0
+            xlabel('1/N');
+            if startX == 1
+                ylabel('E');    
+            else
+                %set(ax1, 'YAxisLocation', 'right');
+            end
         end
         
-        if singleplot
+        if singleplot && ~issubplot
             title(texTitle, 'interpreter', 'latex');
             set(ax1, 'XTick', [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5]);
         else
