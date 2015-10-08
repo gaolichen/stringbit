@@ -3,3 +3,12 @@ multi_plot([0], [4, 5, 6, 7], 5, {'M=4','M=5', 'M=6', 'M=7'}, {'mode', 'lr', 'ma
 multi_plot([0.01, 0.5, 1, 3], [3], 5, {'$$H=H_0+0.01\Delta H$$','$$H=H_0+0.5\Delta H$$', '$$H=H_0+\Delta H$$', '$$H=H_0+3\Delta H$$'}, {'mode', 'lr', 'maxx', 2, 'file', 'xi=positiveM=3.pdf', 'position', [100 100 500 650], 'points', 1000})
 
 multi_plot([-0.9, -0.6, -0.3, -0.1], [3], 5, {'$$H=H_0-0.9\Delta H$$','$$H=H_0-0.6\Delta H$$', '$$H=H_0-0.3\Delta H$$', '$$H=H_0-0.1\Delta H$$'}, {'mode', 'lr', 'maxx', 2, 'file', 'xi=negativeM=3.pdf', 'position', [100 100 500 650], 'points', 1000})
+
+multi_plot([2], [3 5 7 9], 5, {'$$M=3$$','$$M=5$$', '$$M=7$$', '$$M=9$$'}, {'mode', 'sr', 'file', 'xi=2M=odd.pdf', 'position', [100 100 500 650], 'points', 100}, [1, 0.6, 0.3, 0.22])
+
+multi_plot([-.99], [3 5 7 9], 5, {'$$M=3$$','$$M=5$$', '$$M=7$$', '$$M=9$$'}, {'mode', 'sr', 'file', 'xi=n.99M=odd.pdf', 'position', [100 100 500 650], 'points', 100}, [1.2, 1.2, 0.8, 0.6])
+
+
+multi_plot2([2], [3 5 7 9], 5, {'$$M=3$$','$$M=5$$', '$$M=7$$', '$$M=9$$'}, {'mode', 'sr', 'file', 'nxi=2M=odd.pdf', 'position', [100 100 500 650], 'points', 100}, [1, 0.6, 0.3, 0.22])
+
+multi_plot2([1.1], [3 5 7 9], 5, {'$$M=3$$','$$M=5$$', '$$M=7$$', '$$M=9$$'}, {'mode', 'sr', 'file', 'nxi=1.1M=odd.pdf', 'position', [100 100 500 650], 'points', 100}, [1.2, 1.2, 0.8, 0.6])

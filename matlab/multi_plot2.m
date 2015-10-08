@@ -1,4 +1,4 @@
-function multi_plot2(xis, bits, statenumber, titles, args, maxx)
+function multi_plot2(xis, bits, statenumber, subtitles, args, maxx)
     if nargin < 5
         args = {};
     end
@@ -7,8 +7,12 @@ function multi_plot2(xis, bits, statenumber, titles, args, maxx)
     end
     
     filename = '';
+    texTitle = '';
+    pos = [];
     if size(args, 2) > 0
         filename = GetArg(args, 'file', filename);
+        texTitle = GetArg(args, 'title', texTitle);
+        pos = GetArg(args, 'position', pos);
     end
     
     args = [args {'subplot', 1}];
@@ -16,6 +20,10 @@ function multi_plot2(xis, bits, statenumber, titles, args, maxx)
     row = n / 2;
     cnt = 0;
     fig = figure; cla;
+    if size(pos, 2) == 4
+        set(fig, 'Position',pos);
+    end
+
     for i = 1 : size(xis, 2)
         for j = 1 : size(bits, 2)
             cnt = cnt + 1;
@@ -31,7 +39,7 @@ function multi_plot2(xis, bits, statenumber, titles, args, maxx)
                 plot_states2(xis(i), bits(j), statenumber, args);
             end
             
-            title(titles{cnt}, 'interpreter', 'latex');
+            title(subtitles{cnt}, 'interpreter', 'latex');
             if mod(cnt, 2) == 1
                 ylabel('E');
             end
@@ -53,6 +61,10 @@ function multi_plot2(xis, bits, statenumber, titles, args, maxx)
         end
     end
     
+    if ~strcmp(texTitle, '')
+        text(-1, 1, texTitle, 'interpreter', 'latex');
+    end
+
     if ~strcmp(filename, '')
         saveas(fig, filename);
         close(fig);
