@@ -9,6 +9,8 @@ function f = plot_states(xi, bits, statenumber, args)
     filename = '';
     issubplot = 0;
     maxX = 1.5;
+    minX = 0;
+    tol = 1e-6;
         
     if size(args, 2) > 0
         points = GetArg(args, 'points', points);
@@ -16,11 +18,13 @@ function f = plot_states(xi, bits, statenumber, args)
         filename = GetArg(args, 'file', filename);
         issubplot = GetArg(args, 'subplot', issubplot);
         maxX = GetArg(args, 'maxx', maxX);
+        minX = GetArg(args, 'minx', minX);
+        tol = GetArg(args, 'tol', tol);
     end
-        
-    minN = 1/maxX;
+
     % X: the x-components
-    X = 0:1/minN/points:1/minN;
+    dltX = (maxX - minX)/points;
+    X = minX:dltX:maxX;
     
     tot = length(X);
     % stored all the states.
@@ -35,13 +39,17 @@ function f = plot_states(xi, bits, statenumber, args)
     
     % midX: pick a point other than X(1) to start to avoid degenerate case.
     %midX = min(10, round((1/(2*bits)/maxX) * points));
-    midX = round((1/(2*bits)/maxX) * points);
+    if 1/(2*bits) <= minX
+        midX = 1;
+    else
+        midX = round((1/(2*bits) - minX + dltX)/dltX);
+    end
     newPlotStart = 0;
     
     % first go through midX to tot and connect lines.
     for curr = midX : tot
         n = 1/X(curr);
-        states = lowest_energies(xi, bits, n, statenumber, mode);
+        states = lowest_energies(xi, bits, n, statenumber, mode,tol);
         initDegenerate;
         
         if curr == midX
@@ -94,7 +102,7 @@ function f = plot_states(xi, bits, statenumber, args)
             n = 1/X(curr);
         end
         
-        states = lowest_energies(xi, bits, n, statenumber, mode);
+        states = lowest_energies(xi, bits, n, statenumber, mode, tol);
         initDegenerate;
         build_dismat;
         res = find_match(dismat, statenumber);
@@ -112,9 +120,10 @@ function f = plot_states(xi, bits, statenumber, args)
     function initDegenerate
         ii = 1;
         while ii < statenumber
-            if IsEqual(states(ii, 1), states(ii + 1, 1)) && IsEqual(states(ii, 2), states(ii + 1, 2))
+            if approxEqual(states(ii, 1), states(ii + 1, 1)) && approxEqual(states(ii, 2), states(ii + 1, 2))
                 isDegenerate(ii) = 1;
                 isDegenerate(ii + 1) = 1;
+%                 fprintf('degenerate ii=%d, X=%d, diff=%f\n', ii, X(curr), states(ii+1,1)-states(ii,1));
                 ii = ii + 2;
             else
                 isDegenerate(ii) = 0;
@@ -236,14 +245,14 @@ function f = plot_states(xi, bits, statenumber, args)
     
     % return if two points on two lines are complex conjugate to each other.
     function f = isConjugate(sid1, sid2, xpos)
-        f = IsEqual(allstates(xpos, sid1, 1), allstates(xpos, sid2, 1)) && IsEqual(allstates(xpos, sid1, 2), -allstates(xpos, sid2, 2));
+        f = approxEqual(allstates(xpos, sid1, 1), allstates(xpos, sid2, 1)) && approxEqual(allstates(xpos, sid1, 2), -allstates(xpos, sid2, 2));
     end
     
     function f = getLineType(stateid, xpos)
         im = allstates(xpos, stateid, 2);
         nm = allstates(xpos, stateid, 3);
         
-        if ~IsEqual(im, 0)
+        if ~approxEqual(im, 0)
             f = 2;
         elseif IsNegative(nm)
             f = 3;
@@ -384,10 +393,6 @@ function f = plot_states(xi, bits, statenumber, args)
         ylim auto;
         hold off
     end
-end
-
-function f = IsEqual(a, b)
-    f = abs(a - b) < 1e-5;
 end
    
 function f = IsNegative(a)
