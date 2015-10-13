@@ -97,7 +97,7 @@ function plot_states2(xi, bits, statenumber, args)
     % go through from midX -1 to 1.
     for curr = midX - 1 : -1 : 1
         if X(curr) == 0
-            n = Inf;
+            n = 10^6;
         else
             n = 1/X(curr);
         end

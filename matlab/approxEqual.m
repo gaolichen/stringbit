@@ -1,3 +1,3 @@
 function f = approxEqual(a, b)
-    f = abs(a - b) < 1e-3;
+    f = abs(a - b) < 0.001;
 end
