@@ -337,3 +337,29 @@ void StateGenerator::InitStateCollection(StateCollection* collection)
 		collection->Init(i, bosons[i][i], fermions[i][i]);
 	}
 }
+
+void StateGenerator::BuildSingleOperatorStates(int remBit, int currBits, vector<int>& res)
+{
+	if (remBit == 0)
+	{
+		// todo 
+		return;
+	}
+
+	if (currBits > remBit)
+	{
+		return;
+	}
+
+	for (int i = 0; i * currBits <= remBit; i++)
+	{
+		res[currBits] = i;
+		BuildSingleOperatorStates(remBit - i * currBits, currBits + 1, res);
+	}
+}
+
+void StateGenerator::GenerateSingleOperatorStates(int bits, vector<TraceState>& res)
+{
+	vector<int> states(bits + 1, 0);
+	BuildSingleOperatorStates(bits, 1, states);
+}

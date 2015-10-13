@@ -29,6 +29,8 @@ private:
 	static vector<TraceState> PickFermionFromSingleState(vector<SingleTrace> &states, int number);
 	static vector<TraceState> PickBosonFromSingleState(vector<SingleTrace> &states, int number);
 	static TraceState CombineStates(TraceState& a, TraceState& b, TraceState& c);
+
+	void BuildSingleOperatorStates(int remBit, int currBits, vector<int>& res);
 public:
 	const static int MAX_BIT_TO_COUNT = 62;
 	const static int MAX_BIT_TO_GENERATE = 11;
@@ -43,4 +45,5 @@ public:
 	TraceState BosonState(int n, int index);
 	TraceState FermionState(int n, int index);
 	void InitStateCollection(StateCollection* collection);
+	void GenerateSingleOperatorStates(int bits, vector<TraceState> &res);
 };
