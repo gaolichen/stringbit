@@ -1,4 +1,6 @@
 function f=physical_states(xi, bits, n, statenumber, mode, tol)
+%Returns statenumber physical states for give xi, bitnumber, n
+% If the number of states less than statenumber, return all the states.
     if nargin < 5
         mode = 'sr';
     end
@@ -6,22 +8,26 @@ function f=physical_states(xi, bits, n, statenumber, mode, tol)
         tol = 10^(-6);
     end
     
+    fprintf('xi=%d, bits=%d, n=%d\n', xi, bits, n);
+    
     opts.tol = tol;
     tic;
     B = metric(bits, n);
-    %disp(toc);
     A = B * (ham(bits, n) + xi * deltaHam(bits, n));
-    %disp(toc);
+    %fprintf('a\n');
     idx = licols(B);
-    %disp(toc);
     B = B(idx(:), idx(:));
     A = A(idx(:), idx(:));
-    %disp(toc);
+    %fprintf('b\n');
+    if statenumber > size(A, 2)
+        statenumber = size(A, 2);
+    end
     %disp(A);
     %disp(B);
-    %disp(size(A));
-    %disp(size(B));
+    
     [Vec,D] = eigs(A, B, statenumber, mode, opts);
     f = diag(D);
+    %disp(f);
+    %fprintf('c\n');
     %disp(toc);
 end
