@@ -13,13 +13,19 @@ function plot_excitation(xis, Ns, filename, legentLocations)
     
     x = (3:2:11);
     y = zeros(1, size(x, 2));
-    row = size(xis, 2) / 2;
-    cols = ['r', 'g', 'b', 'm', 'c'];
+    if size(xis, 2) > 1
+        row = size(xis, 2) / 2;
+    else
+        row = 0;
+    end
+    cols = ['r', 'g', 'b', 'm', 'k', 'c'];
     p = zeros(1, size(Ns, 2));
     legendtitle = cell(1, size(Ns, 2)); 
     fig = figure; cla;
     for i = 1 : size(xis, 2)
-        subplot(row, 2, i);
+        if row > 0
+            subplot(row, 2, i);
+        end
         hold on;
         for j = 1 : size(Ns, 2)
             num = 0;
@@ -37,13 +43,13 @@ function plot_excitation(xis, Ns, filename, legentLocations)
             p(j) = plot(x(1:num), y(1:num), strcat('--', cols(j), '.'));
             legendtitle{j} = strcat('N=', num2str(Ns(j)));
         end
-        if size(legentLocations, 2) > 0
+        if size(legentLocations, 2) >= i
             legend(p(:),legendtitle{:}, 'Location', legentLocations{i});
-        else
+        elseif size(legentLocations, 2) == 0
             legend(p(:),legendtitle{:}, 'Location', 'southwest');
         end
         xlabel('M');
-        ylabel('M\times (E_{1} - E{0})','interpreter', 'latex');
+        ylabel('$$M\times (E_{1} - E{0})$$','interpreter', 'latex');
         
         if xis(i) == 0
             texTitle = '$$H = H_{0}$$';
@@ -57,6 +63,9 @@ function plot_excitation(xis, Ns, filename, legentLocations)
             texTitle = strcat('$$H = H_{0} ', num2str(xis(i)), '\Delta H$$');
         end
         
+        if row == 0
+            texTitle = strcat({'$$M\times (E_{1} - E_{0})$$ for '}, texTitle);
+        end
         title(texTitle, 'interpreter', 'latex');
         ax1 = gca;
         set(ax1, 'XTick', (3:2:11));
