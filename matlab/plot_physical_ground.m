@@ -35,7 +35,7 @@ function plot_physical_ground(xis, Ns, filename, legentLocations)
         end
         if size(legentLocations, 2) >= i
             legend(p(:),legendtitle{:}, 'Location', legentLocations{i});
-        elseif size(lengentLocations, 2) == 0
+        elseif size(legentLocations, 2) == 0
             legend(p(:),legendtitle{:}, 'Location', 'southwest');
         end
         xlabel('M');
