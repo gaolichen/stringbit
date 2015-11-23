@@ -41,7 +41,11 @@ function plot_excitation(xis, Ns, filename, legentLocations)
                 end
             end
             p(j) = plot(x(1:num), y(1:num), strcat('--', cols(j), '.'));
-            legendtitle{j} = strcat('N=', num2str(Ns(j)));
+            if Ns(j) < 10000
+                legendtitle{j} = strcat('N=', num2str(Ns(j)));
+            else
+                legendtitle{j} = 'N=\infty';
+            end
         end
         if size(legentLocations, 2) >= i
             legend(p(:),legendtitle{:}, 'Location', legentLocations{i});
@@ -49,7 +53,7 @@ function plot_excitation(xis, Ns, filename, legentLocations)
             legend(p(:),legendtitle{:}, 'Location', 'southwest');
         end
         xlabel('M');
-        ylabel('$$M\times (E_{1} - E{0})$$','interpreter', 'latex');
+        ylabel('$$M\times (E_{1} - E_{0})$$','interpreter', 'latex');
         
         if xis(i) == 0
             texTitle = '$$H = H_{0}$$';
@@ -63,10 +67,12 @@ function plot_excitation(xis, Ns, filename, legentLocations)
             texTitle = strcat('$$H = H_{0} ', num2str(xis(i)), '\Delta H$$');
         end
         
+        % only subplots have subtitle.
         if row == 0
-            texTitle = strcat({'$$M\times (E_{1} - E_{0})$$ for '}, texTitle);
+            % texTitle = strcat({'$$M\times (E_{1} - E_{0})$$ for '}, texTitle);
+        else
+            title(texTitle, 'interpreter', 'latex');
         end
-        title(texTitle, 'interpreter', 'latex');
         ax1 = gca;
         set(ax1, 'XTick', (3:2:11));
         hold off;
