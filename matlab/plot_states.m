@@ -310,7 +310,7 @@ function f = plot_states(xi, bits, statenumber, args)
         set(h1, 'pos', p1);
         set(h2, 'pos', p2);
         axes('Position',[0 0 1 1],'Visible','off');
-        text(0.35,0.95, texTitle, 'interpreter', 'latex');
+        %text(0.35,0.95, texTitle, 'interpreter', 'latex');
     end
     
     if issubplot ==0 && ~strcmp(filename, '')
@@ -384,8 +384,8 @@ function f = plot_states(xi, bits, statenumber, args)
         end
         
         if singleplot && ~issubplot
-            title(texTitle, 'interpreter', 'latex');
-            %set(ax1, 'XTick', [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5]);
+            %title(texTitle, 'interpreter', 'latex');
+            set(ax1, 'XTick', [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5]);
         else
         end
         
