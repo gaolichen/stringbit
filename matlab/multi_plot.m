@@ -24,6 +24,13 @@ function multi_plot(xis, bits, statenumber, subtitles, args, maxx)
         set(fig, 'Position',pos);
     end
     
+    % If more than two row, increase the size of the figure.
+    if row > 2
+        ppos = get(fig, 'PaperPosition');
+        ppos(4) = (ppos(4) - ppos(2)) * row / 2 + ppos(2);
+        set(fig, 'PaperPosition', ppos);
+    end
+    
     for i = 1 : size(xis, 2)
         for j = 1 : size(bits, 2)
             cnt = cnt + 1;
