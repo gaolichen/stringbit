@@ -11,6 +11,7 @@ function f = plot_states(xi, bits, statenumber, args)
     maxX = 1.5;
     minX = 0;
     tol = 1e-6;
+    cut = 0;
         
     if size(args, 2) > 0
         points = GetArg(args, 'points', points);
@@ -20,6 +21,7 @@ function f = plot_states(xi, bits, statenumber, args)
         maxX = GetArg(args, 'maxx', maxX);
         minX = GetArg(args, 'minx', minX);
         tol = GetArg(args, 'tol', tol);
+        cut = GetArg(args, 'cut', cut);
     end
 
     % X: the x-components
@@ -45,6 +47,11 @@ function f = plot_states(xi, bits, statenumber, args)
         midX = round((1/(2*bits) - minX + dltX)/dltX);
     end
     newPlotStart = 0;
+    
+    if cut > 0 && cut > minX
+        newPlotStart = round((cut - minX +dltX)/dltX);
+    end
+    fprintf('cut=%f, newPlot=%d, minX=%d\n', cut, newPlotStart, minX);
     
     % first go through midX to tot and connect lines.
     for curr = midX : tot
@@ -72,8 +79,13 @@ function f = plot_states(xi, bits, statenumber, args)
             finalLowE = states(1, 1);
             currGap = highestE - lowestE;
             
-            if currGap > 3.5 * initGap && newPlotStart == 0
-                newPlotStart = curr;
+%             if currGap > 3.5 * initGap && newPlotStart == 0
+%                 newPlotStart = curr;
+%                 midHighE = states(statenumber, 1);
+%                 midLowE = states(1, 1);
+%             end
+            
+            if curr == newPlotStart
                 midHighE = states(statenumber, 1);
                 midLowE = states(1, 1);
             end
@@ -83,7 +95,7 @@ function f = plot_states(xi, bits, statenumber, args)
     end
     
     fprintf('initGap=%d currGap=%d\n', initGap, currGap);
-    if currGap <= 3.5 *initGap
+    if newPlotStart == 0
         midHighE = finalHighE;
         midLowE = finalLowE;
     end
@@ -292,7 +304,8 @@ function f = plot_states(xi, bits, statenumber, args)
         fig = figure; cla;
     end
     
-    if issubplot || currGap < initGap * 8
+    %if issubplot || currGap < initGap * 8
+    if issubplot || newPlotStart == 0
         doplot(1, tot, true);
     else
         fprintf('newPlotStart = %d\n', newPlotStart);
