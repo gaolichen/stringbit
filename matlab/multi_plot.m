@@ -9,15 +9,17 @@ function multi_plot(xis, bits, statenumber, subtitles, args, maxx)
     filename = '';
     texTitle = '';
     pos = [];
+    col = 2;
     if size(args, 2) > 0
         filename = GetArg(args, 'file', filename);
         texTitle = GetArg(args, 'title', texTitle);
         pos = GetArg(args, 'position', pos);
+        col = GetArg(args, 'column', col);
     end
     
     args = [args {'subplot', 1}];
     n = size(xis, 2) * size(bits, 2);
-    row = n / 2;
+    row = n / col;
     cnt = 0;
     fig = figure; cla;
     if size(pos, 2) == 4

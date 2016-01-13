@@ -9,19 +9,28 @@ function multi_plot2(xis, bits, statenumber, subtitles, args, maxx)
     filename = '';
     texTitle = '';
     pos = [];
+    col = 2;
     if size(args, 2) > 0
         filename = GetArg(args, 'file', filename);
         texTitle = GetArg(args, 'title', texTitle);
         pos = GetArg(args, 'position', pos);
+        col = GetArg(args, 'column', col);
     end
     
     args = [args {'subplot', 1}];
     n = size(xis, 2) * size(bits, 2);
-    row = n / 2;
+    row = n / col;
     cnt = 0;
     fig = figure; cla;
     if size(pos, 2) == 4
         set(fig, 'Position',pos);
+    end
+    
+    % If more than two row, increase the size of the figure.
+    if row > 2
+        ppos = get(fig, 'PaperPosition');
+        ppos(4) = (ppos(4) - ppos(2)) * row / 2 + ppos(2);
+        set(fig, 'PaperPosition', ppos);
     end
 
     for i = 1 : size(xis, 2)
