@@ -12,6 +12,10 @@ function f = plot_states(xi, bits, statenumber, args)
     minX = 0;
     tol = 1e-6;
     cut = 0;
+    % specify which dash-dot line is omitted.
+    % this is just a workaround to fix the issue
+    % that sometimes two curves overlap each other.
+    omit = -1;
         
     if size(args, 2) > 0
         points = GetArg(args, 'points', points);
@@ -22,6 +26,7 @@ function f = plot_states(xi, bits, statenumber, args)
         minX = GetArg(args, 'minx', minX);
         tol = GetArg(args, 'tol', tol);
         cut = GetArg(args, 'cut', cut);
+        omit = GetArg(args, 'omit', omit);
     end
 
     % X: the x-components
@@ -337,11 +342,16 @@ function f = plot_states(xi, bits, statenumber, args)
         
         hold on;
         for ii = 1 : lineNumber
-            info = lines(ii);
+            info = lines(ii);            
             from = max(startX, info.StartX);
             to = min(endX, info.EndX);
             if from < to
+                if info.StateId ~= omit || info.LineType ~= 2
                 p(info.LineType) = plot(X(from:to), allstates(from:to, info.StateId, 1), 'Color', info.Color, 'LineStyle', info.LineStyle, 'LineWidth', info.LineWidth);
+                if info.LineType == 2
+                    fprintf('linenumber: %d, stateid: %d, linestyle: %s, from: %d, to: %d\n', ii, info.StateId, info.LineStyle, from, to);
+                end
+                end
             end
         end
         
