@@ -6,15 +6,25 @@ function multi_plot2(xis, bits, statenumber, subtitles, args, maxx)
         maxx = {};
     end
     
+    
     filename = '';
     texTitle = '';
     pos = [];
     col = 2;
+    omits(1:size(xis,2)*size(bits,2)) = -1;
+    
     if size(args, 2) > 0
         filename = GetArg(args, 'file', filename);
         texTitle = GetArg(args, 'title', texTitle);
         pos = GetArg(args, 'position', pos);
         col = GetArg(args, 'column', col);
+        oms = GetArg(args, 'omits', {});
+    end
+    
+    if size(oms, 2) > 0
+        for i = 1 : size(oms, 2)
+            omits(oms{i}(1)) = oms{i}(2);
+        end
     end
     
     args = [args {'subplot', 1}];
@@ -46,9 +56,9 @@ function multi_plot2(xis, bits, statenumber, subtitles, args, maxx)
             end
             
             if size(maxx, 2) > 0
-                plot_states2(xis(i), bits(j), statenumber, [args {'maxx', maxx(cnt)}]);
+                plot_states2(xis(i), bits(j), statenumber, [args {'maxx', maxx(cnt), 'omit', omits(cnt)}]);
             else
-                plot_states2(xis(i), bits(j), statenumber, args);
+                plot_states2(xis(i), bits(j), statenumber, [args {'omit', omits(cnt)}]);
             end
             
             title(subtitles{cnt}, 'interpreter', 'latex');

@@ -11,6 +11,11 @@ function plot_states2(xi, bits, statenumber, args)
     maxX = 1.5;
     minX = 0;
     tol = 1e-6;
+    cut = 0;
+    % specify which dash-dot line is omitted.
+    % this is just a workaround to fix the issue
+    % that sometimes two curves overlap each other.
+    omit = -1;
         
     if size(args, 2) > 0
         points = GetArg(args, 'points', points);
@@ -20,6 +25,8 @@ function plot_states2(xi, bits, statenumber, args)
         maxX = GetArg(args, 'maxx', maxX);
         minX = GetArg(args, 'minx', minX);
         tol = GetArg(args, 'tol', tol);
+        cut = GetArg(args, 'cut', cut);
+        omit = GetArg(args, 'omit', omit);
     end
 
     % X: the x-components
@@ -45,6 +52,11 @@ function plot_states2(xi, bits, statenumber, args)
         midX = round((1/(2*bits) - minX + dltX)/dltX);
     end
     newPlotStart = 0;
+    
+    if cut > 0 && cut > minX
+        newPlotStart = round((cut - minX +dltX)/dltX);
+    end
+    fprintf('cut=%f, newPlot=%d, minX=%d\n', cut, newPlotStart, minX);
     
     % first go through midX to tot and connect lines.
     for curr = midX : tot
@@ -72,8 +84,13 @@ function plot_states2(xi, bits, statenumber, args)
             finalLowE = states(1, 1);
             currGap = highestE - lowestE;
             
-            if currGap > 3.5 * initGap && newPlotStart == 0
-                newPlotStart = curr;
+%             if currGap > 3.5 * initGap && newPlotStart == 0
+%                 newPlotStart = curr;
+%                 midHighE = states(statenumber, 1);
+%                 midLowE = states(1, 1);
+%             end
+            
+            if curr == newPlotStart
                 midHighE = states(statenumber, 1);
                 midLowE = states(1, 1);
             end
@@ -83,7 +100,7 @@ function plot_states2(xi, bits, statenumber, args)
     end
     
     fprintf('initGap=%d currGap=%d\n', initGap, currGap);
-    if currGap <= 3.5 *initGap
+    if newPlotStart == 0
         midHighE = finalHighE;
         midLowE = finalLowE;
     end
@@ -291,7 +308,8 @@ function plot_states2(xi, bits, statenumber, args)
         fig = figure; cla;
     end
     
-    if issubplot || currGap < initGap * 8
+    %if issubplot || currGap < initGap * 8
+    if issubplot || newPlotStart == 0
         doplot(1, tot, true);
     else
         fprintf('newPlotStart = %d\n', newPlotStart);
@@ -309,7 +327,7 @@ function plot_states2(xi, bits, statenumber, args)
         set(h1, 'pos', p1);
         set(h2, 'pos', p2);
         axes('Position',[0 0 1 1],'Visible','off');
-        text(0.35,0.95, texTitle, 'interpreter', 'latex');
+        %text(0.35,0.95, texTitle, 'interpreter', 'latex');
     end
     
     if issubplot ==0 && ~strcmp(filename, '')
@@ -327,7 +345,12 @@ function plot_states2(xi, bits, statenumber, args)
             from = max(startX, info.StartX);
             to = min(endX, info.EndX);
             if from < to
+                if info.StateId ~= omit || info.LineType ~= 2
                 p(info.LineType) = plot(X(from:to), allstates(from:to, info.StateId, 1), 'Color', info.Color, 'LineStyle', info.LineStyle, 'LineWidth', info.LineWidth);
+                if info.LineType == 2
+                    fprintf('linenumber: %d, stateid: %d, linestyle: %s, from: %d, to: %d\n', ii, info.StateId, info.LineStyle, from, to);
+                end
+                end
             end
         end
         
@@ -382,7 +405,7 @@ function plot_states2(xi, bits, statenumber, args)
         end
         
         if singleplot && ~issubplot
-            title(texTitle, 'interpreter', 'latex');
+            %title(texTitle, 'interpreter', 'latex');
             set(ax1, 'XTick', [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5]);
         else
         end
