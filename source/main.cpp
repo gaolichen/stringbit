@@ -164,6 +164,23 @@ void TestNormCalculator()
 	cout << calc.Calculate(a, b) << endl;;
 }
 
+void GenerateHamDataFile(StateType type)
+{
+	ScriptGenerator sc(scriptFolder, type);
+	
+	H0Hamiltonian h0;
+	DeltaHamiltonian delta;
+	Stopwatch watch;
+	watch.Start();
+	for (int i = 3; i <= 11; i++)
+	{
+		sc.OutputHamToDataFile(i, h0, true);
+		sc.OutputHamToDataFile(i, delta);
+	}
+
+	cout << "Time: " << watch.Stop() << " seconds." << endl;
+}
+
 void GenerateHamMatlab(StateType type)
 {	
 	ScriptGenerator sc(scriptFolder, type);
@@ -194,6 +211,12 @@ void GenerateNormMatlab(StateType type)
 	}
 
 	cout << "Time: " << watch.Stop() << " seconds." << endl;
+}
+
+void GenerateAllHamDataFile()
+{
+	GenerateHamDataFile(Boson);
+	GenerateHamDataFile(Fermion);
 }
 
 void GenerateAllHamMatlab()
@@ -228,5 +251,6 @@ int main()
 	//GenerateLaTeX();
 
 	//GenerateAllHamMatlab();
+	GenerateAllHamDataFile();
 	return 0;
 }

@@ -216,6 +216,53 @@ void ScriptGenerator::OutputHamToMatlab(int bits, Hamiltonian& ham, bool sparse)
 	ofs.close();
 }
 
+void ScriptGenerator::SparseMatrixToDataFile(vector<vector<Coefficient> > &mat, string file)
+{
+	string file1 = CombinePath(rootFolder, file + "-0.dat");
+	string file2 = CombinePath(rootFolder, file + "-1.dat");
+
+	cout << file1 << endl << file2 << endl;
+        ofstream ofs1(file1.c_str());
+	ofstream ofs2(file2.c_str());
+
+        for (int j = 0; j < mat.size(); j++)
+        {
+                for (int k = 0; k < mat[j].size(); k++)
+                {
+			if (mat[j][k].N != 0)
+			{
+				ofs1 << j + 1 << ' ' << k + 1 << ' ' << mat[j][k].N << endl;
+			}
+
+                        if (mat[j][k].One != 0)
+                        {
+                                ofs2 << j + 1 << ' ' << k + 1 << ' ' << mat[j][k].One << endl;
+                        }
+               }
+
+        }
+        ofs1 << mat.size() <<' ' << mat.size() << " 0" << endl;
+        ofs2 << mat.size() <<' ' << mat.size() << " 0" << endl;
+        ofs1.close();
+	ofs2.close();
+
+}
+
+void ScriptGenerator::OutputHamToDataFile(int bits, Hamiltonian& ham, bool isComplex)
+{
+	string filePrefix = ToString(bits) + ham.FilePrefix();
+	
+        vector<vector<Coefficient> > rem, imm;
+        ham.Matrix(bits, type, rem, imm);
+	
+	SparseMatrixToDataFile(rem, filePrefix + "-re");
+
+	if (isComplex)
+	{
+		SparseMatrixToDataFile(imm, filePrefix + "-im");
+	}
+}
+
 void ScriptGenerator::OutputHamToLaTeX(vector<int> bits, vector<double> scales, string filename)
 {
 	ofstream ofs(filename.c_str());
