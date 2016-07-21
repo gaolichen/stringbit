@@ -17,6 +17,10 @@ function f = deltaHam(bits, n)
         f = deltaHam10(n);
     elseif bits == 11
         f = deltaHam11(n);
+    elseif bits == 13
+        f = deltaHam13(n);
+    elseif bits == 15
+        f = deltaHam15(n);
     else
         f = 0;
     end

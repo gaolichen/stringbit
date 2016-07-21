@@ -172,8 +172,8 @@ void GenerateHamMatlab(StateType type)
 
 	Stopwatch watch;
 	watch.Start();
-	for (int i = 3; i <= StateGenerator::MAX_BIT_TO_GENERATE; i++)
-	//for (int i = 3; i <= 9; i++)
+	//for (int i = 3; i <= StateGenerator::MAX_BIT_TO_GENERATE; i++)
+	for (int i = 3; i <= 9; i++)
 	{
 		sc.OutputHamToMatlab(i, h0);
 		sc.OutputHamToMatlab(i, delta);
@@ -220,13 +220,13 @@ int main()
 	GenerateStates(true);
 	//TestTraceState();
 	//TestHamOperator();
-	TestHamiltonian();
-	TestZeroHamiltonian();
-	//CalculateNorm(3, false);
+	//TestHamiltonian();
+	//TestZeroHamiltonian();
+	//CalculateNorm(9, false);
 	//TestNormCalculator();
 	//OutputHamiltonianMatrix(3);
 	//GenerateLaTeX();
 
-	GenerateAllHamMatlab();
+	//GenerateAllHamMatlab();
 	return 0;
 }

@@ -17,6 +17,10 @@ function f = ham(bits, n)
         f = h0Ham10(n);
     elseif bits == 11
         f = h0Ham11(n);
+    elseif bits == 13
+        f = h0Ham13(n);
+    elseif bits == 15
+        f = h0Ham15(n);
     else
         f = 0;
     end
