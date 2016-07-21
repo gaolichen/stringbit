@@ -10,16 +10,220 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       145,          7]
-NotebookDataLength[     56115,       1658]
-NotebookOptionsPosition[     54321,       1597]
-NotebookOutlinePosition[     54665,       1612]
-CellTagsIndexPosition[     54622,       1609]
+NotebookDataLength[     63924,       1883]
+NotebookOptionsPosition[     61974,       1817]
+NotebookOutlinePosition[     62308,       1832]
+CellTagsIndexPosition[     62265,       1829]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "notebook", " ", "to", " ", "find", " ", "the", " ", "expansion", " ", 
+    "of", " ", "ground", " ", "energy", " ", "in", " ", "terms", " ", "of", 
+    " ", 
+    RowBox[{"N", "."}]}], "*)"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Clear", "[", "DataFolder", "]"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+    "DataFolder", " ", "=", " ", 
+     "\"\</users/gaolichen/gitroot/stringbit/matlab/boson/\>\""}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ClearAll", "[", "LoadMatFromFile", "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"LoadMatFromFile", "[", "file_", "]"}], ":=", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"list", ",", " ", "tbl"}], "}"}], ",", "\[IndentingNewLine]", 
+       
+       RowBox[{
+        RowBox[{"list", " ", "=", " ", 
+         RowBox[{"Import", "[", 
+          RowBox[{
+           RowBox[{"DataFolder", "<>", "file"}], ",", " ", "\"\<Table\>\""}], 
+          "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"tbl", "=", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"list", "[", 
+               RowBox[{"[", 
+                RowBox[{"i", ",", "1"}], "]"}], "]"}], ",", " ", 
+              RowBox[{"list", "[", 
+               RowBox[{"[", 
+                RowBox[{"i", ",", "2"}], "]"}], "]"}]}], "}"}], "\[Rule]", 
+            RowBox[{"list", "[", 
+             RowBox[{"[", 
+              RowBox[{"i", ",", "3"}], "]"}], "]"}]}], ",", " ", 
+           RowBox[{"{", 
+            RowBox[{"i", ",", "1", ",", 
+             RowBox[{"Length", "[", "list", "]"}]}], "}"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Return", "[", 
+         RowBox[{"Normal", "[", 
+          RowBox[{"SparseArray", "[", "tbl", "]"}], "]"}], "]"}]}]}], 
+      "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ClearAll", "[", "LoadH0", "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"LoadH0", "[", 
+      RowBox[{"M_", ",", "var_"}], "]"}], ":=", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"file", ",", "mat1", ",", "mat2", ",", "mat3", ",", "mat4"}], 
+        "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"file", " ", "=", " ", 
+         RowBox[{
+          RowBox[{"ToString", "[", "M", "]"}], "<>", "\"\<h0Ham-\>\""}]}], 
+        ";", "\[IndentingNewLine]", 
+        RowBox[{"mat1", "=", 
+         RowBox[{"LoadMatFromFile", "[", 
+          RowBox[{"file", " ", "<>", " ", "\"\<re-0.dat\>\""}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"mat2", "=", 
+         RowBox[{"LoadMatFromFile", "[", 
+          RowBox[{"file", " ", "<>", " ", "\"\<re-1.dat\>\""}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"mat3", "=", 
+         RowBox[{"LoadMatFromFile", "[", 
+          RowBox[{"file", " ", "<>", " ", "\"\<im-0.dat\>\""}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"mat4", "=", 
+         RowBox[{"LoadMatFromFile", "[", 
+          RowBox[{"file", " ", "<>", " ", "\"\<im-1.dat\>\""}], "]"}]}], ";", 
+        "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{"Return", "[", 
+         RowBox[{"mat1", " ", "+", " ", 
+          RowBox[{"mat2", " ", "*", " ", "var"}], " ", "+", " ", 
+          RowBox[{"I", "*", 
+           RowBox[{"(", 
+            RowBox[{"mat3", "+", 
+             RowBox[{"mat4", "*", "var"}]}], ")"}]}]}], "]"}], ";"}]}], 
+      "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ClearAll", "[", "LoadDeltaH", "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"LoadDeltaH", "[", 
+      RowBox[{"M_", ",", "var_"}], "]"}], ":=", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"file", ",", " ", "mat"}], "}"}], ",", "\[IndentingNewLine]", 
+       
+       RowBox[{
+        RowBox[{"file", " ", "=", " ", 
+         RowBox[{
+          RowBox[{"ToString", "[", "M", "]"}], " ", "<>", " ", 
+          "\"\<deltaHam-\>\""}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"mat", "=", 
+         RowBox[{"LoadMatFromFile", "[", 
+          RowBox[{"file", " ", "<>", " ", "\"\<re-1.dat\>\""}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Return", "[", 
+         RowBox[{"mat", " ", "*", " ", "var"}], "]"}]}]}], 
+      "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"MatrixForm", "[", 
+    RowBox[{"LoadH0", "[", 
+     RowBox[{"3", ",", " ", "x"}], "]"}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"MatrixForm", "[", 
+    RowBox[{"LoadDeltaH", "[", 
+     RowBox[{"3", ",", " ", "x"}], "]"}], "]"}], 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.678124616405972*^9, 3.678124730431151*^9}, {
+  3.678125020916337*^9, 3.678125046316053*^9}, {3.6781254831844387`*^9, 
+  3.678125785892357*^9}, {3.678125935755072*^9, 3.678126070923463*^9}, {
+  3.678126196970155*^9, 3.6781264267372923`*^9}, {3.6781265298820887`*^9, 
+  3.6781265301065187`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"6", 
+      RowBox[{"8", " ", "x"}], "0", 
+      RowBox[{"2", " ", "\[ImaginaryI]"}], "0"},
+     {
+      RowBox[{"6", " ", "x"}], "4", 
+      RowBox[{"12", " ", "x"}], 
+      RowBox[{
+       RowBox[{"-", "2"}], " ", "\[ImaginaryI]", " ", "x"}], "0"},
+     {"0", "0", "0", "0", "0"},
+     {
+      RowBox[{
+       RowBox[{"-", "6"}], " ", "\[ImaginaryI]"}], 
+      RowBox[{
+       RowBox[{"-", "8"}], " ", "\[ImaginaryI]", " ", "x"}], "0", 
+      RowBox[{"-", "6"}], 
+      RowBox[{"4", " ", "x"}]},
+     {"0", "0", "0", 
+      RowBox[{"4", " ", "x"}], "4"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.6781263418991337`*^9, 3.6781263722243547`*^9}, 
+   3.678126428491179*^9, 3.678126531380537*^9}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"0", 
+      RowBox[{"8", " ", "x"}], "0", "0", "0"},
+     {
+      RowBox[{"12", " ", "x"}], "0", 
+      RowBox[{"12", " ", "x"}], "0", "0"},
+     {"0", 
+      RowBox[{"4", " ", "x"}], "0", "0", "0"},
+     {"0", "0", "0", "0", "0"},
+     {"0", "0", "0", "0", "0"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.6781263418991337`*^9, 3.6781263722243547`*^9}, 
+   3.678126428491179*^9, 3.678126531479403*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
 Cell[BoxData[{
  RowBox[{
   RowBox[{
@@ -411,7 +615,8 @@ Cell[BoxData[
                RowBox[{"2", ",", "i"}], "]"}], "]"}], ",", "x"}], "]"}], 
            "]"}], "]"}], "]"}]}], "]"}], ",", 
       RowBox[{"{", 
-       RowBox[{"i", ",", "1", ",", "5"}], "}"}]}], "]"}], ";"}]}]}]], "Input",
+       RowBox[{"i", ",", "1", ",", "5"}], "}"}]}], "]"}], ";"}]}]}]], "Input",\
+
  CellChangeTimes->{{3.653614629997608*^9, 3.653614650963807*^9}, {
   3.6536147195597305`*^9, 3.653614758079934*^9}, {3.6536152061205606`*^9, 
   3.6536152130269556`*^9}}],
@@ -506,8 +711,8 @@ Cell[BoxData[
     Function[BoxForm`e$, 
      MatrixForm[BoxForm`e$]]]}],
   SequenceForm[
-  "Eigenvector for eigenvalue ", 4 + 
-   Rational[-1, 2] (15 + 321^Rational[1, 2]) $CellContext`x^2, " is ", 
+  "Eigenvector for eigenvalue ", 
+   4 + (Rational[-1, 2] (15 + 321^Rational[1, 2])) $CellContext`x^2, " is ", 
    MatrixForm[{(-2.9800606220111563`) $CellContext`x, 0.9747426001391116, 0, 
      Complex[0, 0.9189097785452963] $CellContext`x, 
      Complex[0, -0.2233312863749721]}]],
@@ -554,8 +759,8 @@ Cell[BoxData[
     Function[BoxForm`e$, 
      MatrixForm[BoxForm`e$]]]}],
   SequenceForm[
-  "Eigenvector for eigenvalue ", 4 + 
-   Rational[1, 2] (-15 + 321^Rational[1, 2]) $CellContext`x^2, " is ", 
+  "Eigenvector for eigenvalue ", 
+   4 + (Rational[1, 2] (-15 + 321^Rational[1, 2])) $CellContext`x^2, " is ", 
    MatrixForm[{(-0.09306860943165607) $CellContext`x, 0.11381470270121861`, 0,
       Complex[0, 0.3621902013732184] $CellContext`x, 
      Complex[0, 0.9935019946879994]}]],
@@ -607,9 +812,11 @@ Cell[BoxData[
     Function[BoxForm`e$, 
      MatrixForm[BoxForm`e$]]]}],
   SequenceForm[
-  "Eigenvector for eigenvalue ", (-4) 3^Rational[1, 2] + 
-   Rational[3, 2] (5 - 3 3^Rational[1, 2]) $CellContext`x^2, " is ", 
-   MatrixForm[{0.15288194975545122`, (-0.2647993045366338) $CellContext`x, 0, 
+  "Eigenvector for eigenvalue ", (-4) 
+    3^Rational[1, 2] + (
+     Rational[3, 2] (5 - 3 3^Rational[1, 2])) $CellContext`x^2, " is ", 
+   MatrixForm[{
+    0.15288194975545122`, (-0.2647993045366338) $CellContext`x, 0, 
      Complex[0, 0.9882444583396213], 
      Complex[0, -0.36172257690149373`] $CellContext`x}]],
   Editable->False]], "Print",
@@ -659,8 +866,9 @@ Cell[BoxData[
     Function[BoxForm`e$, 
      MatrixForm[BoxForm`e$]]]}],
   SequenceForm[
-  "Eigenvector for eigenvalue ", 4 3^Rational[1, 2] + 
-   Rational[3, 2] (5 + 3 3^Rational[1, 2]) $CellContext`x^2, " is ", 
+  "Eigenvector for eigenvalue ", 
+   4 3^Rational[1, 2] + (
+     Rational[3, 2] (5 + 3 3^Rational[1, 2])) $CellContext`x^2, " is ", 
    MatrixForm[{0.9070727399678493, 1.5710960717850628` $CellContext`x, 0, 
      Complex[0, -0.42097392366656283`], 
      Complex[0, -0.5750610740592726] $CellContext`x}]],
@@ -703,7 +911,8 @@ Cell[BoxData[
                RowBox[{"2", ",", "i"}], "]"}], "]"}], ",", "x"}], "]"}], 
            "]"}], "]"}], "]"}]}], "]"}], ",", 
       RowBox[{"{", 
-       RowBox[{"i", ",", "1", ",", "5"}], "}"}]}], "]"}], ";"}]}]}]], "Input",
+       RowBox[{"i", ",", "1", ",", "5"}], "}"}]}], "]"}], ";"}]}]}]], "Input",\
+
  CellChangeTimes->{{3.653614772805776*^9, 3.6536147908298073`*^9}, {
   3.6536148368564396`*^9, 3.653614870364356*^9}, {3.6536149027812104`*^9, 
   3.6536150131245213`*^9}, {3.653615048309534*^9, 3.6536150676526403`*^9}, {
@@ -758,7 +967,8 @@ Cell[BoxData[
       Column], "\[NoBreak]", ")"}],
     Function[BoxForm`e$, 
      MatrixForm[BoxForm`e$]]]}],
-  SequenceForm["Eigenvector for eigenvalue ", (-24) $CellContext`x^2, " is ", 
+  SequenceForm[
+  "Eigenvector for eigenvalue ", (-24) $CellContext`x^2, " is ", 
    MatrixForm[{
     14. $CellContext`x^2, (-6.) $CellContext`x, 1., 
      Complex[0, -6.] $CellContext`x^2, 0}]],
@@ -806,8 +1016,9 @@ Cell[BoxData[
     Function[BoxForm`e$, 
      MatrixForm[BoxForm`e$]]]}],
   SequenceForm[
-  "Eigenvector for eigenvalue ", 4 + 
-   Rational[-1, 2] (69 + 5241^Rational[1, 2]) $CellContext`x^2, " is ", 
+  "Eigenvector for eigenvalue ", 
+   4 + (Rational[-1, 2] (69 + 5241^Rational[1, 2])) $CellContext`x^2, " is ", 
+   
    MatrixForm[{(-5.481805966369327) $CellContext`x, 0.9904129952293755, 
      0.9904129952279332 $CellContext`x, 
      Complex[0, 2.4414979954541103`] $CellContext`x, 
@@ -856,8 +1067,9 @@ Cell[BoxData[
     Function[BoxForm`e$, 
      MatrixForm[BoxForm`e$]]]}],
   SequenceForm[
-  "Eigenvector for eigenvalue ", 4 + 
-   Rational[1, 2] (-69 + 5241^Rational[1, 2]) $CellContext`x^2, " is ", 
+  "Eigenvector for eigenvalue ", 
+   4 + (Rational[1, 2] (-69 + 5241^Rational[1, 2])) $CellContext`x^2, " is ", 
+   
    MatrixForm[{(-0.13323299264039204`) $CellContext`x, 0.06956859730199454, 
      0.06956859730199454 $CellContext`x, 
      Complex[0, 0.4233157857755641] $CellContext`x, 
@@ -912,8 +1124,9 @@ Cell[BoxData[
     Function[BoxForm`e$, 
      MatrixForm[BoxForm`e$]]]}],
   SequenceForm[
-  "Eigenvector for eigenvalue ", (-4) 3^Rational[1, 2] + 
-   Rational[1, 2] (93 - 55 3^Rational[1, 2]) $CellContext`x^2, " is ", 
+  "Eigenvector for eigenvalue ", (-4) 
+    3^Rational[1, 2] + (
+     Rational[1, 2] (93 - 55 3^Rational[1, 2])) $CellContext`x^2, " is ", 
    MatrixForm[{
     0.15288194975545122`, (-0.4326753367084077) $CellContext`x, 
      0.24980522212031114` $CellContext`x^2, 
@@ -968,8 +1181,9 @@ Cell[BoxData[
     Function[BoxForm`e$, 
      MatrixForm[BoxForm`e$]]]}],
   SequenceForm[
-  "Eigenvector for eigenvalue ", 4 3^Rational[1, 2] + 
-   Rational[1, 2] (93 + 55 3^Rational[1, 2]) $CellContext`x^2, " is ", 
+  "Eigenvector for eigenvalue ", 
+   4 3^Rational[1, 2] + (
+     Rational[1, 2] (93 + 55 3^Rational[1, 2])) $CellContext`x^2, " is ", 
    MatrixForm[{
     0.9070727399678493, 5.2883492894144615` $CellContext`x, 
      3.053229885812205 $CellContext`x^2, 
@@ -1013,7 +1227,8 @@ Cell[BoxData[
                RowBox[{"2", ",", "i"}], "]"}], "]"}], ",", "x"}], "]"}], 
            "]"}], "]"}], "]"}]}], "]"}], ",", 
       RowBox[{"{", 
-       RowBox[{"i", ",", "1", ",", "5"}], "}"}]}], "]"}], ";"}]}]}]], "Input",
+       RowBox[{"i", ",", "1", ",", "5"}], "}"}]}], "]"}], ";"}]}]}]], "Input",\
+
  CellChangeTimes->{{3.6536156666329*^9, 3.653615672347227*^9}}],
 
 Cell[CellGroupData[{
@@ -1132,7 +1347,8 @@ Cell[BoxData[
       Column], "\[NoBreak]", ")"}],
     Function[BoxForm`e$, 
      MatrixForm[BoxForm`e$]]]}],
-  SequenceForm["Eigenvector for eigenvalue ", 4 + 3 $CellContext`x^2, " is ", 
+  SequenceForm[
+  "Eigenvector for eigenvalue ", 4 + 3 $CellContext`x^2, " is ", 
    MatrixForm[{(-0.5303300858899106) $CellContext`x, 
      0.7071067811865475, (-0.7071067811865475) $CellContext`x, 
      Complex[0, -0.5303300858899106] $CellContext`x, 
@@ -1187,8 +1403,9 @@ Cell[BoxData[
     Function[BoxForm`e$, 
      MatrixForm[BoxForm`e$]]]}],
   SequenceForm[
-  "Eigenvector for eigenvalue ", (-4) 3^Rational[1, 2] + 
-   Rational[1, 2] (-3 + 3^Rational[1, 2]) $CellContext`x^2, " is ", 
+  "Eigenvector for eigenvalue ", (-4) 
+    3^Rational[1, 2] + (
+     Rational[1, 2] (-3 + 3^Rational[1, 2])) $CellContext`x^2, " is ", 
    MatrixForm[{
     0.15288194975545125`, (-0.09692327236485995) $CellContext`x, \
 (-0.05595867739059131) $CellContext`x^2, 
@@ -1242,8 +1459,9 @@ Cell[BoxData[
     Function[BoxForm`e$, 
      MatrixForm[BoxForm`e$]]]}],
   SequenceForm[
-  "Eigenvector for eigenvalue ", 4 3^Rational[1, 2] + 
-   Rational[-1, 2] (3 + 3^Rational[1, 2]) $CellContext`x^2, " is ", 
+  "Eigenvector for eigenvalue ", 
+   4 3^Rational[1, 2] + (
+     Rational[-1, 2] (3 + 3^Rational[1, 2])) $CellContext`x^2, " is ", 
    MatrixForm[{
     0.9070727399678694, (-2.1461571458443354`) $CellContext`x, 
      1.2390844058764658` $CellContext`x^2, 
@@ -1330,6 +1548,7 @@ Cell[BoxData[
        RowBox[{"{", 
         RowBox[{
         "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+         
          RowBox[{
           RowBox[{"-", "2"}], "*", "I"}], ",", 
          RowBox[{
@@ -1592,12 +1811,13 @@ Cell[BoxData[
                RowBox[{"2", ",", "i"}], "]"}], "]"}], ",", "x"}], "]"}], 
            "]"}], "]"}], "]"}]}], "]"}], ",", 
       RowBox[{"{", 
-       RowBox[{"i", ",", "1", ",", "10"}], "}"}]}], "]"}], ";"}]}]}]], "Input",
+       RowBox[{"i", ",", "1", ",", "10"}], "}"}]}], "]"}], ";"}]}]}]], "Input",\
+
  CellChangeTimes->{{3.6536165074719934`*^9, 3.6536165369346786`*^9}}]
 },
-WindowSize->{1288, 673},
+WindowSize->{1280, 948},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
-FrontEndVersion->"7.0 for Microsoft Windows (64-bit) (November 10, 2008)",
+FrontEndVersion->"10.1 for Linux x86 (64-bit) (March 23, 2015)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -1612,57 +1832,61 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[567, 22, 2432, 61, 292, "Input"],
-Cell[3002, 85, 1208, 35, 101, "Output"],
-Cell[4213, 122, 915, 26, 101, "Output"]
+Cell[567, 22, 5343, 134, 737, "Input"],
+Cell[5913, 158, 1232, 35, 111, "Output"],
+Cell[7148, 195, 939, 26, 111, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5165, 153, 1480, 39, 112, "Input"],
-Cell[6648, 194, 1986, 63, 145, "Output"],
-Cell[8637, 259, 2075, 66, 148, "Output"],
-Cell[10715, 327, 1583, 50, 126, "Output"]
+Cell[8124, 226, 2432, 61, 319, "Input"],
+Cell[10559, 289, 1208, 35, 97, "Output"],
+Cell[11770, 326, 915, 26, 97, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[12335, 382, 1294, 34, 72, "Input"],
+Cell[12722, 357, 1480, 39, 121, "Input"],
+Cell[14205, 398, 1986, 63, 149, "Output"],
+Cell[16194, 463, 2075, 66, 152, "Output"],
+Cell[18272, 531, 1583, 50, 126, "Output"]
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[13654, 420, 436, 11, 43, "Print"],
-Cell[14093, 433, 1240, 34, 83, "Print"],
-Cell[15336, 469, 1716, 46, 80, "Print"],
-Cell[17055, 517, 1716, 46, 80, "Print"],
-Cell[18774, 565, 1837, 51, 80, "Print"],
-Cell[20614, 618, 1809, 50, 80, "Print"]
+Cell[19892, 586, 1296, 35, 99, "Input"],
+Cell[CellGroupData[{
+Cell[21213, 625, 436, 11, 43, "Print"],
+Cell[21652, 638, 1240, 34, 83, "Print"],
+Cell[22895, 674, 1718, 46, 80, "Print"],
+Cell[24616, 722, 1718, 46, 80, "Print"],
+Cell[26337, 770, 1851, 53, 80, "Print"],
+Cell[28191, 825, 1817, 51, 80, "Print"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[22472, 674, 1397, 35, 72, "Input"],
+Cell[30057, 882, 1399, 36, 72, "Input"],
 Cell[CellGroupData[{
-Cell[23894, 713, 443, 9, 43, "Print"],
-Cell[24340, 724, 1534, 42, 86, "Print"],
-Cell[25877, 768, 1851, 48, 80, "Print"],
-Cell[27731, 818, 1850, 48, 80, "Print"],
-Cell[29584, 868, 2013, 55, 83, "Print"],
-Cell[31600, 925, 1979, 54, 83, "Print"]
+Cell[31481, 922, 443, 9, 43, "Print"],
+Cell[31927, 933, 1537, 43, 86, "Print"],
+Cell[33467, 978, 1857, 49, 80, "Print"],
+Cell[35327, 1029, 1856, 49, 80, "Print"],
+Cell[37186, 1080, 2022, 56, 83, "Print"],
+Cell[39211, 1138, 1987, 55, 83, "Print"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[33628, 985, 1159, 31, 72, "Input"],
+Cell[41247, 1199, 1161, 32, 72, "Input"],
 Cell[CellGroupData[{
-Cell[34812, 1020, 335, 8, 43, "Print"],
-Cell[35150, 1030, 1027, 29, 80, "Print"],
-Cell[36180, 1061, 1263, 33, 80, "Print"],
-Cell[37446, 1096, 1660, 44, 80, "Print"],
-Cell[39109, 1142, 1927, 55, 83, "Print"],
-Cell[41039, 1199, 1875, 53, 83, "Print"]
+Cell[42433, 1235, 335, 8, 43, "Print"],
+Cell[42771, 1245, 1027, 29, 80, "Print"],
+Cell[43801, 1276, 1263, 33, 80, "Print"],
+Cell[45067, 1311, 1663, 45, 80, "Print"],
+Cell[46733, 1358, 1936, 56, 83, "Print"],
+Cell[48672, 1416, 1883, 54, 83, "Print"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[42963, 1258, 3577, 89, 292, "Input"],
-Cell[46543, 1349, 6624, 213, 370, "Output"]
+Cell[50604, 1476, 3587, 90, 292, "Input"],
+Cell[54194, 1568, 6624, 213, 370, "Output"]
 }, Open  ]],
-Cell[53182, 1565, 1135, 30, 72, "Input"]
+Cell[60833, 1784, 1137, 31, 72, "Input"]
 }
 ]
 *)
 
 (* End of internal cache information *)
-
