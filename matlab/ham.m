@@ -1,27 +1,12 @@
 function f = ham(bits, n)
-    if bits == 3
-        f = h0Ham3(n);
-    elseif bits == 4
-        f = h0Ham4(n);
-    elseif bits == 5
-        f = h0Ham5(n);
-    elseif bits == 6
-        f = h0Ham6(n);
-    elseif bits == 7
-        f = h0Ham7(n);
-    elseif bits == 8
-        f = h0Ham8(n);
-    elseif bits == 9
-        f = h0Ham9(n);
-    elseif bits == 10
-        f = h0Ham10(n);
-    elseif bits == 11
-        f = h0Ham11(n);
-    elseif bits == 13
-        f = h0Ham13(n);
-    elseif bits == 15
-        f = h0Ham15(n);
-    else
-        f = 0;
-    end
+    file1 = strcat(num2str(bits),'h0Ham-re-0.dat');
+    file2 = strcat(num2str(bits),'h0Ham-re-1.dat');
+    file3 = strcat(num2str(bits),'h0Ham-im-0.dat');
+    file4 = strcat(num2str(bits),'h0Ham-im-1.dat');
+    
+    mat1 = load(file1);
+    mat2 = load(file2);
+    mat3 = load(file3);
+    mat4 = load(file4);
+    f = spconvert(mat1) + spconvert(mat2)/n + i*spconvert(mat3) + i*spconvert(mat4)/n;
 end
