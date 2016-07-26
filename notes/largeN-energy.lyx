@@ -1,0 +1,691 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\newcommand{\tr}{\mathrm{Tr}\,}
+\newcommand{\ba}{\bar{a}}
+\newcommand{\bb}{\bar{b}}
+\newcommand{\normord}[1]{{:}\!\mathrel{#1}\!{:}}
+\newcommand{\ket}[1]{\left|#1\right\rangle}
+\newcommand{\bra}[1]{\left\langle #1\right|}
+\newcommand{\ketp}[1]{\left|#1\right\} }
+\newcommand{\brap}[1]{\left\{ #1\right|}
+\newcommand{\dprod}[2]{\left\langle #1|#2\right\rangle}
+\newcommand{\dprodp}[2]{\left\{ #1|#2\right\} }
+\newcommand{\mat}[1]{\mathbf{#1}}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Energy at large 
+\begin_inset Formula $N$
+\end_inset
+
+ limit
+\end_layout
+
+\begin_layout Standard
+The general hermitian Hamiltonian is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+H & = & \frac{1}{N}\Big[c_{1}\tr\bar{a}^{2}a^{2}+c_{2}\tr\bar{b}^{2}b^{2}+iz_{1}\tr\bar{a}^{2}b^{2}-iz_{1}^{\dagger}\tr\bar{b}^{2}a^{2}\nonumber \\
+ &  & +c_{3}\tr\bar{a}\bar{b}ba+c_{4}\tr\bar{b}\bar{a}ab+z_{2}\tr\bar{a}\bar{b}ab+z_{2}^{\dagger}\tr\bar{b}\bar{a}ba\Big],\label{eq:Susy-general-H}
+\end{eqnarray}
+
+\end_inset
+
+ where 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ are real and 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ are complex parameters.
+ The supersymmetry constraint is
+\begin_inset Formula 
+\[
+\begin{cases}
+c_{2} & =\Im z_{2}\\
+c_{1}-c_{2} & =2\Re z_{2}\\
+c_{4}-c_{3} & =\Re z_{1}\\
+c_{1}+c_{2} & =c_{3}+c_{4}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In terms of 
+\begin_inset Formula $\theta_{i}$
+\end_inset
+
+ in large 
+\begin_inset Formula $N$
+\end_inset
+
+ limit, the Hamiltonian become
+\begin_inset Formula 
+\begin{eqnarray*}
+\hat{h} & = & \sum_{k=1}^{M}\Big[c_{1}\left(1-\theta_{k}\frac{d}{d\theta_{k}}\right)\left(1-\theta_{k+1}\frac{d}{d\theta_{k+1}}\right)+c_{2}\theta_{k}\frac{d}{d\theta_{k}}\theta_{k+1}\frac{d}{d\theta_{k+1}}\\
+ &  & +c_{3}\left(1-\theta_{k}\frac{d}{d\theta_{k}}\right)\theta_{k+1}\frac{d}{d\theta_{k+1}}+c_{4}\theta_{k}\frac{d}{d\theta_{k}}\left(1-\theta_{k+1}\frac{d}{d\theta_{k+1}}\right)\\
+ &  & +iz_{1}\theta_{k+1}\theta_{k}-iz_{1}^{\dagger}\frac{d}{d\theta_{k}}\frac{d}{d\theta_{k+1}}+z_{2}\theta_{k}\frac{d}{d\theta_{k+1}}+z_{2}^{\dagger}\theta_{k+1}\frac{d}{d\theta_{k}}\Big]\\
+ & = & \sum_{k=1}^{M}\Big[iz_{1}\theta_{k+1}\theta_{k}-iz_{1}^{\dagger}\frac{d}{d\theta_{k}}\frac{d}{d\theta_{k+1}}+z_{2}\theta_{k}\frac{d}{d\theta_{k+1}}\\
+ &  & +z_{2}^{\dagger}\theta_{k+1}\frac{d}{d\theta_{k}}+\left(-2c_{1}+c_{3}+c_{4}\right)\theta_{k}\frac{d}{d\theta_{k}}\\
+ &  & +\left(c_{1}+c_{2}-c_{3}-c_{4}\right)\theta_{k}\frac{d}{d\theta_{k}}\theta_{k+1}\frac{d}{d\theta_{k+1}}\Big]+c_{1}M.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $h$
+\end_inset
+
+ is the Hamiltonian act on state traces.
+ Applying integration by parts, 
+\begin_inset Formula 
+\[
+\int d^{M}\theta\,\hat{h}\ket{\theta_{1}\cdots\theta_{M}}\Psi\left(\theta_{1}\cdots\theta_{M}\right)=\int d^{M}\theta\,\ket{\theta_{1}\cdots\theta_{M}}h\Psi\left(\theta_{1}\cdots\theta_{M}\right)
+\]
+
+\end_inset
+
+ yields, 
+\begin_inset Formula 
+\begin{eqnarray*}
+h & = & \sum_{k=1}^{M}\Big[iz_{1}\theta_{k+1}\theta_{k}-iz_{1}^{\dagger}\frac{d}{d\theta_{k}}\frac{d}{d\theta_{k+1}}-z_{2}\theta_{k}\frac{d}{d\theta_{k+1}}\\
+ &  & -z_{2}^{\dagger}\theta_{k+1}\frac{d}{d\theta_{k}}+\left(2c_{1}-c_{3}-c_{4}\right)\theta_{k}\frac{d}{d\theta_{k}}\\
+ &  & +\left(c_{1}+c_{2}-c_{3}-c_{4}\right)\theta_{k}\frac{d}{d\theta_{k}}\theta_{k+1}\frac{d}{d\theta_{k+1}}\Big]+\left(c_{3}+c_{4}-c_{1}\right)M
+\end{eqnarray*}
+
+\end_inset
+
+Introduce the Fourier transforms 
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha_{n} & = & \frac{1}{\sqrt{M}}\sum_{k=1}^{M}\theta_{k}e^{2\pi ikn/M},\quad\beta_{n}=\frac{1}{\sqrt{M}}\sum_{k=1}^{M}\frac{d}{d\theta_{k}}e^{2\pi ikn/M},\\
+\theta_{k} & = & \frac{1}{\sqrt{M}}\sum_{n=0}^{M-1}\alpha_{n}e^{-2\pi ikn/M},\quad\frac{d}{d\theta_{k}}=\frac{1}{\sqrt{M}}\sum_{n=0}^{M-1}\beta_{n}e^{-2\pi ikn/M},\\
+n & = & 0,\dots M-1,\quad k=1,\dots M
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\[
+\left\{ \alpha_{n},\beta_{m}\right\} =\delta_{m+n,M}+\delta_{m,0}\delta_{n,0}
+\]
+
+\end_inset
+
+ In terms of 
+\begin_inset Formula $\alpha_{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta_{n}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{k=1}^{M}\frac{d}{d\theta_{k}}\frac{d}{d\theta_{k+1}} & = & \frac{1}{M}\sum_{k=1}^{M}\sum_{n,m=1}^{M}\beta_{n}\beta_{m}e^{-2\pi i\left[k\left(n+m\right)+m\right]/M}\\
+ & = & \sum_{n=1}^{M-1}\beta_{n}\beta_{M-n}e^{-2\pi i\left(M-n\right)/M}+\beta_{0}\beta_{0}\\
+ & = & \sum_{n=1}^{M-1}\beta_{n}\beta_{M-n}e^{2\pi in/M}\\
+ & = & \frac{1}{2}\sum_{n=1}^{M-1}\left(\beta_{n}\beta_{M-n}-\beta_{M-n}\beta_{n}\right)e^{2\pi in/M}\\
+ & = & \frac{1}{2}\left(\sum_{n=1}^{M-1}\beta_{n}\beta_{M-n}e^{2\pi in/M}-\sum_{n=1}^{M-1}\beta_{n}\beta_{M-n}e^{-2\pi in/M}\right)\\
+ & = & i\sum_{n=1}^{M-1}\beta_{n}\beta_{M-n}\sin\frac{2n\pi}{M}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{k=1}^{M}\theta_{k+1}\theta_{k} & = & \frac{1}{M}\sum_{k=1}^{M}\sum_{n,m=0}^{M-1}\alpha_{n}\alpha_{m}e^{-2\pi i\left[k\left(n+m\right)+n\right]/M}\\
+ & = & \sum_{n=1}^{M-1}\alpha_{n}\alpha_{M-n}e^{-2\pi in/M}\\
+ & = & -i\sum_{n=1}^{M-n}\alpha_{n}\alpha_{M-n}\sin\frac{2n\pi}{M}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{k=1}^{M}\theta_{k}\frac{d}{d\theta_{k+1}} & = & \frac{1}{M}\sum_{k=1}^{M}\sum_{n,m=0}^{M-1}\alpha_{n}\beta_{m}e^{-2\pi i\left[k\left(n+m\right)+m\right]/M}\\
+ & = & \sum_{n=1}^{M-1}\alpha_{n}\beta_{M-n}e^{2\pi in/M}+\alpha_{0}\beta_{0},
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{k=1}^{M}\theta_{k+1}\frac{d}{d\theta_{k}} & = & \frac{1}{M}\sum_{k=1}^{M}\sum_{n,m=0}^{M-1}\alpha_{n}\beta_{m}e^{-2\pi i\left[k\left(n+m\right)+n\right]/M}\\
+ & = & \sum_{n=1}^{M-1}\alpha_{n}\beta_{M-n}e^{-2\pi in/M}+\alpha_{0}\beta_{0},
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{k=1}^{M}\theta_{k}\frac{d}{d\theta_{k}} & = & \frac{1}{M}\sum_{k=1}^{M}\sum_{n,m=0}^{M-1}\alpha_{n}\beta_{m}e^{-2\pi ik\left(n+m\right)/M}\\
+ & = & \sum_{n=1}^{M-1}\alpha_{n}\beta_{M-n}+\alpha_{0}\beta_{0},
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $h$
+\end_inset
+
+ is expressed as
+\begin_inset Formula 
+\begin{eqnarray*}
+h & = & \sum_{n=1}^{M-1}\Big[\left(z_{1}\alpha_{n}\alpha_{M-n}+z_{1}^{\dagger}\beta_{n}\beta_{M-n}\right)\sin\frac{2n\pi}{M}\\
+ &  & -z_{2}\alpha_{n}\beta_{M-n}e^{2\pi in/M}-z_{2}^{\dagger}\alpha_{n}\beta_{M-n}e^{-2\pi in/M}\\
+ &  & +\left(2c_{1}-c_{3}-c_{4}\right)\alpha_{n}\beta_{M-n}\Big]\\
+ &  & -\left(2\Re z_{2}-2c_{1}+c_{3}+c_{4}\right)\alpha_{0}\beta_{0}+\left(c_{3}+c_{4}-c_{1}\right)M\\
+ & = & \sum_{n=1}^{M-1}\Big[\left(z_{1}\alpha_{n}\alpha_{M-n}+z_{1}^{\dagger}\beta_{n}\beta_{M-n}\right)\sin\frac{2n\pi}{M}\\
+ &  & +2\left(c-\Re\left(z_{2}e^{2\pi in/M}\right)\right)\alpha_{n}\beta_{M-n}\Big]\\
+ &  & +2\left(c-\Re z_{2}\right)\alpha_{0}\beta_{0}+\left(c_{3}+c_{4}-c_{1}\right)M,
+\end{eqnarray*}
+
+\end_inset
+
+ where we defined 
+\begin_inset Formula $c=c_{1}-\frac{1}{2}\left(c_{3}+c_{4}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+To find the ladder operators of 
+\begin_inset Formula $h$
+\end_inset
+
+, we use the ansatz 
+\begin_inset Formula $a\alpha_{n}+b\beta_{n}$
+\end_inset
+
+ and impose the constraint
+\begin_inset Formula 
+\[
+\left[h,a\alpha_{k}+b\beta_{k}\right]=\epsilon_{k}\left(a\alpha_{k}+b\beta_{k}\right).
+\]
+
+\end_inset
+
+ Do it term by term and use
+\begin_inset Formula 
+\[
+\left[AB,C\right]=A\left\{ B,C\right\} -\left\{ A,C\right\} B.
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{n=1}^{M-1}\sin\frac{2n\pi}{M}\left[\alpha_{n}\alpha_{M-n},\beta_{k}\right] & = & \sum_{n=1}^{M-1}\sin\frac{2n\pi}{M}\left(\alpha_{n}\left\{ \alpha_{M-n},\beta_{k}\right\} -\left\{ \alpha_{n},\beta_{k}\right\} \alpha_{M-n}\right)\\
+ & = & \sum_{n=1}^{M-1}\sin\frac{2n\pi}{M}\left(\alpha_{n}\delta_{n,k}-\delta_{n+k,M}\alpha_{M-n}\right)\\
+ & = & 2\sin\frac{2k\pi}{M}\alpha_{k}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{n=1}^{M-1}\sin\frac{2n\pi}{M}\left[\beta_{n}\beta_{M-n},\alpha_{k}\right] & = & \sum_{n=1}^{M-1}\sin\frac{2n\pi}{M}\left(\beta_{n}\left\{ \beta_{M-n},\alpha_{k}\right\} -\left\{ \beta_{n},\alpha_{k}\right\} \beta_{M-n}\right)\\
+ & = & \sum_{n=1}^{M-1}\sin\frac{2n\pi}{M}\left(\beta_{n}\delta_{n,k}-\delta_{n+k,M}\beta_{M-n}\right)\\
+ & = & 2\sin\frac{2k\pi}{M}\beta_{k}
+\end{eqnarray*}
+
+\end_inset
+
+ Let 
+\begin_inset Formula $d_{n}=c-\Re\left(z_{2}e^{2\pi in/M}\right)$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{n=1}^{M-1}d_{n}\left[\alpha_{n}\beta_{M-n},\alpha_{k}\right] & = & \sum_{n=1}^{M-1}d_{n}\left(\alpha_{n}\left\{ \beta_{M-n},\alpha_{k}\right\} -\left\{ \alpha_{n},\alpha_{k}\right\} \beta_{M-n}\right)\\
+ & = & d_{n}\alpha_{k}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{n=1}^{M-1}d_{n}\left[\alpha_{n}\beta_{M-n},\beta_{k}\right] & = & \sum_{n=1}^{M-1}d_{n}\left(\alpha_{n}\left\{ \beta_{M-n},\beta_{k}\right\} -\left\{ \alpha_{n},\beta_{k}\right\} \beta_{M-n}\right)\\
+ & = & -d_{M-k}\beta_{k}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[\alpha_{0}\beta_{0},\alpha_{k}\right] & = & \alpha_{0}\left\{ \beta_{0},\alpha_{k}\right\} -\left\{ \alpha_{0},\alpha_{k}\right\} \beta_{0}\\
+ & = & \delta_{k,0}\alpha_{0}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[\alpha_{0}\beta_{0},\beta_{k}\right] & = & \alpha_{0}\left\{ \beta_{0},\beta_{k}\right\} -\left\{ \alpha_{0},\beta_{k}\right\} \beta_{0}\\
+ & = & -\delta_{k,0}\beta_{0}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[h,a\alpha_{k}+b\beta_{k}\right] & = & 2\left(ad_{k}+bz_{1}\sin\frac{2k\pi}{M}\right)\alpha_{k}+2\left(az_{1}^{\dagger}\sin\frac{2k\pi}{M}-bd_{M-k}\right)\beta_{k}.
+\end{eqnarray*}
+
+\end_inset
+
+ Apply the constraint, we have
+\begin_inset Formula 
+\begin{eqnarray*}
+2\left(ad_{k}+bz_{1}\sin\frac{2k\pi}{M}\right) & = & a\epsilon_{k}\\
+2\left(az_{1}^{\dagger}\sin\frac{2k\pi}{M}-bd_{M-k}\right) & = & b\epsilon_{k}
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Let's first consider 
+\begin_inset Formula $k=0$
+\end_inset
+
+ case.
+ If 
+\begin_inset Formula $d_{0}=c-\Re z_{2}\neq0$
+\end_inset
+
+, there are two solutions:
+\begin_inset Formula 
+\begin{eqnarray*}
+a\neq0,\, b & = & 0,\quad\epsilon_{0}=2\left(c-\Re z_{2}\right),\\
+a=0,\, b & \neq & 0,\quad\epsilon_{0}=-2\left(c-\Re z_{2}\right).
+\end{eqnarray*}
+
+\end_inset
+
+ The corresponding ladder operators are 
+\begin_inset Formula $\alpha_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta_{0}$
+\end_inset
+
+ respectively.
+ If 
+\begin_inset Formula $c-\Re z_{2}=0$
+\end_inset
+
+, then 
+\begin_inset Formula $a,b$
+\end_inset
+
+ can be any values and 
+\begin_inset Formula $\epsilon_{0}=0$
+\end_inset
+
+.
+ In this case there is no ladder operator for 
+\begin_inset Formula $k=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $k\neq0$
+\end_inset
+
+, we solve for 
+\begin_inset Formula $r_{k}\equiv a/b$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+2\left(d_{k}r_{k}+z_{1}\sin\frac{2k\pi}{M}\right)=r_{k}\epsilon_{k},\quad2\left(z_{1}^{\dagger}r_{k}\sin\frac{2k\pi}{M}-d_{M-k}\right)=\epsilon_{k}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(d_{k}r_{k}+z_{1}\sin\frac{2k\pi}{M}\right)=r_{k}\left(z_{1}^{\dagger}r_{k}\sin\frac{2k\pi}{M}-d_{M-k}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(z_{1}^{\dagger}\sin\frac{2k\pi}{M}\right)r_{k}^{2}-\left(d_{k}+d_{M-k}\right)r_{k}-z_{1}\sin\frac{2k\pi}{M}=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(z_{1}^{\dagger}\sin\frac{2k\pi}{M}\right)r_{k}^{2}-2\left(c-\Re z_{2}\cos\frac{2k\pi}{M}\right)r_{k}-z_{1}\sin\frac{2k\pi}{M}=0,
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+r_{k}^{\pm}=\left(z_{1}^{\dagger}\sin\frac{2k\pi}{M}\right)^{-1}\left[c-\Re z_{2}\cos\frac{2k\pi}{M}\pm\sqrt{\left(c-\Re z_{2}\cos\frac{2k\pi}{M}\right)^{2}+\left|z_{1}\right|^{2}\sin^{2}\frac{2k\pi}{M}}\right],
+\]
+
+\end_inset
+
+ from which it follows
+\begin_inset Formula 
+\begin{eqnarray*}
+\epsilon_{k}^{\pm} & = & 2\left(-d_{M-k}+r_{k}z_{1}^{\dagger}\sin\frac{2k\pi}{M}\right)\\
+ & = & 2\left(-d_{M-k}+c-\Re z_{2}\cos\frac{2k\pi}{M}\pm\sqrt{\cdots}\right)\\
+ & = & 2\left(\Re\left(z_{2}e^{-2\pi in/M}\right)-\Re z_{2}\cos\frac{2k\pi}{M}\pm\sqrt{\cdots}\right)\\
+ & = & 2\Im z_{2}\sin\frac{2k\pi}{M}\pm2\sqrt{\left(c-\Re z_{2}\cos\frac{2k\pi}{M}\right)^{2}+\left|z_{1}\right|^{2}\sin^{2}\frac{2k\pi}{M}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $H=H_{0}$
+\end_inset
+
+, we have 
+\begin_inset Formula $c_{1}=-c_{2}=c_{3}=-c_{4}=z_{2}=2$
+\end_inset
+
+, 
+\begin_inset Formula $z_{1}=2$
+\end_inset
+
+, 
+\begin_inset Formula $c=2$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{eqnarray*}
+h & = & 2\sum_{n=1}^{M-1}\Big[\left(\alpha_{n}\alpha_{M-n}+\beta_{n}\beta_{M-n}\right)\sin\frac{2n\pi}{M}\\
+ &  & +2\left(1-\cos\frac{2n\pi}{M}\right)\alpha_{n}\beta_{M-n}\Big]+4\alpha_{0}\beta_{0}-2M\\
+ & = & 2\sum_{n=1}^{M-1}\Big[\left(\alpha_{n}\alpha_{M-n}+\beta_{n}\beta_{M-n}\right)\sin\frac{2n\pi}{M}+\\
+ &  & +\left(1-\cos\frac{2n\pi}{M}\right)\left(\alpha_{n}\beta_{M-n}+\alpha_{M-n}\beta_{n}\right)\Big]+4\alpha_{0}\beta_{0}-2M
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\epsilon_{k}^{\pm}=\pm8\sin\frac{k\pi}{M}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+r_{k}^{\pm} & = & \left(2\sin\frac{2k\pi}{M}\right)^{-1}\left[2-2\cos\frac{2k\pi}{M}\pm\sqrt{\cdots}\right]\\
+ & = & \left(4\sin\frac{k\pi}{M}\cos\frac{k\pi}{M}\right)^{-1}\left[4\sin^{2}\frac{k\pi}{M}\pm\sqrt{\cdots}\right]\\
+ & = & \tan\frac{k\pi}{M}\pm\sec\frac{k\pi}{M}
+\end{eqnarray*}
+
+\end_inset
+
+ Note that 
+\begin_inset Formula $r_{M/2}^{-}=0$
+\end_inset
+
+, 
+\begin_inset Formula $r_{M/2}^{+}=+\infty$
+\end_inset
+
+ .
+ To avoid divergence, we choose write 
+\begin_inset Formula 
+\[
+L_{k}^{-}=r_{k}^{-}\alpha_{k}+\beta_{k},\quad L_{k}^{+}=\alpha_{k}+\frac{1}{r_{k}^{+}}\beta_{k}
+\]
+
+\end_inset
+
+The ground state can be built as follows.
+ Observe that 
+\begin_inset Formula 
+\begin{eqnarray*}
+L_{k}^{-}\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right) & = & \left(r_{k}^{-}\alpha_{k}+\beta_{k}\right)\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right)\\
+ & = & r_{k}^{-}\alpha_{k}-r_{k}^{-}\alpha_{k}\beta_{k}\alpha_{M-k}\\
+ & = & r_{k}^{-}\alpha_{k}-r_{k}^{-}\alpha_{k}\left\{ \beta_{k},\alpha_{M-k}\right\} \\
+ & = & 0.
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+L_{M-k}^{-}\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right) & = & \left(r_{M-k}^{-}\alpha_{M-k}+\beta_{M-k}\right)\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right)\\
+ & = & r_{M-k}^{-}\alpha_{M-k}+r_{k}^{-}\beta_{M-k}\alpha_{k}\alpha_{M-k}\\
+ & = & r_{M-k}^{-}\alpha_{M-k}+r_{k}^{-}\left\{ \beta_{M-k},\alpha_{k}\right\} \alpha_{M-k}-\alpha_{k}\beta_{M-k}\alpha_{M-k}\\
+ & = & r_{M-k}^{-}\alpha_{M-k}+r_{k}^{-}\alpha_{M-k}\\
+ & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+ The function
+\begin_inset Formula 
+\[
+\Phi_{M}=\prod_{k=1}^{\left\lfloor M/2\right\rfloor }\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right)
+\]
+
+\end_inset
+
+ are annihilated by all 
+\begin_inset Formula $L_{k}^{-}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula 
+\begin{eqnarray*}
+h_{n}^{\prime} & = & \left(\alpha_{n}\alpha_{M-n}+\beta_{n}\beta_{M-n}\right)\sin\frac{2n\pi}{M}+\left(1-\cos\frac{2n\pi}{M}\right)\left(\alpha_{n}\beta_{M-n}+\alpha_{M-n}\beta_{n}\right)\\
+ & = & 2\sin\frac{n\pi}{M}\left[\left(\alpha_{n}\alpha_{M-n}+\beta_{n}\beta_{M-n}\right)\cos\frac{n\pi}{M}+\sin\frac{n\pi}{M}\left(\alpha_{n}\beta_{M-n}+\alpha_{M-n}\beta_{n}\right)\right]\\
+ & = & 2\sin\frac{n\pi}{M}h_{n}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\alpha_{k}\alpha_{M-k}\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right)=\alpha_{k}\alpha_{M-k}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\beta_{k}\beta_{M-k}\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right) & = & r_{k}^{-}\beta_{k}\left(\left\{ \beta_{M-k},\alpha_{k}\right\} -\alpha_{k}\beta_{M-k}\right)\alpha_{M-k}\\
+ & = & r_{k}^{-}\beta_{k}\alpha_{M-k}+r_{k}^{-}\alpha_{k}\beta_{k}\beta_{M-k}\alpha_{M-k}\\
+ & = & r_{k}^{-}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha_{k}\beta_{M-k}\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right) & = & r_{k}^{-}\alpha_{k}\left\{ \beta_{M-k},\alpha_{k}\right\} \alpha_{M-k}\\
+ & = & r_{k}^{-}\alpha_{k}\alpha_{M-k}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha_{M-k}\beta_{k}\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right) & = & -r_{k}^{-}\alpha_{M-k}\alpha_{k}\left\{ \beta_{k},\alpha_{M-k}\right\} \\
+ & = & -r_{k}^{-}\alpha_{M-k}\alpha_{k}\\
+ & = & r_{k}^{-}\alpha_{k}\alpha_{M-k}
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+h_{k}\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right) & = & \left(\alpha_{k}\alpha_{M-k}+\beta_{k}\beta_{M-k}\right)\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right)\cos\frac{k\pi}{M}\\
+ &  & +\sin\frac{n\pi}{M}\left(\alpha_{n}\beta_{M-n}+\alpha_{M-n}\beta_{n}\right)\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right)\\
+ & = & \alpha_{k}\alpha_{M-k}\cos\frac{k\pi}{M}+r_{k}^{-}\cos\frac{k\pi}{M}\\
+ &  & +2\sin\frac{n\pi}{M}r_{k}^{-}\alpha_{k}\alpha_{M-k}\\
+ & = & r_{k}^{-}\cos\frac{k\pi}{M}+\alpha_{k}\alpha_{M-k}\left(\cos\frac{k\pi}{M}+2r_{k}^{-}\sin\frac{k\pi}{M}\right)\\
+ & = & r_{k}^{-}\cos\frac{k\pi}{M}\left(1+\alpha_{k}\alpha_{M-k}\left(\frac{1}{r_{k}^{-}}+2\tan\frac{k\pi}{M}\right)\right)\\
+ & = & r_{k}^{-}\cos\frac{k\pi}{M}\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right)\\
+ & = & \left(\sin\frac{k\pi}{M}-1\right)\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+h_{k}^{\prime}\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right)=2\left(\sin^{2}\frac{k\pi}{M}-\sin\frac{k\pi}{M}\right)\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right).
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+h\Phi_{M} & = & 4\sum_{k=1}^{M-1}\left(\sin^{2}\frac{k\pi}{M}-\sin\frac{k\pi}{M}\right)\Phi_{M}-2M\Phi_{G}\\
+ & = & -4\sum_{k=1}^{M-1}\sin\frac{k\pi}{M}
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,639 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\newcommand{\tr}{\mathrm{Tr}\,}
+\newcommand{\ba}{\bar{a}}
+\newcommand{\bb}{\bar{b}}
+\newcommand{\normord}[1]{{:}\!\mathrel{#1}\!{:}}
+\newcommand{\ket}[1]{\left|#1\right\rangle}
+\newcommand{\bra}[1]{\left\langle #1\right|}
+\newcommand{\ketp}[1]{\left|#1\right\} }
+\newcommand{\brap}[1]{\left\{ #1\right|}
+\newcommand{\dprod}[2]{\left\langle #1|#2\right\rangle}
+\newcommand{\dprodp}[2]{\left\{ #1|#2\right\} }
+\newcommand{\mat}[1]{\mathbf{#1}}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+1/N expansion of ground energy
+\end_layout
+
+\begin_layout Standard
+In the large N energy notes, we have 
+\begin_inset Formula 
+\[
+\Phi_{M}=\prod_{k=1}^{\left\lfloor M/2\right\rfloor }\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right)
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula 
+\[
+r_{k}^{\pm}=\tan\frac{k\pi}{M}\pm\sec\frac{k\pi}{M},
+\]
+
+\end_inset
+
+ and 
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha_{n} & = & \frac{1}{\sqrt{M}}\sum_{k=1}^{M}\theta_{k}e^{2\pi ikn/M},\quad\beta_{n}=\frac{1}{\sqrt{M}}\sum_{k=1}^{M}\frac{d}{d\theta_{k}}e^{2\pi ikn/M},\\
+\theta_{k} & = & \frac{1}{\sqrt{M}}\sum_{n=0}^{M-1}\alpha_{n}e^{-2\pi ikn/M},\quad\frac{d}{d\theta_{k}}=\frac{1}{\sqrt{M}}\sum_{n=0}^{M-1}\beta_{n}e^{-2\pi ikn/M},\\
+n & = & 0,\dots M-1,\quad k=1,\dots M.
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left\{ \alpha_{n},\beta_{m}\right\} =\delta_{m+n,M}+\delta_{m,0}\delta_{n,0}
+\]
+
+\end_inset
+
+ To construct ladder operators 
+\begin_inset Formula $L^{\pm}$
+\end_inset
+
+, we first calculate 
+\begin_inset Formula 
+\begin{eqnarray*}
+\sqrt{1+r_{k}^{\pm2}} & = & \sqrt{1+\tan^{2}\frac{k\pi}{M}+\sec^{2}\frac{k\pi}{M}\pm2\tan\frac{k\pi}{M}\sec\frac{k\pi}{M}}\\
+ & = & \sqrt{2\sec^{2}\frac{k\pi}{M}\pm2\tan\frac{k\pi}{M}\sec\frac{k\pi}{M}}\\
+ & = & \sqrt{2}\frac{\sqrt{1\pm\sin\frac{k\pi}{M}}}{\cos\frac{k\pi}{M}}\\
+ & = & \sqrt{\frac{2}{1\mp\sin\frac{k\pi}{M}}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{r_{k}^{\pm}}{\sqrt{1+r_{k}^{\pm2}}} & = & \left(\tan\frac{k\pi}{M}\pm\sec\frac{k\pi}{M}\right)\sqrt{\frac{1\mp\sin\frac{k\pi}{M}}{2}}\\
+ & = & \frac{\pm\left(1\pm\sin\frac{k\pi}{M}\right)}{\cos\frac{k\pi}{M}}\sqrt{\frac{1\mp\sin\frac{k\pi}{M}}{2}}\\
+ & = & \pm\sqrt{\frac{1\pm\sin\frac{k\pi}{M}}{2}}.
+\end{eqnarray*}
+
+\end_inset
+
+ Then the raising and lowering operators can be written as 
+\begin_inset Formula 
+\[
+L_{k}^{+}=\frac{r_{k}^{+}\alpha_{k}+\beta_{k}}{\sqrt{1+r_{k}^{+2}}}=\frac{1}{\sqrt{2}}\left(\sqrt{1+\sin\frac{k\pi}{M}}\alpha_{k}+\sqrt{1-\sin\frac{k\pi}{M}}\beta_{k}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+L_{k}^{-}=\frac{r_{k}^{-}\alpha_{k}+\beta_{k}}{\sqrt{1+r_{k}^{-2}}}=\frac{1}{\sqrt{2}}\left(-\sqrt{1-\sin\frac{k\pi}{M}}\alpha_{k}+\sqrt{1+\sin\frac{k\pi}{M}}\beta_{k}\right).
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\{ L_{n}^{+},L_{m}^{+}\right\}  & = & \frac{1}{2}\sqrt{1+\sin\frac{n\pi}{M}}\sqrt{1-\sin\frac{m\pi}{M}}\left(\left\{ \alpha_{n},\beta_{m}\right\} +\left\{ \beta_{n},\alpha_{m}\right\} \right)\\
+ & = & \sqrt{1+\sin\frac{n\pi}{M}}\sqrt{1-\sin\frac{n\pi}{M}}\delta_{m+n,M}\\
+ & = & \cos\frac{n\pi}{M}\delta_{m+n,M}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\{ L_{n}^{-},L_{m}^{-}\right\}  & = & -\frac{1}{2}\sqrt{1-\sin\frac{n\pi}{M}}\sqrt{1+\sin\frac{m\pi}{M}}\left(\left\{ \alpha_{n},\beta_{m}\right\} +\left\{ \beta_{n,}\alpha_{m}\right\} \right)\\
+ & = & -\cos\frac{n\pi}{M}\delta_{m+n,M}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\{ L_{n}^{+},L_{m}^{-}\right\}  & = & \frac{1}{2}\sqrt{1+\sin\frac{n\pi}{M}}\sqrt{1+\sin\frac{m\pi}{M}}\left\{ \alpha_{n},\beta_{m}\right\} \\
+ &  & -\frac{1}{2}\sqrt{1-\sin\frac{n\pi}{M}}\sqrt{1-\sin\frac{m\pi}{M}}\left\{ \beta_{n},\alpha_{m}\right\} \\
+ & = & \left[\frac{1}{2}\left(1+\sin\frac{n\pi}{M}\right)-\frac{1}{2}\left(1-\sin\frac{n\pi}{M}\right)\right]\delta_{m+n,M}\\
+ & = & \sin\frac{n\pi}{M}\delta_{m+n,M}
+\end{eqnarray*}
+
+\end_inset
+
+It follows that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha_{k} & = & \frac{1}{\sqrt{2}}\left(\sqrt{1+\sin\frac{k\pi}{M}}L_{k}^{+}-\sqrt{1-\sin\frac{k\pi}{M}}L_{k}^{-}\right)\\
+\beta_{k} & = & \frac{1}{\sqrt{2}}\left(\sqrt{1-\sin\frac{k\pi}{M}}L_{k}^{+}+\sqrt{1+\sin\frac{k\pi}{M}}L_{k}^{-}\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha_{k}\alpha_{M-k} & = & \frac{1}{2}\left(\sqrt{1+\sin\frac{k\pi}{M}}L_{k}^{+}-\sqrt{1-\sin\frac{k\pi}{M}}L_{k}^{-}\right)\left(\sqrt{1+\sin\frac{k\pi}{M}}L_{M-k}^{+}-\sqrt{1-\sin\frac{k\pi}{M}}L_{M-k}^{-}\right)\\
+ & = & \frac{1}{2}\left(1+\sin\frac{k\pi}{M}\right)L_{k}^{+}L_{M-k}^{+}+\frac{1}{2}\left(1-\sin\frac{k\pi}{M}\right)L_{k}^{-}L_{M-k}^{-}+\frac{1}{2}\cos\frac{k\pi}{M}\left(L_{k}^{+}L_{M-k}^{-}-L_{k}^{-}L_{M-k}^{+}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\beta_{k}\beta_{M-n} & = & \frac{1}{2}\left(\sqrt{1-\sin\frac{k\pi}{M}}L_{k}^{+}+\sqrt{1+\sin\frac{k\pi}{M}}L_{k}^{-}\right)\left(\sqrt{1-\sin\frac{k\pi}{M}}L_{M-k}^{+}+\sqrt{1+\sin\frac{k\pi}{M}}L_{M-k}^{-}\right)\\
+ & = & \frac{1}{2}\left(1-\sin\frac{k\pi}{M}\right)L_{k}^{+}L_{M-k}^{+}+\frac{1}{2}\left(1+\sin\frac{k\pi}{M}\right)L_{k}^{-}L_{M-k}^{-}+\frac{1}{2}\cos\frac{k\pi}{M}\left(L_{k}^{+}L_{M-k}^{-}+L_{k}^{-}L_{M-k}^{+}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha_{k}\beta_{M-k} & = & \frac{1}{2}\left(\sqrt{1+\sin\frac{k\pi}{M}}L_{k}^{+}-\sqrt{1-\sin\frac{k\pi}{M}}L_{k}^{-}\right)\left(\sqrt{1-\sin\frac{k\pi}{M}}L_{M-k}^{+}+\sqrt{1+\sin\frac{k\pi}{M}}L_{M-k}^{-}\right)\\
+ & = & \frac{1}{2}\cos\frac{k\pi}{M}\left(L_{k}^{+}L_{M-K}^{+}-L_{k}^{-}L_{M-k}^{-}\right)+\frac{1}{2}\left(1+\sin\frac{k\pi}{M}\right)L_{k}^{+}L_{M-k}^{-}-\frac{1}{2}\left(1-\sin\frac{k\pi}{M}\right)L_{k}^{-}L_{M-k}^{+}
+\end{eqnarray*}
+
+\end_inset
+
+ Recall that 
+\begin_inset Formula 
+\begin{eqnarray*}
+h & = & \sum_{n=1}^{M-1}\Big[\left(z_{1}\alpha_{n}\alpha_{M-n}+z_{1}^{\dagger}\beta_{n}\beta_{M-n}\right)\sin\frac{2n\pi}{M}\\
+ &  & +2\left(c-\Re\left(z_{2}e^{2\pi in/M}\right)\right)\alpha_{n}\beta_{M-n}\Big]\\
+ &  & +2\left(c-\Re z_{2}\right)\alpha_{0}\beta_{0}+\left(c_{3}+c_{4}-c_{1}\right)M.
+\end{eqnarray*}
+
+\end_inset
+
+ When 
+\begin_inset Formula $H=H_{0}$
+\end_inset
+
+, the coefficients are 
+\begin_inset Formula $c_{1}=-c_{2}=c_{3}=-c_{4}=c=2$
+\end_inset
+
+, 
+\begin_inset Formula $z_{1}=z_{2}=2$
+\end_inset
+
+, and 
+\begin_inset Formula 
+\begin{align*}
+h & =2\sum_{n=1}^{M-1}\Big[\left(\alpha_{n}\alpha_{M-n}+\beta_{n}\beta_{M-n}\right)\sin\frac{2n\pi}{M}+\left(2-2\cos\frac{2n\pi}{M}\right)\alpha_{n}\beta_{M-n}\Big]+2M\\
+ & =2\sum_{n=1}^{M-1}\Big[\left(L_{n}^{+}L_{M-n}^{+}+L_{n}^{-}L_{M-n}^{-}+\cos\frac{n\pi}{M}L_{n}^{+}L_{M-n}^{-}\right)\sin\frac{2n\pi}{M}\\
+ & +\left(1-\cos\frac{2n\pi}{M}\right)\cos\frac{n\pi}{M}\left(L_{n}^{+}L_{M-n}^{+}-L_{n}^{-}L_{M-n}^{-}\right)\\
+ & +\left(1-\cos\frac{2n\pi}{M}\right)\left(\left(1+\sin\frac{n\pi}{M}\right)L_{n}^{+}L_{M-n}^{-}-\left(1-\sin\frac{n\pi}{M}\right)L_{n}^{-}L_{M-n}^{+}\right)\Big]+2M\\
+ & =
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Ground state in trace states
+\end_layout
+
+\begin_layout Standard
+We now want to express ground state in term of trace state.
+ Recall that the general energy eigenstate can be written as 
+\begin_inset Formula 
+\[
+\ket{E}=\int d^{M}\theta\Psi\left(\theta_{1}\cdots\theta_{M}\right)\ket{\theta_{1}\cdots\theta_{M}}.
+\]
+
+\end_inset
+
+ It follows that 
+\begin_inset Formula 
+\begin{eqnarray*}
+\ket{E_{0}} & = & \int d^{M}\theta\prod_{k=1}^{\left\lfloor M/2\right\rfloor }\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right)\ket{\theta_{1}\cdots\theta_{M}}\\
+ & = & \int d^{M}\theta\left[1+\sum_{k=1}^{\left\lfloor M/2\right\rfloor }r_{k}^{-}\alpha_{k}\alpha_{M-k}+\sum_{k<l}^{\left\lfloor M/2\right\rfloor }r_{k}^{-}r_{l}^{-}\alpha_{k}\alpha_{M-k}\alpha_{l}\alpha_{M-l}+\cdots\right]\ket{\theta_{1}\cdots\theta_{M}}\\
+ & \equiv & \ket{E_{0}}^{\left(0\right)}+\ket{E_{0}}^{\left(1\right)}+\ket{E_{0}}^{\left(2\right)}+\cdots.
+\end{eqnarray*}
+
+\end_inset
+
+Let us consider the case of odd 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Clearly 
+\begin_inset Formula 
+\[
+\ket{E_{0}}^{\left(0\right)}=\tr\bar{b}^{M}\ket{0}.
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha_{k}\alpha_{M-k} & = & \frac{1}{M}\sum_{i,j=1}^{M}\theta_{i}\theta_{j}e^{2\pi i\left[ik+j\left(M-k\right)\right]/M}\\
+ & = & \frac{1}{M}\sum_{i,j=1}^{M}\theta_{i}\theta_{j}e^{2\pi i\left(i-j\right)k/M}\\
+ & = & \frac{2i}{M}\sum_{i=1}^{M}\sum_{j>i}^{M}\theta_{i}\theta_{j}\sin\frac{2\pi k\left(i-j\right)}{M}\\
+ & = & -\frac{2i}{M}\sum_{i=1}^{M}\sum_{j>i}^{M}\theta_{i}\theta_{j}\sin\frac{2\pi k\left(j-i\right)}{M}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\ket{E_{0}}^{\left(1\right)} & =\sum_{k=1}^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\, r_{k}^{-}\alpha_{k}\alpha_{M-k}\ket{\theta_{1}\cdots\theta_{M}}\\
+ & =-\frac{2i}{M}\sum_{k=1}^{\left\lfloor M/2\right\rfloor }r_{k}^{-}\sum_{i=1}^{M}\sum_{j>i}^{M}\int d^{M}\theta\,\theta_{i}\theta_{j}\sin\frac{2\pi k\left(j-i\right)}{M}\ket{\theta_{1}\cdots\theta_{M}}\\
+ & =-\frac{2i}{M}\sum_{k=1}^{\left\lfloor M/2\right\rfloor }r_{k}^{-}\sum_{i=1}^{M}\sum_{j>i}^{M}\sin\frac{2\pi k\left(j-i\right)}{M}\tr\left(\bar{b}^{i-1}\bar{a}\bar{b}^{j-i-1}\bar{a}\bar{b}^{M-j}\right)\\
+ & =-\frac{2i}{M}\sum_{i=1}^{M}\sum_{j>i}^{M}\sum_{k=1}^{\left\lfloor M/2\right\rfloor }r_{k}^{-}\sin\frac{2\pi k\left(j-i\right)}{M}\tr\left(\bar{a}\bar{b}^{j-i-1}\bar{a}\bar{b}^{M-j+i-1}\right)\\
+ & =-\frac{2i}{M}\sum_{n=1}^{M-1}\left(M-n\right)\sum_{k=1}^{\left\lfloor M/2\right\rfloor }r_{k}^{-}\sin\frac{2nk\pi}{M}\tr\left(\bar{a}\bar{b}^{n-1}\bar{a}\bar{b}^{M-n-1}\right)\\
+ & =-2i\sum_{n=1}^{M-1}\left(1-\frac{n}{M}\right)\sum_{k=1}^{\left\lfloor M/2\right\rfloor }r_{k}^{-}\sin\frac{2nk\pi}{M}\tr\left(\bar{a}\bar{b}^{n-1}\bar{a}\bar{b}^{M-n-1}\right)\\
+ & \equiv2i\sum_{n=1}^{M-1}\left(1-\frac{n}{M}\right)A_{n}\tr\left(\bar{a}\bar{b}^{n-1}\bar{a}\bar{b}^{M-n-1}\right)
+\end{align*}
+
+\end_inset
+
+ where 
+\begin_inset Formula 
+\[
+A_{n}=\sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(\sec\frac{k\pi}{M}-\tan\frac{k\pi}{M}\right)\sin\frac{2kn\pi}{M}.
+\]
+
+\end_inset
+
+ Using the relation
+\begin_inset Formula 
+\[
+A_{M-n}=-A_{n},
+\]
+
+\end_inset
+
+ we can simplify 
+\begin_inset Formula $\ket{E_{0}}^{\left(1\right)}$
+\end_inset
+
+ as 
+\begin_inset Formula 
+\begin{eqnarray*}
+\ket{E_{0}}^{\left(1\right)} & = & 2i\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(1-\frac{n}{M}\right)A_{n}\tr\left(\bar{a}\bar{b}^{n-1}\bar{a}\bar{b}^{M-n-1}\right)\\
+ &  & +2i\sum_{n=\left\lfloor M/2\right\rfloor +1}^{M-1}\left(1-\frac{n}{M}\right)A_{n}\tr\left(\bar{a}\bar{b}^{n-1}\bar{a}\bar{b}^{M-n-1}\right)\\
+ & = & 2i\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(1-\frac{n}{M}\right)A_{n}\tr\left(\bar{a}\bar{b}^{n-1}\bar{a}\bar{b}^{M-n-1}\right)\\
+ &  & +2i\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(1-\frac{M-n}{M}\right)A_{M-n}\tr\left(\bar{a}\bar{b}^{M-n-1}\bar{a}\bar{b}^{n-1}\right)\\
+ & = & 2i\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(1-\frac{n}{M}\right)A_{n}\tr\left(\bar{a}\bar{b}^{n-1}\bar{a}\bar{b}^{M-n-1}\right)\\
+ &  & -2i\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\frac{n}{M}A_{n}\tr\left(\bar{a}\bar{b}^{n-1}\bar{a}\bar{b}^{M-n-1}\right)\\
+ & = & 2i\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(1-\frac{2n}{M}\right)A_{n}\tr\left(\bar{a}\bar{b}^{n-1}\bar{a}\bar{b}^{M-n-1}\right)
+\end{eqnarray*}
+
+\end_inset
+
+ To calculate 
+\begin_inset Formula $A_{n}$
+\end_inset
+
+, we use the formula
+\begin_inset Formula 
+\[
+\sin\left(nx\right)=2\cos x\sin\left(n-1\right)x-\sin\left(n-2\right)x.
+\]
+
+\end_inset
+
+ Then 
+\begin_inset Formula 
+\begin{align}
+A_{n} & =\sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(\sec\frac{k\pi}{M}-\tan\frac{k\pi}{M}\right)\left[2\cos\frac{k\pi}{M}\sin\frac{k\pi\left(2n-1\right)}{M}-\sin\frac{2k\pi\left(n-1\right)}{M}\right]\nonumber \\
+ & =2\sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(1-\sin\frac{k\pi}{M}\right)\sin\frac{k\pi\left(2n-1\right)}{M}-A_{n-1}\nonumber \\
+ & =\sum_{k=1}^{\left\lfloor M/2\right\rfloor }2\sin\frac{k\pi\left(2n-1\right)}{M}+\sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(\cos\frac{2kn\pi}{M}-\cos\frac{2k\left(n-1\right)\pi}{M}\right)-A_{n-1}\label{eq:An_recursive_1}
+\end{align}
+
+\end_inset
+
+ Let us calculate
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{k=1}^{\left\lfloor M/2\right\rfloor }\exp\left(\frac{ikn\pi}{M}\right) & = & \frac{\exp\left(\frac{in\pi}{M}\right)-\exp\left(i\frac{\left\lfloor M/2\right\rfloor +1}{M}n\pi\right)}{1-\exp\left(i\frac{n\pi}{M}\right)}\\
+ & = & \frac{\exp\left(\frac{in\pi}{M}\right)-\exp\left(i\frac{M+1}{2M}n\pi\right)}{1-\exp\left(i\frac{n\pi}{M}\right)}\\
+ & = & \frac{\exp\left(\frac{in\pi}{M}\right)-i^{n}\exp\left(i\frac{n\pi}{2M}\right)}{1-\exp\left(i\frac{n\pi}{M}\right)}\\
+ & = & \frac{\exp\left(\frac{in\pi}{2M}\right)-i^{n}}{\exp\left(-i\frac{n\pi}{2M}\right)-\exp\left(i\frac{n\pi}{2M}\right)}\\
+ & = & \frac{i\exp\left(\frac{in\pi}{2M}\right)-i^{n+1}}{2\sin\frac{n\pi}{2M}}\\
+ & = & -\frac{1}{2}+\frac{i}{2}\cot\frac{n\pi}{2M}-\frac{i^{n+1}}{2}\csc\frac{n\pi}{2M}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\sum_{k=1}^{\left\lfloor M/2\right\rfloor }2\sin\frac{k\pi\left(2n-1\right)}{M}=2\Im\left[\sum_{k=1}^{\left\lfloor M/2\right\rfloor }\exp\left(i\frac{2n-1}{M}k\pi\right)\right]=\cot\frac{2n-1}{2M}\pi\label{eq:sum_1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\sum_{k=1}^{\left\lfloor M/2\right\rfloor }\cos\frac{2kn\pi}{M}=\Re\left[\sum_{k=1}^{\left\lfloor M/2\right\rfloor }\exp\left(i\frac{2n}{M}k\pi\right)\right]=-\frac{1}{2}\label{eq:sum_2}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\sum_{k=1}^{\left\lfloor M/2\right\rfloor }\cos\frac{2k\left(n-1\right)\pi}{M}=\Re\left[\sum_{k=1}^{\left\lfloor M/2\right\rfloor }\exp\left(i\frac{2\left(n-1\right)}{M}k\pi\right)\right]=-\frac{1}{2}\label{eq:sum_3}
+\end{equation}
+
+\end_inset
+
+Substituing Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:sum_1"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:sum_2"
+
+\end_inset
+
+, and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:sum_3"
+
+\end_inset
+
+ into Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:An_recursive_1"
+
+\end_inset
+
+ yields 
+\begin_inset Formula 
+\begin{equation}
+A_{n}=\cot\frac{2n-1}{2M}\pi-A_{n-1},\quad n\geq2\label{eq:A_n}
+\end{equation}
+
+\end_inset
+
+ and 
+\begin_inset Formula 
+\begin{eqnarray*}
+A_{1} & = & 2\sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(\sin\frac{k\pi}{M}-\sin^{2}\frac{k\pi}{M}\right)\\
+ & = & 2\sum_{k=1}^{\left\lfloor M/2\right\rfloor }\sin\frac{k\pi}{M}-\sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(1-\cos\frac{2k\pi}{M}\right)\\
+ & = & \cot\frac{\pi}{2M}-\left\lfloor M/2\right\rfloor -\frac{1}{2}\\
+ & = & \cot\frac{\pi}{2M}-\frac{M}{2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+A_{\left\lfloor M/2\right\rfloor } & = & -\sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(-1\right)^{k}\left(\sec\frac{k\pi}{M}-\tan\frac{k\pi}{M}\right)\sin\frac{k\pi}{M}\\
+ & = & \sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(-1\right)^{k}\left(\sec\frac{k\pi}{M}-\cos\frac{k\pi}{M}-\tan\frac{k\pi}{M}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let us calculate the norm of 
+\begin_inset Formula $\ket{E_{0}}^{\left(1\right)}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\dprod{E_{0}}{E_{0}}^{\left(1\right)}\sim4\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(1-\frac{4n}{M}+\frac{4n^{2}}{M^{2}}\right)A_{n}^{2}.
+\]
+
+\end_inset
+
+ It follows from
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:A_n"
+
+\end_inset
+
+ that
+\begin_inset Formula 
+\[
+nA_{n}^{2}=n\cot^{2}\frac{2n-1}{2M}\pi-2nA_{n-1}\cot\frac{2n-1}{2M}\pi+nA_{n-1}^{2}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{n=1}^{\left\lfloor M/2\right\rfloor }nA_{n}^{2} & = & \sum_{n=2}^{\left\lfloor M/2\right\rfloor }\left(n\cot^{2}\frac{2n-1}{2M}\pi-2nA_{n-1}\cot\frac{2n-1}{2M}\pi+nA_{n-1}^{2}\right)+A_{1}^{2}\\
+ & = & \sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(n\cot^{2}\frac{2n-1}{2M}\pi-2\left(n+1\right)A_{n}\cot\frac{2n+1}{2M}\pi+\left(n+1\right)A_{n}^{2}\right)\\
+ &  & -\cot^{2}\frac{\pi}{2M}-\frac{M+1}{2}A_{\left\lfloor M/2\right\rfloor }^{2}+A_{1}^{2}\\
+ & = & \sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(n\cot^{2}\frac{2n-1}{2M}\pi-2\left(n+1\right)A_{n}\cot\frac{2n+1}{2M}\pi\right)\\
+ &  & +\sum_{n=1}^{\left\lfloor M/2\right\rfloor }nA_{n}^{2}+\sum_{n=1}^{\left\lfloor M/2\right\rfloor }A_{n}^{2}-\cot^{2}\frac{\pi}{2M}-\frac{M+1}{2}A_{\left\lfloor M/2\right\rfloor }^{2}+A_{1}^{2}
+\end{eqnarray*}
+
+\end_inset
+
+ It follows that
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{n=1}^{\left\lfloor M/2\right\rfloor }A_{n}^{2} & = & \sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left[2\left(n+1\right)A_{n}\cot\frac{2n+1}{2M}\pi-n\cot^{2}\frac{2n-1}{2M}\pi\right]\\
+ &  & +\frac{M+1}{2}A_{\left\lfloor M/2\right\rfloor }^{2}-A_{1}^{2}+\cot^{2}\frac{\pi}{2M}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+n^{2}A_{n}^{2}=n^{2}\cot^{2}\frac{2n-1}{2M}\pi-2n^{2}A_{n-1}\cot\frac{2n-1}{2M}\pi+n^{2}A_{n-1}^{2}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{n=1}^{\left\lfloor M/2\right\rfloor }n^{2}A_{n}^{2} & = & \sum_{n=2}^{\left\lfloor M/2\right\rfloor }\left(n^{2}\cot^{2}\frac{2n-1}{2M}\pi-2n^{2}A_{n-1}\cot\frac{2n-1}{2M}\pi+n^{2}A_{n-1}^{2}\right)+A_{1}^{2}\\
+ & = & \sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(n^{2}\cot^{2}\frac{2n-1}{2M}\pi-2\left(n+1\right)^{2}A_{n}\cot\frac{2n+1}{2M}\pi+\left(n+1\right)^{2}A_{n}^{2}\right)\\
+ &  & -\cot^{2}\frac{\pi}{2M}-\frac{\left(M+1\right)^{2}}{4}A_{\left\lfloor M/2\right\rfloor }^{2}+A_{1}^{2}\\
+ & = & \sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(n^{2}\cot^{2}\frac{2n-1}{2M}\pi-2\left(n+1\right)^{2}A_{n}\cot\frac{2n+1}{2M}\pi\right)\\
+ &  & +\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(n^{2}+2n+1\right)A_{n}^{2}-\cot^{2}\frac{\pi}{2M}-\frac{\left(M+1\right)^{2}}{4}A_{\left\lfloor M/2\right\rfloor }^{2}+A_{1}^{2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{n=1}^{\left\lfloor M/2\right\rfloor }nA_{n}^{2} & = & \sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(\left(n+1\right)^{2}A_{n}\cot\frac{2n+1}{2M}\pi-\frac{1}{2}n^{2}\cot^{2}\frac{2n-1}{2M}\pi\right)\\
+ &  & -\frac{1}{2}\sum_{n=1}^{\left\lfloor M/2\right\rfloor }A_{n}^{2}+\frac{1}{2}\cot^{2}\frac{\pi}{2M}+\frac{\left(M+1\right)^{2}}{8}A_{\left\lfloor M/2\right\rfloor }^{2}-\frac{1}{2}A_{1}^{2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+n^{3}A_{n}^{2}=n^{3}\cot^{2}\frac{2n-1}{2M}\pi-2n^{3}A_{n-1}\cot\frac{2n-1}{2M}\pi+n^{3}A_{n-1}^{2}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{n=1}^{\left\lfloor M/2\right\rfloor }n^{3}A_{n}^{2} & = & \sum_{n=2}^{\left\lfloor M/2\right\rfloor }\left(n^{3}\cot^{2}\frac{2n-1}{2M}\pi-2n^{3}A_{n-1}\cot\frac{2n-1}{2M}\pi+n^{3}A_{n-1}^{2}\right)+A_{1}^{2}\\
+ & = & \sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(n^{3}\cot^{2}\frac{2n-1}{2M}\pi-2\left(n+1\right)^{3}A_{n}\cot\frac{2n+1}{2M}\pi+\left(n+1\right)^{3}A_{n}^{2}\right)\\
+ &  & -\cot^{2}\frac{\pi}{2M}-\left(\frac{M+1}{2}\right)^{3}A_{\left\lfloor M/2\right\rfloor }^{2}+A_{1}^{2}\\
+ & = & \sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(n^{3}\cot^{2}\frac{2n-1}{2M}\pi-2\left(n+1\right)^{3}A_{n}\cot\frac{2n+1}{2M}\pi\right)\\
+ &  & +\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(n^{3}+3n^{2}+3n+1\right)A_{n}^{2}-\cot^{2}\frac{\pi}{2M}-\left(\frac{M+1}{2}\right)^{3}A_{\left\lfloor M/2\right\rfloor }^{2}+A_{1}^{2}
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{n=1}^{\left\lfloor M/2\right\rfloor }n^{2}A_{n}^{2} & = & \frac{1}{3}\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(2\left(n+1\right)^{3}A_{n}\cot\frac{2n+1}{2M}\pi-n^{3}\cot^{2}\frac{2n-1}{2M}\pi\right)\\
+ &  & -\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(n+\frac{1}{3}\right)A_{n}^{2}+\frac{1}{3}\left[\cot^{2}\frac{\pi}{2M}+\left(\frac{M+1}{2}\right)^{3}A_{\left\lfloor M/2\right\rfloor }^{2}-A_{1}^{2}\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\dprod{E_{0}}{E_{0}}^{\left(1\right)} & \sim4\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(1-\frac{4n}{M}+\frac{4n^{2}}{M^{2}}\right)A_{n}^{2}\\
+ & =4\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(1-\frac{4n}{M}\right)A_{n}^{2}-\frac{16}{M^{2}}\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(n+\frac{1}{3}\right)A_{n}^{2}\\
+ & +\frac{16}{3M^{2}}\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(2\left(n+1\right)^{3}A_{n}\cot\frac{2n+1}{2M}\pi-n^{3}\cot^{2}\frac{2n-1}{2M}\pi\right)\\
+ & +\frac{16}{3M^{2}}\left[\cot^{2}\frac{\pi}{2M}+\left(\frac{M+1}{2}\right)^{3}A_{\left\lfloor M/2\right\rfloor }^{2}-A_{1}^{2}\right]\\
+ & =4\left(1-\frac{4}{3M^{2}}\right)\sum_{n=1}^{\left\lfloor M/2\right\rfloor }A_{n}^{2}-\frac{16}{M}\left(1+\frac{1}{M}\right)\sum_{n=1}^{\left\lfloor M/2\right\rfloor }nA_{n}^{2}\\
+ & +\frac{16}{3M^{2}}\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(2\left(n+1\right)^{3}A_{n}\cot\frac{2n+1}{2M}\pi-n^{3}\cot^{2}\frac{2n-1}{2M}\pi\right)\\
+ & +\frac{16}{3M^{2}}\left[\cot^{2}\frac{\pi}{2M}+\left(\frac{M+1}{2}\right)^{3}A_{\left\lfloor M/2\right\rfloor }^{2}-A_{1}^{2}\right]\\
+ & =4\left(1-\frac{4}{3M^{2}}\right)\sum_{n=1}^{\left\lfloor M/2\right\rfloor }A_{n}^{2}\\
+ & -\frac{16}{M}\left(1+\frac{1}{M}\right)\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(\left(n+1\right)^{2}A_{n}\cot\frac{2n+1}{2M}\pi-\frac{1}{2}n^{2}\cot^{2}\frac{2n-1}{2M}\pi\right)\\
+ & +\frac{8}{M}\left(1+\frac{1}{M}\right)\sum_{n=1}^{\left\lfloor M/2\right\rfloor }A_{n}^{2}\\
+ & -\frac{16}{M}\left(1+\frac{1}{M}\right)\left[\frac{1}{2}\cot^{2}\frac{\pi}{2M}+\frac{\left(M+1\right)^{2}}{8}A_{\left\lfloor M/2\right\rfloor }^{2}-\frac{1}{2}A_{1}^{2}\right]\\
+ & +\frac{16}{3M^{2}}\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(2\left(n+1\right)^{3}A_{n}\cot\frac{2n+1}{2M}\pi-n^{3}\cot^{2}\frac{2n-1}{2M}\pi\right)\\
+ & +\frac{16}{3M^{2}}\left[\cot^{2}\frac{\pi}{2M}+\left(\frac{M+1}{2}\right)^{3}A_{\left\lfloor M/2\right\rfloor }^{2}-A_{1}^{2}\right]\\
+ & =4\left(1+\frac{2}{M}+\frac{2}{3M^{2}}\right)\sum_{n=1}^{\left\lfloor M/2\right\rfloor }A_{n}^{2}\\
+ & -\frac{16}{M}\left(1+\frac{1}{M}\right)\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(\left(n+1\right)^{2}A_{n}\cot\frac{2n+1}{2M}\pi-\frac{1}{2}n^{2}\cot^{2}\frac{2n-1}{2M}\pi\right)\\
+ & +\frac{16}{3M^{2}}\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(2\left(n+1\right)^{3}A_{n}\cot\frac{2n+1}{2M}\pi-n^{3}\cot^{2}\frac{2n-1}{2M}\pi\right)\\
+ & +8\left(\frac{1}{M}+\frac{1}{3M^{2}}\right)\left(A_{1}^{2}-\cot^{2}\frac{\pi}{2M}\right)-\frac{4}{3}\frac{\left(M+1\right)^{3}}{M^{2}}A_{\left\lfloor M/2\right\rfloor }^{2}\\
+ & =4\left(1+\frac{2}{M}+\frac{2}{3M^{2}}\right)\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left[2\left(n+1\right)A_{n}\cot\frac{2n+1}{2M}\pi-n\cot^{2}\frac{2n-1}{2M}\pi\right]\\
+ & +4\left(1+\frac{2}{M}+\frac{2}{3M^{2}}\right)\left(\frac{M+1}{2}A_{\left\lfloor M/2\right\rfloor }^{2}-A_{1}^{2}+\cot^{2}\frac{\pi}{2M}\right)\\
+ & -\frac{16}{M}\left(1+\frac{1}{M}\right)\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(\left(n+1\right)^{2}A_{n}\cot\frac{2n+1}{2M}\pi-\frac{1}{2}n^{2}\cot^{2}\frac{2n-1}{2M}\pi\right)\\
+ & +\frac{16}{3M^{2}}\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(2\left(n+1\right)^{3}A_{n}\cot\frac{2n+1}{2M}\pi-n^{3}\cot^{2}\frac{2n-1}{2M}\pi\right)\\
+ & +8\left(\frac{1}{M}+\frac{1}{3M^{2}}\right)\left(A_{1}^{2}-\cot^{2}\frac{\pi}{2M}\right)-\frac{4}{3}\frac{\left(M+1\right)^{3}}{M^{2}}A_{\left\lfloor M/2\right\rfloor }^{2}\\
+ & =-4\left(A_{1}^{2}-\cot^{2}\frac{\pi}{2M}\right)+\frac{2}{3}\left(M+3+\frac{2}{M}\right)A_{\left\lfloor M/2\right\rfloor }^{2}\\
+ & -4\left(1+\frac{2}{M}+\frac{2}{3M^{2}}\right)\sum_{n=1}^{\left\lfloor M/2\right\rfloor }n\cot^{2}\frac{2n-1}{2M}\pi\\
+ & +8\left(\frac{1}{M}+\frac{1}{M^{2}}\right)\sum_{n=1}^{\left\lfloor M/2\right\rfloor }n^{2}\cot^{2}\frac{2n-1}{2M}\pi\\
+ & -\frac{16}{3M^{2}}\sum_{n=1}^{\left\lfloor M/2\right\rfloor }n^{3}\cot^{2}\frac{2n-1}{2M}\pi\\
+ & +\left[8\left(1+\frac{2}{M}+\frac{2}{3M^{2}}\right)-\frac{16}{M}\left(1+\frac{1}{M}\right)+\frac{32}{3M^{2}}\right]\sum_{n=1}^{\left\lfloor M/2\right\rfloor }A_{n}\cot\frac{2n+1}{2M}\pi\\
+ & +\left[8\left(1+\frac{2}{M}+\frac{2}{3M^{2}}\right)-\frac{32}{M}\left(1+\frac{1}{M}\right)+\frac{96}{3M^{2}}\right]\sum_{n=1}^{\left\lfloor M/2\right\rfloor }nA_{n}\cot\frac{2n+1}{2M}\pi\\
+ & +\left[-\frac{16}{M}\left(1+\frac{1}{M}\right)+\frac{96}{3M^{2}}\right]\sum_{n=1}^{\left\lfloor M/2\right\rfloor }n^{2}A_{n}\cot\frac{2n+1}{2M}\pi\\
+ & +\frac{32}{3M^{2}}\sum_{n=1}^{\left\lfloor M/2\right\rfloor }n^{3}A_{n}\cot\frac{2n+1}{2M}\pi\\
+ & =-4\left(A_{1}^{2}-\cot^{2}\frac{\pi}{2M}\right)+\frac{2}{3}\left(M+3+\frac{2}{M}\right)A_{\left\lfloor M/2\right\rfloor }^{2}\\
+ & -4\left(1+\frac{2}{M}+\frac{2}{3M^{2}}\right)\sum_{n=1}^{\left\lfloor M/2\right\rfloor }n\cot^{2}\frac{2n-1}{2M}\pi\\
+ & +8\left(\frac{1}{M}+\frac{1}{M^{2}}\right)\sum_{n=1}^{\left\lfloor M/2\right\rfloor }n^{2}\cot^{2}\frac{2n-1}{2M}\pi\\
+ & -\frac{16}{3M^{2}}\sum_{n=1}^{\left\lfloor M/2\right\rfloor }n^{3}\cot^{2}\frac{2n-1}{2M}\pi\\
+ & +8\sum_{n=1}^{\left\lfloor M/2\right\rfloor }A_{n}\cot\frac{2n+1}{2M}\pi\\
+ & +\left(8-\frac{16}{M}+\frac{16}{3M^{2}}\right)\sum_{n=1}^{\left\lfloor M/2\right\rfloor }nA_{n}\cot\frac{2n+1}{2M}\pi\\
+ & -16\left(\frac{1}{M}-\frac{1}{M^{2}}\right)\sum_{n=1}^{\left\lfloor M/2\right\rfloor }n^{2}A_{n}\cot\frac{2n+1}{2M}\pi\\
+ & +\frac{32}{3M^{2}}\sum_{n=1}^{\left\lfloor M/2\right\rfloor }n^{3}A_{n}\cot\frac{2n+1}{2M}\pi
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sum_{n=1}^{\left\lfloor M/2\right\rfloor }n^{3}\cot^{2}\frac{2n-1}{2M}\pi=
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
