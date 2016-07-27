@@ -610,3 +610,25 @@ void ScriptGenerator::OutputNormToMatlab(int bits)
 	
 	ofs << "end" << endl;
 }
+
+void ScriptGenerator::OutputStateStructure(int maxBit)
+{	
+	StateCollection* sc = StateCollection::Inst();
+	string filePrefix = "state_structure_";
+	
+	for (int i = 3; i<= maxBit; i++)
+	{
+		string file = CombinePath(rootFolder, filePrefix + ToString(i) + ".txt");
+		cout << "output state structure to " << file << endl;
+		ofstream os(file.c_str());
+		os << "index\tfermion\ttrace" << endl;
+		
+		for (int j = 0; j < sc->StateNumber(i); j++)
+		{
+			TraceState state = sc->GetState(i, j, type);
+			os << j + 1 << "\t" << state.FermionNumber() << "\t" << state.TraceNumber() << endl;
+		}
+
+		os.close();
+	}
+}

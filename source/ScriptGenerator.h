@@ -33,4 +33,5 @@ public:
 	void OutputNormToLaTeX(int minBits, int maxBits, string filename);
 	void OutputNormToMatlab(int bits);
 	void OutputStateToLaTeX(int minBit, int maxBit, string filename, bool compress = false);
+	void OutputStateStructure(int maxBit = 11);
 };

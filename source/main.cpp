@@ -172,7 +172,7 @@ void GenerateHamDataFile(StateType type)
 	DeltaHamiltonian delta;
 	Stopwatch watch;
 	watch.Start();
-	for (int i = 3; i <= 11; i++)
+	for (int i = 3; i <= 9; i++)
 	{
 		sc.OutputHamToDataFile(i, h0, true);
 		sc.OutputHamToDataFile(i, delta);
@@ -238,6 +238,14 @@ void GenerateLaTeX()
 	sg1.OutputNormToLaTeX(2, 7, "E:\\Dropbox\\proj\\stringbit\\norms-2-7.tex");
 }
 
+void OutputStateStructure()
+{
+	ScriptGenerator sg1(scriptFolder, Boson);
+	ScriptGenerator sg2(scriptFolder, Fermion);
+	sg1.OutputStateStructure();
+	sg2.OutputStateStructure(); 
+}
+
 int main()
 {
 	GenerateStates(true);
@@ -251,6 +259,7 @@ int main()
 	//GenerateLaTeX();
 
 	//GenerateAllHamMatlab();
-	GenerateAllHamDataFile();
+	OutputStateStructure();
+	//GenerateAllHamDataFile();
 	return 0;
 }
