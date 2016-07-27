@@ -395,5 +395,32 @@ n^{3}A_{n}^{2}=n^{3}\cot^{2}\frac{2n-1}{2M}\pi-2n^{3}A_{n-1}\cot\frac{2n-1}{2M}\
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+A_{n} & = & \sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(\sec\frac{k\pi}{M}-\tan\frac{k\pi}{M}\right)\sin\frac{2kn\pi}{M}\\
+ & = & \sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(\sec\frac{k\pi}{M}-\tan\frac{k\pi}{M}\right)\sin\frac{k\left(2n-1\right)+k}{M}\pi\\
+ & = & \sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(\sec\frac{k\pi}{M}-\tan\frac{k\pi}{M}\right)\left[\sin\frac{k\left(2n-1\right)}{M}\pi\cos\frac{k\pi}{M}+\cos\frac{k\left(2n-1\right)}{M}\pi\sin\frac{k\pi}{M}\right]\\
+ & = & \sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(1-\sin\frac{k\pi}{M}\right)\sin\frac{k\left(2n-1\right)}{M}\pi\\
+ &  & +\sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(\tan\frac{k\pi}{M}-\tan\frac{k\pi}{M}\sin\frac{k\pi}{M}\right)\cos\frac{k\left(2n-1\right)}{M}\pi\\
+ & = & \sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(1-\sin\frac{k\pi}{M}\right)\sin\frac{k\left(2n-1\right)}{M}\pi\\
+ &  & +\sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(\tan\frac{k\pi}{M}-\sec\frac{k\pi}{M}+\cos\frac{k\pi}{M}\right)\cos\frac{k\left(2n-1\right)}{M}\pi\\
+ & \equiv & B_{n}+C_{n}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+C_{n} & = & \sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(\tan\frac{k\pi}{M}-\sec\frac{k\pi}{M}+\cos\frac{k\pi}{M}\right)\cos\frac{k\left(2n-1\right)}{M}\pi\\
+ & = & \sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(\tan\frac{k\pi}{M}-\sec\frac{k\pi}{M}+\cos\frac{k\pi}{M}\right)\left(\cos\frac{k\left(2n-2\right)}{M}\pi\cos\frac{k\pi}{M}-\sin\frac{k\left(2n-2\right)}{M}\pi\sin\frac{k\pi}{M}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document

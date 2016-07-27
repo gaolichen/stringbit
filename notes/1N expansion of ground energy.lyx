@@ -78,7 +78,19 @@
 \end_layout
 
 \begin_layout Standard
-In the large N energy notes, we have 
+The ground state of large 
+\begin_inset Formula $N$
+\end_inset
+
+ limit can be written as 
+\begin_inset Formula 
+\[
+\ket{E_{0}}=\int d^{M}\theta\Phi_{M}\left(\theta_{1}\cdots\theta_{M}\right)\ket{\theta_{1}\cdots\theta_{M}}.
+\]
+
+\end_inset
+
+where 
 \begin_inset Formula 
 \[
 \Phi_{M}=\prod_{k=1}^{\left\lfloor M/2\right\rfloor }\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right)
@@ -86,7 +98,7 @@ In the large N energy notes, we have
 
 \end_inset
 
- where 
+
 \begin_inset Formula 
 \[
 r_{k}^{\pm}=\tan\frac{k\pi}{M}\pm\sec\frac{k\pi}{M},
@@ -94,7 +106,7 @@ r_{k}^{\pm}=\tan\frac{k\pi}{M}\pm\sec\frac{k\pi}{M},
 
 \end_inset
 
- and 
+
 \begin_inset Formula 
 \begin{eqnarray*}
 \alpha_{n} & = & \frac{1}{\sqrt{M}}\sum_{k=1}^{M}\theta_{k}e^{2\pi ikn/M},\quad\beta_{n}=\frac{1}{\sqrt{M}}\sum_{k=1}^{M}\frac{d}{d\theta_{k}}e^{2\pi ikn/M},\\
@@ -112,148 +124,34 @@ n & = & 0,\dots M-1,\quad k=1,\dots M.
 
 \end_inset
 
- To construct ladder operators 
-\begin_inset Formula $L^{\pm}$
-\end_inset
 
-, we first calculate 
-\begin_inset Formula 
-\begin{eqnarray*}
-\sqrt{1+r_{k}^{\pm2}} & = & \sqrt{1+\tan^{2}\frac{k\pi}{M}+\sec^{2}\frac{k\pi}{M}\pm2\tan\frac{k\pi}{M}\sec\frac{k\pi}{M}}\\
- & = & \sqrt{2\sec^{2}\frac{k\pi}{M}\pm2\tan\frac{k\pi}{M}\sec\frac{k\pi}{M}}\\
- & = & \sqrt{2}\frac{\sqrt{1\pm\sin\frac{k\pi}{M}}}{\cos\frac{k\pi}{M}}\\
- & = & \sqrt{\frac{2}{1\mp\sin\frac{k\pi}{M}}}
-\end{eqnarray*}
+\end_layout
 
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\frac{r_{k}^{\pm}}{\sqrt{1+r_{k}^{\pm2}}} & = & \left(\tan\frac{k\pi}{M}\pm\sec\frac{k\pi}{M}\right)\sqrt{\frac{1\mp\sin\frac{k\pi}{M}}{2}}\\
- & = & \frac{\pm\left(1\pm\sin\frac{k\pi}{M}\right)}{\cos\frac{k\pi}{M}}\sqrt{\frac{1\mp\sin\frac{k\pi}{M}}{2}}\\
- & = & \pm\sqrt{\frac{1\pm\sin\frac{k\pi}{M}}{2}}.
-\end{eqnarray*}
-
-\end_inset
-
- Then the raising and lowering operators can be written as 
+\begin_layout Standard
+We want to calculate the leading order perturbation of the ground energy.
+ We know that the first order perturbation is 
 \begin_inset Formula 
 \[
-L_{k}^{+}=\frac{r_{k}^{+}\alpha_{k}+\beta_{k}}{\sqrt{1+r_{k}^{+2}}}=\frac{1}{\sqrt{2}}\left(\sqrt{1+\sin\frac{k\pi}{M}}\alpha_{k}+\sqrt{1-\sin\frac{k\pi}{M}}\beta_{k}\right)
+\Delta E=\frac{\bra{E_{0}}h_{1}\ket{E_{0}}}{\dprod{E_{0}}{E_{0}}},
 \]
 
 \end_inset
 
-
-\begin_inset Formula 
-\[
-L_{k}^{-}=\frac{r_{k}^{-}\alpha_{k}+\beta_{k}}{\sqrt{1+r_{k}^{-2}}}=\frac{1}{\sqrt{2}}\left(-\sqrt{1-\sin\frac{k\pi}{M}}\alpha_{k}+\sqrt{1+\sin\frac{k\pi}{M}}\beta_{k}\right).
-\]
-
+ where 
+\begin_inset Formula $h_{1}$
 \end_inset
 
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\left\{ L_{n}^{+},L_{m}^{+}\right\}  & = & \frac{1}{2}\sqrt{1+\sin\frac{n\pi}{M}}\sqrt{1-\sin\frac{m\pi}{M}}\left(\left\{ \alpha_{n},\beta_{m}\right\} +\left\{ \beta_{n},\alpha_{m}\right\} \right)\\
- & = & \sqrt{1+\sin\frac{n\pi}{M}}\sqrt{1-\sin\frac{n\pi}{M}}\delta_{m+n,M}\\
- & = & \cos\frac{n\pi}{M}\delta_{m+n,M}
-\end{eqnarray*}
-
+ is the perturbative Hamiltonian of 
+\begin_inset Formula $1/N$
 \end_inset
 
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\left\{ L_{n}^{-},L_{m}^{-}\right\}  & = & -\frac{1}{2}\sqrt{1-\sin\frac{n\pi}{M}}\sqrt{1+\sin\frac{m\pi}{M}}\left(\left\{ \alpha_{n},\beta_{m}\right\} +\left\{ \beta_{n,}\alpha_{m}\right\} \right)\\
- & = & -\cos\frac{n\pi}{M}\delta_{m+n,M}
-\end{eqnarray*}
-
+ order.
+ Specifically, 
+\begin_inset Formula $h_{1}$
 \end_inset
 
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\left\{ L_{n}^{+},L_{m}^{-}\right\}  & = & \frac{1}{2}\sqrt{1+\sin\frac{n\pi}{M}}\sqrt{1+\sin\frac{m\pi}{M}}\left\{ \alpha_{n},\beta_{m}\right\} \\
- &  & -\frac{1}{2}\sqrt{1-\sin\frac{n\pi}{M}}\sqrt{1-\sin\frac{m\pi}{M}}\left\{ \beta_{n},\alpha_{m}\right\} \\
- & = & \left[\frac{1}{2}\left(1+\sin\frac{n\pi}{M}\right)-\frac{1}{2}\left(1-\sin\frac{n\pi}{M}\right)\right]\delta_{m+n,M}\\
- & = & \sin\frac{n\pi}{M}\delta_{m+n,M}
-\end{eqnarray*}
-
-\end_inset
-
-It follows that 
-\begin_inset Formula 
-\begin{eqnarray*}
-\alpha_{k} & = & \frac{1}{\sqrt{2}}\left(\sqrt{1+\sin\frac{k\pi}{M}}L_{k}^{+}-\sqrt{1-\sin\frac{k\pi}{M}}L_{k}^{-}\right)\\
-\beta_{k} & = & \frac{1}{\sqrt{2}}\left(\sqrt{1-\sin\frac{k\pi}{M}}L_{k}^{+}+\sqrt{1+\sin\frac{k\pi}{M}}L_{k}^{-}\right).
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\alpha_{k}\alpha_{M-k} & = & \frac{1}{2}\left(\sqrt{1+\sin\frac{k\pi}{M}}L_{k}^{+}-\sqrt{1-\sin\frac{k\pi}{M}}L_{k}^{-}\right)\left(\sqrt{1+\sin\frac{k\pi}{M}}L_{M-k}^{+}-\sqrt{1-\sin\frac{k\pi}{M}}L_{M-k}^{-}\right)\\
- & = & \frac{1}{2}\left(1+\sin\frac{k\pi}{M}\right)L_{k}^{+}L_{M-k}^{+}+\frac{1}{2}\left(1-\sin\frac{k\pi}{M}\right)L_{k}^{-}L_{M-k}^{-}+\frac{1}{2}\cos\frac{k\pi}{M}\left(L_{k}^{+}L_{M-k}^{-}-L_{k}^{-}L_{M-k}^{+}\right)
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\beta_{k}\beta_{M-n} & = & \frac{1}{2}\left(\sqrt{1-\sin\frac{k\pi}{M}}L_{k}^{+}+\sqrt{1+\sin\frac{k\pi}{M}}L_{k}^{-}\right)\left(\sqrt{1-\sin\frac{k\pi}{M}}L_{M-k}^{+}+\sqrt{1+\sin\frac{k\pi}{M}}L_{M-k}^{-}\right)\\
- & = & \frac{1}{2}\left(1-\sin\frac{k\pi}{M}\right)L_{k}^{+}L_{M-k}^{+}+\frac{1}{2}\left(1+\sin\frac{k\pi}{M}\right)L_{k}^{-}L_{M-k}^{-}+\frac{1}{2}\cos\frac{k\pi}{M}\left(L_{k}^{+}L_{M-k}^{-}+L_{k}^{-}L_{M-k}^{+}\right)
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\alpha_{k}\beta_{M-k} & = & \frac{1}{2}\left(\sqrt{1+\sin\frac{k\pi}{M}}L_{k}^{+}-\sqrt{1-\sin\frac{k\pi}{M}}L_{k}^{-}\right)\left(\sqrt{1-\sin\frac{k\pi}{M}}L_{M-k}^{+}+\sqrt{1+\sin\frac{k\pi}{M}}L_{M-k}^{-}\right)\\
- & = & \frac{1}{2}\cos\frac{k\pi}{M}\left(L_{k}^{+}L_{M-K}^{+}-L_{k}^{-}L_{M-k}^{-}\right)+\frac{1}{2}\left(1+\sin\frac{k\pi}{M}\right)L_{k}^{+}L_{M-k}^{-}-\frac{1}{2}\left(1-\sin\frac{k\pi}{M}\right)L_{k}^{-}L_{M-k}^{+}
-\end{eqnarray*}
-
-\end_inset
-
- Recall that 
-\begin_inset Formula 
-\begin{eqnarray*}
-h & = & \sum_{n=1}^{M-1}\Big[\left(z_{1}\alpha_{n}\alpha_{M-n}+z_{1}^{\dagger}\beta_{n}\beta_{M-n}\right)\sin\frac{2n\pi}{M}\\
- &  & +2\left(c-\Re\left(z_{2}e^{2\pi in/M}\right)\right)\alpha_{n}\beta_{M-n}\Big]\\
- &  & +2\left(c-\Re z_{2}\right)\alpha_{0}\beta_{0}+\left(c_{3}+c_{4}-c_{1}\right)M.
-\end{eqnarray*}
-
-\end_inset
-
- When 
-\begin_inset Formula $H=H_{0}$
-\end_inset
-
-, the coefficients are 
-\begin_inset Formula $c_{1}=-c_{2}=c_{3}=-c_{4}=c=2$
-\end_inset
-
-, 
-\begin_inset Formula $z_{1}=z_{2}=2$
-\end_inset
-
-, and 
-\begin_inset Formula 
-\begin{align*}
-h & =2\sum_{n=1}^{M-1}\Big[\left(\alpha_{n}\alpha_{M-n}+\beta_{n}\beta_{M-n}\right)\sin\frac{2n\pi}{M}+\left(2-2\cos\frac{2n\pi}{M}\right)\alpha_{n}\beta_{M-n}\Big]+2M\\
- & =2\sum_{n=1}^{M-1}\Big[\left(L_{n}^{+}L_{M-n}^{+}+L_{n}^{-}L_{M-n}^{-}+\cos\frac{n\pi}{M}L_{n}^{+}L_{M-n}^{-}\right)\sin\frac{2n\pi}{M}\\
- & +\left(1-\cos\frac{2n\pi}{M}\right)\cos\frac{n\pi}{M}\left(L_{n}^{+}L_{M-n}^{+}-L_{n}^{-}L_{M-n}^{-}\right)\\
- & +\left(1-\cos\frac{2n\pi}{M}\right)\left(\left(1+\sin\frac{n\pi}{M}\right)L_{n}^{+}L_{M-n}^{-}-\left(1-\sin\frac{n\pi}{M}\right)L_{n}^{-}L_{M-n}^{+}\right)\Big]+2M\\
- & =
-\end{align*}
-
-\end_inset
-
-
+ is the Hamiltonian fission a single trace state into double trace state.
+ 
 \end_layout
 
 \begin_layout Subsection*
@@ -261,16 +159,8 @@ Ground state in trace states
 \end_layout
 
 \begin_layout Standard
-We now want to express ground state in term of trace state.
- Recall that the general energy eigenstate can be written as 
-\begin_inset Formula 
-\[
-\ket{E}=\int d^{M}\theta\Psi\left(\theta_{1}\cdots\theta_{M}\right)\ket{\theta_{1}\cdots\theta_{M}}.
-\]
-
-\end_inset
-
- It follows that 
+We now want to express the ground state in terms of trace states.
+ 
 \begin_inset Formula 
 \begin{eqnarray*}
 \ket{E_{0}} & = & \int d^{M}\theta\prod_{k=1}^{\left\lfloor M/2\right\rfloor }\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right)\ket{\theta_{1}\cdots\theta_{M}}\\
@@ -280,11 +170,11 @@ We now want to express ground state in term of trace state.
 
 \end_inset
 
-Let us consider the case of odd 
+Let us consider only the odd 
 \begin_inset Formula $M$
 \end_inset
 
-.
+ case.
  Clearly 
 \begin_inset Formula 
 \[
@@ -320,9 +210,9 @@ Let us consider the case of odd
 
  where 
 \begin_inset Formula 
-\[
-A_{n}=\sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(\sec\frac{k\pi}{M}-\tan\frac{k\pi}{M}\right)\sin\frac{2kn\pi}{M}.
-\]
+\begin{equation}
+A_{n}=\sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(\sec\frac{k\pi}{M}-\tan\frac{k\pi}{M}\right)\sin\frac{2kn\pi}{M}.\label{eq:An_0}
+\end{equation}
 
 \end_inset
 
@@ -334,7 +224,7 @@ A_{M-n}=-A_{n},
 
 \end_inset
 
- we can simplify 
+we can simplify 
 \begin_inset Formula $\ket{E_{0}}^{\left(1\right)}$
 \end_inset
 
@@ -444,12 +334,28 @@ reference "eq:An_recursive_1"
  yields 
 \begin_inset Formula 
 \begin{equation}
-A_{n}=\cot\frac{2n-1}{2M}\pi-A_{n-1},\quad n\geq2\label{eq:A_n}
+A_{n}=\cot\frac{2n-1}{2M}\pi-A_{n-1},\quad n\geq2.\label{eq:A_n}
 \end{equation}
 
 \end_inset
 
- and 
+ From Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:An_0"
+
+\end_inset
+
+, we can calculate 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $A_{\left\lfloor M/2\right\rfloor }$
+\end_inset
+
+ directly: 
 \begin_inset Formula 
 \begin{eqnarray*}
 A_{1} & = & 2\sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(\sin\frac{k\pi}{M}-\sin^{2}\frac{k\pi}{M}\right)\\
@@ -464,7 +370,7 @@ A_{1} & = & 2\sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(\sin\frac{k\pi}{M}
 \begin_inset Formula 
 \begin{eqnarray*}
 A_{\left\lfloor M/2\right\rfloor } & = & -\sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(-1\right)^{k}\left(\sec\frac{k\pi}{M}-\tan\frac{k\pi}{M}\right)\sin\frac{k\pi}{M}\\
- & = & \sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(-1\right)^{k}\left(\sec\frac{k\pi}{M}-\cos\frac{k\pi}{M}-\tan\frac{k\pi}{M}\right)
+ & = & \sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(-1\right)^{k}\left(\sec\frac{k\pi}{M}-\cos\frac{k\pi}{M}-\tan\frac{k\pi}{M}\right).
 \end{eqnarray*}
 
 \end_inset
@@ -480,7 +386,7 @@ Let us calculate the norm of
 , 
 \begin_inset Formula 
 \[
-\dprod{E_{0}}{E_{0}}^{\left(1\right)}\sim4\sum_{n=1}^{\left\lfloor M/2\right\rfloor }A_{n}^{2}.
+\dprod{E_{0}}{E_{0}}^{\left(1\right)}=4\sum_{n=1}^{\left\lfloor M/2\right\rfloor }A_{n}^{2}+\mathcal{O}\left(\frac{1}{N}\right).
 \]
 
 \end_inset
@@ -514,14 +420,22 @@ nA_{n}^{2}=n\cot^{2}\frac{2n-1}{2M}\pi-2nA_{n-1}\cot\frac{2n-1}{2M}\pi+nA_{n-1}^
 
  It follows that
 \begin_inset Formula 
-\begin{eqnarray*}
-\sum_{n=1}^{\left\lfloor M/2\right\rfloor }A_{n}^{2} & = & \sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left[2\left(n+1\right)A_{n}\cot\frac{2n+1}{2M}\pi-n\cot^{2}\frac{2n-1}{2M}\pi\right]\\
- &  & +\frac{M+1}{2}A_{\left\lfloor M/2\right\rfloor }^{2}-A_{1}^{2}+\cot^{2}\frac{\pi}{2M}
-\end{eqnarray*}
+\begin{eqnarray}
+\sum_{n=1}^{\left\lfloor M/2\right\rfloor }A_{n}^{2} & = & \sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left[2\left(n+1\right)A_{n}\cot\frac{2n+1}{2M}\pi-n\cot^{2}\frac{2n-1}{2M}\pi\right]\nonumber \\
+ &  & +\frac{M+1}{2}A_{\left\lfloor M/2\right\rfloor }^{2}-A_{1}^{2}+\cot^{2}\frac{\pi}{2M}.\label{eq:An_sqaure}
+\end{eqnarray}
 
 \end_inset
 
+ The first term on RHS of Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:An_sqaure"
 
+\end_inset
+
+ can be further simplied: 
 \begin_inset Formula 
 \[
 nA_{n}\cot\frac{2n-1}{2M}\pi=n\cot^{2}\frac{2n-1}{2M}\pi-nA_{n-1}\cos\frac{2n-1}{2M}\pi
@@ -542,12 +456,20 @@ nA_{n}\cot\frac{2n-1}{2M}\pi=n\cot^{2}\frac{2n-1}{2M}\pi-nA_{n-1}\cos\frac{2n-1}
 
 \begin_inset Formula 
 \[
-\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(n+1\right)A_{n}\cos\frac{2n+1}{2M}\pi=\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(n\cot^{2}\frac{2n-1}{2M}\pi-nA_{n}\cot\frac{2n-1}{2M}\pi\right)+A_{1}\cot\frac{\pi}{2M}-\cot^{2}\frac{\pi}{2M}
+\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(n+1\right)A_{n}\cos\frac{2n+1}{2M}\pi=\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(n\cot^{2}\frac{2n-1}{2M}\pi-nA_{n}\cot\frac{2n-1}{2M}\pi\right)+A_{1}\cot\frac{\pi}{2M}-\cot^{2}\frac{\pi}{2M}.
 \]
 
 \end_inset
 
+ Hence, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:An_sqaure"
 
+\end_inset
+
+ becomes
 \begin_inset Formula 
 \begin{eqnarray*}
 \sum_{n=1}^{\left\lfloor M/2\right\rfloor }A_{n}^{2} & = & 2\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(n\cot^{2}\frac{2n-1}{2M}\pi-nA_{n}\cot\frac{2n-1}{2M}\pi\right)\\
@@ -562,23 +484,9 @@ nA_{n}\cot\frac{2n-1}{2M}\pi=n\cot^{2}\frac{2n-1}{2M}\pi-nA_{n-1}\cos\frac{2n-1}
 
 \begin_inset Formula 
 \begin{eqnarray*}
-A_{n} & = & \sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(\sec\frac{k\pi}{M}-\tan\frac{k\pi}{M}\right)\sin\frac{2kn\pi}{M}\\
- & = & \sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(\sec\frac{k\pi}{M}-\tan\frac{k\pi}{M}\right)\sin\frac{k\left(2n-1\right)+k}{M}\pi\\
- & = & \sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(\sec\frac{k\pi}{M}-\tan\frac{k\pi}{M}\right)\left[\sin\frac{k\left(2n-1\right)}{M}\pi\cos\frac{k\pi}{M}+\cos\frac{k\left(2n-1\right)}{M}\pi\sin\frac{k\pi}{M}\right]\\
- & = & \sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(1-\sin\frac{k\pi}{M}\right)\sin\frac{k\left(2n-1\right)}{M}\pi\\
- &  & +\sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(\tan\frac{k\pi}{M}-\tan\frac{k\pi}{M}\sin\frac{k\pi}{M}\right)\cos\frac{k\left(2n-1\right)}{M}\pi\\
- & = & \sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(1-\sin\frac{k\pi}{M}\right)\sin\frac{k\left(2n-1\right)}{M}\pi\\
- &  & +\sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(\tan\frac{k\pi}{M}-\sec\frac{k\pi}{M}+\cos\frac{k\pi}{M}\right)\cos\frac{k\left(2n-1\right)}{M}\pi\\
- & \equiv & B_{n}+C_{n}
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-C_{n} & = & \sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(\tan\frac{k\pi}{M}-\sec\frac{k\pi}{M}+\cos\frac{k\pi}{M}\right)\cos\frac{k\left(2n-1\right)}{M}\pi\\
- & = & \sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(\tan\frac{k\pi}{M}-\sec\frac{k\pi}{M}+\cos\frac{k\pi}{M}\right)\left(\cos\frac{k\left(2n-2\right)}{M}\pi\cos\frac{k\pi}{M}-\sin\frac{k\left(2n-2\right)}{M}\pi\sin\frac{k\pi}{M}\right)
+\dprod{E_{0}}{E_{0}}^{\left(1\right)} & \approx & \sum_{n=1}^{\left\lfloor M/2\right\rfloor }A_{n}^{2}\\
+ & = & \sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(n\cot^{2}\frac{2n-1}{2M}\pi-2nA_{n}\cot\frac{2n-1}{2M}\pi\right)\\
+ &  & +\frac{M+1}{2}A_{\left\lfloor M/2\right\rfloor }^{2}-A_{1}^{2}+2A_{1}\cot\frac{\pi}{2M}-\cot^{2}\frac{\pi}{2M}.
 \end{eqnarray*}
 
 \end_inset
