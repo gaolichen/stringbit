@@ -309,11 +309,11 @@ Let us consider the case of odd
 \begin{align*}
 \ket{E_{0}}^{\left(1\right)} & =\sum_{k=1}^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\, r_{k}^{-}\alpha_{k}\alpha_{M-k}\ket{\theta_{1}\cdots\theta_{M}}\\
  & =-\frac{2i}{M}\sum_{k=1}^{\left\lfloor M/2\right\rfloor }r_{k}^{-}\sum_{i=1}^{M}\sum_{j>i}^{M}\int d^{M}\theta\,\theta_{i}\theta_{j}\sin\frac{2\pi k\left(j-i\right)}{M}\ket{\theta_{1}\cdots\theta_{M}}\\
- & =-\frac{2i}{M}\sum_{k=1}^{\left\lfloor M/2\right\rfloor }r_{k}^{-}\sum_{i=1}^{M}\sum_{j>i}^{M}\sin\frac{2\pi k\left(j-i\right)}{M}\tr\left(\bar{b}^{i-1}\bar{a}\bar{b}^{j-i-1}\bar{a}\bar{b}^{M-j}\right)\\
- & =-\frac{2i}{M}\sum_{i=1}^{M}\sum_{j>i}^{M}\sum_{k=1}^{\left\lfloor M/2\right\rfloor }r_{k}^{-}\sin\frac{2\pi k\left(j-i\right)}{M}\tr\left(\bar{a}\bar{b}^{j-i-1}\bar{a}\bar{b}^{M-j+i-1}\right)\\
- & =-\frac{2i}{M}\sum_{n=1}^{M-1}\left(M-n\right)\sum_{k=1}^{\left\lfloor M/2\right\rfloor }r_{k}^{-}\sin\frac{2nk\pi}{M}\tr\left(\bar{a}\bar{b}^{n-1}\bar{a}\bar{b}^{M-n-1}\right)\\
- & =-2i\sum_{n=1}^{M-1}\left(1-\frac{n}{M}\right)\sum_{k=1}^{\left\lfloor M/2\right\rfloor }r_{k}^{-}\sin\frac{2nk\pi}{M}\tr\left(\bar{a}\bar{b}^{n-1}\bar{a}\bar{b}^{M-n-1}\right)\\
- & \equiv2i\sum_{n=1}^{M-1}\left(1-\frac{n}{M}\right)A_{n}\tr\left(\bar{a}\bar{b}^{n-1}\bar{a}\bar{b}^{M-n-1}\right)
+ & =-\frac{2i}{M}\sum_{k=1}^{\left\lfloor M/2\right\rfloor }r_{k}^{-}\sum_{i=1}^{M}\sum_{j>i}^{M}\left(-1\right)^{j-i}\sin\frac{2\pi k\left(j-i\right)}{M}\tr\left(\bar{b}^{i-1}\bar{a}\bar{b}^{j-i-1}\bar{a}\bar{b}^{M-j}\right)\\
+ & =-\frac{2i}{M}\sum_{i=1}^{M}\sum_{j>i}^{M}\left(-1\right)^{j-i}\sum_{k=1}^{\left\lfloor M/2\right\rfloor }r_{k}^{-}\sin\frac{2\pi k\left(j-i\right)}{M}\tr\left(\bar{a}\bar{b}^{j-i-1}\bar{a}\bar{b}^{M-j+i-1}\right)\\
+ & =-\frac{2i}{M}\sum_{n=1}^{M-1}\left(M-n\right)\left(-1\right)^{n}\sum_{k=1}^{\left\lfloor M/2\right\rfloor }r_{k}^{-}\sin\frac{2nk\pi}{M}\tr\left(\bar{a}\bar{b}^{n-1}\bar{a}\bar{b}^{M-n-1}\right)\\
+ & =-2i\sum_{n=1}^{M-1}\left(1-\frac{n}{M}\right)\left(-1\right)^{n}\sum_{k=1}^{\left\lfloor M/2\right\rfloor }r_{k}^{-}\sin\frac{2nk\pi}{M}\tr\left(\bar{a}\bar{b}^{n-1}\bar{a}\bar{b}^{M-n-1}\right)\\
+ & \equiv2i\sum_{n=1}^{M-1}\left(1-\frac{n}{M}\right)\left(-1\right)^{n}A_{n}\tr\left(\bar{a}\bar{b}^{n-1}\bar{a}\bar{b}^{M-n-1}\right)
 \end{align*}
 
 \end_inset
@@ -341,13 +341,13 @@ A_{M-n}=-A_{n},
  as 
 \begin_inset Formula 
 \begin{eqnarray*}
-\ket{E_{0}}^{\left(1\right)} & = & 2i\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(1-\frac{n}{M}\right)A_{n}\tr\left(\bar{a}\bar{b}^{n-1}\bar{a}\bar{b}^{M-n-1}\right)\\
- &  & +2i\sum_{n=\left\lfloor M/2\right\rfloor +1}^{M-1}\left(1-\frac{n}{M}\right)A_{n}\tr\left(\bar{a}\bar{b}^{n-1}\bar{a}\bar{b}^{M-n-1}\right)\\
- & = & 2i\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(1-\frac{n}{M}\right)A_{n}\tr\left(\bar{a}\bar{b}^{n-1}\bar{a}\bar{b}^{M-n-1}\right)\\
- &  & +2i\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(1-\frac{M-n}{M}\right)A_{M-n}\tr\left(\bar{a}\bar{b}^{M-n-1}\bar{a}\bar{b}^{n-1}\right)\\
- & = & 2i\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(1-\frac{n}{M}\right)A_{n}\tr\left(\bar{a}\bar{b}^{n-1}\bar{a}\bar{b}^{M-n-1}\right)\\
- &  & -2i\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\frac{n}{M}A_{n}\tr\left(\bar{a}\bar{b}^{n-1}\bar{a}\bar{b}^{M-n-1}\right)\\
- & = & 2i\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(1-\frac{2n}{M}\right)A_{n}\tr\left(\bar{a}\bar{b}^{n-1}\bar{a}\bar{b}^{M-n-1}\right)
+\ket{E_{0}}^{\left(1\right)} & = & 2i\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(1-\frac{n}{M}\right)\left(-1\right)^{n}A_{n}\tr\left(\bar{a}\bar{b}^{n-1}\bar{a}\bar{b}^{M-n-1}\right)\\
+ &  & +2i\sum_{n=\left\lfloor M/2\right\rfloor +1}^{M-1}\left(1-\frac{n}{M}\right)\left(-1\right)^{n}A_{n}\tr\left(\bar{a}\bar{b}^{n-1}\bar{a}\bar{b}^{M-n-1}\right)\\
+ & = & 2i\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(1-\frac{n}{M}\right)\left(-1\right)^{n}A_{n}\tr\left(\bar{a}\bar{b}^{n-1}\bar{a}\bar{b}^{M-n-1}\right)\\
+ &  & +2i\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(1-\frac{M-n}{M}\right)\left(-1\right)^{M-n}A_{M-n}\tr\left(\bar{a}\bar{b}^{M-n-1}\bar{a}\bar{b}^{n-1}\right)\\
+ & = & 2i\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(1-\frac{n}{M}\right)\left(-1\right)^{n}A_{n}\tr\left(\bar{a}\bar{b}^{n-1}\bar{a}\bar{b}^{M-n-1}\right)\\
+ &  & +2i\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\frac{n}{M}\left(-1\right)^{n}A_{n}\tr\left(\bar{a}\bar{b}^{n-1}\bar{a}\bar{b}^{M-n-1}\right)\\
+ & = & 2i\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(-1\right)^{n}A_{n}\tr\left(\bar{a}\bar{b}^{n-1}\bar{a}\bar{b}^{M-n-1}\right)
 \end{eqnarray*}
 
 \end_inset
@@ -480,7 +480,7 @@ Let us calculate the norm of
 , 
 \begin_inset Formula 
 \[
-\dprod{E_{0}}{E_{0}}^{\left(1\right)}\sim4\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(1-\frac{4n}{M}+\frac{4n^{2}}{M^{2}}\right)A_{n}^{2}.
+\dprod{E_{0}}{E_{0}}^{\left(1\right)}\sim4\sum_{n=1}^{\left\lfloor M/2\right\rfloor }A_{n}^{2}.
 \]
 
 \end_inset
@@ -524,7 +524,7 @@ nA_{n}^{2}=n\cot^{2}\frac{2n-1}{2M}\pi-2nA_{n-1}\cot\frac{2n-1}{2M}\pi+nA_{n-1}^
 
 \begin_inset Formula 
 \[
-n^{2}A_{n}^{2}=n^{2}\cot^{2}\frac{2n-1}{2M}\pi-2n^{2}A_{n-1}\cot\frac{2n-1}{2M}\pi+n^{2}A_{n-1}^{2}
+nA_{n}\cot\frac{2n-1}{2M}\pi=n\cot^{2}\frac{2n-1}{2M}\pi-nA_{n-1}\cos\frac{2n-1}{2M}\pi
 \]
 
 \end_inset
@@ -532,20 +532,9 @@ n^{2}A_{n}^{2}=n^{2}\cot^{2}\frac{2n-1}{2M}\pi-2n^{2}A_{n-1}\cot\frac{2n-1}{2M}\
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\sum_{n=1}^{\left\lfloor M/2\right\rfloor }n^{2}A_{n}^{2} & = & \sum_{n=2}^{\left\lfloor M/2\right\rfloor }\left(n^{2}\cot^{2}\frac{2n-1}{2M}\pi-2n^{2}A_{n-1}\cot\frac{2n-1}{2M}\pi+n^{2}A_{n-1}^{2}\right)+A_{1}^{2}\\
- & = & \sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(n^{2}\cot^{2}\frac{2n-1}{2M}\pi-2\left(n+1\right)^{2}A_{n}\cot\frac{2n+1}{2M}\pi+\left(n+1\right)^{2}A_{n}^{2}\right)\\
- &  & -\cot^{2}\frac{\pi}{2M}-\frac{\left(M+1\right)^{2}}{4}A_{\left\lfloor M/2\right\rfloor }^{2}+A_{1}^{2}\\
- & = & \sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(n^{2}\cot^{2}\frac{2n-1}{2M}\pi-2\left(n+1\right)^{2}A_{n}\cot\frac{2n+1}{2M}\pi\right)\\
- &  & +\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(n^{2}+2n+1\right)A_{n}^{2}-\cot^{2}\frac{\pi}{2M}-\frac{\left(M+1\right)^{2}}{4}A_{\left\lfloor M/2\right\rfloor }^{2}+A_{1}^{2}
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\sum_{n=1}^{\left\lfloor M/2\right\rfloor }nA_{n}^{2} & = & \sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(\left(n+1\right)^{2}A_{n}\cot\frac{2n+1}{2M}\pi-\frac{1}{2}n^{2}\cot^{2}\frac{2n-1}{2M}\pi\right)\\
- &  & -\frac{1}{2}\sum_{n=1}^{\left\lfloor M/2\right\rfloor }A_{n}^{2}+\frac{1}{2}\cot^{2}\frac{\pi}{2M}+\frac{\left(M+1\right)^{2}}{8}A_{\left\lfloor M/2\right\rfloor }^{2}-\frac{1}{2}A_{1}^{2}
+\sum_{n=1}^{\left\lfloor M/2\right\rfloor }nA_{n}\cot\frac{2n-1}{2M}\pi & = & \sum_{n=2}^{\left\lfloor M/2\right\rfloor }\left(n\cot^{2}\frac{2n-1}{2M}\pi-nA_{n-1}\cos\frac{2n-1}{2M}\pi\right)+A_{1}\cot\frac{\pi}{2M}\\
+ & = & \sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(n\cot^{2}\frac{2n-1}{2M}\pi-\left(n+1\right)A_{n}\cos\frac{2n+1}{2M}\pi\right)\\
+ &  & +A_{1}\cot\frac{\pi}{2M}-\cot^{2}\frac{\pi}{2M}
 \end{eqnarray*}
 
 \end_inset
@@ -553,7 +542,7 @@ n^{2}A_{n}^{2}=n^{2}\cot^{2}\frac{2n-1}{2M}\pi-2n^{2}A_{n-1}\cot\frac{2n-1}{2M}\
 
 \begin_inset Formula 
 \[
-n^{3}A_{n}^{2}=n^{3}\cot^{2}\frac{2n-1}{2M}\pi-2n^{3}A_{n-1}\cot\frac{2n-1}{2M}\pi+n^{3}A_{n-1}^{2}
+\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(n+1\right)A_{n}\cos\frac{2n+1}{2M}\pi=\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(n\cot^{2}\frac{2n-1}{2M}\pi-nA_{n}\cot\frac{2n-1}{2M}\pi\right)+A_{1}\cot\frac{\pi}{2M}-\cot^{2}\frac{\pi}{2M}
 \]
 
 \end_inset
@@ -561,74 +550,36 @@ n^{3}A_{n}^{2}=n^{3}\cot^{2}\frac{2n-1}{2M}\pi-2n^{3}A_{n-1}\cot\frac{2n-1}{2M}\
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\sum_{n=1}^{\left\lfloor M/2\right\rfloor }n^{3}A_{n}^{2} & = & \sum_{n=2}^{\left\lfloor M/2\right\rfloor }\left(n^{3}\cot^{2}\frac{2n-1}{2M}\pi-2n^{3}A_{n-1}\cot\frac{2n-1}{2M}\pi+n^{3}A_{n-1}^{2}\right)+A_{1}^{2}\\
- & = & \sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(n^{3}\cot^{2}\frac{2n-1}{2M}\pi-2\left(n+1\right)^{3}A_{n}\cot\frac{2n+1}{2M}\pi+\left(n+1\right)^{3}A_{n}^{2}\right)\\
- &  & -\cot^{2}\frac{\pi}{2M}-\left(\frac{M+1}{2}\right)^{3}A_{\left\lfloor M/2\right\rfloor }^{2}+A_{1}^{2}\\
- & = & \sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(n^{3}\cot^{2}\frac{2n-1}{2M}\pi-2\left(n+1\right)^{3}A_{n}\cot\frac{2n+1}{2M}\pi\right)\\
- &  & +\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(n^{3}+3n^{2}+3n+1\right)A_{n}^{2}-\cot^{2}\frac{\pi}{2M}-\left(\frac{M+1}{2}\right)^{3}A_{\left\lfloor M/2\right\rfloor }^{2}+A_{1}^{2}
+\sum_{n=1}^{\left\lfloor M/2\right\rfloor }A_{n}^{2} & = & 2\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(n\cot^{2}\frac{2n-1}{2M}\pi-nA_{n}\cot\frac{2n-1}{2M}\pi\right)\\
+ &  & +2A_{1}\cot\frac{\pi}{2M}-2\cot^{2}\frac{\pi}{2M}-\sum_{n=1}^{\left\lfloor M/2\right\rfloor }n\cot^{2}\frac{2n-1}{2M}\pi\\
+ &  & +\frac{M+1}{2}A_{\left\lfloor M/2\right\rfloor }^{2}-A_{1}^{2}+\cot^{2}\frac{\pi}{2M}\\
+ & = & \sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(n\cot^{2}\frac{2n-1}{2M}\pi-2nA_{n}\cot\frac{2n-1}{2M}\pi\right)\\
+ &  & +\frac{M+1}{2}A_{\left\lfloor M/2\right\rfloor }^{2}-A_{1}^{2}+2A_{1}\cot\frac{\pi}{2M}-\cot^{2}\frac{\pi}{2M}
 \end{eqnarray*}
 
 \end_inset
 
- 
+
 \begin_inset Formula 
 \begin{eqnarray*}
-\sum_{n=1}^{\left\lfloor M/2\right\rfloor }n^{2}A_{n}^{2} & = & \frac{1}{3}\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(2\left(n+1\right)^{3}A_{n}\cot\frac{2n+1}{2M}\pi-n^{3}\cot^{2}\frac{2n-1}{2M}\pi\right)\\
- &  & -\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(n+\frac{1}{3}\right)A_{n}^{2}+\frac{1}{3}\left[\cot^{2}\frac{\pi}{2M}+\left(\frac{M+1}{2}\right)^{3}A_{\left\lfloor M/2\right\rfloor }^{2}-A_{1}^{2}\right]
+A_{n} & = & \sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(\sec\frac{k\pi}{M}-\tan\frac{k\pi}{M}\right)\sin\frac{2kn\pi}{M}\\
+ & = & \sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(\sec\frac{k\pi}{M}-\tan\frac{k\pi}{M}\right)\sin\frac{k\left(2n-1\right)+k}{M}\pi\\
+ & = & \sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(\sec\frac{k\pi}{M}-\tan\frac{k\pi}{M}\right)\left[\sin\frac{k\left(2n-1\right)}{M}\pi\cos\frac{k\pi}{M}+\cos\frac{k\left(2n-1\right)}{M}\pi\sin\frac{k\pi}{M}\right]\\
+ & = & \sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(1-\sin\frac{k\pi}{M}\right)\sin\frac{k\left(2n-1\right)}{M}\pi\\
+ &  & +\sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(\tan\frac{k\pi}{M}-\tan\frac{k\pi}{M}\sin\frac{k\pi}{M}\right)\cos\frac{k\left(2n-1\right)}{M}\pi\\
+ & = & \sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(1-\sin\frac{k\pi}{M}\right)\sin\frac{k\left(2n-1\right)}{M}\pi\\
+ &  & +\sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(\tan\frac{k\pi}{M}-\sec\frac{k\pi}{M}+\cos\frac{k\pi}{M}\right)\cos\frac{k\left(2n-1\right)}{M}\pi\\
+ & \equiv & B_{n}+C_{n}
 \end{eqnarray*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\begin{align*}
-\dprod{E_{0}}{E_{0}}^{\left(1\right)} & \sim4\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(1-\frac{4n}{M}+\frac{4n^{2}}{M^{2}}\right)A_{n}^{2}\\
- & =4\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(1-\frac{4n}{M}\right)A_{n}^{2}-\frac{16}{M^{2}}\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(n+\frac{1}{3}\right)A_{n}^{2}\\
- & +\frac{16}{3M^{2}}\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(2\left(n+1\right)^{3}A_{n}\cot\frac{2n+1}{2M}\pi-n^{3}\cot^{2}\frac{2n-1}{2M}\pi\right)\\
- & +\frac{16}{3M^{2}}\left[\cot^{2}\frac{\pi}{2M}+\left(\frac{M+1}{2}\right)^{3}A_{\left\lfloor M/2\right\rfloor }^{2}-A_{1}^{2}\right]\\
- & =4\left(1-\frac{4}{3M^{2}}\right)\sum_{n=1}^{\left\lfloor M/2\right\rfloor }A_{n}^{2}-\frac{16}{M}\left(1+\frac{1}{M}\right)\sum_{n=1}^{\left\lfloor M/2\right\rfloor }nA_{n}^{2}\\
- & +\frac{16}{3M^{2}}\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(2\left(n+1\right)^{3}A_{n}\cot\frac{2n+1}{2M}\pi-n^{3}\cot^{2}\frac{2n-1}{2M}\pi\right)\\
- & +\frac{16}{3M^{2}}\left[\cot^{2}\frac{\pi}{2M}+\left(\frac{M+1}{2}\right)^{3}A_{\left\lfloor M/2\right\rfloor }^{2}-A_{1}^{2}\right]\\
- & =4\left(1-\frac{4}{3M^{2}}\right)\sum_{n=1}^{\left\lfloor M/2\right\rfloor }A_{n}^{2}\\
- & -\frac{16}{M}\left(1+\frac{1}{M}\right)\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(\left(n+1\right)^{2}A_{n}\cot\frac{2n+1}{2M}\pi-\frac{1}{2}n^{2}\cot^{2}\frac{2n-1}{2M}\pi\right)\\
- & +\frac{8}{M}\left(1+\frac{1}{M}\right)\sum_{n=1}^{\left\lfloor M/2\right\rfloor }A_{n}^{2}\\
- & -\frac{16}{M}\left(1+\frac{1}{M}\right)\left[\frac{1}{2}\cot^{2}\frac{\pi}{2M}+\frac{\left(M+1\right)^{2}}{8}A_{\left\lfloor M/2\right\rfloor }^{2}-\frac{1}{2}A_{1}^{2}\right]\\
- & +\frac{16}{3M^{2}}\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(2\left(n+1\right)^{3}A_{n}\cot\frac{2n+1}{2M}\pi-n^{3}\cot^{2}\frac{2n-1}{2M}\pi\right)\\
- & +\frac{16}{3M^{2}}\left[\cot^{2}\frac{\pi}{2M}+\left(\frac{M+1}{2}\right)^{3}A_{\left\lfloor M/2\right\rfloor }^{2}-A_{1}^{2}\right]\\
- & =4\left(1+\frac{2}{M}+\frac{2}{3M^{2}}\right)\sum_{n=1}^{\left\lfloor M/2\right\rfloor }A_{n}^{2}\\
- & -\frac{16}{M}\left(1+\frac{1}{M}\right)\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(\left(n+1\right)^{2}A_{n}\cot\frac{2n+1}{2M}\pi-\frac{1}{2}n^{2}\cot^{2}\frac{2n-1}{2M}\pi\right)\\
- & +\frac{16}{3M^{2}}\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(2\left(n+1\right)^{3}A_{n}\cot\frac{2n+1}{2M}\pi-n^{3}\cot^{2}\frac{2n-1}{2M}\pi\right)\\
- & +8\left(\frac{1}{M}+\frac{1}{3M^{2}}\right)\left(A_{1}^{2}-\cot^{2}\frac{\pi}{2M}\right)-\frac{4}{3}\frac{\left(M+1\right)^{3}}{M^{2}}A_{\left\lfloor M/2\right\rfloor }^{2}\\
- & =4\left(1+\frac{2}{M}+\frac{2}{3M^{2}}\right)\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left[2\left(n+1\right)A_{n}\cot\frac{2n+1}{2M}\pi-n\cot^{2}\frac{2n-1}{2M}\pi\right]\\
- & +4\left(1+\frac{2}{M}+\frac{2}{3M^{2}}\right)\left(\frac{M+1}{2}A_{\left\lfloor M/2\right\rfloor }^{2}-A_{1}^{2}+\cot^{2}\frac{\pi}{2M}\right)\\
- & -\frac{16}{M}\left(1+\frac{1}{M}\right)\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(\left(n+1\right)^{2}A_{n}\cot\frac{2n+1}{2M}\pi-\frac{1}{2}n^{2}\cot^{2}\frac{2n-1}{2M}\pi\right)\\
- & +\frac{16}{3M^{2}}\sum_{n=1}^{\left\lfloor M/2\right\rfloor }\left(2\left(n+1\right)^{3}A_{n}\cot\frac{2n+1}{2M}\pi-n^{3}\cot^{2}\frac{2n-1}{2M}\pi\right)\\
- & +8\left(\frac{1}{M}+\frac{1}{3M^{2}}\right)\left(A_{1}^{2}-\cot^{2}\frac{\pi}{2M}\right)-\frac{4}{3}\frac{\left(M+1\right)^{3}}{M^{2}}A_{\left\lfloor M/2\right\rfloor }^{2}\\
- & =-4\left(A_{1}^{2}-\cot^{2}\frac{\pi}{2M}\right)+\frac{2}{3}\left(M+3+\frac{2}{M}\right)A_{\left\lfloor M/2\right\rfloor }^{2}\\
- & -4\left(1+\frac{2}{M}+\frac{2}{3M^{2}}\right)\sum_{n=1}^{\left\lfloor M/2\right\rfloor }n\cot^{2}\frac{2n-1}{2M}\pi\\
- & +8\left(\frac{1}{M}+\frac{1}{M^{2}}\right)\sum_{n=1}^{\left\lfloor M/2\right\rfloor }n^{2}\cot^{2}\frac{2n-1}{2M}\pi\\
- & -\frac{16}{3M^{2}}\sum_{n=1}^{\left\lfloor M/2\right\rfloor }n^{3}\cot^{2}\frac{2n-1}{2M}\pi\\
- & +\left[8\left(1+\frac{2}{M}+\frac{2}{3M^{2}}\right)-\frac{16}{M}\left(1+\frac{1}{M}\right)+\frac{32}{3M^{2}}\right]\sum_{n=1}^{\left\lfloor M/2\right\rfloor }A_{n}\cot\frac{2n+1}{2M}\pi\\
- & +\left[8\left(1+\frac{2}{M}+\frac{2}{3M^{2}}\right)-\frac{32}{M}\left(1+\frac{1}{M}\right)+\frac{96}{3M^{2}}\right]\sum_{n=1}^{\left\lfloor M/2\right\rfloor }nA_{n}\cot\frac{2n+1}{2M}\pi\\
- & +\left[-\frac{16}{M}\left(1+\frac{1}{M}\right)+\frac{96}{3M^{2}}\right]\sum_{n=1}^{\left\lfloor M/2\right\rfloor }n^{2}A_{n}\cot\frac{2n+1}{2M}\pi\\
- & +\frac{32}{3M^{2}}\sum_{n=1}^{\left\lfloor M/2\right\rfloor }n^{3}A_{n}\cot\frac{2n+1}{2M}\pi\\
- & =-4\left(A_{1}^{2}-\cot^{2}\frac{\pi}{2M}\right)+\frac{2}{3}\left(M+3+\frac{2}{M}\right)A_{\left\lfloor M/2\right\rfloor }^{2}\\
- & -4\left(1+\frac{2}{M}+\frac{2}{3M^{2}}\right)\sum_{n=1}^{\left\lfloor M/2\right\rfloor }n\cot^{2}\frac{2n-1}{2M}\pi\\
- & +8\left(\frac{1}{M}+\frac{1}{M^{2}}\right)\sum_{n=1}^{\left\lfloor M/2\right\rfloor }n^{2}\cot^{2}\frac{2n-1}{2M}\pi\\
- & -\frac{16}{3M^{2}}\sum_{n=1}^{\left\lfloor M/2\right\rfloor }n^{3}\cot^{2}\frac{2n-1}{2M}\pi\\
- & +8\sum_{n=1}^{\left\lfloor M/2\right\rfloor }A_{n}\cot\frac{2n+1}{2M}\pi\\
- & +\left(8-\frac{16}{M}+\frac{16}{3M^{2}}\right)\sum_{n=1}^{\left\lfloor M/2\right\rfloor }nA_{n}\cot\frac{2n+1}{2M}\pi\\
- & -16\left(\frac{1}{M}-\frac{1}{M^{2}}\right)\sum_{n=1}^{\left\lfloor M/2\right\rfloor }n^{2}A_{n}\cot\frac{2n+1}{2M}\pi\\
- & +\frac{32}{3M^{2}}\sum_{n=1}^{\left\lfloor M/2\right\rfloor }n^{3}A_{n}\cot\frac{2n+1}{2M}\pi
-\end{align*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\sum_{n=1}^{\left\lfloor M/2\right\rfloor }n^{3}\cot^{2}\frac{2n-1}{2M}\pi=
-\]
+\begin{eqnarray*}
+C_{n} & = & \sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(\tan\frac{k\pi}{M}-\sec\frac{k\pi}{M}+\cos\frac{k\pi}{M}\right)\cos\frac{k\left(2n-1\right)}{M}\pi\\
+ & = & \sum_{k=1}^{\left\lfloor M/2\right\rfloor }\left(\tan\frac{k\pi}{M}-\sec\frac{k\pi}{M}+\cos\frac{k\pi}{M}\right)\left(\cos\frac{k\left(2n-2\right)}{M}\pi\cos\frac{k\pi}{M}-\sin\frac{k\left(2n-2\right)}{M}\pi\sin\frac{k\pi}{M}\right)
+\end{eqnarray*}
 
 \end_inset
 
