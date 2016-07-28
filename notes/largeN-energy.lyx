@@ -586,6 +586,43 @@ L_{M-k}^{-}\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right) & = & \left(r_{M-k}^{-
 
 \end_inset
 
+
+\begin_inset Formula 
+\begin{eqnarray*}
+L_{k}^{+}\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right) & = & \left(\alpha_{k}+\frac{1}{r_{k}^{+}}\beta_{k}\right)\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right)\\
+ & = & \alpha_{k}+\frac{r_{k}^{-}}{r_{k}^{+}}\beta_{k}\alpha_{k}\alpha_{M-k}\\
+ & = & \alpha_{k}-\frac{r_{k}^{-}}{r_{k}^{+}}\alpha_{k}\left\{ \beta_{k},\alpha_{M-k}\right\} \\
+ & = & \alpha_{k}\left(1-\frac{r_{k}^{-}}{r_{k}^{+}}\right)\\
+ & = & \alpha_{k}\left(1-\frac{\tan\frac{k\pi}{M}-\sec\frac{k\pi}{M}}{\tan\frac{k\pi}{M}+\sec\frac{k\pi}{M}}\right)\\
+ & = & \alpha_{k}\frac{2\sec\frac{k\pi}{M}}{\tan\frac{k\pi}{M}+\sec\frac{k\pi}{M}}\\
+ & = & \frac{2}{\sin\frac{k\pi}{M}+1}\alpha_{k}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+L_{M-k}^{+}\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right) & = & \left(\alpha_{M-k}+\frac{1}{r_{M-k}^{+}}\beta_{M-k}\right)\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right)\\
+ & = & \alpha_{M-k}+\frac{r_{k}^{-}}{r_{M-k}^{+}}\beta_{M-k}\alpha_{k}\alpha_{M-k}\\
+ & = & \alpha_{M-k}+\frac{r_{k}^{-}}{r_{M-k}^{+}}\left\{ \beta_{M-k},\alpha_{k}\right\} \alpha_{M-k}\\
+ & = & \alpha_{M-k}\left(1+\frac{r_{k}^{-}}{r_{M-k}^{+}}\right)\\
+ & = & \left(1-\frac{r_{k}^{-}}{r_{k}^{+}}\right)\alpha_{M-k}\\
+ & = & \frac{2}{\sin\frac{k\pi}{M}+1}\alpha_{M-k}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+L_{k}^{+}L_{M-k}^{+}\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right) & = & \left(\alpha_{k}+\frac{1}{r_{k}^{+}}\beta_{k}\right)\left(1-\frac{r_{k}^{-}}{r_{k}^{+}}\right)\alpha_{M-k}\\
+ & = & \left(1-\frac{r_{k}^{-}}{r_{k}^{+}}\right)\left(\alpha_{k}\alpha_{M-k}+\frac{1}{r_{k}^{+}}\right)\\
+ & = & \frac{1}{r_{k}^{+}}\left(1-\frac{r_{k}^{-}}{r_{k}^{+}}\right)\left(1+r_{k}^{+}\alpha_{k}\alpha_{M-k}\right)
+\end{eqnarray*}
+
+\end_inset
+
  The function
 \begin_inset Formula 
 \[
