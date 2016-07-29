@@ -1,0 +1,389 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\newcommand{\tr}{\mathrm{Tr}\,}
+\newcommand{\ba}{\bar{a}}
+\newcommand{\bb}{\bar{b}}
+\newcommand{\normord}[1]{{:}\!\mathrel{#1}\!{:}}
+\newcommand{\ket}[1]{\left|#1\right\rangle}
+\newcommand{\bra}[1]{\left\langle #1\right|}
+\newcommand{\ketp}[1]{\left|#1\right\} }
+\newcommand{\brap}[1]{\left\{ #1\right|}
+\newcommand{\dprod}[2]{\left\langle #1|#2\right\rangle}
+\newcommand{\dprodp}[2]{\left\{ #1|#2\right\} }
+\newcommand{\mat}[1]{\mathbf{#1}}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Energy eigenstates
+\end_layout
+
+\begin_layout Standard
+The energy eigenstate of large 
+\begin_inset Formula $N$
+\end_inset
+
+ limit can be written as 
+\begin_inset Formula 
+\[
+\ket{E_{r}}=\int d^{M}\theta\psi_{r}\left(\theta_{1}\cdots\theta_{M}\right)\ket{\theta_{1}\cdots\theta_{M}}.
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ is eigenfunction of 
+\begin_inset Formula $h$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+h\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)=E_{r}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right).
+\]
+
+\end_inset
+
+ The ground energy state can be expressed as 
+\begin_inset Formula 
+\[
+\psi_{0}^{\left(b\right)}=\prod_{k=1}^{\left\lfloor M/2\right\rfloor }\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right)
+\]
+
+\end_inset
+
+ for bosonic eigenfunction and 
+\begin_inset Formula 
+\[
+\psi_{0}^{\left(f\right)}=\alpha_{0}\prod_{k=1}^{\left\lfloor M/2\right\rfloor }\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right)
+\]
+
+\end_inset
+
+ for fermionic eigenfunction.
+ The variables in above formulas are defined as
+\begin_inset Formula 
+\[
+r_{k}^{\pm}=\tan\frac{k\pi}{M}\pm\sec\frac{k\pi}{M},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha_{n} & = & \frac{1}{\sqrt{M}}\sum_{k=1}^{M}\theta_{k}e^{2\pi ikn/M},\quad\beta_{n}=\frac{1}{\sqrt{M}}\sum_{k=1}^{M}\frac{d}{d\theta_{k}}e^{2\pi ikn/M},\\
+\theta_{k} & = & \frac{1}{\sqrt{M}}\sum_{n=0}^{M-1}\alpha_{n}e^{-2\pi ikn/M},\quad\frac{d}{d\theta_{k}}=\frac{1}{\sqrt{M}}\sum_{n=0}^{M-1}\beta_{n}e^{-2\pi ikn/M},\\
+n & = & 0,\dots M-1,\quad k=1,\dots M.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\{ \alpha_{n},\beta_{m}\right\} =\delta_{m+n,M}+\delta_{m,0}\delta_{n,0}.
+\]
+
+\end_inset
+
+ Because of supersymmetry, we only need to consider the bosonic eigenfunction
+ case.
+ For simplicity, we denote 
+\begin_inset Formula $\psi_{r}^{\left(b\right)}$
+\end_inset
+
+ simply as 
+\begin_inset Formula $\psi_{r}$
+\end_inset
+
+.
+ We want to find general expression of 
+\begin_inset Formula $\bar{\psi}_{r}\left(\theta_{1},\cdots,\theta_{M}\right)$
+\end_inset
+
+ that conjugate to 
+\begin_inset Formula $\psi_{r}$
+\end_inset
+
+, i.e., 
+\begin_inset Formula 
+\[
+\int d\theta_{1}\cdots d\theta_{M}\bar{\psi}_{r}\psi_{s}=\delta_{rs}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+First we calculate
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha_{k}\alpha_{M-k} & = & \frac{1}{M}\sum_{i,j=1}^{M}\theta_{i}\theta_{j}e^{2\pi i\left[ik+j\left(M-k\right)\right]/M}\\
+ & = & \frac{1}{M}\sum_{i,j=1}^{M}\theta_{i}\theta_{j}e^{2\pi i\left(i-j\right)k/M}\\
+ & = & \frac{2i}{M}\sum_{i=1}^{M}\sum_{j>i}^{M}\theta_{i}\theta_{j}\sin\frac{2\pi k\left(i-j\right)}{M}\\
+ & = & -\frac{2i}{M}\sum_{i=1}^{M}\sum_{j>i}^{M}\theta_{i}\theta_{j}\sin\frac{2\pi k\left(j-i\right)}{M}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+M=3
+\end_layout
+
+\begin_layout Standard
+Now let us find the expression of 
+\begin_inset Formula $\Phi_{M}$
+\end_inset
+
+ for 
+\begin_inset Formula $M=3$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+\psi_{0}=1+r_{1}^{-}\alpha_{1}\alpha_{2}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\psi_{1}=1+r_{1}^{+}\alpha_{1}\alpha_{2}
+\]
+
+\end_inset
+
+ Suppose 
+\begin_inset Formula 
+\[
+\bar{\psi_{0}}=\alpha_{0}\left(a+b\alpha_{1}\alpha_{2}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\int d\theta_{1}d\theta_{2}d\theta_{3}\bar{\psi}_{0}\psi_{0} & = & \int d\theta_{1}d\theta_{2}d\theta_{3}\alpha_{0}\left(a+b\alpha_{1}\alpha_{2}\right)\left(1+r_{1}^{-}\alpha_{1}\alpha_{2}\right)\\
+ & = & \left(ar_{1}^{-}+b\right)\int d\theta_{1}d\theta_{2}d\theta_{3}\alpha_{0}\alpha_{1}\alpha_{2}\\
+ & = & \left(ar_{1}^{-}+b\right)\int d\theta_{1}d\theta_{2}d\theta_{3}\frac{1}{\sqrt{3}}\left(\theta_{1}+\theta_{2}+\theta_{3}\right)\\
+ &  & \times\left(-\frac{2i}{3}\right)\left(\theta_{1}\theta_{2}\sin\frac{2\pi}{3}+\theta_{2}\theta_{3}\sin\frac{2\pi}{3}+\theta_{1}\theta_{3}\sin\frac{4\pi}{3}\right)\\
+ & = & \left(ar_{1}^{-}+b\right)\cdot\left(-i\right)\\
+ & = & -i\left(ar_{1}^{-}+b\right),
+\end{eqnarray*}
+
+\end_inset
+
+ likewise
+\begin_inset Formula 
+\[
+\int d\theta_{1}d\theta_{2}d\theta_{3}\bar{\psi}_{0}\psi_{0}=-i\left(ar_{1}^{+}+b\right)
+\]
+
+\end_inset
+
+ which implies
+\begin_inset Formula 
+\[
+b=-ar_{1}^{+},\quad a=\frac{i}{r_{1}^{-}-r_{1}^{+}}=-\frac{i}{2\sec\frac{\pi}{3}}=-\frac{i}{4}
+\]
+
+\end_inset
+
+ therefore
+\begin_inset Formula 
+\[
+\bar{\psi}_{0}=-\frac{i}{4}\alpha_{0}\left(1-r_{1}^{+}\alpha_{1}\alpha_{2}\right)
+\]
+
+\end_inset
+
+ likewise, 
+\begin_inset Formula 
+\[
+\bar{\psi}_{1}=\frac{i}{4}\alpha_{0}\left(1-r_{1}^{-}\alpha_{1}\alpha_{2}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+M=5
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\psi_{0}=\left(1+r_{1}^{-}\alpha_{1}\alpha_{4}\right)\left(1+r_{2}^{-}\alpha_{2}\alpha_{3}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\psi_{1}=\left(1+r_{1}^{+}\alpha_{1}\alpha_{4}\right)\left(1+r_{2}^{-}\alpha_{2}\alpha_{3}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\psi_{2}=\left(1+r_{1}^{-}\alpha_{1}\alpha_{4}\right)\left(1+r_{2}^{+}\alpha_{2}\alpha_{3}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\psi_{3}=\left(1+r_{1}^{+}\alpha_{1}\alpha_{4}\right)\left(1+r_{2}^{+}\alpha_{2}\alpha_{3}\right)
+\]
+
+\end_inset
+
+ Suppose
+\begin_inset Formula 
+\[
+\bar{\psi}_{0}=\alpha_{0}\left(a+b\alpha_{1}\alpha_{4}\right)\left(c+d\alpha_{2}\alpha_{3}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\int d^{M}\theta\,\bar{\psi}_{0}\psi_{0} & = & \int d^{M}\theta\,\alpha_{0}\left(a+b\alpha_{1}\alpha_{4}\right)\left(1+r_{1}^{-}\alpha_{1}\alpha_{4}\right)\left(c+d\alpha_{2}\alpha_{3}\right)\left(1+r_{2}^{-}\alpha_{2}\alpha_{3}\right)\\
+ & = & \int d^{M}\theta\,\alpha_{0}\left[a+\left(b+ar_{1}^{-}\right)\alpha_{1}\alpha_{4}\right]\left[c+\left(d+cr_{2}^{-}\right)\alpha_{2}\alpha_{3}\right]\\
+ & = & \left(b+ar_{1}^{-}\right)\left(d+cr_{2}^{-}\right)\int d^{M}\theta\,\alpha_{0}\alpha_{1}\alpha_{4}\alpha_{2}\alpha_{3}\\
+ & \equiv & \left(b+ar_{1}^{-}\right)\left(d+cr_{2}^{-}\right)C_{M}
+\end{eqnarray*}
+
+\end_inset
+
+ likewise
+\begin_inset Formula 
+\[
+\int d^{M}\theta\,\bar{\psi}_{0}\psi_{1}=\left(b+ar_{1}^{+}\right)\left(d+cr_{2}^{-}\right)C_{M}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\int d^{M}\theta\,\bar{\psi}_{0}\psi_{2}=\left(b+ar_{1}^{-}\right)\left(d+cr_{2}^{+}\right)C_{M}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\int d^{M}\theta\,\bar{\psi}_{0}\psi_{3}=\left(b+ar_{1}^{+}\right)\left(d+cr_{2}^{+}\right)C_{M}
+\]
+
+\end_inset
+
+ It follows that
+\begin_inset Formula 
+\[
+b=-ar_{1}^{+},\quad d=-cr_{2}^{+}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\int d^{M}\theta\,\alpha_{0}\alpha_{1}\alpha_{4}\alpha_{2}\alpha_{3} & = & \int d^{M}\theta\,\alpha_{0}\left(-\frac{2i}{5}\right)^{2}\sum_{i=1}^{5}\sum_{j>i}^{5}\sum_{k=1}^{5}\sum_{l>k}^{5}\theta_{i}\theta_{j}\theta_{k}\theta_{l}\sin\frac{2\pi\left(j-i\right)}{5}\sin\frac{4\pi\left(l-k\right)}{5}\\
+ & = & -\frac{4}{25}\int d^{M}\theta\,\alpha_{0}\sum_{i<j<l<l}^{5}\theta_{i}\theta_{j}\theta_{k}\theta_{l}\times\Big[\sin\frac{2\pi\left(j-i\right)}{5}\sin\frac{4\pi\left(l-k\right)}{5}\\
+ &  & -\sin\frac{2\pi\left(k-i\right)}{5}\sin\frac{4\pi\left(l-j\right)}{5}+\sin\frac{2\pi\left(l-i\right)}{5}\sin\frac{4\pi\left(k-j\right)}{5}\Big]\\
+ & = & -\frac{4}{25}\frac{1}{\sqrt{5}}\times2\times\left(\sin\frac{2\pi}{5}\sin\frac{4\pi}{5}-\sin\frac{4\pi}{5}\sin\frac{8\pi}{5}+\sin\frac{8\pi}{5}\sin\frac{4\pi}{5}\right)\\
+ &  & -\frac{4}{25}\frac{1}{\sqrt{5}}\times2\times\left(\sin\frac{2\pi}{5}\sin\frac{4\pi}{5}-\sin\frac{4\pi}{5}\sin\frac{8\pi}{5}+\sin\frac{8\pi}{5}\sin\frac{4\pi}{5}\right)
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\end_layout
+
+\end_body
+\end_document
