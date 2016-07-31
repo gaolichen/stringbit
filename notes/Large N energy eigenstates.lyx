@@ -396,9 +396,49 @@ a=\exp\left(\frac{3\pi}{4}i\right)\sqrt{\cos\frac{k\pi}{M}}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section*
+Another way
+\end_layout
+
+\begin_layout Standard
+We can normalize the coefficient 
+\begin_inset Formula $r_{k}^{\pm}$
+\end_inset
+
+ as 
+\begin_inset Formula 
+\begin{eqnarray*}
+c_{k} & = & \frac{1}{\sqrt{1+r_{k}^{-2}}}=\sqrt{\frac{1+\sin\frac{k\pi}{M}}{2}}\equiv\cos\eta\\
+s_{k} & = & -\frac{r_{k}^{-}}{\sqrt{1+r_{k}^{-2}}}=\sqrt{\frac{1-\sin\frac{k\pi}{M}}{2}}\equiv\sin\eta
+\end{eqnarray*}
+
+\end_inset
+
+
 \begin_inset Formula 
 \[
-\Phi=\prod_{k=1}^{\left\lfloor M/2\right\rfloor }\frac{1}{\sqrt{2}}\left(\sqrt{1+\sin\frac{k\pi}{M}}-\sqrt{1-\sin\frac{k\pi}{M}}\alpha_{k}\alpha_{M-k}\right)\equiv\prod_{k=1}^{\left\lfloor M/2\right\rfloor }\phi_{k}
+c_{k}^{2}+s_{k}^{2}=1,\quad c_{k}^{2}-s_{k}^{2}=\sin\frac{k\pi}{M}
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\Phi=\prod_{k=1}^{\left\lfloor M/2\right\rfloor }\frac{1}{\sqrt{1+r_{k}^{-2}}}\left(1-r_{k}^{-}\alpha_{M-k}\alpha_{k}\right)=\prod_{k=1}^{\left\lfloor M/2\right\rfloor }\left(c_{k}+s_{k}\alpha_{M-k}\alpha_{k}\right)\equiv\prod_{k=1}^{\left\lfloor M/2\right\rfloor }\phi_{k}
+\]
+
+\end_inset
+
+ Then
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+L_{k}^{+}=c_{k}\alpha_{k}+s_{k}\beta_{k},\quad L_{M-k}^{+}=c_{k}\alpha_{M-k}+s_{k}\beta_{M-k}
 \]
 
 \end_inset
@@ -406,15 +446,7 @@ a=\exp\left(\frac{3\pi}{4}i\right)\sqrt{\cos\frac{k\pi}{M}}
 
 \begin_inset Formula 
 \[
-L_{k}^{+}=\frac{1}{\sqrt{2}}\left(\sqrt{1+\sin\frac{k\pi}{M}}\alpha_{k}+\sqrt{1-\sin\frac{k\pi}{M}}\beta_{k}\right)
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-L_{k}^{-}=\frac{1}{\sqrt{2}}\left(-\sqrt{1-\sin\frac{k\pi}{M}}\alpha_{k}+\sqrt{1+\sin\frac{k\pi}{M}}\beta_{k}\right)
+L_{k}^{-}=-s_{k}\alpha_{k}+c_{k}\beta_{k},\quad L_{M-k}^{-}=-s_{k}\alpha_{M-k}+c_{k}\beta_{M-k}
 \]
 
 \end_inset
@@ -422,9 +454,9 @@ L_{k}^{-}=\frac{1}{\sqrt{2}}\left(-\sqrt{1-\sin\frac{k\pi}{M}}\alpha_{k}+\sqrt{1
 
 \begin_inset Formula 
 \begin{eqnarray*}
-L_{k}^{+}\phi_{k} & = & \frac{1}{2}\left(\sqrt{1+\sin\frac{k\pi}{M}}\alpha_{k}+\sqrt{1-\sin\frac{k\pi}{M}}\beta_{k}\right)\left(\sqrt{1+\sin\frac{k\pi}{M}}-\sqrt{1-\sin\frac{k\pi}{M}}\alpha_{k}\alpha_{M-k}\right)\\
- & = & \frac{1}{2}\left(1+\sin\frac{k\pi}{M}\right)\alpha_{k}-\frac{1}{2}\left(1-\sin\frac{k\pi}{M}\right)\beta_{k}\alpha_{k}\alpha_{M-k}\\
- & = & \frac{1}{2}\left(1+\sin\frac{k\pi}{M}\right)\alpha_{k}+\frac{1}{2}\left(1-\sin\frac{k\pi}{M}\right)\alpha_{k}\\
+L_{k}^{+}\phi_{k} & = & \left(c_{k}\alpha_{k}+s_{k}\beta_{k}\right)\left(c_{k}+s_{k}\alpha_{M-k}\alpha_{k}\right)\\
+ & = & c_{k}^{2}\alpha_{k}+s_{k}^{2}\beta_{k}\alpha_{M-k}\alpha_{k}\\
+ & = & c_{k}^{2}\alpha_{k}+s_{k}^{2}\alpha_{k}\\
  & = & \alpha_{k}
 \end{eqnarray*}
 
@@ -433,10 +465,10 @@ L_{k}^{+}\phi_{k} & = & \frac{1}{2}\left(\sqrt{1+\sin\frac{k\pi}{M}}\alpha_{k}+\
 
 \begin_inset Formula 
 \begin{eqnarray*}
-L_{M-k}^{+}\phi_{k} & = & \frac{1}{2}\left(\sqrt{1+\sin\frac{k\pi}{M}}\alpha_{M-k}+\sqrt{1-\sin\frac{k\pi}{M}}\beta_{M-k}\right)\left(\sqrt{1+\sin\frac{k\pi}{M}}-\sqrt{1-\sin\frac{k\pi}{M}}\alpha_{k}\alpha_{M-k}\right)\\
- & = & \frac{1}{2}\left(1+\sin\frac{k\pi}{M}\right)\alpha_{M-k}-\frac{1}{2}\left(1-\sin\frac{k\pi}{M}\right)\beta_{M-k}\alpha_{k}\alpha_{M-k}\\
- & = & \frac{1}{2}\left(1+\sin\frac{k\pi}{M}\right)\alpha_{M-k}-\frac{1}{2}\left(1-\sin\frac{k\pi}{M}\right)\alpha_{M-k}\\
- & = & \sin\frac{k\pi}{M}\alpha_{M-k}
+L_{M-k}^{+}\phi_{k} & = & \left(c_{k}\alpha_{M-k}+s_{k}\beta_{M-k}\right)\left(c_{k}+s_{k}\alpha_{M-k}\alpha_{k}\right)\\
+ & = & c_{k}^{2}\alpha_{M-k}+s_{k}^{2}\beta_{M-k}\alpha_{M-k}\alpha_{k}\\
+ & = & c_{k}^{2}\alpha_{M-k}-s_{k}^{2}\alpha_{M-k}\\
+ & = & \alpha_{M-k}\sin\frac{k\pi}{M}
 \end{eqnarray*}
 
 \end_inset
@@ -444,9 +476,8 @@ L_{M-k}^{+}\phi_{k} & = & \frac{1}{2}\left(\sqrt{1+\sin\frac{k\pi}{M}}\alpha_{M-
 
 \begin_inset Formula 
 \begin{eqnarray*}
-L_{k}^{-}\phi_{k} & = & \frac{1}{2}\left(-\sqrt{1-\sin\frac{k\pi}{M}}\alpha_{k}+\sqrt{1+\sin\frac{k\pi}{M}}\beta_{k}\right)\left(\sqrt{1+\sin\frac{k\pi}{M}}-\sqrt{1-\sin\frac{k\pi}{M}}\alpha_{k}\alpha_{M-k}\right)\\
- & = & \frac{1}{2}\left(-\cos\frac{k\pi}{M}\alpha_{k}-\cos\frac{k\pi}{M}\beta_{k}\alpha_{k}\alpha_{M-k}\right)\\
- & = & \frac{1}{2}\left(-\cos\frac{k\pi}{M}\alpha_{k}+\cos\frac{k\pi}{M}\beta_{k}\alpha_{k}\right)\\
+L_{k}^{-}\phi_{k} & = & \left(-s_{k}\alpha_{k}+c_{k}\beta_{k}\right)\left(c_{k}+s_{k}\alpha_{M-k}\alpha_{k}\right)\\
+ & = & -\alpha_{k}s_{k}c_{k}+s_{k}c_{k}\beta_{k}\alpha_{M-k}\alpha_{k}\\
  & = & 0
 \end{eqnarray*}
 
@@ -455,9 +486,9 @@ L_{k}^{-}\phi_{k} & = & \frac{1}{2}\left(-\sqrt{1-\sin\frac{k\pi}{M}}\alpha_{k}+
 
 \begin_inset Formula 
 \begin{eqnarray*}
-L_{M-k}^{-}\phi_{k} & = & \frac{1}{2}\left(-\sqrt{1-\sin\frac{k\pi}{M}}\alpha_{M-k}+\sqrt{1+\sin\frac{k\pi}{M}}\beta_{M-k}\right)\left(\sqrt{1+\sin\frac{k\pi}{M}}-\sqrt{1-\sin\frac{k\pi}{M}}\alpha_{k}\alpha_{M-k}\right)\\
- & = & \frac{1}{2}\left(-\cos\frac{k\pi}{M}\alpha_{M-k}-\cos\frac{k\pi}{M}\beta_{M-k}\alpha_{k}\alpha_{M-k}\right)\\
- & = & \frac{1}{2}\left(-\cos\frac{k\pi}{M}\alpha_{M-k}-\cos\frac{k\pi}{M}\alpha_{M-k}\right)\\
+L_{M-k}^{-}\phi_{k} & = & \left(-s_{k}\alpha_{M-k}+c_{k}\beta_{M-k}\right)\left(c_{k}+s_{k}\alpha_{M-k}\alpha_{k}\right)\\
+ & = & -s_{k}c_{k}\alpha_{M-k}+s_{k}c_{k}\beta_{M-k}\alpha_{M-k}\alpha_{k}\\
+ & = & -s_{k}c_{k}\alpha_{M-k}+s_{k}c_{k}\alpha_{M-k}\\
  & = & 0
 \end{eqnarray*}
 
@@ -467,8 +498,8 @@ L_{M-k}^{-}\phi_{k} & = & \frac{1}{2}\left(-\sqrt{1-\sin\frac{k\pi}{M}}\alpha_{M
 \begin_inset Formula 
 \begin{eqnarray*}
 L_{M-k}^{+}L_{k}^{+}\phi_{k} & = & L_{M-k}^{+}\alpha_{k}\\
- & = & \frac{1}{\sqrt{2}}\left(\sqrt{1+\sin\frac{k\pi}{M}}\alpha_{M-k}+\sqrt{1-\sin\frac{k\pi}{M}}\beta_{M-k}\right)\alpha_{k}\\
- & = & \frac{1}{\sqrt{2}}\left(\sqrt{1-\sin\frac{k\pi}{M}}-\sqrt{1+\sin\frac{k\pi}{M}}\alpha_{k}\alpha_{M-k}\right)
+ & = & \left(c_{k}\alpha_{M-k}+s_{k}\beta_{M-k}\right)\alpha_{k}\\
+ & = & s_{k}+c_{k}\alpha_{M-k}\alpha_{k}
 \end{eqnarray*}
 
 \end_inset
@@ -476,14 +507,347 @@ L_{M-k}^{+}L_{k}^{+}\phi_{k} & = & L_{M-k}^{+}\alpha_{k}\\
 
 \begin_inset Formula 
 \begin{eqnarray*}
-L_{k}^{+}L_{M-k}^{+}\phi_{k} & = & L_{k}^{+}\sin\frac{k\pi}{M}\alpha_{M-k}\\
- & = & \frac{1}{\sqrt{2}}\left(\sqrt{1+\sin\frac{k\pi}{M}}\alpha_{k}+\sqrt{1-\sin\frac{k\pi}{M}}\beta_{k}\right)\sin\frac{k\pi}{M}\alpha_{M-k}\\
- & = & \frac{1}{\sqrt{2}}\left(\sqrt{1+\sin\frac{k\pi}{M}}\alpha_{k}\alpha_{M-k}+\sqrt{1-\sin\frac{k\pi}{M}}\right)\sin\frac{k\pi}{M}
+L_{k}^{+}L_{M-k}^{+}\phi_{k} & = & L_{k}^{+}\alpha_{M-k}\sin\frac{k\pi}{M}\\
+ & = & \left(c_{k}\alpha_{k}+s_{k}\beta_{k}\right)\alpha_{M-k}\sin\frac{k\pi}{M}\\
+ & = & \left(s_{k}-c_{k}\alpha_{M-k}\alpha_{k}\right)\sin\frac{k\pi}{M}
+\end{eqnarray*}
+
+\end_inset
+
+It follows a general form a eigenfunction can be expressed as
+\begin_inset Formula 
+\[
+\psi^{b}=\prod_{i\in S_{1}}\left(\sin\frac{i\pi}{M}\right)^{-1/2}\left(c_{i}+s_{i}\alpha_{M-i}\alpha_{i}\right)\prod_{j\in S_{2}}\left(\sin\frac{j\pi}{M}\right)^{-1/2}\left(s_{j}+c_{j}\alpha_{M-j}\alpha_{j}\right)\normord{\prod_{k\in S_{3}}\alpha_{k}\prod_{l\in S_{4}}\alpha_{M-l}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\psi^{f}=\alpha_{0}\prod_{i\in S_{1}}\left(\sin\frac{i\pi}{M}\right)^{-1/2}\left(c_{i}+s_{i}\alpha_{M-i}\alpha_{i}\right)\prod_{j\in S_{2}}\left(\sin\frac{j\pi}{M}\right)^{-1/2}\left(s_{j}+c_{j}\alpha_{M-j}\alpha_{j}\right)\normord{\prod_{k\in S_{3}}\alpha_{k}\prod_{l\in S_{4}}\alpha_{M-l}}
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $S_{i}$
+\end_inset
+
+ are four sets satisfying 
+\begin_inset Formula 
+\[
+\cup_{i}S_{i}=\left\{ 1,2,\cdots,\frac{M-1}{2}\right\} ,\quad S_{i}\cap S_{j}=\emptyset,\,\forall i,j
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sum_{i\in S_{3}}i+\sum_{j\in S_{4}}j=nM,\quad\text{for some integer }n
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The conjugate of 
+\begin_inset Formula $\psi$
+\end_inset
+
+ can be written as 
+\begin_inset Formula 
+\[
+\bar{\psi}^{b}=\left(-1\right)^{\left|S_{3}\right|}i^{\left(M-1\right)/2}\alpha_{0}\prod_{i\in S_{1}}\left(\sin\frac{i\pi}{M}\right)^{-1/2}\left(s_{i}+d_{i}\alpha_{i}+d_{M-i}\alpha_{M-i}+c_{i}\alpha_{i}\alpha_{M-i}\right)\prod_{j\in S_{2}}\left(\sin\frac{j\pi}{M}\right)^{-1/2}\left(c_{j}+s_{j}\alpha_{j}\alpha_{M-j}\right)\normord{\prod_{k\in S_{3}}\alpha_{M-k}\prod_{l\in S_{4}}\alpha_{l}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\bar{\psi}^{f}=\left(-1\right)^{\left|S_{3}\right|}i^{\left(M-1\right)/2}\prod_{i\in S_{1}}\left(\sin\frac{i\pi}{M}\right)^{-1/2}\left(s_{i}+c_{i}\alpha_{i}\alpha_{M-i}\right)\prod_{j\in S_{2}}\left(\sin\frac{j\pi}{M}\right)^{-1/2}\left(c_{j}+s_{j}\alpha_{j}\alpha_{M-j}\right)\normord{\prod_{k\in S_{3}}\alpha_{M-k}\prod_{l\in S_{4}}\alpha_{l}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\int d^{M}\theta\,\bar{\psi}\psi & = & i^{\left(M-1\right)/2}\int d^{M}\theta\,\alpha_{0}\prod_{i\in S_{1}}\csc\frac{i\pi}{M}\left(s_{i}+c_{i}\alpha_{i}\alpha_{M-i}\right)\left(c_{i}+s_{i}\alpha_{M-i}\alpha_{i}\right)\\
+ &  & \times\prod_{j\in S_{2}}\csc\frac{j\pi}{M}\left(c_{j}+s_{j}\alpha_{j}\alpha_{M-j}\right)\left(s_{j}+c_{j}\alpha_{M-j}\alpha_{j}\right)\\
+ &  & \times\prod_{k\in S_{3}}\alpha_{k}\alpha_{M-k}\times\prod_{l\in S_{4}}\alpha_{l}\alpha_{M-l}\\
+ & = & i^{\left(M-1\right)/2}\int d^{M}\theta\,\alpha_{0}\prod_{i\in W}\alpha_{i}\alpha_{M-i}\times\prod_{j\in X}\alpha_{j}\alpha_{M-j}\\
+ &  & \times\prod_{k\in Y}\alpha_{k}\alpha_{M-k}\times\prod_{l\in Z}\alpha_{l}\alpha_{M-l}\\
+ & = & i^{\left(M-1\right)/2}\int d^{M}\theta\,\alpha_{0}\prod_{k=1}^{\left\lfloor M/2\right\rfloor }\alpha_{k}\alpha_{M-k}\\
+ & = & i^{\left(M-1\right)/2}\left(-i\right)^{\left(M-1\right)/2}\\
+ & = & 1
+\end{eqnarray*}
+
+\end_inset
+
+where we used
+\begin_inset Formula 
+\[
+\int d^{M}\theta\,\prod_{i=0}^{M-1}\alpha_{i}=\left(-i\right)^{\left(M-2\right)/2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+M=3
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $M=3$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\psi_{0}^{b}\left(\theta\right) & = & \left(\sin\frac{\pi}{3}\right)^{-1/2}\left(c_{1}+s_{1}\alpha_{2}\alpha_{1}\right)\\
+\psi_{1}^{b}\left(\theta\right) & = & \left(\sin\frac{\pi}{3}\right)^{-1/2}\left(s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\bar{\psi}_{0}^{b} & = & i\left(\sin\frac{\pi}{3}\right)^{-1/2}\alpha_{0}\left(s_{1}+c_{1}\alpha_{1}\alpha_{2}\right)\\
+\bar{\psi}_{1}^{b} & = & i\left(\sin\frac{\pi}{3}\right)^{-1/2}\alpha_{0}\left(c_{1}+s_{1}\alpha_{1}\alpha_{2}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\int d^{3}\theta\,\bar{\psi}_{0}^{b}\psi_{0}^{b} & = & i\int d^{3}\theta\,\sec\frac{\pi}{3}\alpha_{0}\left(s_{1}+c_{1}\alpha_{1}\alpha_{2}\right)\left(c_{1}+s_{1}\alpha_{2}\alpha_{1}\right)\\
+ & = & i\int d^{3}\theta\sec\frac{\pi}{3}\left(c_{1}^{2}-s_{1}^{2}\right)\alpha_{0}\alpha_{2}\alpha_{1}\\
+ & = & i\int d^{3}\theta\,\alpha_{0}\alpha_{1}\alpha_{2}\\
+ & = & 1
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\int d^{3}\theta\,\bar{\psi}_{0}^{b}\psi_{1}^{b} & = & i\int d^{3}\theta\,\sec\frac{\pi}{3}\alpha_{0}\left(s_{1}+c_{1}\alpha_{1}\alpha_{2}\right)\left(s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)\\
+ & = & i\int d^{3}\theta\,\sec\frac{\pi}{3}\left(-s_{1}c_{1}+s_{1}c_{1}\right)\alpha_{0}\alpha_{1}\alpha_{2}\\
+ & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+ likewise
+\begin_inset Formula 
+\[
+\int d^{3}\theta\,\bar{\psi}_{1}\psi_{0}=0,\quad\int d^{3}\theta\,\bar{\psi}_{1}\psi_{1}=1.
+\]
+
+\end_inset
+
+ Let us now verify the completeness.
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+\int d^{3}\theta\,\sum_{r}\psi_{r}\left(\theta\right)\bar{\psi}\left(\phi\right) & = & \int d^{3}\theta\, i\sec\frac{\pi}{3}\sum_{r}\psi_{f}^{f}\left(\theta\right)\bar{\psi}_{f}\left(\phi\right)\\
+ &  & \int d^{3}\theta\, i\sec\frac{\pi}{3}\alpha_{0}\left(\theta\right)\left(c_{1}+s_{1}\alpha_{2}\left(\theta\right)\alpha_{1}\left(\theta\right)\right)\left(s_{1}+c_{1}\alpha_{1}\left(\phi\right)\alpha_{2}\left(\phi\right)\right)\\
+ &  & +\int d^{3}\theta\, i\sec\frac{\pi}{3}\alpha_{0}\left(\theta\right)\left(s_{1}+c_{1}\alpha_{2}\left(\theta\right)\alpha_{1}\left(\theta\right)\right)\left(c_{1}+s_{1}\alpha_{1}\left(\phi\right)\alpha_{2}\left(\phi\right)\right)\\
+ & = & i\sec\frac{\pi}{3}\left[s_{1}^{2}+s_{1}c_{1}\alpha_{1}\left(\phi\right)\alpha_{2}\left(\phi\right)+c_{1}^{2}+c_{1}s_{1}\alpha_{1}\left(\phi\right)\alpha_{2}\left(\phi\right)\right]\int d^{3}\theta\,\theta_{1}\left(\theta_{1}\alpha_{2}\alpha_{1}\right)
+\end{eqnarray*}
+
+\end_inset
+
+ it follows that 
+\begin_inset Formula 
+\[
+a=\frac{s_{1}}{C_{M}}\csc\frac{k\pi}{M},\quad b=-\frac{c_{1}}{C_{M}}\csc\frac{k\pi}{M}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\bar{\psi}_{0}=\frac{1}{C_{M}}\csc\frac{k\pi}{M}\left(s_{1}+c_{1}\alpha_{1}\alpha_{2}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+M=2 case
+\end_layout
+
+\begin_layout Standard
+Let us find the orthonormal basis for 
+\begin_inset Formula $M=2$
+\end_inset
+
+ case.
+ In this case, the eignfunctions are 
+\begin_inset Formula 
+\[
+\psi_{0}=\theta_{1}\theta_{2}+A,\quad\psi_{1}=\theta_{1}-\theta_{2}
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $A$
+\end_inset
+
+ is a constant.
+ Let 
+\begin_inset Formula 
+\[
+\bar{\psi}_{0}=x+y\theta_{1}+z\theta_{2}+w\theta_{1}\theta_{2}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\bar{\psi}_{1}=a+b\theta_{1}+c\theta_{2}+d\theta_{1}\theta_{2}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\int d^{2}\theta\,\bar{\psi}_{0}\psi_{0}=-Aw-x=1\Rightarrow x=-Aw-1
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\int d^{2}\theta\,\bar{\psi}_{0}\psi_{1}=y+z=0\Rightarrow z=-y
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\int d^{2}\theta\,\bar{\psi}_{1}\psi_{0}=-a-Ad=0\Rightarrow a=-Ad
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\int d^{2}\theta\,\bar{\psi}_{1}\psi_{1}=b+c=1\Rightarrow c=1-b
+\]
+
+\end_inset
+
+ so 
+\begin_inset Formula 
+\[
+\bar{\psi}_{0}=-Aw-1+y\left(\theta_{1}-\theta_{2}\right)+w\theta_{1}\theta_{2}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\bar{\psi}_{1}=-Ad+b\theta_{1}+\left(1-b\right)\theta_{2}+d\theta_{1}\theta_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\psi_{0}\bar{\psi}_{0}\left(\phi\right)+\psi_{1}\bar{\psi}_{1}\left(\phi\right) & = & \left(\theta_{1}\theta_{2}+A\right)\left(-Aw-1+y\left(\phi_{1}-\phi_{2}\right)+w\phi_{1}\phi_{2}\right)\\
+ &  & +\left(\theta_{1}-\theta_{2}\right)\left(-Ad+b\phi_{1}+\left(1-b\right)\phi_{2}+d\phi_{1}\phi_{2}\right)\\
+ & = & -A\left(Aw+1\right)+Ay\left(\phi_{1}-\phi_{2}\right)-Ad\left(\theta_{1}-\theta_{2}\right)\\
+ &  & b\left(\theta_{1}-\theta_{2}\right)\left(\phi_{1}-\phi_{2}\right)+\left(\theta_{1}-\theta_{1}\right)\phi_{2}+\cdots
 \end{eqnarray*}
 
 \end_inset
 
  
+\begin_inset Formula 
+\begin{eqnarray*}
+\delta\left(\theta-\phi\right) & = & \left(\theta_{1}-\phi_{1}\right)\left(\theta_{2}-\phi_{2}\right)\\
+ & = & \theta_{1}\theta_{2}+\phi_{1}\phi_{1}+\theta_{2}\phi_{1}-\theta_{1}\phi_{2}
+\end{eqnarray*}
+
+\end_inset
+
+ If 
+\begin_inset Formula $A=0$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{eqnarray*}
+\psi_{0}\bar{\psi}_{0}\left(\phi\right)+\psi_{1}\bar{\psi}_{1}\left(\phi\right) & = & \theta_{1}\theta_{2}\left(-1+y\left(\phi_{1}-\phi_{2}\right)+w\phi_{1}\phi_{2}\right)\\
+ &  & +\left(\theta_{1}-\theta_{2}\right)\left(b\phi_{1}+\left(1-b\right)\phi_{2}+d\phi_{1}\phi_{2}\right)
+\end{eqnarray*}
+
+\end_inset
+
+ The coefficient of 
+\begin_inset Formula $\theta_{1}\theta_{2}$
+\end_inset
+
+ is 
+\begin_inset Formula $-1$
+\end_inset
+
+, which is not the case we want.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $A\neq0$
+\end_inset
+
+, then 
+\begin_inset Formula $y=d=0$
+\end_inset
+
+, 
+\begin_inset Formula $w=-\frac{1}{A}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\psi_{0}\bar{\psi}_{0}\left(\phi\right)+\psi_{1}\bar{\psi}_{1}\left(\phi\right) & = & \left(\theta_{1}\theta_{2}+A\right)\left(-\frac{1}{A}\right)\phi_{1}\phi_{2}\\
+ &  & +\left(\theta_{1}-\theta_{2}\right)\left(-Ad+b\phi_{1}+\left(1-b\right)\phi_{2}\right)\\
+ & = & -\frac{1}{A}\theta_{1}\theta_{2}\phi_{1}\phi_{2}-\phi_{1}\phi_{2}+
+\end{eqnarray*}
+
+\end_inset
+
+
 \end_layout
 
 \end_body

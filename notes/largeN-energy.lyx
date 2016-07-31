@@ -618,7 +618,19 @@ L_{M-k}^{+}\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right) & = & \left(\alpha_{M-
 \begin{eqnarray*}
 L_{k}^{+}L_{M-k}^{+}\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right) & = & \left(\alpha_{k}+\frac{1}{r_{k}^{+}}\beta_{k}\right)\left(1-\frac{r_{k}^{-}}{r_{k}^{+}}\right)\alpha_{M-k}\\
  & = & \left(1-\frac{r_{k}^{-}}{r_{k}^{+}}\right)\left(\alpha_{k}\alpha_{M-k}+\frac{1}{r_{k}^{+}}\right)\\
- & = & \frac{1}{r_{k}^{+}}\left(1-\frac{r_{k}^{-}}{r_{k}^{+}}\right)\left(1+r_{k}^{+}\alpha_{k}\alpha_{M-k}\right)
+ & = & \frac{1}{r_{k}^{+}}\left(1-\frac{r_{k}^{-}}{r_{k}^{+}}\right)\left(1+r_{k}^{+}\alpha_{k}\alpha_{M-k}\right)\\
+ & = & \frac{r_{k}^{+}-r_{k}^{-}}{r_{k}^{+2}}\left(1+r_{k}^{+}\alpha_{k}\alpha_{M-k}\right)\\
+ & = & \frac{2\sec\frac{k\pi}{M}}{}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+L_{M-k}^{+}L_{k}^{+}\left(1+r_{k}^{-}\alpha_{k}\alpha_{M-k}\right) & = & \left(\alpha_{M-k}+\frac{1}{r_{M-k}^{+}}\beta_{M-k}\right)\alpha_{k}\left(1-\frac{r_{k}^{-}}{r_{k}^{+}}\right)\\
+ & = & \left(\alpha_{M-k}\alpha_{k}+\frac{1}{r_{M-k}^{+}}\right)\left(1-\frac{r_{k}^{-}}{r_{k}^{+}}\right)\\
+ & =
 \end{eqnarray*}
 
 \end_inset
