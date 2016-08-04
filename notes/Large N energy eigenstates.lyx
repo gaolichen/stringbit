@@ -204,7 +204,8 @@ We normalize the coefficient
 \frac{r_{k}^{\pm}}{\sqrt{1+r_{k}^{\pm2}}} & = & \left(\tan\frac{k\pi}{M}\pm\sec\frac{k\pi}{M}\right)\sqrt{\frac{1\mp\sin\frac{k\pi}{M}}{2}}\\
  & = & \frac{\pm\left(1\pm\sin\frac{k\pi}{M}\right)}{\cos\frac{k\pi}{M}}\sqrt{\frac{1\mp\sin\frac{k\pi}{M}}{2}}\\
  & = & \pm\frac{\pm\left(1\pm\sin\frac{k\pi}{M}\right)}{\cos\frac{k\pi}{M}}\sqrt{\frac{\cos^{2}\frac{k\pi}{M}}{2\left(1\pm\sin\frac{k\pi}{M}\right)}}\\
- & = & \pm\mathrm{sign}\left(\cos\frac{k\pi}{M}\right)\sqrt{\frac{1\pm\sin\frac{k\pi}{M}}{2}}
+ & = & \pm\mathrm{sign}\left(\cos\frac{k\pi}{M}\right)\sqrt{\frac{1\pm\sin\frac{k\pi}{M}}{2}}\\
+ & = & \pm\frac{\cos\frac{k\pi}{M}}{\sqrt{2\left(1\mp\sin\frac{k\pi}{M}\right)}}
 \end{eqnarray*}
 
 \end_inset
@@ -231,14 +232,10 @@ L_{k}^{-}=\frac{r_{k}^{-}}{\sqrt{1+r_{k}^{-2}}}\alpha_{k}+\frac{1}{\sqrt{1+r_{k}
 
 \end_inset
 
-Let 
-\begin_inset Formula $k\leq M/2$
-\end_inset
-
-, 
+Define 
 \begin_inset Formula 
 \[
-c_{k}\equiv\frac{1}{\sqrt{1+r_{k}^{-2}}}=\frac{r_{k}^{+}}{\sqrt{1+r_{k}^{+2}}}=\sqrt{\frac{1+\sin\frac{k\pi}{M}}{2}}
+c_{k}\equiv\frac{1}{\sqrt{1+r_{k}^{-2}}}=\frac{\left|r_{k}^{+}\right|}{\sqrt{1+r_{k}^{+2}}}=\sqrt{\frac{1+\sin\frac{k\pi}{M}}{2}}
 \]
 
 \end_inset
@@ -246,7 +243,10 @@ c_{k}\equiv\frac{1}{\sqrt{1+r_{k}^{-2}}}=\frac{r_{k}^{+}}{\sqrt{1+r_{k}^{+2}}}=\
 
 \begin_inset Formula 
 \[
-s_{k}\equiv-\frac{r_{k}^{-}}{\sqrt{1+r_{k}^{-2}}}=\frac{1}{\sqrt{1+r_{k}^{+2}}}=\sqrt{\frac{1-\sin\frac{k\pi}{M}}{2}}
+s_{k}\equiv-\frac{r_{k}^{-}}{\sqrt{1+r_{k}^{-2}}}=\frac{\cos\frac{k\pi}{M}}{\sqrt{2\left(1+\sin\frac{k\pi}{M}\right)}}=\begin{cases}
+\sqrt{\frac{1-\sin\frac{k\pi}{M}}{2}} & \text{for }k\leq M/2\\
+-\sqrt{\frac{1-\sin\frac{k\pi}{M}}{2}} & \text{for }k>M/2
+\end{cases}
 \]
 
 \end_inset
@@ -262,7 +262,7 @@ c_{k}^{2}+s_{k}^{2}=1,\quad c_{k}^{2}-s_{k}^{2}=\sin\frac{k\pi}{M}
  Then
 \begin_inset Formula 
 \[
-L_{k}^{+}=c_{k}\alpha_{k}+s_{k}\beta_{k},\quad L_{M-k}^{+}=c_{k}\alpha_{M-k}-s_{k}\beta_{M-k}
+L_{k}^{+}=c_{k}\alpha_{k}+s_{k}\beta_{k},\quad L_{k}^{-}=-s_{k}\alpha_{k}+c_{k}\beta_{k}
 \]
 
 \end_inset
@@ -270,7 +270,7 @@ L_{k}^{+}=c_{k}\alpha_{k}+s_{k}\beta_{k},\quad L_{M-k}^{+}=c_{k}\alpha_{M-k}-s_{
 
 \begin_inset Formula 
 \[
-L_{k}^{-}=-s_{k}\alpha_{k}+c_{k}\beta_{k},\quad L_{M-k}^{-}=s_{k}\alpha_{M-k}+c_{k}\beta_{M-k},
+\alpha_{k}=c_{k}L_{k}^{+}-s_{k}L_{k}^{-},\quad\beta_{k}=s_{k}L_{k}^{+}+c_{k}L_{k}^{-}
 \]
 
 \end_inset
@@ -940,6 +940,101 @@ Denote
 \int d^{3}\theta\, T\left(\theta\right)\sum_{r}\psi_{r}\left(\theta\right)\bar{\psi}_{r}\left(\phi\right) & = & \tr\bar{b}^{3}+\tr\bar{a}\bar{a}\bar{b}\left(\phi_{1}+\phi_{2}+\phi_{3}\right)\\
  &  & +\tr\bar{a}\bar{b}\bar{b}\left(\phi_{1}\phi_{2}+\phi_{2}\phi_{3}+\phi_{3}\phi_{1}\right)+\tr\bar{a}^{3}\\
  & = & T\left(\phi\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h_{kl}=-2\left(1-2\theta_{k}\frac{d}{d\theta_{k}}\right)-2\theta_{k}\frac{d}{d\theta_{l}}-2\theta_{l}\frac{d}{d\theta_{k}}-2i\theta_{k}\theta_{l}-2i\frac{d}{d\theta_{k}}\frac{d}{d\theta_{l}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\theta_{k}\frac{d}{d\theta_{k}}=\frac{1}{M}\sum_{n,m=0}^{M-1}\alpha_{n}\beta_{m}\exp\left(-2\pi ik\frac{m+n}{M}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\theta_{k}\frac{d}{d\theta_{l}}+\theta_{l}\frac{d}{d\theta_{k}} & = & \frac{1}{M}\sum_{n,m=0}^{M-1}\alpha_{n}\beta_{m}\left[\exp\left(-2\pi i\frac{kn+lm}{M}\right)+\exp\left(-2\pi i\frac{ln+km}{M}\right)\right]\\
+ & = & \frac{1}{M}\sum_{n,m=0}^{M-1}\left(\alpha_{n}\beta_{m}+\alpha_{m}\beta_{n}\right)\left[\exp\left(-2\pi i\frac{kn+lm}{M}\right)\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\theta_{k}\theta_{l}=\frac{1}{M}\sum_{n,m=0}^{M-1}\alpha_{n}\alpha_{m}\exp\left(-2\pi i\frac{kn+lm}{M}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{d}{d\theta_{k}}\frac{d}{d\theta_{l}}=\frac{1}{M}\sum_{n,m=0}^{M-1}\beta_{n}\beta_{m}\exp\left(-2\pi i\frac{kn+lm}{M}\right)
+\]
+
+\end_inset
+
+ therefore
+\begin_inset Formula 
+\begin{multline*}
+h_{kl}=-2+\frac{4}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi ik\frac{m+n}{M}\right)\alpha_{n}\beta_{m}\\
+-\frac{2}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(\alpha_{n}\beta_{m}+\alpha_{m}\beta_{n}+i\alpha_{n}\alpha_{m}+i\beta_{n}\beta_{m}\right)
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha_{n}\alpha_{m} & = & \left(c_{n}L_{n}^{+}-s_{n}L_{n}^{-}\right)\left(s_{m}L_{m}^{+}+c_{m}L_{m}^{-}\right)\\
+ & = & c_{n}s_{m}L_{n}^{+}L_{m}^{+}-c_{m}s_{n}L_{n}^{-}L_{m}^{-}+c_{n}c_{m}L_{n}^{+}L_{m}^{-}-s_{n}s_{m}L_{n}^{-}L_{m}^{+}\\
+ & = & c_{n}s_{m}L_{n}^{+}L_{m}^{+}-c_{m}s_{n}L_{n}^{-}L_{m}^{-}+c_{n}c_{m}L_{n}^{+}L_{m}^{-}+s_{n}s_{m}L_{m}^{+}L_{n}^{-}+s_{n}^{2}\delta_{m+n,M}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha_{n}\beta_{m} & = & \left(c_{n}L_{n}^{+}-s_{n}L_{n}^{-}\right)\left(s_{m}L_{m}^{+}+c_{m}L_{m}^{-}\right)\\
+ & = & c_{n}s_{m}L_{n}^{+}L_{m}^{+}+c_{m}s_{n}L_{n}^{-}L_{m}^{-}-c_{n}c_{m}L_{n}^{+}L_{m}^{-}-s_{n}s_{m}L_{n}^{-}L_{m}^{+}\\
+ & = & c_{n}s_{m}L_{n}^{+}L_{m}^{+}+c_{m}s_{n}L_{n}^{-}L_{m}^{-}-c_{n}c_{m}L_{n}^{+}L_{m}^{-}+s_{n}s_{m}L_{m}^{+}L_{n}^{-}+s_{n}^{2}\delta_{m+n,M}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\beta_{n}\beta_{m} & = & \left(s_{n}L_{n}^{+}+c_{n}L_{n}^{-}\right)\left(s_{m}L_{m}^{+}+c_{m}L_{m}^{-}\right)\\
+ & = & s_{n}s_{m}L_{n}^{+}L_{m}^{+}+c_{n}c_{m}L_{n}^{-}L_{m}^{-}+c_{m}s_{n}L_{n}^{+}L_{m}^{-}+c_{n}s_{m}L_{n}^{-}L_{m}^{+}\\
+ & = & s_{n}s_{m}L_{n}^{+}L_{m}^{+}+c_{n}c_{m}L_{n}^{-}L_{m}^{-}+c_{m}s_{n}L_{n}^{+}L_{m}^{-}-c_{n}s_{m}L_{m}^{+}L_{n}^{-}+c_{n}s_{n}\delta_{m+n,M}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+h_{kl} & = & -2+\frac{4}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi ik\frac{m+n}{M}\right)\left(c_{n}s_{m}L_{n}^{+}L_{m}^{+}+c_{m}s_{n}L_{n}^{-}L_{m}^{-}-c_{n}c_{m}L_{n}^{+}L_{m}^{-}+s_{n}s_{m}L_{m}^{+}L_{n}^{-}\right)\\
+ &  & -\frac{2}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(c_{n}s_{m}+c_{m}s_{n}+ic_{n}s_{m}+is_{n}s_{m}\right)L_{n}^{+}L_{m}^{+}\\
+ &  & -\frac{2}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(c_{m}s_{n}+c_{n}s_{m}-ic_{m}s_{n}+ic_{n}c_{m}\right)L_{n}^{-}L_{m}^{-}\\
+ &  & -\frac{2}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(-2c_{n}c_{m}+2s_{n}s_{m}+ic_{n}c_{m}+is_{n}s_{m}+ic_{m}s_{n}-ic_{n}s_{m}\right)L_{n}^{+}L_{m}^{-}\\
+ &  & +\frac{4}{M}\sum_{n=0}^{M-1}s_{n}^{2}-\frac{2}{M}\sum_{n=0}^{M-1}\exp\left(-2n\pi i\frac{k-l}{M}\right)\left(2s_{n}^{2}+is_{n}^{2}+ic_{n}s_{n}\right)\delta_{n+m,M}
 \end{eqnarray*}
 
 \end_inset
