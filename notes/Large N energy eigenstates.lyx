@@ -303,9 +303,9 @@ reference "eq:ground_state_oddM"
  does not satisfy the cyclic symmetry requirement, and the physical ground
  state become 
 \begin_inset Formula 
-\[
-\Phi=\prod_{k=1}^{M/2-1}\left(c_{k}+s_{k}\alpha_{M-k}\alpha_{k}\right)\alpha_{M/2}.
-\]
+\begin{equation}
+\Phi=\prod_{k=1}^{M/2-1}\left(c_{k}+s_{k}\alpha_{M-k}\alpha_{k}\right)\alpha_{M/2}.\label{eq:ground_state_evenM}
+\end{equation}
 
 \end_inset
 
@@ -417,8 +417,37 @@ L_{k}^{+}L_{M-k}^{+}\phi_{k} & = & L_{k}^{+}\alpha_{M-k}\\
  In summary 
 \begin_inset Formula 
 \[
-\left\{ L_{i}^{+},L_{j}^{+}\right\} =\left\{ L_{i}^{-},L_{j}^{-}\right\} =0,\quad\left\{ L_{i}^{+},L_{j}^{-}\right\} =\delta_{i+j,M},\quad1\leq i,j\leq M-1
+\left\{ L_{i}^{+},L_{j}^{+}\right\} =\left\{ L_{i}^{-},L_{j}^{-}\right\} =0,\quad\left\{ L_{i}^{+},L_{j}^{-}\right\} =\delta_{i+j,M},\quad1\leq i,j\leq M-1.
 \]
+
+\end_inset
+
+We can express the ground eigenfunctions 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ground_state_oddM"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ground_state_evenM"
+
+\end_inset
+
+ in terms of 
+\begin_inset Formula $L_{i}^{\pm}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{eqnarray*}
+c_{k}+s_{k}\alpha_{M-k}\alpha_{k} & = & c_{k}+s_{k}\left(c_{M-k}L_{M-k}^{+}-s_{M-k}L_{M-k}^{-}\right)\left(c_{k}L_{k}^{+}-s_{k}L_{k}^{-}\right)\\
+ & = & c_{k}+s_{k}c_{k}^{2}L_{M-k}^{+}L_{k}^{+}-s_{k}^{3}L_{M-k}^{-}L_{k}^{-}-s_{k}^{2}c_{M-k}L_{M-k}^{+}L_{k}^{-}+s_{k}^{2}c_{k}L_{M-k}^{-}L_{k}^{+}\\
+ & = & c_{k}+s_{k}c_{k}^{2}L_{M-k}^{+}L_{k}^{+}-s_{k}^{3}L_{M-k}^{-}L_{k}^{-}-s_{k}^{2}c_{M-k}L_{M-k}^{+}L_{k}^{-}-s_{k}^{2}c_{k}L_{k}^{+}L_{M-k}^{-}+s_{k}^{2}c_{k}\\
+ & = & s_{k}\left(c_{k}^{2}L_{M-k}^{+}L_{k}^{+}-s_{k}^{2}L_{M-k}^{-}L_{k}^{-}-s_{k}c_{k}L_{M-k}^{+}L_{k}^{-}-s_{k}c_{k}L_{k}^{+}L_{M-k}^{-}\right)+c_{k}\left(1+s_{k}^{2}\right).
+\end{eqnarray*}
 
 \end_inset
 
@@ -967,33 +996,40 @@ h_{kl}=-2\left(1-2\theta_{k}\frac{d}{d\theta_{k}}\right)-2\theta_{k}\frac{d}{d\t
 \begin_inset Formula 
 \begin{eqnarray*}
 \theta_{k}\frac{d}{d\theta_{l}}+\theta_{l}\frac{d}{d\theta_{k}} & = & \frac{1}{M}\sum_{n,m=0}^{M-1}\alpha_{n}\beta_{m}\left[\exp\left(-2\pi i\frac{kn+lm}{M}\right)+\exp\left(-2\pi i\frac{ln+km}{M}\right)\right]\\
- & = & \frac{1}{M}\sum_{n,m=0}^{M-1}\left(\alpha_{n}\beta_{m}+\alpha_{m}\beta_{n}\right)\left[\exp\left(-2\pi i\frac{kn+lm}{M}\right)\right]
+ & = & \frac{1}{M}\sum_{n,m=0}^{M-1}\left(\alpha_{n}\beta_{m}+\alpha_{m}\beta_{n}\right)\left[\exp\left(-2\pi i\frac{kn+lm}{M}\right)\right]\\
+ & = & \frac{1}{M}\sum_{n,m=0}^{M-1}\alpha_{n}\beta_{m}\exp\left(-2\pi i\frac{k+l}{2}\frac{m+n}{M}\right)\left[\exp\left(-2\pi i\frac{k-l}{2}\frac{m-n}{M}\right)+\exp\left(-2\pi i\frac{l-k}{2}\frac{m-n}{M}\right)\right]\\
+ & = & \frac{2}{M}\sum_{n,m=0}^{M-1}\alpha_{n}\beta_{m}\exp\left(-2\pi i\frac{k+l}{2}\frac{m+n}{M}\right)\cos\frac{\pi\left(l-k\right)\left(m-n\right)}{M}
 \end{eqnarray*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-\theta_{k}\theta_{l}=\frac{1}{M}\sum_{n,m=0}^{M-1}\alpha_{n}\alpha_{m}\exp\left(-2\pi i\frac{kn+lm}{M}\right)
-\]
+\begin{eqnarray*}
+\theta_{k}\theta_{l} & = & \frac{1}{M}\sum_{n,m=0}^{M-1}\alpha_{n}\alpha_{m}\exp\left(-2\pi i\frac{kn+lm}{M}\right)\\
+ & = & \frac{1}{M}\sum_{n<m}^{M-1}\alpha_{n}\alpha_{m}\left[\exp\left(-2\pi i\frac{kn+lm}{M}\right)-\exp\left(-2\pi i\frac{km+ln}{M}\right)\right]\\
+ & = & \frac{2i}{M}\sum_{n<m}^{M-1}\alpha_{n}\alpha_{m}\exp\left(-2\pi i\frac{k+l}{2}\frac{m+n}{M}\right)\sin\frac{\pi\left(l-k\right)\left(m-n\right)}{M}
+\end{eqnarray*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-\frac{d}{d\theta_{k}}\frac{d}{d\theta_{l}}=\frac{1}{M}\sum_{n,m=0}^{M-1}\beta_{n}\beta_{m}\exp\left(-2\pi i\frac{kn+lm}{M}\right)
-\]
+\begin{eqnarray*}
+\frac{d}{d\theta_{k}}\frac{d}{d\theta_{l}} & = & \frac{1}{M}\sum_{n,m=0}^{M-1}\beta_{n}\beta_{m}\exp\left(-2\pi i\frac{kn+lm}{M}\right)\\
+ & = & \frac{1}{M}\sum_{n<m}^{M-1}\beta_{n}\beta_{m}\left[\exp\left(-2\pi i\frac{kn+lm}{M}\right)-\exp\left(-2\pi i\frac{km+ln}{M}\right)\right]\\
+ & = & \frac{2i}{M}\sum_{n<m}^{M-1}\beta_{n}\beta_{m}\exp\left(-2\pi i\frac{k+l}{2}\frac{m+n}{M}\right)\sin\frac{\pi\left(l-k\right)\left(m-n\right)}{M}
+\end{eqnarray*}
 
 \end_inset
 
  therefore
 \begin_inset Formula 
-\begin{multline*}
-h_{kl}=-2+\frac{4}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi ik\frac{m+n}{M}\right)\alpha_{n}\beta_{m}\\
--\frac{2}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(\alpha_{n}\beta_{m}+\alpha_{m}\beta_{n}+i\alpha_{n}\alpha_{m}+i\beta_{n}\beta_{m}\right)
-\end{multline*}
+\begin{eqnarray*}
+h_{kl} & = & -2+\frac{4}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi ik\frac{m+n}{M}\right)\alpha_{n}\beta_{m}\\
+ &  & -\frac{4}{M}\sum_{n,m=0}^{M-1}\alpha_{n}\beta_{m}\exp\left(-2\pi i\frac{k+l}{2}\frac{m+n}{M}\right)\cos\frac{\pi\left(k-l\right)\left(m-n\right)}{M}\\
+ &  & -\frac{2}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(i\alpha_{n}\alpha_{m}+i\beta_{n}\beta_{m}\right)
+\end{eqnarray*}
 
 \end_inset
 
@@ -1034,7 +1070,11 @@ h_{kl} & = & -2+\frac{4}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi ik\frac{m+n}{M}\rig
  &  & -\frac{2}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(c_{n}s_{m}+c_{m}s_{n}+ic_{n}s_{m}+is_{n}s_{m}\right)L_{n}^{+}L_{m}^{+}\\
  &  & -\frac{2}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(c_{m}s_{n}+c_{n}s_{m}-ic_{m}s_{n}+ic_{n}c_{m}\right)L_{n}^{-}L_{m}^{-}\\
  &  & -\frac{2}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(-2c_{n}c_{m}+2s_{n}s_{m}+ic_{n}c_{m}+is_{n}s_{m}+ic_{m}s_{n}-ic_{n}s_{m}\right)L_{n}^{+}L_{m}^{-}\\
- &  & +\frac{4}{M}\sum_{n=0}^{M-1}s_{n}^{2}-\frac{2}{M}\sum_{n=0}^{M-1}\exp\left(-2n\pi i\frac{k-l}{M}\right)\left(2s_{n}^{2}+is_{n}^{2}+ic_{n}s_{n}\right)\delta_{n+m,M}
+ &  & +\frac{4}{M}\sum_{n=0}^{M-1}s_{n}^{2}-\frac{2}{M}\sum_{n=0}^{M-1}\exp\left(-2n\pi i\frac{k-l}{M}\right)\left(2s_{n}^{2}+is_{n}^{2}+ic_{n}s_{n}\right)\delta_{n+m,M}\\
+ & = & -2+\frac{4}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi ik\frac{m+n}{M}\right)\left(c_{n}s_{m}L_{n}^{+}L_{m}^{+}+c_{m}s_{n}L_{n}^{-}L_{m}^{-}-\sin\frac{k\pi}{M}L_{n}^{+}L_{m}^{-}\right)\\
+ &  & -\frac{2}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(c_{n}s_{m}+c_{m}s_{n}+ic_{n}s_{m}+is_{n}s_{m}\right)L_{n}^{+}L_{m}^{+}\\
+ &  & -\frac{2}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(c_{m}s_{n}+c_{n}s_{m}-ic_{m}s_{n}+ic_{n}c_{m}\right)L_{n}^{-}L_{m}^{-}\\
+ &  & -\frac{2}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(-2c_{n}c_{m}+2s_{n}s_{m}+ic_{n}c_{m}+is_{n}s_{m}+ic_{m}s_{n}-ic_{n}s_{m}\right)L_{n}^{+}L_{m}^{-}
 \end{eqnarray*}
 
 \end_inset
