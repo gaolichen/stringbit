@@ -254,7 +254,7 @@ s_{k}\equiv-\frac{r_{k}^{-}}{\sqrt{1+r_{k}^{-2}}}=\frac{\cos\frac{k\pi}{M}}{\sqr
 
 \begin_inset Formula 
 \[
-c_{k}^{2}+s_{k}^{2}=1,\quad c_{k}^{2}-s_{k}^{2}=\sin\frac{k\pi}{M}
+c_{k}^{2}+s_{k}^{2}=1,\quad c_{k}^{2}-s_{k}^{2}=\sin\frac{k\pi}{M},\quad c_{k}s_{k}=\frac{1}{2}\cos\frac{k\pi}{M}
 \]
 
 \end_inset
@@ -1080,9 +1080,28 @@ h_{kl} & = & -2+\frac{4}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi ik\frac{m+n}{M}\rig
  &  & -\frac{2}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(c_{n}s_{m}+c_{m}s_{n}+ic_{n}s_{m}+is_{n}s_{m}\right)L_{n}^{+}L_{m}^{+}\\
  &  & -\frac{2}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(c_{m}s_{n}+c_{n}s_{m}+is_{m}s_{n}+ic_{n}c_{m}\right)L_{n}^{-}L_{m}^{-}\\
  &  & -\frac{2}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(2c_{n}c_{m}+2s_{n}s_{m}\right)L_{n}^{+}L_{m}^{-}\\
- &  & +\frac{4}{M}\sum_{n=0}^{M-1}s_{n}^{2}-\frac{2}{M}\sum_{n=0}^{M-1}\exp\left(-2n\pi i\frac{k-l}{M}\right)\left(2s_{n}^{2}-2ic_{n}s_{n}\right)\delta_{n+m,M}\\
- & =
+ &  & +\frac{4}{M}\sum_{n=0}^{M-1}s_{n}^{2}\delta_{n+m,M}-\frac{2}{M}\sum_{n=0}^{M-1}\exp\left(-2n\pi i\frac{k-l}{M}\right)\left(2s_{n}^{2}-2ic_{n}s_{n}\right)\delta_{n+m,M}\\
+ & = & -2+\frac{2}{M}\sum_{n,m=0}^{M-1}\left[2\exp\left(-2\pi ik\frac{m+n}{M}\right)c_{n}s_{m}-i\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(c_{n}s_{m}+c_{m}s_{n}\right)\right]L_{n}^{+}L_{m}^{+}\\
+ &  & +\frac{2}{M}\sum_{n,m=0}^{M-1}\left[2\exp\left(-2\pi ik\frac{m+n}{M}\right)c_{m}s_{n}-i\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(c_{m}s_{n}+c_{n}s_{m}\right)\right]L_{n}^{-}L_{m}^{-}\\
+ &  & +\frac{4}{M}\sum_{n,m=0}^{M-1}\left[\exp\left(-2\pi ik\frac{m+n}{M}\right)c_{n}c_{m}-\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(c_{n}c_{m}+s_{n}s_{m}\right)\right]L_{n}^{+}L_{m}^{-}\\
+ &  & +\frac{2}{M}\sum_{n=0}^{M-1}\frac{1-\sin\frac{n\pi}{M}}{2}\delta_{n+m,M}-\frac{2}{M}\sum_{n=0}^{M-1}\exp\left(-2n\pi i\frac{k-l}{M}\right)\left(1-\sin\frac{n\pi}{M}-i\cos\frac{n\pi}{M}\right)\delta_{n+m,M}\\
+ & = & -2+\frac{2}{M}\sum_{n,m=0}^{M-1}\left[2\exp\left(-2\pi ik\frac{m+n}{M}\right)c_{n}s_{m}-i\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(c_{n}s_{m}+c_{m}s_{n}\right)\right]L_{n}^{+}L_{m}^{+}\\
+ &  & +\frac{2}{M}\sum_{n,m=0}^{M-1}\left[2\exp\left(-2\pi ik\frac{m+n}{M}\right)c_{m}s_{n}-i\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(c_{m}s_{n}+c_{n}s_{m}\right)\right]L_{n}^{-}L_{m}^{-}\\
+ &  & +\frac{4}{M}\sum_{n,m=0}^{M-1}\left[\exp\left(-2\pi ik\frac{m+n}{M}\right)c_{n}c_{m}-\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(c_{n}c_{m}+s_{n}s_{m}\right)\right]L_{n}^{+}L_{m}^{-}\\
+ &  & +\left(\frac{M-1}{2}-\frac{1}{M}\cot\frac{n\pi}{2M}\right)\delta_{m+m,M}+\frac{i}{2}\csc\frac{2\left(k-l\right)-1}{2M}\pi\exp\left[i\frac{2\left(k-1\right)-1}{2M}\pi\right]\delta_{m+n,M}\\
+ & = & -2+\frac{4}{M}\sum_{n>m}^{M-1}\left[e^{-2\pi ik\frac{m+n}{M}}\left(c_{n}s_{m}-c_{m}s_{n}\right)+e^{-i\pi\left(k+l\right)\frac{n+m}{M}}\sin\frac{\left(k-l\right)\left(n-m\right)\pi}{M}\left(c_{n}s_{m}+c_{m}s_{n}\right)\right]L_{n}^{+}L_{m}^{+}\\
+ &  & +\frac{4}{M}\sum_{n>m}^{M-1}\left[e^{-2\pi ik\frac{m+n}{M}}\left(c_{n}s_{m}-c_{m}s_{n}\right)+e^{-i\pi\left(k+l\right)\frac{n+m}{M}}\sin\frac{\left(k-l\right)\left(n-m\right)\pi}{M}\left(c_{n}s_{m}+c_{m}s_{n}\right)\right]L_{n}^{-}L_{m}^{-}\\
+ &  & +\frac{4}{M}\sum_{n,m=0}^{M-1}\left[\exp\left(-2\pi ik\frac{m+n}{M}\right)c_{n}c_{m}-\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(c_{n}c_{m}+s_{n}s_{m}\right)\right]L_{n}^{+}L_{m}^{-}\\
+ &  & +\left(\frac{M-1}{2}-\frac{1}{M}\cot\frac{n\pi}{2M}\right)\delta_{m+m,M}+\frac{i}{2}\csc\frac{2\left(k-l\right)-1}{2M}\pi\exp\left[i\frac{2\left(k-1\right)-1}{2M}\pi\right]\delta_{m+n,M}
 \end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+HT_{r}\ket{0}=E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{l=k+2}^{k-1}\bar{h}_{kl}T\left(\theta_{l}\cdots\theta_{k}\right)T\left(\theta_{k+1}\cdots\theta_{l-1}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)
+\]
 
 \end_inset
 
