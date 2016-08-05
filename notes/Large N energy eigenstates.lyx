@@ -1118,7 +1118,7 @@ h_{kl}= & -2+\frac{4}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi ik\frac{m+n}{M}\right)
  & +\frac{4}{M}\sum_{n,m=0}^{M-1}\left[\exp\left(-2\pi ik\frac{m+n}{M}\right)-\exp\left(-2\pi i\frac{kn+lm}{M}\right)\right]\left(c_{n}c_{m}+s_{n}s_{m}\right)L_{n}^{+}L_{m}^{-}\\
  & +\frac{2}{M}\sum_{n=0}^{M-1}\frac{1-\sin\frac{n\pi}{M}}{2}-\frac{2}{M}\sum_{n=0}^{M-1}\exp\left(-2n\pi i\frac{k-l}{M}\right)\left(1-\sin\frac{n\pi}{M}-i\cos\frac{n\pi}{M}\right)\\
 \equiv & -2+\frac{4}{M}\sum_{n>m}^{M-1}\left[C_{nm}\left(L_{n}^{+}L_{m}^{+}+L_{n}^{-}L_{m}^{-}\right)+D_{nm}L_{n}^{+}L_{n}^{-}\right]+\\
- & +\frac{M-1}{2}-\frac{1}{M}\cot\frac{\pi}{2M}+\frac{i}{2}\csc\frac{2\left(k-l\right)-1}{2M}\pi\exp\left[i\frac{2\left(k-1\right)-1}{2M}\pi\right]
+ & +\frac{M-1}{2}-\frac{1}{M}\cot\frac{\pi}{2M}+\frac{i}{2}\csc\frac{2\left(k-l\right)-1}{2M}\pi\exp\left[i\frac{2\left(k-l\right)-1}{2M}\pi\right]
 \end{align*}
 
 \end_inset
@@ -1135,7 +1135,7 @@ C_{nm} & = & \exp\left(-2\pi ik\frac{m+n}{M}\right)\left(c_{n}s_{m}-c_{m}s_{n}\r
 
 \begin_inset Formula 
 \begin{eqnarray*}
-D_{mn} & = & \left[\exp\left(-2\pi ik\frac{m+n}{M}\right)-\exp\left(-2\pi i\frac{kn+lm}{M}\right)\right]\left(c_{n}c_{m}+s_{n}s_{m}\right)\\
+D_{nm} & = & \left[\exp\left(-2\pi ik\frac{m+n}{M}\right)-\exp\left(-2\pi i\frac{kn+lm}{M}\right)\right]\left(c_{n}c_{m}+s_{n}s_{m}\right)\\
  & = & \left[\exp\left(-2\pi ik\frac{m+n}{M}\right)-\exp\left(-2\pi i\frac{kn+lm}{M}\right)\right]\cos\frac{n-m}{2M}\pi
 \end{eqnarray*}
 
@@ -1143,8 +1143,48 @@ D_{mn} & = & \left[\exp\left(-2\pi ik\frac{m+n}{M}\right)-\exp\left(-2\pi i\frac
 
 
 \begin_inset Formula 
+\begin{eqnarray*}
+HT_{r}\ket{0} & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{l=k+2}^{M+k-1}\bar{h}_{kl}T\left(\theta_{l}\cdots\theta_{k}\right)T\left(\theta_{k+1}\cdots\theta_{l-1}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{n=1}^{M-2}\bar{h}_{k,k+n+1}\sum_{s,t}T_{s}\bar{\psi}_{s}\left(\theta_{k+n+1}\cdots\theta_{k}\right)T_{t}\bar{\psi}_{t}\left(\theta_{k+1}\cdots\theta_{k+n}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{n=1}^{M-2}\sum_{k=1}^{M}\bar{h}_{k,k+n+1}\sum_{s,t}T_{s}T_{t}\bar{\psi}_{s}\left(\theta_{k+n+1}\cdots\theta_{k}\right)\bar{\psi}_{t}\left(\theta_{k+1}\cdots\theta_{k+n}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & = & E_{r}T_{r}\ket{0}+\frac{M}{N}\sum_{n=1}^{M-1}\int d\theta\,\bar{h}_{M,n+1}\sum_{s,t}T_{s}T_{t}\bar{\psi}_{s}\left(\theta_{n+1}\cdots\theta_{M}\right)\bar{\psi}_{t}\left(\theta_{1}\cdots\theta_{n}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & \equiv & E_{r}T_{r}\ket{0}+\frac{M}{N}\sum_{p=1}^{M-1}\sum_{s,t}T_{s}^{\left(M-p\right)}T_{t}^{\left(p\right)}\ket{0}V_{str}^{\left(p\right)}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
 \[
-HT_{r}\ket{0}=E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{l=k+2}^{k-1}\bar{h}_{kl}T\left(\theta_{l}\cdots\theta_{k}\right)T\left(\theta_{k+1}\cdots\theta_{l-1}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)
+V_{str}^{\left(p\right)}=\int d\theta\,\bar{\psi}_{s}\left(\theta_{p+1}\cdots\theta_{M}\right)\bar{\psi}_{t}\left(\theta_{1}\cdots\theta_{p}\right)h_{M,p+1}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+When 
+\begin_inset Formula $k=M$
+\end_inset
+
+, 
+\begin_inset Formula $l=n+1$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+C_{nm}=\sin\frac{n-m}{2M}\pi-\exp\left(-i\pi\left(p+1\right)\frac{n+m}{M}\right)\sin\frac{\left(n+1\right)\left(n-m\right)}{M}\left(i\cos\frac{n+m}{2M}\pi-\cos\frac{n-m}{2M}\pi\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+D_{nm}=\left[1-\exp\left(-2\pi i\frac{\left(n+1\right)m}{M}\right)\right]\cos\frac{n-m}{2M}\pi
 \]
 
 \end_inset
