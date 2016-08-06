@@ -1145,19 +1145,23 @@ D_{nm} & = & \left[\exp\left(-2\pi ik\frac{m+n}{M}\right)-\exp\left(-2\pi i\frac
 \begin_inset Formula 
 \begin{eqnarray*}
 HT_{r}\ket{0} & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{l=k+2}^{M+k-1}\bar{h}_{kl}T\left(\theta_{l}\cdots\theta_{k}\right)T\left(\theta_{k+1}\cdots\theta_{l-1}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
- & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{n=1}^{M-2}\bar{h}_{k,k+n+1}\sum_{s,t}T_{s}\bar{\psi}_{s}\left(\theta_{k+n+1}\cdots\theta_{k}\right)T_{t}\bar{\psi}_{t}\left(\theta_{k+1}\cdots\theta_{k+n}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
- & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{n=1}^{M-2}\sum_{k=1}^{M}\bar{h}_{k,k+n+1}\sum_{s,t}T_{s}T_{t}\bar{\psi}_{s}\left(\theta_{k+n+1}\cdots\theta_{k}\right)\bar{\psi}_{t}\left(\theta_{k+1}\cdots\theta_{k+n}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
- & = & E_{r}T_{r}\ket{0}+\frac{M}{N}\sum_{n=1}^{M-1}\int d\theta\,\bar{h}_{M,n+1}\sum_{s,t}T_{s}T_{t}\bar{\psi}_{s}\left(\theta_{n+1}\cdots\theta_{M}\right)\bar{\psi}_{t}\left(\theta_{1}\cdots\theta_{n}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
- & \equiv & E_{r}T_{r}\ket{0}+\frac{M}{N}\sum_{p=1}^{M-1}\sum_{s,t}T_{s}^{\left(M-p\right)}T_{t}^{\left(p\right)}\ket{0}V_{str}^{\left(p\right)}
+ & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{p=1}^{M-2}\bar{h}_{k,k+p+1}\sum_{s,t}T_{s}\bar{\psi}_{s}\left(\theta_{k+p+1}\cdots\theta_{k}\right)T_{t}\bar{\psi}_{t}\left(\theta_{k+1}\cdots\theta_{k+p}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{p=1}^{M-2}\sum_{k=1}^{M}\bar{h}_{k,k+p+1}\sum_{s,t}T_{s}T_{t}\bar{\psi}_{s}\left(\theta_{k+p+1}\cdots\theta_{k}\right)\bar{\psi}_{t}\left(\theta_{k+1}\cdots\theta_{k+p}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{n=1}^{M-2}\sum_{s,t}T_{s}T_{t}\ket{0}\int d\theta\,\sum_{k=1}^{M}\bar{h}_{k,k+p+1}\bar{\psi}_{s}\left(\theta_{k+p+1}\cdots\theta_{k}\right)\bar{\psi}_{t}\left(\theta_{k+1}\cdots\theta_{k+p}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & \equiv & E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{p=1}^{M-2}\sum_{s,t}T_{s}T_{t}\ket{0}V_{str}^{\left(p\right)}
 \end{eqnarray*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-V_{str}^{\left(p\right)}=\int d\theta\,\bar{\psi}_{s}\left(\theta_{p+1}\cdots\theta_{M}\right)\bar{\psi}_{t}\left(\theta_{1}\cdots\theta_{p}\right)h_{M,p+1}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)
-\]
+\begin{eqnarray*}
+V_{str}^{\left(p\right)} & = & \sum_{k=1}^{M}\int d\theta\,\bar{h}_{k,k+p+1}\bar{\psi}_{s}\left(\theta_{k+p+1}\cdots\theta_{k}\right)\bar{\psi}_{t}\left(\theta_{k+1}\cdots\theta_{k+p}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & = & \sum_{k=1}^{M}\int d\theta_{2}\cdots d\theta_{M}d\theta_{1}\,\bar{h}_{k+1,k+p+2}\bar{\psi}_{s}\left(\theta_{k+p+2}\cdots\theta_{k+1}\right)\bar{\psi}_{t}\left(\theta_{k+2}\cdots\theta_{k+p+1}\right)\psi_{r}\left(\theta_{2}\cdots,\theta_{M},\theta_{1}\right)\\
+ & = & \sum_{k=1}^{M}\int d\theta_{1}\cdots d\theta_{M}\,\bar{h}_{k+1,k+p+2}\bar{\psi}_{s}\left(\theta_{k+p+2}\cdots\theta_{k+1}\right)\bar{\psi}_{t}\left(\theta_{k+2}\cdots\theta_{k+p+1}\right)\psi_{r}\left(\theta_{1}\cdots\theta_{M}\right)\\
+ & = & M\int d\theta\,\bar{h}_{M,p+1}\bar{\psi}_{s}\left(\theta_{p+1}\cdots\theta_{M}\right)\bar{\psi}_{t}\left(\theta_{1}\cdots\theta_{p}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & = & M\int d\theta\,\bar{\psi}_{s}\left(\theta_{p+1}\cdots\theta_{M}\right)\bar{\psi}_{t}\left(\theta_{1}\cdots\theta_{p}\right)h_{M,p+1}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)
+\end{eqnarray*}
 
 \end_inset
 
@@ -1170,7 +1174,7 @@ When
 \end_inset
 
 , 
-\begin_inset Formula $l=n+1$
+\begin_inset Formula $l=p+1$
 \end_inset
 
 , 
@@ -1186,6 +1190,39 @@ C_{nm}=\sin\frac{n-m}{2M}\pi-\exp\left(-i\pi\left(p+1\right)\frac{n+m}{M}\right)
 \[
 D_{nm}=\left[1-\exp\left(-2\pi i\frac{\left(n+1\right)m}{M}\right)\right]\cos\frac{n-m}{2M}\pi
 \]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+HT_{s}T_{t}\ket{0} & = & \left(E_{s}+T_{t}\right)T_{s}T_{k}\ket{0}\\
+ &  & +\frac{1}{N}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{kl}T\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\psi_{s}\left(\theta\right)\psi_{t}\left(\eta\right)\ket{0}\\
+ &  & +\frac{1}{N}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{lk}T\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\psi_{s}\left(\theta\right)\psi_{t}\left(\eta\right)\ket{0}+\cdots\\
+ & = & \left(E_{s}+T_{t}\right)T_{s}T_{k}\ket{0}\\
+ &  & +\frac{1}{N}\sum_{r}T_{r}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{kl}\bar{\psi}_{r}\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\psi_{s}\left(\theta\right)\psi_{t}\left(\eta\right)\ket{0}\\
+ &  & +\frac{1}{N}\sum_{r}T_{r}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{lk}\bar{\psi}_{r}\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\psi_{s}\left(\theta\right)\psi_{t}\left(\eta\right)\ket{0}+\cdots\\
+ & \equiv & \left(E_{s}+T_{t}\right)T_{s}T_{k}\ket{0}+\frac{1}{N}\sum_{r}T_{r}\ket{0}\left(W_{rst}^{\left(1\right)}+W_{rst}^{\left(2\right)}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+W_{rst}^{\left(1\right)} & = & \int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{kl}\bar{\psi}\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{K}\right)\psi_{t}\left(\eta_{1}\cdots\eta_{L}\right)\\
+ & = & \int d\theta_{2}\cdots d\theta_{K}d\theta_{1}d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{k+1,l}\bar{\psi}\left(\theta_{k+2}\cdots\theta_{k+1}\eta_{l}\cdots\eta_{l-1}\right)\psi_{s}\left(\theta_{2}\cdots\theta_{K}\theta_{1}\right)\psi_{t}\left(\eta_{1}\cdots\eta_{L}\right)\\
+ & = & \int d\theta_{1}\cdots d\theta_{K}d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{k+1,l}\bar{\psi}\left(\theta_{k+2}\cdots\theta_{k+1}\eta_{l}\cdots\eta_{l-1}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{K}\right)\psi_{t}\left(\eta_{1}\cdots\eta_{L}\right)\\
+ & = & KL\int d\theta d\eta\,\bar{h}_{K,1}\bar{\psi}\left(\theta_{1}\cdots\theta_{K}\eta_{1}\cdots\eta_{L}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{K}\right)\psi_{t}\left(\eta_{1}\cdots\eta_{L}\right)
+\end{eqnarray*}
+
+\end_inset
+
+Likewise
+\begin_inset Formula 
+\begin{eqnarray*}
+W_{rst}^{\left(2\right)} & = & KL\int d\theta d\eta\,\bar{h}_{L,1}\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{K}\eta_{1}\cdots\eta_{L}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{K}\right)\psi_{t}\left(\eta_{1}\cdots\eta_{L}\right)
+\end{eqnarray*}
 
 \end_inset
 
