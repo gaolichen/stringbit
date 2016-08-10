@@ -352,6 +352,38 @@ G_{k}=\bar{F}_{M-k}^{\dagger}=c_{k}\alpha_{k}-s_{k}\beta_{k},
 
 \end_inset
 
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\{ \bar{F}_{i}^{\dagger},\bar{F}_{j}^{\dagger}\right\}  & = & \left\{ c_{i}\alpha_{M-i}-s_{i}\beta_{M-i},c_{j}\alpha_{M-j}-s_{j}\beta_{M-j}\right\} \\
+ & = & -c_{i}s_{j}\left\{ \alpha_{M-i},\beta_{M-j}\right\} -s_{i}c_{j}\left\{ \beta_{M-i},\alpha_{M-j}\right\} \\
+ & = & \left(c_{i}s_{i}-s_{i}c_{i}\right)\delta_{i+j,M}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\{ F_{i}^{\dagger},F_{j}^{\dagger}\right\}  & = & \left\{ -s_{i}\alpha_{M-i}-c_{i}\beta_{M-i},-s_{j}\alpha_{M-j}-c_{j}\beta_{M-j}\right\} \\
+ & = & s_{i}c_{j}\left\{ \alpha_{M-i},\beta_{M-j}\right\} +c_{i}s_{j}\left\{ \beta_{M-i},\alpha_{M-j}\right\} \\
+ & = & \left(s_{i}c_{i}-c_{i}s_{i}\right)\delta_{i+j,M}\\
+ & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\{ F_{i}^{\dagger},\bar{F}_{j}^{\dagger}\right\}  & = & \left\{ -s_{i}\alpha_{M-i}-c_{i}\beta_{M-i},c_{j}\alpha_{M-j}-s_{j}\beta_{M-j}\right\} \\
+ & = & s_{i}s_{j}\left\{ \alpha_{M-i},\beta_{M-j}\right\} -c_{i}c_{j}\left\{ \beta_{M-i},\alpha_{M-j}\right\} \\
+ & = & \left(-s_{i}^{2}-c_{i}^{2}\right)\delta_{i+j,M}\\
+ & = & -\delta_{i+j,M}
+\end{eqnarray*}
+
+\end_inset
+
  from which it follows 
 \begin_inset Formula 
 \[
@@ -472,7 +504,28 @@ F_{M-k}\phi_{k} & = & \left(s_{k}\alpha_{M-k}+c_{k}\beta_{M-k}\right)\left(c_{k}
 F_{M-k}^{\dagger}\bar{\phi}_{k} & = & \left(s_{k}\alpha_{k}-c_{k}\beta_{k}\right)\left(s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)\\
  & = & s_{k}^{2}\alpha_{k}-c_{k}^{2}\beta_{k}\alpha_{M-k}\alpha_{k}\\
  & = & \left(s_{k}^{2}-c_{k}^{2}\right)\alpha_{k}\\
- & = & -\alpha_{k}
+ & = & -\sin\frac{k\pi}{M}\alpha_{k}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+F_{k}^{\dagger}\bar{\phi}_{k} & = & \left(c_{k}\alpha_{M-k}-s_{k}\beta_{M-k}\right)\left(s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)\\
+ & = & c_{k}s_{k}\alpha_{M-k}-s_{k}c_{k}\beta_{M-k}\alpha_{M-k}\alpha_{k}\\
+ & = & \left(c_{k}s_{k}+s_{k}c_{k}\right)\alpha_{M-k}\\
+ & = & \cos\frac{k\pi}{M}\alpha_{M-k}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+F_{M-k}^{\dagger}F_{k}^{\dagger}\bar{\phi}_{k} & = & \cos\frac{k\pi}{M}\left(s_{k}\alpha_{k}-c_{k}\beta_{k}\right)\alpha_{M-k}\\
+ & = & \cos\frac{k\pi}{M}\left(s_{k}\alpha_{k}\alpha_{M-k}-c_{k}\right)\\
+ & = & -\cos\frac{k\pi}{M}\left(c_{k}+s_{k}\alpha_{M-k}\alpha_{k}\right)
 \end{eqnarray*}
 
 \end_inset
