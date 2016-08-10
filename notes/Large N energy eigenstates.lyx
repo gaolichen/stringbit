@@ -281,9 +281,9 @@ F_{k}=-s_{k}\alpha_{k}+c_{k}\beta_{k},\quad\bar{F}_{k}=c_{k}\alpha_{k}+s_{k}\bet
 
 
 \begin_inset Formula 
-\[
-\alpha_{k}=c_{k}L_{k}^{+}-s_{k}L_{k}^{-},\quad\beta_{k}=s_{k}L_{k}^{+}+c_{k}L_{k}^{-}
-\]
+\begin{equation}
+\alpha_{k}=c_{k}\bar{F}_{k}-s_{k}F_{k},\quad\beta_{k}=s_{k}\bar{F}_{k}+c_{k}F_{k}\label{eq:alphak-betak}
+\end{equation}
 
 \end_inset
 
@@ -292,8 +292,8 @@ F_{k}=-s_{k}\alpha_{k}+c_{k}\beta_{k},\quad\bar{F}_{k}=c_{k}\alpha_{k}+s_{k}\bet
 \begin{eqnarray*}
 \left\{ \bar{F}_{i},\bar{F}_{j}\right\}  & = & \left\{ c_{i}\alpha_{i}+s_{i}\beta_{i},c_{j}\alpha_{j}+s_{j}\beta_{j}\right\} \\
  & = & c_{i}s_{j}\left\{ \alpha_{i},\beta_{j}\right\} +s_{i}c_{j}\left\{ \beta_{i},\alpha_{j}\right\} \\
- & = & \left(-c_{i}s_{i}+s_{i}c_{i}\right)\delta_{i+j,M}\\
- & = & 0
+ & = & \left(-c_{i}s_{i}+s_{i}c_{i}\right)\delta_{i+j,M}+2c_{0}s_{0}\delta_{i,0}\delta_{j,0}\\
+ & = & \delta_{i,0}\delta_{j,0}
 \end{eqnarray*}
 
 \end_inset
@@ -303,8 +303,8 @@ F_{k}=-s_{k}\alpha_{k}+c_{k}\beta_{k},\quad\bar{F}_{k}=c_{k}\alpha_{k}+s_{k}\bet
 \begin{eqnarray*}
 \left\{ F_{i},F_{j}\right\}  & = & \left\{ -s_{i}\alpha_{i}+c_{i}\beta_{i},-s_{j}\alpha_{j}+c_{j}\beta_{j}\right\} \\
  & = & -s_{i}c_{j}\left\{ \alpha_{i},\beta_{j}\right\} -c_{i}s_{j}\left\{ \beta_{i},\alpha_{j}\right\} \\
- & = & \left(-s_{i}c_{i}+c_{i}s_{i}\right)\delta_{i+j,M}\\
- & = & 0
+ & = & \left(-s_{i}c_{i}+c_{i}s_{i}\right)\delta_{i+j,M}-2c_{0}s_{0}\delta_{i,0}\delta_{j,0}\\
+ & = & -\delta_{i,0}\delta_{j,0}
 \end{eqnarray*}
 
 \end_inset
@@ -314,7 +314,7 @@ F_{k}=-s_{k}\alpha_{k}+c_{k}\beta_{k},\quad\bar{F}_{k}=c_{k}\alpha_{k}+s_{k}\bet
 \begin{eqnarray*}
 \left\{ F_{i},\bar{F}_{j}\right\}  & = & \left\{ -s_{i}\alpha_{i}+c_{i}\beta_{i},c_{j}\alpha_{j}+s_{j}\beta_{j}\right\} \\
  & = & -s_{i}s_{j}\left\{ \alpha_{i},\beta_{j}\right\} +c_{i}c_{j}\left\{ \beta_{i},\alpha_{j}\right\} \\
- & = & \left(s_{i}^{2}+c_{i}^{2}\right)\delta_{i+j,M}\\
+ & = & \left(s_{i}^{2}+c_{i}^{2}\right)\delta_{i+j,M}+\left(c_{0}^{2}-s_{0}^{2}\right)\delta_{i,0}\delta_{j,0}\\
  & = & \delta_{i+j,M}.
 \end{eqnarray*}
 
@@ -358,8 +358,8 @@ where the sign of RHS is
 \begin{eqnarray*}
 \left\{ \tilde{F}_{i},\tilde{F}_{j}\right\}  & = & \left\{ -s_{i}\alpha_{i}-c_{i}\beta_{i},-s_{j}\alpha_{j}-c_{j}\beta_{j}\right\} \\
  & = & s_{i}c_{j}\left\{ \alpha_{i},\beta_{j}\right\} +c_{i}s_{j}\left\{ \beta_{i},\alpha_{j}\right\} \\
- & = & \left(s_{i}c_{i}-c_{i}s_{i}\right)\delta_{i+j,M}\\
- & = & 0
+ & = & \left(s_{i}c_{i}-c_{i}s_{i}\right)\delta_{i+j,M}+2s_{0}c_{0}\delta_{i,0}\delta_{j,0}\\
+ & = & \delta_{i,0}\delta_{j,0}
 \end{eqnarray*}
 
 \end_inset
@@ -369,8 +369,8 @@ where the sign of RHS is
 \begin{eqnarray*}
 \left\{ \tilde{\bar{F}}_{i},\tilde{\bar{F}}_{j}\right\}  & = & \left\{ c_{i}\alpha_{i}-s_{i}\beta_{i},c_{j}\alpha_{j}-s_{j}\beta_{j}\right\} \\
  & = & -c_{i}s_{j}\left\{ \alpha_{i},\beta_{j}\right\} -s_{i}c_{j}\left\{ \beta_{i},\alpha_{j}\right\} \\
- & = & \left(c_{i}s_{i}-s_{i}c_{i}\right)\delta_{i+j,M}\\
- & = & 0
+ & = & \left(c_{i}s_{i}-s_{i}c_{i}\right)\delta_{i+j,M}-2c_{0}s_{0}\delta_{i,0}\delta_{j,0}\\
+ & = & -\delta_{i,0}\delta_{j,0}
 \end{eqnarray*}
 
 \end_inset
@@ -380,7 +380,7 @@ where the sign of RHS is
 \begin{eqnarray*}
 \left\{ \tilde{F}_{i},\tilde{\bar{F}}_{j}\right\}  & = & \left\{ -s_{i}\alpha_{i}-c_{i}\beta_{i},c_{j}\alpha_{j}-s_{j}\beta_{j}\right\} \\
  & = & s_{i}s_{j}\left\{ \alpha_{i},\beta_{j}\right\} -c_{i}c_{j}\left\{ \beta_{i},\alpha_{j}\right\} \\
- & = & \left(-s_{i}^{2}-c_{i}^{2}\right)\delta_{i+j,M}\\
+ & = & \left(-s_{i}^{2}-c_{i}^{2}\right)\delta_{i+j,M}+\left(s_{0}^{2}-c_{0}^{2}\right)\delta_{i,0}\delta_{j,0}\\
  & = & -\delta_{i+j,M}
 \end{eqnarray*}
 
@@ -1099,7 +1099,7 @@ h_{kl} & = & -2+\frac{4}{M}\sum_{n,m=0}^{M-1}\alpha_{n}\beta_{m}\exp\left(-2\pi 
  Using 
 \begin_inset Formula 
 \[
-\alpha_{k}=c_{k}L_{k}^{+}-s_{k}L_{k}^{-},\quad\beta_{k}=s_{k}L_{k}^{+}+c_{k}L_{k}^{-}
+\alpha_{k}=c_{k}\bar{F}_{k}-s_{k}F_{k},\quad\beta_{k}=s_{k}\bar{F}_{k}+c_{k}F_{k}
 \]
 
 \end_inset
@@ -1107,9 +1107,9 @@ h_{kl} & = & -2+\frac{4}{M}\sum_{n,m=0}^{M-1}\alpha_{n}\beta_{m}\exp\left(-2\pi 
  we have
 \begin_inset Formula 
 \begin{eqnarray*}
-\alpha_{n}\alpha_{m} & = & \left(c_{n}L_{n}^{+}-s_{n}L_{n}^{-}\right)\left(c_{m}L_{m}^{+}-s_{m}L_{m}^{-}\right)\\
- & = & c_{n}c_{m}L_{n}^{+}L_{m}^{+}+s_{n}s_{m}L_{n}^{-}L_{m}^{-}-c_{n}s_{m}L_{n}^{+}L_{m}^{-}-c_{m}s_{n}L_{n}^{-}L_{m}^{+}\\
- & = & c_{n}c_{m}L_{n}^{+}L_{m}^{+}+s_{n}s_{m}L_{n}^{-}L_{m}^{-}-c_{n}s_{m}L_{n}^{+}L_{m}^{-}+c_{m}s_{n}L_{m}^{+}L_{n}^{-}-c_{n}s_{n}\delta_{m+n,M}
+\alpha_{n}\alpha_{m} & = & \left(c_{n}\bar{F}_{n}-s_{n}F_{n}\right)\left(c_{m}\bar{F}_{m}-s_{m}F_{m}\right)\\
+ & = & c_{n}c_{m}\bar{F}_{n}\bar{F}_{m}+s_{n}s_{m}F_{n}F_{m}-c_{n}s_{m}\bar{F}_{n}F_{m}-c_{m}s_{n}F_{n}\bar{F}_{m}\\
+ & = & c_{n}c_{m}\bar{F}_{n}\bar{F}_{m}+s_{n}s_{m}F_{n}F_{m}-c_{n}s_{m}\bar{F}_{n}F_{m}+c_{m}s_{n}\bar{F}_{m}F_{n}-c_{n}s_{n}\delta_{m+n,M}
 \end{eqnarray*}
 
 \end_inset
@@ -1117,9 +1117,9 @@ h_{kl} & = & -2+\frac{4}{M}\sum_{n,m=0}^{M-1}\alpha_{n}\beta_{m}\exp\left(-2\pi 
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\alpha_{n}\beta_{m} & = & \left(c_{n}L_{n}^{+}-s_{n}L_{n}^{-}\right)\left(s_{m}L_{m}^{+}+c_{m}L_{m}^{-}\right)\\
- & = & c_{n}s_{m}L_{n}^{+}L_{m}^{+}-c_{m}s_{n}L_{n}^{-}L_{m}^{-}+c_{n}c_{m}L_{n}^{+}L_{m}^{-}-s_{n}s_{m}L_{n}^{-}L_{m}^{+}\\
- & = & c_{n}s_{m}L_{n}^{+}L_{m}^{+}-c_{m}s_{n}L_{n}^{-}L_{m}^{-}+c_{n}c_{m}L_{n}^{+}L_{m}^{-}+s_{n}s_{m}L_{m}^{+}L_{n}^{-}+s_{n}^{2}\delta_{m+n,M}
+\alpha_{n}\beta_{m} & = & \left(c_{n}\bar{F}_{n}-s_{n}F_{n}\right)\left(s_{m}\bar{F}_{m}+c_{m}F_{m}\right)\\
+ & = & c_{n}s_{m}\bar{F}_{n}\bar{F}_{m}-c_{m}s_{n}F_{n}F_{m}+c_{n}c_{m}\bar{F}_{n}F_{m}-s_{n}s_{m}F_{n}\bar{F}_{m}\\
+ & = & c_{n}s_{m}\bar{F}_{n}\bar{F}_{m}-c_{m}s_{n}F_{n}F_{m}+c_{n}c_{m}\bar{F}_{n}F_{m}+s_{n}s_{m}\bar{F}_{m}F_{n}+s_{n}^{2}\delta_{m+n,M}
 \end{eqnarray*}
 
 \end_inset
@@ -1127,9 +1127,9 @@ h_{kl} & = & -2+\frac{4}{M}\sum_{n,m=0}^{M-1}\alpha_{n}\beta_{m}\exp\left(-2\pi 
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\beta_{n}\beta_{m} & = & \left(s_{n}L_{n}^{+}+c_{n}L_{n}^{-}\right)\left(s_{m}L_{m}^{+}+c_{m}L_{m}^{-}\right)\\
- & = & s_{n}s_{m}L_{n}^{+}L_{m}^{+}+c_{n}c_{m}L_{n}^{-}L_{m}^{-}+c_{m}s_{n}L_{n}^{+}L_{m}^{-}+c_{n}s_{m}L_{n}^{-}L_{m}^{+}\\
- & = & s_{n}s_{m}L_{n}^{+}L_{m}^{+}+c_{n}c_{m}L_{n}^{-}L_{m}^{-}+c_{m}s_{n}L_{n}^{+}L_{m}^{-}-c_{n}s_{m}L_{m}^{+}L_{n}^{-}-c_{n}s_{n}\delta_{m+n,M}
+\beta_{n}\beta_{m} & = & \left(s_{n}\bar{F}_{n}+c_{n}F_{n}\right)\left(s_{m}\bar{F}_{m}+c_{m}F_{m}\right)\\
+ & = & s_{n}s_{m}\bar{F}_{n}\bar{F}_{m}+c_{n}c_{m}F_{n}F_{m}+c_{m}s_{n}\bar{F}_{n}F_{m}+c_{n}s_{m}F_{n}\bar{F}_{m}\\
+ & = & s_{n}s_{m}\bar{F}_{n}\bar{F}_{m}+c_{n}c_{m}F_{n}F_{m}+c_{m}s_{n}\bar{F}_{n}F_{m}-c_{n}s_{m}\bar{F}_{m}F_{n}-c_{n}s_{n}\delta_{m+n,M}
 \end{eqnarray*}
 
 \end_inset
@@ -1137,19 +1137,19 @@ h_{kl} & = & -2+\frac{4}{M}\sum_{n,m=0}^{M-1}\alpha_{n}\beta_{m}\exp\left(-2\pi 
 
 \begin_inset Formula 
 \begin{align*}
-h_{kl}= & -2+\frac{4}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi ik\frac{m+n}{M}\right)\left(c_{n}s_{m}L_{n}^{+}L_{m}^{+}-c_{m}s_{n}L_{n}^{-}L_{m}^{-}+c_{n}c_{m}L_{n}^{+}L_{m}^{-}+s_{n}s_{m}L_{m}^{+}L_{n}^{-}\right)\\
- & -\frac{2}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(c_{n}s_{m}+c_{m}s_{n}+ic_{n}c_{m}+is_{n}s_{m}\right)L_{n}^{+}L_{m}^{+}\\
- & -\frac{2}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(-c_{m}s_{n}-c_{n}s_{m}+is_{m}s_{n}+ic_{n}c_{m}\right)L_{n}^{-}L_{m}^{-}\\
- & -\frac{2}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(2c_{n}c_{m}+2s_{n}s_{m}\right)L_{n}^{+}L_{m}^{-}\\
- & +\frac{4}{M}\sum_{n=0}^{M-1}s_{n}^{2}-\frac{2}{M}\sum_{n=0}^{M-1}\exp\left(-2n\pi i\frac{k-l}{M}\right)\left(2s_{n}^{2}-2ic_{n}s_{n}\right)\\
-= & -2+\frac{2}{M}\sum_{n,m=0}^{M-1}\left[2\exp\left(-2\pi ik\frac{m+n}{M}\right)c_{n}s_{m}-\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(c_{n}s_{m}+c_{m}s_{n}+ic_{n}c_{m}+is_{n}s_{m}\right)\right]L_{n}^{+}L_{m}^{+}\\
- & +\frac{2}{M}\sum_{n,m=0}^{M-1}\left[-2\exp\left(-2\pi ik\frac{m+n}{M}\right)c_{m}s_{n}+\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(c_{m}s_{n}+c_{n}s_{m}-ic_{n}c_{m}-is_{n}s_{m}\right)\right]L_{n}^{-}L_{m}^{-}\\
- & +\frac{4}{M}\sum_{n,m=0}^{M-1}\left[\exp\left(-2\pi ik\frac{m+n}{M}\right)-\exp\left(-2\pi i\frac{kn+lm}{M}\right)\right]\left(c_{n}c_{m}+s_{n}s_{m}\right)L_{n}^{+}L_{m}^{-}\\
- & +\frac{4}{M}\sum_{n=0}^{M-1}\frac{1-\sin\frac{n\pi}{M}}{2}-\frac{2}{M}\sum_{n=0}^{M-1}\exp\left(-2n\pi i\frac{k-l}{M}\right)\left(1-\sin\frac{n\pi}{M}-i\cos\frac{n\pi}{M}\right)\\
-\equiv & -2+\frac{4}{M}\sum_{n>m}^{M-1}\left(C_{nm}^{+}L_{n}^{+}L_{m}^{+}+C_{nm}^{-}L_{n}^{-}L_{m}^{-}\right)+\frac{4}{M}\sum_{n,m=0}^{M-1}D_{nm}L_{n}^{+}L_{m}^{-}\\
- & +2-\frac{2}{M}\cot\frac{\pi}{2M}+\frac{2}{M}\csc\frac{2\left(k-l\right)+1}{2M}\pi\exp\left[i\frac{2\left(k-l\right)+1}{2M}\pi\right]\\
-= & \frac{4}{M}\sum_{n>m}^{M-1}\left(C_{nm}^{+}L_{n}^{+}L_{m}^{+}+C_{nm}^{-}L_{n}^{-}L_{m}^{-}\right)+\frac{4}{M}\sum_{n,m=0}^{M-1}D_{nm}L_{n}^{+}L_{m}^{-}\\
- & -\frac{2}{M}\cot\frac{\pi}{2M}+\frac{2}{M}\cot\frac{2\left(k-l\right)+1}{2M}\pi+\frac{2i}{M}
+h_{kl}= & -2+\frac{4}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi ik\frac{m+n}{M}\right)\left(c_{n}s_{m}\bar{F}_{n}\bar{F}_{m}-c_{m}s_{n}F_{n}F_{m}+c_{n}c_{m}\bar{F}_{n}F_{m}+s_{n}s_{m}\bar{F}_{m}F_{n}\right)\\
+ & -\frac{2}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(c_{n}s_{m}+c_{m}s_{n}+ic_{n}c_{m}+is_{n}s_{m}\right)\bar{F}_{n}\bar{F}_{m}\\
+ & -\frac{2}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(-c_{m}s_{n}-c_{n}s_{m}+is_{m}s_{n}+ic_{n}c_{m}\right)F_{n}F_{m}\\
+ & -\frac{2}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(2c_{n}c_{m}+2s_{n}s_{m}\right)\bar{F}_{n}F_{m}\\
+ & +\frac{4}{M}\sum_{n=1}^{M-1}s_{n}^{2}-\frac{2}{M}\sum_{n=1}^{M-1}\exp\left(-2n\pi i\frac{k-l}{M}\right)\left(2s_{n}^{2}-2ic_{n}s_{n}\right)\\
+= & -2+\frac{2}{M}\sum_{n,m=0}^{M-1}\left[2\exp\left(-2\pi ik\frac{m+n}{M}\right)c_{n}s_{m}-\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(c_{n}s_{m}+c_{m}s_{n}+ic_{n}c_{m}+is_{n}s_{m}\right)\right]\bar{F}_{n}\bar{F}_{m}\\
+ & +\frac{2}{M}\sum_{n,m=0}^{M-1}\left[-2\exp\left(-2\pi ik\frac{m+n}{M}\right)c_{m}s_{n}+\exp\left(-2\pi i\frac{kn+lm}{M}\right)\left(c_{m}s_{n}+c_{n}s_{m}-ic_{n}c_{m}-is_{n}s_{m}\right)\right]F_{n}F_{m}\\
+ & +\frac{4}{M}\sum_{n,m=0}^{M-1}\left[\exp\left(-2\pi ik\frac{m+n}{M}\right)-\exp\left(-2\pi i\frac{kn+lm}{M}\right)\right]\left(c_{n}c_{m}+s_{n}s_{m}\right)\bar{F}_{n}F_{m}\\
+ & +\frac{4}{M}\sum_{n=1}^{M-1}\frac{1-\sin\frac{n\pi}{M}}{2}-\frac{2}{M}\sum_{n=1}^{M-1}\exp\left(-2n\pi i\frac{k-l}{M}\right)\left(1-\sin\frac{n\pi}{M}-i\cos\frac{n\pi}{M}\right)\\
+\equiv & -2+\frac{4}{M}\sum_{n>m}^{M-1}\left(C_{nm}^{+}\bar{F}_{n}\bar{F}_{m}+C_{nm}^{-}F_{n}F_{m}\right)+\frac{4}{M}\sum_{n,m=0}^{M-1}D_{nm}\bar{F}_{m}F_{m}\\
+ & +2-\frac{2}{M}\cot\frac{\pi}{2M}-\frac{2}{M}+\frac{2}{M}\csc\frac{2\left(k-l\right)+1}{2M}\pi\exp\left[i\frac{2\left(k-l\right)+1}{2M}\pi\right]+\frac{2}{M}\left(1-i\right)\\
+= & \frac{4}{M}\sum_{n>m}^{M-1}\left(C_{nm}^{+}\bar{F}_{n}\bar{F}_{m}+C_{nm}^{-}F_{n}F_{m}\right)+\frac{4}{M}\sum_{n,m=0}^{M-1}D_{nm}\bar{F}_{n}F_{m}\\
+ & -\frac{2}{M}\cot\frac{\pi}{2M}+\frac{2}{M}\cot\frac{2\left(k-l\right)+1}{2M}\pi
 \end{align*}
 
 \end_inset
@@ -1260,7 +1260,7 @@ D_{nm}=\left[1-\exp\left(-2\pi i\frac{\left(p+1\right)m}{M}\right)\right]\cos\fr
 
 \begin_inset Formula 
 \[
-\text{const part of }h_{M,p+1}=-\frac{2}{M}\cot\frac{\pi}{2M}-\frac{2}{M}\cot\frac{2p+1}{2M}\pi+\frac{2i}{M}\equiv\alpha
+\text{const part of }h_{M,p+1}=-\frac{2}{M}\cot\frac{\pi}{2M}-\frac{2}{M}\cot\frac{2p+1}{2M}\pi\equiv\alpha
 \]
 
 \end_inset
