@@ -274,7 +274,7 @@ c_{k}c_{l}+s_{k}s_{l}=\cos\frac{k-l}{2M}\pi,\quad c_{k}s_{l}+c_{l}s_{k}=\cos\fra
  Then
 \begin_inset Formula 
 \[
-\bar{F}_{k}=c_{k}\alpha_{k}+s_{k}\beta_{k},\quad F_{k}=-s_{k}\alpha_{k}+c_{k}\beta_{k}
+F_{k}=-s_{k}\alpha_{k}+c_{k}\beta_{k},\quad\bar{F}_{k}=c_{k}\alpha_{k}+s_{k}\beta_{k},
 \]
 
 \end_inset
@@ -287,39 +287,7 @@ c_{k}c_{l}+s_{k}s_{l}=\cos\frac{k-l}{2M}\pi,\quad c_{k}s_{l}+c_{l}s_{k}=\cos\fra
 
 \end_inset
 
-We also have
-\begin_inset Formula 
-\[
-\bar{F}_{k}^{\dagger}=c_{k}\alpha_{M-k}-s_{k}\beta_{M-k},\quad F_{k}^{\dagger}=-s_{k}\alpha_{M-k}-c_{k}\beta_{M-k}.
-\]
-
-\end_inset
-
- Note that 
-\begin_inset Formula 
-\[
-\bar{F}_{k}^{\dagger}\neq F_{M-k},\quad F_{k}^{\dagger}\neq\bar{F}_{M-k}
-\]
-
-\end_inset
-
  
-\begin_inset Formula 
-\[
-\bar{G}_{k}=F_{M-k}^{\dagger}=-s_{k}\alpha_{k}-c_{k}\beta_{k},
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-G_{k}=\bar{F}_{M-k}^{\dagger}=c_{k}\alpha_{k}-s_{k}\beta_{k},
-\]
-
-\end_inset
-
-
 \begin_inset Formula 
 \begin{eqnarray*}
 \left\{ \bar{F}_{i},\bar{F}_{j}\right\}  & = & \left\{ c_{i}\alpha_{i}+s_{i}\beta_{i},c_{j}\alpha_{j}+s_{j}\beta_{j}\right\} \\
@@ -353,20 +321,43 @@ G_{k}=\bar{F}_{M-k}^{\dagger}=c_{k}\alpha_{k}-s_{k}\beta_{k},
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Define 
+\begin_inset Formula $\tilde{F}_{k}$
+\end_inset
+
+ as 
 \begin_inset Formula 
-\begin{eqnarray*}
-\left\{ \bar{F}_{i}^{\dagger},\bar{F}_{j}^{\dagger}\right\}  & = & \left\{ c_{i}\alpha_{M-i}-s_{i}\beta_{M-i},c_{j}\alpha_{M-j}-s_{j}\beta_{M-j}\right\} \\
- & = & -c_{i}s_{j}\left\{ \alpha_{M-i},\beta_{M-j}\right\} -s_{i}c_{j}\left\{ \beta_{M-i},\alpha_{M-j}\right\} \\
- & = & \left(c_{i}s_{i}-s_{i}c_{i}\right)\delta_{i+j,M}
-\end{eqnarray*}
+\[
+\int d^{M}\theta\,\left[\tilde{F}_{k}\psi\left(\theta\right)\right]\chi\left(\theta\right)=\pm\int d^{M}\theta\,\psi\left(\theta\right)\left[F_{k}\chi\left(\theta\right)\right],
+\]
+
+\end_inset
+
+where the sign of RHS is 
+\begin_inset Formula $+\left(-\right)$
+\end_inset
+
+ when 
+\begin_inset Formula $\psi$
+\end_inset
+
+ is grassman even (odd).
+ We then have
+\begin_inset Formula 
+\[
+\tilde{F}_{k}=-s_{k}\alpha_{k}-c_{k}\beta_{k},\quad\tilde{\bar{F}}_{k}=c_{k}\alpha_{k}-s_{k}\beta_{k}.
+\]
 
 \end_inset
 
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\left\{ F_{i}^{\dagger},F_{j}^{\dagger}\right\}  & = & \left\{ -s_{i}\alpha_{M-i}-c_{i}\beta_{M-i},-s_{j}\alpha_{M-j}-c_{j}\beta_{M-j}\right\} \\
- & = & s_{i}c_{j}\left\{ \alpha_{M-i},\beta_{M-j}\right\} +c_{i}s_{j}\left\{ \beta_{M-i},\alpha_{M-j}\right\} \\
+\left\{ \tilde{F}_{i},\tilde{F}_{j}\right\}  & = & \left\{ -s_{i}\alpha_{i}-c_{i}\beta_{i},-s_{j}\alpha_{j}-c_{j}\beta_{j}\right\} \\
+ & = & s_{i}c_{j}\left\{ \alpha_{i},\beta_{j}\right\} +c_{i}s_{j}\left\{ \beta_{i},\alpha_{j}\right\} \\
  & = & \left(s_{i}c_{i}-c_{i}s_{i}\right)\delta_{i+j,M}\\
  & = & 0
 \end{eqnarray*}
@@ -376,62 +367,21 @@ G_{k}=\bar{F}_{M-k}^{\dagger}=c_{k}\alpha_{k}-s_{k}\beta_{k},
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\left\{ F_{i}^{\dagger},\bar{F}_{j}^{\dagger}\right\}  & = & \left\{ -s_{i}\alpha_{M-i}-c_{i}\beta_{M-i},c_{j}\alpha_{M-j}-s_{j}\beta_{M-j}\right\} \\
- & = & s_{i}s_{j}\left\{ \alpha_{M-i},\beta_{M-j}\right\} -c_{i}c_{j}\left\{ \beta_{M-i},\alpha_{M-j}\right\} \\
+\left\{ \tilde{\bar{F}}_{i},\tilde{\bar{F}}_{j}\right\}  & = & \left\{ c_{i}\alpha_{i}-s_{i}\beta_{i},c_{j}\alpha_{j}-s_{j}\beta_{j}\right\} \\
+ & = & -c_{i}s_{j}\left\{ \alpha_{i},\beta_{j}\right\} -s_{i}c_{j}\left\{ \beta_{i},\alpha_{j}\right\} \\
+ & = & \left(c_{i}s_{i}-s_{i}c_{i}\right)\delta_{i+j,M}\\
+ & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\{ \tilde{F}_{i},\tilde{\bar{F}}_{j}\right\}  & = & \left\{ -s_{i}\alpha_{i}-c_{i}\beta_{i},c_{j}\alpha_{j}-s_{j}\beta_{j}\right\} \\
+ & = & s_{i}s_{j}\left\{ \alpha_{i},\beta_{j}\right\} -c_{i}c_{j}\left\{ \beta_{i},\alpha_{j}\right\} \\
  & = & \left(-s_{i}^{2}-c_{i}^{2}\right)\delta_{i+j,M}\\
  & = & -\delta_{i+j,M}
-\end{eqnarray*}
-
-\end_inset
-
- from which it follows 
-\begin_inset Formula 
-\[
-\left\{ \bar{F}_{i}^{\dagger},\bar{F}_{j}^{\dagger}\right\} =\left\{ F_{i}^{\dagger},F_{j}^{\dagger}\right\} =0,\quad\left\{ \bar{F}_{i}^{\dagger},F_{j}^{\dagger}\right\} =\delta_{i+j,M},\quad1\leq i,j\leq M-1.
-\]
-
-\end_inset
-
- Other anticommutations are 
-\begin_inset Formula 
-\begin{eqnarray*}
-\left\{ \bar{F}_{i},\bar{F}_{j}^{\dagger}\right\}  & = & \left\{ c_{i}\alpha_{i}+s_{i}\beta_{i},-s_{j}\alpha_{j}-c_{j}\beta_{j}\right\} \\
- & = & -c_{i}c_{j}\left\{ \alpha_{i},\beta_{j}\right\} -s_{i}s_{j}\left\{ \beta_{i},\alpha_{j}\right\} \\
- & = & -c_{i}^{2}\delta_{i+j,M}+s_{i}^{2}\delta_{i+j,M}\\
- & = & -\sin\frac{i\pi}{M}
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\left\{ F_{i},F_{j}^{\dagger}\right\}  & = & \left\{ -s_{i}\alpha_{i}+c_{i}\beta_{i},c_{j}\alpha_{j}-s_{j}\beta_{j}\right\} \\
- & = & s_{i}s_{j}\left\{ \alpha_{i},\beta_{j}\right\} +c_{i}c_{j}\left\{ \beta_{i},\alpha_{j}\right\} \\
- & = & -s_{i}^{2}\delta_{i+j,M}+c_{i}^{2}\delta_{i+j,M}\\
- & = & \sin\frac{i\pi}{M}\delta_{i+j,M}
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\left\{ \bar{F}_{i},F_{j}^{\dagger}\right\}  & = & \left\{ c_{i}\alpha_{i}+s_{i}\beta_{i},c_{j}\alpha_{j}-s_{j}\beta_{j}\right\} \\
- & = & -c_{i}s_{j}\left\{ \alpha_{i},\beta_{j}\right\} +c_{j}s_{i}\left\{ \beta_{i},\alpha_{j}\right\} \\
- & = & c_{i}s_{i}\delta_{i+j,M}+c_{i}s_{i}\delta_{i+j,M}\\
- & = & \cos\frac{i\pi}{M}\delta_{i+j,M}
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\left\{ F_{i},\bar{F}_{j}^{\dagger}\right\}  & = & \left\{ -s_{i}\alpha_{i}+c_{i}\beta_{i},-s_{j}\alpha_{j}-c_{j}\beta_{j}\right\} \\
- & = & s_{i}c_{j}\left\{ \alpha_{i},\beta_{j}\right\} -c_{i}s_{j}\left\{ \beta_{i},\alpha_{j}\right\} \\
- & = & \left(s_{i}c_{i}+c_{i}s_{i}\right)\delta_{i+j,M}\\
- & = & \cos\frac{i\pi}{M}\delta_{i+j,M}
 \end{eqnarray*}
 
 \end_inset
@@ -501,10 +451,10 @@ F_{M-k}\phi_{k} & = & \left(s_{k}\alpha_{M-k}+c_{k}\beta_{M-k}\right)\left(c_{k}
 
 \begin_inset Formula 
 \begin{eqnarray*}
-F_{M-k}^{\dagger}\bar{\phi}_{k} & = & \left(s_{k}\alpha_{k}-c_{k}\beta_{k}\right)\left(s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)\\
- & = & s_{k}^{2}\alpha_{k}-c_{k}^{2}\beta_{k}\alpha_{M-k}\alpha_{k}\\
- & = & \left(s_{k}^{2}-c_{k}^{2}\right)\alpha_{k}\\
- & = & -\sin\frac{k\pi}{M}\alpha_{k}
+\tilde{F}_{M-k}\bar{\phi}_{k} & = & \left(s_{k}\alpha_{M-k}-c_{k}\beta_{M-k}\right)\left(s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)\\
+ & = & s_{k}^{2}\alpha_{M-k}-c_{k}^{2}\beta_{M-k}\alpha_{M-k}\alpha_{k}\\
+ & = & \left(s_{k}^{2}+c_{k}^{2}\right)\alpha_{M-k}\\
+ & = & \alpha_{M-k}
 \end{eqnarray*}
 
 \end_inset
@@ -512,10 +462,10 @@ F_{M-k}^{\dagger}\bar{\phi}_{k} & = & \left(s_{k}\alpha_{k}-c_{k}\beta_{k}\right
 
 \begin_inset Formula 
 \begin{eqnarray*}
-F_{k}^{\dagger}\bar{\phi}_{k} & = & \left(c_{k}\alpha_{M-k}-s_{k}\beta_{M-k}\right)\left(s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)\\
- & = & c_{k}s_{k}\alpha_{M-k}-s_{k}c_{k}\beta_{M-k}\alpha_{M-k}\alpha_{k}\\
- & = & \left(c_{k}s_{k}+s_{k}c_{k}\right)\alpha_{M-k}\\
- & = & \cos\frac{k\pi}{M}\alpha_{M-k}
+\tilde{F}_{k}\bar{\phi}_{k} & = & \left(-s_{k}\alpha_{k}-c_{k}\beta_{k}\right)\left(s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)\\
+ & = & -s_{k}^{2}\alpha_{k}-c_{k}^{2}\beta_{k}\alpha_{M-k}\alpha_{k}\\
+ & = & -\left(s_{k}^{2}+c_{k}^{2}\right)\alpha_{k}\\
+ & = & -\alpha_{k}
 \end{eqnarray*}
 
 \end_inset
@@ -523,9 +473,8 @@ F_{k}^{\dagger}\bar{\phi}_{k} & = & \left(c_{k}\alpha_{M-k}-s_{k}\beta_{M-k}\rig
 
 \begin_inset Formula 
 \begin{eqnarray*}
-F_{M-k}^{\dagger}F_{k}^{\dagger}\bar{\phi}_{k} & = & \cos\frac{k\pi}{M}\left(s_{k}\alpha_{k}-c_{k}\beta_{k}\right)\alpha_{M-k}\\
- & = & \cos\frac{k\pi}{M}\left(s_{k}\alpha_{k}\alpha_{M-k}-c_{k}\right)\\
- & = & -\cos\frac{k\pi}{M}\left(c_{k}+s_{k}\alpha_{M-k}\alpha_{k}\right)
+\tilde{F}_{M-k}\tilde{F}_{k}\bar{\phi}_{k} & = & -\left(s_{k}\alpha_{M-k}-c_{k}\beta_{M-k}\right)\alpha_{k}\\
+ & = & -s_{k}\alpha_{M-k}\alpha_{k}-c_{k}
 \end{eqnarray*}
 
 \end_inset
@@ -533,7 +482,7 @@ F_{M-k}^{\dagger}F_{k}^{\dagger}\bar{\phi}_{k} & = & \cos\frac{k\pi}{M}\left(s_{
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\bar{L}_{k}^{-}\bar{\phi}_{k} & = & \left(c_{k}\alpha_{k}-s_{k}\beta_{k}\right)\left(s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)\\
+\tilde{\bar{F}}_{k}\bar{\phi}_{k} & = & \left(c_{k}\alpha_{k}-s_{k}\beta_{k}\right)\left(s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)\\
  & = & c_{k}s_{k}\alpha_{k}-c_{k}s_{k}\beta_{k}\alpha_{M-k}\alpha_{k}\\
  & = & 0
 \end{eqnarray*}
@@ -543,17 +492,7 @@ F_{M-k}^{\dagger}F_{k}^{\dagger}\bar{\phi}_{k} & = & \cos\frac{k\pi}{M}\left(s_{
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\bar{L}_{M-k}^{+}\bar{\phi}_{k} & = & \left(s_{k}\alpha_{M-k}-c_{k}\beta_{M-k}\right)\left(s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)\\
- & = & s_{k}^{2}\alpha_{M-k}-c_{k}^{2}\beta_{M-k}\alpha_{M-k}\alpha_{k}\\
- & = & \alpha_{M-k}
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\bar{L}_{M-k}^{-}\bar{\phi}_{k} & = & \left(c_{k}\alpha_{M-k}+s_{k}\beta_{M-k}\right)\left(s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)\\
+\tilde{\bar{F}}_{M-k}\bar{\phi}_{k} & = & \left(c_{k}\alpha_{M-k}+s_{k}\beta_{M-k}\right)\left(s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)\\
  & = & c_{k}s_{k}\alpha_{M-k}+c_{k}s_{k}\beta_{M-k}\alpha_{M-k}\alpha_{k}\\
  & = & 0
 \end{eqnarray*}
@@ -638,7 +577,7 @@ The general eigenfunction can be obtained by acting the raising operators
  
 \begin_inset Formula 
 \begin{equation}
-\psi=\bar{F}_{k_{1}}\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0},\quad\bar{\psi}=\alpha_{0}F_{M-k_{s}}^{\dagger}F_{M-k_{s-1}}^{\dagger}\cdots F_{M-k_{1}}^{\dagger}\tilde{\psi}_{0}^{\left(1\right)},\label{eq:eigenfunction-oddM-1}
+\psi=\bar{F}_{k_{1}}\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0},\quad\bar{\psi}=\alpha_{0}\tilde{F}_{M-k_{s}}\tilde{F}_{M-k_{s-1}}\cdots\tilde{F}_{M-k_{1}}\tilde{\psi}_{0}^{\left(1\right)},\label{eq:eigenfunction-oddM-1}
 \end{equation}
 
 \end_inset
@@ -646,7 +585,7 @@ The general eigenfunction can be obtained by acting the raising operators
  or 
 \begin_inset Formula 
 \begin{equation}
-\psi=\bar{F}_{k_{1}}\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0}\alpha_{0},\quad\bar{\psi}=F_{M-k_{s}}^{\dagger}F_{M-k_{s-1}}^{\dagger}\cdots F_{M-k_{1}}^{\dagger}\tilde{\psi}_{0}^{\left(1\right)},\label{eq:eigenfunction-oddM-2}
+\psi=\bar{F}_{k_{1}}\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0}\alpha_{0},\quad\bar{\psi}=\tilde{F}_{M-k_{s}}\tilde{F}_{M-k_{s-1}}\cdots\tilde{F}_{M-k_{1}}\tilde{\psi}_{0}^{\left(1\right)},\label{eq:eigenfunction-oddM-2}
 \end{equation}
 
 \end_inset
@@ -688,9 +627,9 @@ reference "eq:eigenfunction-oddM-1"
 , 
 \begin_inset Formula 
 \begin{eqnarray}
-\int d^{M}\theta\,\bar{\psi}\psi & = & \int d^{M}\theta\,\alpha_{0}\left(F_{M-k_{s}}^{\dagger}F_{M-k_{s-1}}^{\dagger}\cdots F_{M-k_{1}}^{\dagger}\tilde{\psi}_{0}\right)\bar{F}_{k_{1}}\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0}\nonumber \\
- & = & \int d^{M}\theta\,\alpha_{0}\left(F_{M-k_{s}}^{\dagger}F_{M-k_{s-1}}^{\dagger}\cdots F_{M-k_{2}}^{\dagger}\tilde{\psi}_{0}\right)F_{M-k_{1}}\bar{F}_{k_{1}}\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0}\nonumber \\
- & = & \int d^{M}\theta\,\alpha_{0}\left(F_{M-k_{s}}^{\dagger}F_{M-k_{s-1}}^{\dagger}\cdots F_{M-k_{2}}^{\dagger}\tilde{\psi}_{0}\right)\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0}\nonumber \\
+\int d^{M}\theta\,\bar{\psi}\psi & = & \int d^{M}\theta\,\alpha_{0}\left(\tilde{F}_{M-k_{s}}\tilde{F}_{M-k_{s-1}}\cdots\tilde{F}_{M-k_{1}}\tilde{\psi}_{0}\right)\bar{F}_{k_{1}}\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0}\nonumber \\
+ & = & \int d^{M}\theta\,\alpha_{0}\left(\tilde{F}_{M-k_{s}}\tilde{F}_{M-k_{s-1}}\cdots\tilde{F}_{M-k_{2}}\tilde{\psi}_{0}\right)F_{M-k_{1}}\bar{F}_{k_{1}}\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0}\nonumber \\
+ & = & \int d^{M}\theta\,\alpha_{0}\left(\tilde{F}_{M-k_{s}}\tilde{F}_{M-k_{s-1}}\cdots\tilde{F}_{M-k_{2}}\tilde{\psi}_{0}\right)\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0}\nonumber \\
  & = & \cdots\nonumber \\
  & = & \int d^{M}\theta\,\alpha_{0}\tilde{\psi}_{0}^{\left(1\right)}\psi_{0}\nonumber \\
  & = & 1.\label{eq:psi-psibar-product}
@@ -790,7 +729,7 @@ reference "eq:ground_state_oddM"
  The general eigenfunction can be written as 
 \begin_inset Formula 
 \begin{equation}
-\psi=\bar{F}_{k_{1}}\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0},\quad\bar{\psi}=\alpha_{0}\alpha_{M/2}F_{M-k_{s}}^{\dagger}F_{M-k_{s-1}}^{\dagger}\cdots F_{M-k_{1}}^{\dagger}\tilde{\psi}_{0}^{\left(2\right)},\label{eq:eigenfunction-evenM-1}
+\psi=\bar{F}_{k_{1}}\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0},\quad\bar{\psi}=\alpha_{0}\alpha_{M/2}\tilde{F}_{M-k_{s}}\tilde{F}_{M-k_{s-1}}\cdots\tilde{F}_{M-k_{1}}\tilde{\psi}_{0}^{\left(2\right)},\label{eq:eigenfunction-evenM-1}
 \end{equation}
 
 \end_inset
@@ -798,7 +737,7 @@ reference "eq:ground_state_oddM"
 
 \begin_inset Formula 
 \begin{equation}
-\psi=\bar{F}_{k_{1}}\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0}\alpha_{0},\quad\bar{\psi}=-\alpha_{M/2}F_{M-k_{s}}^{\dagger}F_{M-k_{s-1}}^{\dagger}\cdots F_{M-k_{1}}^{\dagger}\tilde{\psi}_{0}^{\left(2\right)},\label{eq:eigenfunction-evenM-2}
+\psi=\bar{F}_{k_{1}}\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0}\alpha_{0},\quad\bar{\psi}=-\alpha_{M/2}\tilde{F}_{M-k_{s}}\tilde{F}_{M-k_{s-1}}\cdots\tilde{F}_{M-k_{1}}\tilde{\psi}_{0}^{\left(2\right)},\label{eq:eigenfunction-evenM-2}
 \end{equation}
 
 \end_inset
@@ -806,7 +745,7 @@ reference "eq:ground_state_oddM"
 
 \begin_inset Formula 
 \begin{equation}
-\psi=\bar{F}_{k_{1}}\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0}\alpha_{M/2},\quad\bar{\psi}=\alpha_{0}F_{M-k_{s}}^{\dagger}F_{M-k_{s-1}}^{\dagger}\cdots F_{M-k_{1}}^{\dagger}\tilde{\psi}_{0}^{\left(2\right)},\label{eq:eigenfunction-evenM-3}
+\psi=\bar{F}_{k_{1}}\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0}\alpha_{M/2},\quad\bar{\psi}=\alpha_{0}\tilde{F}_{M-k_{s}}\tilde{F}_{M-k_{s-1}}\cdots\tilde{F}_{M-k_{1}}\tilde{\psi}_{0}^{\left(2\right)},\label{eq:eigenfunction-evenM-3}
 \end{equation}
 
 \end_inset
@@ -814,7 +753,7 @@ reference "eq:ground_state_oddM"
 
 \begin_inset Formula 
 \begin{equation}
-\psi=\bar{F}_{k_{1}}\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0}\alpha_{0}\alpha_{M/2},\quad\bar{\psi}=F_{M-k_{s}}^{\dagger}F_{M-k_{s-1}}^{\dagger}\cdots F_{M-k_{1}}^{\dagger}\tilde{\psi}_{0}^{\left(2\right)}.\label{eq:eigenfunction-evenM-4}
+\psi=\bar{F}_{k_{1}}\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0}\alpha_{0}\alpha_{M/2},\quad\bar{\psi}=\tilde{F}_{M-k_{s}}\tilde{F}_{M-k_{s-1}}\cdots\tilde{F}_{M-k_{1}}\tilde{\psi}_{0}^{\left(2\right)}.\label{eq:eigenfunction-evenM-4}
 \end{equation}
 
 \end_inset
@@ -822,9 +761,9 @@ reference "eq:ground_state_oddM"
  One can verify that
 \begin_inset Formula 
 \begin{eqnarray*}
-\int d^{M}\theta\,\bar{\psi}\psi & = & \int d^{M}\theta\,\left(\alpha_{0}\alpha_{M/2}F_{M-k_{s}}^{\dagger}F_{M-k_{s-1}}^{\dagger}\cdots F_{M-k_{1}}^{\dagger}\tilde{\psi}_{0}^{\left(2\right)}\right)\bar{F}_{k_{1}}\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0}\\
- & = & \int d^{M}\theta\,\left(\alpha_{0}\alpha_{M/2}F_{M-k_{s}}^{\dagger}F_{M-k_{s-1}}^{\dagger}\cdots F_{M-k_{2}}^{\dagger}\tilde{\psi}_{0}^{\left(2\right)}\right)F_{M-k_{1}}^{\dagger}\bar{F}_{k_{1}}\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0}\\
- & = & \int d^{M}\theta\,\left(\alpha_{0}\alpha_{M/2}F_{M-k_{s}}^{\dagger}F_{M-k_{s-1}}^{\dagger}\cdots F_{M-k_{2}}^{\dagger}\tilde{\psi}_{0}^{\left(2\right)}\right)\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0}\\
+\int d^{M}\theta\,\bar{\psi}\psi & = & \int d^{M}\theta\,\left(\alpha_{0}\alpha_{M/2}\tilde{F}_{M-k_{s}}\tilde{F}_{M-k_{s-1}}\cdots\tilde{F}_{M-k_{1}}\tilde{\psi}_{0}^{\left(2\right)}\right)\bar{F}_{k_{1}}\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0}\\
+ & = & \int d^{M}\theta\,\left(\alpha_{0}\alpha_{M/2}\tilde{F}_{M-k_{s}}\tilde{F}_{M-k_{s-1}}\cdots\tilde{F}_{M-k_{2}}\tilde{\psi}_{0}^{\left(2\right)}\right)F_{M-k_{1}}^{\dagger}\bar{F}_{k_{1}}\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0}\\
+ & = & \int d^{M}\theta\,\left(\alpha_{0}\alpha_{M/2}\tilde{F}_{M-k_{s}}\tilde{F}_{M-k_{s-1}}\cdots\tilde{F}_{M-k_{2}}\tilde{\psi}_{0}^{\left(2\right)}\right)\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0}\\
  & = & \cdots\\
  & = & \int d^{M}\theta\,\alpha_{0}\alpha_{M/2}\tilde{\psi}_{0}^{\left(2\right)}\psi_{0}\\
  & = & 1.
