@@ -152,29 +152,18 @@ n & = & 0,\dots M-1,\quad k=1,\dots M.
 
 \end_inset
 
- Because of supersymmetry, we only need to consider the bosonic eigenfunction
- case.
- For simplicity, we denote 
-\begin_inset Formula $\psi_{r}^{\left(b\right)}$
-\end_inset
-
- simply as 
-\begin_inset Formula $\psi_{r}$
-\end_inset
-
-.
- We want to find general expression of 
-\begin_inset Formula $\bar{\psi}_{r}\left(\theta_{1},\cdots,\theta_{M}\right)$
-\end_inset
-
- that conjugate to 
-\begin_inset Formula $\psi_{r}$
-\end_inset
-
-, i.e., 
+The Hermitianlity of Hamiltonian requires that 
 \begin_inset Formula 
 \[
-\int d\theta_{1}\cdots d\theta_{M}\bar{\psi}_{r}\psi_{s}=\delta_{rs}.
+\theta_{k}^{\dagger}=\frac{d}{d\theta_{k}},\quad\frac{d}{d\theta_{k}}^{\dagger}=\theta_{k},
+\]
+
+\end_inset
+
+ which follows that 
+\begin_inset Formula 
+\[
+\alpha_{n}^{\dagger}=\beta_{M-n},\quad\beta_{n}^{\dagger}=\alpha_{M-n},\quad\left\{ \alpha_{n},\alpha_{m}^{\dagger}\right\} =\left\{ \beta_{n},\beta_{m}^{\dagger}\right\} =\delta_{m,n},\quad0\leq n,m\leq M-1
 \]
 
 \end_inset
@@ -273,9 +262,9 @@ c_{k}c_{l}+s_{k}s_{l}=\cos\frac{k-l}{2M}\pi,\quad c_{k}s_{l}+c_{l}s_{k}=\cos\fra
 
  Then
 \begin_inset Formula 
-\[
-F_{k}=-s_{k}\alpha_{k}+c_{k}\beta_{k},\quad\bar{F}_{k}=c_{k}\alpha_{k}+s_{k}\beta_{k},
-\]
+\begin{equation}
+F_{k}=-s_{k}\alpha_{k}+c_{k}\beta_{k},\quad\bar{F}_{k}=c_{k}\alpha_{k}+s_{k}\beta_{k},\label{eq:F-Fbar-definition}
+\end{equation}
 
 \end_inset
 
@@ -284,6 +273,14 @@ F_{k}=-s_{k}\alpha_{k}+c_{k}\beta_{k},\quad\bar{F}_{k}=c_{k}\alpha_{k}+s_{k}\bet
 \begin{equation}
 \alpha_{k}=c_{k}\bar{F}_{k}-s_{k}F_{k},\quad\beta_{k}=s_{k}\bar{F}_{k}+c_{k}F_{k}\label{eq:alphak-betak}
 \end{equation}
+
+\end_inset
+
+ It is easy to see that
+\begin_inset Formula 
+\[
+F_{k}^{\dagger}=\bar{F}_{M-n}.
+\]
 
 \end_inset
 
@@ -1148,7 +1145,7 @@ h_{kl}= & -2+\frac{4}{M}\sum_{n,m=0}^{M-1}\exp\left(-2\pi ik\frac{m+n}{M}\right)
  & +\frac{4}{M}\sum_{n=1}^{M-1}\frac{1-\sin\frac{n\pi}{M}}{2}-\frac{2}{M}\sum_{n=1}^{M-1}\exp\left(-2n\pi i\frac{k-l}{M}\right)\left(1-\sin\frac{n\pi}{M}-i\cos\frac{n\pi}{M}\right)\\
 \equiv & -2+\frac{2}{M}\sum_{n,m=0}^{M-1}\left(\bar{A}_{nm}\bar{F}_{n}\bar{F}_{m}+A_{nm}F_{n}F_{m}+B_{nm}\bar{F}_{n}F_{m}\right)+\\
  & +2-\frac{2}{M}\cot\frac{\pi}{2M}-\frac{2}{M}+\frac{2}{M}\csc\frac{2\left(k-l\right)+1}{2M}\pi\exp\left[i\frac{2\left(k-l\right)+1}{2M}\pi\right]+\frac{2}{M}\left(1-i\right)\\
-= & \frac{2}{M}\sum_{n,m=0}^{M-1}\left(\bar{A}_{nm}\bar{F}_{n}\bar{F}_{m}+A_{nm}F_{n}F_{m}+2B_{nm}\bar{F}_{n}F_{m}\right)\\
+= & \frac{2}{M}\sum_{n,m=0}^{M-1}\left(\bar{A}_{nm}\bar{F}_{n}\bar{F}_{m}+A_{nm}F_{n}F_{m}+B_{nm}\bar{F}_{n}F_{m}\right)\\
  & -\frac{2}{M}\cot\frac{\pi}{2M}+\frac{2}{M}\cot\frac{2\left(k-l\right)+1}{2M}\pi
 \end{align*}
 
@@ -1328,7 +1325,9 @@ HT_{s}T_{t}\ket{0} & = & \left(E_{s}+T_{t}\right)T_{s}T_{k}\ket{0}\\
 W_{rst}^{\left(1\right)} & = & \int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{kl}\bar{\psi}\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{K}\right)\psi_{t}\left(\eta_{1}\cdots\eta_{L}\right)\\
  & = & \int d\theta_{2}\cdots d\theta_{K}d\theta_{1}d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{k+1,l}\bar{\psi}\left(\theta_{k+2}\cdots\theta_{k+1}\eta_{l}\cdots\eta_{l-1}\right)\psi_{s}\left(\theta_{2}\cdots\theta_{K}\theta_{1}\right)\psi_{t}\left(\eta_{1}\cdots\eta_{L}\right)\\
  & = & \int d\theta_{1}\cdots d\theta_{K}d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{k+1,l}\bar{\psi}\left(\theta_{k+2}\cdots\theta_{k+1}\eta_{l}\cdots\eta_{l-1}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{K}\right)\psi_{t}\left(\eta_{1}\cdots\eta_{L}\right)\\
- & = & KL\int d\theta d\eta\,\bar{h}_{K,1}\bar{\psi}\left(\theta_{1}\cdots\theta_{K}\eta_{1}\cdots\eta_{L}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{K}\right)\psi_{t}\left(\eta_{1}\cdots\eta_{L}\right)
+ & = & KL\int d\theta d\eta\,\bar{h}_{K,1}\bar{\psi}\left(\theta_{1}\cdots\theta_{K}\eta_{1}\cdots\eta_{L}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{K}\right)\psi_{t}\left(\eta_{1}\cdots\eta_{L}\right)\\
+ & = & KL\int d^{M}\theta\,\bar{h}_{K,K+1}\bar{\psi}\left(\theta_{1}\cdots\theta_{K}\theta_{K+1}\cdots\theta_{M}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{K}\right)\psi_{t}\left(\theta_{K+1}\cdots\theta_{M}\right)\\
+ & = & KL\int d^{M}\theta\,\bar{\psi}\left(\theta_{1}\cdots\theta_{K}\theta_{K+1}\cdots\theta_{M}\right)h_{K,K+1}\psi_{s}\left(\theta_{1}\cdots\theta_{K}\right)\psi_{t}\left(\theta_{K+1}\cdots\theta_{M}\right)
 \end{eqnarray*}
 
 \end_inset
@@ -1336,8 +1335,127 @@ W_{rst}^{\left(1\right)} & = & \int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\
 Likewise
 \begin_inset Formula 
 \begin{eqnarray*}
-W_{rst}^{\left(2\right)} & = & KL\int d\theta d\eta\,\bar{h}_{L,1}\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{K}\eta_{1}\cdots\eta_{L}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{K}\right)\psi_{t}\left(\eta_{1}\cdots\eta_{L}\right)
+W_{rst}^{\left(2\right)} & = & KL\int d\theta d\eta\,\bar{h}_{L,1}\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{K}\eta_{1}\cdots\eta_{L}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{K}\right)\psi_{t}\left(\eta_{1}\cdots\eta_{L}\right)\\
+ & = & KL\int d\theta d\eta\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{K}\eta_{1}\cdots\eta_{L}\right)h_{L,1}\psi_{s}\left(\theta_{1}\cdots\theta_{K}\right)\psi_{t}\left(\eta_{1}\cdots\eta_{L}\right)\\
+ & = & KL\int d^{M}\theta\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{K}\theta_{K+1}\cdots\theta_{M}\right)h_{M,1}\psi_{s}\left(\theta_{1}\cdots\theta_{K}\right)\psi_{t}\left(\theta_{K+1}\cdots\theta_{M}\right)
 \end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+W_{rst}=KL\int d^{M}\theta\,\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{K}\theta_{K+1}\cdots\theta_{M}\right)\left(h_{K,K+1}+h_{M,1}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{K}\right)\psi_{t}\left(\theta_{K+1}\cdots\theta_{M}\right)
+\]
+
+\end_inset
+
+For 
+\begin_inset Formula $h_{K,K+1}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\bar{A}_{nm}=2\exp\left(-2\pi iK\frac{m+n}{M}\right)c_{n}s_{m}-\exp\left(-2\pi i\frac{K\left(n+m\right)+m}{M}\right)\left(\cos\frac{n+m}{2M}\pi+i\cos\frac{n-m}{2M}\pi\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+A_{nm}=-2\exp\left(-2\pi iK\frac{m+n}{M}\right)c_{m}s_{n}+\exp\left(-2\pi i\frac{K\left(n+m\right)+m}{M}\right)\left(\cos\frac{n+m}{2M}\pi-i\cos\frac{n-m}{2M}\pi\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+B_{nm}=2\left[\exp\left(-2\pi ik\frac{m+n}{M}\right)-\exp\left(-2\pi i\frac{K\left(n+m\right)+m}{M}\right)\right]\cos\frac{\left(n-m\right)\pi}{2M}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\text{const part}=-\frac{4}{M}\cot\frac{\pi}{2M}
+\]
+
+\end_inset
+
+For 
+\begin_inset Formula $h_{M,1}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\bar{A}_{nm}=2c_{n}s_{m}-\exp\left(-2\pi im/M\right)\left(\cos\frac{n+m}{2M}\pi+i\cos\frac{n-m}{2M}\pi\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+A_{nm}=-2c_{m}s_{n}+\exp\left(-2\pi im/M\right)\left(\cos\frac{n+m}{2M}\pi-i\cos\frac{n-m}{2M}\pi\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+B_{nm}=2\left[1-\exp\left(-2\pi im/M\right)\right]\cos\frac{\left(n-m\right)\pi}{2M}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\text{const part}=-\frac{4}{M}\cot\frac{\pi}{2M}
+\]
+
+\end_inset
+
+ For 
+\begin_inset Formula $h_{K,K+1}+h_{M,1}$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{eqnarray*}
+\bar{A}_{nm} & = & 2\left[1+\exp\left(-2\pi iK\frac{m+n}{M}\right)\right]c_{n}s_{m}-\exp\left(-2\pi im/M\right)\left[1+\exp\left(-2\pi iK\frac{m+n}{M}\right)\right]\left(\cos\frac{n+m}{2M}\pi+i\cos\frac{n-m}{2M}\pi\right)\\
+ & = & \left[1+\exp\left(-2\pi iK\frac{m+n}{M}\right)\right]\left[2c_{n}s_{m}-\exp\left(-2\pi im/M\right)\left(\cos\frac{n+m}{2M}\pi+i\cos\frac{n-m}{2M}\pi\right)\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+A_{nm}=\left[1+\exp\left(-2\pi iK\frac{m+n}{M}\right)\right]\left[-2c_{m}s_{n}+\exp\left(-2\pi im/M\right)\left(\cos\frac{n+m}{2M}\pi-i\cos\frac{n-m}{2M}\pi\right)\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+B_{nm}=2\left[1+\exp\left(-2\pi iK\frac{m+n}{M}\right)\right]\left[1-\exp\left(-2\pi im/M\right)\cos\frac{\left(n-m\right)\pi}{2M}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\text{const part}=-\frac{8}{M}\cot\frac{\pi}{2M}
+\]
 
 \end_inset
 
