@@ -1178,6 +1178,73 @@ B_{nm}=2\left[\exp\left(-2\pi ik\frac{m+n}{M}\right)-\exp\left(-2\pi i\frac{kn+l
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\bar{A}_{0m}-\bar{A}_{m0} & = & 2\exp\left(-\frac{2\pi ikm}{M}\right)\left(c_{0}s_{m}-c_{m}s_{0}\right)\\
+ &  & -\left[\exp\left(-\frac{2\pi ilm}{M}\right)-\exp\left(-\frac{2\pi ikm}{M}\right)\right]\left(\cos\frac{m}{2M}\pi+i\cos\frac{m}{2M}\pi\right)\\
+ & = & -\exp\left(-\frac{2\pi ikm}{M}\right)\left\{ 2\sin\frac{m}{2M}\pi+\left[\exp\left(-2\pi im\frac{l-k}{M}\right)-1\right]\left(1+i\right)\cos\frac{m}{2M}\pi\right\} \\
+ & =
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+A_{0m}-A_{m0} & = & -2\exp\left(-\frac{2\pi ikm}{M}\right)\left(c_{m}s_{0}-c_{0}s_{m}\right)\\
+ &  & +\left[\exp\left(-\frac{2\pi ilm}{M}\right)-\exp\left(-\frac{2\pi ikm}{M}\right)\right]\left(\cos\frac{m}{2M}\pi+i\cos\frac{m}{2M}\pi\right)\\
+ & = & 2\exp\left(-\frac{2\pi ikm}{M}\right)\sin\frac{m\pi}{2M}+\left[\exp\left(-\frac{2\pi ilm}{M}\right)-\exp\left(-\frac{2\pi ikm}{M}\right)\right]\left(1+i\right)\cos\frac{m}{2M}\pi
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\bar{A}_{00}=1-\left(1+i\right)=-i
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+A_{00}=-1+\left(1-i\right)=-i
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+B_{m0}=0,\quad B_{0m}=2\left[\exp\left(-2\pi i\frac{km}{M}\right)-\exp\left(-2\pi i\frac{lm}{M}\right)\right]\cos\frac{m\pi}{2M}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+h_{kl} & = & \frac{2}{M}\sum_{n,m=1}^{M-1}\left(\bar{A}_{nm}\bar{F}_{n}\bar{F}_{m}+A_{nm}F_{n}F_{m}+B_{nm}\bar{F}_{n}F_{m}\right)\\
+ &  & -\frac{2}{M}\cot\frac{\pi}{2M}+\frac{2}{M}\cot\frac{2\left(k-l\right)+1}{2M}\pi\\
+ &  & +\frac{2}{M}\sum_{m=1}^{M-1}\left[\left(\bar{A}_{0m}-\bar{A}_{m0}\right)\bar{F}_{0}\bar{F}_{m}+\left(A_{0m}-A_{m0}\right)F_{0}F_{m}\right]\\
+ &  & +\frac{2}{M}\sum_{m=1}^{M-1}\left(B_{0m}\bar{F}_{0}F_{m}+B_{m0}\bar{F}_{m}F_{0}\right)\\
+ &  & +\frac{2}{M}\left(\bar{A}_{00}\bar{F}_{0}\bar{F}_{0}+A_{00}F_{0}F_{0}+B_{00}\bar{F}_{0}F_{0}\right)\\
+ & = & \frac{2}{M}\sum_{n,m=1}^{M-1}\left(\bar{A}_{nm}\bar{F}_{n}\bar{F}_{m}+A_{nm}F_{n}F_{m}+B_{nm}\bar{F}_{n}F_{m}\right)\\
+ &  & -\frac{2}{M}\cot\frac{\pi}{2M}+\frac{2}{M}\cot\frac{2\left(k-l\right)+1}{2M}\pi\\
+ &  & +\frac{2}{M}\sum_{m=1}^{M-1}\left[\left(\bar{A}_{0m}-\bar{A}_{m0}\right)\bar{F}_{0}\bar{F}_{m}+\left(A_{0m}-A_{m0}\right)F_{0}F_{m}\right]\\
+ &  & +\frac{2}{M}\sum_{m=1}^{M-1}B_{0m}\bar{F}_{0}F_{m}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section*
 Perturbation theory
 \end_layout
@@ -1271,17 +1338,16 @@ V_{st0}^{\left(p\right)} & = & M\int d\theta\,\bar{\psi}_{s}\left(\theta_{p+1}\c
 
  If
 \begin_inset Formula 
-\begin{eqnarray*}
-F_{m} & = & f_{n}C_{mn}+\bar{f}_{n}S_{mn}\\
-\bar{F}_{m} & = & f_{n}\bar{C}_{mn}+\bar{f}_{n}\bar{S}_{mn}
-\end{eqnarray*}
+\[
+F_{m}=f_{n}C_{mn}+f_{n}^{\dagger}S_{mn},\quad F_{m}^{\dagger}=f_{n}^{\dagger}C_{nm}^{*}+f_{n}S_{nm}^{*}
+\]
 
 \end_inset
 
  where 
 \begin_inset Formula 
 \[
-\left\{ f_{m},\bar{f}_{n}\right\} =\delta_{mn}
+\left\{ f_{m},f_{n}^{\dagger}\right\} =\delta_{mn}
 \]
 
 \end_inset
@@ -1289,12 +1355,89 @@ F_{m} & = & f_{n}C_{mn}+\bar{f}_{n}S_{mn}\\
 
 \begin_inset Formula 
 \[
-\psi_{0}\left(\theta_{1},\cdots,\theta_{M}\right)=\exp\left\{ \frac{1}{2}\sum_{k,l}\bar{f}_{k}M_{kl}\bar{f}_{l}\right\} \psi_{0}\left(\theta_{1},\cdots\theta_{p}\right)\psi_{0}\left(\theta_{p+1},\cdots\theta_{M}\right)
+\psi_{0}\left(\theta_{1},\cdots,\theta_{M}\right)=\exp\left\{ \frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\} \psi_{0}\left(\theta_{1},\cdots\theta_{p}\right)\psi_{0}\left(\theta_{p+1},\cdots\theta_{M}\right)
+\]
+
+\end_inset
+
+ Using the identity 
+\begin_inset Formula 
+\[
+\left[AB,C\right]=A\left\{ B,C\right\} -\left\{ A,C\right\} B.
 \]
 
 \end_inset
 
 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{m}^{\dagger}\right] & = & \frac{1}{2}\sum_{k,l}M_{kl}\left[f_{k}^{\dagger}f_{l}^{\dagger},F_{m}^{\dagger}\right]\\
+ & = & \frac{1}{2}\sum_{k,l}M_{kl}\left(f_{k}^{\dagger}\left\{ f_{l}^{\dagger},F_{m}^{\dagger}\right\} -\left\{ f_{k}^{\dagger},F_{m}^{\dagger}\right\} f_{l}^{\dagger}\right)\\
+ & = & \frac{1}{2}\sum_{k,l}M_{kl}\left(f_{k}^{\dagger}\delta_{ln}S_{nm}^{*}-\delta_{kn}S_{nm}^{*}f_{l}^{\dagger}\right)\\
+ & = & \frac{1}{2}\sum_{k,l}M_{kl}\left(f_{k}^{\dagger}S_{lm}^{*}-S_{km}^{*}f_{l}^{\dagger}\right)\\
+ & = & \frac{1}{2}\sum_{k,l}\left(f_{k}^{\dagger}M_{kl}S_{lm}^{*}-f_{l}^{\dagger}M_{kl}S_{km}^{*}\right)\\
+ & = & \frac{1}{2}\sum_{k,l}\left(f_{k}^{\dagger}M_{kl}S_{lm}^{*}+f_{l}^{\dagger}M_{lk}S_{km}^{*}\right)\\
+ & = & \sum_{k,l}f_{k}^{\dagger}M_{kl}S_{lm}^{*}\\
+ & = & -\sum_{k,l}S_{ml}^{\dagger}M_{lk}f_{k}^{\dagger}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{n}^{\dagger}F_{m}^{\dagger}\right] & = & F_{n}^{\dagger}\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{m}^{\dagger}\right]+\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{n}^{\dagger}\right]F_{m}^{\dagger}\\
+ & = & -F_{n}^{\dagger}\sum_{k,l}S_{ml}^{\dagger}M_{lk}f_{k}^{\dagger}+\sum_{k,l}S_{nl}^{\dagger}M_{lk}f_{k}^{\dagger}F_{m}^{\dagger}\\
+ & = & \sum_{k,l}S_{ml}^{\dagger}M_{lk}\left(f_{k}^{\dagger}F_{n}^{\dagger}-\left\{ F_{n}^{\dagger},f_{k}^{\dagger}\right\} \right)+\sum_{k,l}S_{nl}^{\dagger}M_{lk}f_{k}^{\dagger}F_{m}^{\dagger}\\
+ & = & \sum_{k,l}S_{ml}^{\dagger}M_{lk}\left(f_{k}^{\dagger}F_{n}^{\dagger}-S_{kn}^{*}\right)+\sum_{k,l}S_{nl}^{\dagger}M_{lk}f_{k}^{\dagger}F_{m}^{\dagger}\\
+ & = & \sum_{k,l}S_{ml}^{\dagger}M_{lk}f_{k}^{\dagger}F_{n}^{\dagger}+\sum_{k,l}S_{nl}^{\dagger}M_{lk}f_{k}^{\dagger}F_{m}^{\dagger}-\sum S_{ml}^{\dagger}M_{lk}S_{kn}^{*}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},\sum_{i,j}S_{ni}^{\dagger}M_{ij}f_{j}^{\dagger}F_{m}^{\dagger}\right] & = & \sum_{i,j}S_{ni}^{\dagger}M_{ij}f_{j}^{\dagger}\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{m}^{\dagger}\right]\\
+ & = & \sum_{i,j}S_{ni}^{\dagger}M_{ij}f_{j}^{\dagger}\left(-\sum_{k,l}S_{ml}^{\dagger}M_{lk}f_{k}^{\dagger}\right)\\
+ & = & \sum_{k,l}S_{ml}^{\dagger}M_{lk}f_{k}^{\dagger}\sum_{i,j}S_{ni}^{\dagger}M_{ij}f_{j}^{\dagger}
+\end{eqnarray*}
+
+\end_inset
+
+it follows that 
+\begin_inset Formula 
+\[
+\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{n}^{\dagger}F_{m}^{\dagger}\right]\right]=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+F_{m}^{\dagger}\psi_{0}\left(\theta_{1}\cdots\theta_{M}\right) & = & \exp\left\{ \frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\} \left(F_{m}^{\dagger}-\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{m}^{\dagger}\right]\right)\psi_{0}\left(\theta_{1},\cdots\theta_{p}\right)\psi_{0}\left(\theta_{p+1},\cdots\theta_{M}\right)\\
+ & = & \exp\left\{ \frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\} \left(C_{mn}^{\dagger}f_{n}^{\dagger}+S_{ml}^{\dagger}M_{ln}f_{n}^{\dagger}\right)\psi_{0}\left(\theta_{1},\cdots\theta_{p}\right)\psi_{0}\left(\theta_{p+1},\cdots\theta_{M}\right)\\
+ & = & \left(C-S^{\dagger}C^{-1}S\right)_{mn}f_{n}^{\dagger}\exp\left\{ \frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\} \psi_{0}\left(\theta_{1},\cdots\theta_{p}\right)\psi_{0}\left(\theta_{p+1},\cdots\theta_{M}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+F_{n}^{\dagger}F_{m}^{\dagger}\psi_{0}\left(\theta_{1}\cdots\theta_{M}\right) & = & \exp\left\{ \frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\} \left(F_{n}^{\dagger}F_{m}^{\dagger}-\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{n}^{\dagger}F_{m}^{\dagger}\right]\right)\psi_{0}\left(\theta_{1},\cdots\theta_{p}\right)\psi_{0}\left(\theta_{p+1},\cdots\theta_{M}\right)\\
+ & = & \exp\left\{ \frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\} \left(F_{n}^{\dagger}F_{m}^{\dagger}-\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{n}^{\dagger}F_{m}^{\dagger}\right]\right)\psi_{0}\left(\theta_{1},\cdots\theta_{p}\right)\psi_{0}\left(\theta_{p+1},\cdots\theta_{M}\right)
+\end{eqnarray*}
+
+\end_inset
+
+ where we used 
+\begin_inset Formula $CM=-S$
+\end_inset
+
+ in the last step.
+ 
 \begin_inset Formula 
 \begin{eqnarray*}
 \bar{F}_{n}\bar{A}_{nm}\bar{F}_{m} & = & \left(\bar{C}f+\bar{S}\bar{f}\right)^{T}A\left(\bar{C}f+\bar{S}\bar{f}\right)\\
