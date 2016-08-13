@@ -1390,7 +1390,7 @@ F_{m}=f_{n}C_{mn}+f_{n}^{\dagger}S_{mn},\quad F_{m}^{\dagger}=f_{n}^{\dagger}C_{
  & = & -F_{n}^{\dagger}\sum_{k,l}S_{ml}^{\dagger}M_{lk}f_{k}^{\dagger}+\sum_{k,l}S_{nl}^{\dagger}M_{lk}f_{k}^{\dagger}F_{m}^{\dagger}\\
  & = & \sum_{k,l}S_{ml}^{\dagger}M_{lk}\left(f_{k}^{\dagger}F_{n}^{\dagger}-\left\{ F_{n}^{\dagger},f_{k}^{\dagger}\right\} \right)+\sum_{k,l}S_{nl}^{\dagger}M_{lk}f_{k}^{\dagger}F_{m}^{\dagger}\\
  & = & \sum_{k,l}S_{ml}^{\dagger}M_{lk}\left(f_{k}^{\dagger}F_{n}^{\dagger}-S_{kn}^{*}\right)+\sum_{k,l}S_{nl}^{\dagger}M_{lk}f_{k}^{\dagger}F_{m}^{\dagger}\\
- & = & \sum_{k,l}S_{ml}^{\dagger}M_{lk}f_{k}^{\dagger}F_{n}^{\dagger}+\sum_{k,l}S_{nl}^{\dagger}M_{lk}f_{k}^{\dagger}F_{m}^{\dagger}-\sum S_{ml}^{\dagger}M_{lk}S_{kn}^{*}
+ & = & \sum_{k,l}S_{ml}^{\dagger}M_{lk}f_{k}^{\dagger}F_{n}^{\dagger}+\sum_{k,l}S_{nl}^{\dagger}M_{lk}f_{k}^{\dagger}F_{m}^{\dagger}-\sum_{k,l}S_{ml}^{\dagger}M_{lk}S_{kn}^{*}
 \end{eqnarray*}
 
 \end_inset
@@ -1432,23 +1432,33 @@ F_{n}^{\dagger}F_{m}^{\dagger}\psi_{0}\left(\theta_{1}\cdots\theta_{M}\right) & 
 
 \end_inset
 
+
+\begin_inset Formula 
+\begin{eqnarray*}
+F_{n}^{\dagger}F_{m}^{\dagger} & = & \left(f_{i}^{\dagger}C_{in}^{*}+f_{i}S_{in}^{*}\right)\left(f_{j}^{\dagger}C_{jm}^{*}+f_{j}S_{jm}^{*}\right)\\
+ & = & f_{i}^{\dagger}C_{in}^{*}f_{j}^{\dagger}C_{jm}^{*}+f_{i}S_{in}^{*}f_{j}^{\dagger}C_{jm}^{*}+\cdots\\
+ & = & f_{i}^{\dagger}f_{j}^{\dagger}C_{in}^{*}C_{jm}^{*}+S_{in}^{*}C_{jm}^{*}\left(\left\{ f_{i},f_{j}^{\dagger}\right\} -f_{j}^{\dagger}f_{i}\right)+\cdots\\
+ & = & f_{i}^{\dagger}f_{j}^{\dagger}C_{in}^{*}C_{jm}^{*}+\left(S^{\dagger}C^{*}\right)_{nm}+\cdots
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+F_{n}^{\dagger}F_{m}^{\dagger}\psi_{0}\left(\theta_{1}\cdots\theta_{M}\right) & = & \left(f_{i}^{\dagger}f_{j}^{\dagger}C_{in}^{*}C_{jm}^{*}+\left(S^{\dagger}C^{*}\right)_{nm}+\sum_{k,l}S_{ml}^{\dagger}M_{lk}S_{kn}^{*}\right)\psi_{0}\left(\theta_{1}\cdots\theta_{M}\right)\\
+ &  & -\exp\left\{ \frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\} \left(\sum_{k,l}S_{ml}^{\dagger}M_{lk}f_{k}^{\dagger}F_{n}^{\dagger}+\sum_{k,l}S_{nl}^{\dagger}M_{lk}f_{k}^{\dagger}F_{m}^{\dagger}\right)\psi_{0}\psi_{0}\\
+ & = & \left(f_{i}^{\dagger}f_{j}^{\dagger}C_{in}^{*}C_{jm}^{*}+\sum_{k,l}S_{ml}^{\dagger}M_{lk}f_{k}^{\dagger}f_{i}^{\dagger}C_{in}^{*}+\sum_{k,l}S_{nl}^{\dagger}M_{lk}f_{k}^{\dagger}f_{i}^{\dagger}C_{im}^{*}+\left(S^{\dagger}MS^{*}+S^{\dagger}C^{*}\right)_{mn}\right)\psi_{0}
+\end{eqnarray*}
+
+\end_inset
+
  where we used 
 \begin_inset Formula $CM=-S$
 \end_inset
 
  in the last step.
  
-\begin_inset Formula 
-\begin{eqnarray*}
-\bar{F}_{n}\bar{A}_{nm}\bar{F}_{m} & = & \left(\bar{C}f+\bar{S}\bar{f}\right)^{T}A\left(\bar{C}f+\bar{S}\bar{f}\right)\\
- & = & \left(f^{T}\bar{C}^{T}+\bar{f}^{T}\bar{S}^{T}\right)A\left(\bar{C}f+\bar{S}\bar{f}\right)\\
- & = & f^{T}\left(\bar{C}^{T}A\bar{C}\right)f+f^{T}\left(\bar{C}^{T}A\bar{S}\right)\bar{f}+\bar{f}^{T}\left(\bar{S}^{T}A\bar{C}\right)f+\bar{f}^{T}\left(\bar{S}^{T}A\bar{S}\right)\bar{f}^{T}\\
- & = & f^{T}\left(\bar{C}^{T}A\bar{C}\right)f+\bar{f}^{T}\left(\bar{S}^{T}A\bar{C}-\bar{S}^{T}A^{T}\bar{C}\right)f+\bar{f}^{T}\left(\bar{S}^{T}A\bar{S}\right)\bar{f}^{T}+\tr\left(\bar{C}^{T}A\bar{S}\right)
-\end{eqnarray*}
-
-\end_inset
-
-
 \begin_inset Formula 
 \begin{eqnarray*}
 HT_{s}T_{t}\ket{0} & = & \left(E_{s}+T_{t}\right)T_{s}T_{k}\ket{0}\\
