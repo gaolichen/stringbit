@@ -160,7 +160,7 @@ The Hermitianlity of Hamiltonian requires that
 
 \end_inset
 
- which follows that 
+ from which it follows that 
 \begin_inset Formula 
 \[
 \alpha_{n}^{\dagger}=\beta_{M-n},\quad\beta_{n}^{\dagger}=\alpha_{M-n},\quad\left\{ \alpha_{n},\alpha_{m}^{\dagger}\right\} =\left\{ \beta_{n},\beta_{m}^{\dagger}\right\} =\delta_{m,n},\quad0\leq n,m\leq M-1
@@ -260,10 +260,10 @@ c_{k}c_{l}+s_{k}s_{l}=\cos\frac{k-l}{2M}\pi,\quad c_{k}s_{l}+c_{l}s_{k}=\cos\fra
 
 \end_inset
 
- Then
+ Then we define
 \begin_inset Formula 
 \begin{equation}
-F_{k}=s_{k}\alpha_{k}+c_{k}\beta_{k},\quad\bar{F}_{k}=c_{k}\alpha_{k}-s_{k}\beta_{k},\label{eq:F-Fbar-definition}
+F_{k}=s_{k}\alpha_{k}+c_{k}\beta_{k},\quad\bar{F}_{k}=c_{k}\alpha_{k}-s_{k}\beta_{k},\quad k=1,\cdots,M-1\label{eq:F-Fbar-definition}
 \end{equation}
 
 \end_inset
@@ -271,27 +271,47 @@ F_{k}=s_{k}\alpha_{k}+c_{k}\beta_{k},\quad\bar{F}_{k}=c_{k}\alpha_{k}-s_{k}\beta
 
 \begin_inset Formula 
 \begin{equation}
-\alpha_{k}=c_{k}\bar{F}_{k}+s_{k}F_{k},\quad\beta_{k}=-s_{k}\bar{F}_{k}+c_{k}F_{k}\label{eq:alphak-betak}
+\alpha_{k}=c_{k}\bar{F}_{k}+s_{k}F_{k},\quad\beta_{k}=-s_{k}\bar{F}_{k}+c_{k}F_{k},\quad k=1,\cdots,M-1,\label{eq:alphak-betak}
 \end{equation}
 
 \end_inset
 
- It is easy to see that
+ from which it follows that 
 \begin_inset Formula 
 \[
-F_{k}^{\dagger}=\bar{F}_{M-n}=c_{k}\alpha_{M-n}+s_{k}\beta_{M-n}.
+F_{k}^{\dagger}=\bar{F}_{M-n}=c_{k}\alpha_{M-n}+s_{k}\beta_{M-n},\quad k=1,\cdots,M-1
 \]
 
 \end_inset
 
- 
+ For zero modes, we define
+\begin_inset Formula 
+\[
+F_{0}=F_{M}=\beta_{0},\quad\bar{F}_{0}=\bar{F}_{M}=\alpha_{0},
+\]
+
+\end_inset
+
+ For 
+\begin_inset Formula $1\leq i,j\leq M-1$
+\end_inset
+
+, it is easy to see that 
 \begin_inset Formula 
 \begin{eqnarray*}
 \left\{ \bar{F}_{i},\bar{F}_{j}\right\}  & = & \left\{ c_{i}\alpha_{i}-s_{i}\beta_{i},c_{j}\alpha_{j}-s_{j}\beta_{j}\right\} \\
  & = & -c_{i}s_{j}\left\{ \alpha_{i},\beta_{j}\right\} -s_{i}c_{j}\left\{ \beta_{i},\alpha_{j}\right\} \\
- & = & \left(c_{i}s_{i}-s_{i}c_{i}\right)\delta_{i+j,M}-2c_{0}s_{0}\delta_{i,0}\delta_{j,0}\\
- & = & -\delta_{i,0}\delta_{j,0}
+ & = & \left(c_{i}s_{i}-s_{i}c_{i}\right)\delta_{i+j,M}\\
+ & = & 0
 \end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left\{ \bar{F}_{0},\bar{F}_{i}\right\} =\left\{ \bar{F}_{0},\bar{F}_{0}\right\} =0
+\]
 
 \end_inset
 
@@ -300,9 +320,17 @@ F_{k}^{\dagger}=\bar{F}_{M-n}=c_{k}\alpha_{M-n}+s_{k}\beta_{M-n}.
 \begin{eqnarray*}
 \left\{ F_{i},F_{j}\right\}  & = & \left\{ s_{i}\alpha_{i}+c_{i}\beta_{i},s_{j}\alpha_{j}+c_{j}\beta_{j}\right\} \\
  & = & s_{i}c_{j}\left\{ \alpha_{i},\beta_{j}\right\} +c_{i}s_{j}\left\{ \beta_{i},\alpha_{j}\right\} \\
- & = & \left(s_{i}c_{i}-c_{i}s_{i}\right)\delta_{i+j,M}+2c_{0}s_{0}\delta_{i,0}\delta_{j,0}\\
- & = & \delta_{i,0}\delta_{j,0}
+ & = & \left(s_{i}c_{i}-c_{i}s_{i}\right)\delta_{i+j,M}\\
+ & = & 0
 \end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left\{ F_{0},F_{i}\right\} =\left\{ F_{0},F_{0}\right\} =0
+\]
 
 \end_inset
 
@@ -318,53 +346,111 @@ F_{k}^{\dagger}=\bar{F}_{M-n}=c_{k}\alpha_{M-n}+s_{k}\beta_{M-n}.
 \end_inset
 
 
+\begin_inset Formula 
+\[
+\left\{ F_{0},\bar{F}_{i}\right\} =\left\{ F_{i},\bar{F}_{0}\right\} =0,\quad\left\{ F_{0},\bar{F}_{M}\right\} =\left\{ F_{M},\bar{F}_{0}\right\} =\left\{ F_{0},\bar{F}_{0}\right\} =1.
+\]
+
+\end_inset
+
+ In summary, we have 
+\begin_inset Formula 
+\[
+\left\{ F_{k}^{\dagger},F_{l}^{\dagger}\right\} =\left\{ F_{k},F_{l}\right\} =0,\quad\left\{ F_{k},F_{l}^{\dagger}\right\} =\delta_{kl},\quad0\leq k,l\leq M-1
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Define 
-\begin_inset Formula $\tilde{F}_{k}$
+For grassmanian even function 
+\begin_inset Formula $\psi\left(\theta\right)$
+\end_inset
+
+ of 
+\begin_inset Formula $\theta$
+\end_inset
+
+, we define 
+\begin_inset Formula $F_{k}^{+}$
 \end_inset
 
  as 
 \begin_inset Formula 
 \[
-\int d^{M}\theta\,\left[\tilde{F}_{k}\psi\left(\theta\right)\right]\chi\left(\theta\right)=\pm\int d^{M}\theta\,\psi\left(\theta\right)\left[F_{k}\chi\left(\theta\right)\right],
+\int d^{M}\theta\,\left[F_{k}^{+}\psi\left(\theta\right)\right]\chi\left(\theta\right)=\int d^{M}\theta\,\psi\left(\theta\right)\left[F_{k}\chi\left(\theta\right)\right].
 \]
 
 \end_inset
 
-where the sign of RHS is 
-\begin_inset Formula $+\left(-\right)$
+Likewise, for grassmanian odd function 
+\begin_inset Formula $\psi\left(\theta\right)$
 \end_inset
 
- when 
-\begin_inset Formula $\psi$
+, we define 
+\begin_inset Formula $F^{-}$
 \end_inset
 
- is grassman even (odd).
- We then have
+ as 
 \begin_inset Formula 
 \[
-\tilde{F}_{k}=s_{k}\alpha_{k}-c_{k}\beta_{k},\quad\tilde{\bar{F}}_{k}=c_{k}\alpha_{k}+s_{k}\beta_{k}.
+\int d^{M}\theta\,\left[F_{k}^{-}\psi\left(\theta\right)\right]\chi\left(\theta\right)=\int d^{M}\theta\,\psi\left(\theta\right)\left[F_{k}\chi\left(\theta\right)\right].
+\]
+
+\end_inset
+
+We then have
+\begin_inset Formula 
+\[
+F_{k}^{\pm}=\pm\left(s_{k}\alpha_{k}-c_{k}\beta_{k}\right),\quad\bar{F}_{k}^{\pm}=\pm\left(c_{k}\alpha_{k}+s_{k}\beta_{k}\right),\quad1\leq k\leq M-1
 \]
 
 \end_inset
 
 
 \begin_inset Formula 
+\[
+F_{0}^{\pm}=\pm\alpha_{0},\quad\bar{F}_{0}^{\pm}=\mp\beta_{0}
+\]
+
+\end_inset
+
+ For 
+\begin_inset Formula $1\leq i,j\leq M-1$
+\end_inset
+
+, we have
+\begin_inset Formula 
 \begin{eqnarray*}
-\left\{ \tilde{F}_{i},\tilde{F}_{j}\right\}  & = & \left\{ s_{i}\alpha_{i}-c_{i}\beta_{i},s_{j}\alpha_{j}-c_{j}\beta_{j}\right\} \\
+\left\{ F_{i}^{\pm},F_{j}^{\pm}\right\}  & = & \left\{ s_{i}\alpha_{i}-c_{i}\beta_{i},s_{j}\alpha_{j}-c_{j}\beta_{j}\right\} \\
  & = & -s_{i}c_{j}\left\{ \alpha_{i},\beta_{j}\right\} -c_{i}s_{j}\left\{ \beta_{i},\alpha_{j}\right\} \\
- & = & \left(-s_{i}c_{i}+c_{i}s_{i}\right)\delta_{i+j,M}-2s_{0}c_{0}\delta_{i,0}\delta_{j,0}\\
- & = & -\delta_{i,0}\delta_{j,0}
+ & = & \left(-s_{i}c_{i}+c_{i}s_{i}\right)\delta_{i+j,M}\\
+ & = & 0
 \end{eqnarray*}
 
 \end_inset
 
 
 \begin_inset Formula 
+\[
+\left\{ \tilde{F}_{0},\tilde{F}_{i}\right\} =\left\{ \tilde{F}_{0},\tilde{F}_{0}\right\} =0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
 \begin{eqnarray*}
-\left\{ \tilde{\bar{F}}_{i},\tilde{\bar{F}}_{j}\right\}  & = & \left\{ c_{i}\alpha_{i}+s_{i}\beta_{i},c_{j}\alpha_{j}+s_{j}\beta_{j}\right\} \\
+\left\{ \bar{F}_{i}^{\pm},\bar{F}_{j}^{\pm}\right\}  & = & \left\{ c_{i}\alpha_{i}+s_{i}\beta_{i},c_{j}\alpha_{j}+s_{j}\beta_{j}\right\} \\
  & = & c_{i}s_{j}\left\{ \alpha_{i},\beta_{j}\right\} +s_{i}c_{j}\left\{ \beta_{i},\alpha_{j}\right\} \\
  & = & \left(-c_{i}s_{i}+s_{i}c_{i}\right)\delta_{i+j,M}+2c_{0}s_{0}\delta_{i,0}\delta_{j,0}\\
  & = & \delta_{i,0}\delta_{j,0}
@@ -374,12 +460,36 @@ where the sign of RHS is
 
 
 \begin_inset Formula 
+\[
+\left\{ \bar{F}_{0}^{\pm},\bar{F}_{i}^{\pm}\right\} =\left\{ \bar{F}_{0}^{\pm},\bar{F}_{0}^{\pm}\right\} =0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
 \begin{eqnarray*}
-\left\{ \tilde{F}_{i},\tilde{\bar{F}}_{j}\right\}  & = & \left\{ s_{i}\alpha_{i}-c_{i}\beta_{i},c_{j}\alpha_{j}+s_{j}\beta_{j}\right\} \\
+\left\{ F_{i}^{\pm},\bar{F}_{j}^{\pm}\right\}  & = & \left\{ s_{i}\alpha_{i}-c_{i}\beta_{i},c_{j}\alpha_{j}+s_{j}\beta_{j}\right\} \\
  & = & s_{i}s_{j}\left\{ \alpha_{i},\beta_{j}\right\} -c_{i}c_{j}\left\{ \beta_{i},\alpha_{j}\right\} \\
  & = & \left(-s_{i}^{2}-c_{i}^{2}\right)\delta_{i+j,M}+\left(s_{0}^{2}-c_{0}^{2}\right)\delta_{i,0}\delta_{j,0}\\
- & = & -\delta_{i+j,M}
+ & = & -\delta_{i+j,M},
 \end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left\{ F_{0}^{\pm},\bar{F}_{i}^{\pm}\right\} =\left\{ F_{i}^{\pm},\bar{F}_{0}^{\pm}\right\} =0,\quad\left\{ F_{0}^{\pm},\bar{F}_{0}^{\pm}\right\} =-1.
+\]
+
+\end_inset
+
+ In summary, we have
+\begin_inset Formula 
+\[
+\left\{ F_{i}^{\pm},F_{j}^{\pm}\right\} =\left\{ F_{i}^{\dagger\pm},F_{j}^{\dagger\pm}\right\} =0,\quad\left\{ F_{i}^{\pm},F_{j}^{\dagger\pm}\right\} =-\delta_{ij}
+\]
 
 \end_inset
 
@@ -448,10 +558,10 @@ F_{M-k}\phi_{k} & = & \left(-s_{k}\alpha_{M-k}+c_{k}\beta_{M-k}\right)\left(c_{k
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\tilde{F}_{M-k}\bar{\phi}_{k} & = & \left(-s_{k}\alpha_{M-k}-c_{k}\beta_{M-k}\right)\left(-s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)\\
- & = & s_{k}^{2}\alpha_{M-k}-c_{k}^{2}\beta_{M-k}\alpha_{M-k}\alpha_{k}\\
- & = & \left(s_{k}^{2}+c_{k}^{2}\right)\alpha_{M-k}\\
- & = & \alpha_{M-k}
+F_{M-k}^{\pm}\bar{\phi}_{k} & = & \pm\left(-s_{k}\alpha_{M-k}-c_{k}\beta_{M-k}\right)\left(-s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)\\
+ & = & \pm\left(s_{k}^{2}\alpha_{M-k}-c_{k}^{2}\beta_{M-k}\alpha_{M-k}\alpha_{k}\right)\\
+ & = & \pm\left(s_{k}^{2}+c_{k}^{2}\right)\alpha_{M-k}\\
+ & = & \pm\alpha_{M-k}
 \end{eqnarray*}
 
 \end_inset
@@ -459,10 +569,10 @@ F_{M-k}\phi_{k} & = & \left(-s_{k}\alpha_{M-k}+c_{k}\beta_{M-k}\right)\left(c_{k
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\tilde{F}_{k}\bar{\phi}_{k} & = & \left(s_{k}\alpha_{k}-c_{k}\beta_{k}\right)\left(-s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)\\
- & = & -s_{k}^{2}\alpha_{k}-c_{k}^{2}\beta_{k}\alpha_{M-k}\alpha_{k}\\
- & = & -\left(s_{k}^{2}+c_{k}^{2}\right)\alpha_{k}\\
- & = & -\alpha_{k}
+F_{k}^{\pm}\bar{\phi}_{k} & = & \pm\left(s_{k}\alpha_{k}-c_{k}\beta_{k}\right)\left(-s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)\\
+ & = & \pm\left(-s_{k}^{2}\alpha_{k}-c_{k}^{2}\beta_{k}\alpha_{M-k}\alpha_{k}\right)\\
+ & = & \mp\left(s_{k}^{2}+c_{k}^{2}\right)\alpha_{k}\\
+ & = & \mp\alpha_{k}
 \end{eqnarray*}
 
 \end_inset
@@ -470,8 +580,8 @@ F_{M-k}\phi_{k} & = & \left(-s_{k}\alpha_{M-k}+c_{k}\beta_{M-k}\right)\left(c_{k
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\tilde{F}_{M-k}\tilde{F}_{k}\bar{\phi}_{k} & = & -\left(-s_{k}\alpha_{M-k}-c_{k}\beta_{M-k}\right)\alpha_{k}\\
- & = & s_{k}\alpha_{M-k}\alpha_{k}+c_{k}
+F_{M-k}^{\pm}F_{k}^{\pm}\bar{\phi}_{k} & = & \mp\left(-s_{k}\alpha_{M-k}-c_{k}\beta_{M-k}\right)\alpha_{k}\\
+ & = & \pm\left(s_{k}\alpha_{M-k}\alpha_{k}+c_{k}\right)
 \end{eqnarray*}
 
 \end_inset
@@ -479,8 +589,8 @@ F_{M-k}\phi_{k} & = & \left(-s_{k}\alpha_{M-k}+c_{k}\beta_{M-k}\right)\left(c_{k
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\tilde{\bar{F}}_{k}\bar{\phi}_{k} & = & \left(c_{k}\alpha_{k}+s_{k}\beta_{k}\right)\left(-s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)\\
- & = & -c_{k}s_{k}\alpha_{k}+c_{k}s_{k}\beta_{k}\alpha_{M-k}\alpha_{k}\\
+\bar{F}_{k}^{\pm}\bar{\phi}_{k} & = & \pm\left(c_{k}\alpha_{k}+s_{k}\beta_{k}\right)\left(-s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)\\
+ & = & \pm\left(-c_{k}s_{k}\alpha_{k}+c_{k}s_{k}\beta_{k}\alpha_{M-k}\alpha_{k}\right)\\
  & = & 0
 \end{eqnarray*}
 
@@ -489,8 +599,8 @@ F_{M-k}\phi_{k} & = & \left(-s_{k}\alpha_{M-k}+c_{k}\beta_{M-k}\right)\left(c_{k
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\tilde{\bar{F}}_{M-k}\bar{\phi}_{k} & = & \left(c_{k}\alpha_{M-k}-s_{k}\beta_{M-k}\right)\left(-s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)\\
- & = & -c_{k}s_{k}\alpha_{M-k}-c_{k}s_{k}\beta_{M-k}\alpha_{M-k}\alpha_{k}\\
+\bar{F}_{M-k}^{\pm}\bar{\phi}_{k} & = & \pm\left(c_{k}\alpha_{M-k}-s_{k}\beta_{M-k}\right)\left(-s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)\\
+ & = & \pm\left(-c_{k}s_{k}\alpha_{M-k}-c_{k}s_{k}\beta_{M-k}\alpha_{M-k}\alpha_{k}\right)\\
  & = & 0
 \end{eqnarray*}
 
@@ -508,15 +618,23 @@ We first consider the odd
  The ground eigenfunction is
 \begin_inset Formula 
 \begin{equation}
-\psi_{0}=\prod_{k=1}^{\left\lfloor M/2\right\rfloor }\frac{1}{\sqrt{1+r_{k}^{-2}}}\left(1-r_{k}^{-}\alpha_{M-k}\alpha_{k}\right)=\prod_{k=1}^{\left\lfloor M/2\right\rfloor }\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right)\equiv\prod_{k=1}^{\left\lfloor M/2\right\rfloor }\phi_{k}.\label{eq:ground_state_oddM}
+\psi_{0}=\prod_{k=1}^{\left\lfloor M/2\right\rfloor }\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right)\equiv\prod_{k=1}^{\left\lfloor M/2\right\rfloor }\phi_{k}.\label{eq:ground_state_oddM}
 \end{equation}
+
+\end_inset
+
+ It is easy to see that
+\begin_inset Formula 
+\[
+F_{k}\psi_{0}=0,\quad k=0,1,\cdots,M-1
+\]
 
 \end_inset
 
  We define 
 \begin_inset Formula 
 \[
-\tilde{\psi}_{0}^{\left(1\right)}\equiv i^{\left\lfloor M/2\right\rfloor }\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\equiv i^{\left\lfloor M/2\right\rfloor }\prod_{k=1}^{\left\lfloor M/2\right\rfloor }\bar{\phi}_{k}.
+\tilde{\psi}_{0}\equiv i^{\left\lfloor M/2\right\rfloor }\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\equiv i^{\left\lfloor M/2\right\rfloor }\alpha_{0}\prod_{k=1}^{\left\lfloor M/2\right\rfloor }\bar{\phi}_{k}.
 \]
 
 \end_inset
@@ -524,7 +642,7 @@ We first consider the odd
 One can verify that
 \begin_inset Formula 
 \begin{eqnarray*}
-\int d^{M}\theta\,\alpha_{0}\tilde{\psi}_{0}^{\left(1\right)}\psi_{0} & = & i^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\,\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\left(c_{i}-s_{i}\alpha_{M-i}\alpha_{i}\right)\\
+\int d^{M}\theta\,\tilde{\psi}_{0}\psi_{0} & = & i^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\,\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\left(c_{i}-s_{i}\alpha_{M-i}\alpha_{i}\right)\\
  & = & i^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\,\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(s_{i}^{2}+c_{i}^{2}\right)\alpha_{M-i}\alpha_{i}\\
  & = & i^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\,\prod_{i=1}^{M}\alpha_{M-i}\\
  & = & 1,
@@ -543,29 +661,19 @@ i^{M/2-1} & \text{for even }M
 
 \end_inset
 
- It implies the conjugate of 
-\begin_inset Formula $\psi_{0}$
-\end_inset
-
- is 
+ Also,
 \begin_inset Formula 
-\[
-\bar{\psi}_{0}=\alpha_{0}\tilde{\psi}_{0}^{\left(1\right)}.
-\]
+\begin{eqnarray*}
+\int d^{M}\theta\, F_{0}^{-}\tilde{\psi}_{0}F_{0}^{\dagger}\psi_{0} & = & \int d^{M}\theta\,\left(F_{0}^{-}\tilde{\psi}_{0}^{\left(1\right)}\right)\left(F_{0}^{\dagger}\psi_{0}\right)\\
+ & = & \int d^{M}\theta\,\left(\beta_{0}\tilde{\psi}_{0}^{\left(1\right)}\right)\left(\alpha_{0}\psi_{0}\right)\\
+ & = & \int d^{M}\theta\,\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\left(c_{i}-s_{i}\alpha_{M-i}\alpha_{i}\right)\\
+ & = & \int d^{M}\theta\,\tilde{\psi}_{0}\psi_{0}\\
+ & = & 1
+\end{eqnarray*}
 
 \end_inset
 
-Alternatively, one can choose the eigenfunction and its conjugate to be
- 
-\begin_inset Formula $\bar{\psi}_{0}\alpha_{0}$
-\end_inset
 
- and 
-\begin_inset Formula $\tilde{\psi}_{0}$
-\end_inset
-
-.
- 
 \end_layout
 
 \begin_layout Standard
@@ -574,21 +682,13 @@ The general eigenfunction can be obtained by acting the raising operators
  
 \begin_inset Formula 
 \begin{equation}
-\psi=\bar{F}_{k_{1}}\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0},\quad\bar{\psi}=\alpha_{0}\tilde{F}_{M-k_{s}}\tilde{F}_{M-k_{s-1}}\cdots\tilde{F}_{M-k_{1}}\tilde{\psi}_{0}^{\left(1\right)},\label{eq:eigenfunction-oddM-1}
-\end{equation}
-
-\end_inset
-
- or 
-\begin_inset Formula 
-\begin{equation}
-\psi=\bar{F}_{k_{1}}\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0}\alpha_{0},\quad\bar{\psi}=\tilde{F}_{M-k_{s}}\tilde{F}_{M-k_{s-1}}\cdots\tilde{F}_{M-k_{1}}\tilde{\psi}_{0}^{\left(1\right)},\label{eq:eigenfunction-oddM-2}
+\psi=F_{k_{1}}^{\dagger}F_{k_{2}}^{\dagger}\cdots F_{k_{s}}^{\dagger}\psi_{0},\quad\bar{\psi}=F_{k_{s}}^{-}F_{k_{s-1}}^{-}\cdots F_{k_{1}}^{-}\bar{\psi}_{0},\label{eq:eigenfunction-oddM-1}
 \end{equation}
 
 \end_inset
 
 where 
-\begin_inset Formula $1\leq k_{i}\leq M-1$
+\begin_inset Formula $0\leq k_{i}\leq M-1$
 \end_inset
 
  are distinct integers satisfying 
@@ -606,49 +706,48 @@ reference "eq:eigenfunction-oddM-1"
 
 \end_inset
 
- and 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:eigenfunction-oddM-2"
-
-\end_inset
-
  do define the functions conjugate to each other.
- For 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:eigenfunction-oddM-1"
-
+ If 
+\begin_inset Formula $k_{i}\neq0$
 \end_inset
 
 , 
 \begin_inset Formula 
 \begin{eqnarray}
-\int d^{M}\theta\,\bar{\psi}\psi & = & \int d^{M}\theta\,\alpha_{0}\left(\tilde{F}_{M-k_{s}}\tilde{F}_{M-k_{s-1}}\cdots\tilde{F}_{M-k_{1}}\tilde{\psi}_{0}\right)\bar{F}_{k_{1}}\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0}\nonumber \\
- & = & \int d^{M}\theta\,\alpha_{0}\left(\tilde{F}_{M-k_{s}}\tilde{F}_{M-k_{s-1}}\cdots\tilde{F}_{M-k_{2}}\tilde{\psi}_{0}\right)F_{M-k_{1}}\bar{F}_{k_{1}}\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0}\nonumber \\
- & = & \int d^{M}\theta\,\alpha_{0}\left(\tilde{F}_{M-k_{s}}\tilde{F}_{M-k_{s-1}}\cdots\tilde{F}_{M-k_{2}}\tilde{\psi}_{0}\right)\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0}\nonumber \\
+\int d^{M}\theta\,\bar{\psi}\psi & = & \int d^{M}\theta\,\left(F_{k_{s}}^{-}F_{k_{s-1}}^{-}\cdots F_{k_{1}}^{-}\tilde{\psi}_{0}\right)F_{k_{1}}^{\dagger}F_{k_{2}}^{\dagger}\cdots F_{k_{s}}^{\dagger}\psi_{0}\nonumber \\
+ & = & \int d^{M}\theta\,\left(F_{k_{s}}^{-}F_{k_{s-1}}^{-}\cdots F_{k_{2}}^{-}\tilde{\psi}_{0}\right)F_{k_{1}}F_{k_{1}}^{\dagger}F_{k_{2}}^{\dagger}\cdots F_{k_{s}}^{\dagger}\psi_{0}\nonumber \\
+ & = & \int d^{M}\theta\,\left(F_{k_{s}}^{-}F_{k_{s-1}}^{-}\cdots F_{k_{2}}^{-}\tilde{\psi}_{0}\right)F_{k_{2}}^{\dagger}\cdots F_{k_{s}}^{\dagger}\psi_{0}\nonumber \\
  & = & \cdots\nonumber \\
- & = & \int d^{M}\theta\,\alpha_{0}\tilde{\psi}_{0}^{\left(1\right)}\psi_{0}\nonumber \\
+ & = & \int d^{M}\theta\,\tilde{\psi}_{0}^{\left(1\right)}\psi_{0}\nonumber \\
  & = & 1.\label{eq:psi-psibar-product}
 \end{eqnarray}
 
 \end_inset
 
- Likewise, it's easy to show that 
+ If one of the 
+\begin_inset Formula $k_{i}$
+\end_inset
+
+ is zero, one can rearrange the order of 
+\begin_inset Formula $k_{i}$
+\end_inset
+
+ so that 
+\begin_inset Formula $k_{s}=0$
+\end_inset
+
+ without changing the value of 
+\begin_inset Formula $\int d^{M}\theta\,\bar{\psi}\psi$
+\end_inset
+
+, then the equation 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:psi-psibar-product"
 
 \end_inset
 
- hold for 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:eigenfunction-oddM-2"
-
-\end_inset
-
-.
+ still holds.
  
 \end_layout
 
@@ -657,55 +756,10 @@ For even
 \begin_inset Formula $M$
 \end_inset
 
-, the 
-\begin_inset Formula $M/2$
-\end_inset
-
- mode need special treatment.
- We define 
+, we define
 \begin_inset Formula 
 \[
-\tilde{\psi}_{0}^{\left(2\right)}=i^{M/2+1}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)
-\]
-
-\end_inset
-
-The ground state 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:ground_state_oddM"
-
-\end_inset
-
- does not satisfy the cyclic symmetry requirement, and the physical ground
- state become
-\begin_inset Formula 
-\[
-\psi_{0}=\prod_{k=1}^{M/2}\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right),\quad\bar{\psi}_{0}=\alpha_{0}\alpha_{M/2}\tilde{\psi}_{0}^{\left(2\right)},
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\psi_{0}=\prod_{k=1}^{M/2}\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right)\alpha_{0},\quad\bar{\psi}_{0}=-\alpha_{M/2}\tilde{\psi}_{0}^{\left(2\right)},
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\psi_{0}=\prod_{k=1}^{M/2}\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right)\alpha_{M/2},\quad\bar{\psi}_{0}=\alpha_{0}\tilde{\psi}_{0}^{\left(2\right)},
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\psi_{0}=\prod_{k=1}^{M/2}\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right)\alpha_{0}\alpha_{M/2},\quad\bar{\psi}_{0}=\tilde{\psi}_{0}^{\left(2\right)}.
+\psi_{0}=\prod_{k=1}^{M/2}\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right),\quad\bar{\psi}_{0}=i^{M/2+1}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\alpha_{0}\alpha_{M/2}
 \]
 
 \end_inset
@@ -713,8 +767,7 @@ reference "eq:ground_state_oddM"
  One can verify that
 \begin_inset Formula 
 \begin{eqnarray*}
-\int d^{M}\theta\,\bar{\psi}_{0}\psi_{0} & = & \int d^{M}\theta\,\alpha_{0}\alpha_{M/2}\tilde{\psi}_{0}^{\left(2\right)}\psi_{0}\\
- & = & i^{M/2+1}\int d^{M}\theta\,\alpha_{0}\alpha_{M/2}\prod_{i=1}^{M/2}\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\left(c_{i}-s_{i}\alpha_{M-i}\alpha_{i}\right)\\
+\int d^{M}\theta\,\bar{\psi}_{0}\psi_{0} & = & i^{M/2+1}\int d^{M}\theta\,\alpha_{0}\alpha_{M/2}\prod_{i=1}^{M/2}\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\left(c_{i}-s_{i}\alpha_{M-i}\alpha_{i}\right)\\
  & = & i^{M/2+1}\int d^{M}\theta\,\alpha_{0}\alpha_{M/2}\prod_{i=1}^{M/2-1}\alpha_{M-i}\alpha_{i}\\
  & = & i^{M/2+1}\int d^{M}\theta\,\prod_{i=1}^{M}\alpha_{M-i}\times\left(-1\right)^{M/2}\\
  & = & -\left(-i\right)^{M/2+1}\times i^{M/2-1}\\
@@ -726,31 +779,7 @@ reference "eq:ground_state_oddM"
  The general eigenfunction can be written as 
 \begin_inset Formula 
 \begin{equation}
-\psi=\bar{F}_{k_{1}}\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0},\quad\bar{\psi}=\alpha_{0}\alpha_{M/2}\tilde{F}_{M-k_{s}}\tilde{F}_{M-k_{s-1}}\cdots\tilde{F}_{M-k_{1}}\tilde{\psi}_{0}^{\left(2\right)},\label{eq:eigenfunction-evenM-1}
-\end{equation}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{equation}
-\psi=\bar{F}_{k_{1}}\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0}\alpha_{0},\quad\bar{\psi}=-\alpha_{M/2}\tilde{F}_{M-k_{s}}\tilde{F}_{M-k_{s-1}}\cdots\tilde{F}_{M-k_{1}}\tilde{\psi}_{0}^{\left(2\right)},\label{eq:eigenfunction-evenM-2}
-\end{equation}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{equation}
-\psi=\bar{F}_{k_{1}}\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0}\alpha_{M/2},\quad\bar{\psi}=\alpha_{0}\tilde{F}_{M-k_{s}}\tilde{F}_{M-k_{s-1}}\cdots\tilde{F}_{M-k_{1}}\tilde{\psi}_{0}^{\left(2\right)},\label{eq:eigenfunction-evenM-3}
-\end{equation}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{equation}
-\psi=\bar{F}_{k_{1}}\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0}\alpha_{0}\alpha_{M/2},\quad\bar{\psi}=\tilde{F}_{M-k_{s}}\tilde{F}_{M-k_{s-1}}\cdots\tilde{F}_{M-k_{1}}\tilde{\psi}_{0}^{\left(2\right)}.\label{eq:eigenfunction-evenM-4}
+\psi=F_{k_{1}}^{\dagger}F_{k_{2}}^{\dagger}\cdots F_{k_{s}}^{\dagger}\psi_{0},\quad\bar{\psi}=F_{k_{s}}^{+}F_{k_{s-1}}^{+}\cdots F_{k_{1}}^{+}\psi_{0},\quad0\leq k_{i}\leq M-1\label{eq:eigenfunction-evenM-1}
 \end{equation}
 
 \end_inset
@@ -758,11 +787,11 @@ reference "eq:ground_state_oddM"
  One can verify that
 \begin_inset Formula 
 \begin{eqnarray*}
-\int d^{M}\theta\,\bar{\psi}\psi & = & \int d^{M}\theta\,\left(\alpha_{0}\alpha_{M/2}\tilde{F}_{M-k_{s}}\tilde{F}_{M-k_{s-1}}\cdots\tilde{F}_{M-k_{1}}\tilde{\psi}_{0}^{\left(2\right)}\right)\bar{F}_{k_{1}}\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0}\\
- & = & \int d^{M}\theta\,\left(\alpha_{0}\alpha_{M/2}\tilde{F}_{M-k_{s}}\tilde{F}_{M-k_{s-1}}\cdots\tilde{F}_{M-k_{2}}\tilde{\psi}_{0}^{\left(2\right)}\right)F_{M-k_{1}}^{\dagger}\bar{F}_{k_{1}}\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0}\\
- & = & \int d^{M}\theta\,\left(\alpha_{0}\alpha_{M/2}\tilde{F}_{M-k_{s}}\tilde{F}_{M-k_{s-1}}\cdots\tilde{F}_{M-k_{2}}\tilde{\psi}_{0}^{\left(2\right)}\right)\bar{F}_{k_{2}}\cdots\bar{F}_{k_{s}}\psi_{0}\\
+\int d^{M}\theta\,\bar{\psi}\psi & = & \int d^{M}\theta\,\left(F_{k_{s}}^{+}F_{k_{s-1}}^{+}\cdots F_{k_{1}}^{+}\bar{\psi}_{0}\right)F_{k_{1}}^{\dagger}F_{k_{2}}^{\dagger}\cdots F_{k_{s}}^{\dagger}\psi_{0}\\
+ & = & \int d^{M}\theta\,\left(F_{k_{s}}^{+}F_{k_{s-1}}^{+}\cdots F_{k_{2}}^{+}\bar{\psi}_{0}\right)F_{k_{1}}F_{k_{1}}^{\dagger}F_{k_{2}}^{\dagger}\cdots F_{k_{s}}^{\dagger}\psi_{0}\\
+ & = & \int d^{M}\theta\,\left(F_{k_{s}}^{+}F_{k_{s-1}}^{+}\cdots F_{k_{2}}^{+}\bar{\psi}_{0}\right)F_{k_{2}}^{\dagger}\cdots F_{k_{s}}^{\dagger}\psi_{0}\\
  & = & \cdots\\
- & = & \int d^{M}\theta\,\alpha_{0}\alpha_{M/2}\tilde{\psi}_{0}^{\left(2\right)}\psi_{0}\\
+ & = & \int d^{M}\theta\,\bar{\psi}_{0}\psi_{0}\\
  & = & 1.
 \end{eqnarray*}
 
@@ -776,43 +805,7 @@ reference "eq:ground_state_oddM"
 
 \end_inset
 
- for 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:eigenfunction-evenM-1"
 
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:eigenfunction-evenM-2"
-
-\end_inset
-
-, and 
-\begin_inset Formula 
-\[
-\sum_{i}k_{i}=nM
-\]
-
-\end_inset
-
- for 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:eigenfunction-evenM-3"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:eigenfunction-evenM-4"
-
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Subsection*
