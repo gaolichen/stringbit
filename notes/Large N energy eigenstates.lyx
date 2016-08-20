@@ -1420,12 +1420,10 @@ F_{m}=f_{n}C_{mn}+f_{n}^{\dagger}S_{mn},\quad F_{m}^{\dagger}=f_{n}^{\dagger}C_{
 \begin{eqnarray*}
 \left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{m}^{\dagger}\right] & = & \frac{1}{2}\sum_{k,l}M_{kl}\left[f_{k}^{\dagger}f_{l}^{\dagger},F_{m}^{\dagger}\right]\\
  & = & \frac{1}{2}\sum_{k,l}M_{kl}\left(f_{k}^{\dagger}\left\{ f_{l}^{\dagger},F_{m}^{\dagger}\right\} -\left\{ f_{k}^{\dagger},F_{m}^{\dagger}\right\} f_{l}^{\dagger}\right)\\
- & = & \frac{1}{2}\sum_{k,l}M_{kl}\left(f_{k}^{\dagger}\delta_{ln}S_{nm}^{*}-\delta_{kn}S_{nm}^{*}f_{l}^{\dagger}\right)\\
- & = & \frac{1}{2}\sum_{k,l}M_{kl}\left(f_{k}^{\dagger}S_{lm}^{*}-S_{km}^{*}f_{l}^{\dagger}\right)\\
- & = & \frac{1}{2}\sum_{k,l}\left(f_{k}^{\dagger}M_{kl}S_{lm}^{*}-f_{l}^{\dagger}M_{kl}S_{km}^{*}\right)\\
- & = & \frac{1}{2}\sum_{k,l}\left(f_{k}^{\dagger}M_{kl}S_{lm}^{*}+f_{l}^{\dagger}M_{lk}S_{km}^{*}\right)\\
- & = & \sum_{k,l}f_{k}^{\dagger}M_{kl}S_{lm}^{*}\\
- & = & -\sum_{k,l}S_{ml}^{\dagger}M_{lk}f_{k}^{\dagger}
+ & = & \frac{1}{2}\sum_{k,l}M_{kl}\left(f_{k}^{\dagger}\delta_{ln}S_{mn}^{*}-\delta_{kn}S_{mn}^{*}f_{l}^{\dagger}\right)\\
+ & = & \frac{1}{2}\sum_{k,l}M_{kl}\left(f_{k}^{\dagger}S_{ml}^{*}-S_{mk}^{*}f_{l}^{\dagger}\right)\\
+ & = & \frac{1}{2}\sum_{k,l}\left(-S_{ml}^{*}M_{lk}f_{k}^{\dagger}-S_{mk}^{*}M_{kl}f_{l}^{\dagger}\right)\\
+ & = & -\sum_{k,l}S_{ml}^{*}M_{lk}f_{k}^{\dagger}
 \end{eqnarray*}
 
 \end_inset
@@ -1433,11 +1431,13 @@ F_{m}=f_{n}C_{mn}+f_{n}^{\dagger}S_{mn},\quad F_{m}^{\dagger}=f_{n}^{\dagger}C_{
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{n}^{\dagger}F_{m}^{\dagger}\right] & = & F_{n}^{\dagger}\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{m}^{\dagger}\right]+\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{n}^{\dagger}\right]F_{m}^{\dagger}\\
- & = & -F_{n}^{\dagger}\sum_{k,l}S_{ml}^{\dagger}M_{lk}f_{k}^{\dagger}+\sum_{k,l}S_{nl}^{\dagger}M_{lk}f_{k}^{\dagger}F_{m}^{\dagger}\\
- & = & \sum_{k,l}S_{ml}^{\dagger}M_{lk}\left(f_{k}^{\dagger}F_{n}^{\dagger}-\left\{ F_{n}^{\dagger},f_{k}^{\dagger}\right\} \right)+\sum_{k,l}S_{nl}^{\dagger}M_{lk}f_{k}^{\dagger}F_{m}^{\dagger}\\
- & = & \sum_{k,l}S_{ml}^{\dagger}M_{lk}\left(f_{k}^{\dagger}F_{n}^{\dagger}-S_{kn}^{*}\right)+\sum_{k,l}S_{nl}^{\dagger}M_{lk}f_{k}^{\dagger}F_{m}^{\dagger}\\
- & = & \sum_{k,l}S_{ml}^{\dagger}M_{lk}f_{k}^{\dagger}F_{n}^{\dagger}+\sum_{k,l}S_{nl}^{\dagger}M_{lk}f_{k}^{\dagger}F_{m}^{\dagger}-\sum_{k,l}S_{ml}^{\dagger}M_{lk}S_{kn}^{*}
+\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\right] & = & F_{n}^{\dagger}\bar{A}_{nm}\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{m}^{\dagger}\right]+\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{n}^{\dagger}\right]\bar{A}_{nm}F_{m}^{\dagger}\\
+ & = & -F_{n}^{\dagger}\bar{A}_{nm}S_{ml}^{*}M_{lk}f_{k}^{\dagger}-S_{nl}^{*}M_{lk}f_{k}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\\
+ & = & \bar{A}_{nm}S_{ml}^{*}M_{lk}\left(f_{k}^{\dagger}F_{n}^{\dagger}-\left\{ F_{n}^{\dagger},f_{k}^{\dagger}\right\} \right)-S_{nl}^{*}M_{lk}f_{k}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\\
+ & = & \bar{A}_{nm}S_{ml}^{*}M_{lk}\left(f_{k}^{\dagger}F_{n}^{\dagger}-S_{nk}^{*}\right)-S_{nl}^{*}M_{lk}f_{k}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\\
+ & = & \bar{A}_{nm}S_{ml}^{*}M_{lk}f_{k}^{\dagger}F_{n}^{\dagger}-S_{nl}^{*}M_{lk}f_{k}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}-\bar{A}_{nm}S_{ml}^{*}M_{lk}S_{nk}^{*}\\
+ & = & f_{k}^{\dagger}M_{kl}\left(S^{\dagger}\right)_{lm}\bar{A}_{mn}F_{n}^{\dagger}+f_{k}^{\dagger}M_{kl}\left(S^{\dagger}\right)_{ln}\bar{A}_{nm}F_{m}^{\dagger}-\bar{A}_{nm}S_{ml}^{*}M_{lk}\left(S^{\dagger}\right)_{kn}\\
+ & = & 2f_{k}^{\dagger}\left(MS^{\dagger}\bar{A}\right)_{km}F_{m}^{\dagger}-\tr\left(\bar{A}S^{*}MS^{\dagger}\right)
 \end{eqnarray*}
 
 \end_inset
@@ -1445,9 +1445,18 @@ F_{m}=f_{n}C_{mn}+f_{n}^{\dagger}S_{mn},\quad F_{m}^{\dagger}=f_{n}^{\dagger}C_{
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},\sum_{i,j}S_{ni}^{\dagger}M_{ij}f_{j}^{\dagger}F_{m}^{\dagger}\right] & = & \sum_{i,j}S_{ni}^{\dagger}M_{ij}f_{j}^{\dagger}\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{m}^{\dagger}\right]\\
- & = & \sum_{i,j}S_{ni}^{\dagger}M_{ij}f_{j}^{\dagger}\left(-\sum_{k,l}S_{ml}^{\dagger}M_{lk}f_{k}^{\dagger}\right)\\
- & = & \sum_{k,l}S_{ml}^{\dagger}M_{lk}f_{k}^{\dagger}\sum_{i,j}S_{ni}^{\dagger}M_{ij}f_{j}^{\dagger}
+\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\right]\ket{0} & = & \left[2f_{k}^{\dagger}\left(MS^{\dagger}\bar{A}\right)_{km}f_{n}^{\dagger}C_{mn}^{*}-\tr\left(\bar{A}S^{*}MS^{\dagger}\right)\right]\ket{0}\\
+ & = & \left[2f_{k}^{\dagger}\left(MS^{\dagger}\bar{A}C^{*}\right)_{kl}f_{l}^{\dagger}-\tr\left(\bar{A}S^{*}MS^{\dagger}\right)\right]\ket{0}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},2f_{k}^{\dagger}M_{kl}\left(S^{\dagger}\right)_{ln}\bar{A}_{nm}F_{m}^{\dagger}\right] & = & 2f_{i}^{\dagger}\left(MS^{\dagger}\bar{A}\right)_{im}\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{m}^{\dagger}\right]\\
+ & = & 2f_{i}^{\dagger}\left(MS^{\dagger}\bar{A}\right)_{im}\left(-S_{ml}^{*}M_{lk}f_{k}^{\dagger}\right)\\
+ & = & -2f_{k}^{\dagger}\left(MS^{\dagger}\bar{A}S^{*}M\right)_{kl}f_{l}^{\dagger}
 \end{eqnarray*}
 
 \end_inset
@@ -1455,7 +1464,7 @@ F_{m}=f_{n}C_{mn}+f_{n}^{\dagger}S_{mn},\quad F_{m}^{\dagger}=f_{n}^{\dagger}C_{
 it follows that 
 \begin_inset Formula 
 \[
-\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{n}^{\dagger}F_{m}^{\dagger}\right]\right]=0
+\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{n}^{\dagger}F_{m}^{\dagger}\right]\right]=-2f_{k}^{\dagger}\left(MS^{\dagger}\bar{A}S^{*}M\right)_{kl}f_{l}^{\dagger}
 \]
 
 \end_inset
@@ -1463,9 +1472,35 @@ it follows that
 
 \begin_inset Formula 
 \begin{eqnarray*}
-F_{m}^{\dagger}\psi_{0}\left(\theta_{1}\cdots\theta_{M}\right) & = & \exp\left\{ \frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\} \left(F_{m}^{\dagger}-\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{m}^{\dagger}\right]\right)\psi_{0}\left(\theta_{1},\cdots\theta_{p}\right)\psi_{0}\left(\theta_{p+1},\cdots\theta_{M}\right)\\
- & = & \exp\left\{ \frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\} \left(C_{mn}^{\dagger}f_{n}^{\dagger}+S_{ml}^{\dagger}M_{ln}f_{n}^{\dagger}\right)\psi_{0}\left(\theta_{1},\cdots\theta_{p}\right)\psi_{0}\left(\theta_{p+1},\cdots\theta_{M}\right)\\
- & = & \left(C-S^{\dagger}C^{-1}S\right)_{mn}f_{n}^{\dagger}\exp\left\{ \frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\} \psi_{0}\left(\theta_{1},\cdots\theta_{p}\right)\psi_{0}\left(\theta_{p+1},\cdots\theta_{M}\right)
+\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\ket{0} & = & \left(\bar{A}_{nm}f_{i}^{\dagger}f_{j}^{\dagger}C_{ni}^{*}C_{mj}^{*}+\bar{A}_{nm}f_{i}S_{ni}^{*}f_{j}^{\dagger}C_{mj}^{*}\right)\ket{0}\\
+ & = & \left(\bar{A}_{nm}f_{i}^{\dagger}f_{j}^{\dagger}C_{ni}^{*}C_{mj}^{*}+\bar{A}_{nm}S_{ni}^{*}C_{mj}^{*}\left\{ f_{i},f_{j}^{\dagger}\right\} \right)\ket{0}\\
+ & = & \left[f_{i}^{\dagger}\left(C^{\dagger}\bar{A}C^{*}\right)_{ij}f_{j}^{\dagger}+\tr\left(\bar{A}C^{*}S^{\dagger}\right)\right]\ket{0}
+\end{eqnarray*}
+
+\end_inset
+
+ Using the formula
+\begin_inset Formula 
+\[
+e^{A}Be^{-A}=B+\left[A,B\right]+\frac{1}{2}\left[A,\left[A,B\right]\right]+\cdots
+\]
+
+\end_inset
+
+ denote 
+\begin_inset Formula $\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}$
+\end_inset
+
+ as 
+\begin_inset Formula $X$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{eqnarray*}
+F_{m}^{\dagger}\ket{G} & = & \exp\left(X\right)\left(F_{m}^{\dagger}-\left[X,F_{m}^{\dagger}\right]\right)\ket{0}\\
+ & = & \exp\left(X\right)\left(C_{mn}^{*}f_{n}^{\dagger}+S_{ml}^{*}M_{lk}f_{k}^{\dagger}\right)\ket{0}\\
+ & = & \left(C^{*}-S^{*}C^{-1}S\right)_{mn}f_{n}^{\dagger}\ket{G}
 \end{eqnarray*}
 
 \end_inset
@@ -1473,29 +1508,20 @@ F_{m}^{\dagger}\psi_{0}\left(\theta_{1}\cdots\theta_{M}\right) & = & \exp\left\{
 
 \begin_inset Formula 
 \begin{eqnarray*}
-F_{n}^{\dagger}F_{m}^{\dagger}\psi_{0}\left(\theta_{1}\cdots\theta_{M}\right) & = & \exp\left\{ \frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\} \left(F_{n}^{\dagger}F_{m}^{\dagger}-\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{n}^{\dagger}F_{m}^{\dagger}\right]\right)\psi_{0}\left(\theta_{1},\cdots\theta_{p}\right)\psi_{0}\left(\theta_{p+1},\cdots\theta_{M}\right)\\
- & = & \exp\left\{ \frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\} \left(F_{n}^{\dagger}F_{m}^{\dagger}-\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{n}^{\dagger}F_{m}^{\dagger}\right]\right)\psi_{0}\left(\theta_{1},\cdots\theta_{p}\right)\psi_{0}\left(\theta_{p+1},\cdots\theta_{M}\right)
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-F_{n}^{\dagger}F_{m}^{\dagger} & = & \left(f_{i}^{\dagger}C_{in}^{*}+f_{i}S_{in}^{*}\right)\left(f_{j}^{\dagger}C_{jm}^{*}+f_{j}S_{jm}^{*}\right)\\
- & = & f_{i}^{\dagger}C_{in}^{*}f_{j}^{\dagger}C_{jm}^{*}+f_{i}S_{in}^{*}f_{j}^{\dagger}C_{jm}^{*}+\cdots\\
- & = & f_{i}^{\dagger}f_{j}^{\dagger}C_{in}^{*}C_{jm}^{*}+S_{in}^{*}C_{jm}^{*}\left(\left\{ f_{i},f_{j}^{\dagger}\right\} -f_{j}^{\dagger}f_{i}\right)+\cdots\\
- & = & f_{i}^{\dagger}f_{j}^{\dagger}C_{in}^{*}C_{jm}^{*}+\left(S^{\dagger}C^{*}\right)_{nm}+\cdots
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-F_{n}^{\dagger}F_{m}^{\dagger}\psi_{0}\left(\theta_{1}\cdots\theta_{M}\right) & = & \left(f_{i}^{\dagger}f_{j}^{\dagger}C_{in}^{*}C_{jm}^{*}+\left(S^{\dagger}C^{*}\right)_{nm}+\sum_{k,l}S_{ml}^{\dagger}M_{lk}S_{kn}^{*}\right)\psi_{0}\left(\theta_{1}\cdots\theta_{M}\right)\\
- &  & -\exp\left\{ \frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\} \left(\sum_{k,l}S_{ml}^{\dagger}M_{lk}f_{k}^{\dagger}F_{n}^{\dagger}+\sum_{k,l}S_{nl}^{\dagger}M_{lk}f_{k}^{\dagger}F_{m}^{\dagger}\right)\psi_{0}\psi_{0}\\
- & = & \left(f_{i}^{\dagger}f_{j}^{\dagger}C_{in}^{*}C_{jm}^{*}+\sum_{k,l}S_{ml}^{\dagger}M_{lk}f_{k}^{\dagger}f_{i}^{\dagger}C_{in}^{*}+\sum_{k,l}S_{nl}^{\dagger}M_{lk}f_{k}^{\dagger}f_{i}^{\dagger}C_{im}^{*}+\left(S^{\dagger}MS^{*}+S^{\dagger}C^{*}\right)_{mn}\right)\psi_{0}
+F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\ket{G} & = & \exp\left(X\right)\left(\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}-\left[X,\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\right]+\frac{1}{2}\left[X,\left[X,\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\right]\right]\right)\ket{0}\\
+ & = & \left[f_{k}^{\dagger}\left(C^{\dagger}\bar{A}C^{*}\right)_{kl}f_{l}^{\dagger}+\tr\left(\bar{A}C^{*}S^{\dagger}\right)\right]\ket{G}\\
+ &  & -\left[2f_{k}^{\dagger}\left(MS^{\dagger}\bar{A}C^{*}\right)_{kl}f_{l}^{\dagger}-\tr\left(\bar{A}S^{*}MS^{\dagger}\right)\right]\ket{G}\\
+ &  & -f_{k}^{\dagger}\left(MS^{\dagger}\bar{A}S^{*}M\right)_{kl}f_{l}^{\dagger}\ket{G}\\
+ & = & \tr\left[\bar{A}\left(C^{*}+S^{*}M\right)S^{\dagger}\right]\ket{G}\\
+ &  & +f_{k}^{\dagger}\left(C^{\dagger}\bar{A}C^{*}-2MS^{\dagger}\bar{A}C^{*}+MS^{\dagger}\bar{A}S^{*}M\right)_{kl}f_{l}^{\dagger}\ket{G}\\
+ & = & \tr\left[\bar{A}C^{*}S^{\dagger}-\bar{A}S^{*}C^{-1}SS^{\dagger}\right]\ket{G}\\
+ &  & +f_{k}^{\dagger}\left(C^{\dagger}\bar{A}C^{*}+2C^{-1}SS^{\dagger}\bar{A}C^{*}+C^{-1}SS^{\dagger}\bar{A}S^{*}C^{-1}S\right)_{kl}f_{l}^{\dagger}\ket{G}\\
+ & = & \tr\left[\bar{A}C^{*}S^{\dagger}-\bar{A}S^{*}C^{-1}\left(I-CC^{\dagger}\right)\right]\ket{G}\\
+ &  & +f_{k}^{\dagger}\left(C^{\dagger}\bar{A}C^{*}+2C^{-1}\left(I-CC^{\dagger}\right)\bar{A}C^{*}+C^{-1}\left(I-CC^{\dagger}\right)\bar{A}S^{*}C^{-1}S\right)_{kl}f_{l}^{\dagger}\ket{G}\\
+ & = & \tr\left[\bar{A}C^{*}S^{\dagger}+\bar{A}S^{*}\left(C^{\dagger}-C^{-1}\right)\right]\ket{G}\\
+ &  & +f_{k}^{\dagger}\left(C^{\dagger}\bar{A}C^{*}+2C^{-1}\bar{A}C^{*}-2C^{\dagger}\bar{A}C^{*}+C^{-1}\bar{A}S^{*}C^{-1}S-C^{\dagger}\bar{A}S^{*}C^{-1}S\right)_{kl}f_{l}^{\dagger}\ket{G}\\
+ & = & \tr\left[\bar{A}C^{*}S^{\dagger}+\bar{A}S^{*}\left(C^{\dagger}-C^{-1}\right)\right]\ket{G}\\
+ &  & +f_{k}^{\dagger}\left(2C^{-1}\bar{A}C^{*}-C^{\dagger}\bar{A}C^{*}+\left(C^{-1}-C^{\dagger}\right)\bar{A}S^{*}C^{-1}S\right)_{kl}f_{l}^{\dagger}\ket{G}
 \end{eqnarray*}
 
 \end_inset
