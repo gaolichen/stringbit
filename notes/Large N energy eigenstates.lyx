@@ -1514,6 +1514,7 @@ F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\ket{G} & = & \exp\left(X\right)\left(
  &  & -f_{k}^{\dagger}\left(MS^{\dagger}\bar{A}S^{*}M\right)_{kl}f_{l}^{\dagger}\ket{G}\\
  & = & \tr\left[\bar{A}\left(C^{*}+S^{*}M\right)S^{\dagger}\right]\ket{G}\\
  &  & +f_{k}^{\dagger}\left(C^{\dagger}\bar{A}C^{*}-2MS^{\dagger}\bar{A}C^{*}+MS^{\dagger}\bar{A}S^{*}M\right)_{kl}f_{l}^{\dagger}\ket{G}\\
+ & = & \tr\left[-\bar{A}C^{*}M^{\dagger}C^{\dagger}+\bar{A}C^{*}M^{*}MM^{\dagger}C^{\dagger}\right]\ket{G}\\
  & = & \tr\left[\bar{A}C^{*}S^{\dagger}-\bar{A}S^{*}C^{-1}SS^{\dagger}\right]\ket{G}\\
  &  & +f_{k}^{\dagger}\left(C^{\dagger}\bar{A}C^{*}+2C^{-1}SS^{\dagger}\bar{A}C^{*}+C^{-1}SS^{\dagger}\bar{A}S^{*}C^{-1}S\right)_{kl}f_{l}^{\dagger}\ket{G}\\
  & = & \tr\left[\bar{A}C^{*}S^{\dagger}-\bar{A}S^{*}C^{-1}\left(I-CC^{\dagger}\right)\right]\ket{G}\\
