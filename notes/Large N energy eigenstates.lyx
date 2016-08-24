@@ -1568,9 +1568,50 @@ F_{m}=f_{n}C_{mn}+f_{n}^{\dagger}S_{mn},\quad F_{m}^{\dagger}=f_{n}^{\dagger}C_{
 \end_inset
 
  where 
+\begin_inset Formula $f_{1}$
+\end_inset
+
+ to 
+\begin_inset Formula $f_{L-1}$
+\end_inset
+
+ are lowering operator of the first smaller chain and 
+\begin_inset Formula $f_{L}$
+\end_inset
+
+ to 
+\begin_inset Formula $f_{M-1}$
+\end_inset
+
+ are the ones for the other smaller chain.
+ 
+\begin_inset Formula $f_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{f}_{0}$
+\end_inset
+
+ are 
 \begin_inset Formula 
 \[
-\left\{ f_{m},f_{n}^{\dagger}\right\} =\delta_{mn}
+f_{0}=\beta_{0}^{\left(1\right)}\sqrt{\frac{K}{M}}-\beta_{0}^{\left(2\right)}\sqrt{\frac{L}{M}},\quad\bar{f}_{0}=f_{0}^{\dagger}=\alpha_{0}^{\left(1\right)}\sqrt{\frac{K}{M}}-\alpha_{0}^{\left(2\right)}\sqrt{\frac{L}{M}}
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\left\{ f_{m},f_{n}^{\dagger}\right\} =\delta_{mn},\quad\left\{ f_{m},f_{n}\right\} =\left\{ f_{m}^{\dagger},f_{n}^{\dagger}\right\} =0.
+\]
+
+\end_inset
+
+ Since 
+\begin_inset Formula 
+\[
+F_{0}=\beta_{0}=\beta_{0}^{\left(1\right)}\sqrt{\frac{L}{M}}+\beta_{0}^{\left(2\right)}\sqrt{\frac{K}{M}},\quad\bar{F}_{0}=F_{0}^{\dagger}=\alpha_{0}^{\left(1\right)}\sqrt{\frac{L}{M}}+\alpha_{0}^{\left(2\right)}\sqrt{\frac{K}{M}}
 \]
 
 \end_inset
@@ -1578,15 +1619,115 @@ F_{m}=f_{n}C_{mn}+f_{n}^{\dagger}S_{mn},\quad F_{m}^{\dagger}=f_{n}^{\dagger}C_{
 
 \begin_inset Formula 
 \[
-\ket{G}=\exp\left\{ \frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\} \ket{0}
+\left\{ f_{0}^{\dagger},F_{0}\right\} =\left\{ \beta_{0}^{\left(1\right)},\alpha_{0}^{\left(1\right)}\right\} \frac{\sqrt{KL}}{M}-\left\{ \beta_{0}^{\left(2\right)},\alpha_{0}^{\left(2\right)}\right\} \frac{\sqrt{KL}}{M}=0
 \]
 
 \end_inset
 
- Using the identity 
+ we have
+\begin_inset Formula 
+\[
+\left\{ F_{0},f_{n}^{\dagger}\right\} =\left\{ F_{0}^{\dagger},f_{n}^{\dagger}\right\} =\left\{ F_{0},f_{n}\right\} =\left\{ F_{0}^{\dagger},f_{n}\right\} =0,\quad0\leq n\leq M-1.
+\]
+
+\end_inset
+
+We calculate 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\{ F_{m},F_{n}\right\}  & = & \left\{ f_{i}C_{mi}+f_{i}^{\dagger}S_{mi},f_{j}C_{nj}+f_{j}^{\dagger}S_{nj}\right\} \\
+ & = & \left\{ f_{i},f_{j}^{\dagger}\right\} C_{mi}S_{nj}+\left\{ f_{i}^{\dagger},f_{j}\right\} S_{mi}C_{nj}\\
+ & = & C_{mi}S_{ni}+S_{mi}C_{ni},
+\end{eqnarray*}
+
+\end_inset
+
+ which follows that 
+\begin_inset Formula 
+\[
+CS^{T}=-\left(CS^{T}\right)^{T}.
+\]
+
+\end_inset
+
+We also have
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\{ F_{m},F_{n}^{\dagger}\right\}  & = & \left\{ f_{i}C_{mi}+f_{i}^{\dagger}S_{mi},f_{j}^{\dagger}C_{nj}^{*}+f_{j}S_{nj}^{*}\right\} \\
+ & = & \left\{ f_{i},f_{j}^{\dagger}\right\} C_{mi}C_{nj}^{*}+\left\{ f_{i}^{\dagger},f_{j}\right\} S_{mi}S_{nj}^{*}\\
+ & = & C_{mi}C_{ni}^{*}+S_{mi}S_{ni}^{*}\\
+ & != & \delta_{mn},
+\end{eqnarray*}
+
+\end_inset
+
+from which it follows 
+\begin_inset Formula 
+\[
+CC^{\dagger}+SS^{\dagger}=I.
+\]
+
+\end_inset
+
+We express the ground state of large string in terms of the raising operators
+ of the two smaller strings
+\begin_inset Formula 
+\[
+\ket{G}=\exp\left\{ \frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\} \ket{0}.
+\]
+
+\end_inset
+
+Then using the formula
+\begin_inset Formula 
+\[
+e^{A}Be^{-A}=B+\left[A,B\right]+\frac{1}{2}\left[A,\left[A,B\right]\right]+\cdots
+\]
+
+\end_inset
+
+ we have 
+\begin_inset Formula 
+\begin{eqnarray*}
+F_{m}\ket{G} & = & \exp\left\{ \frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\} \left(F_{m}-\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{m}\right]\right)\ket{0}\\
+ & = & \exp\left\{ \frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\} \left(f_{n}^{\dagger}S_{mn}-\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{m}\right]\right)\ket{0}
+\end{eqnarray*}
+
+\end_inset
+
+Using the identity 
 \begin_inset Formula 
 \[
 \left[AB,C\right]=A\left\{ B,C\right\} -\left\{ A,C\right\} B.
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{m}\right] & = & \frac{1}{2}\sum_{k,l}M_{kl}\left[f_{k}^{\dagger}f_{l}^{\dagger},F_{m}\right]\\
+ & = & \frac{1}{2}\sum_{k,l}M_{kl}\left(f_{k}^{\dagger}\left\{ f_{l}^{\dagger},F_{m}\right\} -\left\{ f_{k}^{\dagger},F_{m}\right\} f_{l}\right)\\
+ & = & \frac{1}{2}\sum_{k,l}M_{kl}\left(f_{k}^{\dagger}C_{mn}\delta_{ln}-C_{mn}\delta_{kn}f_{l}\right)\\
+ & = & \frac{1}{2}\sum_{k,l}M_{kl}\left(f_{k}^{\dagger}C_{ml}-C_{mk}f_{l}\right)\\
+ & = & \frac{1}{2}\sum_{k,l}\left(-C_{ml}M_{kl}f_{k}^{\dagger}-C_{mk}M_{kl}f_{l}\right)\\
+ & = & -\sum_{k,l}C_{ml}M_{kl}f_{k}^{\dagger}
+\end{eqnarray*}
+
+\end_inset
+
+it follows that 
+\begin_inset Formula 
+\[
+F_{m}\ket{G}=\exp\left(\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\left(S+CM\right)_{mn}f_{n}^{\dagger}\ket{0}.
+\]
+
+\end_inset
+
+ We therefore have 
+\begin_inset Formula 
+\[
+S=-CM.
 \]
 
 \end_inset
@@ -1655,15 +1796,7 @@ it follows that
 
 \end_inset
 
- Using the formula
-\begin_inset Formula 
-\[
-e^{A}Be^{-A}=B+\left[A,B\right]+\frac{1}{2}\left[A,\left[A,B\right]\right]+\cdots
-\]
-
-\end_inset
-
- denote 
+ Denote 
 \begin_inset Formula $\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}$
 \end_inset
 
@@ -1677,6 +1810,14 @@ e^{A}Be^{-A}=B+\left[A,B\right]+\frac{1}{2}\left[A,\left[A,B\right]\right]+\cdot
 F_{m}^{\dagger}\ket{G} & = & \exp\left(X\right)\left(F_{m}^{\dagger}-\left[X,F_{m}^{\dagger}\right]\right)\ket{0}\\
  & = & \exp\left(X\right)\left(C_{mn}^{*}f_{n}^{\dagger}+S_{ml}^{*}M_{lk}f_{k}^{\dagger}\right)\ket{0}\\
  & = & \left(C^{*}+S^{*}M\right)_{mn}f_{n}^{\dagger}\ket{G}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+F_{0}^{\dagger}F_{m}^{\dagger}\ket{G} & = & \left(F_{0}^{\left(1\right)\dagger}F_{m}^{\dagger}\sqrt{\frac{L}{M}}+F_{0}^{\left(2\right)\dagger}F_{m}^{\dagger}\sqrt{\frac{K}{M}}\right)\ket{G}
 \end{eqnarray*}
 
 \end_inset
