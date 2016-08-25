@@ -1595,7 +1595,7 @@ F_{m}=f_{n}C_{mn}+f_{n}^{\dagger}S_{mn},\quad F_{m}^{\dagger}=f_{n}^{\dagger}C_{
  are 
 \begin_inset Formula 
 \[
-f_{0}=\beta_{0}^{\left(1\right)}\sqrt{\frac{K}{M}}-\beta_{0}^{\left(2\right)}\sqrt{\frac{L}{M}},\quad\bar{f}_{0}=f_{0}^{\dagger}=\alpha_{0}^{\left(1\right)}\sqrt{\frac{K}{M}}-\alpha_{0}^{\left(2\right)}\sqrt{\frac{L}{M}}
+f_{0}=F_{0}^{\left(1\right)}\sqrt{\frac{K}{M}}-F_{0}^{\left(2\right)}\sqrt{\frac{L}{M}},\quad\bar{f}_{0}=f_{0}^{\dagger}=F_{0}^{\left(1\right)\dagger}\sqrt{\frac{K}{M}}-F_{0}^{\left(2\right)\dagger}\sqrt{\frac{L}{M}}
 \]
 
 \end_inset
@@ -1611,7 +1611,7 @@ f_{0}=\beta_{0}^{\left(1\right)}\sqrt{\frac{K}{M}}-\beta_{0}^{\left(2\right)}\sq
  Since 
 \begin_inset Formula 
 \[
-F_{0}=\beta_{0}=\beta_{0}^{\left(1\right)}\sqrt{\frac{L}{M}}+\beta_{0}^{\left(2\right)}\sqrt{\frac{K}{M}},\quad\bar{F}_{0}=F_{0}^{\dagger}=\alpha_{0}^{\left(1\right)}\sqrt{\frac{L}{M}}+\alpha_{0}^{\left(2\right)}\sqrt{\frac{K}{M}}
+F_{0}=\beta_{0}=F_{0}^{\left(1\right)}\sqrt{\frac{L}{M}}+F_{0}^{\left(2\right)}\sqrt{\frac{K}{M}},\quad\bar{F}_{0}=F_{0}^{\dagger}=F_{0}^{\left(1\right)\dagger}\sqrt{\frac{L}{M}}+F_{0}^{\left(2\right)\dagger}\sqrt{\frac{K}{M}}
 \]
 
 \end_inset
@@ -1620,6 +1620,14 @@ F_{0}=\beta_{0}=\beta_{0}^{\left(1\right)}\sqrt{\frac{L}{M}}+\beta_{0}^{\left(2\
 \begin_inset Formula 
 \[
 \left\{ f_{0}^{\dagger},F_{0}\right\} =\left\{ \beta_{0}^{\left(1\right)},\alpha_{0}^{\left(1\right)}\right\} \frac{\sqrt{KL}}{M}-\left\{ \beta_{0}^{\left(2\right)},\alpha_{0}^{\left(2\right)}\right\} \frac{\sqrt{KL}}{M}=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+F_{0}^{\left(1\right)}=F_{0}\sqrt{\frac{L}{M}}+f_{0}\sqrt{\frac{K}{M}},\quad F_{0}^{\left(2\right)}=F_{0}\sqrt{\frac{K}{M}}-f_{0}\sqrt{\frac{L}{M}}
 \]
 
 \end_inset
@@ -1724,7 +1732,7 @@ F_{m}\ket{G}=\exp\left(\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}
 
 \end_inset
 
- We therefore have 
+ We therefore must have 
 \begin_inset Formula 
 \[
 S=-CM.
@@ -1732,7 +1740,39 @@ S=-CM.
 
 \end_inset
 
+ We also impose the constraint 
+\begin_inset Formula $F_{0}\ket{G}=0$
+\end_inset
 
+, from which it follows 
+\begin_inset Formula 
+\[
+F_{0}\ket{0}=0.
+\]
+
+\end_inset
+
+Requiring 
+\begin_inset Formula $\ket{0}$
+\end_inset
+
+ annihilated by both 
+\begin_inset Formula $F_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $f_{0}$
+\end_inset
+
+ yields 
+\begin_inset Formula 
+\[
+\ket{0}=\psi_{0}^{\left(1\right)}\psi_{0}^{\left(2\right)}
+\]
+
+\end_inset
+
+ 
 \begin_inset Formula 
 \begin{eqnarray*}
 \left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{m}^{\dagger}\right] & = & \frac{1}{2}\sum_{k,l}M_{kl}\left[f_{k}^{\dagger}f_{l}^{\dagger},F_{m}^{\dagger}\right]\\
