@@ -74,7 +74,7 @@
 \begin_body
 
 \begin_layout Title
-Energy eigenstates
+Stringbit vertex calculation
 \end_layout
 
 \begin_layout Standard
@@ -808,220 +808,6 @@ For even
 
 \end_layout
 
-\begin_layout Subsection*
-Verify Completness
-\end_layout
-
-\begin_layout Subsubsection*
-M=2
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\psi_{0}=\alpha_{1},\quad\bar{\psi}_{0}=-\alpha_{0}
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\psi_{1}=\alpha_{0}\alpha_{1},\quad\bar{\psi}_{1}=-1
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\sum_{r}\psi_{r}\bar{\psi}_{r}\left(\phi\right) & = & -\alpha_{1}\alpha_{0}\left(\phi\right)+\alpha_{1}\alpha_{0}\\
- & = & \frac{1}{2}\left(\theta_{1}-\theta_{2}\right)\left(\phi_{1}+\phi_{2}\right)+\frac{1}{2}\left(\theta_{2}-\theta_{1}\right)\left(\theta_{1}+\theta_{2}\right)\\
- & = & \frac{1}{2}\left(\theta_{1}-\theta_{2}\right)\left(\phi_{1}+\phi_{2}\right)+\theta_{2}\theta_{1}
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\int d^{2}\tr\left(\bar{a}+\bar{b}\theta_{1}\right)\left(\bar{a}+\bar{b}\theta_{2}\right)\sum_{r}\psi_{r}\bar{\psi}_{r}\left(\phi\right) & = & \frac{1}{2}\left(\tr\bar{a}\bar{b}+\tr\bar{b}\bar{a}\right)\left(\phi_{1}+\phi_{1}\right)+\tr\bar{a}\bar{a}\\
- & = & \tr\left(\bar{a}+\bar{b}\theta_{1}\right)\left(\bar{a}+\bar{b}\theta_{2}\right)
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection*
-M=3
-\end_layout
-
-\begin_layout Standard
-Firstly we calculate
-\begin_inset Formula 
-\begin{eqnarray*}
-\alpha_{k}\alpha_{M-k} & = & \frac{1}{M}\sum_{i,j=1}^{M}\theta_{i}\theta_{j}e^{2\pi i\left[ik+j\left(M-k\right)\right]/M}\\
- & = & \frac{1}{M}\sum_{i,j=1}^{M}\theta_{i}\theta_{j}e^{2\pi i\left(i-j\right)k/M}\\
- & = & \frac{2i}{M}\sum_{i=1}^{M}\sum_{j>i}^{M}\theta_{i}\theta_{j}\sin\frac{2\pi k\left(i-j\right)}{M}\\
- & = & -\frac{2i}{M}\sum_{i=1}^{M}\sum_{j>i}^{M}\theta_{i}\theta_{j}\sin\frac{2\pi k\left(j-i\right)}{M}.
-\end{eqnarray*}
-
-\end_inset
-
-For 
-\begin_inset Formula $M=3$
-\end_inset
-
-,
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\psi_{1}=c_{1}+s_{1}\alpha_{2}\alpha_{1},\quad\bar{\psi}_{1}=i\alpha_{0}\left(s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\psi_{2}=\alpha_{0}\left(c_{1}+s_{1}\alpha_{2}\alpha_{1}\right),\quad\bar{\psi}_{2}=i\left(s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\psi_{3}=-s_{1}+c_{1}\alpha_{2}\alpha_{1},\quad\bar{\psi}_{3}=i\alpha_{0}\left(c_{1}-s_{1}\alpha_{2}\alpha_{1}\right)
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\psi_{4}=\alpha_{0}\left(-s_{1}+c_{1}\alpha_{2}\alpha_{1}\right),\quad\bar{\psi}_{1}=i\left(c_{1}-s_{1}\alpha_{2}\alpha_{1}\right)
-\]
-
-\end_inset
-
-To verify:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\alpha_{0}=\frac{1}{\sqrt{3}}\left(\theta_{1}+\theta_{2}+\theta_{3}\right)
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\alpha_{2}\alpha_{1} & = & \frac{2i}{3}\sum_{i=1}^{3}\sum_{j>i}^{3}\theta_{i}\theta_{j}\sin\frac{2\pi\left(j-i\right)}{3}\\
- & = & \frac{i}{\sqrt{3}}\left(\theta_{1}\theta_{2}+\theta_{2}\theta_{3}+\theta_{3}\theta_{1}\right)
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\alpha_{0}\alpha_{1}\alpha_{2} & = & \frac{1}{\sqrt{3}}\left(\theta_{1}+\theta_{2}+\theta_{3}\right)\frac{-i}{\sqrt{3}}\left(\theta_{1}\theta_{2}+\theta_{2}\theta_{3}+\theta_{3}\theta_{1}\right)\\
- & = & -i\theta_{1}\theta_{2}\theta_{3}\\
- & = & i\theta_{3}\theta_{2}\theta_{1}
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\int d^{3}\theta\,\bar{\psi}_{1}\psi_{1} & = & i\int d^{3}\theta\,\alpha_{0}\left(s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)\left(c_{1}+s_{1}\alpha_{2}\alpha_{1}\right)\\
- & = & i\int d^{3}\theta\left(c_{1}^{2}+s_{1}^{2}\right)\alpha_{0}\alpha_{2}\alpha_{1}\\
- & = & i\int d^{3}\theta\,\alpha_{2}\alpha_{1}\alpha_{0}\\
- & = & 1
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\int d^{3}\theta\,\bar{\psi}_{1}\psi_{3} & = & i\int d^{3}\theta\,\alpha_{0}\left(s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)\left(-s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)\\
- & = & i\int d^{3}\theta\,\left(-s_{1}c_{1}+s_{1}c_{1}\right)\alpha_{0}\alpha_{2}\alpha_{1}\\
- & = & 0
-\end{eqnarray*}
-
-\end_inset
-
- likewise
-\begin_inset Formula 
-\[
-\int d^{3}\theta\,\bar{\psi}_{3}\psi_{1}=0,\quad\int d^{3}\theta\,\bar{\psi}_{3}\psi_{3}=1.
-\]
-
-\end_inset
-
- Let us now verify the completeness.
-\begin_inset Formula 
-\[
-T\left(\theta\right)=\tr\left(\bar{a}+\bar{b}\theta_{1}\right)\left(\bar{a}+\bar{b}\theta_{2}\right)\left(\bar{a}+\bar{b}\theta_{3}\right)
-\]
-
-\end_inset
-
-Denote 
-\begin_inset Formula $\sigma_{k}=\alpha_{k}\left(\phi\right)$
-\end_inset
-
- and 
-\begin_inset Formula $\alpha_{k}=\alpha_{k}\left(\theta\right)$
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\sum_{r}\psi_{r}\left(\theta\right)\bar{\psi}_{r}\left(\phi\right) & = & i\left(c_{1}+s_{1}\alpha_{2}\alpha_{1}\right)\sigma_{0}\left(s_{1}+c_{1}\sigma_{2}\sigma_{1}\right)\\
- &  & +i\left(-s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)\sigma_{0}\left(c_{1}-s_{1}\sigma_{2}\sigma_{1}\right)\\
- &  & +i\alpha_{0}\left(c_{1}+s_{1}\alpha_{2}\alpha_{1}\right)\left(s_{1}+c_{1}\sigma_{2}\sigma_{1}\right)\\
- &  & +i\alpha_{0}\left(-s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)\left(c_{1}-s_{1}\sigma_{2}\sigma_{1}\right)\\
- & = & i\alpha_{2}\alpha_{1}\alpha_{0}+i\alpha_{2}\alpha_{1}\sigma_{0}+i\alpha_{0}\sigma_{2}\sigma_{1}+i\sigma_{2}\sigma_{1}\sigma_{0}.
-\end{eqnarray*}
-
-\end_inset
-
- In the language of 
-\begin_inset Formula $\theta$
-\end_inset
-
-,
-\begin_inset Formula 
-\begin{eqnarray*}
-\sum_{r}\psi_{r}\left(\theta\right)\bar{\psi}_{r}\left(\phi\right) & = & 1-\frac{1}{3}\left(\theta_{1}\theta_{2}+\theta_{2}\theta_{3}+\theta_{3}\theta_{1}\right)\left(\phi_{1}+\phi_{2}+\phi_{3}\right)\\
- &  & -\frac{1}{3}\left(\theta_{1}+\theta_{2}+\theta_{3}\right)\left(\phi_{1}\phi_{2}+\phi_{2}\phi_{3}+\phi_{3}\phi_{1}\right)+\phi_{3}\phi_{2}\phi_{1}
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\int d^{3}\theta\, T\left(\theta\right)\sum_{r}\psi_{r}\left(\theta\right)\bar{\psi}_{r}\left(\phi\right) & = & \tr\bar{b}^{3}+\tr\bar{a}\bar{a}\bar{b}\left(\phi_{1}+\phi_{2}+\phi_{3}\right)\\
- &  & +\tr\bar{a}\bar{b}\bar{b}\left(\phi_{1}\phi_{2}+\phi_{2}\phi_{3}+\phi_{3}\phi_{1}\right)+\tr\bar{a}^{3}\\
- & = & T\left(\phi\right)
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section*
 Diagonalize 
 \begin_inset Formula $h$
@@ -1310,10 +1096,40 @@ Perturbation theory
 \begin_inset Formula 
 \begin{eqnarray*}
 HT_{r}\ket{0} & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{l=k+2}^{M+k-1}\bar{h}_{kl}T\left(\theta_{l}\cdots\theta_{k}\right)T\left(\theta_{k+1}\cdots\theta_{l-1}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
- & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{p=1}^{M-2}\bar{h}_{k,k+p+1}\sum_{s,t}T_{s}\bar{\psi}_{s}\left(\theta_{k+p+1}\cdots\theta_{k}\right)T_{t}\bar{\psi}_{t}\left(\theta_{k+1}\cdots\theta_{k+p}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{p=1}^{M-2}\bar{h}_{k,k+p+1}T\left(\theta_{k+p+1}\cdots\theta_{k}\right)T\left(\theta_{k+1}\cdots\theta_{k+p}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{p=2}^{M-2}\bar{h}_{k,k+p+1}\sum_{s,t}T_{s}\bar{\psi}_{s}\left(\theta_{k+p+1}\cdots\theta_{k}\right)T_{t}\bar{\psi}_{t}\left(\theta_{k+1}\cdots\theta_{k+p}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ &  & +\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\bar{h}_{k,k+2}T\left(\theta_{k+2}\cdots\theta_{k}\right)T\left(\theta_{k+1}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
  & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{p=1}^{M-2}\sum_{k=1}^{M}\bar{h}_{k,k+p+1}\sum_{s,t}T_{s}T_{t}\bar{\psi}_{s}\left(\theta_{k+p+1}\cdots\theta_{k}\right)\bar{\psi}_{t}\left(\theta_{k+1}\cdots\theta_{k+p}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
- & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{n=1}^{M-2}\sum_{s,t}T_{s}T_{t}\ket{0}\int d\theta\,\sum_{k=1}^{M}\bar{h}_{k,k+p+1}\bar{\psi}_{s}\left(\theta_{k+p+1}\cdots\theta_{k}\right)\bar{\psi}_{t}\left(\theta_{k+1}\cdots\theta_{k+p}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
- & \equiv & E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{p=1}^{M-2}\sum_{s,t}T_{s}T_{t}\ket{0}V_{str}^{\left(p\right)}
+ &  & +\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\bar{h}_{k,k+2}\sum_{s}T_{s}\bar{\psi}_{s}\left(\theta_{k+2}\cdots\theta_{k}\right)\tr\left(\bar{a}+\bar{b}\theta_{k+1}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{p=2}^{M-2}\sum_{s,t}T_{s}T_{t}\ket{0}\int d\theta\,\sum_{k=1}^{M}\bar{h}_{k,k+p+1}\bar{\psi}_{s}\left(\theta_{k+p+1}\cdots\theta_{k}\right)\bar{\psi}_{t}\left(\theta_{k+1}\cdots\theta_{k+p}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ &  & +\frac{1}{N}\tr\bar{a}\int d\theta\,\sum_{k=1}^{M}\bar{h}_{k,k+2}\sum_{s}T_{s}\bar{\psi}_{s}\left(\theta_{k+2}\cdots\theta_{k}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ &  & +\frac{1}{N}\tr\bar{b}\int d\theta\,\sum_{k=1}^{M}\bar{h}_{k,k+2}\sum_{s}T_{s}\bar{\psi}_{s}\left(\theta_{k+2}\cdots\theta_{k}\right)\theta_{k+1}\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & \equiv & E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{p=2}^{M-2}\sum_{s,t}T_{s}T_{t}\ket{0}V_{str}^{\left(p\right)}\\
+ &  & +\frac{1}{N}\tr\bar{a}\int d\theta\,\sum_{s}T_{s}\ket{0}V_{sr}^{\left(1,a\right)}+\frac{1}{N}\tr\bar{b}\int d\theta\,\sum_{s}T_{s}\ket{0}V_{sr}^{\left(1,b\right)}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+V_{sr}^{\left(1,a\right)} & = & \sum_{k=1}^{M}\int d^{M}\theta\,\bar{h}_{k,k+2}\bar{\psi}_{s}\left(\theta_{k+2}\cdots\theta_{k}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & = & \sum_{k=1}^{M}\int d\theta_{2}\cdots d\theta_{M}d\theta_{1}\,\bar{h}_{k+1,k+3}\bar{\psi}_{s}\left(\theta_{k+3}\cdots\theta_{k+1}\right)\psi_{r}\left(\theta_{2},\cdots,\theta_{M},\theta_{1}\right)\\
+ & = & \sum_{k=1}^{M}\int d\theta_{1}\cdots d\theta_{M}\,\bar{h}_{k+1,k+3}\bar{\psi}_{s}\left(\theta_{k+3}\cdots\theta_{k+1}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & = & M\int d^{M}\theta\,\bar{h}_{M,2}\bar{\psi}_{s}\left(\theta_{2}\cdots\theta_{M}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & = & M\int d^{M}\theta\,\bar{\psi}_{s}\left(\theta_{2}\cdots\theta_{M}\right)h_{M,2}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+V_{sr}^{\left(1,b\right)} & = & \sum_{k=1}^{M}\int d\theta\,\bar{h}_{k,k+2}\bar{\psi}_{s}\left(\theta_{k+2}\cdots\theta_{k}\right)\theta_{k+1}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & = & \sum_{k=1}^{M}\int d\theta_{2}\cdots d\theta_{M}d\theta_{1}\,\bar{h}_{k+1,k+3}\bar{\psi}_{s}\left(\theta_{k+3}\cdots\theta_{k+1}\right)\theta_{k+2}\psi_{r}\left(\theta_{2},\cdots,\theta_{M},\theta_{1}\right)\\
+ & = & \sum_{k=1}^{M}\int d\theta_{1}\cdots d\theta_{M}\,\bar{h}_{k+1,k+3}\bar{\psi}_{s}\left(\theta_{k+3}\cdots\theta_{k+1}\right)\theta_{k+2}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & = & M\int d^{M}\theta\,\bar{h}_{M,2}\bar{\psi}_{s}\left(\theta_{2}\cdots\theta_{M}\right)\theta_{1}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & = & M\int d^{M}\theta\,\bar{\psi}_{s}\left(\theta_{2}\cdots\theta_{M}\right)\theta_{1}h_{M,2}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)
 \end{eqnarray*}
 
 \end_inset
@@ -1906,6 +1722,221 @@ F_{m}^{\dagger}\ket{G}=C_{nm}^{-1}f_{n}^{\dagger}\ket{G}
 \[
 F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\ket{G}=-\tr\left(S^{*}C^{-1}\bar{A}\right)\ket{G}+f_{k}^{\dagger}\left[C^{-1}\bar{A}\left(C^{-1}\right)^{T}\right]_{kl}f_{l}^{\dagger}\ket{G}
 \]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\start_of_appendix
+Eigenfunction and eigenstates
+\end_layout
+
+\begin_layout Subsection*
+M=2
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\psi_{0}=\alpha_{1},\quad\bar{\psi}_{0}=-\alpha_{0}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\psi_{1}=\alpha_{0}\alpha_{1},\quad\bar{\psi}_{1}=-1
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{r}\psi_{r}\bar{\psi}_{r}\left(\phi\right) & = & -\alpha_{1}\alpha_{0}\left(\phi\right)+\alpha_{1}\alpha_{0}\\
+ & = & \frac{1}{2}\left(\theta_{1}-\theta_{2}\right)\left(\phi_{1}+\phi_{2}\right)+\frac{1}{2}\left(\theta_{2}-\theta_{1}\right)\left(\theta_{1}+\theta_{2}\right)\\
+ & = & \frac{1}{2}\left(\theta_{1}-\theta_{2}\right)\left(\phi_{1}+\phi_{2}\right)+\theta_{2}\theta_{1}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\int d^{2}\tr\left(\bar{a}+\bar{b}\theta_{1}\right)\left(\bar{a}+\bar{b}\theta_{2}\right)\sum_{r}\psi_{r}\bar{\psi}_{r}\left(\phi\right) & = & \frac{1}{2}\left(\tr\bar{a}\bar{b}+\tr\bar{b}\bar{a}\right)\left(\phi_{1}+\phi_{1}\right)+\tr\bar{a}\bar{a}\\
+ & = & \tr\left(\bar{a}+\bar{b}\theta_{1}\right)\left(\bar{a}+\bar{b}\theta_{2}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+M=3
+\end_layout
+
+\begin_layout Standard
+Firstly we calculate
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha_{k}\alpha_{M-k} & = & \frac{1}{M}\sum_{i,j=1}^{M}\theta_{i}\theta_{j}e^{2\pi i\left[ik+j\left(M-k\right)\right]/M}\\
+ & = & \frac{1}{M}\sum_{i,j=1}^{M}\theta_{i}\theta_{j}e^{2\pi i\left(i-j\right)k/M}\\
+ & = & \frac{2i}{M}\sum_{i=1}^{M}\sum_{j>i}^{M}\theta_{i}\theta_{j}\sin\frac{2\pi k\left(i-j\right)}{M}\\
+ & = & -\frac{2i}{M}\sum_{i=1}^{M}\sum_{j>i}^{M}\theta_{i}\theta_{j}\sin\frac{2\pi k\left(j-i\right)}{M}.
+\end{eqnarray*}
+
+\end_inset
+
+For 
+\begin_inset Formula $M=3$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\psi_{1}=c_{1}+s_{1}\alpha_{2}\alpha_{1},\quad\bar{\psi}_{1}=i\alpha_{0}\left(s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\psi_{2}=\alpha_{0}\left(c_{1}+s_{1}\alpha_{2}\alpha_{1}\right),\quad\bar{\psi}_{2}=i\left(s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\psi_{3}=-s_{1}+c_{1}\alpha_{2}\alpha_{1},\quad\bar{\psi}_{3}=i\alpha_{0}\left(c_{1}-s_{1}\alpha_{2}\alpha_{1}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\psi_{4}=\alpha_{0}\left(-s_{1}+c_{1}\alpha_{2}\alpha_{1}\right),\quad\bar{\psi}_{1}=i\left(c_{1}-s_{1}\alpha_{2}\alpha_{1}\right)
+\]
+
+\end_inset
+
+To verify:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\alpha_{0}=\frac{1}{\sqrt{3}}\left(\theta_{1}+\theta_{2}+\theta_{3}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha_{2}\alpha_{1} & = & \frac{2i}{3}\sum_{i=1}^{3}\sum_{j>i}^{3}\theta_{i}\theta_{j}\sin\frac{2\pi\left(j-i\right)}{3}\\
+ & = & \frac{i}{\sqrt{3}}\left(\theta_{1}\theta_{2}+\theta_{2}\theta_{3}+\theta_{3}\theta_{1}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha_{0}\alpha_{1}\alpha_{2} & = & \frac{1}{\sqrt{3}}\left(\theta_{1}+\theta_{2}+\theta_{3}\right)\frac{-i}{\sqrt{3}}\left(\theta_{1}\theta_{2}+\theta_{2}\theta_{3}+\theta_{3}\theta_{1}\right)\\
+ & = & -i\theta_{1}\theta_{2}\theta_{3}\\
+ & = & i\theta_{3}\theta_{2}\theta_{1}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\int d^{3}\theta\,\bar{\psi}_{1}\psi_{1} & = & i\int d^{3}\theta\,\alpha_{0}\left(s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)\left(c_{1}+s_{1}\alpha_{2}\alpha_{1}\right)\\
+ & = & i\int d^{3}\theta\left(c_{1}^{2}+s_{1}^{2}\right)\alpha_{0}\alpha_{2}\alpha_{1}\\
+ & = & i\int d^{3}\theta\,\alpha_{2}\alpha_{1}\alpha_{0}\\
+ & = & 1
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\int d^{3}\theta\,\bar{\psi}_{1}\psi_{3} & = & i\int d^{3}\theta\,\alpha_{0}\left(s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)\left(-s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)\\
+ & = & i\int d^{3}\theta\,\left(-s_{1}c_{1}+s_{1}c_{1}\right)\alpha_{0}\alpha_{2}\alpha_{1}\\
+ & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+ likewise
+\begin_inset Formula 
+\[
+\int d^{3}\theta\,\bar{\psi}_{3}\psi_{1}=0,\quad\int d^{3}\theta\,\bar{\psi}_{3}\psi_{3}=1.
+\]
+
+\end_inset
+
+ Let us now verify the completeness.
+\begin_inset Formula 
+\[
+T\left(\theta\right)=\tr\left(\bar{a}+\bar{b}\theta_{1}\right)\left(\bar{a}+\bar{b}\theta_{2}\right)\left(\bar{a}+\bar{b}\theta_{3}\right)
+\]
+
+\end_inset
+
+Denote 
+\begin_inset Formula $\sigma_{k}=\alpha_{k}\left(\phi\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha_{k}=\alpha_{k}\left(\theta\right)$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{r}\psi_{r}\left(\theta\right)\bar{\psi}_{r}\left(\phi\right) & = & i\left(c_{1}+s_{1}\alpha_{2}\alpha_{1}\right)\sigma_{0}\left(s_{1}+c_{1}\sigma_{2}\sigma_{1}\right)\\
+ &  & +i\left(-s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)\sigma_{0}\left(c_{1}-s_{1}\sigma_{2}\sigma_{1}\right)\\
+ &  & +i\alpha_{0}\left(c_{1}+s_{1}\alpha_{2}\alpha_{1}\right)\left(s_{1}+c_{1}\sigma_{2}\sigma_{1}\right)\\
+ &  & +i\alpha_{0}\left(-s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)\left(c_{1}-s_{1}\sigma_{2}\sigma_{1}\right)\\
+ & = & i\alpha_{2}\alpha_{1}\alpha_{0}+i\alpha_{2}\alpha_{1}\sigma_{0}+i\alpha_{0}\sigma_{2}\sigma_{1}+i\sigma_{2}\sigma_{1}\sigma_{0}.
+\end{eqnarray*}
+
+\end_inset
+
+ In the language of 
+\begin_inset Formula $\theta$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{r}\psi_{r}\left(\theta\right)\bar{\psi}_{r}\left(\phi\right) & = & 1-\frac{1}{3}\left(\theta_{1}\theta_{2}+\theta_{2}\theta_{3}+\theta_{3}\theta_{1}\right)\left(\phi_{1}+\phi_{2}+\phi_{3}\right)\\
+ &  & -\frac{1}{3}\left(\theta_{1}+\theta_{2}+\theta_{3}\right)\left(\phi_{1}\phi_{2}+\phi_{2}\phi_{3}+\phi_{3}\phi_{1}\right)+\phi_{3}\phi_{2}\phi_{1}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\int d^{3}\theta\, T\left(\theta\right)\sum_{r}\psi_{r}\left(\theta\right)\bar{\psi}_{r}\left(\phi\right) & = & \tr\bar{b}^{3}+\tr\bar{a}\bar{a}\bar{b}\left(\phi_{1}+\phi_{2}+\phi_{3}\right)\\
+ &  & +\tr\bar{a}\bar{b}\bar{b}\left(\phi_{1}\phi_{2}+\phi_{2}\phi_{3}+\phi_{3}\phi_{1}\right)+\tr\bar{a}^{3}\\
+ & = & T\left(\phi\right)
+\end{eqnarray*}
 
 \end_inset
 
