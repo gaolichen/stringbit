@@ -419,7 +419,7 @@ F_{k}^{\pm}=\pm\left(s_{k}\alpha_{k}-c_{k}\beta_{k}\right),\quad\bar{F}_{k}^{\pm
 
 \begin_inset Formula 
 \[
-F_{0}^{\pm}=\pm\alpha_{0},\quad\bar{F}_{0}^{\pm}=\mp\beta_{0}
+F_{0}^{\pm}=\mp\beta_{0},\quad\bar{F}_{0}^{\pm}=\pm\alpha_{0}
 \]
 
 \end_inset
