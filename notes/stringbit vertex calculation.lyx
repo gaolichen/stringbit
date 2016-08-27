@@ -634,7 +634,7 @@ F_{k}\psi_{0}=0,\quad k=0,1,\cdots,M-1
  We define 
 \begin_inset Formula 
 \[
-\tilde{\psi}_{0}\equiv i^{\left\lfloor M/2\right\rfloor }\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\equiv i^{\left\lfloor M/2\right\rfloor }\alpha_{0}\prod_{k=1}^{\left\lfloor M/2\right\rfloor }\bar{\phi}_{k}.
+\tilde{\psi}_{0}=i^{\left\lfloor M/2\right\rfloor }\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\equiv i^{\left\lfloor M/2\right\rfloor }\alpha_{0}\prod_{k=1}^{\left\lfloor M/2\right\rfloor }\bar{\phi}_{k}.
 \]
 
 \end_inset
@@ -682,7 +682,7 @@ The general eigenfunction can be obtained by acting the raising operators
  
 \begin_inset Formula 
 \begin{equation}
-\psi=F_{k_{1}}^{\dagger}F_{k_{2}}^{\dagger}\cdots F_{k_{s}}^{\dagger}\psi_{0},\quad\bar{\psi}=F_{k_{s}}^{-}F_{k_{s-1}}^{-}\cdots F_{k_{1}}^{-}\bar{\psi}_{0},\label{eq:eigenfunction-oddM-1}
+\psi=F_{k_{s}}^{\dagger}F_{k_{s-1}}^{\dagger}\cdots F_{k_{1}}^{\dagger}\psi_{0},\quad\bar{\psi}=F_{k_{1}}^{-}F_{k_{2}}^{-}\cdots F_{k_{s}}^{-}\bar{\psi}_{0},\label{eq:eigenfunction-oddM-1}
 \end{equation}
 
 \end_inset
@@ -714,9 +714,9 @@ reference "eq:eigenfunction-oddM-1"
 , 
 \begin_inset Formula 
 \begin{eqnarray}
-\int d^{M}\theta\,\bar{\psi}\psi & = & \int d^{M}\theta\,\left(F_{k_{s}}^{-}F_{k_{s-1}}^{-}\cdots F_{k_{1}}^{-}\tilde{\psi}_{0}\right)F_{k_{1}}^{\dagger}F_{k_{2}}^{\dagger}\cdots F_{k_{s}}^{\dagger}\psi_{0}\nonumber \\
- & = & \int d^{M}\theta\,\left(F_{k_{s}}^{-}F_{k_{s-1}}^{-}\cdots F_{k_{2}}^{-}\tilde{\psi}_{0}\right)F_{k_{1}}F_{k_{1}}^{\dagger}F_{k_{2}}^{\dagger}\cdots F_{k_{s}}^{\dagger}\psi_{0}\nonumber \\
- & = & \int d^{M}\theta\,\left(F_{k_{s}}^{-}F_{k_{s-1}}^{-}\cdots F_{k_{2}}^{-}\tilde{\psi}_{0}\right)F_{k_{2}}^{\dagger}\cdots F_{k_{s}}^{\dagger}\psi_{0}\nonumber \\
+\int d^{M}\theta\,\bar{\psi}\psi & = & \int d^{M}\theta\,\left(F_{k_{1}}^{-}F_{k_{2}}^{-}\cdots F_{k_{s}}^{-}\tilde{\psi}_{0}\right)F_{k_{s}}^{\dagger}F_{k_{s-1}}^{\dagger}\cdots F_{k_{1}}^{\dagger}\psi_{0}\nonumber \\
+ & = & \int d^{M}\theta\,\left(F_{k_{1}}^{-}F_{k_{2}}^{-}\cdots F_{k_{s-1}}^{-}\tilde{\psi}_{0}\right)F_{k_{s}}F_{k_{s}}^{\dagger}F_{k_{s-1}}^{\dagger}\cdots F_{k_{1}}^{\dagger}\psi_{0}\nonumber \\
+ & = & \int d^{M}\theta\,\left(F_{k_{1}}^{-}F_{k_{2}}^{-}\cdots F_{k_{s}}^{-}\tilde{\psi}_{0}\right)F_{k_{s-1}}^{\dagger}\cdots F_{k_{1}}^{\dagger}\psi_{0}\nonumber \\
  & = & \cdots\nonumber \\
  & = & \int d^{M}\theta\,\tilde{\psi}_{0}^{\left(1\right)}\psi_{0}\nonumber \\
  & = & 1.\label{eq:psi-psibar-product}
@@ -779,7 +779,7 @@ For even
  The general eigenfunction can be written as 
 \begin_inset Formula 
 \begin{equation}
-\psi=F_{k_{1}}^{\dagger}F_{k_{2}}^{\dagger}\cdots F_{k_{s}}^{\dagger}\psi_{0},\quad\bar{\psi}=F_{k_{s}}^{+}F_{k_{s-1}}^{+}\cdots F_{k_{1}}^{+}\psi_{0},\quad0\leq k_{i}\leq M-1\label{eq:eigenfunction-evenM-1}
+\psi=F_{k_{s}}^{\dagger}F_{k_{s-1}}^{\dagger}\cdots F_{k_{1}}^{\dagger}\psi_{0},\quad\bar{\psi}=F_{k_{1}}^{+}F_{k_{2}}^{+}\cdots F_{k_{s}}^{+}\psi_{0},\quad0\leq k_{i}\leq M-1\label{eq:eigenfunction-evenM-1}
 \end{equation}
 
 \end_inset
@@ -787,9 +787,9 @@ For even
  One can verify that
 \begin_inset Formula 
 \begin{eqnarray*}
-\int d^{M}\theta\,\bar{\psi}\psi & = & \int d^{M}\theta\,\left(F_{k_{s}}^{+}F_{k_{s-1}}^{+}\cdots F_{k_{1}}^{+}\bar{\psi}_{0}\right)F_{k_{1}}^{\dagger}F_{k_{2}}^{\dagger}\cdots F_{k_{s}}^{\dagger}\psi_{0}\\
- & = & \int d^{M}\theta\,\left(F_{k_{s}}^{+}F_{k_{s-1}}^{+}\cdots F_{k_{2}}^{+}\bar{\psi}_{0}\right)F_{k_{1}}F_{k_{1}}^{\dagger}F_{k_{2}}^{\dagger}\cdots F_{k_{s}}^{\dagger}\psi_{0}\\
- & = & \int d^{M}\theta\,\left(F_{k_{s}}^{+}F_{k_{s-1}}^{+}\cdots F_{k_{2}}^{+}\bar{\psi}_{0}\right)F_{k_{2}}^{\dagger}\cdots F_{k_{s}}^{\dagger}\psi_{0}\\
+\int d^{M}\theta\,\bar{\psi}\psi & = & \int d^{M}\theta\,\left(F_{k_{1}}^{+}F_{k_{2}}^{+}\cdots F_{k_{s}}^{+}\bar{\psi}_{0}\right)F_{k_{s}}^{\dagger}F_{k_{s-1}}^{\dagger}\cdots F_{k_{1}}^{\dagger}\psi_{0}\\
+ & = & \int d^{M}\theta\,\left(F_{k_{1}}^{+}F_{k_{2}}^{+}\cdots F_{k_{s-1}}^{+}\bar{\psi}_{0}\right)F_{k_{s}}F_{k_{s}}^{\dagger}F_{k_{s-1}}^{\dagger}\cdots F_{k_{1}}^{\dagger}\psi_{0}\\
+ & = & \int d^{M}\theta\,\left(F_{k_{1}}^{+}F_{k_{2}}^{+}\cdots F_{k_{s-1}}^{+}\bar{\psi}_{0}\right)F_{k_{s-1}}^{\dagger}\cdots F_{k_{1}}^{\dagger}\psi_{0}\\
  & = & \cdots\\
  & = & \int d^{M}\theta\,\bar{\psi}_{0}\psi_{0}\\
  & = & 1.
@@ -1066,8 +1066,25 @@ h_{kl}^{\left(0\right)} & = & \frac{2}{M}\sum_{n=1}^{M-1}\left(\alpha_{n}\beta_{
  &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left[\exp\left(2\pi i\frac{kn}{M}\right)-\exp\left(2\pi i\frac{ln}{M}\right)\right]\left(c_{n}+is_{n}\right)F_{0}^{\dagger}F_{n}\\
  &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left[\exp\left(2\pi i\frac{kn}{M}\right)-\exp\left(2\pi i\frac{ln}{M}\right)\right]\left(s_{n}-ic_{n}\right)F_{n}F_{0}\\
  & = & \frac{2}{M}\sum_{n=1}^{M-1}\left[\exp\left(-2\pi i\frac{kn}{M}\right)-\exp\left(-2\pi i\frac{ln}{M}\right)\right]\left(s_{n}+ic_{n}\right)F_{0}^{\dagger}F_{n}^{\dagger}\\
- &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left[\exp\left(-2\pi i\frac{kn}{M}\right)-\exp\left(-2\pi i\frac{ln}{M}\right)\right]\left(c_{n}-is_{n}\right)F_{n}^{\dagger}F_{0}+\mathrm{h.c.}
+ &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left[\exp\left(-2\pi i\frac{kn}{M}\right)-\exp\left(-2\pi i\frac{ln}{M}\right)\right]\left(c_{n}-is_{n}\right)F_{n}^{\dagger}F_{0}+\mathrm{h.c.}\\
+ & \equiv & \frac{2}{M}\sum_{n=1}^{M-1}\left(X_{n}F_{0}^{\dagger}F_{n}^{\dagger}+Y_{n}F_{n}^{\dagger}F_{0}\right)+\mathrm{h.c.}
 \end{eqnarray*}
+
+\end_inset
+
+ where
+\begin_inset Formula 
+\[
+X_{n}=\left[\exp\left(-2\pi i\frac{kn}{M}\right)-\exp\left(-2\pi i\frac{ln}{M}\right)\right]\left(s_{n}+ic_{n}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+Y_{n}=\left[\exp\left(-2\pi i\frac{kn}{M}\right)-\exp\left(-2\pi i\frac{ln}{M}\right)\right]\left(c_{n}-is_{n}\right)
+\]
 
 \end_inset
 
@@ -1079,8 +1096,7 @@ h_{kl}^{\left(0\right)} & = & \frac{2}{M}\sum_{n=1}^{M-1}\left(\alpha_{n}\beta_{
 \begin{eqnarray*}
 h_{kl} & = & \frac{2}{M}\sum_{n,m=1}^{M-1}\left(\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}+A_{nm}F_{n}F_{m}+B_{nm}F_{n}^{\dagger}F_{m}\right)+\\
  &  & -\frac{2}{M}\cot\frac{\pi}{2M}+\frac{2}{M}\cot\frac{2\left(k-l\right)+1}{2M}\pi\\
- &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left[\exp\left(-2\pi i\frac{kn}{M}\right)-\exp\left(-2\pi i\frac{ln}{M}\right)\right]\Big[\left(s_{n}+ic_{n}\right)F_{0}^{\dagger}F_{n}^{\dagger}\\
- &  & +\left(c_{n}-is_{n}\right)F_{n}^{\dagger}F_{0}\Big]+\mathrm{h.c.}
+ &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left(X_{n}F_{0}^{\dagger}F_{n}^{\dagger}+Y_{n}F_{n}^{\dagger}F_{0}\right)+\mathrm{h.c.}
 \end{eqnarray*}
 
 \end_inset
@@ -1673,7 +1689,7 @@ F_{m}^{\dagger}\ket{G} & = & \exp\left(X\right)\left(F_{m}^{\dagger}-\left[X,F_{
 
 \begin_inset Formula 
 \begin{eqnarray*}
-F_{0}^{\dagger}F_{m}^{\dagger}\ket{G} & = & \left(F_{0}^{\left(1\right)\dagger}F_{m}^{\dagger}\sqrt{\frac{L}{M}}+F_{0}^{\left(2\right)\dagger}F_{m}^{\dagger}\sqrt{\frac{K}{M}}\right)\ket{G}
+X_{m}F_{0}^{\dagger}F_{m}^{\dagger}\ket{G} & = & -X_{m}\left(C^{*}+S^{*}M\right)_{mn}f_{n}^{\dagger}F_{0}^{\dagger}\ket{G}
 \end{eqnarray*}
 
 \end_inset
@@ -1712,7 +1728,7 @@ C^{*}+S^{*}M & = & C^{*}+\left(-C^{*}M^{*}\right)M\\
  Therefore, 
 \begin_inset Formula 
 \[
-F_{m}^{\dagger}\ket{G}=C_{nm}^{-1}f_{n}^{\dagger}\ket{G}
+X_{m}F_{0}^{\dagger}F_{m}^{\dagger}\ket{G}=X_{m}F_{0}^{\dagger}C_{nm}^{-1}f_{n}^{\dagger}\ket{G}=F_{0}^{\dagger}f_{n}^{\dagger}C_{nm}^{-1}X_{m}\ket{G}
 \]
 
 \end_inset
@@ -1722,6 +1738,15 @@ F_{m}^{\dagger}\ket{G}=C_{nm}^{-1}f_{n}^{\dagger}\ket{G}
 \[
 F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\ket{G}=-\tr\left(S^{*}C^{-1}\bar{A}\right)\ket{G}+f_{k}^{\dagger}\left[C^{-1}\bar{A}\left(C^{-1}\right)^{T}\right]_{kl}f_{l}^{\dagger}\ket{G}
 \]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+h_{kl}\ket{G} & = & -\frac{2}{M}\left[\cot\frac{\pi}{2M}+\frac{2}{M}\cot\frac{2\left(l-k\right)-1}{2M}\pi+\tr\left(S^{*}C^{-1}\bar{A}\right)\right]\ket{G}\\
+ &  & +\frac{2}{M}\sum_{k,l=1}^{M-1}\left\{ f_{k}^{\dagger}\left[C^{-1}\bar{A}\left(C^{-1}\right)^{T}\right]_{kl}f_{l}^{\dagger}+F_{0}^{\dagger}f_{k}^{\dagger}C_{kl}^{-1}X_{l}\right\} \ket{G}
+\end{eqnarray*}
 
 \end_inset
 
@@ -1740,7 +1765,7 @@ M=2
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\psi_{0}=\alpha_{1},\quad\bar{\psi}_{0}=-\alpha_{0}
+\psi_{0}=\prod_{k=1}^{M/2-1}\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right),\quad\bar{\psi}_{0}=i^{M/2+1}\prod_{i=1}^{M/2-1}\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\alpha_{0}\alpha_{M/2}
 \]
 
 \end_inset
@@ -1748,16 +1773,91 @@ M=2
 
 \begin_inset Formula 
 \[
-\psi_{1}=\alpha_{0}\alpha_{1},\quad\bar{\psi}_{1}=-1
+\psi=F_{k_{s}}^{\dagger}F_{k_{s-1}}^{\dagger}\cdots F_{k_{1}}^{\dagger}\psi_{0},\quad\bar{\psi}=F_{k_{1}}^{+}F_{k_{2}}^{+}\cdots F_{k_{s}}^{+}\psi_{0},\quad0\leq k_{i}\leq M-1
 \]
 
 \end_inset
 
 
 \begin_inset Formula 
+\[
+\psi_{0}=1,\quad\bar{\psi}_{0}=-\alpha_{0}\alpha_{1},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\psi_{1}=F_{1}^{\dagger}\psi_{0}=\alpha_{1},\quad\bar{\psi}_{1}=F_{1}^{+}\bar{\psi}_{0}=-\beta_{1}\bar{\psi}_{0}=-\alpha_{0},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\psi_{2}=F_{1}^{\dagger}F_{0}^{\dagger}\psi_{0}=-\alpha_{0}\alpha_{1},\quad\bar{\psi}_{2}=F_{0}^{+}F_{1}^{+}\bar{\psi}_{0}=-\beta_{0}\left(-\alpha_{0}\right)=1,
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $\psi_{0}$
+\end_inset
+
+ does not satisfy the cyclic symmetry requirement and is unphysical.
+ We can find 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+T=\tr\left(\bar{a}+\bar{b}\theta_{1}\right)\left(\bar{a}+\bar{b}\theta_{2}\right)
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula 
 \begin{eqnarray*}
-\sum_{r}\psi_{r}\bar{\psi}_{r}\left(\phi\right) & = & -\alpha_{1}\alpha_{0}\left(\phi\right)+\alpha_{1}\alpha_{0}\\
- & = & \frac{1}{2}\left(\theta_{1}-\theta_{2}\right)\left(\phi_{1}+\phi_{2}\right)+\frac{1}{2}\left(\theta_{2}-\theta_{1}\right)\left(\theta_{1}+\theta_{2}\right)\\
+T_{1} & = & \int d\theta_{1}d\theta_{2}\, T\psi_{1}\\
+ & = & \frac{1}{\sqrt{2}}\int d\theta_{1}d\theta_{2}\,\tr\left(\bar{a}+\bar{b}\theta_{1}\right)\left(\bar{a}+\bar{b}\theta_{2}\right)\left(\theta_{2}-\theta_{1}\right)\\
+ & = & -\sqrt{2}\tr\bar{a}\bar{b}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+T_{2} & = & \int d\theta_{1}d\theta_{2}\, T\psi_{2}\\
+ & = & -\int d\theta_{1}d\theta_{2}\, T\alpha_{0}\alpha_{1}\\
+ & = & -\frac{1}{2}\int d\theta_{1}d\theta_{2}\, T\left(\theta_{1}+\theta_{2}\right)\left(-\theta_{1}+\theta_{2}\right)\\
+ & = & \int d\theta_{1}d\theta_{2}\,\tr\left(\bar{a}+\bar{b}\theta_{1}\right)\left(\bar{a}+\bar{b}\theta_{2}\right)\theta_{2}\theta_{1}\\
+ & = & \tr\bar{a}\bar{a}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let us verify the completeness of the eigenfunctions.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{r=1}^{2}\psi_{r}\bar{\psi}_{r}\left(\phi\right) & = & -\alpha_{1}\alpha_{0}\left(\phi\right)-\alpha_{0}\alpha_{1}\\
+ & = & \frac{1}{2}\left(\theta_{1}-\theta_{2}\right)\left(\phi_{1}+\phi_{2}\right)-\frac{1}{2}\left(\theta_{1}+\theta_{2}\right)\left(\theta_{2}-\theta_{1}\right)\\
  & = & \frac{1}{2}\left(\theta_{1}-\theta_{2}\right)\left(\phi_{1}+\phi_{2}\right)+\theta_{2}\theta_{1}
 \end{eqnarray*}
 
@@ -1766,8 +1866,9 @@ M=2
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\int d^{2}\tr\left(\bar{a}+\bar{b}\theta_{1}\right)\left(\bar{a}+\bar{b}\theta_{2}\right)\sum_{r}\psi_{r}\bar{\psi}_{r}\left(\phi\right) & = & \frac{1}{2}\left(\tr\bar{a}\bar{b}+\tr\bar{b}\bar{a}\right)\left(\phi_{1}+\phi_{1}\right)+\tr\bar{a}\bar{a}\\
- & = & \tr\left(\bar{a}+\bar{b}\theta_{1}\right)\left(\bar{a}+\bar{b}\theta_{2}\right)
+\int d^{2}\tr\left(\bar{a}+\bar{b}\theta_{1}\right)\left(\bar{a}+\bar{b}\theta_{2}\right)\sum_{r}\psi_{r}\bar{\psi}_{r}\left(\phi\right) & = & \sum_{r}T_{r}\bar{\psi}_{r}\\
+ & = & -\sqrt{2}\tr\bar{a}\bar{b}\left(-\frac{1}{\sqrt{2}}\right)\left(\phi_{1}+\phi_{2}\right)+\tr\bar{a}\bar{a}\\
+ & = & \tr\left(\bar{a}+\bar{b}\phi_{1}\right)\left(\bar{a}+\bar{b}\phi_{2}\right)
 \end{eqnarray*}
 
 \end_inset
@@ -1780,13 +1881,32 @@ M=3
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula 
+\[
+\psi_{0}=\prod_{k=1}^{\left\lfloor M/2\right\rfloor }\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right),\quad\tilde{\psi}_{0}=i^{\left\lfloor M/2\right\rfloor }\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\psi=F_{k_{s}}^{\dagger}F_{k_{s-1}}^{\dagger}\cdots F_{k_{1}}^{\dagger}\psi_{0},\quad\bar{\psi}=F_{k_{1}}^{-}F_{k_{2}}^{-}\cdots F_{k_{s}}^{-}\bar{\psi}_{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Firstly we calculate
 \begin_inset Formula 
 \begin{eqnarray*}
-\alpha_{k}\alpha_{M-k} & = & \frac{1}{M}\sum_{i,j=1}^{M}\theta_{i}\theta_{j}e^{2\pi i\left[ik+j\left(M-k\right)\right]/M}\\
- & = & \frac{1}{M}\sum_{i,j=1}^{M}\theta_{i}\theta_{j}e^{2\pi i\left(i-j\right)k/M}\\
- & = & \frac{2i}{M}\sum_{i=1}^{M}\sum_{j>i}^{M}\theta_{i}\theta_{j}\sin\frac{2\pi k\left(i-j\right)}{M}\\
- & = & -\frac{2i}{M}\sum_{i=1}^{M}\sum_{j>i}^{M}\theta_{i}\theta_{j}\sin\frac{2\pi k\left(j-i\right)}{M}.
+\alpha_{M-k}\alpha_{k} & = & \frac{1}{M}\sum_{i,j=1}^{M}\theta_{i}\theta_{j}e^{2\pi i\left[i\left(M-k\right)+jk\right]/M}\\
+ & = & \frac{1}{M}\sum_{i,j=1}^{M}\theta_{i}\theta_{j}e^{2\pi i\left(j-i\right)k/M}\\
+ & = & \frac{2i}{M}\sum_{i=1}^{M}\sum_{j>i}^{M}\theta_{i}\theta_{j}\sin\frac{2\pi k\left(j-i\right)}{M}\\
+ & = & \frac{2i}{M}\sum_{i=1}^{M}\sum_{j>i}^{M}\theta_{i}\theta_{j}\sin\frac{2\pi k\left(j-i\right)}{M}.
 \end{eqnarray*}
 
 \end_inset
@@ -1796,6 +1916,104 @@ For
 \end_inset
 
 ,
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha_{2}\alpha_{1} & = & \frac{2i}{3}\sum_{i=1}^{3}\sum_{j>i}^{3}\theta_{i}\theta_{j}\sin\frac{2\pi\left(j-i\right)}{3}\\
+ & = & \frac{i}{\sqrt{3}}\left(\theta_{1}\theta_{2}+\theta_{2}\theta_{3}+\theta_{3}\theta_{1}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha_{0}\alpha_{1}\alpha_{2} & = & \frac{1}{\sqrt{3}}\left(\theta_{1}+\theta_{2}+\theta_{3}\right)\frac{-i}{\sqrt{3}}\left(\theta_{1}\theta_{2}+\theta_{2}\theta_{3}+\theta_{3}\theta_{1}\right)\\
+ & = & -i\theta_{1}\theta_{2}\theta_{3}\\
+ & = & i\theta_{3}\theta_{2}\theta_{1}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\psi_{0} & = & c_{1}-s_{1}\alpha_{2}\alpha_{1}\\
+ & = & c_{1}-s_{1}\frac{i}{\sqrt{3}}\left(\theta_{1}\theta_{2}+\theta_{2}\theta_{3}+\theta_{3}\theta_{1}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\bar{\psi}_{0} & = & i\alpha_{0}\left(-s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)\\
+ & = & -\frac{is_{1}}{\sqrt{3}}\left(\theta_{1}+\theta_{2}+\theta_{3}\right)+ic_{1}\alpha_{2}\alpha_{1}\alpha_{0}\\
+ & = & -\frac{is_{1}}{\sqrt{3}}\left(\theta_{1}+\theta_{2}+\theta_{3}\right)-c_{1}\theta_{1}\theta_{2}\theta_{3}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\psi_{1} & = & F_{0}^{\dagger}\psi_{0}=\alpha_{0}\psi_{0}\\
+ & = & \frac{1}{\sqrt{3}}\left(\theta_{1}+\theta_{2}+\theta_{3}\right)\left[c_{1}-s_{1}\frac{i}{\sqrt{3}}\left(\theta_{1}\theta_{2}+\theta_{2}\theta_{3}+\theta_{3}\theta_{1}\right)\right]\\
+ & = & \frac{c_{1}}{\sqrt{3}}\left(\theta_{1}+\theta_{2}+\theta_{3}\right)-is_{1}\theta_{1}\theta_{2}\theta_{3}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\bar{\psi}_{1} & = & F_{0}^{-}\bar{\psi}_{0}=\beta_{0}\bar{\psi}_{0}\\
+ & = & i\left(-s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)\\
+ & = & -is_{1}-\frac{c_{1}}{\sqrt{3}}\left(\theta_{1}\theta_{2}+\theta_{2}\theta_{3}+\theta_{3}\theta_{1}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\psi_{2} & = & F_{2}^{\dagger}F_{1}^{\dagger}\psi_{0}\\
+ & = & -\left(s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)\\
+ & = & -s_{1}-\frac{ic_{1}}{\sqrt{3}}\left(\theta_{1}\theta_{2}+\theta_{2}\theta_{3}+\theta_{3}\theta_{1}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\bar{\psi}_{2} & = & F_{1}^{-}F_{2}^{-}\bar{\psi}_{0}\\
+ & = & i\alpha_{0}\left(s_{1}\alpha_{2}\alpha_{1}+c_{1}\right)\\
+ & = & \frac{ic_{1}}{\sqrt{3}}\left(\theta_{1}+\theta_{2}+\theta_{3}\right)+s_{1}\theta_{3}\theta_{2}\theta_{1}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\psi_{3} & = & F_{2}^{\dagger}F_{1}^{\dagger}F_{0}^{\dagger}\psi_{0}=\alpha_{0}\psi_{3}\\
+ & = & -\frac{s_{1}}{\sqrt{3}}\left(\theta_{1}+\theta_{2}+\theta_{3}\right)-c_{1}\theta_{1}\theta_{2}\theta_{3}\\
+ & = & -\frac{s_{1}}{\sqrt{3}}\left(\theta_{1}+\theta_{2}+\theta_{3}\right)-c_{1}\theta_{1}\theta_{2}\theta_{3}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\bar{\psi}_{3} & = & F_{0}^{-}F_{1}^{-}F_{2}^{-}\bar{\psi}_{0}=\beta_{0}\bar{\psi}_{3}\\
+ & = & i\left(s_{1}\alpha_{2}\alpha_{1}+c_{1}\right)\\
+ & = & ic_{1}-\frac{s_{1}}{\sqrt{3}}\left(\theta_{1}\theta_{2}+\theta_{2}\theta_{3}+\theta_{3}\theta_{1}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1838,25 +2056,6 @@ To verify:
 \[
 \alpha_{0}=\frac{1}{\sqrt{3}}\left(\theta_{1}+\theta_{2}+\theta_{3}\right)
 \]
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\alpha_{2}\alpha_{1} & = & \frac{2i}{3}\sum_{i=1}^{3}\sum_{j>i}^{3}\theta_{i}\theta_{j}\sin\frac{2\pi\left(j-i\right)}{3}\\
- & = & \frac{i}{\sqrt{3}}\left(\theta_{1}\theta_{2}+\theta_{2}\theta_{3}+\theta_{3}\theta_{1}\right)
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\alpha_{0}\alpha_{1}\alpha_{2} & = & \frac{1}{\sqrt{3}}\left(\theta_{1}+\theta_{2}+\theta_{3}\right)\frac{-i}{\sqrt{3}}\left(\theta_{1}\theta_{2}+\theta_{2}\theta_{3}+\theta_{3}\theta_{1}\right)\\
- & = & -i\theta_{1}\theta_{2}\theta_{3}\\
- & = & i\theta_{3}\theta_{2}\theta_{1}
-\end{eqnarray*}
 
 \end_inset
 
