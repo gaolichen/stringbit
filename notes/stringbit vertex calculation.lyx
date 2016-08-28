@@ -699,6 +699,27 @@ where
 
 \end_inset
 
+ Since 
+\begin_inset Formula $\bar{\psi}_{0}$
+\end_inset
+
+ is invariant under the cyclic permutation 
+\begin_inset Formula $\theta_{k}\to\theta_{k+1}$
+\end_inset
+
+ and 
+\begin_inset Formula $F_{i}^{-}$
+\end_inset
+
+ change as 
+\begin_inset Formula $F_{i}^{-}\to\exp\left(-2n\pi i/M\right)$
+\end_inset
+
+, the conjugate function 
+\begin_inset Formula $\bar{\psi}$
+\end_inset
+
+ is invariant under cyclic permutation.
  Let us verify that 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -800,12 +821,28 @@ For even
  The cyclic symmetry requires 
 \begin_inset Formula 
 \[
-\sum_{i}k_{i}=\left(n+\frac{1}{2}\right)M
+\sum_{i}k_{i}=\left(n+\frac{1}{2}\right)M.
 \]
 
 \end_inset
 
+Under the cyclic permutation 
+\begin_inset Formula $\theta_{k}\to\theta_{k+1}$
+\end_inset
 
+, 
+\begin_inset Formula $\bar{\psi}_{0}$
+\end_inset
+
+ changes as 
+\begin_inset Formula $\bar{\psi}_{0}\to-\bar{\psi}_{0}$
+\end_inset
+
+, the general eigenfunction 
+\begin_inset Formula $\bar{\psi}$
+\end_inset
+
+ is invariant under cyclic transformation.
 \end_layout
 
 \begin_layout Section*
@@ -1120,7 +1157,7 @@ HT_{r}\ket{0} & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\su
  & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{p=2}^{M-2}\sum_{s,t}T_{s}T_{t}\ket{0}\int d\theta\,\sum_{k=1}^{M}\bar{h}_{k,k+p+1}\bar{\psi}_{s}\left(\theta_{k+p+1}\cdots\theta_{k}\right)\bar{\psi}_{t}\left(\theta_{k+1}\cdots\theta_{k+p}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
  &  & +\frac{1}{N}\tr\bar{a}\int d\theta\,\sum_{k=1}^{M}\bar{h}_{k,k+2}\sum_{s}T_{s}\bar{\psi}_{s}\left(\theta_{k+2}\cdots\theta_{k}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
  &  & +\frac{1}{N}\tr\bar{b}\int d\theta\,\sum_{k=1}^{M}\bar{h}_{k,k+2}\sum_{s}T_{s}\bar{\psi}_{s}\left(\theta_{k+2}\cdots\theta_{k}\right)\theta_{k+1}\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
- & \equiv & E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{p=2}^{M-2}\sum_{s,t}T_{s}T_{t}\ket{0}V_{str}^{\left(p\right)}\\
+ & \equiv & E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{L=2}^{M-2}\sum_{s,t}T_{s}T_{t}\ket{0}V_{str}^{\left(L\right)}\\
  &  & +\frac{1}{N}\tr\bar{a}\int d\theta\,\sum_{s}T_{s}\ket{0}V_{sr}^{\left(1,a\right)}+\frac{1}{N}\tr\bar{b}\int d\theta\,\sum_{s}T_{s}\ket{0}V_{sr}^{\left(1,b\right)}
 \end{eqnarray*}
 
@@ -1153,11 +1190,11 @@ V_{sr}^{\left(1,b\right)} & = & \sum_{k=1}^{M}\int d\theta\,\bar{h}_{k,k+2}\bar{
 
 \begin_inset Formula 
 \begin{eqnarray*}
-V_{str}^{\left(p\right)} & = & \sum_{k=1}^{M}\int d\theta\,\bar{h}_{k,k+p+1}\bar{\psi}_{s}\left(\theta_{k+p+1}\cdots\theta_{k}\right)\bar{\psi}_{t}\left(\theta_{k+1}\cdots\theta_{k+p}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
- & = & \sum_{k=1}^{M}\int d\theta_{2}\cdots d\theta_{M}d\theta_{1}\,\bar{h}_{k+1,k+p+2}\bar{\psi}_{s}\left(\theta_{k+p+2}\cdots\theta_{k+1}\right)\bar{\psi}_{t}\left(\theta_{k+2}\cdots\theta_{k+p+1}\right)\psi_{r}\left(\theta_{2}\cdots,\theta_{M},\theta_{1}\right)\\
- & = & \sum_{k=1}^{M}\int d\theta_{1}\cdots d\theta_{M}\,\bar{h}_{k+1,k+p+2}\bar{\psi}_{s}\left(\theta_{k+p+2}\cdots\theta_{k+1}\right)\bar{\psi}_{t}\left(\theta_{k+2}\cdots\theta_{k+p+1}\right)\psi_{r}\left(\theta_{1}\cdots\theta_{M}\right)\\
- & = & M\int d\theta\,\bar{h}_{M,p+1}\bar{\psi}_{s}\left(\theta_{p+1}\cdots\theta_{M}\right)\bar{\psi}_{t}\left(\theta_{1}\cdots\theta_{p}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
- & = & M\int d\theta\,\bar{\psi}_{s}\left(\theta_{p+1}\cdots\theta_{M}\right)\bar{\psi}_{t}\left(\theta_{1}\cdots\theta_{p}\right)h_{M,p+1}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)
+V_{str}^{\left(L\right)} & = & \sum_{k=1}^{M}\int d\theta\,\bar{h}_{k,k+L+1}\bar{\psi}_{s}\left(\theta_{k+L+1}\cdots\theta_{k}\right)\bar{\psi}_{t}\left(\theta_{k+1}\cdots\theta_{k+L}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & = & \sum_{k=1}^{M}\int d\theta_{2}\cdots d\theta_{M}d\theta_{1}\,\bar{h}_{k+1,k+L+2}\bar{\psi}_{s}\left(\theta_{k+L+2}\cdots\theta_{k+1}\right)\bar{\psi}_{t}\left(\theta_{k+2}\cdots\theta_{k+L+1}\right)\psi_{r}\left(\theta_{2}\cdots,\theta_{M},\theta_{1}\right)\\
+ & = & \sum_{k=1}^{M}\int d\theta_{1}\cdots d\theta_{M}\,\bar{h}_{k+1,k+L+2}\bar{\psi}_{s}\left(\theta_{k+L+2}\cdots\theta_{k+1}\right)\bar{\psi}_{t}\left(\theta_{k+2}\cdots\theta_{k+L+1}\right)\psi_{r}\left(\theta_{1}\cdots\theta_{M}\right)\\
+ & = & M\int d\theta\,\bar{h}_{M,L+1}\bar{\psi}_{s}\left(\theta_{L+1}\cdots\theta_{M}\right)\bar{\psi}_{t}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & = & M\int d\theta\,\bar{\psi}_{s}\left(\theta_{L+1}\cdots\theta_{M}\right)\bar{\psi}_{t}\left(\theta_{1}\cdots\theta_{L}\right)h_{M,L+1}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)
 \end{eqnarray*}
 
 \end_inset
@@ -1171,13 +1208,13 @@ When
 \end_inset
 
 , 
-\begin_inset Formula $l=p+1$
+\begin_inset Formula $l=L+1$
 \end_inset
 
 ,
 \begin_inset Formula 
 \begin{eqnarray*}
-\bar{A}_{nm} & = & \sin\frac{n-m}{2M}\pi+\exp\left(-2\pi i\frac{\left(p+1\right)\left(m+n\right)}{2M}\right)\sin\frac{\left(p+1/2\right)\left(n-m\right)\pi}{M}
+\bar{A}_{nm} & = & \sin\frac{n-m}{2M}\pi+\exp\left(-2\pi i\frac{\left(L+1\right)\left(m+n\right)}{2M}\right)\sin\frac{\left(L+1/2\right)\left(n-m\right)\pi}{M}
 \end{eqnarray*}
 
 \end_inset
@@ -1185,7 +1222,7 @@ When
 
 \begin_inset Formula 
 \begin{eqnarray*}
-A_{nm} & = & \sin\frac{m-n}{2M}\pi+\exp\left(2\pi i\frac{\left(p+1\right)\left(m+n\right)}{2M}\right)\sin\frac{\left(p+1/2\right)\left(m-n\right)\pi}{M}
+A_{nm} & = & \sin\frac{m-n}{2M}\pi+\exp\left(2\pi i\frac{\left(L+1\right)\left(m+n\right)}{2M}\right)\sin\frac{\left(L+1/2\right)\left(m-n\right)\pi}{M}
 \end{eqnarray*}
 
 \end_inset
@@ -1193,7 +1230,7 @@ A_{nm} & = & \sin\frac{m-n}{2M}\pi+\exp\left(2\pi i\frac{\left(p+1\right)\left(m
  
 \begin_inset Formula 
 \[
-B_{nm}=2\sin\frac{\left(n+m\right)\pi}{2M}+2\exp\left(2\pi i\frac{p+1}{2}\frac{m-n}{M}\right)\sin\frac{\left(p+1/2\right)\left(m+n\right)}{M}\pi
+B_{nm}=2\sin\frac{\left(n+m\right)\pi}{2M}+2\exp\left(2\pi i\frac{L+1}{2}\frac{m-n}{M}\right)\sin\frac{\left(L+1/2\right)\left(m+n\right)}{M}\pi
 \]
 
 \end_inset
@@ -1201,7 +1238,7 @@ B_{nm}=2\sin\frac{\left(n+m\right)\pi}{2M}+2\exp\left(2\pi i\frac{p+1}{2}\frac{m
 
 \begin_inset Formula 
 \[
-\text{const part of }h_{M,p+1}=-\frac{2}{M}\cot\frac{\pi}{2M}-\frac{2}{M}\cot\frac{2p+1}{2M}\pi\equiv\alpha
+\text{const part of }h_{M,L+1}=-\frac{2}{M}\cot\frac{\pi}{2M}-\frac{2}{M}\cot\frac{2L+1}{2M}\pi\equiv\alpha
 \]
 
 \end_inset
@@ -1209,7 +1246,7 @@ B_{nm}=2\sin\frac{\left(n+m\right)\pi}{2M}+2\exp\left(2\pi i\frac{p+1}{2}\frac{m
 
 \begin_inset Formula 
 \[
-h_{M,p+1}^{\left(0\right)}=\frac{2}{M}\sum_{n=1}^{M-1}\left[1-\exp\left(-2\pi i\frac{\left(p+1\right)n}{M}\right)\right]\Big[\left(s_{n}+ic_{n}\right)F_{0}^{\dagger}F_{n}^{\dagger}+\left(c_{n}-is_{n}\right)F_{n}^{\dagger}F_{0}\Big]+\mathrm{h.c.}
+h_{M,L+1}^{\left(0\right)}=\frac{2}{M}\sum_{n=1}^{M-1}\left[1-\exp\left(-2\pi i\frac{\left(L+1\right)n}{M}\right)\right]\Big[\left(s_{n}+ic_{n}\right)F_{0}^{\dagger}F_{n}^{\dagger}+\left(c_{n}-is_{n}\right)F_{n}^{\dagger}F_{0}\Big]+\mathrm{h.c.}
 \]
 
 \end_inset
@@ -1394,7 +1431,7 @@ h_{M,p+1}\ket{G} & = & \left(\alpha+\frac{2}{M}\sum_{n,m=1}^{M-1}\bar{A}_{nm}F_{
  If
 \begin_inset Formula 
 \[
-F_{m}=f_{n}C_{mn}+f_{n}^{\dagger}S_{mn},\quad F_{m}^{\dagger}=f_{n}^{\dagger}C_{mn}^{*}+f_{n}S_{mn}^{*}
+F_{m}=\sum_{n=0}^{M-2}\left(f_{n}C_{mn}+f_{n}^{\dagger}S_{mn}\right),\quad F_{m}^{\dagger}=\sum_{n=0}^{M-2}\left(f_{n}^{\dagger}C_{mn}^{*}+f_{n}S_{mn}^{*}\right)
 \]
 
 \end_inset
@@ -1412,7 +1449,7 @@ F_{m}=f_{n}C_{mn}+f_{n}^{\dagger}S_{mn},\quad F_{m}^{\dagger}=f_{n}^{\dagger}C_{
 \end_inset
 
  to 
-\begin_inset Formula $f_{M-1}$
+\begin_inset Formula $f_{M-2}$
 \end_inset
 
  are the ones for the other smaller chain.
@@ -1744,13 +1781,136 @@ F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\ket{G}=-\tr\left(S^{*}C^{-1}\bar{A}\r
 
 \begin_inset Formula 
 \begin{eqnarray*}
-h_{kl}\ket{G} & = & -\frac{2}{M}\left[\cot\frac{\pi}{2M}+\frac{2}{M}\cot\frac{2\left(l-k\right)-1}{2M}\pi+\tr\left(S^{*}C^{-1}\bar{A}\right)\right]\ket{G}\\
- &  & +\frac{2}{M}\sum_{k,l=1}^{M-1}\left\{ f_{k}^{\dagger}\left[C^{-1}\bar{A}\left(C^{-1}\right)^{T}\right]_{kl}f_{l}^{\dagger}+F_{0}^{\dagger}f_{k}^{\dagger}C_{kl}^{-1}X_{l}\right\} \ket{G}
+h_{kl}\ket{G} & = & -\frac{2}{M}\left[\cot\frac{\pi}{2M}+\cot\frac{2\left(l-k\right)-1}{2M}\pi+\tr\left(S^{*}C^{-1}\bar{A}\right)\right]\ket{G}\\
+ &  & +\frac{2}{M}\sum_{m,n=0}^{M-2}\left\{ f_{m}^{\dagger}\left[C^{-1}\bar{A}\left(C^{-1}\right)^{T}\right]_{mn}f_{n}^{\dagger}+F_{0}^{\dagger}f_{m}^{\dagger}C_{mn}^{-1}X_{n}\right\} \ket{G}\\
+ & = & \frac{2}{M}\left(-\Lambda+\Omega_{mn}\frac{d}{dM_{mn}}+F_{0}^{\dagger}f_{m}^{\dagger}\Sigma_{m}\right)\exp\left(\frac{1}{2}M_{mn}f_{m}^{\dagger}f_{n}^{\dagger}\right)\ket{0}
+\end{eqnarray*}
+
+\end_inset
+
+ where 
+\begin_inset Formula 
+\[
+\Lambda=\cot\frac{\pi}{2M}+\cot\frac{2\left(l-k\right)-1}{2M}\pi+\tr\left(S^{*}C^{-1}\bar{A}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Omega_{mn}=\left[C^{-1}\bar{A}\left(C^{-1}\right)^{T}\right]_{mn},\quad\Sigma_{m}=C_{mn}^{-1}X_{n}.
+\]
+
+\end_inset
+
+ For 
+\begin_inset Formula $k_{1}<k_{2}<\cdots<k_{2n}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left\langle f_{k_{2n}}f_{k_{2n-1}}\cdots f_{k_{1}}\exp\left(\frac{1}{2}M_{mn}f_{m}^{\dagger}f_{n}^{\dagger}\right)\right\rangle =\sum_{s_{i}}\left(-1\right)^{\pi\left(s_{i}\right)}\left(M_{k_{s_{1}}k_{s_{2}}}M_{k_{s_{3}}k_{s_{4}}}\cdots M_{k_{s_{2n-1}}k_{s_{2n}}}\right)
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula 
+\[
+s_{1}<s_{3}<\cdots<s_{2n-1},\quad s_{2i-1}<s_{2i}.
+\]
+
+\end_inset
+
+ For two general eigenfunction
+\begin_inset Formula 
+\[
+\psi_{s}^{\left(K\right)}=F_{k_{p}}^{\left(K\right)\dagger}F_{k_{p-1}}^{\left(K\right)\dagger}\cdots F_{k_{1}}^{\left(K\right)\dagger}\psi_{0}^{\left(K\right)},\quad\psi_{t}^{\left(L\right)}=F_{l_{q}}^{\left(K\right)\dagger}F_{l_{q-1}}^{\left(K\right)\dagger}\cdots F_{l_{1}}^{\left(K\right)\dagger}\psi_{0}^{\left(L\right)}
+\]
+
+\end_inset
+
+ we have 
+\begin_inset Formula 
+\begin{eqnarray*}
+V_{0st}^{\left(L\right)} & = & \int d^{M}\theta\,\tilde{F}_{k_{1}}^{\left(K\right)}\tilde{F}_{k_{2}}^{\left(K\right)}\cdots\tilde{F}_{k_{p}}^{\left(K\right)}\bar{\psi}_{0}^{\left(K\right)}\tilde{F}_{l_{1}}^{\left(L\right)}\tilde{F}_{l_{2}}^{\left(L\right)}\cdots\tilde{F}_{l_{p}}^{\left(L\right)}\bar{\psi}_{0}^{\left(L\right)}h_{K,L+1}\bar{\psi}_{0}^{\left(M\right)}\\
+ & = & \int d^{M}\theta\,\bar{\psi}_{0}^{\left(K\right)}F_{k_{1}}^{\left(K\right)}F_{k_{2}}^{\left(K\right)}\cdots F_{k_{p}}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}F_{l_{1}}^{\left(L\right)}F_{l_{2}}^{\left(L\right)}\cdots F_{l_{p}}^{\left(L\right)}h_{K,L+1}\bar{\psi}_{0}^{\left(M\right)}\\
+ & = & \left(-1\right)^{pL}\int d^{M}\theta\,\bar{\psi}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}F_{k_{1}}^{\left(K\right)}F_{k_{2}}^{\left(K\right)}\cdots F_{k_{p}}^{\left(K\right)}F_{l_{1}}^{\left(L\right)}F_{l_{2}}^{\left(L\right)}\cdots F_{l_{p}}^{\left(L\right)}h_{K,L+1}\bar{\psi}_{0}^{\left(M\right)}\\
+ & = & \left(-1\right)^{pL}\int d^{M}\theta\,\bar{\psi}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}F_{k_{1}}^{\left(K\right)}F_{k_{2}}^{\left(K\right)}\cdots F_{k_{p}}^{\left(K\right)}F_{l_{1}}^{\left(L\right)}F_{l_{2}}^{\left(L\right)}\cdots F_{l_{p}}^{\left(L\right)}h_{K,L+1}\exp\left(\frac{1}{2}M_{kl}f_{k}^{\dagger}f_{l}^{\dagger}\right)\bar{\psi}_{0}^{\left(L\right)}\bar{\psi}_{0}^{\left(K\right)}\left[\det\left(I+MM^{\dagger}\right)\right]^{-1/4}\\
+ & = & \left(-1\right)^{pL}\left\langle F_{k_{1}}^{\left(K\right)}F_{k_{2}}^{\left(K\right)}\cdots F_{k_{p}}^{\left(K\right)}F_{l_{1}}^{\left(L\right)}F_{l_{2}}^{\left(L\right)}\cdots F_{l_{p}}^{\left(L\right)}h_{K,L+1}\exp\left(\frac{1}{2}M_{kl}f_{k}^{\dagger}f_{l}^{\dagger}\right)\right\rangle \left[\det\left(I+MM^{\dagger}\right)\right]^{-1/4}
 \end{eqnarray*}
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section*
+Examples
+\end_layout
+
+\begin_layout Standard
+Let us calculate the case of 
+\begin_inset Formula $M=5$
+\end_inset
+
+, 
+\begin_inset Formula $L=2$
+\end_inset
+
+.
+ We have 
+\begin_inset Formula 
+\[
+f_{1}=F_{1}^{\left(2\right)},\quad f_{2}=F_{1}^{\left(3\right)},\quad f_{3}=F_{2}^{\left(2\right)},
+\]
+
+\end_inset
+
+The eigenfunctions for 
+\begin_inset Formula $M=3$
+\end_inset
+
+ are 
+\begin_inset Formula 
+\[
+\psi_{0}^{\left(3\right)},\quad\bar{\psi}_{0}^{\left(3\right)},\quad F_{0}^{\dagger}\psi_{0}^{\left(3\right)},\quad F_{0}^{-}\bar{\psi}_{0}^{\left(3\right)}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f_{3}^{\dagger}f_{2}^{\dagger}\psi_{0}^{\left(3\right)},\quad f_{2}^{-}f_{3}^{-}\bar{\psi}_{0}^{\left(3\right)},\quad f_{3}^{\dagger}f_{2}^{\dagger}F_{0}^{\dagger}\psi_{0}^{\left(3\right)},\quad F_{0}^{-}f_{2}^{-}f_{3}^{-}\bar{\psi}_{0}^{\left(3\right)}.
+\]
+
+\end_inset
+
+ For 
+\begin_inset Formula $M=2$
+\end_inset
+
+, the eigenfunctions are 
+\begin_inset Formula 
+\[
+f_{1}^{\dagger}\psi_{0}^{\left(2\right)},\quad f_{1}^{+}\psi_{0}^{\left(2\right)},\quad f_{1}^{\dagger}F_{0}^{\dagger}\psi_{0}^{\left(2\right)},\quad F_{0}^{-}f_{1}^{-}\bar{\psi}_{0}^{\left(2\right)}.
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+V_{000}^{\left(2\right)} & = & 5\int d^{5}\theta\,\bar{\psi}_{0}^{\left(3\right)}\psi_{0}^{\left(2\right)}h_{3,4}\psi_{0}^{\left(5\right)}\\
+ & =
+\end{eqnarray*}
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Section
