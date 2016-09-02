@@ -10,16 +10,47 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      8251,        209]
-NotebookOptionsPosition[      7716,        186]
-NotebookOutlinePosition[      8050,        201]
-CellTagsIndexPosition[      8007,        198]
+NotebookDataLength[      9995,        249]
+NotebookOptionsPosition[      9449,        226]
+NotebookOutlinePosition[      9793,        241]
+CellTagsIndexPosition[      9750,        238]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 Cell[BoxData[
  RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"(*", " ", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"calculate", " ", "the", " ", "integration", " ", 
+         SubscriptBox["d\[Theta]", "1"]}], "..."}], 
+       SubscriptBox["d\[Theta]", "M"], 
+       SubscriptBox["\[Alpha]", 
+        RowBox[{"M", "-", "1"}]]}], "..."}], 
+     SubscriptBox["\[Alpha]", "0"]}], ",", " ", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"where", " ", 
+       SubscriptBox["\[Alpha]", "n"]}], "=", 
+      RowBox[{
+       RowBox[{"1", "/", 
+        RowBox[{"Sqrt", "[", "M", "]"}]}], " ", 
+       RowBox[{"Sum", "[", 
+        RowBox[{
+         RowBox[{
+          SubscriptBox["\[Theta]", "k"], 
+          RowBox[{"e", "^", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "2"}], "Pi", "*", "I", "*", 
+             RowBox[{"kn", "/", "M"}]}], ")"}]}]}], ",", 
+         RowBox[{"{", 
+          RowBox[{"k", ",", "1", ",", "M"}], "}"}]}], "]"}]}]}], ";"}]}], 
+   "\[IndentingNewLine]", "*)"}], "\[IndentingNewLine]", 
   RowBox[{
    RowBox[{
     RowBox[{"Doit", "[", "M_", "]"}], ":=", 
@@ -27,8 +58,7 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", 
        RowBox[{"i", ",", "j", ",", "bits", ",", "perms", ",", "phase", ",", 
-        RowBox[{"res", "=", "0"}], ",", "s"}], "}"}], ",", 
-      "\[IndentingNewLine]", 
+        RowBox[{"res", "=", "0"}]}], "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
        RowBox[{"bits", " ", "=", 
         RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
@@ -41,10 +71,17 @@ Cell[BoxData[
           RowBox[{"AppendTo", "[", 
            RowBox[{"bits", ",", "i"}], "]"}], ";"}]}], "\[IndentingNewLine]", 
         "]"}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-       RowBox[{"s", "=", 
-        RowBox[{"Signature", "[", 
-         RowBox[{"Reverse", "[", "bits", "]"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"The", " ", "integration", " ", "equals", "  ", 
+             SubscriptBox["d\[Theta]", "M"]}], "..."}], 
+           SubscriptBox["d\[Theta]", "1"], " ", 
+           SubscriptBox["\[Alpha]", "0"]}], "..."}], 
+         SubscriptBox["\[Alpha]", 
+          RowBox[{"M", "-", "1"}]]}], "*)"}], "\[IndentingNewLine]", 
        RowBox[{"perms", "=", 
         RowBox[{"Permutations", "[", "bits", "]"}]}], ";", 
        "\[IndentingNewLine]", 
@@ -75,21 +112,20 @@ Cell[BoxData[
           RowBox[{"phase", " ", "=", " ", 
            RowBox[{"Mod", "[", 
             RowBox[{"phase", ",", "M"}], "]"}]}], ";", "\[IndentingNewLine]", 
-          
           RowBox[{"res", "=", 
            RowBox[{"res", " ", "+", " ", 
             RowBox[{
              RowBox[{"Exp", "[", 
-              RowBox[{"I", "*", "2", "*", "Pi", "*", 
+              RowBox[{
+               RowBox[{"-", "I"}], "*", "2", "*", "Pi", "*", 
                RowBox[{"phase", "/", "M"}]}], "]"}], "*", 
              RowBox[{"Signature", "[", 
               RowBox[{"perms", "[", 
                RowBox[{"[", "i", "]"}], "]"}], "]"}]}]}]}], ";"}]}], 
         "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
        "\[IndentingNewLine]", 
-       RowBox[{"Return", "[", 
-        RowBox[{"res", "*", "s"}], "]"}]}]}], "\[IndentingNewLine]", "]"}]}], 
-   ";"}]}]], "Input",
+       RowBox[{"Return", "[", "res", "]"}]}]}], "\[IndentingNewLine]", 
+     "]"}]}], ";"}]}]], "Input",
  CellChangeTimes->{{3.6788297733271437`*^9, 3.6788298757631493`*^9}, {
   3.67883016227177*^9, 3.678830337746213*^9}, {3.678830570122974*^9, 
   3.678830659683036*^9}, {3.678830692226295*^9, 3.678830719388929*^9}, {
@@ -100,7 +136,9 @@ Cell[BoxData[
   3.6789058643716593`*^9, 3.678905869947105*^9}, {3.678905900345936*^9, 
   3.678905969247493*^9}, {3.678906044404612*^9, 3.678906044788105*^9}, {
   3.679056435839491*^9, 3.679056497141139*^9}, {3.679056650889769*^9, 
-  3.679056733830627*^9}}],
+  3.679056733830627*^9}, {3.6818453308753853`*^9, 3.6818455268586617`*^9}, {
+  3.681845692801283*^9, 3.681845726019549*^9}, {3.681845811596491*^9, 
+  3.6818458970217333`*^9}}],
 
 Cell[CellGroupData[{
 
@@ -108,7 +146,7 @@ Cell[BoxData[
  RowBox[{"\[IndentingNewLine]", 
   RowBox[{
    RowBox[{
-    RowBox[{"m", "=", "7"}], ";"}], "\[IndentingNewLine]", 
+    RowBox[{"m", "=", "8"}], ";"}], "\[IndentingNewLine]", 
    RowBox[{"FullSimplify", "[", 
     RowBox[{"Doit", "[", "m", "]"}], "]"}], "\[IndentingNewLine]", 
    RowBox[{
@@ -126,12 +164,12 @@ Cell[BoxData[
    3.678831879694523*^9}, {3.678905759474176*^9, 3.678905769656726*^9}, {
    3.678905977617762*^9, 3.6789060350429792`*^9}, 3.678906077602662*^9, {
    3.6789173291842327`*^9, 3.678917329372361*^9}, {3.67905689801762*^9, 
-   3.679056918588612*^9}, {3.6790569633648167`*^9, 3.6790569795880423`*^9}}],
+   3.679056918588612*^9}, {3.6790569633648167`*^9, 3.6790569795880423`*^9}, {
+   3.68184590880457*^9, 3.6818459696550093`*^9}, {3.6818460005982957`*^9, 
+   3.681846051869342*^9}}],
 
 Cell[BoxData[
- RowBox[{
-  RowBox[{"-", "343"}], " ", "\[ImaginaryI]", " ", 
-  SqrtBox["7"]}]], "Output",
+ RowBox[{"4096", " ", "\[ImaginaryI]"}]], "Output",
  CellChangeTimes->{{3.678830732815786*^9, 3.678830777500722*^9}, {
    3.678830824666984*^9, 3.678830843137939*^9}, {3.678830919523295*^9, 
    3.678830935628014*^9}, 3.678830968835874*^9, {3.67883102729228*^9, 
@@ -141,7 +179,8 @@ Cell[BoxData[
    3.678905770464456*^9}, 3.678905825620304*^9, {3.678905960862627*^9, 
    3.678906031744087*^9}, 3.678914748851512*^9, 3.678917330786766*^9, 
    3.679056802838046*^9, {3.679056904851913*^9, 3.679056913241459*^9}, {
-   3.679056949639143*^9, 3.679056981050371*^9}}],
+   3.679056949639143*^9, 3.679056981050371*^9}, {3.68184590475661*^9, 
+   3.6818459591507826`*^9}, {3.6818459975915194`*^9, 3.681846055709365*^9}}],
 
 Cell[BoxData[
  RowBox[{"-", "\[ImaginaryI]"}]], "Output",
@@ -154,7 +193,8 @@ Cell[BoxData[
    3.678905770464456*^9}, 3.678905825620304*^9, {3.678905960862627*^9, 
    3.678906031744087*^9}, 3.678914748851512*^9, 3.678917330786766*^9, 
    3.679056802838046*^9, {3.679056904851913*^9, 3.679056913241459*^9}, {
-   3.679056949639143*^9, 3.6790569810583572`*^9}}]
+   3.679056949639143*^9, 3.679056981050371*^9}, {3.68184590475661*^9, 
+   3.6818459591507826`*^9}, {3.6818459975915194`*^9, 3.681846055709365*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -186,7 +226,7 @@ Cell[BoxData[
 },
 WindowSize->{1278, 947},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
-FrontEndVersion->"10.1 for Linux x86 (64-bit) (March 23, 2015)",
+FrontEndVersion->"7.0 for Microsoft Windows (64-bit) (November 10, 2008)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -200,20 +240,19 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 3663, 82, 473, "Input"],
+Cell[558, 20, 5136, 120, 512, "Input"],
 Cell[CellGroupData[{
-Cell[4246, 106, 1146, 22, 99, "Input"],
-Cell[5395, 130, 799, 13, 36, "Output"],
-Cell[6197, 145, 754, 11, 32, "Output"]
+Cell[5719, 144, 1249, 24, 92, "Input"],
+Cell[6971, 170, 859, 12, 30, "Output"],
+Cell[7833, 184, 851, 12, 30, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6988, 161, 454, 12, 99, "Input"],
-Cell[7445, 175, 125, 3, 32, "Output"],
-Cell[7573, 180, 127, 3, 32, "Output"]
+Cell[8721, 201, 454, 12, 92, "Input"],
+Cell[9178, 215, 125, 3, 30, "Output"],
+Cell[9306, 220, 127, 3, 30, "Output"]
 }, Open  ]]
 }
 ]
 *)
 
 (* End of internal cache information *)
-
