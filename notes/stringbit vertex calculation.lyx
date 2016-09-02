@@ -2259,10 +2259,10 @@ M=3
 Firstly we calculate
 \begin_inset Formula 
 \begin{eqnarray*}
-\alpha_{M-k}\alpha_{k} & = & \frac{1}{M}\sum_{i,j=1}^{M}\theta_{i}\theta_{j}e^{2\pi i\left[i\left(M-k\right)+jk\right]/M}\\
- & = & \frac{1}{M}\sum_{i,j=1}^{M}\theta_{i}\theta_{j}e^{2\pi i\left(j-i\right)k/M}\\
- & = & \frac{2i}{M}\sum_{i=1}^{M}\sum_{j>i}^{M}\theta_{i}\theta_{j}\sin\frac{2\pi k\left(j-i\right)}{M}\\
- & = & \frac{2i}{M}\sum_{i=1}^{M}\sum_{j>i}^{M}\theta_{i}\theta_{j}\sin\frac{2\pi k\left(j-i\right)}{M}.
+\alpha_{M-k}\alpha_{k} & = & \frac{1}{M}\sum_{i,j=1}^{M}\theta_{i}\theta_{j}e^{-2\pi i\left[i\left(M-k\right)+jk\right]/M}\\
+ & = & \frac{1}{M}\sum_{i,j=1}^{M}\theta_{i}\theta_{j}e^{-2\pi i\left(j-i\right)k/M}\\
+ & = & -\frac{2i}{M}\sum_{i=1}^{M}\sum_{j>i}^{M}\theta_{i}\theta_{j}\sin\frac{2\pi k\left(j-i\right)}{M}\\
+ & = & -\frac{2i}{M}\sum_{i=1}^{M}\sum_{j>i}^{M}\theta_{i}\theta_{j}\sin\frac{2\pi k\left(j-i\right)}{M}.
 \end{eqnarray*}
 
 \end_inset
