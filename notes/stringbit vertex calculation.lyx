@@ -580,8 +580,8 @@ F_{k}^{\pm}\bar{\phi}_{k} & = & \pm\left(s_{k}\alpha_{k}-c_{k}\beta_{k}\right)\l
 
 \begin_inset Formula 
 \begin{eqnarray*}
-F_{M-k}^{\pm}F_{k}^{\pm}\bar{\phi}_{k} & = & \mp\left(-s_{k}\alpha_{M-k}-c_{k}\beta_{M-k}\right)\alpha_{k}\\
- & = & \pm\left(s_{k}\alpha_{M-k}\alpha_{k}+c_{k}\right)
+F_{M-k}^{\pm}F_{k}^{\pm}\bar{\phi}_{k} & = & -\left(-s_{k}\alpha_{M-k}-c_{k}\beta_{M-k}\right)\alpha_{k}\\
+ & = & s_{k}\alpha_{M-k}\alpha_{k}+c_{k}
 \end{eqnarray*}
 
 \end_inset
@@ -2043,7 +2043,7 @@ reference "eq:App-H-commutation"
  on single trace states:
 \begin_inset Formula 
 \begin{eqnarray*}
-H_{1}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0} & = & 2\sum_{k=1}^{M}\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)T\left(\theta_{1},\cdots,\theta_{M}\right)\let{0}\\
+H_{1}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0} & = & 2\sum_{k=1}^{M}\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
  &  & +\frac{2}{N}\sum_{k=1}^{M}\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)\sum_{l\neq k,k+1}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0}
 \end{eqnarray*}
 
@@ -2312,8 +2312,8 @@ For
 \begin_inset Formula 
 \begin{eqnarray*}
 \psi_{1} & = & F_{0}^{\dagger}\psi_{0}=\alpha_{0}\psi_{0}\\
- & = & \frac{1}{\sqrt{3}}\left(\theta_{1}+\theta_{2}+\theta_{3}\right)\left[c_{1}-s_{1}\frac{i}{\sqrt{3}}\left(\theta_{1}\theta_{2}+\theta_{2}\theta_{3}+\theta_{3}\theta_{1}\right)\right]\\
- & = & \frac{c_{1}}{\sqrt{3}}\left(\theta_{1}+\theta_{2}+\theta_{3}\right)-is_{1}\theta_{1}\theta_{2}\theta_{3}
+ & = & \frac{1}{\sqrt{3}}\left(\theta_{1}+\theta_{2}+\theta_{3}\right)\left[c_{1}+s_{1}\frac{i}{\sqrt{3}}\left(\theta_{1}\theta_{2}+\theta_{2}\theta_{3}+\theta_{3}\theta_{1}\right)\right]\\
+ & = & \frac{c_{1}}{\sqrt{3}}\left(\theta_{1}+\theta_{2}+\theta_{3}\right)+is_{1}\theta_{1}\theta_{2}\theta_{3}
 \end{eqnarray*}
 
 \end_inset
@@ -2323,7 +2323,19 @@ For
 \begin{eqnarray*}
 \bar{\psi}_{1} & = & F_{0}^{-}\bar{\psi}_{0}=\beta_{0}\bar{\psi}_{0}\\
  & = & -i\left(-s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)\\
- & = & is_{1}+\frac{c_{1}}{\sqrt{3}}\left(\theta_{1}\theta_{2}+\theta_{2}\theta_{3}+\theta_{3}\theta_{1}\right)
+ & = & is_{1}-\frac{c_{1}}{\sqrt{3}}\left(\theta_{1}\theta_{2}+\theta_{2}\theta_{3}+\theta_{3}\theta_{1}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+F_{M-k}^{\pm}F_{k}^{\pm}\bar{\phi}_{k} & = & -\left(-s_{k}\alpha_{M-k}-c_{k}\beta_{M-k}\right)\alpha_{k}\\
+ & = & s_{k}\alpha_{M-k}\alpha_{k}+c_{k}
 \end{eqnarray*}
 
 \end_inset
@@ -2333,7 +2345,7 @@ For
 \begin{eqnarray*}
 \psi_{2} & = & F_{2}^{\dagger}F_{1}^{\dagger}\psi_{0}\\
  & = & -\left(s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)\\
- & = & -s_{1}-\frac{ic_{1}}{\sqrt{3}}\left(\theta_{1}\theta_{2}+\theta_{2}\theta_{3}+\theta_{3}\theta_{1}\right)
+ & = & -s_{1}+\frac{ic_{1}}{\sqrt{3}}\left(\theta_{1}\theta_{2}+\theta_{2}\theta_{3}+\theta_{3}\theta_{1}\right)
 \end{eqnarray*}
 
 \end_inset
@@ -2341,9 +2353,9 @@ For
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\bar{\psi}_{2} & = & F_{1}^{-}F_{2}^{-}\bar{\psi}_{0}\\
- & = & -i\alpha_{0}\left(s_{1}\alpha_{2}\alpha_{1}+c_{1}\right)\\
- & = & -\frac{ic_{1}}{\sqrt{3}}\left(\theta_{1}+\theta_{2}+\theta_{3}\right)-s_{1}\theta_{3}\theta_{2}\theta_{1}
+\bar{\psi}_{2} & = & F_{1}^{-}F_{2}^{-}\bar{\psi}_{0}=-F_{2}^{-}F_{1}^{-}\bar{\psi}_{0}\\
+ & = & i\alpha_{0}\left(s_{1}\alpha_{2}\alpha_{1}+c_{1}\right)\\
+ & = & \frac{ic_{1}}{\sqrt{3}}\left(\theta_{1}+\theta_{2}+\theta_{3}\right)+s_{1}\theta_{1}\theta_{2}\theta_{3}
 \end{eqnarray*}
 
 \end_inset
@@ -2351,9 +2363,8 @@ For
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\psi_{3} & = & F_{2}^{\dagger}F_{1}^{\dagger}F_{0}^{\dagger}\psi_{0}=\alpha_{0}\psi_{3}\\
- & = & -\frac{s_{1}}{\sqrt{3}}\left(\theta_{1}+\theta_{2}+\theta_{3}\right)-c_{1}\theta_{1}\theta_{2}\theta_{3}\\
- & = & -\frac{s_{1}}{\sqrt{3}}\left(\theta_{1}+\theta_{2}+\theta_{3}\right)-c_{1}\theta_{1}\theta_{2}\theta_{3}
+\psi_{3} & = & F_{2}^{\dagger}F_{1}^{\dagger}F_{0}^{\dagger}\psi_{0}=\alpha_{0}\psi_{2}\\
+ & = & -\frac{s_{1}}{\sqrt{3}}\left(\theta_{1}+\theta_{2}+\theta_{3}\right)+ic_{1}\theta_{1}\theta_{2}\theta_{3}
 \end{eqnarray*}
 
 \end_inset
@@ -2361,9 +2372,9 @@ For
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\bar{\psi}_{3} & = & F_{0}^{-}F_{1}^{-}F_{2}^{-}\bar{\psi}_{0}=\beta_{0}\bar{\psi}_{3}\\
- & = & -i\left(s_{1}\alpha_{2}\alpha_{1}+c_{1}\right)\\
- & = & -ic_{1}+\frac{s_{1}}{\sqrt{3}}\left(\theta_{1}\theta_{2}+\theta_{2}\theta_{3}+\theta_{3}\theta_{1}\right)
+\bar{\psi}_{3} & = & F_{0}^{-}F_{1}^{-}F_{2}^{-}\bar{\psi}_{0}=\beta_{0}\bar{\psi}_{2}\\
+ & = & i\left(s_{1}\alpha_{2}\alpha_{1}+c_{1}\right)\\
+ & = & ic_{1}+\frac{s_{1}}{\sqrt{3}}\left(\theta_{1}\theta_{2}+\theta_{2}\theta_{3}+\theta_{3}\theta_{1}\right)
 \end{eqnarray*}
 
 \end_inset
