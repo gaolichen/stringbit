@@ -655,7 +655,7 @@ One can verify that
 \[
 \int d^{M}\theta\,\prod_{i=1}^{M}\alpha_{M-i}=i^{\left\lfloor \left(M-1\right)/2\right\rfloor }=\begin{cases}
 i^{\left(M-1\right)/2} & \text{for odd }M\\
-i^{M/2-1} & \text{for even }M
+\left(-i\right)^{M/2-1} & \text{for even }M
 \end{cases}.
 \]
 
@@ -780,7 +780,7 @@ For even
 , we define
 \begin_inset Formula 
 \[
-\psi_{0}=\prod_{k=1}^{M/2}\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right),\quad\bar{\psi}_{0}=i^{M/2+1}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\alpha_{0}\alpha_{M/2}
+\psi_{0}=\prod_{k=1}^{M/2}\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right),\quad\bar{\psi}_{0}=\left(-i\right)^{M/2+1}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\alpha_{0}\alpha_{M/2}
 \]
 
 \end_inset
@@ -788,10 +788,10 @@ For even
  One can verify that
 \begin_inset Formula 
 \begin{eqnarray*}
-\int d^{M}\theta\,\bar{\psi}_{0}\psi_{0} & = & i^{M/2+1}\int d^{M}\theta\,\alpha_{0}\alpha_{M/2}\prod_{i=1}^{M/2}\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\left(c_{i}-s_{i}\alpha_{M-i}\alpha_{i}\right)\\
- & = & i^{M/2+1}\int d^{M}\theta\,\alpha_{0}\alpha_{M/2}\prod_{i=1}^{M/2-1}\alpha_{M-i}\alpha_{i}\\
- & = & i^{M/2+1}\int d^{M}\theta\,\prod_{i=1}^{M}\alpha_{M-i}\times\left(-1\right)^{M/2}\\
- & = & -\left(-i\right)^{M/2+1}\times i^{M/2-1}\\
+\int d^{M}\theta\,\bar{\psi}_{0}\psi_{0} & = & \left(-i\right)^{M/2+1}\int d^{M}\theta\,\alpha_{0}\alpha_{M/2}\prod_{i=1}^{M/2}\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\left(c_{i}-s_{i}\alpha_{M-i}\alpha_{i}\right)\\
+ & = & \left(-i\right)^{M/2+1}\int d^{M}\theta\,\alpha_{0}\alpha_{M/2}\prod_{i=1}^{M/2-1}\alpha_{M-i}\alpha_{i}\\
+ & = & \left(-i\right)^{M/2+1}\int d^{M}\theta\,\prod_{i=1}^{M}\alpha_{M-i}\times\left(-1\right)^{M/2}\\
+ & = & \left(-i\right)^{M/2+1}\times\left(-i\right)^{M/2-1}\times\left(-1\right)^{M/2}\\
  & = & 1.
 \end{eqnarray*}
 
