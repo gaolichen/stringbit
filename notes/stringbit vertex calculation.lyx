@@ -2385,7 +2385,7 @@ F_{M-k}^{\pm}F_{k}^{\pm}\bar{\phi}_{k} & = & -\left(-s_{k}\alpha_{M-k}-c_{k}\bet
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\psi_{1}=c_{1}+s_{1}\alpha_{2}\alpha_{1},\quad\bar{\psi}_{1}=-i\alpha_{0}\left(s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)
+\psi_{0}=c_{1}-s_{1}\alpha_{2}\alpha_{1},\quad\bar{\psi}_{1}=-i\alpha_{0}\left(-s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)
 \]
 
 \end_inset
@@ -2393,7 +2393,7 @@ F_{M-k}^{\pm}F_{k}^{\pm}\bar{\phi}_{k} & = & -\left(-s_{k}\alpha_{M-k}-c_{k}\bet
 
 \begin_inset Formula 
 \[
-\psi_{2}=\alpha_{0}\left(c_{1}+s_{1}\alpha_{2}\alpha_{1}\right),\quad\bar{\psi}_{2}=-i\left(s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)
+\psi_{1}=\alpha_{0}\left(c_{1}-s_{1}\alpha_{2}\alpha_{1}\right),\quad\bar{\psi}_{1}=-i\left(-s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)
 \]
 
 \end_inset
@@ -2401,7 +2401,7 @@ F_{M-k}^{\pm}F_{k}^{\pm}\bar{\phi}_{k} & = & -\left(-s_{k}\alpha_{M-k}-c_{k}\bet
 
 \begin_inset Formula 
 \[
-\psi_{3}=-s_{1}+c_{1}\alpha_{2}\alpha_{1},\quad\bar{\psi}_{3}=-i\alpha_{0}\left(c_{1}-s_{1}\alpha_{2}\alpha_{1}\right)
+\psi_{2}=-s_{1}-c_{1}\alpha_{2}\alpha_{1},\quad\bar{\psi}_{2}=i\alpha_{0}\left(c_{1}+s_{1}\alpha_{2}\alpha_{1}\right)
 \]
 
 \end_inset
@@ -2409,7 +2409,7 @@ F_{M-k}^{\pm}F_{k}^{\pm}\bar{\phi}_{k} & = & -\left(-s_{k}\alpha_{M-k}-c_{k}\bet
 
 \begin_inset Formula 
 \[
-\psi_{4}=\alpha_{0}\left(-s_{1}+c_{1}\alpha_{2}\alpha_{1}\right),\quad\bar{\psi}_{1}=-i\left(c_{1}-s_{1}\alpha_{2}\alpha_{1}\right)
+\psi_{3}=-\alpha_{0}\left(s_{1}+c_{1}\alpha_{2}\alpha_{1}\right),\quad\bar{\psi}_{3}=i\left(c_{1}+s_{1}\alpha_{2}\alpha_{1}\right)
 \]
 
 \end_inset
@@ -2428,7 +2428,7 @@ To verify:
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\int d^{3}\theta\,\bar{\psi}_{1}\psi_{1} & = & -i\int d^{3}\theta\,\alpha_{0}\left(s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)\left(c_{1}+s_{1}\alpha_{2}\alpha_{1}\right)\\
+\int d^{3}\theta\,\bar{\psi}_{1}\psi_{1} & = & -i\int d^{3}\theta\,\alpha_{0}\left(-s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)\left(c_{1}-s_{1}\alpha_{2}\alpha_{1}\right)\\
  & = & -i\int d^{3}\theta\left(c_{1}^{2}+s_{1}^{2}\right)\alpha_{0}\alpha_{2}\alpha_{1}\\
  & = & -i\int d^{3}\theta\,\alpha_{2}\alpha_{1}\alpha_{0}\\
  & = & 1
@@ -2439,8 +2439,8 @@ To verify:
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\int d^{3}\theta\,\bar{\psi}_{1}\psi_{3} & = & -i\int d^{3}\theta\,\alpha_{0}\left(s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)\left(-s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)\\
- & = & -i\int d^{3}\theta\,\left(-s_{1}c_{1}+s_{1}c_{1}\right)\alpha_{0}\alpha_{2}\alpha_{1}\\
+\int d^{3}\theta\,\bar{\psi}_{1}\psi_{3} & = & i\int d^{3}\theta\,\alpha_{0}\left(-s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)\left(s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)\\
+ & = & i\int d^{3}\theta\,\left(-s_{1}c_{1}+s_{1}c_{1}\right)\alpha_{0}\alpha_{2}\alpha_{1}\\
  & = & 0
 \end{eqnarray*}
 
@@ -2473,10 +2473,10 @@ Denote
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\sum_{r}\psi_{r}\left(\theta\right)\bar{\psi}_{r}\left(\phi\right) & = & -i\left(c_{1}+s_{1}\alpha_{2}\alpha_{1}\right)\sigma_{0}\left(s_{1}+c_{1}\sigma_{2}\sigma_{1}\right)\\
- &  & -i\left(-s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)\sigma_{0}\left(c_{1}-s_{1}\sigma_{2}\sigma_{1}\right)\\
- &  & -i\alpha_{0}\left(c_{1}+s_{1}\alpha_{2}\alpha_{1}\right)\left(s_{1}+c_{1}\sigma_{2}\sigma_{1}\right)\\
- &  & -i\alpha_{0}\left(-s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)\left(c_{1}-s_{1}\sigma_{2}\sigma_{1}\right)\\
+\sum_{r}\psi_{r}\left(\theta\right)\bar{\psi}_{r}\left(\phi\right) & = & -i\left(c_{1}-s_{1}\alpha_{2}\alpha_{1}\right)\sigma_{0}\left(-s_{1}+c_{1}\sigma_{2}\sigma_{1}\right)\\
+ &  & -i\alpha_{0}\left(c_{1}-s_{1}\alpha_{2}\alpha_{1}\right)\left(-s_{1}+c_{1}\sigma_{2}\sigma_{1}\right)\\
+ &  & -i\left(s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)\sigma_{0}\left(c_{1}+s_{1}\sigma_{2}\sigma_{1}\right)\\
+ &  & -i\alpha_{0}\left(s_{1}+c_{1}\alpha_{2}\alpha_{1}\right)\left(c_{1}+s_{1}\sigma_{2}\sigma_{1}\right)\\
  & = & -i\alpha_{2}\alpha_{1}\alpha_{0}-i\alpha_{2}\alpha_{1}\sigma_{0}-i\alpha_{0}\sigma_{2}\sigma_{1}-i\sigma_{2}\sigma_{1}\sigma_{0}.
 \end{eqnarray*}
 
@@ -2498,9 +2498,9 @@ Denote
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\int d^{3}\theta\, T\left(\theta\right)\sum_{r}\psi_{r}\left(\theta\right)\bar{\psi}_{r}\left(\phi\right) & = & \tr\bar{b}^{3}+\tr\bar{a}\bar{a}\bar{b}\left(\phi_{1}+\phi_{2}+\phi_{3}\right)\\
- &  & +\tr\bar{a}\bar{b}\bar{b}\left(\phi_{1}\phi_{2}+\phi_{2}\phi_{3}+\phi_{3}\phi_{1}\right)+\tr\bar{a}^{3}\\
- & = & T\left(\phi\right)
+\int d^{3}\theta\, T\left(\theta\right)\sum_{r}\psi_{r}\left(\theta\right)\bar{\psi}_{r}\left(\phi\right) & = & \tr\bar{a}^{3}-\tr\bar{a}\bar{a}\bar{b}\left(\phi_{1}+\phi_{2}+\phi_{3}\right)\\
+ &  & +\tr\bar{a}\bar{b}\bar{b}\left(\phi_{1}\phi_{2}+\phi_{2}\phi_{3}+\phi_{3}\phi_{1}\right)-\tr\bar{b}^{3}\\
+ & = & T\left(-\phi\right)
 \end{eqnarray*}
 
 \end_inset
