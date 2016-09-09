@@ -520,9 +520,9 @@ For
 \begin_inset Formula 
 \begin{eqnarray*}
 h & = & 2\sum_{n=1}^{M-1}\Big[\left(\alpha_{n}\alpha_{M-n}+\beta_{n}\beta_{M-n}\right)\sin\frac{2n\pi}{M}\\
- &  & +2\left(1-\cos\frac{2n\pi}{M}\right)\alpha_{n}\beta_{M-n}\Big]+4\alpha_{0}\beta_{0}-2M\\
+ &  & +4\left(1-\cos\frac{2n\pi}{M}\right)\alpha_{n}\beta_{M-n}\Big]-2M\\
  & = & 2\sum_{n=1}^{M-1}\Big[\left(\alpha_{n}\alpha_{M-n}+\beta_{n}\beta_{M-n}\right)\sin\frac{2n\pi}{M}+\\
- &  & +\left(1-\cos\frac{2n\pi}{M}\right)\left(\alpha_{n}\beta_{M-n}+\alpha_{M-n}\beta_{n}\right)\Big]+4\alpha_{0}\beta_{0}-2M
+ &  & +2\left(1-\cos\frac{2n\pi}{M}\right)\left(\alpha_{n}\beta_{M-n}+\alpha_{M-n}\beta_{n}\right)\Big]-2M
 \end{eqnarray*}
 
 \end_inset

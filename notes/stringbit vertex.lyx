@@ -78,7 +78,7 @@ Stringbit vertex
 \end_layout
 
 \begin_layout Section
-Systematic Perturbation
+Systematic Perturbation Theory
 \end_layout
 
 \begin_layout Standard
@@ -246,7 +246,7 @@ For convenience,
 \begin_inset Formula $\left(-\right)$
 \end_inset
 
- indicate the Grassmann oddnes.
+ indicate the Grassmann oddness.
  
 \end_layout
 
@@ -320,12 +320,17 @@ reference "eq:pert_cyclicconstrtaint"
  as 
 \begin_inset Formula 
 \begin{equation}
-V_{str}^{\left(L\right)}=\left(-\right)^{s\left(LT_{s}+\left(M-L\right)T_{t}\right)}M\int d\theta\,\bar{\psi}_{s}\left(\theta_{L+1}\cdots\theta_{M}\right)\bar{\psi}_{t}\left(\theta_{1}\cdots\theta_{L}\right)h_{M,L+1}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right).\label{eq:pert_Vstr_2}
+V_{str}^{\left(L\right)}=\left(-\right)^{s\left(LT_{s}+KT_{t}\right)}M\int d\theta\,\bar{\psi}_{s}\left(\theta_{L+1}\cdots\theta_{M}\right)\bar{\psi}_{t}\left(\theta_{1}\cdots\theta_{L}\right)h_{M,L+1}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right),\label{eq:pert_Vstr_2}
 \end{equation}
 
 \end_inset
 
+ where 
+\begin_inset Formula $M=K+L$
+\end_inset
 
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -373,8 +378,446 @@ reference "eq:pert_cyclicconstrtaint"
 
 , we obtain 
 \begin_inset Formula 
+\begin{equation}
+W_{rst}=W_{rst}^{\left(1\right)}+W_{rst}^{\left(2\right)}=KL\int d^{M}\theta\,\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{K}\theta_{K+1}\cdots\theta_{M}\right)\left(h_{K,K+1}+h_{M,1}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{K}\right)\psi_{t}\left(\theta_{K+1}\cdots\theta_{M}\right).\label{eq:pert_Wrst}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Building Eigenfunctions
+\end_layout
+
+\begin_layout Standard
+To calculate 
+\begin_inset Formula $V_{str}$
+\end_inset
+
+ and 
+\begin_inset Formula $W_{str}$
+\end_inset
+
+, we need to build the eigenfunction 
+\begin_inset Formula $\psi_{r}$
+\end_inset
+
+ and its conjugate 
+\begin_inset Formula $\bar{\psi}_{r}$
+\end_inset
+
+.
+ It can be done by diagonizing 
+\begin_inset Formula $h$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+We introduce Fourier transformation
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha_{n} & = & \frac{1}{\sqrt{M}}\sum_{k=1}^{M}\theta_{k}e^{-2\pi ikn/M},\quad\beta_{n}=\frac{1}{\sqrt{M}}\sum_{k=1}^{M}\frac{d}{d\theta_{k}}e^{-2\pi ikn/M},\\
+\theta_{k} & = & \frac{1}{\sqrt{M}}\sum_{n=0}^{M-1}\alpha_{n}e^{2\pi ikn/M},\quad\frac{d}{d\theta_{k}}=\frac{1}{\sqrt{M}}\sum_{n=0}^{M-1}\beta_{n}e^{2\pi ikn/M},\\
+n & = & 0,\dots M-1,\quad k=1,\dots M.
+\end{eqnarray*}
+
+\end_inset
+
+ where
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
 \[
-W_{rst}=W_{rst}^{\left(1\right)}+W_{rst}^{\left(2\right)}=KL\int d^{M}\theta\,\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{K}\theta_{K+1}\cdots\theta_{M}\right)\left(h_{K,K+1}+h_{M,1}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{K}\right)\psi_{t}\left(\theta_{K+1}\cdots\theta_{M}\right).
+\left\{ \alpha_{n},\beta_{m}\right\} =\delta_{m+n,M}+\delta_{m,0}\delta_{n,0}.
+\]
+
+\end_inset
+
+ The Hermitianlity of Hamiltonian implies that 
+\begin_inset Formula 
+\[
+\theta_{k}^{\dagger}=\frac{d}{d\theta_{k}},\quad\frac{d}{d\theta_{k}}^{\dagger}=\theta_{k},
+\]
+
+\end_inset
+
+ from which it follows that 
+\begin_inset Formula 
+\[
+\alpha_{n}^{\dagger}=\beta_{M-n},\quad\beta_{n}^{\dagger}=\alpha_{M-n},\quad\left\{ \alpha_{n},\alpha_{m}^{\dagger}\right\} =\left\{ \beta_{n},\beta_{m}^{\dagger}\right\} =\delta_{m,n},\quad0\leq n,m\leq M-1.
+\]
+
+\end_inset
+
+ With 
+\begin_inset Formula $\alpha_{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta_{n}$
+\end_inset
+
+, we can express 
+\begin_inset Formula $h$
+\end_inset
+
+ as 
+\begin_inset Formula 
+\begin{multline}
+h=2\sum_{n=1}^{M-1}\Big[\left(\alpha_{n}\alpha_{M-n}+\beta_{n}\beta_{M-n}\right)\sin\frac{2n\pi}{M}+\\
++2\left(1-\cos\frac{2n\pi}{M}\right)\left(\alpha_{n}\beta_{M-n}+\alpha_{M-n}\beta_{n}\right)\Big]-2M\label{eq:eigen_h}
+\end{multline}
+
+\end_inset
+
+We seek for eigenoperator of the form 
+\begin_inset Formula $F_{k}=r_{k}\alpha_{k}+\beta_{k}$
+\end_inset
+
+ satisfying
+\begin_inset Formula 
+\begin{equation}
+\left[h,F_{k}\right]=\epsilon_{k}F_{k}.\label{eq:eigen_operator_eq}
+\end{equation}
+
+\end_inset
+
+ Substituting 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:eigen_h"
+
+\end_inset
+
+ into 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:eigen_operator_eq"
+
+\end_inset
+
+, we obtain
+\begin_inset Formula 
+\[
+\epsilon_{k}^{\pm}=\pm8\sin\frac{k\pi}{M},\quad r_{k}^{\pm}=\tan\frac{k\pi}{M}\pm\sec\frac{k\pi}{M}.
+\]
+
+\end_inset
+
+ By proper normalization, we obtain the lowering and raising and operators
+\begin_inset Formula 
+\begin{equation}
+F_{k}=s_{k}\alpha_{k}+c_{k}\beta_{k},\quad\bar{F}_{k}=c_{k}\alpha_{k}-s_{k}\beta_{k},\quad k=1,\cdots,M-1,\label{eq:eign_F_Fbar}
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\[
+c_{k}=\cos\left(\frac{\pi}{4}-\frac{k\pi}{2M}\right),\quad s_{k}=\sin\left(\frac{\pi}{4}-\frac{k\pi}{2M}\right).
+\]
+
+\end_inset
+
+We define the zero modes as 
+\begin_inset Formula 
+\begin{equation}
+F_{0}=F_{M}=\beta_{0},\quad\bar{F}_{0}=\bar{F}_{M}=\alpha_{0}.\label{eq:eigen_F0}
+\end{equation}
+
+\end_inset
+
+Then we have 
+\begin_inset Formula 
+\begin{equation}
+F_{k}^{\dagger}=\bar{F}_{M-k},\quad0\leq k\leq M-1,\label{eq:eign_Fdagger}
+\end{equation}
+
+\end_inset
+
+ and the anticommutation relations among these operators:
+\begin_inset Formula 
+\begin{equation}
+\left\{ F_{k},F_{l}\right\} =\left\{ F_{k}^{\dagger},F_{l}^{\dagger}\right\} =0,\quad\left\{ F_{k},F_{l}^{\dagger}\right\} =\delta_{kl},\quad0\leq k,l\leq M-1.\label{eq:eign_F_anticommutation}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To construct the ground eigenfunction, we notice that
+\begin_inset Formula 
+\[
+F_{k}\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right)=F_{M-k}\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right)=0,
+\]
+
+\end_inset
+
+ and
+\begin_inset Formula 
+\[
+\left\{ F_{k},c_{l}-s_{l}\alpha_{M-l}\alpha_{l}\right\} =\left\{ F_{M-k},c_{l}-s_{l}\alpha_{M-l}\alpha_{l}\right\} =0,\quad1\leq k\neq l\leq M-1.
+\]
+
+\end_inset
+
+ We therefore have the ground eigenfunction
+\begin_inset Formula 
+\[
+\psi_{0}=\prod_{k=1}^{\left\lfloor \left(M-1\right)/2\right\rfloor }\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right),\quad F_{m}\psi_{0}=0,\quad0\leq m\leq M-1.
+\]
+
+\end_inset
+
+ A general eigenfunction is obtained by acting on the ground eigenfunction
+ with raising operators
+\begin_inset Formula 
+\[
+\psi=F_{k_{1}}^{\dagger}\cdots F_{k_{p}}^{\dagger}\psi_{0},\quad0\leq k_{1}<\cdots<k_{p}\leq M-1.
+\]
+
+\end_inset
+
+ Under the transformation 
+\begin_inset Formula $\theta_{k}\to\theta_{k+1}$
+\end_inset
+
+, 
+\begin_inset Formula $F_{k}^{\dagger}$
+\end_inset
+
+ transforms as 
+\begin_inset Formula $F_{k}^{\dagger}\to e^{-2ik\pi/M}F_{k}^{\dagger}$
+\end_inset
+
+, from which it follow that the the cyclic symmetry 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:pert_cyclicconstrtaint"
+
+\end_inset
+
+ requires 
+\begin_inset Formula 
+\begin{equation}
+\sum_{i=1}^{p}k_{i}=\begin{cases}
+nM & \quad\text{for odd }M\\
+\left(n+\frac{1}{2}\right)M & \quad\text{for even }M
+\end{cases}.\label{eq:eigen_cyclic_constraint}
+\end{equation}
+
+\end_inset
+
+To conjugate the conjugate of the ground eigenfunction, we need to handle
+ the odd and even 
+\begin_inset Formula $M$
+\end_inset
+
+ cases seperately.
+ For odd 
+\begin_inset Formula $M$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\bar{\psi}_{0}=\left(-i\right)^{\left\lfloor M/2\right\rfloor }\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right),
+\]
+
+\end_inset
+
+and for even 
+\begin_inset Formula $M$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\bar{\psi}_{0}=\left(-i\right)^{M/2+1}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\alpha_{0}\alpha_{M/2}.
+\]
+
+\end_inset
+
+To verify the normalization condition 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:pert_normalization"
+
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\begin{eqnarray*}
+\int d^{M}\theta\,\tilde{\psi}_{0}\psi_{0} & = & \left(-i\right)^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\,\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\left(c_{i}-s_{i}\alpha_{M-i}\alpha_{i}\right)\\
+ & = & \left(-i\right)^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\,\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(s_{i}^{2}+c_{i}^{2}\right)\alpha_{M-i}\alpha_{i}\\
+ & = & \left(-i\right)^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\,\prod_{i=1}^{M}\alpha_{M-i}\\
+ & = & 1,
+\end{eqnarray*}
+
+\end_inset
+
+ where we used
+\begin_inset Formula 
+\[
+\int d^{M}\theta\,\prod_{i=1}^{M}\alpha_{M-i}=i^{\left\lfloor \left(M-1\right)/2\right\rfloor }=\begin{cases}
+i^{\left(M-1\right)/2} & \text{for odd }M\\
+\left(-i\right)^{M/2-1} & \text{for even }M
+\end{cases}
+\]
+
+\end_inset
+
+ in the last step.
+ The similar calculation can be done for even 
+\begin_inset Formula $M$
+\end_inset
+
+ case.
+ 
+\end_layout
+
+\begin_layout Standard
+For constructing the general conjugate function of 
+\begin_inset Formula $\psi$
+\end_inset
+
+, it is convenient to define operator 
+\begin_inset Formula $\tilde{F}^{\pm}$
+\end_inset
+
+ as follows.
+ For grassmanian even function 
+\begin_inset Formula $\psi\left(\theta\right)$
+\end_inset
+
+, we define 
+\begin_inset Formula $F_{k}^{+}$
+\end_inset
+
+ as 
+\begin_inset Formula 
+\[
+\int d^{M}\theta\,\left[F_{k}^{+}\psi\left(\theta\right)\right]\chi\left(\theta\right)=\int d^{M}\theta\,\psi\left(\theta\right)\left[F_{k}\chi\left(\theta\right)\right].
+\]
+
+\end_inset
+
+Likewise, for grassmanian odd function 
+\begin_inset Formula $\psi\left(\theta\right)$
+\end_inset
+
+, we define 
+\begin_inset Formula $F^{-}$
+\end_inset
+
+ as 
+\begin_inset Formula 
+\[
+\int d^{M}\theta\,\left[F_{k}^{-}\psi\left(\theta\right)\right]\chi\left(\theta\right)=\int d^{M}\theta\,\psi\left(\theta\right)\left[F_{k}\chi\left(\theta\right)\right].
+\]
+
+\end_inset
+
+It follows that 
+\begin_inset Formula 
+\[
+F_{0}^{\pm}=\mp\beta_{0},\quad F_{k}^{\pm}=\pm\left(s_{k}\alpha_{k}-c_{k}\beta_{k}\right),\quad1\leq k\leq M-1.
+\]
+
+\end_inset
+
+ Now the conjugate function of a genral eigenfunction can be expressed as
+\begin_inset Formula 
+\[
+\bar{\psi}=\tilde{F}_{k_{p}}\cdots\tilde{F}_{k_{1}}\bar{\psi}_{0},\quad0\leq k_{1}<\cdots<k_{p}\leq M-1,
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $\tilde{F}$
+\end_inset
+
+ picks 
+\begin_inset Formula $\tilde{F}^{-}$
+\end_inset
+
+ for odd 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{F}^{+}$
+\end_inset
+
+ for even 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ To verify the normalization condition, we have
+\begin_inset Formula 
+\begin{eqnarray}
+\int d^{M}\theta\,\bar{\psi}\psi & = & \int d^{M}\theta\,\left(\tilde{F}_{k_{p}}\tilde{F}_{k_{p-1}}\cdots F_{k_{1}}\bar{\psi}_{0}\right)F_{k_{1}}^{\dagger}\cdots F_{k_{p}}^{\dagger}\psi_{0}\nonumber \\
+ & = & \int d^{M}\theta\,\left(\tilde{F}_{k_{p}}\tilde{F}_{k_{p-1}}\cdots F_{k_{2}}\bar{\psi}_{0}\right)F_{k_{1}}F_{k_{1}}^{\dagger}\cdots F_{k_{p}}^{\dagger}\psi_{0}\nonumber \\
+ & = & \int d^{M}\theta\,\left(\tilde{F}_{k_{p}}\tilde{F}_{k_{p-1}}\cdots F_{k_{2}}\bar{\psi}_{0}\right)F_{k_{2}}^{\dagger}\cdots F_{k_{p}}^{\dagger}\psi_{0}\nonumber \\
+ & = & \cdots\nonumber \\
+ & = & \int d^{M}\theta\,\bar{\psi}_{0}\psi_{0}\nonumber \\
+ & = & 1.\label{eq:psi-psibar-product}
+\end{eqnarray}
+
+\end_inset
+
+ The normalization condition and cyclic constraint automatically implies
+ the completeness relation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:pert_completeness"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Generalize the eigenfunctions and their conjugates to 
+\begin_inset Formula $s>1$
+\end_inset
+
+ case, we have 
+\begin_inset Formula 
+\[
+\psi_{0}=\prod_{i=1}^{s}\prod_{k=1}^{\left\lfloor \left(M-1\right)/2\right\rfloor }\left(c_{k}-s_{k}\alpha_{M-k}^{\left(i\right)}\alpha_{k}^{\left(i\right)}\right),
+\]
+
+\end_inset
+
+ for odd 
+\begin_inset Formula $M$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\bar{\psi}_{0}=\prod_{i=1}^{s}\prod_{k=1}^{\left\lfloor \left(M-1\right)/2\right\rfloor }\left(c_{k}-s_{k}\alpha_{M-k}^{\left(i\right)}\alpha_{k}^{\left(i\right)}\right)\alpha_{0}^{\left(i\right)},\quad\text{for odd }M
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\bar{\psi}_{0}=\prod_{i=1}^{s}\prod_{k=1}^{\left\lfloor \left(M-1\right)/2\right\rfloor }\left(c_{k}-s_{k}\alpha_{M-k}^{\left(i\right)}\alpha_{k}^{\left(i\right)}\right)\alpha_{0}^{\left(i\right)}\alpha_{M/2}^{\left(i\right)}
 \]
 
 \end_inset
