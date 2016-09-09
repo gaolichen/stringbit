@@ -259,13 +259,123 @@ The action of
 \begin_inset Formula 
 \begin{eqnarray*}
 HT_{r}\ket{0} & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{l=k+2}^{M+k-1}\bar{h}_{kl}T\left(\theta_{l}\cdots\theta_{k}\right)T\left(\theta_{k+1}\cdots\theta_{l-1}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
- & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{p=1}^{M-2}\bar{h}_{k,k+p+1}T\left(\theta_{k+p+1}\cdots\theta_{k}\right)T\left(\theta_{k+1}\cdots\theta_{k+p}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
- & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{p=1}^{M-2}\bar{h}_{k,k+p+1}\sum_{s,t}\left(-\right)^{s\left(KT_{s}+LT_{t}\right)}T_{s}\bar{\psi}_{s}\left(\theta_{k+p+1}\cdots\theta_{k}\right)T_{t}\bar{\psi}_{t}\left(\theta_{k+1}\cdots\theta_{k+p}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
- & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{p=1}^{M-2}\sum_{k=1}^{M}\bar{h}_{k,k+p+1}\sum_{s,t}\left(-\right)^{s\left(KT_{s}+LT_{t}\right)}T_{t}T_{s}\bar{\psi}_{s}\left(\theta_{k+p+1}\cdots\theta_{k}\right)\bar{\psi}_{t}\left(\theta_{k+1}\cdots\theta_{k+p}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
- & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{p=1}^{M-2}\sum_{s,t}T_{t}T_{s}\ket{0}\left(-\right)^{s\left(KT_{s}+LT_{t}\right)+sM\left(T_{s}+T_{t}\right)}\int d\theta\,\sum_{k=1}^{M}\bar{h}_{k,k+p+1}\bar{\psi}_{s}\left(\theta_{k+p+1}\cdots\theta_{k}\right)\bar{\psi}_{t}\left(\theta_{k+1}\cdots\theta_{k+p}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
- & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{p=1}^{M-2}\sum_{s,t}T_{t}T_{s}\ket{0}\left(-\right)^{s\left(KT_{t}+LT_{s}\right)}\int d\theta\,\sum_{k=1}^{M}\bar{h}_{k,k+p+1}\bar{\psi}_{s}\left(\theta_{k+p+1}\cdots\theta_{k}\right)\bar{\psi}_{t}\left(\theta_{k+1}\cdots\theta_{k+p}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{L=1}^{M-2}\bar{h}_{k,k+L+1}T\left(\theta_{k+L+1}\cdots\theta_{k}\right)T\left(\theta_{k+1}\cdots\theta_{k+L}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{L=1}^{M-2}\bar{h}_{k,k+L+1}\sum_{s,t}\left(-\right)^{s\left((M-L)T_{s}+LT_{t}\right)}T_{s}\bar{\psi}_{s}\left(\theta_{k+L+1}\cdots\theta_{k}\right)T_{t}\bar{\psi}_{t}\left(\theta_{k+1}\cdots\theta_{k+L}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{L=1}^{M-2}\sum_{s,t}T_{t}T_{s}\ket{0}\left(-\right)^{s\left(LT_{s}+\left(M-L\right)T_{t}\right)}\int d\theta\,\sum_{k=1}^{M}\bar{h}_{k,k+L+1}\bar{\psi}_{s}\left(\theta_{k+L+1}\cdots\theta_{k}\right)\bar{\psi}_{t}\left(\theta_{k+1}\cdots\theta_{k+L}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
  & \equiv & E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{L=1}^{M-2}\sum_{s,t}T_{t}T_{s}\ket{0}V_{str}^{\left(L\right)}
 \end{eqnarray*}
+
+\end_inset
+
+ where 
+\begin_inset Formula $T_{t}$
+\end_inset
+
+ and 
+\begin_inset Formula $T_{s}$
+\end_inset
+
+ are single trace energy state of 
+\begin_inset Formula $L$
+\end_inset
+
+ bits and 
+\begin_inset Formula $\left(M-L\right)$
+\end_inset
+
+ bits respectively and 
+\begin_inset Formula 
+\begin{equation}
+V_{str}^{\left(L\right)}=\left(-\right)^{s\left(LT_{s}+\left(M-L\right)T_{t}\right)}\sum_{k=1}^{M}\int d\theta\,\bar{h}_{k,k+L+1}\bar{\psi}_{s}\left(\theta_{k+L+1}\cdots\theta_{k}\right)\bar{\psi}_{t}\left(\theta_{k+1}\cdots\theta_{k+L}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right).\label{eq:pert_Vstr}
+\end{equation}
+
+\end_inset
+
+ Renaming 
+\begin_inset Formula $\theta_{i}$
+\end_inset
+
+ to 
+\begin_inset Formula $\theta_{i+1}$
+\end_inset
+
+ in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:pert_Vstr"
+
+\end_inset
+
+and applying
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:pert_cyclicconstrtaint"
+
+\end_inset
+
+, we can reduce 
+\begin_inset Formula $V_{str}^{\left(L\right)}$
+\end_inset
+
+ as 
+\begin_inset Formula 
+\begin{equation}
+V_{str}^{\left(L\right)}=\left(-\right)^{s\left(LT_{s}+\left(M-L\right)T_{t}\right)}M\int d\theta\,\bar{\psi}_{s}\left(\theta_{L+1}\cdots\theta_{M}\right)\bar{\psi}_{t}\left(\theta_{1}\cdots\theta_{L}\right)h_{M,L+1}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right).\label{eq:pert_Vstr_2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The action of 
+\begin_inset Formula $H$
+\end_inset
+
+ on double trace produces both fussion and fission terms.
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+HT_{s}T_{t}\ket{0} & = & \left(E_{s}+T_{t}\right)T_{s}T_{k}\ket{0}\\
+ &  & +\frac{1}{N}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{kl}T\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\psi_{s}\left(\theta\right)\psi_{t}\left(\eta\right)\ket{0}\\
+ &  & +\frac{1}{N}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{lk}T\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\psi_{s}\left(\theta\right)\psi_{t}\left(\eta\right)\ket{0}+\cdots\\
+ & = & \left(E_{s}+T_{t}\right)T_{s}T_{k}\ket{0}\\
+ &  & +\frac{1}{N}\sum_{r}T_{r}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{kl}\bar{\psi}_{r}\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\psi_{s}\left(\theta\right)\psi_{t}\left(\eta\right)\ket{0}\\
+ &  & +\frac{1}{N}\sum_{r}T_{r}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{lk}\bar{\psi}_{r}\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\psi_{s}\left(\theta\right)\psi_{t}\left(\eta\right)\ket{0}+\cdots\\
+ & \equiv & \left(E_{s}+T_{t}\right)T_{s}T_{k}\ket{0}+\frac{1}{N}\sum_{r}T_{r}\ket{0}\left(W_{rst}^{\left(1\right)}+W_{rst}^{\left(2\right)}\right)+\cdots
+\end{eqnarray*}
+
+\end_inset
+
+ where 
+\begin_inset Formula 
+\[
+W_{rst}^{\left(1\right)}=\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{kl}\bar{\psi}_{r}\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{K}\right)\psi_{t}\left(\eta_{1}\cdots\eta_{L}\right),
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+W_{rst}^{\left(2\right)}=\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{lk}\bar{\psi}_{r}\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\psi_{s}\left(\theta\right)\psi_{t}\left(\eta\right)\ket{0}.
+\]
+
+\end_inset
+
+ Using the property of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:pert_cyclicconstrtaint"
+
+\end_inset
+
+, we obtain 
+\begin_inset Formula 
+\[
+W_{rst}=W_{rst}^{\left(1\right)}+W_{rst}^{\left(2\right)}=KL\int d^{M}\theta\,\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{K}\theta_{K+1}\cdots\theta_{M}\right)\left(h_{K,K+1}+h_{M,1}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{K}\right)\psi_{t}\left(\theta_{K+1}\cdots\theta_{M}\right).
+\]
 
 \end_inset
 
