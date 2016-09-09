@@ -1,0 +1,287 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\newcommand{\tr}{\mathrm{Tr}\,}
+\newcommand{\ba}{\bar{a}}
+\newcommand{\bb}{\bar{b}}
+\newcommand{\normord}[1]{{:}\!\mathrel{#1}\!{:}}
+\newcommand{\ket}[1]{\left|#1\right\rangle}
+\newcommand{\bra}[1]{\left\langle #1\right|}
+\newcommand{\ketp}[1]{\left|#1\right\} }
+\newcommand{\brap}[1]{\left\{ #1\right|}
+\newcommand{\dprod}[2]{\left\langle #1|#2\right\rangle}
+\newcommand{\dprodp}[2]{\left\{ #1|#2\right\} }
+\newcommand{\mat}[1]{\mathbf{#1}}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Stringbit vertex
+\end_layout
+
+\begin_layout Section
+Systematic Perturbation
+\end_layout
+
+\begin_layout Standard
+Let us breifly recap the 
+\begin_inset Formula $1/N$
+\end_inset
+
+ perturbation discussion of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
+\end_inset
+
+.
+ In the language of 
+\begin_inset Formula $\theta$
+\end_inset
+
+, the zero order energy eigenvalue 
+\begin_inset Formula $E_{r}$
+\end_inset
+
+ and the corresponding eigenfunction 
+\begin_inset Formula $\psi_{r}\left(\theta_{1},\dots,\theta_{M}\right)$
+\end_inset
+
+are determined by 
+\begin_inset Formula 
+\begin{equation}
+h\psi_{r}\left(\theta_{1},\dots,\theta_{M}\right)=E_{r}\psi_{r}\left(\theta_{1},\dots,\theta_{M}\right).\label{eq:pert_eigenequation}
+\end{equation}
+
+\end_inset
+
+ Then one can express the single trace energy eigenstate as 
+\begin_inset Formula 
+\begin{equation}
+T_{r}\ket{0}=\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta_{1},\cdots,\theta_{M}\right)\psi_{r}\left(\theta_{1},\dots,\theta_{M}\right)\ket{0}.\label{eq:pert_trace_energystate}
+\end{equation}
+
+\end_inset
+
+Because of the cyclic symmetry of 
+\begin_inset Formula $T\left(\theta_{1},\cdots,\theta_{M}\right)$
+\end_inset
+
+, one can impose to 
+\begin_inset Formula $\psi_{r}$
+\end_inset
+
+ the constraint 
+\begin_inset Formula 
+\begin{equation}
+\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)=\left(-\right)^{s\left(M-1\right)}\psi_{r}\left(\theta_{2},\cdots,\theta_{M},\theta_{1}\right)\label{eq:pert_cyclicconstrtaint}
+\end{equation}
+
+\end_inset
+
+ without loss of generality.
+ The sign factor follows from that the measure of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:pert_trace_energystate"
+
+\end_inset
+
+ is multiplied by 
+\begin_inset Formula $\left(-\right)^{s\left(M-1\right)}$
+\end_inset
+
+ under the cyclic transformation 
+\begin_inset Formula $\theta_{i}\to\theta_{i+1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+For the following calculation, we shall assume the existance of the conjugate
+ function of 
+\begin_inset Formula $\bar{\psi}_{r}$
+\end_inset
+
+, which is normalized as 
+\begin_inset Formula 
+\begin{equation}
+\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\,\bar{\psi}_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\psi_{s}\left(\theta_{1},\cdots,\theta_{M}\right)=\delta_{rs},\label{eq:pert_normalization}
+\end{equation}
+
+\end_inset
+
+ and satisfies the completeness relation 
+\begin_inset Formula 
+\begin{equation}
+\sum_{r}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\bar{\psi}_{r}\left(\phi_{1},\cdots,\phi_{M}\right)=\delta^{\left(c\right)}\left(\theta-\phi\right).\label{eq:pert_completeness}
+\end{equation}
+
+\end_inset
+
+The superscript 
+\begin_inset Formula $\left(c\right)$
+\end_inset
+
+ stresses that the function 
+\begin_inset Formula $\delta^{\left(c\right)}\left(\theta-\phi\right)$
+\end_inset
+
+ behaves like the Dirac Delta function only when it is applied to a polynomial
+ obeying the constraint of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:pert_cyclicconstrtaint"
+
+\end_inset
+
+ and with c-numbers coefficients.
+ To give a few examples, 
+\begin_inset Formula 
+\[
+\delta^{\left(c\right)}\left(\theta-\phi\right)=\theta+\phi,\quad\text{when }M=1,\, s=1,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\delta^{c}\left(\theta-\phi\right)=\phi_{2}\phi_{1}+\theta_{2}\theta_{1}+\theta_{1}\phi_{2}-\theta_{2}\phi_{1},\quad\text{when }M=2,\, s=1.
+\]
+
+\end_inset
+
+When a polynomial of 
+\begin_inset Formula $\theta_{i}$
+\end_inset
+
+ with Grassmann value coefficients, one need to consider sign factor introduced
+ by exchange of the Delta function 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:pert_completeness"
+
+\end_inset
+
+ need to be twisted.
+ Particularly, we have 
+\begin_inset Formula 
+\[
+\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta_{1},\cdots,\theta_{M}\right)\sum_{r}\left(-\right)^{sM\bar{\psi}_{r}}\psi_{r}\left(\theta\right)\bar{\psi}_{r}\left(\phi\right)=\sum_{r}\left(-\right)^{sMT_{r}}T_{r}\bar{\psi}_{r}\left(\phi\right)=T\left(\theta_{1},\cdots,\theta_{M}\right).
+\]
+
+\end_inset
+
+For convenience, 
+\begin_inset Formula $T_{r}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{\psi}_{r}$
+\end_inset
+
+ in the supersctipt for 
+\begin_inset Formula $\left(-\right)$
+\end_inset
+
+ indicate the Grassmann oddnes.
+ 
+\end_layout
+
+\begin_layout Standard
+The action of 
+\begin_inset Formula $H$
+\end_inset
+
+ on single trace energy state is 
+\begin_inset Formula 
+\begin{eqnarray*}
+HT_{r}\ket{0} & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{l=k+2}^{M+k-1}\bar{h}_{kl}T\left(\theta_{l}\cdots\theta_{k}\right)T\left(\theta_{k+1}\cdots\theta_{l-1}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{p=1}^{M-2}\bar{h}_{k,k+p+1}T\left(\theta_{k+p+1}\cdots\theta_{k}\right)T\left(\theta_{k+1}\cdots\theta_{k+p}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{p=1}^{M-2}\bar{h}_{k,k+p+1}\sum_{s,t}\left(-\right)^{s\left(KT_{s}+LT_{t}\right)}T_{s}\bar{\psi}_{s}\left(\theta_{k+p+1}\cdots\theta_{k}\right)T_{t}\bar{\psi}_{t}\left(\theta_{k+1}\cdots\theta_{k+p}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{p=1}^{M-2}\sum_{k=1}^{M}\bar{h}_{k,k+p+1}\sum_{s,t}\left(-\right)^{s\left(KT_{s}+LT_{t}\right)}T_{t}T_{s}\bar{\psi}_{s}\left(\theta_{k+p+1}\cdots\theta_{k}\right)\bar{\psi}_{t}\left(\theta_{k+1}\cdots\theta_{k+p}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{p=1}^{M-2}\sum_{s,t}T_{t}T_{s}\ket{0}\left(-\right)^{s\left(KT_{s}+LT_{t}\right)+sM\left(T_{s}+T_{t}\right)}\int d\theta\,\sum_{k=1}^{M}\bar{h}_{k,k+p+1}\bar{\psi}_{s}\left(\theta_{k+p+1}\cdots\theta_{k}\right)\bar{\psi}_{t}\left(\theta_{k+1}\cdots\theta_{k+p}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{p=1}^{M-2}\sum_{s,t}T_{t}T_{s}\ket{0}\left(-\right)^{s\left(KT_{t}+LT_{s}\right)}\int d\theta\,\sum_{k=1}^{M}\bar{h}_{k,k+p+1}\bar{\psi}_{s}\left(\theta_{k+p+1}\cdots\theta_{k}\right)\bar{\psi}_{t}\left(\theta_{k+1}\cdots\theta_{k+p}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & \equiv & E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{L=1}^{M-2}\sum_{s,t}T_{t}T_{s}\ket{0}V_{str}^{\left(L\right)}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "ref"
+options "plain"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
