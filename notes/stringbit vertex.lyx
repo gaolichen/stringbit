@@ -794,7 +794,7 @@ Generalize the eigenfunctions and their conjugates to
 \begin_inset Formula $s>1$
 \end_inset
 
- case, we have 
+ case, we have the ground eigenfunction: 
 \begin_inset Formula 
 \[
 \psi_{0}=\prod_{i=1}^{s}\prod_{k=1}^{\left\lfloor \left(M-1\right)/2\right\rfloor }\left(c_{k}-s_{k}\alpha_{M-k}^{\left(i\right)}\alpha_{k}^{\left(i\right)}\right),
@@ -802,23 +802,408 @@ Generalize the eigenfunctions and their conjugates to
 
 \end_inset
 
- for odd 
+
+\begin_inset Formula 
+\[
+\bar{\psi}_{0}=\prod_{i=1}^{s}\prod_{k=1}^{\left\lfloor \left(M-1\right)/2\right\rfloor }\left(c_{k}-s_{k}\alpha_{M-k}^{\left(i\right)}\alpha_{k}^{\left(i\right)}\right)\alpha_{0}^{\left(i\right)},\quad\text{for odd }M,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\bar{\psi}_{0}=\prod_{i=1}^{s}\prod_{k=1}^{\left\lfloor \left(M-1\right)/2\right\rfloor }\left(c_{k}-s_{k}\alpha_{M-k}^{\left(i\right)}\alpha_{k}^{\left(i\right)}\right)\alpha_{0}^{\left(i\right)}\alpha_{M/2}^{\left(i\right)},\quad\text{for even }M.
+\]
+
+\end_inset
+
+ and general eigenfunction
+\begin_inset Formula 
+\[
+\psi=\prod_{i=1}^{s}\prod_{k=0}^{M-1}\left(F_{k}^{\dagger\left(i\right)}\right)^{\lambda_{k,i}}\psi_{0},\quad\bar{\psi}=\prod_{i=0}^{s-1}\prod_{k=1}^{M}\left(\tilde{F}_{M-k}^{\left(s-i\right)}\right)^{\lambda_{M-k,s-i}}\psi_{0},
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $\lambda_{k,i}$
+\end_inset
+
+ are either zero or one and 
+\begin_inset Formula 
+\[
+\sum_{i=1}^{s}\sum_{k=0}^{M-1}k\lambda_{k,i}=\begin{cases}
+nM & \quad\text{for even }s\left(M-1\right)\\
+\left(n+\frac{1}{2}\right)M & \quad\text{for odd }s\left(M-1\right)
+\end{cases}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\start_of_appendix
+The Hamiltonian and its action on color singlets
+\end_layout
+
+\begin_layout Standard
+The (anti)-communication relations among string bit creation and annihilation
+ operators is
+\begin_inset Formula 
+\begin{eqnarray}
+\left[\left(\phi_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta},\left(\bar{\phi}_{b_{1}\cdots b_{m}}\right)_{\gamma}^{\delta}\right]_{\pm} & \equiv & \left(\phi_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\left(\bar{\phi}_{b_{1}\cdots b_{m}}\right)_{\gamma}^{\delta}-\left(-1\right)^{mn}\left(\bar{\phi}_{b_{1}\cdots b_{m}}\right)_{\gamma}^{\delta}\left(\phi_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\nonumber \\
+ & = & \delta_{mn}\delta_{\alpha}^{\delta}\delta_{\gamma}^{\beta}\sum_{P}\left(-1\right)^{P}\delta_{a_{1}b_{P_{1}}}\cdots\delta_{a_{n}b_{P_{n}}}.\label{eq:App-H-commutation}
+\end{eqnarray}
+
+\end_inset
+
+ The creation operator 
+\begin_inset Formula $\bar{\phi}$
+\end_inset
+
+ creates a boson if 
+\begin_inset Formula $n$
+\end_inset
+
+ is even and fermion if 
+\begin_inset Formula $n$
+\end_inset
+
+ is odd.
+ The summation go through all permutations of 
+\begin_inset Formula $1,2,\dots,n$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The Hamiltonian in the paper can be written as 
+\begin_inset Formula 
+\[
+H_{S}=H_{1}+H_{2}+H_{3}+H_{4}+H_{5},
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $H_{i}$
+\end_inset
+
+ are
+\begin_inset Formula 
+\[
+H_{1}=\frac{2}{N}\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{s-2n}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{1}}\phi_{a_{1}\cdots a_{n}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+H_{2}=\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{bb_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{1}}\phi_{ba_{1}\cdots a_{n}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+H_{3}=\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{ba_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{bb_{1}\cdots b_{1}}\phi_{a_{1}\cdots a_{n}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+H_{4}=\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{bb_{1}\cdots b_{1}}\phi_{ba_{1}\cdots a_{n}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+H_{5}=-\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{ba_{1}\cdots a_{n}}\bar{\phi}_{bb_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{1}}\phi_{a_{1}\cdots a_{n}}.
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula $H_{S}$
+\end_inset
+
+ commutes with the supersymmetry operators 
+\begin_inset Formula 
+\[
+Q^{a}=\sum_{n=0}^{s-1}\frac{\left(-1\right)^{n}}{n!}\tr\left[e^{i\pi/4}\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{aa_{1}\cdots a_{n}}+e^{-i\pi/4}\bar{\phi}_{aa_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left\{ Q^{a},Q^{b}\right\} =2M\delta_{ab},
+\]
+
+\end_inset
+
+ which will guarantee equal numbers of bosonic and fermionic eigensates
+ at each energy level.
+ 
+\end_layout
+
+\begin_layout Standard
+Using the commutation relations 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:App-H-commutation"
+
+\end_inset
+
+, we otain the action of 
+\begin_inset Formula $H_{i}$
+\end_inset
+
+ on single trace states:
+\begin_inset Formula 
+\begin{eqnarray*}
+H_{1}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0} & = & 2\sum_{k=1}^{M}\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
+ &  & +\frac{2}{N}\sum_{k=1}^{M}\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)\sum_{l\neq k,k+1}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0}
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+H_{2}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0} & = & 2\sum_{k=1}^{M}\theta_{k}^{a}\frac{d}{d\theta_{k+1}^{a}}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
+ &  & +\frac{2}{N}\sum_{k=1}^{M}\sum_{l\neq k,k+1}\theta_{k}^{a}\frac{d}{d\theta_{l}^{a}}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+H_{3}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0} & = & 2\sum_{k=1}^{M}\theta_{k+1}^{a}\frac{d}{d\theta_{k}^{a}}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
+ &  & +\frac{2}{N}\sum_{k=1}^{M}\sum_{l\neq k,k+1}\theta_{l}^{a}\frac{d}{d\theta_{k}^{a}}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+H_{4}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0} & = & -2i\sum_{k=1}^{M}\theta_{k}^{a}\theta_{k+1}^{a}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
+ &  & -\frac{2i}{N}\sum_{k=1}^{M}\sum_{l\neq k,k+1}\theta_{k}^{a}\theta_{l}^{a}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+H_{5}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0} & = & -2i\sum_{k=1}^{M}\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{k+1}^{a}}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
+ &  & -\frac{2i}{N}\sum_{k=1}^{M}\sum_{l\neq k,k+1}\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{l}^{a}}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0}
+\end{eqnarray*}
+
+\end_inset
+
+ The action of 
+\begin_inset Formula $H_{i}$
+\end_inset
+
+ on double traces
+\begin_inset Formula 
+\begin{eqnarray*}
+H_{1}T\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right)\ket{0}_{\mathrm{Fussion}} & = & \frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)T\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\ket{0}\\
+ &  & +\frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\left(s-2\eta_{l}^{a}\frac{d}{d\eta_{l}^{a}}\right)T\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\ket{0}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+H_{2}T\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right)\ket{0}_{\mathrm{Fussion}} & = & \frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\theta_{k}^{a}\frac{d}{d\eta_{l}}T\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\ket{0}\\
+ &  & +\frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\eta_{l}^{a}\frac{d}{d\theta_{k}^{a}}T\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\ket{0}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Three Closed Bit Chain Overlap
+\end_layout
+
+\begin_layout Standard
+Divide the 
 \begin_inset Formula $M$
 \end_inset
 
+-bit chain into 
+\begin_inset Formula $L$
+\end_inset
 
+-bit and 
+\begin_inset Formula $K$
+\end_inset
+
+-bit chains.
+ Let 
+\begin_inset Formula $F_{n}^{\left(1\right)}$
+\end_inset
+
+, 
+\begin_inset Formula $1\leq n\leq L-1$
+\end_inset
+
+ be the 
+\begin_inset Formula $n-1$
+\end_inset
+
+ lowering operators of the first chain and 
+\begin_inset Formula $F_{m}^{\left(2\right)}$
+\end_inset
+
+, 
+\begin_inset Formula $1\leq m<K-1$
+\end_inset
+
+, be the lowering operators of the second chain.
+ Define zero mode operator
 \begin_inset Formula 
 \[
-\bar{\psi}_{0}=\prod_{i=1}^{s}\prod_{k=1}^{\left\lfloor \left(M-1\right)/2\right\rfloor }\left(c_{k}-s_{k}\alpha_{M-k}^{\left(i\right)}\alpha_{k}^{\left(i\right)}\right)\alpha_{0}^{\left(i\right)},\quad\text{for odd }M
+f_{0}=F_{0}^{\left(1\right)}\sqrt{\frac{K}{M}}-F_{0}^{\left(2\right)}\sqrt{\frac{L}{M}},\quad f_{0}^{\dagger}=F_{0}^{\left(1\right)\dagger}\sqrt{\frac{K}{M}}-F_{0}^{\left(2\right)\dagger}\sqrt{\frac{L}{M}}.
+\]
+
+\end_inset
+
+Let 
+\begin_inset Formula $f_{n}$
+\end_inset
+
+ be the 
+\begin_inset Formula $M-1$
+\end_inset
+
+ operators 
+\begin_inset Formula $f_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $F_{n}^{\left(1\right)}$
+\end_inset
+
+, 
+\begin_inset Formula $F_{n}^{\left(2\right)}$
+\end_inset
+
+, so that 
+\begin_inset Formula 
+\[
+\left\{ f_{m},f_{n}\right\} =0,\quad\left\{ f_{m},f_{n}^{\dagger}\right\} =\delta_{mn}.
+\]
+
+\end_inset
+
+ We can express the lowering operator of the large chain as 
+\begin_inset Formula 
+\[
+F_{m}=\sum_{n=0}^{M-2}\left(f_{0}C_{mn}+f_{n}^{\dagger}S_{mn}\right),
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $C_{mn}$
+\end_inset
+
+ and 
+\begin_inset Formula $S_{mn}$
+\end_inset
+
+ will be given later.
+ The anticommutation relations among 
+\begin_inset Formula $F_{m}$
+\end_inset
+
+ and 
+\begin_inset Formula $F_{m}^{\dagger}$
+\end_inset
+
+ require
+\begin_inset Formula 
+\[
+CS^{T}=-\left(CS^{T}\right)^{T},\quad CC^{\dagger}+SS^{\dagger}=I.
 \]
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+The ground state of the large chain can be expressed as
 \begin_inset Formula 
 \[
-\bar{\psi}_{0}=\prod_{i=1}^{s}\prod_{k=1}^{\left\lfloor \left(M-1\right)/2\right\rfloor }\left(c_{k}-s_{k}\alpha_{M-k}^{\left(i\right)}\alpha_{k}^{\left(i\right)}\right)\alpha_{0}^{\left(i\right)}\alpha_{M/2}^{\left(i\right)}
+\ket{G}=\exp\left(\frac{1}{2}\sum_{kl}M_{kl}f_{k}^{\dagger}f_{l}^{\dagger}\right)\ket{0}\left[\det\left(I+MM^{\dagger}\right)\right]^{-1/4},
 \]
+
+\end_inset
+
+ where 
+\begin_inset Formula $f_{k}\ket{0}=0$
+\end_inset
+
+ for 
+\begin_inset Formula $k=0,\cdots,M-2$
+\end_inset
+
+.
+ 
+\begin_inset Formula $F_{m}\ket{G}=0$
+\end_inset
+
+ implies 
+\begin_inset Formula 
+\[
+C_{mn}M_{nl}+S_{ml}=0.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The matrics 
+\begin_inset Formula $C$
+\end_inset
+
+, 
+\begin_inset Formula $S$
+\end_inset
+
+ are given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+C_{m0} & = & -\frac{1}{\sqrt{LK}}\frac{1-e^{-2\pi imL/M}}{1-e^{2i\pi m/M}}\cos\left(\frac{m\pi}{2M}-\frac{\pi}{4}\right),\\
+C_{mn1} & = & -\frac{1}{\sqrt{ML}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi i\left(n/L-m/M\right)}}\cos\left(\frac{n\pi}{2L}-\frac{m\pi}{2M}\right),\\
+C_{mn2} & = & \frac{1}{\sqrt{ML}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi i\left(n/K-m/M\right)}}\cos\left(\frac{n\pi}{2K}-\frac{m\pi}{2M}\right),\\
+S_{m0} & = & -\frac{1}{LK}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi im/M}}\cos\left(\frac{m\pi}{2M}+\frac{\pi}{4}\right),\\
+S_{mn1} & = & -\frac{1}{\sqrt{ML}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi im/M}}\cos\left(\frac{n\pi}{2L}+\frac{m\pi}{2M}\right),\\
+S_{mn2} & = & \frac{1}{\sqrt{MK}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi i\left(n/K+m/M\right)}}\cos\left(\frac{n\pi}{2K}+\frac{m\pi}{2M}\right).
+\end{eqnarray*}
 
 \end_inset
 
