@@ -387,6 +387,31 @@ W_{rst}=W_{rst}^{\left(1\right)}+W_{rst}^{\left(2\right)}=KL\int d^{M}\theta\,\,
 
 \end_layout
 
+\begin_layout Standard
+To calculate 
+\begin_inset Formula $V_{str}$
+\end_inset
+
+ and 
+\begin_inset Formula $W_{rst}$
+\end_inset
+
+, we need to the following:
+\end_layout
+
+\begin_layout Itemize
+The eigenfunctions 
+\begin_inset Formula $\psi_{r}$
+\end_inset
+
+ and their conjugates 
+\begin_inset Formula $\bar{\psi}_{r}$
+\end_inset
+
+.
+ 
+\end_layout
+
 \begin_layout Section
 Building Eigenfunctions
 \end_layout
@@ -844,6 +869,147 @@ nM & \quad\text{for even }s\left(M-1\right)\\
 
 \end_layout
 
+\begin_layout Standard
+So far we have constructed the eigenfunctions and their conjugates.
+ But to calculate 
+\begin_inset Formula $V$
+\end_inset
+
+ and 
+\begin_inset Formula $W$
+\end_inset
+
+, we need to express the eigenfunction of 
+\begin_inset Formula $M$
+\end_inset
+
+-bit chain in terms of eigenfunctions of two smaller chains.
+ Let 
+\begin_inset Formula $M=L+K$
+\end_inset
+
+, then we can express the lowering and raising operators of 
+\begin_inset Formula $M$
+\end_inset
+
+-bit chain in terms of those of 
+\begin_inset Formula $L$
+\end_inset
+
+-bit and 
+\begin_inset Formula $K$
+\end_inset
+
+-bit.
+ The work has done in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $f_{0},\, f_{1},\,\cdots,f_{M-2}$
+\end_inset
+
+ be operators defined as follows:
+\begin_inset Formula 
+\begin{eqnarray*}
+f_{0} & = & f_{0}=F_{0}^{\left(1\right)}\sqrt{\frac{K}{M}}-F_{0}^{\left(2\right)}\sqrt{\frac{L}{M}},\\
+f_{n} & = & F_{n}^{\left(1\right)},\quad1\leq n\leq L-1,\\
+f_{n+L} & = & F_{n}^{\left(2\right)},\quad1\leq n\leq K-1,
+\end{eqnarray*}
+
+\end_inset
+
+ then one can verify that 
+\begin_inset Formula 
+\[
+\left\{ f_{n},f_{m}\right\} =\left\{ f_{n}^{\dagger},f_{m}^{\dagger}\right\} =0,\quad\left\{ f_{n},f_{m}^{\dagger}\right\} =\delta_{nm}.
+\]
+
+\end_inset
+
+ The lowering operator of 
+\begin_inset Formula $M$
+\end_inset
+
+-bit chain can be written as 
+\begin_inset Formula 
+\[
+F_{m}=\sum_{n=0}^{M-2}\left(f_{0}C_{mn}+f_{n}^{\dagger}S_{mn}\right)
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $C$
+\end_inset
+
+and 
+\begin_inset Formula $S$
+\end_inset
+
+ satisfy 
+\begin_inset Formula 
+\[
+CS^{T}=-\left(CS^{T}\right)^{T},\quad CC^{\dagger}+SS^{\dagger}=I,
+\]
+
+\end_inset
+
+and the matrix elements of them are given in Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:app_three_chain_overlap"
+
+\end_inset
+
+.
+ The ground eigenfunction of large chain can be written as
+\begin_inset Formula 
+\[
+\psi_{0}^{\left(M\right)}=\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\psi_{0}^{\left(L\right)}\psi_{0}^{\left(K\right)}\left[\det\left(I+MM^{\dagger}\right)\right]^{-1/4},
+\]
+
+\end_inset
+
+ where the antisymmetric matrix 
+\begin_inset Formula $M$
+\end_inset
+
+ satisfies 
+\begin_inset Formula 
+\[
+CM+S=0.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For two general eigenfunction
+\begin_inset Formula 
+\[
+\psi_{s}^{\left(K\right)}=F_{k_{p}}^{\left(K\right)\dagger}F_{k_{p-1}}^{\left(K\right)\dagger}\cdots F_{k_{1}}^{\left(K\right)\dagger}\psi_{0}^{\left(K\right)}\equiv F^{\left(K\right)\dagger}\psi_{0}^{\left(K\right)},\quad\psi_{t}^{\left(L\right)}=F_{l_{q}}^{\left(K\right)\dagger}F_{l_{q-1}}^{\left(K\right)\dagger}\cdots F_{l_{1}}^{\left(K\right)\dagger}\psi_{0}^{\left(L\right)}\equiv F^{\left(L\right)\dagger}\psi_{0}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+V_{str}^{\left(L\right)}=\left(-\right)^{s\left(LT_{s}+KT_{t}\right)}M\int d\theta\,\bar{\psi}_{s}\left(\theta_{L+1}\cdots\theta_{M}\right)\bar{\psi}_{t}\left(\theta_{1}\cdots\theta_{L}\right)h_{M,L+1}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 \start_of_appendix
 The Hamiltonian and its action on color singlets
@@ -1042,6 +1208,12 @@ H_{2}T\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:app_three_chain_overlap"
+
+\end_inset
+
 Three Closed Bit Chain Overlap
 \end_layout
 
