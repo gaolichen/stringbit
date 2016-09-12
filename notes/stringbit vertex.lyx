@@ -253,9 +253,89 @@ HT\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right)\ke
  where 
 \begin_inset Formula 
 \begin{eqnarray*}
-\bar{h}_{kl} & = & 2\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)+2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}+2\theta_{l}^{a}\frac{d}{d\theta_{k}^{a}}-2i\theta_{k}^{a}\theta_{l}^{a}-2i\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{l}^{a}}\\
+\bar{h}_{kl} & = & 2\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)+2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}+2\theta_{l}^{a}\frac{d}{d\theta_{k}^{a}}-2i\theta_{k}^{a}\theta_{l}^{a}-2i\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{l}^{a}},\\
 \bar{h} & = & \sum_{k=1}^{M}\bar{h}_{k,k+1}.
 \end{eqnarray*}
+
+\end_inset
+
+The trace states can be expressed as 
+\begin_inset Formula 
+\begin{equation}
+T_{r}\ket{0}=\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta_{1},\cdots,\theta_{M}\right)\psi_{r}\left(\theta_{1},\dots,\theta_{M}\right)\ket{0},\label{eq:ham_trace_energystate}
+\end{equation}
+
+\end_inset
+
+ where 
+\begin_inset Formula $\psi_{r}$
+\end_inset
+
+ is the wave function.
+ Because of the cyclic symmetry of 
+\begin_inset Formula $T\left(\theta_{1},\cdots,\theta_{M}\right)$
+\end_inset
+
+, one can impose to 
+\begin_inset Formula $\psi_{r}$
+\end_inset
+
+ the constraint 
+\begin_inset Formula 
+\begin{equation}
+\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)=\left(-\right)^{s\left(M-1\right)}\psi_{r}\left(\theta_{2},\cdots,\theta_{M},\theta_{1}\right)\label{eq:ham_cyclicconstrtaint}
+\end{equation}
+
+\end_inset
+
+ without loss of generality.
+ The sign factor follows from that the measure of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_trace_energystate"
+
+\end_inset
+
+ is multiplied by 
+\begin_inset Formula $\left(-\right)^{s\left(M-1\right)}$
+\end_inset
+
+ under the cyclic transformation 
+\begin_inset Formula $\theta_{i}\to\theta_{i+1}$
+\end_inset
+
+.
+ Via integration on parts, we see that the action on 
+\begin_inset Formula $T\left(\theta_{1}\cdots\theta_{M}\right)$
+\end_inset
+
+ by 
+\begin_inset Formula $\bar{h}$
+\end_inset
+
+ is equivalent to the action on 
+\begin_inset Formula $\psi_{r}$
+\end_inset
+
+ by 
+\begin_inset Formula $h$
+\end_inset
+
+ defined as
+\begin_inset Formula 
+\begin{eqnarray*}
+h_{kl} & = & -2\left(s-s\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)-2\theta_{k}^{a}\frac{d}{d\theta_{l}^{a}}-2\theta_{k}^{a}\frac{d}{d\theta_{l}^{a}}-2i\theta_{k}^{a}\theta_{l}^{a}-2i\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{l}^{a}},\\
+h & = & \sum_{k=1}^{M}h_{k,k+1}.
+\end{eqnarray*}
+
+\end_inset
+
+ The energy eigenstate of trace states are equivalent to the eigenfunction
+ of the equation 
+\begin_inset Formula 
+\begin{equation}
+h\psi_{r}\left(\theta_{1},\dots,\theta_{M}\right)=E_{r}\psi_{r}\left(\theta_{1},\dots,\theta_{M}\right).\label{eq:ham_eigenequation}
+\end{equation}
 
 \end_inset
 
@@ -263,69 +343,28 @@ HT\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right)\ke
 \end_layout
 
 \begin_layout Standard
-Let us breifly recap the 
-\begin_inset Formula $1/N$
-\end_inset
-
- perturbation discussion of 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Thorn:2015wli"
+Let us solve the eigenvalue problem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ham_eigenequation"
 
 \end_inset
 
 .
- In the language of 
-\begin_inset Formula $\theta$
-\end_inset
-
-, the zero order energy eigenvalue 
-\begin_inset Formula $E_{r}$
-\end_inset
-
- and the corresponding eigenfunction 
-\begin_inset Formula $\psi_{r}\left(\theta_{1},\dots,\theta_{M}\right)$
-\end_inset
-
-are determined by 
-\begin_inset Formula 
-\begin{equation}
-h\psi_{r}\left(\theta_{1},\dots,\theta_{M}\right)=E_{r}\psi_{r}\left(\theta_{1},\dots,\theta_{M}\right).\label{eq:pert_eigenequation}
-\end{equation}
-
-\end_inset
-
- Then one can express the single trace energy eigenstate as 
-\begin_inset Formula 
-\begin{equation}
-T_{r}\ket{0}=\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta_{1},\cdots,\theta_{M}\right)\psi_{r}\left(\theta_{1},\dots,\theta_{M}\right)\ket{0}.\label{eq:pert_trace_energystate}
-\end{equation}
-
-\end_inset
-
-To calculate 
-\begin_inset Formula $V_{str}$
-\end_inset
-
- and 
-\begin_inset Formula $W_{str}$
-\end_inset
-
-, we need to build the eigenfunction 
-\begin_inset Formula $\psi_{r}$
-\end_inset
-
- and its conjugate 
-\begin_inset Formula $\bar{\psi}_{r}$
-\end_inset
-
-.
- It can be done by diagonizing 
+ Because each term in 
 \begin_inset Formula $h$
 \end_inset
 
-.
- 
+ contains only variables or derivatives of the same component 
+\begin_inset Formula $a$
+\end_inset
+
+, it is suffice to solve the equation with only one component.
+ We therefore suppress the spinor index 
+\begin_inset Formula $a$
+\end_inset
+
+ in the following calculation.
 \end_layout
 
 \begin_layout Standard
@@ -387,14 +426,14 @@ h=2\sum_{n=1}^{M-1}\Big[\left(\alpha_{n}\alpha_{M-n}+\beta_{n}\beta_{M-n}\right)
 
 \end_inset
 
-We seek for eigenoperator of the form 
+We now seek for eigenoperator of the form 
 \begin_inset Formula $F_{k}=r_{k}\alpha_{k}+\beta_{k}$
 \end_inset
 
  satisfying
 \begin_inset Formula 
 \begin{equation}
-\left[h,F_{k}\right]=\epsilon_{k}F_{k}.\label{eq:eigen_operator_eq}
+\left[h,F_{k}\right]=\epsilon_{k}F_{k}.\label{eq:ham_operator_eq}
 \end{equation}
 
 \end_inset
@@ -409,7 +448,7 @@ reference "eq:eigen_h"
  into 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:eigen_operator_eq"
+reference "eq:ham_operator_eq"
 
 \end_inset
 
@@ -424,7 +463,7 @@ reference "eq:eigen_operator_eq"
  By proper normalization, we obtain the lowering and raising and operators
 \begin_inset Formula 
 \begin{equation}
-F_{k}=s_{k}\alpha_{k}+c_{k}\beta_{k},\quad\bar{F}_{k}=c_{k}\alpha_{k}-s_{k}\beta_{k},\quad k=1,\cdots,M-1,\label{eq:eign_F_Fbar}
+F_{k}=s_{k}\alpha_{k}+c_{k}\beta_{k},\quad\bar{F}_{k}=c_{k}\alpha_{k}-s_{k}\beta_{k},\quad k=1,\cdots,M-1,\label{eq:ham_F_Fbar}
 \end{equation}
 
 \end_inset
@@ -440,15 +479,29 @@ c_{k}=\cos\left(\frac{\pi}{4}-\frac{k\pi}{2M}\right),\quad s_{k}=\sin\left(\frac
 We define the zero modes as 
 \begin_inset Formula 
 \begin{equation}
-F_{0}=F_{M}=\beta_{0},\quad\bar{F}_{0}=\bar{F}_{M}=\alpha_{0}.\label{eq:eigen_F0}
+F_{0}=F_{M}=\beta_{0},\quad\bar{F}_{0}=\bar{F}_{M}=\alpha_{0}.\label{eq:ham_F0}
 \end{equation}
 
 \end_inset
 
-Then we have 
+Using 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_F_Fbar"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_F0"
+
+\end_inset
+
+, we have 
 \begin_inset Formula 
 \begin{equation}
-F_{k}^{\dagger}=\bar{F}_{M-k},\quad0\leq k\leq M-1,\label{eq:eign_Fdagger}
+F_{k}^{\dagger}=\bar{F}_{M-k},\quad0\leq k\leq M-1,\label{eq:ham_Fdagger}
 \end{equation}
 
 \end_inset
@@ -456,7 +509,7 @@ F_{k}^{\dagger}=\bar{F}_{M-k},\quad0\leq k\leq M-1,\label{eq:eign_Fdagger}
  and the anticommutation relations among these operators:
 \begin_inset Formula 
 \begin{equation}
-\left\{ F_{k},F_{l}\right\} =\left\{ F_{k}^{\dagger},F_{l}^{\dagger}\right\} =0,\quad\left\{ F_{k},F_{l}^{\dagger}\right\} =\delta_{kl},\quad0\leq k,l\leq M-1.\label{eq:eign_F_anticommutation}
+\left\{ F_{k},F_{l}\right\} =\left\{ F_{k}^{\dagger},F_{l}^{\dagger}\right\} =0,\quad\left\{ F_{k},F_{l}^{\dagger}\right\} =\delta_{kl},\quad0\leq k,l\leq M-1.\label{eq:ham_F_anticommutation}
 \end{equation}
 
 \end_inset
@@ -465,10 +518,18 @@ F_{k}^{\dagger}=\bar{F}_{M-k},\quad0\leq k\leq M-1,\label{eq:eign_Fdagger}
 \end_layout
 
 \begin_layout Standard
-To construct the ground eigenfunction, we notice that
+To construct the ground eigenfunction 
+\begin_inset Formula $\psi_{0}$
+\end_inset
+
+ satisfying 
+\begin_inset Formula $F_{m}\psi_{0}=0$
+\end_inset
+
+, we notice that
 \begin_inset Formula 
 \[
-F_{k}\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right)=F_{M-k}\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right)=0,
+F_{k}\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right)=F_{M-k}\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right)=0,\quad1\leq k\leq M-1,
 \]
 
 \end_inset
@@ -476,7 +537,7 @@ F_{k}\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right)=F_{M-k}\left(c_{k}-s_{k}\alp
  and
 \begin_inset Formula 
 \[
-\left\{ F_{k},c_{l}-s_{l}\alpha_{M-l}\alpha_{l}\right\} =\left\{ F_{M-k},c_{l}-s_{l}\alpha_{M-l}\alpha_{l}\right\} =0,\quad1\leq k\neq l\leq M-1.
+\left[F_{k},c_{l}-s_{l}\alpha_{M-l}\alpha_{l}\right]=\left[F_{M-k},c_{l}-s_{l}\alpha_{M-l}\alpha_{l}\right]=0,\quad k\neq l,\,0\leq k\leq M-1,\,1\leq\neq l\leq M-1.
 \]
 
 \end_inset
@@ -513,7 +574,7 @@ F_{k}\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right)=F_{M-k}\left(c_{k}-s_{k}\alp
 , from which it follow that the the cyclic symmetry 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:pert_cyclicconstrtaint"
+reference "eq:ham_cyclicconstrtaint"
 
 \end_inset
 
@@ -523,22 +584,68 @@ reference "eq:pert_cyclicconstrtaint"
 \sum_{i=1}^{p}k_{i}=\begin{cases}
 nM & \quad\text{for odd }M\\
 \left(n+\frac{1}{2}\right)M & \quad\text{for even }M
-\end{cases}.\label{eq:eigen_cyclic_constraint}
+\end{cases}.\label{eq:ham_cyclic_constraint}
 \end{equation}
 
 \end_inset
 
-To conjugate the conjugate of the ground eigenfunction, we need to handle
- the odd and even 
-\begin_inset Formula $M$
+
+\end_layout
+
+\begin_layout Standard
+To calculation the 
+\begin_inset Formula $1/N$
 \end_inset
 
- cases seperately.
+ expansion, we need to find the conjugate function of the eigenfunction
+ 
+\begin_inset Formula $\psi_{r}$
+\end_inset
+
+, which denoted as 
+\begin_inset Formula $\bar{\psi}_{r}$
+\end_inset
+
+.
+ The conjugate function should satisfy the normalization condition 
+\begin_inset Formula 
+\begin{equation}
+\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\,\bar{\psi}_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\psi_{s}\left(\theta_{1},\cdots,\theta_{M}\right)=\delta_{rs},\label{eq:pert_normalization-1}
+\end{equation}
+
+\end_inset
+
+ and the completeness relation 
+\begin_inset Formula 
+\begin{equation}
+\sum_{r}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\bar{\psi}_{r}\left(\phi_{1},\cdots,\phi_{M}\right)=\delta^{\left(c\right)}\left(\theta-\phi\right).\label{eq:pert_completeness-1}
+\end{equation}
+
+\end_inset
+
+We stress that 
+\begin_inset Formula $\delta^{\left(c\right)}\left(\theta-\phi\right)$
+\end_inset
+
+ behaves like the Dirac Delta function only when it is applied to a polynomial
+ obeying the constraint of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_cyclicconstrtaint"
+
+\end_inset
+
+ and with c-numbers coefficients.
+ We first find the conjugate function of 
+\begin_inset Formula $\psi_{0}$
+\end_inset
+
+.
  For odd 
 \begin_inset Formula $M$
 \end_inset
 
-,
+, we have
 \begin_inset Formula 
 \[
 \bar{\psi}_{0}=\left(-i\right)^{\left\lfloor M/2\right\rfloor }\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right),
@@ -551,10 +658,6 @@ and for even
 \end_inset
 
 , 
-\begin_inset Formula $s$
-\end_inset
-
- 
 \begin_inset Formula 
 \[
 \bar{\psi}_{0}=\left(-i\right)^{M/2+1}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\alpha_{0}\alpha_{M/2}.
@@ -767,43 +870,6 @@ nM & \quad\text{for even }s\left(M-1\right)\\
 \end_layout
 
 \begin_layout Standard
-Because of the cyclic symmetry of 
-\begin_inset Formula $T\left(\theta_{1},\cdots,\theta_{M}\right)$
-\end_inset
-
-, one can impose to 
-\begin_inset Formula $\psi_{r}$
-\end_inset
-
- the constraint 
-\begin_inset Formula 
-\begin{equation}
-\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)=\left(-\right)^{s\left(M-1\right)}\psi_{r}\left(\theta_{2},\cdots,\theta_{M},\theta_{1}\right)\label{eq:pert_cyclicconstrtaint}
-\end{equation}
-
-\end_inset
-
- without loss of generality.
- The sign factor follows from that the measure of 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:pert_trace_energystate"
-
-\end_inset
-
- is multiplied by 
-\begin_inset Formula $\left(-\right)^{s\left(M-1\right)}$
-\end_inset
-
- under the cyclic transformation 
-\begin_inset Formula $\theta_{i}\to\theta_{i+1}$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
 For the following calculation, we shall assume the existance of the conjugate
  function of 
 \begin_inset Formula $\bar{\psi}_{r}$
@@ -825,24 +891,7 @@ For the following calculation, we shall assume the existance of the conjugate
 
 \end_inset
 
-The superscript 
-\begin_inset Formula $\left(c\right)$
-\end_inset
-
- stresses that the function 
-\begin_inset Formula $\delta^{\left(c\right)}\left(\theta-\phi\right)$
-\end_inset
-
- behaves like the Dirac Delta function only when it is applied to a polynomial
- obeying the constraint of 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:pert_cyclicconstrtaint"
-
-\end_inset
-
- and with c-numbers coefficients.
- To give a few examples, 
+To give a few examples, 
 \begin_inset Formula 
 \[
 \delta^{\left(c\right)}\left(\theta-\phi\right)=\theta+\phi,\quad\text{when }M=1,\, s=1,
@@ -954,7 +1003,7 @@ reference "eq:pert_Vstr"
 and applying
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:pert_cyclicconstrtaint"
+reference "eq:ham_cyclicconstrtaint"
 
 \end_inset
 
@@ -1017,7 +1066,7 @@ W_{rst}^{\left(2\right)}=\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}
  Using the property of 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:pert_cyclicconstrtaint"
+reference "eq:ham_cyclicconstrtaint"
 
 \end_inset
 
