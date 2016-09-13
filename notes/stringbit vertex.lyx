@@ -628,7 +628,7 @@ We stress that
 \end_inset
 
  behaves like the Dirac Delta function only when it is applied to a polynomial
- obeying the constraint of 
+ constrained by 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:ham_cyclicconstrtaint"
@@ -636,7 +636,49 @@ reference "eq:ham_cyclicconstrtaint"
 \end_inset
 
  and with c-numbers coefficients.
- We first find the conjugate function of 
+ When a polynomial of 
+\begin_inset Formula $\theta_{i}$
+\end_inset
+
+ with Grassmann value coefficients, we need to compensate the negative sign
+ introduced by exchange of the 
+\begin_inset Formula $\theta_{i}$
+\end_inset
+
+ with the Grassmann value coefficients.
+ Particularly, we have 
+\begin_inset Formula 
+\[
+\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta_{1},\cdots,\theta_{M}\right)\sum_{r}\left(-\right)^{sM\bar{\psi}_{r}}\psi_{r}\left(\theta\right)\bar{\psi}_{r}\left(\phi\right)=\sum_{r}\left(-\right)^{sMT_{r}}T_{r}\bar{\psi}_{r}\left(\phi\right)=T\left(\theta_{1},\cdots,\theta_{M}\right),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $T_{r}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{\psi}_{r}$
+\end_inset
+
+ in the supersctipt of 
+\begin_inset Formula $\left(-\right)$
+\end_inset
+
+ indicate the Grassmann oddness of 
+\begin_inset Formula $T_{r}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{\psi}_{r}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Standard
+We first find the conjugate function of 
 \begin_inset Formula $\psi_{0}$
 \end_inset
 
@@ -724,7 +766,7 @@ For constructing the general conjugate function of
  as 
 \begin_inset Formula 
 \[
-\int d^{M}\theta\,\left[F_{k}^{+}\psi\left(\theta\right)\right]\chi\left(\theta\right)=\int d^{M}\theta\,\psi\left(\theta\right)\left[F_{k}\chi\left(\theta\right)\right].
+\int d^{M}\theta\,\left[\tilde{F}_{k}^{+}\psi\left(\theta\right)\right]\chi\left(\theta\right)=\int d^{M}\theta\,\psi\left(\theta\right)\left[F_{k}\chi\left(\theta\right)\right].
 \]
 
 \end_inset
@@ -740,7 +782,7 @@ Likewise, for grassmanian odd function
  as 
 \begin_inset Formula 
 \[
-\int d^{M}\theta\,\left[F_{k}^{-}\psi\left(\theta\right)\right]\chi\left(\theta\right)=\int d^{M}\theta\,\psi\left(\theta\right)\left[F_{k}\chi\left(\theta\right)\right].
+\int d^{M}\theta\,\left[\tilde{F}_{k}^{-}\psi\left(\theta\right)\right]\chi\left(\theta\right)=\int d^{M}\theta\,\psi\left(\theta\right)\left[F_{k}\chi\left(\theta\right)\right].
 \]
 
 \end_inset
@@ -748,7 +790,7 @@ Likewise, for grassmanian odd function
 It follows that 
 \begin_inset Formula 
 \[
-F_{0}^{\pm}=\mp\beta_{0},\quad F_{k}^{\pm}=\pm\left(s_{k}\alpha_{k}-c_{k}\beta_{k}\right),\quad1\leq k\leq M-1.
+\tilde{F}_{0}^{\pm}=\mp\beta_{0},\quad\tilde{F}_{k}^{\pm}=\pm\left(s_{k}\alpha_{k}-c_{k}\beta_{k}\right),\quad1\leq k\leq M-1.
 \]
 
 \end_inset
@@ -784,14 +826,12 @@ F_{0}^{\pm}=\mp\beta_{0},\quad F_{k}^{\pm}=\pm\left(s_{k}\alpha_{k}-c_{k}\beta_{
 .
  To verify the normalization condition, we have
 \begin_inset Formula 
-\begin{eqnarray}
-\int d^{M}\theta\,\bar{\psi}\psi & = & \int d^{M}\theta\,\left(\tilde{F}_{k_{p}}\tilde{F}_{k_{p-1}}\cdots F_{k_{1}}\bar{\psi}_{0}\right)F_{k_{1}}^{\dagger}\cdots F_{k_{p}}^{\dagger}\psi_{0}\nonumber \\
- & = & \int d^{M}\theta\,\left(\tilde{F}_{k_{p}}\tilde{F}_{k_{p-1}}\cdots F_{k_{2}}\bar{\psi}_{0}\right)F_{k_{1}}F_{k_{1}}^{\dagger}\cdots F_{k_{p}}^{\dagger}\psi_{0}\nonumber \\
- & = & \int d^{M}\theta\,\left(\tilde{F}_{k_{p}}\tilde{F}_{k_{p-1}}\cdots F_{k_{2}}\bar{\psi}_{0}\right)F_{k_{2}}^{\dagger}\cdots F_{k_{p}}^{\dagger}\psi_{0}\nonumber \\
- & = & \cdots\nonumber \\
- & = & \int d^{M}\theta\,\bar{\psi}_{0}\psi_{0}\nonumber \\
- & = & 1.\label{eq:psi-psibar-product}
-\end{eqnarray}
+\begin{eqnarray*}
+\int d^{M}\theta\,\bar{\psi}\psi & = & \int d^{M}\theta\,\left(\tilde{F}_{k_{p}}\tilde{F}_{k_{p-1}}\cdots\tilde{F}_{k_{1}}\bar{\psi}_{0}\right)F_{k_{1}}^{\dagger}\cdots F_{k_{p}}^{\dagger}\psi_{0}\\
+ & = & \int d^{M}\theta\,\bar{\psi}_{0}F_{k_{p}}F_{k_{p-1}}\cdots F_{k_{1}}F_{k_{1}}^{\dagger}\cdots F_{k_{p}}^{\dagger}\psi_{0}\\
+ & = & \int d^{M}\theta\,\bar{\psi}_{0}\psi_{0}\\
+ & = & 1
+\end{eqnarray*}
 
 \end_inset
 
@@ -808,35 +848,41 @@ reference "eq:pert_completeness"
 \end_layout
 
 \begin_layout Standard
-Generalize the eigenfunctions and their conjugates to 
-\begin_inset Formula $s>1$
+For arbitrary 
+\begin_inset Formula $s$
 \end_inset
 
- case, we have the ground eigenfunction: 
+ case, the 
+\begin_inset Formula $\psi_{0}$
+\end_inset
+
+ is the product of the ground eigenfunction of each components: 
 \begin_inset Formula 
 \[
-\psi_{0}=\prod_{i=1}^{s}\prod_{k=1}^{\left\lfloor \left(M-1\right)/2\right\rfloor }\left(c_{k}-s_{k}\alpha_{M-k}^{\left(i\right)}\alpha_{k}^{\left(i\right)}\right),
+\psi_{0}=\psi_{0}^{\left(1\right)}\psi_{0}^{\left(2\right)}\cdots\psi_{0}^{\left(s\right)}.
 \]
 
 \end_inset
 
-
+ Likewise, 
 \begin_inset Formula 
 \[
-\bar{\psi}_{0}=\prod_{i=1}^{s}\prod_{k=1}^{\left\lfloor \left(M-1\right)/2\right\rfloor }\left(c_{k}-s_{k}\alpha_{M-k}^{\left(i\right)}\alpha_{k}^{\left(i\right)}\right)\alpha_{0}^{\left(i\right)},\quad\text{for odd }M,
+\bar{\psi}_{0}=\left(-1\right)^{s\left(s-1\right)M\left(M-1\right)/4}\bar{\psi}_{0}^{\left(s\right)}\cdots\bar{\psi}_{0}^{\left(1\right)},
 \]
 
 \end_inset
 
-
-\begin_inset Formula 
-\[
-\bar{\psi}_{0}=\prod_{i=1}^{s}\prod_{k=1}^{\left\lfloor \left(M-1\right)/2\right\rfloor }\left(c_{k}-s_{k}\alpha_{M-k}^{\left(i\right)}\alpha_{k}^{\left(i\right)}\right)\alpha_{0}^{\left(i\right)}\alpha_{M/2}^{\left(i\right)},\quad\text{for even }M.
-\]
-
+ where the sign factor comes from reorder of the integration variables from
+ 
+\begin_inset Formula $d^{s}\theta_{1}\cdots d^{s}\theta_{M}$
 \end_inset
 
- and general eigenfunction
+ to 
+\begin_inset Formula $\prod_{i=1}^{s}d\theta_{1}^{\left(i\right)}\cdots d\theta_{M}^{\left(i\right)}$
+\end_inset
+
+.
+ The general eigenfunction
 \begin_inset Formula 
 \[
 \psi=\prod_{i=1}^{s}\prod_{k=0}^{M-1}\left(F_{k}^{\dagger\left(i\right)}\right)^{\lambda_{k,i}}\psi_{0},\quad\bar{\psi}=\prod_{i=0}^{s-1}\prod_{k=1}^{M}\left(\tilde{F}_{M-k}^{\left(s-i\right)}\right)^{\lambda_{M-k,s-i}}\psi_{0},
@@ -863,85 +909,179 @@ nM & \quad\text{for even }s\left(M-1\right)\\
 \end_layout
 
 \begin_layout Section
-\begin_inset Formula $1/N$
-\end_inset
-
- expansion Perturbation
+Three Chain overlap
 \end_layout
 
 \begin_layout Standard
-For the following calculation, we shall assume the existance of the conjugate
- function of 
-\begin_inset Formula $\bar{\psi}_{r}$
+So far we have constructed the eigenfunctions and their conjugates.
+ But to calculate the 
+\begin_inset Formula $1/N$
 \end_inset
 
-, which is normalized as 
-\begin_inset Formula 
-\begin{equation}
-\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\,\bar{\psi}_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\psi_{s}\left(\theta_{1},\cdots,\theta_{M}\right)=\delta_{rs},\label{eq:pert_normalization}
-\end{equation}
-
+ expansion, we also need to establish the relation between the eigenoperators
+ between 
+\begin_inset Formula $M$
 \end_inset
 
- and satisfies the completeness relation 
-\begin_inset Formula 
-\begin{equation}
-\sum_{r}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\bar{\psi}_{r}\left(\phi_{1},\cdots,\phi_{M}\right)=\delta^{\left(c\right)}\left(\theta-\phi\right).\label{eq:pert_completeness}
-\end{equation}
-
+-bit chain and the ones of 
+\begin_inset Formula $L$
 \end_inset
 
-To give a few examples, 
-\begin_inset Formula 
-\[
-\delta^{\left(c\right)}\left(\theta-\phi\right)=\theta+\phi,\quad\text{when }M=1,\, s=1,
-\]
+ bits and 
+\begin_inset Formula $K=M-L$
+\end_inset
+
+ bits.
+ The work has done in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
 
 \end_inset
 
+.
+ Let us give a quick sketch of the results here.
+ 
+\end_layout
 
-\begin_inset Formula 
-\[
-\delta^{c}\left(\theta-\phi\right)=\phi_{2}\phi_{1}+\theta_{2}\theta_{1}+\theta_{1}\phi_{2}-\theta_{2}\phi_{1},\quad\text{when }M=2,\, s=1.
-\]
-
-\end_inset
-
-When a polynomial of 
-\begin_inset Formula $\theta_{i}$
-\end_inset
-
- with Grassmann value coefficients, one need to consider sign factor introduced
- by exchange of the Delta function 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:pert_completeness"
-
-\end_inset
-
- need to be twisted.
- Particularly, we have 
-\begin_inset Formula 
-\[
-\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta_{1},\cdots,\theta_{M}\right)\sum_{r}\left(-\right)^{sM\bar{\psi}_{r}}\psi_{r}\left(\theta\right)\bar{\psi}_{r}\left(\phi\right)=\sum_{r}\left(-\right)^{sMT_{r}}T_{r}\bar{\psi}_{r}\left(\phi\right)=T\left(\theta_{1},\cdots,\theta_{M}\right).
-\]
-
-\end_inset
-
-For convenience, 
-\begin_inset Formula $T_{r}$
+\begin_layout Standard
+Let 
+\begin_inset Formula $F_{m}^{\left(1\right)}$
 \end_inset
 
  and 
-\begin_inset Formula $\bar{\psi}_{r}$
+\begin_inset Formula $F_{n}^{\left(2\right)}$
 \end_inset
 
- in the supersctipt for 
-\begin_inset Formula $\left(-\right)$
+ be lowering operators of 
+\begin_inset Formula $L$
 \end_inset
 
- indicate the Grassmann oddness.
- 
+-bit and 
+\begin_inset Formula $K$
+\end_inset
+
+-bit chains.
+ Define a set of operators 
+\begin_inset Formula $f_{0},\, f_{1},\,\cdots,f_{M-2}$
+\end_inset
+
+ as 
+\begin_inset Formula 
+\begin{eqnarray*}
+f_{0} & = & f_{0}=F_{0}^{\left(1\right)}\sqrt{\frac{K}{M}}-F_{0}^{\left(2\right)}\sqrt{\frac{L}{M}},\\
+f_{n} & = & F_{n}^{\left(1\right)},\quad1\leq n\leq L-1,\\
+f_{n+L} & = & F_{n}^{\left(2\right)},\quad1\leq n\leq K-1.
+\end{eqnarray*}
+
+\end_inset
+
+ It is easy to verify that 
+\begin_inset Formula 
+\[
+\left\{ f_{n},f_{m}\right\} =\left\{ f_{n}^{\dagger},f_{m}^{\dagger}\right\} =0,\quad\left\{ f_{n},f_{m}^{\dagger}\right\} =\delta_{nm}.
+\]
+
+\end_inset
+
+Then the lowering operator of 
+\begin_inset Formula $M$
+\end_inset
+
+-bit chain can be written as 
+\begin_inset Formula 
+\[
+F_{m}=\sum_{n=0}^{M-2}\left(f_{0}C_{mn}+f_{n}^{\dagger}S_{mn}\right),\quad1\leq m\leq M-1
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $C$
+\end_inset
+
+and 
+\begin_inset Formula $S$
+\end_inset
+
+ satisfy 
+\begin_inset Formula 
+\[
+CS^{T}=-\left(CS^{T}\right)^{T},\quad CC^{\dagger}+SS^{\dagger}=I,
+\]
+
+\end_inset
+
+by the requirements of anticommutation relation among 
+\begin_inset Formula $F_{m}$
+\end_inset
+
+ and 
+\begin_inset Formula $F_{m}^{\dagger}$
+\end_inset
+
+.
+ The matrix elements of 
+\begin_inset Formula $C$
+\end_inset
+
+ and 
+\begin_inset Formula $S$
+\end_inset
+
+ are:
+\begin_inset Formula 
+\begin{eqnarray*}
+C_{m0} & = & -\frac{1}{\sqrt{LK}}\frac{1-e^{-2\pi imL/M}}{1-e^{2i\pi m/M}}\cos\left(\frac{m\pi}{2M}-\frac{\pi}{4}\right),\\
+C_{mn1} & = & -\frac{1}{\sqrt{ML}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi i\left(n/L-m/M\right)}}\cos\left(\frac{n\pi}{2L}-\frac{m\pi}{2M}\right),\\
+C_{mn2} & = & \frac{1}{\sqrt{ML}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi i\left(n/K-m/M\right)}}\cos\left(\frac{n\pi}{2K}-\frac{m\pi}{2M}\right),\\
+S_{m0} & = & -\frac{1}{LK}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi im/M}}\cos\left(\frac{m\pi}{2M}+\frac{\pi}{4}\right),\\
+S_{mn1} & = & -\frac{1}{\sqrt{ML}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi im/M}}\cos\left(\frac{n\pi}{2L}+\frac{m\pi}{2M}\right),\\
+S_{mn2} & = & \frac{1}{\sqrt{MK}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi i\left(n/K+m/M\right)}}\cos\left(\frac{n\pi}{2K}+\frac{m\pi}{2M}\right).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We then express the ground eigenfunction of large chain as
+\begin_inset Formula 
+\[
+\psi_{0}^{\left(M\right)}=\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\psi_{0}^{\left(L\right)}\psi_{0}^{\left(K\right)}\left[\det\left(I+MM^{\dagger}\right)\right]^{-1/4},
+\]
+
+\end_inset
+
+and impose the constraints 
+\begin_inset Formula $F_{m}\psi_{0}^{\left(M\right)}=0$
+\end_inset
+
+, which yields the relation 
+\begin_inset Formula 
+\[
+C_{mn}M_{nl}+S_{ml}=0.
+\]
+
+\end_inset
+
+ The conjugate function is
+\begin_inset Formula 
+\[
+\bar{\psi}_{0}^{\left(M\right)}=\widetilde{\exp\left(\frac{1}{2}\sum_{kl}f_{k}M_{kl}f_{l}\right)}\bar{\psi}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}\left[\det\left(I+MM^{\dagger}\right)\right]^{-1/4}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\begin_inset Formula $1/N$
+\end_inset
+
+ Expansion
 \end_layout
 
 \begin_layout Standard
@@ -1075,152 +1215,6 @@ reference "eq:ham_cyclicconstrtaint"
 \begin{equation}
 W_{rst}=W_{rst}^{\left(1\right)}+W_{rst}^{\left(2\right)}=KL\int d^{M}\theta\,\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{K}\theta_{K+1}\cdots\theta_{M}\right)\left(h_{K,K+1}+h_{M,1}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{K}\right)\psi_{t}\left(\theta_{K+1}\cdots\theta_{M}\right).\label{eq:pert_Wrst}
 \end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-To calculate 
-\begin_inset Formula $V_{str}$
-\end_inset
-
- and 
-\begin_inset Formula $W_{rst}$
-\end_inset
-
-, we need to the following:
-\end_layout
-
-\begin_layout Itemize
-The eigenfunctions 
-\begin_inset Formula $\psi_{r}$
-\end_inset
-
- and their conjugates 
-\begin_inset Formula $\bar{\psi}_{r}$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-So far we have constructed the eigenfunctions and their conjugates.
- But to calculate 
-\begin_inset Formula $V$
-\end_inset
-
- and 
-\begin_inset Formula $W$
-\end_inset
-
-, we need to express the eigenfunction of 
-\begin_inset Formula $M$
-\end_inset
-
--bit chain in terms of eigenfunctions of two smaller chains.
- Let 
-\begin_inset Formula $M=L+K$
-\end_inset
-
-, then we can express the lowering and raising operators of 
-\begin_inset Formula $M$
-\end_inset
-
--bit chain in terms of those of 
-\begin_inset Formula $L$
-\end_inset
-
--bit and 
-\begin_inset Formula $K$
-\end_inset
-
--bit.
- The work has done in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Thorn:2015wli"
-
-\end_inset
-
-.
- Let 
-\begin_inset Formula $f_{0},\, f_{1},\,\cdots,f_{M-2}$
-\end_inset
-
- be operators defined as follows:
-\begin_inset Formula 
-\begin{eqnarray*}
-f_{0} & = & f_{0}=F_{0}^{\left(1\right)}\sqrt{\frac{K}{M}}-F_{0}^{\left(2\right)}\sqrt{\frac{L}{M}},\\
-f_{n} & = & F_{n}^{\left(1\right)},\quad1\leq n\leq L-1,\\
-f_{n+L} & = & F_{n}^{\left(2\right)},\quad1\leq n\leq K-1,
-\end{eqnarray*}
-
-\end_inset
-
- then one can verify that 
-\begin_inset Formula 
-\[
-\left\{ f_{n},f_{m}\right\} =\left\{ f_{n}^{\dagger},f_{m}^{\dagger}\right\} =0,\quad\left\{ f_{n},f_{m}^{\dagger}\right\} =\delta_{nm}.
-\]
-
-\end_inset
-
- The lowering operator of 
-\begin_inset Formula $M$
-\end_inset
-
--bit chain can be written as 
-\begin_inset Formula 
-\[
-F_{m}=\sum_{n=0}^{M-2}\left(f_{0}C_{mn}+f_{n}^{\dagger}S_{mn}\right)
-\]
-
-\end_inset
-
- where 
-\begin_inset Formula $C$
-\end_inset
-
-and 
-\begin_inset Formula $S$
-\end_inset
-
- satisfy 
-\begin_inset Formula 
-\[
-CS^{T}=-\left(CS^{T}\right)^{T},\quad CC^{\dagger}+SS^{\dagger}=I,
-\]
-
-\end_inset
-
-and the matrix elements of them are given in Appendix 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:app_three_chain_overlap"
-
-\end_inset
-
-.
- The ground eigenfunction of large chain can be written as
-\begin_inset Formula 
-\[
-\psi_{0}^{\left(M\right)}=\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\psi_{0}^{\left(L\right)}\psi_{0}^{\left(K\right)}\left[\det\left(I+MM^{\dagger}\right)\right]^{-1/4},
-\]
-
-\end_inset
-
- where the antisymmetric matrix 
-\begin_inset Formula $M$
-\end_inset
-
- satisfies 
-\begin_inset Formula 
-\[
-CM+S=0.
-\]
 
 \end_inset
 
@@ -1443,181 +1437,6 @@ H_{1}T\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right
 \begin{eqnarray*}
 H_{2}T\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right)\ket{0}_{\mathrm{Fussion}} & = & \frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\theta_{k}^{a}\frac{d}{d\eta_{l}}T\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\ket{0}\\
  &  & +\frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\eta_{l}^{a}\frac{d}{d\theta_{k}^{a}}T\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\ket{0}.
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:app_three_chain_overlap"
-
-\end_inset
-
-Three Closed Bit Chain Overlap
-\end_layout
-
-\begin_layout Standard
-Divide the 
-\begin_inset Formula $M$
-\end_inset
-
--bit chain into 
-\begin_inset Formula $L$
-\end_inset
-
--bit and 
-\begin_inset Formula $K$
-\end_inset
-
--bit chains.
- Let 
-\begin_inset Formula $F_{n}^{\left(1\right)}$
-\end_inset
-
-, 
-\begin_inset Formula $1\leq n\leq L-1$
-\end_inset
-
- be the 
-\begin_inset Formula $n-1$
-\end_inset
-
- lowering operators of the first chain and 
-\begin_inset Formula $F_{m}^{\left(2\right)}$
-\end_inset
-
-, 
-\begin_inset Formula $1\leq m<K-1$
-\end_inset
-
-, be the lowering operators of the second chain.
- Define zero mode operator
-\begin_inset Formula 
-\[
-f_{0}=F_{0}^{\left(1\right)}\sqrt{\frac{K}{M}}-F_{0}^{\left(2\right)}\sqrt{\frac{L}{M}},\quad f_{0}^{\dagger}=F_{0}^{\left(1\right)\dagger}\sqrt{\frac{K}{M}}-F_{0}^{\left(2\right)\dagger}\sqrt{\frac{L}{M}}.
-\]
-
-\end_inset
-
-Let 
-\begin_inset Formula $f_{n}$
-\end_inset
-
- be the 
-\begin_inset Formula $M-1$
-\end_inset
-
- operators 
-\begin_inset Formula $f_{0}$
-\end_inset
-
-, 
-\begin_inset Formula $F_{n}^{\left(1\right)}$
-\end_inset
-
-, 
-\begin_inset Formula $F_{n}^{\left(2\right)}$
-\end_inset
-
-, so that 
-\begin_inset Formula 
-\[
-\left\{ f_{m},f_{n}\right\} =0,\quad\left\{ f_{m},f_{n}^{\dagger}\right\} =\delta_{mn}.
-\]
-
-\end_inset
-
- We can express the lowering operator of the large chain as 
-\begin_inset Formula 
-\[
-F_{m}=\sum_{n=0}^{M-2}\left(f_{0}C_{mn}+f_{n}^{\dagger}S_{mn}\right),
-\]
-
-\end_inset
-
- where 
-\begin_inset Formula $C_{mn}$
-\end_inset
-
- and 
-\begin_inset Formula $S_{mn}$
-\end_inset
-
- will be given later.
- The anticommutation relations among 
-\begin_inset Formula $F_{m}$
-\end_inset
-
- and 
-\begin_inset Formula $F_{m}^{\dagger}$
-\end_inset
-
- require
-\begin_inset Formula 
-\[
-CS^{T}=-\left(CS^{T}\right)^{T},\quad CC^{\dagger}+SS^{\dagger}=I.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The ground state of the large chain can be expressed as
-\begin_inset Formula 
-\[
-\ket{G}=\exp\left(\frac{1}{2}\sum_{kl}M_{kl}f_{k}^{\dagger}f_{l}^{\dagger}\right)\ket{0}\left[\det\left(I+MM^{\dagger}\right)\right]^{-1/4},
-\]
-
-\end_inset
-
- where 
-\begin_inset Formula $f_{k}\ket{0}=0$
-\end_inset
-
- for 
-\begin_inset Formula $k=0,\cdots,M-2$
-\end_inset
-
-.
- 
-\begin_inset Formula $F_{m}\ket{G}=0$
-\end_inset
-
- implies 
-\begin_inset Formula 
-\[
-C_{mn}M_{nl}+S_{ml}=0.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The matrics 
-\begin_inset Formula $C$
-\end_inset
-
-, 
-\begin_inset Formula $S$
-\end_inset
-
- are given by 
-\begin_inset Formula 
-\begin{eqnarray*}
-C_{m0} & = & -\frac{1}{\sqrt{LK}}\frac{1-e^{-2\pi imL/M}}{1-e^{2i\pi m/M}}\cos\left(\frac{m\pi}{2M}-\frac{\pi}{4}\right),\\
-C_{mn1} & = & -\frac{1}{\sqrt{ML}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi i\left(n/L-m/M\right)}}\cos\left(\frac{n\pi}{2L}-\frac{m\pi}{2M}\right),\\
-C_{mn2} & = & \frac{1}{\sqrt{ML}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi i\left(n/K-m/M\right)}}\cos\left(\frac{n\pi}{2K}-\frac{m\pi}{2M}\right),\\
-S_{m0} & = & -\frac{1}{LK}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi im/M}}\cos\left(\frac{m\pi}{2M}+\frac{\pi}{4}\right),\\
-S_{mn1} & = & -\frac{1}{\sqrt{ML}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi im/M}}\cos\left(\frac{n\pi}{2L}+\frac{m\pi}{2M}\right),\\
-S_{mn2} & = & \frac{1}{\sqrt{MK}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi i\left(n/K+m/M\right)}}\cos\left(\frac{n\pi}{2K}+\frac{m\pi}{2M}\right).
 \end{eqnarray*}
 
 \end_inset
