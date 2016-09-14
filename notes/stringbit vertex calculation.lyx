@@ -1104,7 +1104,7 @@ h_{kl}^{\left(0\right)} & = & \frac{2}{M}\sum_{n=1}^{M-1}\left(\alpha_{n}\beta_{
  &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left[\exp\left(2\pi i\frac{kn}{M}\right)-\exp\left(2\pi i\frac{ln}{M}\right)\right]\left(s_{n}-ic_{n}\right)F_{n}F_{0}\\
  & = & \frac{2}{M}\sum_{n=1}^{M-1}\left[\exp\left(-2\pi i\frac{kn}{M}\right)-\exp\left(-2\pi i\frac{ln}{M}\right)\right]\left(s_{n}+ic_{n}\right)F_{0}^{\dagger}F_{n}^{\dagger}\\
  &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left[\exp\left(-2\pi i\frac{kn}{M}\right)-\exp\left(-2\pi i\frac{ln}{M}\right)\right]\left(c_{n}-is_{n}\right)F_{n}^{\dagger}F_{0}+\mathrm{h.c.}\\
- & \equiv & \frac{2}{M}\sum_{n=1}^{M-1}\left(X_{n}F_{0}^{\dagger}F_{n}^{\dagger}+Y_{n}F_{n}^{\dagger}F_{0}\right)+\mathrm{h.c.}
+ & \equiv & \frac{2}{M}\sum_{n=1}^{M-1}X_{n}\left(F_{0}^{\dagger}F_{n}^{\dagger}-iF_{n}^{\dagger}F_{0}\right)+\mathrm{h.c.}
 \end{eqnarray*}
 
 \end_inset
@@ -1118,14 +1118,6 @@ X_{n}=\left[\exp\left(-2\pi i\frac{kn}{M}\right)-\exp\left(-2\pi i\frac{ln}{M}\r
 \end_inset
 
 
-\begin_inset Formula 
-\[
-Y_{n}=\left[\exp\left(-2\pi i\frac{kn}{M}\right)-\exp\left(-2\pi i\frac{ln}{M}\right)\right]\left(c_{n}-is_{n}\right)
-\]
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1133,7 +1125,7 @@ Y_{n}=\left[\exp\left(-2\pi i\frac{kn}{M}\right)-\exp\left(-2\pi i\frac{ln}{M}\r
 \begin{eqnarray*}
 h_{kl} & = & \frac{2}{M}\sum_{n,m=1}^{M-1}\left(\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}+A_{nm}F_{n}F_{m}+B_{nm}F_{n}^{\dagger}F_{m}\right)+\\
  &  & -\frac{2}{M}\cot\frac{\pi}{2M}+\frac{2}{M}\cot\frac{2\left(k-l\right)+1}{2M}\pi\\
- &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left(X_{n}F_{0}^{\dagger}F_{n}^{\dagger}+Y_{n}F_{n}^{\dagger}F_{0}\right)+\mathrm{h.c.}
+ &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left[X_{n}\left(F_{0}^{\dagger}F_{n}^{\dagger}-iF_{n}^{\dagger}F_{0}\right)+\mathrm{h.c.}\right]
 \end{eqnarray*}
 
 \end_inset
