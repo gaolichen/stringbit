@@ -1666,6 +1666,17 @@ Using the identity
 
 \begin_inset Formula 
 \begin{eqnarray*}
+\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},f_{m}\right] & = & \frac{1}{2}M_{kl}\left(f_{k}^{\dagger}\left\{ f_{l}^{\dagger},f_{m}\right\} -\left\{ f_{k}^{\dagger},f_{m}\right\} f_{l}^{\dagger}\right)\\
+ & = & \frac{1}{2}M_{kl}\left(f_{k}^{\dagger}\delta_{lm}-f_{l}^{\dagger}\delta_{km}\right)\\
+ & = & \frac{1}{2}M_{km}f_{k}^{\dagger}-\frac{1}{2}M_{ml}f_{l}^{\dagger}\\
+ & = & f_{k}^{\dagger}M_{km}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
 \left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{m}\right] & = & \frac{1}{2}\sum_{k,l}M_{kl}\left[f_{k}^{\dagger}f_{l}^{\dagger},F_{m}\right]\\
  & = & \frac{1}{2}\sum_{k,l}M_{kl}\left(f_{k}^{\dagger}\left\{ f_{l}^{\dagger},F_{m}\right\} -\left\{ f_{k}^{\dagger},F_{m}\right\} f_{l}\right)\\
  & = & \frac{1}{2}\sum_{k,l}M_{kl}\left(f_{k}^{\dagger}C_{mn}\delta_{ln}-C_{mn}\delta_{kn}f_{l}\right)\\
