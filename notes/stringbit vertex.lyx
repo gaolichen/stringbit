@@ -1637,9 +1637,10 @@ Case 4:
 \begin_inset Formula 
 \begin{eqnarray*}
 V_{st0} & = & \left(-\right)^{LT_{s}+KT_{t}}M\int d\theta\,\tilde{\mathbb{F}}_{s}^{\left(K\right)}\bar{\psi}_{0}^{\left(K\right)}\tilde{\mathbb{F}}_{t}^{\left(L\right)}\tilde{F}_{0}^{\left(L\right)}\bar{\psi}_{0}^{\left(L\right)}h_{kl}\psi_{0}^{\left(M\right)}\\
- & = & \left(-\right)^{LT_{s}+KT_{t}}M\int d\theta\,\bar{\psi}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}\mathbb{F}_{s}^{\left(K\right)}\mathbb{F}_{t}^{\left(L\right)}F_{0}^{\left(L\right)}h_{kl}\psi_{0}^{\left(M\right)}\\
- & = & \left(-\right)^{\left(K+1\right)\left(T_{t}-L\right)}M\int d\theta\,\bar{\psi}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}\mathbb{F}_{s}^{\left(K\right)}\mathbb{F}_{t}^{\left(L\right)}F_{0}^{\left(K\right)}h_{kl}\psi_{0}^{\left(M\right)}\\
- & = & \left(-\right)^{\left(K+1\right)\left(T_{t}-L\right)}M\left\langle \mathbb{F}_{s}^{\left(K\right)}\mathbb{F}_{t}^{\left(L\right)}\left(F_{0}\sqrt{\frac{K}{M}}-f_{0}\sqrt{\frac{L}{M}}\right)h_{kl}\exp\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\rangle 
+ & = & \left(-\right)^{K\left(T_{t}-L\right)}M\int d\theta\,\bar{\psi}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}\mathbb{F}_{s}^{\left(K\right)}\mathbb{F}_{t}^{\left(L\right)}F_{0}^{\left(L\right)}h_{kl}\psi_{0}^{\left(M\right)}\\
+ & = & \left(-\right)^{K\left(T_{t}-L\right)}M\left\langle \mathbb{F}_{s}^{\left(K\right)}\mathbb{F}_{t}^{\left(L\right)}\left(F_{0}\sqrt{\frac{L}{M}}+f_{0}\sqrt{\frac{K}{M}}\right)h_{kl}\exp\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\rangle \\
+ & = & \left(-\right)^{K\left(T_{t}-L\right)}2\sqrt{\frac{L}{M}}\left\langle \mathbb{F}_{s}^{\left(K\right)}\mathbb{F}_{t}^{\left(L\right)}f_{m}^{\dagger}\Sigma_{m}\exp\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\rangle \\
+ &  & -\left(-\right)^{K\left(T_{t}-L\right)}2\sqrt{\frac{K}{M}}\frac{2}{M}M_{k0}\left(\gamma^{\prime}+\Omega_{mn}\frac{d}{dM_{mn}}\right)\left\langle \mathbb{F}_{s}^{\left(K\right)}\mathbb{F}_{t}^{\left(L\right)}f_{k}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle 
 \end{eqnarray*}
 
 \end_inset
