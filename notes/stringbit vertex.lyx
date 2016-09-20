@@ -710,7 +710,7 @@ and for even
 To verify the normalization condition 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:pert_normalization"
+reference "eq:ham_normalization"
 
 \end_inset
 
@@ -1412,7 +1412,7 @@ We know consider only the case
  
 \begin_inset Formula 
 \begin{eqnarray*}
-V_{0tr}^{\left(L\right)} & = & \left(-\right)^{LT_{s}+KT_{t}}M\int d\theta\,\bar{\psi}_{s}\left(\theta_{L+1}\cdots\theta_{M}\right)\bar{\psi}_{t}\left(\theta_{1}\cdots\theta_{L}\right)h_{k,l}\psi_{0}^{\left(M\right)}\\
+V_{st0}^{\left(L\right)} & = & \left(-\right)^{LT_{s}+KT_{t}}M\int d\theta\,\bar{\psi}_{s}\left(\theta_{L+1}\cdots\theta_{M}\right)\bar{\psi}_{t}\left(\theta_{1}\cdots\theta_{L}\right)h_{k,l}\psi_{0}^{\left(M\right)}\\
  & = & \left(-\right)^{LT_{s}+KT_{t}}M\int d\theta\,\bar{\psi}_{s}\bar{\psi}_{t}\frac{2}{M}\left[\sum_{n,m=1}^{M-1}A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}+X_{n}F_{0}^{\dagger}F_{n}^{\dagger}+\gamma\right]\psi_{0}^{\left(M\right)},
 \end{eqnarray*}
 
@@ -1719,6 +1719,14 @@ B_{nm}^{\left(V\right)}=2\sin\frac{\left(n+m\right)\pi}{2M}+2\exp\left(2\pi i\fr
 
 \begin_inset Formula 
 \[
+X_{n}^{\left(V\right)}=\left[1-\exp\left(-2\pi i\frac{\left(L+1\right)n}{M}\right)\right]\left(s_{n}+ic_{n}\right).
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
 \text{const part of }h_{M,L+1}=-\frac{2}{M}\cot\frac{\pi}{2M}-\frac{2}{M}\cot\frac{2L+1}{2M}\pi\equiv\alpha.
 \]
 
@@ -1747,7 +1755,15 @@ A_{nm}^{\left(W\right)}=\left[1+\exp\left(2\pi i\frac{n+m}{M}\right)\right]\left
 
 \begin_inset Formula 
 \[
-B_{nm}^{\left(W\right)}=2\left[1+\exp\left(2\pi iK\frac{m-n}{M}\right)\right]\left[1+\exp\left(2\pi i\frac{m-n}{2M}\right)\right]\sin\frac{n+m}{2M}\pi
+B_{nm}^{\left(W\right)}=2\left[1+\exp\left(2\pi i\frac{m-n}{2M}\right)\right]\left[1+\exp\left(2\pi iK\frac{m-n}{M}\right)\right]\sin\frac{n+m}{2M}\pi
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+X_{n}^{\left(W\right)}=\left[1-\exp\left(-2\pi i\frac{n}{M}\right)\right]\left[1+\exp\left(-2\pi i\frac{Kn}{M}\right)\right]\left(s_{n}+ic_{n}\right).
 \]
 
 \end_inset
@@ -1756,6 +1772,157 @@ B_{nm}^{\left(W\right)}=2\left[1+\exp\left(2\pi iK\frac{m-n}{M}\right)\right]\le
 \begin_inset Formula 
 \[
 \text{const part}=-\frac{8}{M}\cot\frac{\pi}{2M}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Examples of 
+\begin_inset Formula $M=3$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Let us calculate a simple example for 
+\begin_inset Formula $M=3$
+\end_inset
+
+, where 
+\begin_inset Formula $L$
+\end_inset
+
+ can only be 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The eifenfunctions and their conjugates of 
+\begin_inset Formula $1$
+\end_inset
+
+-bit chain is
+\begin_inset Formula 
+\begin{eqnarray*}
+\psi_{0}^{\left(1\right)} & = & 1,\quad\bar{\psi}_{0}^{\left(1\right)}=\theta_{1}\\
+\psi_{1}^{\left(1\right)} & = & F_{0}^{\left(1\right)},\quad\bar{\psi}_{1}^{\left(1\right)}=\tilde{F}_{0}^{\left(1\right)}.
+\end{eqnarray*}
+
+\end_inset
+
+ For 
+\begin_inset Formula $2$
+\end_inset
+
+-bit chain 
+\begin_inset Formula 
+\begin{eqnarray*}
+\psi_{0}^{\left(2\right)} & = & 1,\quad\bar{\psi}_{0}^{\left(2\right)}=\alpha_{0}^{\left(2\right)}\alpha_{1}^{\left(2\right)}\\
+\psi_{1}^{\left(2\right)} & = & F_{1}^{\dagger}\psi_{0}^{\left(2\right)},\quad\bar{\psi}_{1}^{\left(2\right)}=\tilde{F}_{1}^{\left(2\right)}\bar{\psi}_{0}^{\left(2\right)}\\
+\psi_{2}^{\left(2\right)} & = & F_{1}^{\dagger}F_{0}^{\dagger}\psi_{0}^{\left(2\right)},\quad\bar{\psi}_{2}^{\left(2\right)}=\tilde{F}_{0}\tilde{F}_{1}\bar{\psi}_{0}^{\left(2\right)}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+V_{100}=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+V_{110}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+V_{200}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+V_{210}=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Perturbation of Energy Eigenvalue
+\end_layout
+
+\begin_layout Standard
+Let the energy eigenstate be 
+\begin_inset Formula 
+\[
+\ket{E}=T_{r}\ket{0}C_{r}^{1}+T_{s}T_{t}\ket{0}C_{st}^{2}+T_{s}T_{t}T_{u}\ket{0}C_{stu}^{2}+\cdots
+\]
+
+\end_inset
+
+ and impose 
+\begin_inset Formula $\left(H-E\right)\ket{0}=0$
+\end_inset
+
+, which implies
+\begin_inset Formula 
+\begin{eqnarray*}
+0 & = & \left(E_{r}-E\right)T_{r}\ket{0}C_{r}^{1}+\left(E_{s}+E_{t}-E\right)T_{s}T_{r}\ket{0}C_{st}^{2}\\
+ &  & +\left(E_{s}+E_{t}+E_{u}-E\right)T_{s}T_{t}T_{u}\ket{0}C_{stu}^{2}\\
+ &  & +\frac{1}{N}T_{s}T_{t}\ket{0}V_{tsr}+\frac{1}{N}T_{r}\ket{0}W_{rst}C_{st}^{2}+\cdots
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(E_{r}-E\right)C_{r}^{1}+\frac{1}{N}W_{rst}C_{st}^{2} & = & 0\\
+\left(E_{s}+E_{t}-E\right)C_{st}^{2}+\frac{1}{N}V_{tsr}C_{r}^{1}+C^{3}\mathrm{Terms} & = & 0,
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+C_{st}^{2} & = & \frac{1}{E-E_{s}-E_{t}}\frac{1}{N}V_{str}C_{r}^{1}+\mathcal{O}\left(N^{-2}\right)\\
+\left(E-E_{r}\right)C_{r}^{1} & = & \frac{1}{N^{2}}W_{rst}\frac{1}{E-E_{s}-E_{t}}V_{tsu}C_{u}^{1}+\mathcal{O}\left(N^{-3}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Delta_{ru}=\frac{1}{N^{2}}W_{rst}\frac{1}{E_{r}-E_{s}-E_{t}}V_{tsu}
 \]
 
 \end_inset
