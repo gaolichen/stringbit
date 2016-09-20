@@ -1344,8 +1344,7 @@ reference "eq:ham_F0"
 \begin_inset Formula 
 \begin{eqnarray*}
 h_{kl} & = & \frac{2}{M}\sum_{n,m=1}^{M-1}\left(A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}+A_{nm}F_{n}F_{m}+B_{nm}F_{n}^{\dagger}F_{m}\right)+\\
- &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left[X_{n}\left(F_{0}^{\dagger}F_{n}^{\dagger}-iF_{n}^{\dagger}F_{0}\right)+\mathrm{h.c.}\right]\\
- &  & -\frac{2}{M}\cot\frac{\pi}{2M}+\frac{2}{M}\cot\frac{2\left(k-l\right)+1}{2M}\pi,
+ &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left[X_{n}\left(F_{0}^{\dagger}F_{n}^{\dagger}-iF_{n}^{\dagger}F_{0}\right)+\mathrm{h.c.}\right]+\frac{2}{M}\gamma,
 \end{eqnarray*}
 
 \end_inset
@@ -1369,7 +1368,15 @@ B_{nm}=2\exp\left(2\pi ik\frac{m-n}{M}\right)\sin\frac{\left(n+m\right)\pi}{2M}+
 
 \begin_inset Formula 
 \[
-X_{n}=\left[\exp\left(-2\pi i\frac{kn}{M}\right)-\exp\left(-2\pi i\frac{ln}{M}\right)\right]\left(s_{n}+ic_{n}\right).
+X_{n}=\left[\exp\left(-2\pi i\frac{kn}{M}\right)-\exp\left(-2\pi i\frac{ln}{M}\right)\right]\left(s_{n}+ic_{n}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\gamma=-\cot\frac{\pi}{2M}+\cot\frac{2\left(k-l\right)+1}{2M}\pi.
 \]
 
 \end_inset
@@ -1379,7 +1386,79 @@ X_{n}=\left[\exp\left(-2\pi i\frac{kn}{M}\right)-\exp\left(-2\pi i\frac{ln}{M}\r
 \end_inset
 
  is in Appendix.
- 
+ For 
+\begin_inset Formula $h_{M,L+1}$
+\end_inset
+
+, these coefficients become
+\begin_inset Formula 
+\[
+A_{nm}^{\left(V\right)}=\sin\frac{m-n}{2M}\pi+\exp\left(2\pi i\frac{\left(L+1\right)\left(m+n\right)}{2M}\right)\sin\frac{\left(L+1/2\right)\left(m-n\right)\pi}{M},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+B_{nm}^{\left(V\right)}=2\sin\frac{\left(n+m\right)\pi}{2M}+2\exp\left(2\pi i\frac{L+1}{2}\frac{m-n}{M}\right)\sin\frac{\left(L+1/2\right)\left(m+n\right)}{M}\pi,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+X_{n}^{\left(V\right)}=\left[1-\exp\left(-2\pi i\frac{\left(L+1\right)n}{M}\right)\right]\left(s_{n}+ic_{n}\right).
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\gamma^{\left(V\right)}=-\cot\frac{\pi}{2M}-\cot\frac{2L+1}{2M}\pi
+\]
+
+\end_inset
+
+ For 
+\begin_inset Formula $h_{K,K+1}+h_{M,1}$
+\end_inset
+
+, these coefficients become
+\begin_inset Formula 
+\[
+A_{nm}^{\left(W\right)}=\left[1+\exp\left(2\pi i\frac{n+m}{M}\right)\right]\left[1+\exp\left(2\pi iK\frac{m+n}{M}\right)\right]\sin\frac{n-m}{2M}\pi
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+B_{nm}^{\left(W\right)}=2\left[1+\exp\left(2\pi i\frac{m-n}{2M}\right)\right]\left[1+\exp\left(2\pi iK\frac{m-n}{M}\right)\right]\sin\frac{n+m}{2M}\pi
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+X_{n}^{\left(W\right)}=\left[1-\exp\left(-2\pi i\frac{n}{M}\right)\right]\left[1+\exp\left(-2\pi i\frac{Kn}{M}\right)\right]\left(s_{n}+ic_{n}\right).
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\gamma^{\left(W\right)}=-4\cot\frac{\pi}{2M}.
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1418,19 +1497,10 @@ V_{st0}^{\left(L\right)} & = & \left(-\right)^{LT_{s}+KT_{t}}M\int d\theta\,\bar
 
 \end_inset
 
- where 
-\begin_inset Formula 
-\[
-\gamma=-\cot\frac{\pi}{2M}+\cot\frac{2\left(k-l\right)+1}{2M}\pi,
-\]
-
-\end_inset
-
-.
  
 \begin_inset Formula 
 \[
-\sum_{n,m=1}^{M-1}A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}\psi_{0}^{\left(M\right)}=\sum_{n,m=1}^{M-1}A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\psi_{0}^{\left(L\right)}\psi_{0}^{\left(K\right)}\left[\det\left(CC^{\dagger}\right)\right]^{1/4}
+\sum_{n,m=1}^{M-1}A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}\psi_{0}^{\left(M\right)}=\sum_{n,m=1}^{M-1}A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\psi_{0}^{\left(L\right)}\psi_{0}^{\left(K\right)}\left[\det\left(CC^{\dagger}\right)\right]^{1/4}.
 \]
 
 \end_inset
@@ -1526,22 +1596,16 @@ The zero modes need special attention.
 \begin_inset Formula $\bar{\psi}_{t}$
 \end_inset
 
- depends on whether or not each of them contains zero mode operator:
-\begin_inset Formula 
-\begin{eqnarray*}
-\bar{\psi}_{s} & = & \tilde{\mathbb{F}}_{s}\bar{\psi}_{0}^{\left(K\right)},\quad\bar{\psi}_{t}=\tilde{\mathbb{F}}_{t}\bar{\psi}_{0}^{\left(L\right)},\\
-\bar{\psi}_{s} & = & \tilde{\mathbb{F}}_{s}\tilde{F}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(K\right)},\quad\bar{\psi}_{t}=\tilde{\mathbb{F}}_{t}\tilde{F}_{0}^{\left(L\right)}\bar{\psi}_{0}^{\left(L\right)},\\
-\bar{\psi}_{s} & = & \tilde{\mathbb{F}}_{s}\tilde{F}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(K\right)},\quad\bar{\psi}_{t}=\tilde{\mathbb{F}}_{t}\bar{\psi}_{0}^{\left(L\right)},\\
-\bar{\psi}_{s} & = & \tilde{\mathbb{F}}_{s}\bar{\psi}_{0}^{\left(K\right)},\quad\bar{\psi}_{t}=\tilde{\mathbb{F}}_{t}\tilde{F}_{0}^{\left(L\right)}\bar{\psi}_{0}^{\left(L\right)}.
-\end{eqnarray*}
-
-\end_inset
-
-
+ depends on whether or not each of them contains zero mode operator.
 \end_layout
 
 \begin_layout Itemize
-For first type
+None of them contains zero mode.
+ Let us denote 
+\begin_inset Formula $\bar{\psi}_{s}=\tilde{\mathbb{F}}_{s}\bar{\psi}_{0}^{\left(K\right)},\,\bar{\psi}_{t}=\tilde{\mathbb{F}}_{t}\bar{\psi}_{0}^{\left(L\right)}$
+\end_inset
+
+, then
 \begin_inset Formula 
 \begin{eqnarray*}
 V_{st0}^{\left(L\right)} & = & \left(-\right)^{LT_{s}+KT_{t}}M\int d\theta\,\bar{\psi}_{s}\bar{\psi}_{t}h_{kl}\psi_{0}^{\left(M\right)}\\
@@ -1556,15 +1620,12 @@ V_{st0}^{\left(L\right)} & = & \left(-\right)^{LT_{s}+KT_{t}}M\int d\theta\,\bar
 \end_layout
 
 \begin_layout Itemize
-Second type: both 
-\begin_inset Formula $\psi_{s}$
+Both of them contain zero mode: 
+\begin_inset Formula $\bar{\psi}_{s}=\tilde{\mathbb{F}}_{s}\tilde{F}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(K\right)},\,\bar{\psi}_{t}=\tilde{\mathbb{F}}_{t}\tilde{F}_{0}^{\left(L\right)}\bar{\psi}_{0}^{\left(L\right)}$
 \end_inset
 
- and 
-\begin_inset Formula $\bar{\psi}_{t}$
-\end_inset
-
- contain zero mode 
+.
+ Then 
 \begin_inset Formula 
 \begin{eqnarray*}
 V_{st0}^{\left(L\right)} & = & \left(-\right)^{LT_{s}+KT_{t}}M\int d\theta\,\mathbb{F}_{s}^{\left(K\right)}\tilde{F}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(K\right)}\mathbb{F}_{t}^{\left(L\right)}\tilde{F}_{0}^{\left(L\right)}\bar{\psi}_{0}^{\left(L\right)}h_{kl}\psi_{0}^{\left(M\right)}\\
@@ -1622,11 +1683,19 @@ V_{st0}^{\left(L\right)}=\left(-\right)^{\left(K+1\right)T_{t}-L+1}2\left[\det\l
 \end_layout
 
 \begin_layout Itemize
-Case 3: 
+\begin_inset Formula $\bar{\psi}_{s}$
+\end_inset
+
+ contains zero mode and 
+\begin_inset Formula $\bar{\psi}_{r}$
+\end_inset
+
+ does not: 
 \begin_inset Formula $\bar{\psi}_{s}=\tilde{\mathbb{F}}_{s}\tilde{F}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(K\right)},\,\bar{\psi}_{t}=\tilde{\mathbb{F}}_{t}\bar{\psi}_{0}^{\left(L\right)}$
 \end_inset
 
 .
+ Then
 \begin_inset Formula 
 \begin{eqnarray*}
 V_{st0} & = & \left(-\right)^{LT_{s}+KT_{t}}M\int d\theta\,\tilde{\mathbb{F}}_{s}^{\left(K\right)}\tilde{F}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(K\right)}\tilde{\mathbb{F}}_{t}^{\left(L\right)}\bar{\psi}_{0}^{\left(L\right)}h_{kl}\psi_{0}^{\left(M\right)}\\
@@ -1668,7 +1737,14 @@ V_{st0} & = & \left(-\right)^{\left(K+1\right)\left(T_{t}-L\right)}2\left[\det\l
 \end_layout
 
 \begin_layout Itemize
-Case 4: 
+\begin_inset Formula $\bar{\psi}_{r}$
+\end_inset
+
+ contains zero mode and 
+\begin_inset Formula $\bar{\psi}_{s}$
+\end_inset
+
+ does not:
 \begin_inset Formula $\bar{\psi}_{s}=\tilde{\mathbb{F}}_{s}\bar{\psi}_{0}^{\left(K\right)},\,\bar{\psi}_{t}=\tilde{\mathbb{F}}_{t}\tilde{F}_{0}^{\left(L\right)}\bar{\psi}_{0}^{\left(L\right)}$
 \end_inset
 
@@ -1681,98 +1757,6 @@ V_{st0} & = & \left(-\right)^{LT_{s}+KT_{t}}M\int d\theta\,\tilde{\mathbb{F}}_{s
  & = & \left(-\right)^{K\left(T_{t}-L\right)}2\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left[\sqrt{\frac{L}{M}}\Sigma_{k}-\sqrt{\frac{K}{M}}M_{k0}\left(\gamma^{\prime}+\Omega_{mn}\frac{d}{dM_{mn}}\right)\right]\\
  &  & \times\left\langle \mathbb{F}_{s}^{\left(K\right)}\mathbb{F}_{t}^{\left(L\right)}f_{k}^{\dagger}\exp\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\rangle 
 \end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-For 
-\begin_inset Formula $h_{M,L+1}$
-\end_inset
-
-, the matrics 
-\begin_inset Formula $A$
-\end_inset
-
- and 
-\begin_inset Formula $B$
-\end_inset
-
- become
-\begin_inset Formula 
-\[
-A_{nm}^{\left(V\right)}=\sin\frac{m-n}{2M}\pi+\exp\left(2\pi i\frac{\left(L+1\right)\left(m+n\right)}{2M}\right)\sin\frac{\left(L+1/2\right)\left(m-n\right)\pi}{M},
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-B_{nm}^{\left(V\right)}=2\sin\frac{\left(n+m\right)\pi}{2M}+2\exp\left(2\pi i\frac{L+1}{2}\frac{m-n}{M}\right)\sin\frac{\left(L+1/2\right)\left(m+n\right)}{M}\pi,
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-X_{n}^{\left(V\right)}=\left[1-\exp\left(-2\pi i\frac{\left(L+1\right)n}{M}\right)\right]\left(s_{n}+ic_{n}\right).
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\text{const part of }h_{M,L+1}=-\frac{2}{M}\cot\frac{\pi}{2M}-\frac{2}{M}\cot\frac{2L+1}{2M}\pi\equiv\alpha.
-\]
-
-\end_inset
-
- For 
-\begin_inset Formula $h_{K,K+1}+h_{M,1}$
-\end_inset
-
-, the matrices 
-\begin_inset Formula $A$
-\end_inset
-
- and 
-\begin_inset Formula $B$
-\end_inset
-
- become
-\begin_inset Formula 
-\[
-A_{nm}^{\left(W\right)}=\left[1+\exp\left(2\pi i\frac{n+m}{M}\right)\right]\left[1+\exp\left(2\pi iK\frac{m+n}{M}\right)\right]\sin\frac{n-m}{2M}\pi
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-B_{nm}^{\left(W\right)}=2\left[1+\exp\left(2\pi i\frac{m-n}{2M}\right)\right]\left[1+\exp\left(2\pi iK\frac{m-n}{M}\right)\right]\sin\frac{n+m}{2M}\pi
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-X_{n}^{\left(W\right)}=\left[1-\exp\left(-2\pi i\frac{n}{M}\right)\right]\left[1+\exp\left(-2\pi i\frac{Kn}{M}\right)\right]\left(s_{n}+ic_{n}\right).
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\text{const part}=-\frac{8}{M}\cot\frac{\pi}{2M}.
-\]
 
 \end_inset
 
