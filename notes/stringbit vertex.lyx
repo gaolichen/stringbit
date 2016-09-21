@@ -1849,13 +1849,6 @@ V_{210}=0
 \end_inset
 
 
-\begin_inset Formula 
-\[
-\]
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section
@@ -1866,7 +1859,7 @@ Perturbation of Energy Eigenvalue
 Let the energy eigenstate be 
 \begin_inset Formula 
 \[
-\ket{E}=T_{r}\ket{0}C_{r}^{1}+T_{s}T_{t}\ket{0}C_{st}^{2}+T_{s}T_{t}T_{u}\ket{0}C_{stu}^{2}+\cdots
+\ket{E}=T_{r}\ket{0}C_{r}^{1}+\sum_{L+K=M}T_{s}^{\left(L\right)}T_{t}^{\left(K\right)}\ket{0}C_{st}^{2}+T_{s}T_{t}T_{u}\ket{0}C_{stu}^{2}+\cdots
 \]
 
 \end_inset
@@ -1880,7 +1873,7 @@ Let the energy eigenstate be
 \begin{eqnarray*}
 0 & = & \left(E_{r}-E\right)T_{r}\ket{0}C_{r}^{1}+\left(E_{s}+E_{t}-E\right)T_{s}T_{r}\ket{0}C_{st}^{2}\\
  &  & +\left(E_{s}+E_{t}+E_{u}-E\right)T_{s}T_{t}T_{u}\ket{0}C_{stu}^{2}\\
- &  & +\frac{1}{N}T_{s}T_{t}\ket{0}V_{tsr}+\frac{1}{N}T_{r}\ket{0}W_{rst}C_{st}^{2}+\cdots
+ &  & +\frac{1}{N}\sum_{L=1}^{M-1}T_{s}T_{t}\ket{0}V_{tsr}^{\left(K,L\right)}+\frac{1}{N}T_{r}\ket{0}W_{rst}^{\left(L,K\right)}C_{st}^{2}+\cdots
 \end{eqnarray*}
 
 \end_inset
