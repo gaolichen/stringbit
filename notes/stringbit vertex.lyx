@@ -1150,6 +1150,44 @@ Now let us calculate the action of Hamiltonin on the leading order energy
 \end_inset
 
 .
+ In the following calculation we denote 
+\begin_inset Formula $g_{s,t}$
+\end_inset
+
+ as the grading of single trace energy eigenstate 
+\begin_inset Formula $T_{s,t}$
+\end_inset
+
+, and hence the grading of 
+\begin_inset Formula $\bar{\psi}_{s,t}$
+\end_inset
+
+ and 
+\begin_inset Formula $\psi_{s,t}$
+\end_inset
+
+ are 
+\begin_inset Formula $g_{s,t}$
+\end_inset
+
+ and 
+\begin_inset Formula $sM-g_{s,t}$
+\end_inset
+
+ respectively.
+ The integers 
+\begin_inset Formula $L$
+\end_inset
+
+ and 
+\begin_inset Formula $K$
+\end_inset
+
+ always satisfy the relation 
+\begin_inset Formula $L+K=M$
+\end_inset
+
+.
  Using 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -1169,11 +1207,11 @@ reference "eq:harm_completeness_1"
 \begin{eqnarray*}
 HT_{r}\ket{0} & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{l=k+2}^{M+k-1}\bar{h}_{kl}T\left(\theta_{l}\cdots\theta_{k}\right)T\left(\theta_{k+1}\cdots\theta_{l-1}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
  & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{L=1}^{M-2}\bar{h}_{k,k+L+1}T\left(\theta_{k+L+1}\cdots\theta_{k}\right)T\left(\theta_{k+1}\cdots\theta_{k+L}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
- & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{L=1}^{M-2}\bar{h}_{k,k+L+1}\sum_{s,t}\left(-\right)^{s\left((M-L)T_{s}+LT_{t}\right)}\\
- &  & \times T_{s}\bar{\psi}_{s}\left(\theta_{k+L+1}\cdots\theta_{k}\right)T_{t}\bar{\psi}_{t}\left(\theta_{k+1}\cdots\theta_{k+L}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
- & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{L=1}^{M-2}\sum_{s,t}T_{t}T_{s}\ket{0}\left(-\right)^{s\left(LT_{s}+\left(M-L\right)T_{t}\right)}\\
- &  & \times\int d\theta\,\sum_{k=1}^{M}\bar{h}_{k,k+L+1}\bar{\psi}_{s}\left(\theta_{k+L+1}\cdots\theta_{k}\right)\bar{\psi}_{t}\left(\theta_{k+1}\cdots\theta_{k+L}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
- & \equiv & E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{L=1}^{M-2}\sum_{s,t}T_{t}T_{s}\ket{0}V_{str}^{\left(K,L\right)}
+ & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{L=1}^{M-2}\bar{h}_{k,k+L+1}\sum_{s,t}\left(-\right)^{s\left(Kg_{t}+Lg_{s}\right)}\\
+ &  & \times T_{t}\bar{\psi}_{t}\left(\theta_{k+L+1}\cdots\theta_{k}\right)T_{s}\bar{\psi}_{s}\left(\theta_{k+1}\cdots\theta_{k+L}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{L=1}^{M-2}\sum_{s,t}T_{s}T_{t}\ket{0}\left(-\right)^{s\left(Kg_{s}+Lg_{t}\right)}\\
+ &  & \times\int d\theta\,\sum_{k=1}^{M}\bar{h}_{k,k+L+1}\bar{\psi}_{t}\left(\theta_{k+L+1}\cdots\theta_{k}\right)\bar{\psi}_{s}\left(\theta_{k+1}\cdots\theta_{k+L}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & \equiv & E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{L=1}^{M-2}\sum_{s,t}T_{s}T_{t}\ket{0}V_{str}^{\left(K,L\right)}
 \end{eqnarray*}
 
 \end_inset
@@ -1197,7 +1235,7 @@ HT_{r}\ket{0} & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\su
 -bit chains respectively and 
 \begin_inset Formula 
 \begin{equation}
-V_{str}^{\left(K,L\right)}=\left(-\right)^{s\left(LT_{s}+\left(M-L\right)T_{t}\right)}\sum_{k=1}^{M}\int d\theta\,\bar{h}_{k,k+L+1}\bar{\psi}_{s}\left(\theta_{k+L+1}\cdots\theta_{k}\right)\bar{\psi}_{t}\left(\theta_{k+1}\cdots\theta_{k+L}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right).\label{eq:pert_Vstr}
+V_{tsr}^{\left(K,L\right)}=\left(-\right)^{s\left(Kg_{s}+Lg_{t}\right)}\sum_{k=1}^{M}\int d\theta\,\bar{h}_{k,k+L+1}\bar{\psi}_{t}\left(\theta_{k+L+1}\cdots\theta_{k}\right)\bar{\psi}_{s}\left(\theta_{k+1}\cdots\theta_{k+L}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right).\label{eq:pert_Vstr}
 \end{equation}
 
 \end_inset
@@ -1231,17 +1269,12 @@ reference "eq:ham_cyclicconstrtaint"
  as 
 \begin_inset Formula 
 \begin{equation}
-V_{str}^{\left(K,L\right)}=\left(-\right)^{s\left(LT_{s}+KT_{t}\right)}M\int d\theta\,\bar{\psi}_{s}\left(\theta_{L+1}\cdots\theta_{M}\right)\bar{\psi}_{t}\left(\theta_{1}\cdots\theta_{L}\right)h_{M,L+1}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right),\label{eq:pert_Vstr_2}
+V_{tsr}^{\left(K,L\right)}=\left(-\right)^{s\left(Kg_{s}+Lg_{t}\right)}M\int d\theta\,\bar{\psi}_{t}\left(\theta_{L+1}\cdots\theta_{M}\right)\bar{\psi}_{s}\left(\theta_{1}\cdots\theta_{L}\right)h_{M,L+1}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right).\label{eq:pert_Vstr_2}
 \end{equation}
 
 \end_inset
 
- where 
-\begin_inset Formula $M=K+L$
-\end_inset
 
-.
- 
 \end_layout
 
 \begin_layout Standard
@@ -1253,13 +1286,13 @@ The action of
  
 \begin_inset Formula 
 \begin{eqnarray*}
-HT_{s}T_{t}\ket{0} & = & \left(E_{s}+T_{t}\right)T_{s}T_{k}\ket{0}\\
- &  & +\frac{1}{N}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{kl}T\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\psi_{s}\left(\theta\right)\psi_{t}\left(\eta\right)\ket{0}\\
- &  & +\frac{1}{N}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{lk}T\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\psi_{s}\left(\theta\right)\psi_{t}\left(\eta\right)\ket{0}+\cdots\\
- & = & \left(E_{s}+T_{t}\right)T_{s}T_{k}\ket{0}\\
- &  & +\frac{1}{N}\sum_{r}T_{r}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{kl}\bar{\psi}_{r}\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\psi_{s}\left(\theta\right)\psi_{t}\left(\eta\right)\ket{0}\\
- &  & +\frac{1}{N}\sum_{r}T_{r}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{lk}\bar{\psi}_{r}\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\psi_{s}\left(\theta\right)\psi_{t}\left(\eta\right)\ket{0}+\cdots\\
- & \equiv & \left(E_{s}+T_{t}\right)T_{s}T_{k}\ket{0}+\frac{1}{N}\sum_{r}T_{r}\ket{0}\left(W_{rst}^{\left(1\right)}+W_{rst}^{\left(2\right)}\right)+\cdots
+HT_{s}T_{t}\ket{0} & = & \left(E_{s}+E_{t}\right)T_{s}T_{k}\ket{0}\\
+ &  & +\frac{1}{N}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\left(-\right)^{sK\left(g_{s}-sL\right)}\bar{h}_{lk}T\left(\theta_{l+1}\cdots\theta_{l}\eta_{k}\cdots\eta_{k-1}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{t}\left(\eta_{1}\cdots\eta_{K}\right)\ket{0}\\
+ &  & +\frac{1}{N}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\left(-\right)^{sK\left(g_{s}-sL\right)}\bar{h}_{kl}T\left(\theta_{l}\cdots\theta_{l-1}\eta_{k+1}\cdots\eta_{k}\right)\psi_{s}\left(\theta\right)\psi_{t}\left(\eta\right)\ket{0}+\cdots\\
+ & = & \left(E_{s}+E_{t}\right)T_{s}T_{k}\ket{0}\\
+ &  & +\frac{1}{N}\left(-\right)^{sK\left(g_{s}-L\right)}\sum_{r}T_{r}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{lk}\bar{\psi}_{r}\left(\theta_{l+1}\cdots\theta_{l}\eta_{k}\cdots\eta_{k-1}\right)\psi_{s}\left(\theta\right)\psi_{t}\left(\eta\right)\ket{0}\\
+ &  & +\frac{1}{N}\left(-\right)^{sK\left(g_{s}-L\right)}\sum_{r}T_{r}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{kl}\bar{\psi}_{r}\left(\theta_{l}\cdots\theta_{l-1}\eta_{k+1}\cdots\eta_{k}\right)\psi_{s}\left(\theta\right)\psi_{t}\left(\eta\right)\ket{0}+\cdots\\
+ & \equiv & \left(E_{s}+E_{t}\right)T_{s}T_{k}\ket{0}+\frac{1}{N}\sum_{r}T_{r}\ket{0}\left(W_{rst}^{\left(1\right)}+W_{rst}^{\left(2\right)}\right)+\cdots
 \end{eqnarray*}
 
 \end_inset
@@ -1267,15 +1300,15 @@ HT_{s}T_{t}\ket{0} & = & \left(E_{s}+T_{t}\right)T_{s}T_{k}\ket{0}\\
  where 
 \begin_inset Formula 
 \[
-W_{rst}^{\left(1\right)}=\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{kl}\bar{\psi}_{r}\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{K}\right)\psi_{t}\left(\eta_{1}\cdots\eta_{L}\right),
+W_{rst}^{\left(1\right)}=\left(-\right)^{sK\left(g_{s}-L\right)}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{lk}\bar{\psi}_{r}\left(\theta_{l+1}\cdots\theta_{l}\eta_{k}\cdots\eta_{k-1}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{t}\left(\eta_{1}\cdots\eta_{K}\right),
 \]
 
 \end_inset
 
- 
+
 \begin_inset Formula 
 \[
-W_{rst}^{\left(2\right)}=\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{lk}\bar{\psi}_{r}\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\psi_{s}\left(\theta\right)\psi_{t}\left(\eta\right)\ket{0}.
+W_{rst}^{\left(2\right)}=\left(-\right)^{sK\left(g_{s}-L\right)}\int d\theta d\eta\,\bar{h}_{kl}\bar{\psi}_{r}\left(\theta_{l}\cdots\theta_{l-1}\eta_{k+1}\cdots\eta_{k}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{t}\left(\eta_{1}\cdots\eta_{K}\right).
 \]
 
 \end_inset
@@ -1290,7 +1323,7 @@ reference "eq:ham_cyclicconstrtaint"
 , we obtain 
 \begin_inset Formula 
 \begin{equation}
-W_{rst}^{\left(K,L\right)}=W_{rst}^{\left(1\right)}+W_{rst}^{\left(2\right)}=KL\int d^{M}\theta\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{K}\theta_{K+1}\cdots\theta_{M}\right)\left(h_{K,K+1}+h_{M,1}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{K}\right)\psi_{t}\left(\theta_{K+1}\cdots\theta_{M}\right).\label{eq:pert_Wrst}
+W_{rst}^{\left(L,K\right)}=W_{rst}^{\left(1\right)}+W_{rst}^{\left(2\right)}=\left(-\right)^{sK\left(g_{s}-L\right)}KL\int d\theta\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)\left(h_{L,L+1}+h_{M,1}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{t}\left(\theta_{L+1}\cdots\theta_{M}\right).\label{eq:pert_Wrst}
 \end{equation}
 
 \end_inset
@@ -1317,7 +1350,7 @@ reference "eq:pert_Wrst"
  Let us denote
 \begin_inset Formula 
 \[
-\psi_{s}=\mathbb{F}_{s}^{\left(K\right)\dagger}\psi_{0}^{\left(K\right)},\quad\psi_{t}=\mathbb{F}_{t}^{\left(L\right)\dagger}\psi_{0}^{\left(L\right)},\quad\psi_{r}=\mathbb{F}_{r}^{\dagger}\bar{\psi}_{0}^{\left(M\right)},
+\psi_{s}=\mathbb{F}_{s}^{\dagger}\psi_{0}^{\left(L\right)},\quad\psi_{t}=\mathbb{F}_{t}^{\dagger}\psi_{0}^{\left(K\right)},\quad\psi_{r}=\mathbb{F}_{r}^{\dagger}\bar{\psi}_{0}^{\left(M\right)},
 \]
 
 \end_inset
@@ -1330,7 +1363,7 @@ reference "eq:pert_Wrst"
  Accordingly, 
 \begin_inset Formula 
 \[
-\bar{\psi}_{s}=\tilde{\mathbb{F}}_{s}^{\left(K\right)}\bar{\psi}_{0}^{\left(K\right)},\quad\bar{\psi}_{t}=\tilde{\mathbb{F}}_{t}^{\left(L\right)}\bar{\psi}_{0}^{\left(L\right)},\quad\bar{\psi}_{r}=\tilde{\mathbb{F}}_{r}\psi_{0}^{\left(M\right)}.
+\bar{\psi}_{s}=\tilde{\mathbb{F}}_{s}\bar{\psi}_{0}^{\left(L\right)},\quad\bar{\psi}_{t}=\tilde{\mathbb{F}}_{t}\bar{\psi}_{0}^{\left(K\right)},\quad\bar{\psi}_{r}=\tilde{\mathbb{F}}_{r}\psi_{0}^{\left(M\right)}.
 \]
 
 \end_inset
@@ -1338,10 +1371,10 @@ reference "eq:pert_Wrst"
  Then 
 \begin_inset Formula 
 \begin{eqnarray*}
-V_{str}^{\left(K,L\right)} & = & \left(-\right)^{s\left(LT_{s}+KT_{t}\right)}M\int d\theta\,\tilde{\mathbb{F}}_{s}^{\left(K\right)}\bar{\psi}_{0}^{\left(K\right)}\tilde{\mathbb{F}}_{t}^{\left(L\right)}\bar{\psi}_{0}^{\left(L\right)}h_{M,L+1}\mathbb{F}_{r}^{\dagger}\psi_{0}^{\left(M\right)}\\
- & = & \left(-\right)^{s\left(LT_{s}+KT_{t}\right)}M\int d\theta\,\bar{\psi}_{0}^{\left(K\right)}\mathbb{F}_{s}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}\mathbb{F}_{t}^{\left(L\right)}h_{M,L+1}\mathbb{F}_{r}^{\dagger}\psi_{0}^{\left(M\right)}\\
- & = & \left(-\right)^{sKT_{t}}M\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\int d\theta\,\bar{\psi}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}\mathbb{F}_{s}^{\left(K\right)}\mathbb{F}_{t}^{\left(L\right)}h_{M,L+1}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\psi_{0}^{\left(L\right)}\psi_{0}^{\left(K\right)}\\
- & = & \left(-\right)^{sKT_{t}}M\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left\langle \mathbb{F}_{s}^{\left(K\right)}\mathbb{F}_{t}^{\left(L\right)}h_{M,L+1}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ,
+V_{tsr}^{\left(K,L\right)} & = & \left(-\right)^{s\left(Kg_{s}+Lg_{t}\right)}M\int d\theta\,\tilde{\mathbb{F}}_{t}\bar{\psi}_{0}^{\left(K\right)}\tilde{\mathbb{F}}_{s}\bar{\psi}_{0}^{\left(L\right)}h_{M,L+1}\mathbb{F}_{r}^{\dagger}\psi_{0}^{\left(M\right)}\\
+ & = & \left(-\right)^{s\left(Kg_{s}+Lg_{t}\right)}M\int d\theta\,\bar{\psi}_{0}^{\left(K\right)}\mathbb{F}_{t}\bar{\psi}_{0}^{\left(L\right)}\mathbb{F}_{s}h_{M,L+1}\mathbb{F}_{r}^{\dagger}\psi_{0}^{\left(M\right)}\\
+ & = & \left(-\right)^{s\left(Kg_{s}+Lg_{t}\right)+sL\left(g_{t}-sK\right)}M\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\int d\theta\,\bar{\psi}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}\mathbb{F}_{t}\mathbb{F}_{s}h_{M,L+1}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\psi_{0}^{\left(L\right)}\psi_{0}^{\left(K\right)}\\
+ & = & \left(-\right)^{sK\left(g_{s}-L\right)}M\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left\langle \mathbb{F}_{t}\mathbb{F}_{s}h_{M,L+1}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ,
 \end{eqnarray*}
 
 \end_inset
@@ -1352,16 +1385,53 @@ V_{str}^{\left(K,L\right)} & = & \left(-\right)^{s\left(LT_{s}+KT_{t}\right)}M\i
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-W_{rst}^{\left(K,L\right)} & = & KL\int d^{M}\theta\,\tilde{\mathbb{F}}_{r}\bar{\psi}_{0}h^{\left(W\right)}\mathbb{F}_{s}^{\left(K\right)\dagger}\psi_{0}^{\left(K\right)}\mathbb{F}_{t}^{\left(L\right)\dagger}\psi_{0}^{\left(L\right)}\\
- & = & KL\int d^{M}\theta\,\bar{\psi}_{0}\mathbb{F}_{r}h^{\left(W\right)}\mathbb{F}_{s}^{\left(K\right)\dagger}\mathbb{F}_{t}^{\left(L\right)\dagger}\psi_{0}^{\left(K\right)}\psi_{0}^{\left(L\right)}\\
- & = & KL\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\int d^{M}\theta\,\exp\left(\frac{1}{2}\sum_{kl}\tilde{f}_{k}M_{kl}^{\dagger}\tilde{f}_{l}\right)\bar{\psi}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}\mathbb{F}_{r}h^{\left(W\right)}\mathbb{F}_{s}^{\left(K\right)\dagger}\mathbb{F}_{t}^{\left(L\right)\dagger}\psi_{0}^{\left(K\right)}\psi_{0}^{\left(L\right)}\\
- & = & KL\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left\langle \exp\left(\frac{1}{2}\sum_{kl}f_{k}M_{kl}^{\dagger}f_{l}\right)\mathbb{F}_{r}h^{\left(W\right)}\mathbb{F}_{s}^{\left(K\right)\dagger}\mathbb{F}_{t}^{\left(L\right)\dagger}\right\rangle \\
- & = & KL\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left\langle \mathbb{F}_{s}^{\left(L\right)}\mathbb{F}_{t}^{\left(K\right)}h^{\left(W\right)}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ^{\dagger}
+W_{rst}^{\left(L,K\right)} & = & \left(-\right)^{sK\left(g_{s}-L\right)}KL\int d^{M}\theta\,\tilde{\mathbb{F}}_{r}\bar{\psi}_{0}h^{\left(W\right)}\mathbb{F}_{s}^{\dagger}\psi_{0}^{\left(L\right)}\mathbb{F}_{t}^{\dagger}\psi_{0}^{\left(K\right)}\\
+ & = & \left(-\right)^{sK\left(g_{s}-L\right)}KL\int d^{M}\theta\,\bar{\psi}_{0}\mathbb{F}_{r}h^{\left(W\right)}\mathbb{F}_{s}^{\dagger}\mathbb{F}_{t}^{\dagger}\psi_{0}^{\left(L\right)}\psi_{0}^{\left(K\right)}\\
+ & = & \left(-\right)^{sK\left(g_{s}-L\right)}KL\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\int d^{M}\theta\,\exp\left(\frac{1}{2}\sum_{kl}\tilde{f}_{k}M_{kl}^{\dagger}\tilde{f}_{l}\right)\bar{\psi}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}\mathbb{F}_{r}h^{\left(W\right)}\mathbb{F}_{s}^{\dagger}\mathbb{F}_{t}^{\dagger}\psi_{0}^{\left(L\right)}\psi_{0}^{\left(K\right)}\\
+ & = & \left(-\right)^{sK\left(g_{s}-L\right)}KL\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left\langle \exp\left(\frac{1}{2}\sum_{kl}f_{k}M_{kl}^{\dagger}f_{l}\right)\mathbb{F}_{r}h^{\left(W\right)}\mathbb{F}_{s}^{\dagger}\mathbb{F}_{t}^{\dagger}\right\rangle \\
+ & = & \left(-\right)^{sK\left(g_{s}-L\right)}KL\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left\langle \mathbb{F}_{t}\mathbb{F}_{s}h^{\left(W\right)}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ^{\dagger}.
 \end{eqnarray*}
 
 \end_inset
 
+ 
+\begin_inset Formula $V_{tsr}^{\left(K,L\right)}$
+\end_inset
 
+ and 
+\begin_inset Formula $W_{rst}^{\left(L,K\right)}$
+\end_inset
+
+ have the same sign factor.
+ We shall see that the 
+\begin_inset Formula $1/N$
+\end_inset
+
+ energy perturbation only depends on the product of these two.
+ Thus, the sign factor are cancelled out and unphysics.
+ For 
+\begin_inset Formula $s>0$
+\end_inset
+
+, denoting 
+\begin_inset Formula $\mathbb{F}^{a}$
+\end_inset
+
+ as the products of lowering operators of 
+\begin_inset Formula $a$
+\end_inset
+
+-th spinor index, we have 
+\begin_inset Formula 
+\begin{eqnarray*}
+V_{tsr}^{\left(K,L\right)} & = & M\left[\det\left(CC^{\dagger}\right)\right]^{s/4}\prod_{a=1}^{s}\left\langle \mathbb{F}_{t}^{a}\mathbb{F}_{s}^{a}h_{M,L+1}^{a}\mathbb{F}_{r}^{a\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{a\dagger}M_{kl}f_{l}^{a\dagger}\right)\right\rangle ,\\
+W_{rst}^{\left(L,K\right)} & = & KL\left[\det\left(CC^{\dagger}\right)\right]^{s/4}\prod_{a=1}^{s}\left\langle \mathbb{F}_{t}^{a}\mathbb{F}_{s}^{a}\left(h_{L,L+1}^{a}+h_{M,1}^{a}\right)\mathbb{F}_{r}^{a\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{a\dagger}M_{kl}f_{l}^{a\dagger}\right)\right\rangle ^{\dagger},
+\end{eqnarray*}
+
+\end_inset
+
+ up to an common unphysics sign factor.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1489,13 +1559,13 @@ X_{n}^{\left(V\right)}=\left[1-\exp\left(-2\pi i\frac{\left(L+1\right)n}{M}\righ
 \end_inset
 
  For 
-\begin_inset Formula $h_{K,K+1}+h_{M,1}$
+\begin_inset Formula $h_{L,L+1}+h_{M,1}$
 \end_inset
 
 , these coefficients become
 \begin_inset Formula 
 \[
-A_{nm}^{\left(W\right)}=\left[1+\exp\left(2\pi i\frac{n+m}{M}\right)\right]\left[1+\exp\left(2\pi iK\frac{m+n}{M}\right)\right]\sin\frac{n-m}{2M}\pi
+A_{nm}^{\left(W\right)}=\left[1+\exp\left(2\pi i\frac{n+m}{M}\right)\right]\left[1+\exp\left(2\pi iL\frac{m+n}{M}\right)\right]\sin\frac{n-m}{2M}\pi
 \]
 
 \end_inset
@@ -1503,7 +1573,7 @@ A_{nm}^{\left(W\right)}=\left[1+\exp\left(2\pi i\frac{n+m}{M}\right)\right]\left
 
 \begin_inset Formula 
 \[
-B_{nm}^{\left(W\right)}=2\left[1+\exp\left(2\pi i\frac{m-n}{2M}\right)\right]\left[1+\exp\left(2\pi iK\frac{m-n}{M}\right)\right]\sin\frac{n+m}{2M}\pi
+B_{nm}^{\left(W\right)}=2\left[1+\exp\left(2\pi i\frac{m-n}{2M}\right)\right]\left[1+\exp\left(2\pi iL\frac{m-n}{M}\right)\right]\sin\frac{n+m}{2M}\pi
 \]
 
 \end_inset
@@ -1511,7 +1581,7 @@ B_{nm}^{\left(W\right)}=2\left[1+\exp\left(2\pi i\frac{m-n}{2M}\right)\right]\le
 
 \begin_inset Formula 
 \[
-X_{n}^{\left(W\right)}=\left[1-\exp\left(-2\pi i\frac{n}{M}\right)\right]\left[1+\exp\left(-2\pi i\frac{Kn}{M}\right)\right]\left(s_{n}+ic_{n}\right).
+X_{n}^{\left(W\right)}=\left[1-\exp\left(-2\pi i\frac{n}{M}\right)\right]\left[1+\exp\left(-2\pi i\frac{Ln}{M}\right)\right]\left(s_{n}+ic_{n}\right).
 \]
 
 \end_inset
@@ -1528,120 +1598,75 @@ X_{n}^{\left(W\right)}=\left[1-\exp\left(-2\pi i\frac{n}{M}\right)\right]\left[1
 \end_layout
 
 \begin_layout Standard
-We know consider only the case 
+Let us consider a simple case when 
+\begin_inset Formula $\mathbb{F}_{r}$
+\end_inset
+
+ is empty, i.e., 
 \begin_inset Formula $\psi_{r}$
 \end_inset
 
- is the ground state 
-\begin_inset Formula $\psi_{0}^{\left(M\right)}$
-\end_inset
-
- and 
-\begin_inset Formula $s=1$
+ is the ground eigenfunction 
+\begin_inset Formula $\psi_{0}$
 \end_inset
 
 .
- In this case, on 
-\begin_inset Formula $F_{n}^{\dagger}F_{m}^{\dagger}$
+ We only need to consider the case of 
+\begin_inset Formula $s=1$
 \end_inset
 
-, 
-\begin_inset Formula $F_{0}^{\dagger}F_{n}^{\dagger}$
+, for 
+\begin_inset Formula $s>1$
 \end_inset
 
-, and constant terms of 
-\begin_inset Formula $h_{kl}$
+, it is just the product of 
+\begin_inset Formula $s$
 \end_inset
 
- make nonzero contribution.
- 
-\begin_inset Formula 
-\begin{eqnarray*}
-V_{st0}^{\left(L\right)} & = & \left(-\right)^{LT_{s}+KT_{t}}M\int d\theta\,\bar{\psi}_{s}\left(\theta_{L+1}\cdots\theta_{M}\right)\bar{\psi}_{t}\left(\theta_{1}\cdots\theta_{L}\right)h_{k,l}\psi_{0}^{\left(M\right)}\\
- & = & \left(-\right)^{LT_{s}+KT_{t}}M\int d\theta\,\bar{\psi}_{s}\bar{\psi}_{t}\frac{2}{M}\left[\sum_{n,m=1}^{M-1}A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}+X_{n}F_{0}^{\dagger}F_{n}^{\dagger}+\gamma\right]\psi_{0}^{\left(M\right)},
-\end{eqnarray*}
-
-\end_inset
-
- 
+ verteices.
 \begin_inset Formula 
 \[
-\sum_{n,m=1}^{M-1}A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}\psi_{0}^{\left(M\right)}=\sum_{n,m=1}^{M-1}A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\psi_{0}^{\left(L\right)}\psi_{0}^{\left(K\right)}\left[\det\left(CC^{\dagger}\right)\right]^{1/4}.
+\left\langle \cdots h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle =\frac{2}{M}\left\langle \cdots\left(A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}+X_{n}F_{0}^{\dagger}F_{n}^{\dagger}+\gamma\right)\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ,
 \]
 
 \end_inset
 
+ other terms vanish because 
+\begin_inset Formula $F_{m}\psi_{0}^{\left(M\right)}=0$
+\end_inset
+
+.
  Commuting 
-\begin_inset Formula $F_{n}^{\dagger}$
+\begin_inset Formula $F_{m}^{\dagger}$
 \end_inset
 
- through the exponential and expressing 
-\begin_inset Formula $F_{n}^{\dagger}$
-\end_inset
-
- in terms of 
-\begin_inset Formula $f_{n}^{\dagger}$
-\end_inset
-
-, we obtain 
-\begin_inset Formula 
-\begin{eqnarray*}
-A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}\psi_{0}^{\left(M\right)} & = & \tr\left[A^{\dagger}\left(C^{*}+S^{*}M\right)S^{\dagger}\right]\psi_{0}^{\left(M\right)}+f_{k}^{\dagger}\left[\left(C^{*}+S^{*}M\right)^{T}A^{\dagger}\left(C^{*}+S^{*}M\right)\right]_{kl}f_{l}^{\dagger}\psi_{0}^{\left(M\right)}\\
- & = & -\tr\left(S^{*}C^{-1}A^{\dagger}\right)\psi_{0}^{\left(M\right)}+f_{k}^{\dagger}\left[C^{-1}A^{\dagger}\left(C^{-1}\right)^{T}\right]_{kl}f_{l}^{\dagger}\psi_{0}^{\left(M\right)},
-\end{eqnarray*}
+ through the expotential and using 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_CS_relation"
 
 \end_inset
 
- where we used 
+ and 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:overlap_CMS"
 
 \end_inset
 
- in the last step.
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
-\begin_inset Formula 
-\[
-X_{m}F_{0}^{\dagger}F_{m}^{\dagger}\ket{G}=X_{m}F_{0}^{\dagger}C_{nm}^{-1}f_{n}^{\dagger}\ket{G}=F_{0}^{\dagger}f_{n}^{\dagger}C_{nm}^{-1}X_{m}\ket{G}.
-\]
-
-\end_inset
-
- Therefore,
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-
+ yield
 \begin_inset Formula 
 \begin{eqnarray*}
-h_{kl}\psi_{0}^{\left(M\right)} & = & \frac{2}{M}\left[\gamma-\tr\left(S^{*}C^{-1}\bar{A}\right)\right]\psi_{0}^{\left(M\right)}\\
- &  & +\frac{2}{M}\sum_{m,n=0}^{M-2}\left\{ f_{m}^{\dagger}\left[C^{-1}\bar{A}\left(C^{-1}\right)^{T}\right]_{mn}f_{n}^{\dagger}+F_{0}^{\dagger}f_{m}^{\dagger}C_{mn}^{-1}X_{n}\right\} \psi_{0}^{\left(M\right)}\\
- & = & \frac{2}{M}\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left(\gamma^{\prime}+\Omega_{mn}\frac{d}{dM_{mn}}+F_{0}^{\dagger}f_{m}^{\dagger}\Sigma_{m}\right)\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\psi_{0}^{\left(1\right)}\psi_{0}^{\left(2\right)},
+\left\langle \cdots h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle  & = & \frac{2}{M}\left[\gamma-\tr\left(S^{*}C^{-1}A^{\dagger}\right)\right]\left\langle \cdots\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+ &  & +\frac{2}{M}\left[C^{-1}A^{\dagger}\left(C^{-1}\right)^{T}\right]_{kl}\left\langle \cdots f_{k}^{\dagger}f_{l}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+ &  & +\frac{2}{M}C_{nm}^{-1}X_{m}\left\langle \cdots F_{0}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+ & \equiv & \frac{2}{M}\left(\gamma^{\prime}+\Omega_{mn}\frac{d}{dM_{mn}}\right)\left\langle \cdots\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+ &  & +\frac{2}{M}\Sigma_{m}\left\langle \cdots F_{0}^{\dagger}f_{m}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ,
 \end{eqnarray*}
 
 \end_inset
 
- where 
+ where we have defined 
 \begin_inset Formula 
 \[
 \gamma^{\prime}=\gamma-\tr\left(S^{*}C^{-1}\bar{A}\right),\quad\Omega_{mn}=\left[C^{-1}\bar{A}\left(C^{-1}\right)^{T}\right]_{mn},\quad\Sigma_{m}=C_{mn}^{-1}X_{n}.
@@ -1653,107 +1678,82 @@ h_{kl}\psi_{0}^{\left(M\right)} & = & \frac{2}{M}\left[\gamma-\tr\left(S^{*}C^{-
 \end_layout
 
 \begin_layout Standard
-The zero modes need special attention.
- There are four different combinations of 
-\begin_inset Formula $\bar{\psi}_{s}$
+Now let use include 
+\begin_inset Formula $\mathbb{F}_{t}$
 \end_inset
 
  and 
-\begin_inset Formula $\bar{\psi}_{t}$
+\begin_inset Formula $\mathbb{F}_{s}$
 \end_inset
 
- depends on whether or not each of them contains zero mode operator.
+ in the calculation.
+ The zero modes need special attention.
+ There are four cases depending on whether or not zero modes are contained
+ in the operators.
 \end_layout
 
 \begin_layout Itemize
 None of them contains zero mode.
+ Then the term containing 
+\begin_inset Formula $F_{0}^{\dagger}$
+\end_inset
+
+ vanishes, 
+\begin_inset Formula 
+\[
+\left\langle \mathbb{F}_{t}\mathbb{F}_{s}h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle =\frac{2}{M}\left(\gamma^{\prime}+\Omega_{mn}\frac{d}{dM_{mn}}\right)\left\langle \mathbb{F}_{t}\mathbb{F}_{s}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Both of them contain a zero mode.
  Let us denote 
-\begin_inset Formula $\bar{\psi}_{s}=\tilde{\mathbb{F}}_{s}\bar{\psi}_{0}^{\left(K\right)},\,\bar{\psi}_{t}=\tilde{\mathbb{F}}_{t}\bar{\psi}_{0}^{\left(L\right)}$
+\begin_inset Formula $\mathbb{F}_{t}=\mathbb{F}_{1t}F_{0}^{\left(K\right)}$
 \end_inset
 
-, then
-\begin_inset Formula 
-\begin{eqnarray*}
-V_{st0}^{\left(K,L\right)} & = & \left(-\right)^{LT_{s}+KT_{t}}M\int d\theta\,\bar{\psi}_{s}\bar{\psi}_{t}h_{kl}\psi_{0}^{\left(M\right)}\\
- & = & \left(-\right)^{LT_{s}+KT_{t}}M\int d\theta\,\bar{\psi}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}\left(-\right)^{LT_{s}}\mathbb{F}_{s}^{\left(K\right)}\mathbb{F}_{t}^{\left(L\right)}h_{kl}\psi_{0}^{\left(M\right)}\\
- & = & \left(-\right)^{KT_{t}}M\int d\theta\,\bar{\psi}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}\mathbb{F}_{s}^{\left(K\right)}\mathbb{F}_{t}^{\left(L\right)}h_{kl}\psi_{0}^{\left(M\right)}\\
- & = & \left(-\right)^{KT_{t}}2\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left(\gamma^{\prime}+\Omega_{mn}\frac{d}{dM_{mn}}\right)\left\langle \mathbb{F}_{s}^{\left(K\right)}\mathbb{F}_{t}^{\left(L\right)}\exp\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\rangle 
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-W_{0st}^{\left(K,L\right)} & = & KL\int d^{M}\theta\,\bar{\psi}_{0}\left(\theta_{1}\cdots\theta_{K}\theta_{K+1}\cdots\theta_{M}\right)h_{kl}\psi_{s}^{\left(K\right)}\left(\theta_{1}\cdots\theta_{K}\right)\psi_{t}^{\left(L\right)}\left(\theta_{K+1}\cdots\theta_{M}\right)\\
- & = & KL\int d^{M}\theta\,\bar{\psi}_{0}\left(\theta_{1}\cdots\theta_{K}\theta_{K+1}\cdots\theta_{M}\right)h_{kl}\mathbb{F}_{s}^{\dagger}\psi_{0}^{\left(K\right)}\mathbb{F}_{t}^{\dagger}\psi_{0}^{\left(L\right)}\\
- & = & KL\frac{2}{M}\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\int d^{M}\theta\,\bar{\psi}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}\exp\left(\frac{1}{2}\sum_{kl}f_{k}M_{kl}^{\dagger}f_{l}\right)h_{kl}\mathbb{F}_{s}^{\dagger}\psi_{0}^{\left(K\right)}\mathbb{F}_{t}^{\dagger}\psi_{0}^{\left(L\right)}\\
- & = & KL\frac{2}{M}\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left\langle \exp\left(\frac{1}{2}\sum_{kl}f_{k}M_{kl}^{\dagger}f_{l}\right)h_{kl}\mathbb{F}_{s}^{\dagger}\mathbb{F}_{t}^{\dagger}\right\rangle \\
- & = & KL\frac{2}{M}\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left\langle \mathbb{F}_{t}\mathbb{F}_{s}h_{kl}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ^{\dagger}
-\end{eqnarray*}
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Itemize
-Both of them contain zero mode: 
-\begin_inset Formula $\bar{\psi}_{s}=\tilde{\mathbb{F}}_{s}\tilde{F}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(K\right)},\,\bar{\psi}_{t}=\tilde{\mathbb{F}}_{t}\tilde{F}_{0}^{\left(L\right)}\bar{\psi}_{0}^{\left(L\right)}$
+ and 
+\begin_inset Formula $\mathbb{F}_{s}=\mathbb{F}_{1s}F_{0}^{\left(L\right)}$
 \end_inset
 
 .
- Then 
-\begin_inset Formula 
-\begin{eqnarray*}
-V_{st0}^{\left(K,L\right)} & = & \left(-\right)^{LT_{s}+KT_{t}}M\int d\theta\,\mathbb{F}_{s}^{\left(K\right)}\tilde{F}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(K\right)}\mathbb{F}_{t}^{\left(L\right)}\tilde{F}_{0}^{\left(L\right)}\bar{\psi}_{0}^{\left(L\right)}h_{kl}\psi_{0}^{\left(M\right)}\\
- & = & \left(-\right)^{KT_{t}}M\int d\theta\,\bar{\psi}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}\mathbb{F}_{s}^{\left(K\right)}F_{0}^{\left(K\right)}\mathbb{F}_{t}^{\left(L\right)}F_{0}^{\left(L\right)}h_{kl}\psi_{0}^{\left(M\right)}\\
- & = & \left(-\right)^{\left(K+1\right)T_{t}-L}M\int d\theta\,\bar{\psi}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}\mathbb{F}_{s}^{\left(K\right)}\mathbb{F}_{t}^{\left(L\right)}F_{0}^{\left(L\right)}F_{0}^{\left(K\right)}h_{kl}\psi_{0}^{\left(M\right)}
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-F_{0}^{\left(L\right)}=F_{0}\sqrt{\frac{L}{M}}+f_{0}\sqrt{\frac{K}{M}},\quad F_{0}^{\left(K\right)}=F_{0}\sqrt{\frac{K}{M}}-f_{0}\sqrt{\frac{L}{M}}
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-F_{0}^{\left(L\right)}F_{0}^{\left(K\right)}=f_{0}F_{0}\left(\frac{L}{M}+\frac{K}{M}\right)=f_{0}F_{0}
-\]
-
-\end_inset
-
  
 \begin_inset Formula 
-\begin{eqnarray*}
-V_{st0}^{\left(L\right)} & = & \left(-\right)^{\left(K+1\right)T_{t}-L+1}M\int d\theta\,\bar{\psi}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}\mathbb{F}_{s}^{\left(K\right)}\mathbb{F}_{t}^{\left(L\right)}f_{0}F_{0}h_{kl}\psi_{0}^{\left(M\right)}\\
- & = & \left(-\right)^{\left(K+1\right)T_{t}-L+1}2\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left\langle \mathbb{F}_{s}^{\left(K\right)}\mathbb{F}_{t}^{\left(L\right)}f_{0}f_{m}^{\dagger}\Sigma_{m}\exp\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\rangle 
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\left\langle \cdots f_{0}f_{m}^{\dagger}\Sigma_{m}\exp\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\rangle  & = & -\left\langle \cdots f_{m}^{\dagger}\Sigma_{m}f_{0}\exp\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\rangle \\
- & = & -\left\langle \cdots f_{m}^{\dagger}\Sigma_{m}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\left(f_{0}-f_{n}^{\dagger}M_{n0}\right)\right\rangle \\
- & = & \left\langle \cdots f_{m}^{\dagger}\Sigma_{m}M_{n0}f_{n}^{\dagger}\exp\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\rangle \\
- & = & \Sigma_{m}M_{n0}\frac{d}{M_{mn}}\left\langle \cdots\exp\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\rangle 
-\end{eqnarray*}
+\[
+F_{0}^{\left(L\right)}=F_{0}\sqrt{\frac{L}{M}}+f_{0}\sqrt{\frac{K}{M}},\quad F_{0}^{\left(K\right)}=F_{0}\sqrt{\frac{K}{M}}-f_{0}\sqrt{\frac{L}{M}},
+\]
 
 \end_inset
 
 
 \begin_inset Formula 
 \[
-V_{st0}^{\left(L\right)}=\left(-\right)^{\left(K+1\right)T_{t}-L+1}2\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\Sigma_{m}M_{n0}\frac{d}{M_{mn}}\left\langle \mathbb{F}_{s}^{\left(K\right)}\mathbb{F}_{t}^{\left(L\right)}\exp\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\rangle 
+F_{0}^{\left(L\right)}F_{0}^{\left(K\right)}=f_{0}F_{0}\left(\frac{L}{M}+\frac{K}{M}\right)=f_{0}F_{0}.
 \]
+
+\end_inset
+
+ Since 
+\begin_inset Formula $F_{0}$
+\end_inset
+
+ anticommutes with all 
+\begin_inset Formula $f_{m}$
+\end_inset
+
+, only the term containing 
+\begin_inset Formula $F_{0}^{\dagger}$
+\end_inset
+
+ survives 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\langle \mathbb{F}_{t}\mathbb{F}_{s}h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle  & = & \frac{2}{M}\Sigma_{m}\left\langle \mathbb{F}_{1t}\mathbb{F}_{1s}f_{0}f_{m}^{\dagger}\exp\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\rangle \\
+ & = & \frac{2}{M}\Sigma_{m}M_{0n}\left\langle \mathbb{F}_{1t}\mathbb{F}_{1s}f_{m}^{\dagger}f_{n}^{\dagger}\exp\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\rangle 
+\end{eqnarray*}
 
 \end_inset
 
@@ -1761,53 +1761,44 @@ V_{st0}^{\left(L\right)}=\left(-\right)^{\left(K+1\right)T_{t}-L+1}2\left[\det\l
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\bar{\psi}_{s}$
+\begin_inset Formula $\mathbb{F}_{t}$
 \end_inset
 
  contains zero mode and 
-\begin_inset Formula $\bar{\psi}_{r}$
+\begin_inset Formula $\mathbb{F}_{s}$
 \end_inset
 
- does not: 
-\begin_inset Formula $\bar{\psi}_{s}=\tilde{\mathbb{F}}_{s}\tilde{F}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(K\right)},\,\bar{\psi}_{t}=\tilde{\mathbb{F}}_{t}\bar{\psi}_{0}^{\left(L\right)}$
-\end_inset
-
-.
- Then
-\begin_inset Formula 
-\begin{eqnarray*}
-V_{st0} & = & \left(-\right)^{LT_{s}+KT_{t}}M\int d\theta\,\tilde{\mathbb{F}}_{s}^{\left(K\right)}\tilde{F}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(K\right)}\tilde{\mathbb{F}}_{t}^{\left(L\right)}\bar{\psi}_{0}^{\left(L\right)}h_{kl}\psi_{0}^{\left(M\right)}\\
- & = & \left(-\right)^{K\left(T_{t}-L\right)}M\int d\theta\,\bar{\psi}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}\mathbb{F}_{s}^{\left(K\right)}F_{0}^{\left(K\right)}\mathbb{F}_{t}^{\left(L\right)}h_{kl}\psi_{0}^{\left(M\right)}\\
- & = & \left(-\right)^{\left(K+1\right)\left(T_{t}-L\right)}M\int d\theta\,\bar{\psi}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}\mathbb{F}_{s}^{\left(K\right)}\mathbb{F}_{t}^{\left(L\right)}F_{0}^{\left(K\right)}h_{kl}\psi_{0}^{\left(M\right)}\\
- & = & \left(-\right)^{\left(K+1\right)\left(T_{t}-L\right)}M\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\\
- &  & \times\left\langle \mathbb{F}_{s}^{\left(K\right)}\mathbb{F}_{t}^{\left(L\right)}\left(F_{0}\sqrt{\frac{K}{M}}-f_{0}\sqrt{\frac{L}{M}}\right)h_{kl}\exp\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\rangle 
-\end{eqnarray*}
-
-\end_inset
-
-
+ does not.
+ 
 \begin_inset Formula 
 \[
-\left\langle \cdots F_{0}h_{kl}\exp\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\rangle =\frac{2}{M}\left\langle \cdots f_{m}^{\dagger}\Sigma_{m}\exp\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\rangle ,
+\left\langle \mathbb{F}_{t}\mathbb{F}_{s}h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle =\sqrt{\frac{K}{M}}\left\langle \mathbb{F}_{1t}\mathbb{F}_{s}F_{0}h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle -\sqrt{\frac{L}{M}}\left\langle \mathbb{F}_{1t}\mathbb{F}_{s}f_{0}h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle .
 \]
 
 \end_inset
 
+ The first term 
+\begin_inset Formula 
+\[
+\left\langle \mathbb{F}_{1t}\mathbb{F}_{s}F_{0}h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle =\frac{2}{M}\Sigma_{m}\left\langle \mathbb{F}_{1t}\mathbb{F}_{s}f_{m}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ,
+\]
 
+\end_inset
+
+ and the second term 
 \begin_inset Formula 
 \begin{eqnarray*}
-\left\langle \cdots f_{0}h_{kl}\exp\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\rangle  & = & \frac{2}{M}\left(\gamma^{\prime}+\Omega_{mn}\frac{d}{dM_{mn}}\right)\left\langle \cdots f_{0}\exp\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\rangle \\
- & = & -\frac{2}{M}M_{k0}\left(\gamma^{\prime}+\Omega_{mn}\frac{d}{dM_{mn}}\right)\left\langle \cdots f_{k}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle 
+\left\langle \mathbb{F}_{1t}\mathbb{F}_{s}f_{0}h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle  & = & \frac{2}{M}\left(\gamma^{\prime}+\Omega_{ij}\frac{d}{dM_{ij}}\right)\left\langle \mathbb{F}_{1t}\mathbb{F}_{s}f_{0}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+ & = & \frac{2}{M}\left(\gamma^{\prime}+\Omega_{ij}\frac{d}{dM_{ij}}\right)M_{0m}\left\langle \mathbb{F}_{1t}\mathbb{F}_{s}f_{m}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ,
 \end{eqnarray*}
 
 \end_inset
 
-
+ therefore
 \begin_inset Formula 
-\begin{eqnarray*}
-V_{st0} & = & \left(-\right)^{\left(K+1\right)\left(T_{t}-L\right)}2\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left[\sqrt{\frac{K}{M}}\Sigma_{m}+\sqrt{\frac{L}{M}}M_{m0}\left(\gamma^{\prime}+\Omega_{mn}\frac{d}{dM_{mn}}\right)\right]\\
- &  & \times\left\langle \mathbb{F}_{s}^{\left(K\right)}\mathbb{F}_{t}^{\left(L\right)}f_{m}^{\dagger}\exp\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\rangle 
-\end{eqnarray*}
+\[
+\left\langle \mathbb{F}_{t}\mathbb{F}_{s}h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle =\frac{2}{M}\left[\sqrt{\frac{K}{M}}\Sigma_{m}-\sqrt{\frac{L}{M}}M_{0m}\left(\gamma^{\prime}+\Omega_{ij}\frac{d}{dM_{ij}}\right)\right]\left\langle \mathbb{F}_{1t}\mathbb{F}_{s}f_{m}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle .
+\]
 
 \end_inset
 
@@ -1815,26 +1806,27 @@ V_{st0} & = & \left(-\right)^{\left(K+1\right)\left(T_{t}-L\right)}2\left[\det\l
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\bar{\psi}_{t}$
+\begin_inset Formula $\mathbb{F}_{s}$
 \end_inset
 
  contains zero mode and 
-\begin_inset Formula $\bar{\psi}_{s}$
+\begin_inset Formula $\mathbb{F}_{t}$
 \end_inset
 
- does not:
-\begin_inset Formula $\bar{\psi}_{s}=\tilde{\mathbb{F}}_{s}\bar{\psi}_{0}^{\left(K\right)},\,\bar{\psi}_{t}=\tilde{\mathbb{F}}_{t}\tilde{F}_{0}^{\left(L\right)}\bar{\psi}_{0}^{\left(L\right)}$
-\end_inset
-
-.
+ does not.
+ 
 \begin_inset Formula 
-\begin{eqnarray*}
-V_{st0} & = & \left(-\right)^{LT_{s}+KT_{t}}M\int d\theta\,\tilde{\mathbb{F}}_{s}^{\left(K\right)}\bar{\psi}_{0}^{\left(K\right)}\tilde{\mathbb{F}}_{t}^{\left(L\right)}\tilde{F}_{0}^{\left(L\right)}\bar{\psi}_{0}^{\left(L\right)}h_{kl}\psi_{0}^{\left(M\right)}\\
- & = & \left(-\right)^{K\left(T_{t}-L\right)}M\int d\theta\,\bar{\psi}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}\mathbb{F}_{s}^{\left(K\right)}\mathbb{F}_{t}^{\left(L\right)}F_{0}^{\left(L\right)}h_{kl}\psi_{0}^{\left(M\right)}\\
- & = & \left(-\right)^{K\left(T_{t}-L\right)}M\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left\langle \mathbb{F}_{s}^{\left(K\right)}\mathbb{F}_{t}^{\left(L\right)}\left(F_{0}\sqrt{\frac{L}{M}}+f_{0}\sqrt{\frac{K}{M}}\right)h_{kl}\exp\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\rangle \\
- & = & \left(-\right)^{K\left(T_{t}-L\right)}2\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left[\sqrt{\frac{L}{M}}\Sigma_{k}-\sqrt{\frac{K}{M}}M_{k0}\left(\gamma^{\prime}+\Omega_{mn}\frac{d}{dM_{mn}}\right)\right]\\
- &  & \times\left\langle \mathbb{F}_{s}^{\left(K\right)}\mathbb{F}_{t}^{\left(L\right)}f_{k}^{\dagger}\exp\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\rangle 
-\end{eqnarray*}
+\[
+\left\langle \mathbb{F}_{t}\mathbb{F}_{s}h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle =\sqrt{\frac{L}{M}}\left\langle \mathbb{F}_{t}\mathbb{F}_{1s}F_{0}h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle +\sqrt{\frac{K}{M}}\left\langle \mathbb{F}_{t}\mathbb{F}_{1s}f_{0}h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle 
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left\langle \mathbb{F}_{t}\mathbb{F}_{s}h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle =\frac{2}{M}\left[\sqrt{\frac{L}{M}}\Sigma_{m}+\sqrt{\frac{K}{M}}M_{0m}\left(\gamma^{\prime}+\Omega_{ij}\frac{d}{dM_{ij}}\right)\right]\left\langle \mathbb{F}_{t}\mathbb{F}_{1s}f_{m}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle .
+\]
 
 \end_inset
 
@@ -2208,7 +2200,7 @@ even
 
 \begin_inset Formula 
 \[
-V_{100}^{\left(2,1\right)}=0
+V_{100}^{\left(2,1\right)}=V_{100}^{\left(2,1\right)}=0
 \]
 
 \end_inset
@@ -2228,14 +2220,6 @@ V_{110}^{\left(2,1\right)} & = & 2\left[\det\left(CC^{\dagger}\right)\right]^{1/
 V_{200} & = & 2\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left[\sqrt{\frac{2}{3}}\Sigma_{1}+\sqrt{\frac{1}{3}}M_{10}\left(\gamma^{\prime}+\Omega_{mn}\frac{d}{dM_{mn}}\right)\right]\left\langle F_{1}^{\left(2\right)}f_{1}^{\dagger}\exp\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\rangle \\
  & = & 2\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left(\sqrt{\frac{2}{3}}\Sigma_{1}+\sqrt{\frac{1}{3}}M_{10}\gamma^{\prime}\right)
 \end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-V_{210}=0
-\]
 
 \end_inset
 
@@ -2281,7 +2265,7 @@ Let the energy eigenstate be
 
 \begin_inset Formula 
 \begin{eqnarray*}
-C_{st}^{2} & = & \frac{1}{E-E_{s}-E_{t}}\frac{1}{N}V_{str}^{\left(K,L\right)}C_{r}^{1}+\mathcal{O}\left(N^{-2}\right)\\
+C_{st}^{2} & = & \frac{1}{E-E_{s}-E_{t}}\frac{1}{N}V_{tsr}C_{r}^{1}+\mathcal{O}\left(N^{-2}\right)\\
 \left(E-E_{r}\right)C_{r}^{1} & = & \frac{1}{N^{2}}W_{rst}^{\left(L,K\right)}\frac{1}{E-E_{s}-E_{t}}V_{tsu}^{\left(K,L\right)}C_{u}^{1}+\mathcal{O}\left(N^{-3}\right)
 \end{eqnarray*}
 
