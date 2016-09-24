@@ -1855,18 +1855,45 @@ Let us calculate a simple example for
 \end_inset
 
 .
+ The eifenfunctions and their conjugates of 
+\begin_inset Formula $1$
+\end_inset
+
+-bit and 
+\begin_inset Formula $2$
+\end_inset
+
+-bit chains are in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Energy-eigenstates-1"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Energy-eigenstates-2"
+
+\end_inset
+
+.
  
 \end_layout
 
 \begin_layout Standard
-The eifenfunctions and their conjugates of 
-\begin_inset Formula $1$
-\end_inset
+\begin_inset Float table
+wide false
+sideways false
+status open
 
--bit chain is
-\end_layout
+\begin_layout Plain Layout
+\begin_inset Float table
+wide false
+sideways false
+status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="4">
@@ -2024,15 +2051,44 @@ odd
 
 \end_layout
 
-\begin_layout Standard
-For 
-\begin_inset Formula $2$
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Energy-eigenstates-1"
+
 \end_inset
 
--bit the physical energy eigenstates are
+Energy eigenstates of 1 bit chain
 \end_layout
 
-\begin_layout Standard
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="4">
@@ -2182,34 +2238,119 @@ even
 \end_inset
 
  
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Energy-eigenstates-2"
+
+\end_inset
+
+Energy eigenstates of 2-bit chain
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $f_{1}=F_{1}^{\left(2\right)}$
+Checking the grading of eigenfunction, we find
+\begin_inset Formula $V_{100}^{\left(2,1\right)}$
 \end_inset
 
-.
- The nonzero vertex are 
+ and 
 \begin_inset Formula $V_{100}^{\left(2,1\right)}$
+\end_inset
+
+ are zero.
+ The nonzero vertex are 
+\begin_inset Formula $V_{110}^{\left(2,1\right)}$
 \end_inset
 
  and 
 \begin_inset Formula $V_{200}^{\left(2,1\right)}$
 \end_inset
 
+.
+ Note that 
+\begin_inset Formula $F_{1}^{\left(2\right)}=f_{1}$
+\end_inset
 
+.
+ For 
+\begin_inset Formula $V_{110}^{\left(2,1\right)}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\langle F_{1}^{\left(2\right)}F_{0}^{\left(1\right)}h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle  & = & \frac{2}{3}\left[\sqrt{\frac{L}{M}}\Sigma_{m}+\sqrt{\frac{K}{M}}M_{0m}\left(\gamma^{\prime}+\Omega_{ij}\frac{d}{dM_{ij}}\right)\right]\left\langle f_{1}f_{1}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+ & = & \frac{2}{3}\left(\sqrt{\frac{1}{3}}\Sigma_{1}+\sqrt{\frac{2}{3}}M_{01}\gamma^{\prime}\right).
+\end{eqnarray*}
+
+\end_inset
+
+ For 
+\begin_inset Formula $V_{200}^{\left(2,1\right)}$
+\end_inset
+
+, we need to calculate 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\langle F_{1}^{\left(2\right)}F_{0}^{\left(2\right)}h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle  & = & \frac{2}{M}\left[\sqrt{\frac{K}{M}}\Sigma_{m}-\sqrt{\frac{L}{M}}M_{0m}\left(\gamma^{\prime}+\Omega_{ij}\frac{d}{dM_{ij}}\right)\right]\left\langle f_{1}f_{m}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+ & = & \frac{2}{3}\left(\sqrt{\frac{2}{3}}\Sigma_{1}-\sqrt{\frac{1}{3}}M_{01}\gamma^{\prime}\right).
+\end{eqnarray*}
+
+\end_inset
+
+ The related matrices are 
 \begin_inset Formula 
 \[
-V_{100}^{\left(2,1\right)}=V_{100}^{\left(2,1\right)}=0
+M=\begin{pmatrix}0 & -i\left(2-\sqrt{3}\right)\\
+i\left(2-\sqrt{3}\right) & 0
+\end{pmatrix},\quad\det\left(CC^{\dagger}\right)^{1/4}=\frac{1+\sqrt{3}}{2\sqrt{2}}.
 \]
 
 \end_inset
 
+ For 
+\begin_inset Formula $V$
+\end_inset
 
+ vertex
+\begin_inset Formula 
+\[
+\Sigma_{1}=i\sqrt{6},\quad\gamma^{\prime}=-1-\sqrt{3}
+\]
+
+\end_inset
+
+ 
 \begin_inset Formula 
 \begin{eqnarray*}
-V_{110}^{\left(2,1\right)} & = & 2\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left[\sqrt{\frac{1}{3}}\Sigma_{1}-\sqrt{\frac{2}{3}}M_{10}\left(\gamma^{\prime}+\Omega_{mn}\frac{d}{dM_{mn}}\right)\right]\left\langle F_{1}^{\left(2\right)}f_{1}^{\dagger}\exp\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\rangle \\
- & = & 2\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left(\sqrt{\frac{1}{3}}\Sigma_{1}-\sqrt{\frac{2}{3}}M_{10}\gamma^{\prime}\right)
+V_{110}^{\left(2,1\right)} & = & 3\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left\langle F_{1}^{\left(2\right)}F_{0}^{\left(1\right)}h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+ & = & \frac{1+\sqrt{3}}{\sqrt{2}}\left(\sqrt{\frac{1}{3}}\Sigma_{1}+\sqrt{\frac{2}{3}}M_{01}\gamma^{\prime}\right)\\
+ & = & \left(1+\frac{5}{\sqrt{3}}\right)i
 \end{eqnarray*}
 
 \end_inset
@@ -2217,8 +2358,58 @@ V_{110}^{\left(2,1\right)} & = & 2\left[\det\left(CC^{\dagger}\right)\right]^{1/
 
 \begin_inset Formula 
 \begin{eqnarray*}
-V_{200} & = & 2\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left[\sqrt{\frac{2}{3}}\Sigma_{1}+\sqrt{\frac{1}{3}}M_{10}\left(\gamma^{\prime}+\Omega_{mn}\frac{d}{dM_{mn}}\right)\right]\left\langle F_{1}^{\left(2\right)}f_{1}^{\dagger}\exp\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right\rangle \\
- & = & 2\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left(\sqrt{\frac{2}{3}}\Sigma_{1}+\sqrt{\frac{1}{3}}M_{10}\gamma^{\prime}\right)
+V_{200}^{\left(2,1\right)} & = & 3\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left\langle F_{1}^{\left(2\right)}F_{0}^{\left(2\right)}h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+ & = & \frac{1+\sqrt{3}}{\sqrt{2}}\left(\sqrt{\frac{2}{3}}\Sigma_{1}-\sqrt{\frac{1}{3}}M_{10}\gamma^{\prime}\right)\\
+ & = & \sqrt{\frac{2}{3}}\left(2+\sqrt{3}\right)i
+\end{eqnarray*}
+
+\end_inset
+
+ For 
+\begin_inset Formula $W$
+\end_inset
+
+ vertex, 
+\begin_inset Formula 
+\[
+\Sigma_{1}=i\sqrt{6},\quad\gamma^{\prime}=8\left(1-\sqrt{3}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+W_{011}^{\left(1,2\right)} & = & 2\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left\langle F_{1}^{\left(2\right)}F_{0}^{\left(1\right)}h^{\left(W\right)}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ^{\dagger}\\
+ & = & \frac{\sqrt{2}\left(1+\sqrt{3}\right)}{3}\left(\sqrt{\frac{1}{3}}\Sigma_{1}+\sqrt{\frac{2}{3}}M_{01}\gamma^{\prime}\right)^{*}\\
+ & = & -\frac{10}{9}i\left(7\sqrt{3}-9\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+W_{002}^{\left(1,2\right)} & = & 2\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left\langle F_{1}^{\left(2\right)}F_{0}^{\left(2\right)}h^{\left(W\right)}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ^{\dagger}\\
+ & = & \frac{\sqrt{2}\left(1+\sqrt{3}\right)}{3}\left(\sqrt{\frac{2}{3}}\Sigma_{1}-\sqrt{\frac{1}{3}}M_{10}\gamma^{\prime}\right)^{*}\\
+ & = & -\frac{2}{9}i\sqrt{2}\left(27-13\sqrt{3}\right)
+\end{eqnarray*}
+
+\end_inset
+
+ For 
+\begin_inset Formula $M=3$
+\end_inset
+
+, the ground energy 
+\begin_inset Formula $E_{0}=-4\sqrt{3}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+E-E_{0} & = & \frac{1}{N^{2}}\left(\frac{W_{011}V_{110}}{-4\sqrt{3}-4}+\frac{W_{002}V_{220}}{-4\sqrt{3}-4}\right)\\
+ & = & \left(\frac{37}{6}-\frac{9\sqrt{3}}{2}\right)\frac{1}{N^{2}}
 \end{eqnarray*}
 
 \end_inset
