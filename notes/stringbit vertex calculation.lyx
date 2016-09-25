@@ -1325,6 +1325,14 @@ B_{nm}=2\sin\frac{\left(n+m\right)\pi}{2M}+2\exp\left(2\pi i\frac{L+1}{2}\frac{m
 
 \begin_inset Formula 
 \[
+X_{n}=\left[1-\exp\left(-2\pi i\frac{\left(L+1\right)n}{M}\right)\right]\left(s_{n}+ic_{n}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
 \text{const part of }h_{M,L+1}=-\frac{2}{M}\cot\frac{\pi}{2M}-\frac{2}{M}\cot\frac{2L+1}{2M}\pi\equiv\alpha
 \]
 
@@ -1417,6 +1425,14 @@ B_{nm}=2\exp\left(2\pi iL\frac{m-n}{M}\right)\sin\frac{\left(n+m\right)\pi}{2M}+
 
 \begin_inset Formula 
 \[
+X_{n}=\left[\exp\left(-2\pi i\frac{Ln}{M}\right)-\exp\left(-2\pi i\frac{\left(L+1\right)n}{M}\right)\right]\left(s_{n}+ic_{n}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
 \text{const part}=-\frac{4}{M}\cot\frac{\pi}{2M}
 \]
 
@@ -1453,6 +1469,14 @@ B_{nm}=2\sin\frac{\left(n+m\right)\pi}{2M}+2\exp\left(2\pi i\frac{m-n}{2M}\right
 
 \begin_inset Formula 
 \[
+X_{n}=\left[1-\exp\left(-2\pi i\frac{n}{M}\right)\right]\left(s_{n}+ic_{n}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
 \text{const part}=-\frac{4}{M}\cot\frac{\pi}{2M}
 \]
 
@@ -1465,7 +1489,7 @@ B_{nm}=2\sin\frac{\left(n+m\right)\pi}{2M}+2\exp\left(2\pi i\frac{m-n}{2M}\right
 ,
 \begin_inset Formula 
 \begin{eqnarray*}
-\bar{A}_{nm} & = & \left[1+\exp\left(-2\pi i\frac{n+m}{M}\right)\right]\left[1+\exp\left(-2\pi iL\frac{m+n}{M}\right)\right]\sin\frac{n-m}{2M}\pi
+\bar{A}_{nm} & = & \left[1+\exp\left(-\pi i\frac{n+m}{M}\right)\right]\left[1+\exp\left(-2\pi iL\frac{m+n}{M}\right)\right]\sin\frac{n-m}{2M}\pi
 \end{eqnarray*}
 
 \end_inset
@@ -1473,7 +1497,7 @@ B_{nm}=2\sin\frac{\left(n+m\right)\pi}{2M}+2\exp\left(2\pi i\frac{m-n}{2M}\right
 
 \begin_inset Formula 
 \[
-A_{nm}=\left[1+\exp\left(2\pi i\frac{n+m}{M}\right)\right]\left[1+\exp\left(2\pi iL\frac{m+n}{M}\right)\right]\sin\frac{n-m}{2M}\pi
+A_{nm}=\left[1+\exp\left(\pi i\frac{n+m}{M}\right)\right]\left[1+\exp\left(2\pi iL\frac{m+n}{M}\right)\right]\sin\frac{n-m}{2M}\pi
 \]
 
 \end_inset
@@ -1481,7 +1505,15 @@ A_{nm}=\left[1+\exp\left(2\pi i\frac{n+m}{M}\right)\right]\left[1+\exp\left(2\pi
 
 \begin_inset Formula 
 \[
-B_{nm}=2\left[1+\exp\left(2\pi iL\frac{m-n}{M}\right)\right]\left[1+\exp\left(2\pi i\frac{m-n}{2M}\right)\right]\sin\frac{n+m}{2M}\pi
+B_{nm}=2\left[1+\exp\left(\pi i\frac{m-n}{M}\right)\right]\left[1+\exp\left(2\pi iL\frac{m-n}{M}\right)\right]\sin\frac{n+m}{2M}\pi
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+X_{n}=\left[1-\exp\left(-2\pi i\frac{n}{M}\right)\right]\left[1+\exp\left(-2\pi i\frac{Ln}{M}\right)\right]\left(s_{n}+ic_{n}\right)
 \]
 
 \end_inset
@@ -1919,29 +1951,6 @@ h_{kl}\ket{G} & = & -\frac{2}{M}\left[\cot\frac{\pi}{2M}+\cot\frac{2\left(l-k\ri
 \[
 s_{1}<s_{3}<\cdots<s_{2n-1},\quad s_{2i-1}<s_{2i}.
 \]
-
-\end_inset
-
- For two general eigenfunction
-\begin_inset Formula 
-\[
-\psi_{s}^{\left(K\right)}=F_{k_{p}}^{\left(K\right)\dagger}F_{k_{p-1}}^{\left(K\right)\dagger}\cdots F_{k_{1}}^{\left(K\right)\dagger}\psi_{0}^{\left(K\right)}\equiv F^{\left(K\right)\dagger}\psi_{0}^{\left(K\right)},\quad\psi_{t}^{\left(L\right)}=F_{l_{q}}^{\left(K\right)\dagger}F_{l_{q-1}}^{\left(K\right)\dagger}\cdots F_{l_{1}}^{\left(K\right)\dagger}\psi_{0}^{\left(L\right)}\equiv F^{\left(L\right)\dagger}\psi_{0}
-\]
-
-\end_inset
-
- we have 
-\begin_inset Formula 
-\begin{eqnarray*}
-V_{0st}^{\left(L\right)} & = & \left(-1\right)^{M\left(\psi_{0}^{\left(M\right)}-1\right)}\int d^{M}\theta\,\tilde{F}_{k_{1}}^{\left(K\right)}\tilde{F}_{k_{2}}^{\left(K\right)}\cdots\tilde{F}_{k_{p}}^{\left(K\right)}\bar{\psi}_{0}^{\left(K\right)}\tilde{F}_{l_{1}}^{\left(L\right)}\tilde{F}_{l_{2}}^{\left(L\right)}\cdots\tilde{F}_{l_{a}}^{\left(L\right)}\bar{\psi}_{0}^{\left(L\right)}h_{K,L+1}\psi_{0}^{\left(M\right)}\\
- & = & \left(-1\right)^{M\left(\psi_{0}^{\left(M\right)}-1\right)}\int d^{M}\theta\,\bar{\psi}_{0}^{\left(K\right)}F_{k_{1}}^{\left(K\right)}F_{k_{2}}^{\left(K\right)}\cdots F_{k_{p}}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}F_{l_{1}}^{\left(L\right)}F_{l_{2}}^{\left(L\right)}\cdots F_{l_{q}}^{\left(L\right)}h_{K,L+1}\psi_{0}^{\left(M\right)}\\
- & = & \left(-1\right)^{pL}\left(-1\right)^{M\left(\psi_{0}^{\left(M\right)}-1\right)}\int d^{M}\theta\,\bar{\psi}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}F_{k_{1}}^{\left(K\right)}F_{k_{2}}^{\left(K\right)}\cdots F_{k_{p}}^{\left(K\right)}F_{l_{1}}^{\left(L\right)}F_{l_{2}}^{\left(L\right)}\cdots F_{l_{q}}^{\left(L\right)}h_{K,L+1}\psi_{0}^{\left(M\right)}\\
- & = & \left(-1\right)^{pL}\left(-1\right)^{M\left(\psi_{0}^{\left(M\right)}-1\right)}\int d^{M}\theta\,\bar{\psi}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}F_{k_{1}}^{\left(K\right)}F_{k_{2}}^{\left(K\right)}\cdots F_{k_{p}}^{\left(K\right)}F_{l_{1}}^{\left(L\right)}F_{l_{2}}^{\left(L\right)}\cdots F_{l_{q}}^{\left(L\right)}h_{K,L+1}\exp\left(\frac{1}{2}M_{kl}f_{k}^{\dagger}f_{l}^{\dagger}\right)\psi_{0}^{\left(L\right)}\psi_{0}^{\left(K\right)}\left[\det\left(I+MM^{\dagger}\right)\right]^{-1/4}\\
- & = & \left(-1\right)^{pL}\left(-1\right)^{M\left(\psi_{0}^{\left(M\right)}-1\right)}\left\langle F_{k_{1}}^{\left(K\right)}F_{k_{2}}^{\left(K\right)}\cdots F_{k_{p}}^{\left(K\right)}F_{l_{1}}^{\left(L\right)}F_{l_{2}}^{\left(L\right)}\cdots F_{l_{q}}^{\left(L\right)}h_{K,L+1}\exp\left(\frac{1}{2}M_{kl}f_{k}^{\dagger}f_{l}^{\dagger}\right)\right\rangle \\
- &  & \times\left[\det\left(I+MM^{\dagger}\right)\right]^{-1/4}\int d^{M}\theta\bar{\psi}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}\psi_{0}^{\left(L\right)}\psi_{0}^{\left(K\right)}\\
- & = & \left(-1\right)^{pL}\left(-1\right)^{M\left(\psi_{0}^{\left(M\right)}-1\right)}\left\langle F_{k_{1}}^{\left(K\right)}F_{k_{2}}^{\left(K\right)}\cdots F_{k_{p}}^{\left(K\right)}F_{l_{1}}^{\left(L\right)}F_{l_{2}}^{\left(L\right)}\cdots F_{l_{q}}^{\left(L\right)}h_{K,L+1}\exp\left(\frac{1}{2}M_{kl}f_{k}^{\dagger}f_{l}^{\dagger}\right)\right\rangle \left[\det\left(I+MM^{\dagger}\right)\right]^{-1/4}\\
- &  & \times\int d^{L}\theta\,\bar{\psi}_{0}^{\left(L\right)}\psi_{0}^{\left(L\right)}\int d^{K}\theta\bar{\psi}_{0}^{\left(K\right)}\psi_{0}^{\left(K\right)}
-\end{eqnarray*}
 
 \end_inset
 

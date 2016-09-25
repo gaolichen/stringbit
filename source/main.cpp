@@ -22,13 +22,13 @@ string scriptFolder = ".";
 string scriptFolder = ".";
 #endif
 
-void TestHamiltonian()
+void TestHamiltonian(string bits)
 {
-	TraceState state("aaaba");
+	TraceState state(bits);
 	H0Hamiltonian ham;
 	MixState re, im;
 	ham.Apply(state, re, im);
-	cout << ham << state << "|0> = ";
+	cout << "(" << ham << ")" << state << "|0> = ";
 	cout << re.ToString();
 	cout <<" + i{" << im.ToString() << "}" << endl;
 }
@@ -251,7 +251,8 @@ int main()
 	GenerateStates(true);
 	//TestTraceState();
 	//TestHamOperator();
-	//TestHamiltonian();
+	TestHamiltonian("bbb");
+	TestHamiltonian("aab");
 	//TestZeroHamiltonian();
 	//CalculateNorm(9, false);
 	//TestNormCalculator();
@@ -259,7 +260,7 @@ int main()
 	//GenerateLaTeX();
 
 	//GenerateAllHamMatlab();
-	OutputStateStructure();
+	//OutputStateStructure();
 	//GenerateAllHamDataFile();
 	return 0;
 }
