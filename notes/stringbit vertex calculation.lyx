@@ -1010,7 +1010,7 @@ h_{kl}^{\left(1\right)}= & -2+\frac{4}{M}\sum_{n,m=1}^{M-1}\alpha_{n}\beta_{m}\e
 Finally we obtain
 \begin_inset Formula 
 \[
-h_{kl}^{\left(1\right)}=\frac{2}{M}\sum_{n,m=1}^{M-1}\left(\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}+A_{nm}F_{n}F_{m}+B_{nm}F_{n}^{\dagger}F_{m}\right)-\frac{2}{M}\cot\frac{\pi}{2M}+\frac{2}{M}\cot\frac{2\left(k-l\right)+1}{2M}\pi
+h_{kl}^{\left(1\right)}=\frac{2}{M}\sum_{n,m=1}^{M-1}\left(\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}+A_{nm}F_{n}F_{m}+B_{nm}F_{n}^{\dagger}F_{m}\right)+\frac{2}{M}\gamma
 \]
 
 \end_inset
@@ -1044,6 +1044,14 @@ B_{nm} & = & \left[2\exp\left(2\pi ik\frac{m-n}{M}\right)-\exp\left(2\pi i\frac{
  &  & -i\exp\left(2\pi i\frac{lm-kn}{M}-i\frac{n+m}{2M}\pi\right)\\
  & = & 2\exp\left(2\pi ik\frac{m-n}{M}\right)\sin\frac{\left(n+m\right)\pi}{2M}+2\exp\left(2\pi i\frac{k+l}{2}\frac{m-n}{M}\right)\sin\frac{\left(l-k-1/2\right)\left(m+n\right)}{M}\pi
 \end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\gamma=-\cot\frac{\pi}{2M}+\cot\frac{2\left(k-l\right)+1}{2M}\pi
+\]
 
 \end_inset
 
@@ -1124,8 +1132,7 @@ X_{n}=\left[\exp\left(-2\pi i\frac{kn}{M}\right)-\exp\left(-2\pi i\frac{ln}{M}\r
 \begin_inset Formula 
 \begin{eqnarray*}
 h_{kl} & = & \frac{2}{M}\sum_{n,m=1}^{M-1}\left(\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}+A_{nm}F_{n}F_{m}+B_{nm}F_{n}^{\dagger}F_{m}\right)+\\
- &  & -\frac{2}{M}\cot\frac{\pi}{2M}+\frac{2}{M}\cot\frac{2\left(k-l\right)+1}{2M}\pi\\
- &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left[X_{n}\left(F_{0}^{\dagger}F_{n}^{\dagger}-iF_{n}^{\dagger}F_{0}\right)+\mathrm{h.c.}\right]
+ &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left[X_{n}\left(F_{0}^{\dagger}F_{n}^{\dagger}-iF_{n}^{\dagger}F_{0}\right)+\mathrm{h.c.}\right]+\frac{2}{M}\gamma
 \end{eqnarray*}
 
 \end_inset
@@ -1333,7 +1340,7 @@ X_{n}=\left[1-\exp\left(-2\pi i\frac{\left(L+1\right)n}{M}\right)\right]\left(s_
 
 \begin_inset Formula 
 \[
-\text{const part of }h_{M,L+1}=-\frac{2}{M}\cot\frac{\pi}{2M}-\frac{2}{M}\cot\frac{2L+1}{2M}\pi\equiv\alpha
+\gamma=-\cot\frac{\pi}{2M}-\cot\frac{2L+1}{2M}\pi
 \]
 
 \end_inset
@@ -1433,7 +1440,7 @@ X_{n}=\left[\exp\left(-2\pi i\frac{Ln}{M}\right)-\exp\left(-2\pi i\frac{\left(L+
 
 \begin_inset Formula 
 \[
-\text{const part}=-\frac{4}{M}\cot\frac{\pi}{2M}
+\gamma=-2\cot\frac{\pi}{2M}
 \]
 
 \end_inset
@@ -1477,7 +1484,7 @@ X_{n}=\left[1-\exp\left(-2\pi i\frac{n}{M}\right)\right]\left(s_{n}+ic_{n}\right
 
 \begin_inset Formula 
 \[
-\text{const part}=-\frac{4}{M}\cot\frac{\pi}{2M}
+\text{const part}=-2\cot\frac{\pi}{2M}
 \]
 
 \end_inset
@@ -1521,7 +1528,7 @@ X_{n}=\left[1-\exp\left(-2\pi i\frac{n}{M}\right)\right]\left[1+\exp\left(-2\pi 
 
 \begin_inset Formula 
 \[
-\text{const part}=-\frac{8}{M}\cot\frac{\pi}{2M}
+\gamma=-4\cot\frac{\pi}{2M}
 \]
 
 \end_inset
@@ -1911,9 +1918,9 @@ F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\ket{G}=-\tr\left(S^{*}C^{-1}\bar{A}\r
 
 \begin_inset Formula 
 \begin{eqnarray*}
-h_{kl}\ket{G} & = & -\frac{2}{M}\left[\cot\frac{\pi}{2M}+\cot\frac{2\left(l-k\right)-1}{2M}\pi+\tr\left(S^{*}C^{-1}\bar{A}\right)\right]\ket{G}\\
+h_{kl}\ket{G} & = & \frac{2}{M}\left[\gamma-\tr\left(S^{*}C^{-1}\bar{A}\right)\right]\ket{G}\\
  &  & +\frac{2}{M}\sum_{m,n=0}^{M-2}\left\{ f_{m}^{\dagger}\left[C^{-1}\bar{A}\left(C^{-1}\right)^{T}\right]_{mn}f_{n}^{\dagger}+F_{0}^{\dagger}f_{m}^{\dagger}C_{mn}^{-1}X_{n}\right\} \ket{G}\\
- & = & \frac{2}{M}\left(-\Lambda+\Omega_{mn}\frac{d}{dM_{mn}}+F_{0}^{\dagger}f_{m}^{\dagger}\Sigma_{m}\right)\exp\left(\frac{1}{2}M_{mn}f_{m}^{\dagger}f_{n}^{\dagger}\right)\ket{0}
+ & = & \frac{2}{M}\left(\gamma^{\prime}+\Omega_{mn}\frac{d}{dM_{mn}}+F_{0}^{\dagger}f_{m}^{\dagger}\Sigma_{m}\right)\exp\left(\frac{1}{2}M_{mn}f_{m}^{\dagger}f_{n}^{\dagger}\right)\ket{0}
 \end{eqnarray*}
 
 \end_inset
@@ -1921,7 +1928,7 @@ h_{kl}\ket{G} & = & -\frac{2}{M}\left[\cot\frac{\pi}{2M}+\cot\frac{2\left(l-k\ri
  where 
 \begin_inset Formula 
 \[
-\Lambda=\cot\frac{\pi}{2M}+\cot\frac{2\left(l-k\right)-1}{2M}\pi+\tr\left(S^{*}C^{-1}\bar{A}\right)
+\gamma^{\prime}=\gamma-\tr\left(S^{*}C^{-1}\bar{A}\right)
 \]
 
 \end_inset
@@ -1955,72 +1962,6 @@ s_{1}<s_{3}<\cdots<s_{2n-1},\quad s_{2i-1}<s_{2i}.
 \end_inset
 
 
-\end_layout
-
-\begin_layout Section*
-Examples
-\end_layout
-
-\begin_layout Standard
-Let us calculate the case of 
-\begin_inset Formula $M=5$
-\end_inset
-
-, 
-\begin_inset Formula $L=2$
-\end_inset
-
-.
- We have 
-\begin_inset Formula 
-\[
-f_{1}=F_{1}^{\left(2\right)},\quad f_{2}=F_{1}^{\left(3\right)},\quad f_{3}=F_{2}^{\left(2\right)},
-\]
-
-\end_inset
-
-The eigenfunctions for 
-\begin_inset Formula $M=3$
-\end_inset
-
- are 
-\begin_inset Formula 
-\[
-\psi_{0}^{\left(3\right)},\quad\bar{\psi}_{0}^{\left(3\right)},\quad F_{0}^{\dagger}\psi_{0}^{\left(3\right)},\quad F_{0}^{-}\bar{\psi}_{0}^{\left(3\right)}
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-f_{3}^{\dagger}f_{2}^{\dagger}\psi_{0}^{\left(3\right)},\quad f_{2}^{-}f_{3}^{-}\bar{\psi}_{0}^{\left(3\right)},\quad f_{3}^{\dagger}f_{2}^{\dagger}F_{0}^{\dagger}\psi_{0}^{\left(3\right)},\quad F_{0}^{-}f_{2}^{-}f_{3}^{-}\bar{\psi}_{0}^{\left(3\right)}.
-\]
-
-\end_inset
-
- For 
-\begin_inset Formula $M=2$
-\end_inset
-
-, the eigenfunctions are 
-\begin_inset Formula 
-\[
-f_{1}^{\dagger}\psi_{0}^{\left(2\right)},\quad f_{1}^{+}\psi_{0}^{\left(2\right)},\quad f_{1}^{\dagger}F_{0}^{\dagger}\psi_{0}^{\left(2\right)},\quad F_{0}^{-}f_{1}^{-}\bar{\psi}_{0}^{\left(2\right)}.
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-V_{000}^{\left(2\right)} & = & 5\int d^{5}\theta\,\bar{\psi}_{0}^{\left(3\right)}\psi_{0}^{\left(2\right)}h_{3,4}\psi_{0}^{\left(5\right)}\\
- & =
-\end{eqnarray*}
-
-\end_inset
-
- 
 \end_layout
 
 \begin_layout Section
