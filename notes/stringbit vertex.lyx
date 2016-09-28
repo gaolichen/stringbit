@@ -991,7 +991,7 @@ Then the lowering operator of
 -bit chain can be written as 
 \begin_inset Formula 
 \[
-F_{m}=\sum_{n=0}^{M-2}\left(f_{0}C_{mn}+f_{n}^{\dagger}S_{mn}\right),\quad1\leq m\leq M-1
+F_{m}=\sum_{n=0}^{M-2}\left(f_{n}C_{mn}+f_{n}^{\dagger}S_{mn}\right),\quad1\leq m\leq M-1
 \]
 
 \end_inset
@@ -1566,7 +1566,7 @@ X_{n}^{\left(V\right)}=\left[1-\exp\left(-2\pi i\frac{\left(L+1\right)n}{M}\righ
 , these coefficients become
 \begin_inset Formula 
 \[
-A_{nm}^{\left(W\right)}=\left[1+\exp\left(\pi i\frac{n+m}{M}\right)\right]\left[1+\exp\left(2\pi iL\frac{m+n}{M}\right)\right]\sin\frac{n-m}{2M}\pi
+A_{nm}^{\left(W\right)}=\left[1+\exp\left(\pi i\frac{n+m}{M}\right)\right]\left[1+\exp\left(2\pi iL\frac{m+n}{M}\right)\right]\sin\frac{m-n}{2M}\pi
 \]
 
 \end_inset
@@ -1791,7 +1791,7 @@ F_{0}^{\left(L\right)}F_{0}^{\left(K\right)}=f_{0}F_{0}\left(\frac{L}{M}+\frac{K
 \begin_inset Formula 
 \begin{eqnarray*}
 \left\langle \mathbb{F}_{1t}\mathbb{F}_{s}f_{0}h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle  & = & \frac{2}{M}\left(\gamma^{\prime}+\Omega_{ij}\frac{d}{dM_{ij}}\right)\left\langle \mathbb{F}_{1t}\mathbb{F}_{s}f_{0}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
- & = & -\frac{2}{M}\left(\gamma^{\prime}+\Omega_{ij}\frac{d}{dM_{ij}}\right)M_{0m}\left\langle \mathbb{F}_{1t}\mathbb{F}_{s}f_{m}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ,
+ & = & \frac{2}{M}\left(\gamma^{\prime}+\Omega_{ij}\frac{d}{dM_{ij}}\right)M_{0m}\left\langle \mathbb{F}_{1t}\mathbb{F}_{s}f_{m}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ,
 \end{eqnarray*}
 
 \end_inset
@@ -1799,7 +1799,7 @@ F_{0}^{\left(L\right)}F_{0}^{\left(K\right)}=f_{0}F_{0}\left(\frac{L}{M}+\frac{K
  therefore
 \begin_inset Formula 
 \begin{eqnarray*}
-\left\langle \mathbb{F}_{t}\mathbb{F}_{s}h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle  & = & \frac{2}{M}\left[\sqrt{\frac{K}{M}}\Sigma_{m}+\sqrt{\frac{L}{M}}M_{0m}\left(\gamma^{\prime}+\Omega_{ij}\frac{d}{dM_{ij}}\right)\right]\\
+\left\langle \mathbb{F}_{t}\mathbb{F}_{s}h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle  & = & \frac{2}{M}\left[\sqrt{\frac{K}{M}}\Sigma_{m}-\sqrt{\frac{L}{M}}M_{0m}\left(\gamma^{\prime}+\Omega_{ij}\frac{d}{dM_{ij}}\right)\right]\\
  &  & \times\left\langle \mathbb{F}_{1t}\mathbb{F}_{s}f_{m}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle .
 \end{eqnarray*}
 
@@ -1828,7 +1828,7 @@ F_{0}^{\left(L\right)}F_{0}^{\left(K\right)}=f_{0}F_{0}\left(\frac{L}{M}+\frac{K
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\left\langle \mathbb{F}_{t}\mathbb{F}_{s}h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle  & = & \frac{2}{M}\left[\sqrt{\frac{L}{M}}\Sigma_{m}-\sqrt{\frac{K}{M}}M_{0m}\left(\gamma^{\prime}+\Omega_{ij}\frac{d}{dM_{ij}}\right)\right]\\
+\left\langle \mathbb{F}_{t}\mathbb{F}_{s}h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle  & = & \frac{2}{M}\left[\sqrt{\frac{L}{M}}\Sigma_{m}+\sqrt{\frac{K}{M}}M_{0m}\left(\gamma^{\prime}+\Omega_{ij}\frac{d}{dM_{ij}}\right)\right]\\
  &  & \times\left\langle \mathbb{F}_{t}\mathbb{F}_{1s}f_{m}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle .
 \end{eqnarray*}
 
@@ -2308,8 +2308,8 @@ Checking the grading of eigenfunction, we find
 , 
 \begin_inset Formula 
 \begin{eqnarray*}
-\left\langle F_{1}^{\left(2\right)}F_{0}^{\left(1\right)}h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle  & = & \frac{2}{3}\left[\sqrt{\frac{L}{M}}\Sigma_{m}-\sqrt{\frac{K}{M}}M_{0m}\left(\gamma^{\prime}+\Omega_{ij}\frac{d}{dM_{ij}}\right)\right]\left\langle f_{1}f_{1}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
- & = & \frac{2}{3}\left(\sqrt{\frac{1}{3}}\Sigma_{1}-\sqrt{\frac{2}{3}}M_{01}\gamma^{\prime}\right).
+\left\langle F_{1}^{\left(2\right)}F_{0}^{\left(1\right)}h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle  & = & \frac{2}{3}\left[\sqrt{\frac{L}{M}}\Sigma_{m}+\sqrt{\frac{K}{M}}M_{0m}\left(\gamma^{\prime}+\Omega_{ij}\frac{d}{dM_{ij}}\right)\right]\left\langle f_{1}f_{1}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+ & = & \frac{2}{3}\left(\sqrt{\frac{1}{3}}\Sigma_{1}+\sqrt{\frac{2}{3}}M_{01}\gamma^{\prime}\right).
 \end{eqnarray*}
 
 \end_inset
@@ -2353,8 +2353,8 @@ i\left(2-\sqrt{3}\right) & 0
 \begin_inset Formula 
 \begin{eqnarray*}
 V_{110}^{\left(2,1\right)} & = & 3\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left\langle F_{1}^{\left(2\right)}F_{0}^{\left(1\right)}h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
- & = & \frac{1+\sqrt{3}}{\sqrt{2}}\left(\sqrt{\frac{1}{3}}\Sigma_{1}-\sqrt{\frac{2}{3}}M_{01}\gamma^{\prime}\right)\\
- & = & i\left(5\sqrt{3}-7\right)
+ & = & \frac{1+\sqrt{3}}{\sqrt{2}}\left(\sqrt{\frac{1}{3}}\Sigma_{1}+\sqrt{\frac{2}{3}}M_{01}\gamma^{\prime}\right)\\
+ & = & -3i\left(\sqrt{3}-3\right)
 \end{eqnarray*}
 
 \end_inset
@@ -2363,8 +2363,8 @@ V_{110}^{\left(2,1\right)} & = & 3\left[\det\left(CC^{\dagger}\right)\right]^{1/
 \begin_inset Formula 
 \begin{eqnarray*}
 V_{200}^{\left(2,1\right)} & = & 3\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left\langle F_{1}^{\left(2\right)}F_{0}^{\left(2\right)}h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
- & = & \frac{1+\sqrt{3}}{\sqrt{2}}\left(\sqrt{\frac{2}{3}}\Sigma_{1}+\sqrt{\frac{1}{3}}M_{01}\gamma^{\prime}\right)\\
- & = & -i\sqrt{2}\left(\sqrt{3}-5\right)
+ & = & \frac{1+\sqrt{3}}{\sqrt{2}}\left(\sqrt{\frac{2}{3}}\Sigma_{1}-\sqrt{\frac{1}{3}}M_{01}\gamma^{\prime}\right)\\
+ & = & 3i\sqrt{2}\left(\sqrt{3}-1\right)
 \end{eqnarray*}
 
 \end_inset
@@ -2385,8 +2385,8 @@ V_{200}^{\left(2,1\right)} & = & 3\left[\det\left(CC^{\dagger}\right)\right]^{1/
 \begin_inset Formula 
 \begin{eqnarray*}
 W_{011}^{\left(1,2\right)} & = & 2\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left\langle F_{1}^{\left(2\right)}F_{0}^{\left(1\right)}h^{\left(W\right)}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ^{\dagger}\\
- & = & \frac{\sqrt{2}\left(1+\sqrt{3}\right)}{3}\left(\sqrt{\frac{1}{3}}\Sigma_{1}-\sqrt{\frac{2}{3}}M_{01}\gamma^{\prime}\right)^{*}\\
- & = & \frac{2}{3}i\left(3\sqrt{3}-5\right)
+ & = & \frac{\sqrt{2}\left(1+\sqrt{3}\right)}{3}\left(\sqrt{\frac{1}{3}}\Sigma_{1}+\sqrt{\frac{2}{3}}M_{01}\gamma^{\prime}\right)^{*}\\
+ & = & 2i-\frac{10i}{\sqrt{3}}
 \end{eqnarray*}
 
 \end_inset
@@ -2395,8 +2395,8 @@ W_{011}^{\left(1,2\right)} & = & 2\left[\det\left(CC^{\dagger}\right)\right]^{1/
 \begin_inset Formula 
 \begin{eqnarray*}
 W_{002}^{\left(1,2\right)} & = & 2\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left\langle F_{1}^{\left(2\right)}F_{0}^{\left(2\right)}h^{\left(W\right)}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ^{\dagger}\\
- & = & \frac{\sqrt{2}\left(1+\sqrt{3}\right)}{3}\left(\sqrt{\frac{2}{3}}\Sigma_{1}+\sqrt{\frac{1}{3}}M_{01}\gamma^{\prime}\right)^{*}\\
- & = & \frac{2}{3}i\sqrt{2}\left(1-3\sqrt{3}\right)
+ & = & \frac{\sqrt{2}\left(1+\sqrt{3}\right)}{3}\left(\sqrt{\frac{2}{3}}\Sigma_{1}-\sqrt{\frac{1}{3}}M_{01}\gamma^{\prime}\right)^{*}\\
+ & = & \frac{2}{3}i\sqrt{2}\left(\sqrt{3}-3\right)
 \end{eqnarray*}
 
 \end_inset

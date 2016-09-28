@@ -1497,7 +1497,7 @@ X_{n}=\left[1-\exp\left(-2\pi i\frac{n}{M}\right)\right]\left(s_{n}+ic_{n}\right
 
 \begin_inset Formula 
 \[
-A_{nm}=\left[1+\exp\left(\pi i\frac{n+m}{M}\right)\right]\left[1+\exp\left(2\pi iL\frac{m+n}{M}\right)\right]\sin\frac{n-m}{2M}\pi
+A_{nm}=\left[1+\exp\left(\pi i\frac{n+m}{M}\right)\right]\left[1+\exp\left(2\pi iL\frac{m+n}{M}\right)\right]\sin\frac{m-n}{2M}\pi
 \]
 
 \end_inset
@@ -1717,8 +1717,8 @@ Using the identity
  & = & \frac{1}{2}\sum_{k,l}M_{kl}\left(f_{k}^{\dagger}\left\{ f_{l}^{\dagger},F_{m}\right\} -\left\{ f_{k}^{\dagger},F_{m}\right\} f_{l}\right)\\
  & = & \frac{1}{2}\sum_{k,l}M_{kl}\left(f_{k}^{\dagger}C_{mn}\delta_{ln}-C_{mn}\delta_{kn}f_{l}\right)\\
  & = & \frac{1}{2}\sum_{k,l}M_{kl}\left(f_{k}^{\dagger}C_{ml}-C_{mk}f_{l}\right)\\
- & = & \frac{1}{2}\sum_{k,l}\left(-C_{ml}M_{kl}f_{k}^{\dagger}-C_{mk}M_{kl}f_{l}\right)\\
- & = & -\sum_{k,l}C_{ml}M_{kl}f_{k}^{\dagger}
+ & = & \frac{1}{2}\sum_{k,l}\left(-C_{ml}M_{lk}f_{k}^{\dagger}-C_{mk}M_{kl}f_{l}\right)\\
+ & = & -\sum_{k,l}C_{ml}M_{lk}f_{k}^{\dagger}
 \end{eqnarray*}
 
 \end_inset
