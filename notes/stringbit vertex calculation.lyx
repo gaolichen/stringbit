@@ -287,7 +287,7 @@ F_{k}^{\dagger}=\bar{F}_{M-n}=c_{k}\alpha_{M-n}+s_{k}\beta_{M-n},\quad k=1,\cdot
  For zero modes, we define
 \begin_inset Formula 
 \[
-F_{0}=F_{M}=\beta_{0},\quad\bar{F}_{0}=\bar{F}_{M}=\alpha_{0},
+F_{0}=F_{M}=\exp\left(\frac{i\pi}{4}\right)\beta_{0},\quad\bar{F}_{0}=\bar{F}_{M}=\exp\left(-\frac{i\pi}{4}\right)\alpha_{0},
 \]
 
 \end_inset
@@ -931,7 +931,7 @@ h_{kl} & = & -2+\frac{4}{M}\sum_{n,m=0}^{M-1}\alpha_{n}\beta_{m}\exp\left(2\pi i
 
 \begin_inset Formula 
 \[
-\alpha_{0}=F_{0,}^{\dagger}\quad\beta_{0}=F_{0}
+\alpha_{0}=\exp\left(\frac{i\pi}{4}\right)F_{0,}^{\dagger}\quad\beta_{0}=\exp\left(-\frac{i\pi}{4}\right)F_{0}
 \]
 
 \end_inset
@@ -1030,11 +1030,9 @@ h_{kl}^{\left(1\right)}=\frac{2}{M}\sum_{n,m=1}^{M-1}\left(\bar{A}_{nm}F_{n}^{\d
 
  where 
 \begin_inset Formula 
-\begin{eqnarray*}
-\bar{A}_{nm} & = & \exp\left(-2\pi ik\frac{m+n}{M}\right)c_{n}s_{m}-\frac{i}{2}\exp\left(-2\pi i\frac{kn+lm}{M}\right)\exp\left(i\frac{m-n}{2M}\pi\right)\\
- &  & -\left[\exp\left(-2\pi ik\frac{m+n}{M}\right)c_{m}s_{s}-\frac{i}{2}\exp\left(-2\pi i\frac{km+ln}{M}\right)\exp\left(i\frac{n-m}{2M}\pi\right)\right]\\
- & = & \exp\left(-2\pi ik\frac{m+n}{M}\right)\sin\frac{n-m}{2M}\pi+\exp\left(-2\pi i\frac{\left(k+l\right)\left(m+n\right)}{2M}\right)\sin\frac{\left(l-k-1/2\right)\left(n-m\right)\pi}{M}
-\end{eqnarray*}
+\[
+\bar{A}_{nm}=A_{nm}^{\dagger}=A_{-n,-m}
+\]
 
 \end_inset
 
@@ -1071,7 +1069,15 @@ B_{nm} & = & \left[2\exp\left(2\pi ik\frac{m-n}{M}\right)-\exp\left(2\pi i\frac{
  We see that 
 \begin_inset Formula 
 \[
-A^{\dagger}=\bar{A},\quad B^{\dagger}=B,
+A^{T}=-A,\quad B_{nm}=2A_{-n,m},\quad B^{\dagger}=B,
+\]
+
+\end_inset
+
+ so which can also write 
+\begin_inset Formula 
+\[
+h_{kl}^{\left(1\right)}=\frac{2}{M}\sum_{n,m=1}^{M-1}\left(A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}+A_{nm}F_{n}F_{m}+2A_{-n,m}F_{n}^{\dagger}F_{m}\right)+\frac{2}{M}\gamma
 \]
 
 \end_inset
@@ -1080,7 +1086,7 @@ A^{\dagger}=\bar{A},\quad B^{\dagger}=B,
  Using 
 \begin_inset Formula 
 \[
-\alpha_{n}\beta_{0}=c_{n}F_{M-n}^{\dagger}F_{0}+s_{n}F_{n}F_{0}
+\alpha_{n}\beta_{0}=\exp\left(-\frac{i\pi}{4}\right)c_{n}F_{M-n}^{\dagger}F_{0}+s_{n}F_{n}F_{0}
 \]
 
 \end_inset
@@ -1088,8 +1094,8 @@ A^{\dagger}=\bar{A},\quad B^{\dagger}=B,
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\alpha_{0}\beta_{n} & = & -s_{n}F_{0}^{\dagger}F_{M-n}^{\dagger}+c_{n}F_{0}^{\dagger}F_{n}\\
- & = & s_{n}F_{M-n}^{\dagger}F_{0}^{\dagger}+c_{n}F_{0}^{\dagger}F_{n}
+\alpha_{0}\beta_{n} & = & \exp\left(\frac{i\pi}{4}\right)\left(-s_{n}F_{0}^{\dagger}F_{M-n}^{\dagger}+c_{n}F_{0}^{\dagger}F_{n}\right)\\
+ & = & \exp\left(\frac{i\pi}{4}\right)\left(s_{n}F_{M-n}^{\dagger}F_{0}^{\dagger}+c_{n}F_{0}^{\dagger}F_{n}\right)
 \end{eqnarray*}
 
 \end_inset
@@ -1097,8 +1103,8 @@ A^{\dagger}=\bar{A},\quad B^{\dagger}=B,
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\alpha_{n}\alpha_{0} & = & c_{n}F_{M-n}^{\dagger}F_{0}^{\dagger}+s_{n}F_{n}F_{0}^{\dagger}\\
- & = & c_{n}F_{M-n}^{\dagger}F_{0}^{\dagger}-s_{n}F_{0}^{\dagger}F_{n}
+\alpha_{n}\alpha_{0} & = & \exp\left(\frac{i\pi}{4}\right)\left(c_{n}F_{M-n}^{\dagger}F_{0}^{\dagger}+s_{n}F_{n}F_{0}^{\dagger}\right)\\
+ & = & \exp\left(\frac{i\pi}{4}\right)\left(c_{n}F_{M-n}^{\dagger}F_{0}^{\dagger}-s_{n}F_{0}^{\dagger}F_{n}\right)
 \end{eqnarray*}
 
 \end_inset
@@ -1106,7 +1112,7 @@ A^{\dagger}=\bar{A},\quad B^{\dagger}=B,
 
 \begin_inset Formula 
 \[
-\beta_{n}\beta_{0}=-s_{n}F_{M-n}^{\dagger}F_{0}+c_{n}F_{n}F_{0}
+\beta_{n}\beta_{0}=\exp\left(-\frac{i\pi}{4}\right)\left(-s_{n}F_{M-n}^{\dagger}F_{0}+c_{n}F_{n}F_{0}\right)
 \]
 
 \end_inset
@@ -1115,17 +1121,19 @@ A^{\dagger}=\bar{A},\quad B^{\dagger}=B,
 \begin_inset Formula 
 \begin{eqnarray*}
 h_{kl}^{\left(0\right)} & = & \frac{2}{M}\sum_{n=1}^{M-1}\left(\alpha_{n}\beta_{0}+\alpha_{0}\beta_{n}-i\alpha_{n}\alpha_{0}-i\beta_{n}\beta_{0}\right)\left[\exp\left(2\pi i\frac{kn}{M}\right)-\exp\left(2\pi i\frac{ln}{M}\right)\right]\\
- & = & \frac{2}{M}\sum_{n=1}^{M-1}\left[\exp\left(2\pi i\frac{kn}{M}\right)-\exp\left(2\pi i\frac{ln}{M}\right)\right]\left(s_{n}-ic_{n}\right)F_{M-n}^{\dagger}F_{0}^{\dagger}\\
- &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left[\exp\left(2\pi i\frac{kn}{M}\right)-\exp\left(2\pi i\frac{ln}{M}\right)\right]\left(c_{n}+is_{n}\right)F_{M-n}^{\dagger}F_{0}\\
- &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left[\exp\left(2\pi i\frac{kn}{M}\right)-\exp\left(2\pi i\frac{ln}{M}\right)\right]\left(c_{n}+is_{n}\right)F_{0}^{\dagger}F_{n}\\
- &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left[\exp\left(2\pi i\frac{kn}{M}\right)-\exp\left(2\pi i\frac{ln}{M}\right)\right]\left(s_{n}-ic_{n}\right)F_{n}F_{0}\\
- & = & \frac{2}{M}\sum_{n=1}^{M-1}\left[\exp\left(-2\pi i\frac{kn}{M}\right)-\exp\left(-2\pi i\frac{ln}{M}\right)\right]\left(-s_{n}-ic_{n}\right)F_{n}^{\dagger}F_{0}^{\dagger}\\
- &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left[\exp\left(-2\pi i\frac{kn}{M}\right)-\exp\left(-2\pi i\frac{ln}{M}\right)\right]\left(c_{n}-is_{n}\right)F_{n}^{\dagger}F_{0}\\
- &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left[\exp\left(2\pi i\frac{kn}{M}\right)-\exp\left(2\pi i\frac{ln}{M}\right)\right]\left(c_{n}+is_{n}\right)F_{0}^{\dagger}F_{n}\\
- &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left[\exp\left(2\pi i\frac{kn}{M}\right)-\exp\left(2\pi i\frac{ln}{M}\right)\right]\left(s_{n}-ic_{n}\right)F_{n}F_{0}\\
- & = & \frac{2}{M}\sum_{n=1}^{M-1}\left[\exp\left(-2\pi i\frac{kn}{M}\right)-\exp\left(-2\pi i\frac{ln}{M}\right)\right]\left(s_{n}+ic_{n}\right)F_{0}^{\dagger}F_{n}^{\dagger}\\
- &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left[\exp\left(-2\pi i\frac{kn}{M}\right)-\exp\left(-2\pi i\frac{ln}{M}\right)\right]\left(c_{n}-is_{n}\right)F_{n}^{\dagger}F_{0}+\mathrm{h.c.}\\
- & \equiv & \frac{2}{M}\sum_{n=1}^{M-1}X_{n}\left(F_{0}^{\dagger}F_{n}^{\dagger}-iF_{n}^{\dagger}F_{0}\right)+\mathrm{h.c.}
+ & = & \frac{2}{M}\sum_{n=1}^{M-1}\left[\exp\left(2\pi i\frac{kn}{M}\right)-\exp\left(2\pi i\frac{ln}{M}\right)\right]\exp\left(\frac{i\pi}{4}\right)\left(s_{n}-ic_{n}\right)F_{M-n}^{\dagger}F_{0}^{\dagger}\\
+ &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left[\exp\left(2\pi i\frac{kn}{M}\right)-\exp\left(2\pi i\frac{ln}{M}\right)\right]\exp\left(-\frac{i\pi}{4}\right)\left(c_{n}+is_{n}\right)F_{M-n}^{\dagger}F_{0}\\
+ &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left[\exp\left(2\pi i\frac{kn}{M}\right)-\exp\left(2\pi i\frac{ln}{M}\right)\right]\exp\left(\frac{i\pi}{4}\right)\left(c_{n}+is_{n}\right)F_{0}^{\dagger}F_{n}\\
+ &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left[\exp\left(2\pi i\frac{kn}{M}\right)-\exp\left(2\pi i\frac{ln}{M}\right)\right]\exp\left(-\frac{i\pi}{4}\right)\left(s_{n}-ic_{n}\right)F_{n}F_{0}\\
+ & = & \frac{2}{M}\sum_{n=1}^{M-1}\left[\exp\left(-2\pi i\frac{kn}{M}\right)-\exp\left(-2\pi i\frac{ln}{M}\right)\right]\exp\left(\frac{i\pi}{4}\right)\left(-s_{n}-ic_{n}\right)F_{n}^{\dagger}F_{0}^{\dagger}\\
+ &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left[\exp\left(-2\pi i\frac{kn}{M}\right)-\exp\left(-2\pi i\frac{ln}{M}\right)\right]\exp\left(-\frac{i\pi}{4}\right)\left(c_{n}-is_{n}\right)F_{n}^{\dagger}F_{0}\\
+ &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left[\exp\left(2\pi i\frac{kn}{M}\right)-\exp\left(2\pi i\frac{ln}{M}\right)\right]\exp\left(\frac{i\pi}{4}\right)\left(c_{n}+is_{n}\right)F_{0}^{\dagger}F_{n}\\
+ &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left[\exp\left(2\pi i\frac{kn}{M}\right)-\exp\left(2\pi i\frac{ln}{M}\right)\right]\exp\left(-\frac{i\pi}{4}\right)\left(s_{n}-ic_{n}\right)F_{n}F_{0}\\
+ & = & \frac{2i}{M}\sum_{n=1}^{M-1}\left[\exp\left(-2\pi i\frac{kn}{M}\right)-\exp\left(-2\pi i\frac{ln}{M}\right)\right]\exp\left(i\frac{n\pi}{2M}\right)F_{0}^{\dagger}F_{n}^{\dagger}\\
+ &  & -\frac{2i}{M}\sum_{n=1}^{M-1}\left[\exp\left(-2\pi i\frac{kn}{M}\right)-\exp\left(-2\pi i\frac{ln}{M}\right)\right]\exp\left(i\frac{n\pi}{2M}\right)F_{n}^{\dagger}F_{0}\\
+ &  & +\frac{2i}{M}\sum_{n=1}^{M-1}\left[\exp\left(2\pi i\frac{kn}{M}\right)-\exp\left(2\pi i\frac{ln}{M}\right)\right]\exp\left(-i\frac{n\pi}{2M}\right)F_{0}^{\dagger}F_{n}\\
+ &  & -\frac{2i}{M}\sum_{n=1}^{M-1}\left[\exp\left(2\pi i\frac{kn}{M}\right)-\exp\left(2\pi i\frac{ln}{M}\right)\right]\exp\left(-i\frac{n\pi}{2M}\right)F_{n}F_{0}\\
+ & \equiv & \frac{2}{M}\sum_{n=1}^{M-1}X_{n}^{\dagger}\left(F_{0}^{\dagger}F_{n}^{\dagger}-F_{n}^{\dagger}F_{0}\right)+\mathrm{h.c.}
 \end{eqnarray*}
 
 \end_inset
@@ -1133,7 +1141,7 @@ h_{kl}^{\left(0\right)} & = & \frac{2}{M}\sum_{n=1}^{M-1}\left(\alpha_{n}\beta_{
  where
 \begin_inset Formula 
 \[
-X_{n}=\left[\exp\left(-2\pi i\frac{kn}{M}\right)-\exp\left(-2\pi i\frac{ln}{M}\right)\right]\left(s_{n}+ic_{n}\right)
+X_{n}=i\left[\exp\left(2\pi i\frac{ln}{M}\right)-\exp\left(2\pi i\frac{kn}{M}\right)\right]\exp\left(-\frac{in\pi}{2M}\right)
 \]
 
 \end_inset
@@ -1145,8 +1153,44 @@ X_{n}=\left[\exp\left(-2\pi i\frac{kn}{M}\right)-\exp\left(-2\pi i\frac{ln}{M}\r
 \begin_inset Formula 
 \begin{eqnarray*}
 h_{kl} & = & \frac{2}{M}\sum_{n,m=1}^{M-1}\left(\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}+A_{nm}F_{n}F_{m}+B_{nm}F_{n}^{\dagger}F_{m}\right)+\\
- &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left[X_{n}\left(F_{0}^{\dagger}F_{n}^{\dagger}-iF_{n}^{\dagger}F_{0}\right)+\mathrm{h.c.}\right]+\frac{2}{M}\gamma
+ &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left[X_{n}^{\dagger}\left(F_{0}^{\dagger}F_{n}^{\dagger}-F_{n}^{\dagger}F_{0}\right)+\mathrm{h.c.}\right]+\frac{2}{M}\gamma,
 \end{eqnarray*}
+
+\end_inset
+
+ we see that 
+\begin_inset Formula 
+\begin{eqnarray*}
+A_{n0} & = & -\exp\left(2\pi ik\frac{n}{M}\right)\sin\frac{n\pi}{2M}-\exp\left(2\pi i\frac{\left(k+l\right)n}{2M}\right)\sin\frac{\left(l-k-1/2\right)n\pi}{M}\\
+ & = & -\exp\left(2\pi ik\frac{n}{M}\right)\sin\frac{n\pi}{2M}-\frac{1}{2i}\exp\left(2\pi i\frac{\left(l-1/2\right)n}{M}\right)+\frac{1}{2i}\exp\left(2\pi i\frac{\left(k+1/2\right)n}{M}\right)\\
+ & = & \exp\left(2\pi ik\frac{n}{M}\right)\left(-\sin\frac{n\pi}{2M}+\frac{1}{2i}\exp\left(\frac{in\pi}{2M}\right)\right)-\frac{1}{2i}\exp\left(2\pi i\frac{ln}{M}\right)\exp\left(-\frac{in\pi}{2M}\right)\\
+ & = & -\frac{i}{2}\exp\left(2\pi ik\frac{n}{M}\right)\exp\left(-\frac{in\pi}{2M}\right)+\frac{i}{2}\exp\left(2\pi i\frac{ln}{M}\right)\exp\left(-\frac{in\pi}{2M}\right)\\
+ & = & \frac{1}{2}X_{n}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+B_{n0}=2A_{-n,0}=X_{-n}=-X_{n}^{\dagger}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+B_{0n}=B_{n0}^{*}=2A_{-n,0}^{*}=X_{-n}^{*}=-X_{n}
+\]
+
+\end_inset
+
+ Therefore, we can simply write 
+\begin_inset Formula 
+\[
+h_{kl}=\frac{2}{M}\sum_{n,m=0}^{M-1}\left(A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}+A_{nm}F_{n}F_{m}+2A_{-n,m}F_{n}^{\dagger}F_{m}\right)+\frac{2}{M}\gamma
+\]
 
 \end_inset
 
@@ -1726,6 +1770,28 @@ Using the identity
  & = & \frac{1}{2}M_{kl}\left(f_{k}^{\dagger}\delta_{lm}-f_{l}^{\dagger}\delta_{km}\right)\\
  & = & \frac{1}{2}M_{km}f_{k}^{\dagger}-\frac{1}{2}M_{ml}f_{l}^{\dagger}\\
  & = & f_{k}^{\dagger}M_{km}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},f_{m}f_{n}\right] & = & f_{m}\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},f_{n}\right]+\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},f_{m}\right]f_{n}\\
+ & = & f_{m}f_{k}^{\dagger}M_{kn}+f_{k}^{\dagger}M_{km}f_{n}\\
+ & = & \left\{ f_{m},f_{k}^{\dagger}\right\} M_{kn}-f_{k}^{\dagger}f_{m}M_{kn}+f_{k}^{\dagger}M_{km}f_{n}\\
+ & = & M_{mn}+f_{k}^{\dagger}\left(M_{km}f_{n}-M_{kn}f_{m}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},f_{m}f_{n}\right]\right] & = & \left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},f_{k}^{\dagger}\left(M_{km}f_{n}-M_{kn}f_{m}\right)\right]\\
+ & = & f_{k}^{\dagger}\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},M_{km}f_{n}-M_{kn}f_{m}\right]\\
+ & = & f_{k}^{\dagger}M_{km}f_{l}^{\dagger}M_{ln}-f_{k}^{\dagger}M_{kn}f_{l}^{\dagger}M_{lm}\\
+ & = & f_{k}^{\dagger}f_{l}^{\dagger}\left(M_{km}M_{ln}-M_{kn}M_{lm}\right)
 \end{eqnarray*}
 
 \end_inset
