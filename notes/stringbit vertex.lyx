@@ -1108,7 +1108,48 @@ C_{mn}M_{nl}+S_{ml}=0.\label{eq:overlap_CMS}
 
 \end_inset
 
- With 
+ In our construction, the matrices 
+\begin_inset Formula $C$
+\end_inset
+
+, 
+\begin_inset Formula $S$
+\end_inset
+
+, and 
+\begin_inset Formula $M$
+\end_inset
+
+ are in the form 
+\begin_inset Formula 
+\[
+C=\begin{pmatrix}1\end{pmatrix}\oplus C^{\prime},\quad S=\begin{pmatrix}0\end{pmatrix}\oplus S^{\prime},\quad M=\begin{pmatrix}0\end{pmatrix}\oplus M^{\prime},
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $C^{\prime}$
+\end_inset
+
+, 
+\begin_inset Formula $S^{\prime}$
+\end_inset
+
+, 
+\begin_inset Formula $M^{\prime}$
+\end_inset
+
+ are matrices of dimension 
+\begin_inset Formula $\left(M-1\right)\times\left(M-1\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+With 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:overlap_CS_relation"
@@ -1891,9 +1932,10 @@ Note that
  is an antisymmetric matrix.
  It follows that 
 \begin_inset Formula 
-\[
-\left\langle \mathbb{F}_{t}\mathbb{F}_{s}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}\right\rangle _{V}=\frac{2}{M}\gamma^{\prime}\left\langle \mathbb{F}_{t}\mathbb{F}_{s}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}\left\langle \mathbb{F}_{t}\mathbb{F}_{s}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle 
-\]
+\begin{multline*}
+\left\langle \mathbb{F}_{t}\mathbb{F}_{s}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}\right\rangle _{V}=\frac{2}{M}\gamma^{\prime}\left\langle \mathbb{F}_{t}\mathbb{F}_{s}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
++\frac{2}{M}\Omega_{mn}\left\langle \mathbb{F}_{t}\mathbb{F}_{s}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle 
+\end{multline*}
 
 \end_inset
 
@@ -1993,11 +2035,11 @@ Let us calculate a simple example for
 \begin{eqnarray*}
 C & = & \begin{pmatrix}1\end{pmatrix}\oplus\frac{1+\sqrt{3}}{4}\begin{pmatrix}e^{i\frac{\pi}{6}} & -e^{i\frac{\pi}{12}}\\
 e^{-i\frac{\pi}{6}} & e^{i\frac{5\pi}{12}}
-\end{pmatrix},\quad\det C=\frac{2+\sqrt{3}}{4}\\
+\end{pmatrix},\quad\left|\det C\right|=\frac{2+\sqrt{3}}{4}\\
 S & = & \begin{pmatrix}0\end{pmatrix}\oplus\frac{\sqrt{3}-1}{4}\begin{pmatrix}e^{-i\frac{\pi}{6}} & e^{-i\frac{5\pi}{12}}\\
 e^{i\frac{\pi}{6}} & e^{-i\frac{\pi}{12}}
-\end{pmatrix},\quad M=\begin{pmatrix}0\end{pmatrix}\oplus\begin{pmatrix}0 & \left(2-\sqrt{3}\right)e^{i\frac{3\pi}{4}}\\
-\left(2-\sqrt{3}\right)e^{-i\frac{\pi}{4}} & 0
+\end{pmatrix},\quad M=\begin{pmatrix}0\end{pmatrix}\oplus\left(2-\sqrt{3}\right)\begin{pmatrix}0 & e^{i\frac{3\pi}{4}}\\
+e^{-i\frac{\pi}{4}} & 0
 \end{pmatrix}.
 \end{eqnarray*}
 
@@ -2028,7 +2070,8 @@ A^{\left(V\right)} & = & \begin{pmatrix}0 & i\frac{\sqrt{3}}{2} & \frac{\sqrt{3}
 \Omega^{\left(V\right)} & = & \begin{pmatrix}0 & \sqrt{\frac{3}{2}}e^{i\frac{3\pi}{4}} & -\sqrt{\frac{3}{2}}\left(2-\sqrt{3}\right)\\
 \sqrt{\frac{3}{2}}e^{-i\frac{\pi}{4}} & 0 & 6\left(2-\sqrt{3}\right)e^{i\frac{3\pi}{4}}\\
 \sqrt{\frac{3}{2}}\left(2-\sqrt{3}\right) & 6\left(2-\sqrt{3}\right)e^{-i\frac{\pi}{4}} & 0
-\end{pmatrix},\quad\Omega^{\left(W\right)}=\begin{pmatrix}0 & \sqrt{\frac{3}{2}}e^{i\frac{3\pi}{4}} & -\sqrt{\frac{3}{2}}\left(2-\sqrt{3}\right)\\
+\end{pmatrix},\\
+\Omega^{\left(W\right)} & = & \begin{pmatrix}0 & \sqrt{\frac{3}{2}}e^{i\frac{3\pi}{4}} & -\sqrt{\frac{3}{2}}\left(2-\sqrt{3}\right)\\
 \sqrt{\frac{3}{2}}e^{-i\frac{\pi}{4}} & 0 & 0\\
 \sqrt{\frac{3}{2}}\left(2-\sqrt{3}\right) & 0 & 0
 \end{pmatrix},\\
@@ -2069,6 +2112,7 @@ reference "tab:Energy-eigenstates-1"
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Float table
 wide false
 sideways false
@@ -2273,7 +2317,11 @@ name "tab:Energy-eigenstates-1"
 
 \end_inset
 
-1-bit and 2-bit energy eigenstates which do not contain zero modes
+1-bit and 2-bit energy eigenstates of 
+\begin_inset Formula $s=1$
+\end_inset
+
+ which do not contain zero modes
 \end_layout
 
 \end_inset
@@ -2312,7 +2360,7 @@ reference "eq:energy_pert_DeltaE_s1"
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\left\langle F_{2}^{\left(2\right)}f_{2}\right\rangle _{V} & = & \frac{2}{M}\gamma^{\prime\left(V\right)}\left\langle f_{1}f_{2}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle f_{1}f_{2}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{V} & = & \frac{2}{M}\gamma^{\prime\left(V\right)}\left\langle f_{1}f_{2}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle f_{1}f_{2}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
  & = & -\frac{2}{M}\gamma^{\prime\left(V\right)}M_{12}-\frac{4}{M}\Omega_{12}^{\left(V\right)}\\
  & = & 4\left(1-\frac{1}{\sqrt{3}}\right)e^{-i\frac{\pi}{4}}
 \end{eqnarray*}
@@ -2322,7 +2370,7 @@ reference "eq:energy_pert_DeltaE_s1"
  Likewise
 \begin_inset Formula 
 \[
-\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W}=\frac{4}{M}\Omega_{01}^{\left(W\right)}=-\frac{2-2i}{\sqrt{3}},\quad\left\langle F_{2}^{\left(2\right)}f_{2}\right\rangle _{W}=-\frac{2}{M}\gamma^{\prime\left(W\right)}M_{12}-\frac{4}{M}\Omega_{12}^{\left(W\right)}=8\left(1-\frac{2}{\sqrt{3}}\right)e^{-i\frac{\pi}{4}}.
+\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W}=\frac{4}{M}\Omega_{01}^{\left(W\right)}=-\frac{2-2i}{\sqrt{3}},\quad\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{W}=-\frac{2}{M}\gamma^{\prime\left(W\right)}M_{12}-\frac{4}{M}\Omega_{12}^{\left(W\right)}=8\left(1-\frac{2}{\sqrt{3}}\right)e^{-i\frac{\pi}{4}}.
 \]
 
 \end_inset
@@ -2340,8 +2388,384 @@ For
 \begin_inset Formula 
 \begin{eqnarray*}
 \Delta E_{0} & = & \frac{1}{N^{2}}\frac{KLM\left|\det C\right|}{E_{0}-E_{0}^{\left(1\right)}-E_{1}^{\left(2\right)}}\left(\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V}+\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V}\right)\\
- & = & \frac{1}{N^{2}}\frac{1\cdot2\cdot3}{-4\sqrt{3}-3}\frac{2+\sqrt{3}}{4}\left[\left(-\frac{2+2i}{\sqrt{3}}\right)\left(-\frac{2-2i}{\sqrt{3}}\right)+8\left(1-\frac{2}{\sqrt{3}}\right)4\left(1-\frac{1}{\sqrt{3}}\right)\right]\\
- & = & -\frac{3}{2}\left(3\sqrt{3}-5\right)\frac{1}{N^{2}}
+ & = & \frac{1}{N^{2}}\frac{1\cdot2\cdot3}{-4\sqrt{3}-4}\frac{2+\sqrt{3}}{4}\left[\left(-\frac{2+2i}{\sqrt{3}}\right)\left(-\frac{2-2i}{\sqrt{3}}\right)+8\left(1-\frac{2}{\sqrt{3}}\right)4\left(1-\frac{1}{\sqrt{3}}\right)\right]\\
+ & = & -\frac{3}{2}\left(3\sqrt{3}-5\right)\frac{1}{N^{2}}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $s=2$
+\end_inset
+
+, the energy eigenstate of 
+\begin_inset Formula $1$
+\end_inset
+
+-bit and 
+\begin_inset Formula $2$
+\end_inset
+
+-bit system are given in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Energy-eigenstates-2"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $M$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\psi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{\psi}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Energy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Grading of 
+\begin_inset Formula $\psi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\psi_{0}^{\left(1\right)}=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{\psi}_{0}^{\left(1\right)}=\theta_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $E_{0}^{\left(1\right)}=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+even
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\psi_{0}^{\left(2\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{\psi}_{0}^{\left(2\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $E_{0}^{\left(2\right)}=-8$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+even
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\psi_{1}^{\left(2\right)}=F_{1}^{\left(1,2\right)\dagger}F_{1}^{\left(2,2\right)\dagger}\psi_{0}^{\left(2\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{\psi}_{1}^{\left(2\right)}=\tilde{F}_{1}^{\left(2,2\right)}\tilde{F}_{1}^{\left(1,2\right)}\bar{\psi}_{0}^{\left(2\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $E_{1}^{\left(2\right)}=8$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+even
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Energy-eigenstates-2"
+
+\end_inset
+
+1-bit and 2-bit energy eigenstates of 
+\begin_inset Formula $s=12$
+\end_inset
+
+ which do not contain zero modes.
+ The first index in 
+\begin_inset Formula $F_{1}^{\left(1,2\right)}$
+\end_inset
+
+ is the spinor index and second indicates the length of the chain.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The matrices are the same as 
+\begin_inset Formula $s=1$
+\end_inset
+
+ case.
+ Now we need to calculate
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\langle 1\right\rangle _{V} & = & \frac{2}{M}\gamma^{\prime\left(V\right)}\left\langle \exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+ & = & \frac{2}{M}\gamma^{\prime\left(V\right)}\\
+ & = & \frac{8}{\sqrt{3}}-8,
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\langle f_{2}f_{0}\right\rangle _{V} & = & \frac{2}{M}\gamma^{\prime\left(V\right)}\left\langle f_{2}f_{0}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle f_{2}f_{0}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+ & = & \frac{4}{M}\Omega_{02}^{\left(V\right)}\\
+ & = & 2\sqrt{2}\left(1-\frac{2}{\sqrt{3}}\right)
+\end{eqnarray*}
+
+\end_inset
+
+ Likewise
+\begin_inset Formula 
+\[
+\left\langle 1\right\rangle _{W}=\frac{2}{M}\gamma^{\prime\left(W\right)}=-\frac{16}{\sqrt{3}},\quad\left\langle f_{2}f_{0}\right\rangle _{W}=\frac{4}{M}\Omega_{02}^{\left(W\right)}=2\sqrt{2}\left(1-\frac{2}{\sqrt{3}}\right)
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula $\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V,W}$
+\end_inset
+
+ and 
+\begin_inset Formula $\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{V,W}$
+\end_inset
+
+ are the same as 
+\begin_inset Formula $s=1$
+\end_inset
+
+ case.
+ Applying formular 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:energy_pert_DeltaE"
+
+\end_inset
+
+, we obtain
+\begin_inset Formula 
+\begin{eqnarray*}
+\Delta E_{0} & = & \frac{1}{N^{2}}\frac{KLM\left|\det C\right|^{2}}{E_{0}-E_{0}^{\left(2\right)}-0}\left(\left\langle 1\right\rangle _{W}^{*}\left\langle 1\right\rangle _{V}+\left\langle f_{2}f_{0}\right\rangle _{W}^{*}\left\langle f_{2}f_{0}\right\rangle _{V}\right)^{2}\\
+ &  & +\frac{1}{N^{2}}\frac{KLM\left|\det C\right|^{2}}{E_{0}-E_{1}^{\left(2\right)}-0}\left(\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V}+\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{V}\right)^{2}\\
+ & = & \frac{1}{N^{2}}\frac{1\cdot2\cdot3}{-8\sqrt{3}+8}\left(\frac{2+\sqrt{3}}{4}\right)^{2}\left[\left(-\frac{16}{\sqrt{3}}\right)\left(\frac{8}{\sqrt{3}}-8\right)+2\sqrt{2}\left(1-\frac{2}{\sqrt{3}}\right)2\sqrt{2}\left(1-\frac{2}{\sqrt{3}}\right)\right]^{2}\\
+ &  & +\frac{1}{N^{2}}\frac{1\cdot2\cdot3}{-8\sqrt{3}-8}\left(\frac{2+\sqrt{3}}{4}\right)^{2}\left[\left(-\frac{2+2i}{\sqrt{3}}\right)\left(-\frac{2-2i}{\sqrt{3}}\right)+8\left(1-\frac{2}{\sqrt{3}}\right)4\left(1-\frac{1}{\sqrt{3}}\right)\right]^{2}\\
+ & = & -3\left(136+91\sqrt{3}\right)\frac{1}{N^{2}}
 \end{eqnarray*}
 
 \end_inset
@@ -2383,12 +2807,7 @@ For
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float table
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
+\align center
 \begin_inset Float table
 wide false
 sideways false
@@ -2397,8 +2816,9 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="4">
+<lyxtabular version="3" rows="5" columns="5">
 <features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
@@ -2408,7 +2828,10 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-Eigenfunction
+\begin_inset Formula $M$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2417,7 +2840,22 @@ Eigenfunction
 \begin_inset Text
 
 \begin_layout Plain Layout
-Conjugate
+\begin_inset Formula $\psi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{\psi}$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2446,6 +2884,15 @@ Grading of
 </cell>
 </row>
 <row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -2497,49 +2944,11 @@ even
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\psi_{1}^{\left(3\right)}=F_{0}^{\left(3\right)\dagger}\psi_{0}^{\left(3\right)}$
-\end_inset
-
-
+3
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\tilde{F}_{0}^{\left(3\right)}\bar{\psi}_{0}^{\left(3\right)}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $-4\sqrt{3}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-odd
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -2587,138 +2996,15 @@ even
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\psi_{3}^{\left(3\right)}=F_{0}^{\left(3\right)\dagger}F_{1}^{\left(3\right)\dagger}F_{2}^{\left(3\right)\dagger}\psi_{0}^{3}$
-\end_inset
-
-
+4
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\tilde{F}_{2}^{\left(3\right)}\tilde{F}_{1}^{\left(3\right)}\tilde{F}_{0}^{\left(3\right)}\psi_{0}^{3}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $4\sqrt{3}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-odd
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Energy eigenstates of 3-bit chain
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Float table
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="4">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Eigenfunction
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Conjugate
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Energy
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Grading of 
-\begin_inset Formula $\psi$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -2766,54 +3052,16 @@ odd
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\psi_{2}^{\left(4\right)}=F_{0}^{\left(4\right)\dagger}F_{2}^{\left(4\right)\dagger}\psi_{0}^{\left(4\right)}$
-\end_inset
-
-
+4
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\tilde{F}_{2}^{\left(4\right)}\tilde{F}_{0}^{\left(4\right)}\bar{\psi}_{0}^{\left(4\right)}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $-4\left(\sqrt{2}-1\right)$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-even
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2825,58 +3073,11 @@ even
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 \begin_inset Formula $\tilde{F}_{3}^{\left(4\right)}\tilde{F}_{2}^{\left(4\right)}\tilde{F}_{1}^{\left(4\right)}\bar{\psi}_{0}^{\left(4\right)}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $4\left(\sqrt{2}+1\right)$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-odd
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\psi_{4}^{\left(4\right)}=F_{0}^{\left(4\right)\dagger}F_{1}^{\left(4\right)\dagger}F_{2}^{\left(4\right)\dagger}F_{3}^{\left(4\right)\dagger}\psi_{0}^{\left(4\right)}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\tilde{F}_{3}^{\left(4\right)}\tilde{F}_{2}^{\left(4\right)}\tilde{F}_{1}^{\left(4\right)}\tilde{F}_{0}^{\left(4\right)}\bar{\psi}_{0}^{\left(4\right)}$
 \end_inset
 
 
@@ -2900,7 +3101,7 @@ odd
 \begin_inset Text
 
 \begin_layout Plain Layout
-even
+odd
 \end_layout
 
 \end_inset
@@ -2914,18 +3115,13 @@ even
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Energy eigenstates of b-bit chain
+3-bit and 4-bit energy eigenstates which do not contain zero modes
 \end_layout
 
 \end_inset
 
 
 \end_layout
-
-\end_inset
-
-
-\begin_inset Caption
 
 \begin_layout Plain Layout
 
@@ -2936,71 +3132,145 @@ Energy eigenstates of b-bit chain
 
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
 \begin_layout Standard
-For 
+When 
 \begin_inset Formula $L=1$
 \end_inset
 
- and 
+, 
 \begin_inset Formula $K=4$
 \end_inset
 
-, we have 
-\begin_inset Formula $f_{1}=F_{1}^{\left(4\right)}$
+,
+\begin_inset Formula 
+\[
+f_{1}=F_{1}^{\left(4\right)},\quad f_{2}=F_{2}^{\left(4\right)},\quad F_{3}=F_{3}^{\left(4\right)}
+\]
+
 \end_inset
 
-, 
-\begin_inset Formula $f_{2}=F_{2}^{\left(4\right)}$
+
+\begin_inset Formula 
+\[
+M=\begin{pmatrix}0\end{pmatrix}\oplus\begin{pmatrix}0 & 0.0122769+0.0122769i & 0.0327291 & -0.215142\\
+-0.0122769-0.0122769i & 0 & 0.0122769-0.0122769i & -0.137765+0.137765i\\
+-0.0327291 & -0.0122769+0.0122769i & 0 & 0.215142i\\
+0.215142 & 0.137765-0.137765i & -0.215142i & 0
+\end{pmatrix}
+\]
+
 \end_inset
 
-, 
-\begin_inset Formula $f_{3}=F_{3}^{\left(4\right)}$
+
+\begin_inset Formula 
+\[
+\left|\det C\right|=0.883232
+\]
+
 \end_inset
 
-.
- The nonzero vertex are 
-\begin_inset Formula $V_{200}^{\left(4,1\right)}$
+
+\begin_inset Formula 
+\[
+\Omega^{\left(V\right)}=\begin{pmatrix}0 & -0.740293+0.259221i & -0.797998+0.797998i & -0.259221+0.740293i & -0.532101\\
+0.740293-0.259221i & 0 & -0.00123611+0.400317i & 0.239782 & -1.34536+0.557266i\\
+0.797998-0.797998i & 0.00123611-0.400317i & 0 & -0.00123611-0.400317i & -1.30592+1.30592i\\
+0.259221-0.740293i & -0.239782 & 0.00123611+0.400317i & 0 & -0.557266+1.34536i\\
+0.532101 & 1.34536-0.557266i & 1.30592-1.30592i & 0.557266-1.34536i & 0
+\end{pmatrix}
+\]
+
 \end_inset
 
-, 
-\begin_inset Formula $V_{400}^{\left(4,1\right)}$
+
+\begin_inset Formula 
+\[
+\Omega^{\left(W\right)}=\begin{pmatrix}0 & -0.740293+0.259221i & -0.797998+0.797998i & -0.259221+0.740293i & -0.532101\\
+0.740293-0.259221i & 0 & -0.210816+0.190738i & -0.223077 & 0.175923+0.557266i\\
+0.797998-0.797998i & 0.210816\,-0.190738i & 0 & -0.210816-0.190738i & 0.0717354-0.0717354i\\
+0.259221-0.740293i & 0.223077 & 0.210816+0.190738i & 0 & -0.557266-0.175923i\\
+0.532101 & -0.175923-0.557266i & -0.0717354+0.0717354i & 0.557266+0.175923i & 0
+\end{pmatrix}
+\]
+
 \end_inset
 
-, 
-\begin_inset Formula $V_{110}^{\left(4,1\right)}$
+
+\begin_inset Formula 
+\[
+\gamma^{\prime\left(V\right)}=-5.4937,\quad\gamma^{\prime\left(W\right)}=-12.1284
+\]
+
 \end_inset
 
-, 
-\begin_inset Formula $V_{310}^{\left(4,1\right)}$
-\end_inset
 
-.
- 
 \begin_inset Formula 
 \begin{eqnarray*}
-\left\langle F_{2}^{\left(4\right)}F_{0}^{\left(4\right)}h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle  & = & \frac{2}{5}\left[\sqrt{\frac{4}{5}}\Sigma_{m}-\sqrt{\frac{1}{4}}M_{0m}\left(\gamma^{\prime}+\Omega_{ij}\frac{d}{dM_{ij}}\right)-2\sqrt{\frac{L}{M}}\Omega_{0m}\right]\left\langle f_{2}f_{m}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
- & = & \frac{2}{5}\left[\sqrt{\frac{4}{5}}\Sigma_{2}-\sqrt{\frac{1}{4}}M_{02}\gamma^{\prime}-2\sqrt{\frac{L}{M}}\Omega_{02}\right]
+\left\langle F_{2}^{\left(4\right)}f_{0}\right\rangle _{V} & = & \frac{2}{M}\gamma^{\prime\left(V\right)}\left\langle f_{2}f_{0}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle f_{2}f_{0}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+ & = & \frac{2}{M}\gamma^{\prime\left(V\right)}M_{02}+\frac{4}{M}\Omega_{02}^{\left(V\right)}\\
+ & = & -0.638398+0.638398i
 \end{eqnarray*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-\left\langle F_{3}^{\left(4\right)}F_{2}^{\left(4\right)}F_{1}^{\left(4\right)}F_{0}^{\left(4\right)}h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle =\frac{2}{5}\left[\sqrt{\frac{4}{5}}\Sigma_{m}-\sqrt{\frac{1}{4}}M_{0m}\left(\gamma^{\prime}+\Omega_{ij}\frac{d}{dM_{ij}}\right)-2\sqrt{\frac{L}{M}}\Omega_{0m}\right]\left\langle f_{3}f_{2}f_{1}f_{m}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle 
-\]
+\begin{eqnarray*}
+\left\langle F_{2}^{\left(4\right)}f_{4}\right\rangle _{V} & = & \frac{2}{M}\gamma^{\prime\left(V\right)}\left\langle f_{2}f_{4}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle f_{2}f_{4}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+ & = & -\frac{2}{M}\gamma^{\prime\left(V\right)}M_{24}-\frac{4}{M}\Omega_{24}^{\left(V\right)}\\
+ & = & 1.07171-1.07171i
+\end{eqnarray*}
 
 \end_inset
 
- 
+ Likewise
 \begin_inset Formula 
-\[
-\]
+\begin{eqnarray*}
+\left\langle F_{2}^{\left(4\right)}f_{0}\right\rangle _{W} & = & \frac{2}{M}\gamma^{\prime\left(W\right)}M_{02}+\frac{4}{M}\Omega_{02}^{\left(W\right)}=-0.638398+0.638398i,\\
+\left\langle F_{2}^{\left(4\right)}f_{4}\right\rangle _{W} & = & -\frac{2}{M}\gamma^{\prime\left(W\right)}M_{24}-\frac{4}{M}\Omega_{24}^{\left(W\right)}=0.00217128-0.00217128i.
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\langle F_{3}^{\left(4\right)}F_{2}^{\left(4\right)}F_{1}^{\left(4\right)}f_{0}\right\rangle _{V} & = & \frac{2}{M}\gamma^{\prime\left(V\right)}\left\langle f_{3}f_{2}f_{1}f_{0}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle f_{3}f_{2}f_{1}f_{0}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+ & = & \frac{2}{M}\gamma^{\prime\left(V\right)}\left(M_{32}M_{10}+M_{30}M_{21}-M_{31}M_{20}\right)+\\
+ &  & +\frac{4}{M}\left(\Omega_{01}^{\left(V\right)}M_{23}-\Omega_{02}^{\left(V\right)}M_{13}+\Omega_{03}^{\left(V\right)}M_{12}+\Omega_{12}^{\left(V\right)}M_{03}-\Omega_{13}^{\left(V\right)}M_{02}+\Omega_{23}^{\left(V\right)}M_{01}\right)\\
+ & = & 0.00635263-0.00635263i?
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\langle F_{3}^{\left(4\right)}F_{2}^{\left(4\right)}F_{1}^{\left(4\right)}f_{4}\right\rangle _{V} & = & \frac{2}{M}\gamma^{\prime\left(V\right)}\left\langle f_{3}f_{2}f_{1}f_{4}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle f_{3}f_{2}f_{1}f_{4}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+ & = & \frac{2}{M}\gamma^{\prime\left(V\right)}\left(M_{32}M_{14}+M_{34}M_{21}-M_{31}M_{24}\right)+\\
+ &  & +\frac{4}{M}\left(\Omega_{41}^{\left(V\right)}M_{23}-\Omega_{42}^{\left(V\right)}M_{13}+\Omega_{43}^{\left(V\right)}M_{12}+\Omega_{12}^{\left(V\right)}M_{43}-\Omega_{13}^{\left(V\right)}M_{42}+\Omega_{23}^{\left(V\right)}M_{41}\right)\\
+ & = & 0.032794-0.032794i
+\end{eqnarray*}
+
+\end_inset
+
+ Likewise, 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\langle F_{3}^{\left(4\right)}F_{2}^{\left(4\right)}F_{1}^{\left(4\right)}f_{0}\right\rangle _{W} & = & \frac{2}{M}\gamma^{\prime\left(W\right)}\left(M_{32}M_{10}+M_{30}M_{21}-M_{31}M_{20}\right)+\\
+ &  & +\frac{4}{M}\left(\Omega_{01}^{\left(W\right)}M_{23}-\Omega_{02}^{\left(W\right)}M_{13}+\Omega_{03}^{\left(W\right)}M_{12}+\Omega_{12}^{\left(W\right)}M_{03}-\Omega_{13}^{\left(W\right)}M_{02}+\Omega_{23}^{\left(W\right)}M_{01}\right)\\
+ & = & 0.00635263-0.00635263i^{}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\left\langle F_{3}^{\left(4\right)}F_{2}^{\left(4\right)}F_{1}^{\left(4\right)}f_{4}\right\rangle _{W} & = & \frac{2}{M}\gamma^{\prime\left(W\right)}\left(M_{32}M_{14}+M_{34}M_{21}-M_{31}M_{24}\right)+\\
+ &  & +\frac{4}{M}\left(\Omega_{41}^{\left(W\right)}M_{23}-\Omega_{42}^{\left(W\right)}M_{13}+\Omega_{43}^{\left(W\right)}M_{12}+\Omega_{12}^{\left(W\right)}M_{43}-\Omega_{13}^{\left(W\right)}M_{42}+\Omega_{23}^{\left(W\right)}M_{41}\right)\\
+ & = & 0.0157997-0.0157997i
+\end{eqnarray*}
 
 \end_inset
 
