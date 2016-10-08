@@ -46,10 +46,15 @@ SET(PRINT_GROUND_SRCS
 	${STRBIT_LIB_SRCS}
 	PrintGround.cpp)
 
+SET(STRVER_SRCS
+	strbitvertex.cpp)
+
+INCLUDE_DIRECTORIES (${CMAKE_CURRENT_SOURCE_DIR}/../../eigen/)
 #add_library (strbitlib SHARED ${STRBIT_LIB_SRCS})
 # SET_TARGET_PROPERTIES (strbitlib PROPERTIES LINKER_LANGUAGE CPP)
 add_executable (strbit ${STRBIT_MAIN_SRCS})
 add_executable (prtground ${PRINT_GROUND_SRCS})
+add_executable (strbitvertex ${STRVER_SRCS})
 
 
  #target_include_directories (strbitlib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
