@@ -47,7 +47,15 @@ SET(PRINT_GROUND_SRCS
 	PrintGround.cpp)
 
 SET(STRVER_SRCS
+	BitUtility.cpp
 	strbitvertex.cpp)
+
+IF(WIN32)
+	SET(STRVER_SRCS
+		${STRVER_SRCS}
+		BitUtility.h
+	)
+ENDIF(WIN32)
 
 INCLUDE_DIRECTORIES (${CMAKE_CURRENT_SOURCE_DIR}/../../eigen/)
 #add_library (strbitlib SHARED ${STRBIT_LIB_SRCS})
