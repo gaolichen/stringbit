@@ -377,14 +377,16 @@ private:
 
 		CDT res = 0.0;
 		int lowestBit = 0;
-		int sign = 1;
+		int sign = 0;
 		while (((1 << lowestBit) & ops) == 0) lowestBit++;
 		ops ^= (1 << lowestBit);
 		for (int i = lowestBit + 1; (1<<i) <= ops; i++)
 		{
 			if (((1 << i) & ops) == 0) continue;
-			res += (DT)sign * matM(lowestBit, i) * DoCalculate(ops ^ (1<<i));
-			sign *= -1;
+			if (sign % 2 == 0)
+				res += matM(lowestBit, i) * DoCalculate(ops ^ (1 << i));
+			else res -= matM(lowestBit, i) * DoCalculate(ops ^ (1 << i));
+			sign++;
 		}
 
 		cache[ops | (1 << lowestBit)] = res;
@@ -495,7 +497,7 @@ void TestVevCalculator()
 
 void TestEnergyCorrection()
 {
-	for (int i = 3; i <= 15; i += 2)
+	for (int i = 3; i <= 21; i += 2)
 	{
 		cout << "M= " << i << ": " << EnergyCorrection(i) << endl;
 	}
