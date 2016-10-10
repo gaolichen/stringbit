@@ -378,7 +378,7 @@ private:
 		CDT res = 0.0;
 		int lowestBit = 0;
 		int sign = 1;
-		while ((1 << lowestBit) & ops == 0) lowestBit++;
+		while (((1 << lowestBit) & ops) == 0) lowestBit++;
 		ops ^= (1 << lowestBit);
 		for (int i = lowestBit + 1; (1<<i) <= ops; i++)
 		{
@@ -393,7 +393,7 @@ private:
 public:
 	VevCalculator(MatrixSB mat) : matM(mat)
 	{
-		M = matM.size();
+		M = matM.innerSize();
 	}
 
 	CDT CalculateVev(int ops)
@@ -408,10 +408,14 @@ public:
 		for (int i = 0; i < M; i++)
 		{
 			if (((1<<i) & ops) == 0) continue;
+			int cnt = 0;
 			for (int j = i + 1; j < M; j++)
 			{
 				if (((1 << j) & ops) == 0) continue;
-				ret += omega(i, j) * CalculateVev(ops - (1<<i) - (1<<j));
+				if (cnt %2 == 0)
+					ret += omega(i, j) * CalculateVev(ops - (1<<i) - (1<<j));
+				else ret -= omega(i, j) * CalculateVev(ops - (1<<i) - (1<<j));
+				cnt++;
 			}
 		}
 
@@ -421,7 +425,7 @@ public:
 
 CDT OperatorVev(int ops, VevCalculator &calc, CDT gamma, MatrixSB &omega)
 {
-	return 2.0 * (calc.CalculateVev(ops) * gamma +calc.CalculateVev(ops, omega));
+	return 2.0 * (calc.CalculateVev(ops) * gamma + calc.CalculateVev(ops, omega));
 }
 
 DT EnergyCorrection(int M, int L)
@@ -448,19 +452,20 @@ DT EnergyCorrection(int M, int L)
 			if (BitCount(ops) % 2 == 0)
 			{
 				delta = conj(OperatorVev(ops, calc, gmW, omegaW)) * OperatorVev(ops, calc, gmV, omegaV);
-				int ops2 = ops + (1<<(M-1)) + 1;
+				int ops2 = ops + (1 << (M - 1)) + 1;
 				delta += conj(OperatorVev(ops2, calc, gmW, omegaW)) * OperatorVev(ops2, calc, gmV, omegaV);
 			}
 			else
 			{	
 				delta = conj(OperatorVev(ops + 1, calc, gmW, omegaW)) * OperatorVev(ops + 1, calc, gmV, omegaV);
-				delta += conj(OperatorVev(ops | (1<<(M-1)), calc, gmW, omegaW)) 
-					* OperatorVev(ops | (1<<(M-1)), calc, gmV, omegaV);
+				delta += conj(OperatorVev(ops | (1 << (M - 1)), calc, gmW, omegaW)) 
+					* OperatorVev(ops | (1 << (M - 1)), calc, gmV, omegaV);
 			}
 
 			delta = Chop(delta);
-			assert(delta.imag() == 0);
-			ret += delta /(E0 - states1[j].Energy - states2[j].Energy) ;
+			// delta is not necessary real!!!!
+			//assert(delta.imag() == 0);
+			ret += delta /(E0 - states1[j].Energy - states2[i].Energy) ;
 		}
 	}
 
@@ -490,9 +495,66 @@ void TestVevCalculator()
 
 void TestEnergyCorrection()
 {
-	for (int i = 3; i <= 9; i += 2)
+	for (int i = 3; i <= 15; i += 2)
 	{
 		cout << "M= " << i << ": " << EnergyCorrection(i) << endl;
+	}
+}
+
+void TestMatrices(int M, int L)
+{
+	MatrixSB omegaV = OmegaV(M, L);
+	MatrixSB omegaW = OmegaW(M, L);
+	MatrixSB matM = MatrixM(M, L);
+	ChopInplace(omegaV);
+	ChopInplace(omegaW);
+	ChopInplace(matM);
+	CDT gammaV = GammaPV(M, L);
+	CDT gammaW = GammaPW(M, L);
+	gammaV = Chop(gammaV);
+	gammaW = Chop(gammaW);
+
+	cout << "M=" << M << ", L=" << L << endl;
+	cout << "Matrix M:" << endl << matM << endl;
+	cout << "OmegaV:" << endl << omegaV << endl;
+	cout << "OmegaW: " << endl << omegaW << endl;
+	cout << "gammaV=" << gammaV << endl;
+	cout << "gammaW=" << gammaW << endl;
+}
+
+void TestOperatorVev()
+{
+	int M = 5;
+	int L = 2;
+
+	MatrixSB omegaV = OmegaV(M, L);
+	MatrixSB omegaW = OmegaW(M, L);
+	MatrixSB matM = MatrixM(M, L);
+	ChopInplace(omegaV);
+	ChopInplace(omegaW);
+	ChopInplace(matM);
+	CDT gammaV = GammaPV(M, L);
+	CDT gammaW = GammaPW(M, L);
+	gammaV = Chop(gammaV);
+	gammaW = Chop(gammaW);
+
+	VevCalculator calc(matM);
+
+	// test VevCalculator 
+	/*for (int i = 0; i < (1<<M); i++)
+	{
+		CDT res = calc.CalculateVev(i, omegaV);
+		res = Chop(res);
+		if (res != .0)
+			cout << i << ": " << res << endl;
+	}*/
+
+	for (int i = 0; i < (1<<M); i++)
+	{
+		CDT res = OperatorVev(i, calc, gammaW, omegaW);
+		res = Chop(res);
+		if (res != .0)
+			cout << i << ": " << res << endl;
 	}
 }
 
@@ -501,7 +563,9 @@ int main()
 	TestMatrixCS();
 	TestMatrixA();
 	//TestAllStates();
-	TestVevCalculator();
+	//TestVevCalculator();
 	TestEnergyCorrection();
+	//TestMatrices(4,1);
+	TestOperatorVev();
 	return 0;
 }
