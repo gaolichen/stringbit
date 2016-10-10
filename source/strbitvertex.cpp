@@ -530,7 +530,7 @@ void TestEnergyCorrection()
 {
 	EnergyCorrector corrector;
 	Stopwatch watch;
-	for (int i = 3; i <= 21; i += 2)
+	for (int i = 3; i <= 25; i += 2)
 	{
 		watch.Start();
 		DT res = corrector.EnergyCorrection(i);
@@ -596,14 +596,92 @@ void TestOperatorVev()
 	}
 }
 
+class ModeDistributor
+{
+private:
+	int M;
+	int s;
+	int bitUnit;
+	vector<i64> modes;
+	vector<vector<int> > res; 
+public:
+	ModeDistributor(int M_, int s_): M(M_), s(s_)
+	{
+		bitUnit = 1;
+		while ((1 << bitUnit) <= s) bitUnit++;
+	}
+	
+	void Doit()
+	{
+		i64 n = 1;
+		for (int i = 0; i < M - 1; i++) n *= s + 1;
+		//cout << "bitUnit=" << bitUnit << endl << " n=" << n << endl;
+
+		for (int i = 0; i < n; i++)
+		{
+			i64 toadd = 0;
+			int ii = i;
+			int count = 0;
+			int k = 0;
+			//cout << "i=" << i << endl;
+			while (ii > 0)
+			{
+				int j = ii % (s + 1);
+				ii /= s + 1;
+				toadd |= (j<<(k * bitUnit));
+				k++;
+				count += j * k;
+			}
+
+			if (((M & 1) == 1) || ((s & 1) == 0))
+			{
+				if (count % M == 0) 
+				{
+					//cout << "a " << count << " " << toadd << endl; 
+					modes.push_back(toadd);
+				}
+			}
+			else if (count % M == M / 2)
+			{
+				//cout << "b " << cout << " " << toadd << endl;
+				modes.push_back(toadd);
+			}
+		}
+
+		for (int i = 0; i < modes.size(); i++)
+		{
+			int j = (1<<bitUnit) - 1;
+			int op = modes[i];
+			cout << "modes " << i << " " << modes[i] << ": ";
+			for (int k = 0; k < M - 1; k++)
+			{
+				cout << (op & j) << " ";
+				op >>= bitUnit;
+			}
+
+			cout << endl;
+		}
+	}
+};
+
+void TestModeDistributor()
+{
+	cout << "input M and L: ";
+	int M, L;
+	cin >> M >> L;
+	ModeDistributor dis(M, L);
+	dis.Doit();
+}
+
 int main()
 {
 	TestMatrixCS();
 	TestMatrixA();
 	//TestAllStates();
 	//TestVevCalculator();
-	TestEnergyCorrection();
+	//TestEnergyCorrection();
 	//TestMatrices(4,1);
-	TestOperatorVev();
+	//TestOperatorVev();
+	TestModeDistributor();
 	return 0;
 }
