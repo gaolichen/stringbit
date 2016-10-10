@@ -393,7 +393,7 @@ private:
 		return res;
 	}
 public:
-	VevCalculator(MatrixSB mat) : matM(mat)
+	VevCalculator(MatrixSB &mat) : matM(mat)
 	{
 		M = matM.innerSize();
 	}
@@ -421,7 +421,7 @@ public:
 			}
 		}
 
-		return 2.0 * ret;
+		return ret + ret;
 	}
 };
 
@@ -430,13 +430,39 @@ CDT OperatorVev(int ops, VevCalculator &calc, CDT gamma, MatrixSB &omega)
 	return 2.0 * (calc.CalculateVev(ops) * gamma + calc.CalculateVev(ops, omega));
 }
 
-DT EnergyCorrection(int M, int L)
+class EnergyCorrector
+{
+private:
+	int totalStates;
+	double calculateTime;
+	Stopwatch watch;
+	DT EnergyCorrection(int M, int L);
+public:
+	EnergyCorrector()
+	{
+	}
+
+	DT EnergyCorrection(int M);
+
+	int TotalStates()
+	{
+		return totalStates;
+	}
+	
+	double CalculateTime()
+	{
+		return calculateTime;
+	}
+};
+
+DT EnergyCorrector::EnergyCorrection(int M, int L)
 {
 	int K = M - L;
 	CDT ret = .0;
 	DT E0 = -4 / tan(PI/(2*M));
 	vector<StateInfo> states1 = AllStates(L);
 	vector<StateInfo> states2 = AllStates(K);
+	totalStates += states1.size() * states2.size();
 	MatrixSB matM = MatrixM(M, L);
 	DT detC = abs(MatrixC(M, L).determinant());
 	MatrixSB omegaV = OmegaV(M, L);
@@ -444,6 +470,8 @@ DT EnergyCorrection(int M, int L)
 	CDT gmV = GammaPV(M, L);
 	CDT gmW = GammaPW(M, L);
 	VevCalculator calc(matM);
+
+	watch.Start();
 	
 	for (int i = 0; i < states2.size(); i++)
 	{
@@ -474,12 +502,15 @@ DT EnergyCorrection(int M, int L)
 	ret = Chop(ret);
 	assert(ret.imag() == 0);
 	if (ret.imag() != 0) cout << "not real energy: " << ret << endl;
+	calculateTime += watch.Stop();
 
 	return ret.real() * K * L * detC / M;
 }
 
-DT EnergyCorrection(int M)
+DT EnergyCorrector::EnergyCorrection(int M)
 {
+	totalStates = 0;
+	calculateTime = 0.0;
 	DT ret = 0;
 	for (int L = 1; L < M - 1; L++)
 		ret += EnergyCorrection(M, L);
@@ -497,9 +528,14 @@ void TestVevCalculator()
 
 void TestEnergyCorrection()
 {
+	EnergyCorrector corrector;
+	Stopwatch watch;
 	for (int i = 3; i <= 21; i += 2)
 	{
-		cout << "M= " << i << ": " << EnergyCorrection(i) << endl;
+		watch.Start();
+		DT res = corrector.EnergyCorrection(i);
+		cout << "M= " << i << ", totalStates = " << corrector.TotalStates() << ", calculateTime=" << corrector.CalculateTime();
+		cout << ", totalTime=" << watch.Stop() << ", E=" << res << endl;
 	}
 }
 
