@@ -596,19 +596,80 @@ void TestOperatorVev()
 	}
 }
 
+class BitManager
+{
+private:
+	vector<vector<vector<int> > > bitCollection;
+	vector<vector<vector<int> > > bitchecks;
+public:
+	void Init(int maxBit)
+	{
+		for (int i = 0; i <= maxBit; i++)
+		{
+			bitCollection.push_back(vector<vector<int> >(i + 1));
+			bitchecks.push_back(vector<vector<int> >(i + 1));
+		}
+
+		for (int i = 0; i < (1 << maxBit); i++)
+		{
+			int check = 0;
+			for (int j = 0; j < maxBit; j++)
+			{
+				if (IsBitSet(i, j) && !IsBitSet(i, j + 1))
+				{
+					check |= (1 << (j + 1));
+				}
+			}
+
+			int bits = BitCount(i);
+			for (int j = maxBit; (1<<j) > i; j--)
+			{
+				bitCollection[j][bits].push_back(i);
+				bitchecks[j][bits].push_back(PickBits(check, j));
+			}
+		}
+	}
+
+	vector<int>& GetNumbers(int maxBit, int bits)
+	{
+		return bitCollection[maxBit][bits];
+	}
+
+	vector<int>& GetChecks(int maxBit, int bits)
+	{
+		return bitchecks[maxBit][bits];
+	}
+};
+
+void TestBitManager()
+{
+	BitManager bm;
+	bm.Init(10);
+	vector<int>& v = bm.GetNumbers(5,2);
+	for (int i = 0; i < v.size(); i++)
+	{
+		cout << v[i] << ' ';
+	}
+	cout << endl;
+}
+
 class ModeDistributor
 {
 private:
 	int M;
 	int s;
 	int bitUnit;
+	int allOnes;
 	vector<i64> modes;
-	vector<vector<int> > res; 
+	vector<vector<int> > res;
+	BitManager bm; 
 public:
 	ModeDistributor(int M_, int s_): M(M_), s(s_)
 	{
 		bitUnit = 1;
 		while ((1 << bitUnit) <= s) bitUnit++;
+		allOnes = (1 << bitUnit) - 1;
+		bm.Init(s + 1);
 	}
 	
 	void Doit()
@@ -650,16 +711,63 @@ public:
 
 		for (int i = 0; i < modes.size(); i++)
 		{
-			int j = (1<<bitUnit) - 1;
 			int op = modes[i];
 			cout << "modes " << i << " " << modes[i] << ": ";
 			for (int k = 0; k < M - 1; k++)
 			{
-				cout << (op & j) << " ";
+				cout << (op & allOnes) << " ";
 				op >>= bitUnit;
 			}
 
 			cout << endl;
+		}
+		
+		for (int i = 0; i < modes.size(); i++)
+		{
+			//distribute(modes[i], M - 1);
+		}
+	}
+
+	void distribute(i64 mode, int bit, vector<int>& curr)
+	{
+		if (bit == 0)
+		{
+			// found a valid one.
+			res.push_back(curr);
+			return;
+		}
+		
+		int n = (mode >> (bitUnit * (bit - 1))) & allOnes;
+		vector<int> numbers = bm.GetNumbers(s, n);
+		vector<int> checks = bm.GetChecks(s, n);
+		
+		for (int i = 0; i < numbers.size(); i++)
+		{
+			bool ok = true;
+			for (int j = 1; j < s; j++)
+			{
+				if (!IsBitSet(checks[i], j)) continue;
+				if (curr[j] < curr[j-1] + bit) { ok = false; break;}
+			}
+			
+			if (!ok) continue;
+			for (int j = 0; j < s; j++)
+			{
+				if (IsBitSet(i, j))
+				{
+					curr[j] |= (1 << bit);
+				}
+			}
+			
+			distribute(mode, bit - 1, curr);
+			
+			for (int j = 0; j < s; j++)
+			{
+				if (IsBitSet(i, j))
+				{
+					curr[j] ^= (1 << bit);
+				}
+			}
 		}
 	}
 };
@@ -682,6 +790,7 @@ int main()
 	//TestEnergyCorrection();
 	//TestMatrices(4,1);
 	//TestOperatorVev();
-	TestModeDistributor();
+	//TestModeDistributor();
+	TestBitManager();
 	return 0;
 }

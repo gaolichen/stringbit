@@ -23,6 +23,7 @@ int BitCount(int);
 int CyclicRotation(int, int);
 snum BinomialCoefficient(snum a, i64 b);
 int PickBits(int n, int bitNumber);
+bool IsBitSet(int n, int bit);
 int InverseNumber(const vector<int>& v);
 int BuildMask(int trace, int bitNumber);
 int Gcd(int a, int b);

@@ -34,6 +34,11 @@ int PickBits(int n, int bitNumber)
 	return n & ((1 << bitNumber) - 1);
 }
 
+bool IsBitSet(int n, int bit)
+{
+	return (n & (1 << bit)) != 0;
+}
+
 int InverseNumber(const vector<int>& v)
 {
 	int ret = 0;
