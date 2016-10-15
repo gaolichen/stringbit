@@ -7,20 +7,14 @@
 #include <vector>
 #include <map>
 #include "BitUtility.h"
+#include "StringBitMatrices.h"
 #include <Eigen/Dense>
 
 using namespace std;
 
 #define esp 1e-10
 
-typedef double DT;
-typedef std::complex<DT> CDT;
-//typedef Eigen::Matrix<CDT, Dynamic, Dynamic> MatrixSB;
-typedef Eigen::MatrixXcd MatrixSB;
-DT PI = acos(-1.0);
-CDT I(0,1);
-CDT TPI = I * CDT(2 * PI);
-
+/*
 CDT ByPolar(DT r, DT angle)
 {
 	return CDT(r*cos(angle) + I*r*sin(angle));
@@ -215,7 +209,7 @@ CDT GammaPW(int M, int L)
 {
 	CDT tr = (MatrixS(M, L).conjugate() * MatrixC(M, L).inverse() * MatrixAW(M, L).adjoint()).trace();
 	return -4/tan(PI / (2 * M)) - tr;
-}
+}*/
 
 DT Chop(DT a)
 {
@@ -255,14 +249,15 @@ MatrixSB Chop(MatrixSB m)
 
 void TestMatrixCS()
 {
+	StringBitMatrices sbm;
 	for (int M = 3; M <= 10; M++)
 	{
 		MatrixSB realZero = MatrixSB::Zero(M, M);
 		MatrixSB id = MatrixSB::Identity(M, M);
 		for (int L = 1; L < M - 1; L++)
 		{
-			MatrixSB c = MatrixC(M, L);
-			MatrixSB s = MatrixS(M, L);
+			MatrixSB c = sbm.MatrixC(M, L);
+			MatrixSB s = sbm.MatrixS(M, L);
 			MatrixSB zero = c * s.transpose() + s * c.transpose();
 			MatrixSB one = c * c.adjoint() + s * s.adjoint();
 			ChopInplace(zero);
@@ -285,12 +280,13 @@ void TestMatrixCS()
 
 void TestMatrixA()
 {
+	StringBitMatrices sbm;
 	for (int M = 3; M < 10; M++)
 	{
 		MatrixSB zero = MatrixSB::Zero(M, M);
 		for (int L = 1; L < M; L++)
 		{
-			MatrixSB z = MatrixA(M, L + 1, M) - MatrixAV(M, L);
+			MatrixSB z = sbm.MatrixA(M, L + 1, M) - sbm.MatrixAV(M, L);
 			ChopInplace(z);
 
 			if (z != zero)
@@ -299,7 +295,7 @@ void TestMatrixA()
 				return;
 			}
 
-			z = MatrixA(L, L + 1, M) + MatrixA(M, 1, M) - MatrixAW(M, L);
+			z = sbm.MatrixA(L, L + 1, M) + sbm.MatrixA(M, 1, M) - sbm.MatrixAW(M, L);
 			ChopInplace(z);
 
 			if (z != zero)
@@ -460,15 +456,16 @@ DT EnergyCorrector::EnergyCorrection(int M, int L)
 	int K = M - L;
 	CDT ret = .0;
 	DT E0 = -4 / tan(PI/(2*M));
+	StringBitMatrices sbm;
 	vector<StateInfo> states1 = AllStates(L);
 	vector<StateInfo> states2 = AllStates(K);
 	totalStates += states1.size() * states2.size();
-	MatrixSB matM = MatrixM(M, L);
-	DT detC = abs(MatrixC(M, L).determinant());
-	MatrixSB omegaV = OmegaV(M, L);
-	MatrixSB omegaW = OmegaW(M, L);
-	CDT gmV = GammaPV(M, L);
-	CDT gmW = GammaPW(M, L);
+	MatrixSB matM = sbm.MatrixM(M, L);
+	DT detC = abs(sbm.MatrixC(M, L).determinant());
+	MatrixSB omegaV = sbm.OmegaV(M, L);
+	MatrixSB omegaW = sbm.OmegaW(M, L);
+	CDT gmV = sbm.GammaPV(M, L);
+	CDT gmW = sbm.GammaPW(M, L);
 	VevCalculator calc(matM);
 
 	watch.Start();
@@ -520,7 +517,8 @@ DT EnergyCorrector::EnergyCorrection(int M)
 
 void TestVevCalculator()
 {
-	MatrixSB matM = MatrixM(3, 1);
+	StringBitMatrices sbm;
+	MatrixSB matM = sbm.MatrixM(3, 1);
 	VevCalculator calc(matM);
 	CDT res = calc.CalculateVev(3);
 	cout << res << endl;
@@ -541,14 +539,15 @@ void TestEnergyCorrection()
 
 void TestMatrices(int M, int L)
 {
-	MatrixSB omegaV = OmegaV(M, L);
-	MatrixSB omegaW = OmegaW(M, L);
-	MatrixSB matM = MatrixM(M, L);
+	StringBitMatrices sbm;
+	MatrixSB omegaV = sbm.OmegaV(M, L);
+	MatrixSB omegaW = sbm.OmegaW(M, L);
+	MatrixSB matM = sbm.MatrixM(M, L);
 	ChopInplace(omegaV);
 	ChopInplace(omegaW);
 	ChopInplace(matM);
-	CDT gammaV = GammaPV(M, L);
-	CDT gammaW = GammaPW(M, L);
+	CDT gammaV = sbm.GammaPV(M, L);
+	CDT gammaW = sbm.GammaPW(M, L);
 	gammaV = Chop(gammaV);
 	gammaW = Chop(gammaW);
 
@@ -565,14 +564,16 @@ void TestOperatorVev()
 	int M = 5;
 	int L = 2;
 
-	MatrixSB omegaV = OmegaV(M, L);
-	MatrixSB omegaW = OmegaW(M, L);
-	MatrixSB matM = MatrixM(M, L);
+	StringBitMatrices sbm;
+
+	MatrixSB omegaV = sbm.OmegaV(M, L);
+	MatrixSB omegaW = sbm.OmegaW(M, L);
+	MatrixSB matM = sbm.MatrixM(M, L);
 	ChopInplace(omegaV);
 	ChopInplace(omegaW);
 	ChopInplace(matM);
-	CDT gammaV = GammaPV(M, L);
-	CDT gammaW = GammaPW(M, L);
+	CDT gammaV = sbm.GammaPV(M, L);
+	CDT gammaW = sbm.GammaPW(M, L);
 	gammaV = Chop(gammaV);
 	gammaW = Chop(gammaW);
 
@@ -786,10 +787,10 @@ int main()
 	TestMatrixCS();
 	TestMatrixA();
 	//TestAllStates();
-	//TestVevCalculator();
+	TestVevCalculator();
 	//TestEnergyCorrection();
-	//TestMatrices(4,1);
-	//TestOperatorVev();
+	TestMatrices(4,1);
+	TestOperatorVev();
 	//TestModeDistributor();
 	TestBitManager();
 	return 0;

@@ -48,12 +48,14 @@ SET(PRINT_GROUND_SRCS
 
 SET(STRVER_SRCS
 	BitUtility.cpp
+	StringBitMatrices.cpp
 	strbitvertex.cpp)
 
 IF(WIN32)
 	SET(STRVER_SRCS
 		${STRVER_SRCS}
 		BitUtility.h
+		StringBitMatrices.h
 	)
 ENDIF(WIN32)
 
