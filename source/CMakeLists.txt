@@ -48,6 +48,7 @@ SET(PRINT_GROUND_SRCS
 
 SET(STRVER_SRCS
 	BitUtility.cpp
+	EnergyCalculator.cpp
 	StringBitMatrices.cpp
 	strbitvertex.cpp)
 
@@ -55,6 +56,7 @@ IF(WIN32)
 	SET(STRVER_SRCS
 		${STRVER_SRCS}
 		BitUtility.h
+		EnergyCalculator.h
 		StringBitMatrices.h
 	)
 ENDIF(WIN32)

@@ -24,6 +24,18 @@ CDT ByPolar(DT angle)
         return CDT(cos(angle) + I*sin(angle));
 }
 
+DT Chop(DT a)
+{
+	if (abs(a) < esp) return 0;
+	return a;
+}
+
+CDT Chop(CDT& a)
+{
+	return CDT(Chop(a.real()), Chop(a.imag()));
+}
+
+
 CDT StringBitMatrices::DotV1(int M, int L, int K, int m, int n)
 {
         if((n * M - L * m) % (L * M) == 0)

@@ -8,22 +8,10 @@
 #include <map>
 #include "BitUtility.h"
 #include "StringBitMatrices.h"
+#include "EnergyCalculator.h"
 #include <Eigen/Dense>
 
 using namespace std;
-
-#define esp 1e-10
-
-DT Chop(DT a)
-{
-	if (abs(a) < esp) return 0;
-	return a;
-}
-
-CDT Chop(CDT& a)
-{
-	return CDT(Chop(a.real()), Chop(a.imag()));
-}
 
 void ChopInplace(MatrixSB &m)
 {
@@ -112,210 +100,14 @@ void TestMatrixA()
 	cout << "TestMatrixA passed!" << endl;
 }
 
-class StateInfo
-{
-public:
-	int Ops;
-	DT Energy;
-	StateInfo(int ops, DT energy):Ops(ops), Energy(energy)
-	{
-	}
-
-};
-
-vector<StateInfo> AllStates(int M)
-{
-	vector<StateInfo> ret;
-	DT e0 = -4 / tan(PI/(2 * M));
-	
-	for (int i = 0; i < (1<<M); i+=2)
-	{
-		DT deltE = 0.0;
-		int modes = 0;
-		for (int j = 1; (1<<j) <= i; j++)
-		{
-			if ((i & (1<<j)) == 0) continue;
-			deltE += 8 * sin(j * PI/M);
-			modes += j;	
-		}
-		
-		if ((M % 2 == 1 && modes % M == 0) || (M % 2 ==0 && modes % M == M / 2))
-		{
-			ret.push_back(StateInfo(i, e0 + deltE));
-		}
-	}
-
-	return ret;
-}
 
 void TestAllStates()
 {
-	vector<StateInfo> states = AllStates(5);
+	vector<StateInfo> states = EnergyCalculator::AllStates(5);
 	for (int i = 0; i < states.size(); i++)
 	{
 		cout << states[i].Ops << " " << states[i].Energy << endl;
 	}
-}
-
-class VevCalculator
-{
-private:
-	MatrixSB matM;
-	int M;
-	map<int, CDT> cache;
-
-	CDT DoCalculate(int ops)
-	{
-		if (ops == 0) return 1.0;
-
-		map<int,CDT>::iterator it = cache.find(ops);
-		if (it != cache.end())
-		{
-			return it->second;
-		}
-
-		CDT res = 0.0;
-		int lowestBit = 0;
-		int sign = 0;
-		while (((1 << lowestBit) & ops) == 0) lowestBit++;
-		ops ^= (1 << lowestBit);
-		for (int i = lowestBit + 1; (1<<i) <= ops; i++)
-		{
-			if (((1 << i) & ops) == 0) continue;
-			if (sign % 2 == 0)
-				res += matM(lowestBit, i) * DoCalculate(ops ^ (1 << i));
-			else res -= matM(lowestBit, i) * DoCalculate(ops ^ (1 << i));
-			sign++;
-		}
-
-		cache[ops | (1 << lowestBit)] = res;
-		return res;
-	}
-public:
-	VevCalculator(MatrixSB &mat) : matM(mat)
-	{
-		M = matM.innerSize();
-	}
-
-	CDT CalculateVev(int ops)
-	{
-		if (BitCount(ops) % 2 == 1) return 0.0;
-		return DoCalculate(ops);
-	}
-
-	CDT CalculateVev(int ops, MatrixSB &omega)
-	{
-		CDT ret = 0.0;
-		for (int i = 0; i < M; i++)
-		{
-			if (((1<<i) & ops) == 0) continue;
-			int cnt = 0;
-			for (int j = i + 1; j < M; j++)
-			{
-				if (((1 << j) & ops) == 0) continue;
-				if (cnt %2 == 0)
-					ret += omega(i, j) * CalculateVev(ops - (1<<i) - (1<<j));
-				else ret -= omega(i, j) * CalculateVev(ops - (1<<i) - (1<<j));
-				cnt++;
-			}
-		}
-
-		return ret + ret;
-	}
-};
-
-CDT OperatorVev(int ops, VevCalculator &calc, CDT gamma, MatrixSB &omega)
-{
-	return 2.0 * (calc.CalculateVev(ops) * gamma + calc.CalculateVev(ops, omega));
-}
-
-class EnergyCorrector
-{
-private:
-	int totalStates;
-	double calculateTime;
-	Stopwatch watch;
-	DT EnergyCorrection(int M, int L);
-public:
-	EnergyCorrector()
-	{
-	}
-
-	DT EnergyCorrection(int M);
-
-	int TotalStates()
-	{
-		return totalStates;
-	}
-	
-	double CalculateTime()
-	{
-		return calculateTime;
-	}
-};
-
-DT EnergyCorrector::EnergyCorrection(int M, int L)
-{
-	int K = M - L;
-	CDT ret = .0;
-	DT E0 = -4 / tan(PI/(2*M));
-	StringBitMatrices sbm;
-	vector<StateInfo> states1 = AllStates(L);
-	vector<StateInfo> states2 = AllStates(K);
-	totalStates += states1.size() * states2.size();
-	MatrixSB matM = sbm.MatrixM(M, L);
-	DT detC = abs(sbm.MatrixC(M, L).determinant());
-	MatrixSB omegaV = sbm.OmegaV(M, L);
-	MatrixSB omegaW = sbm.OmegaW(M, L);
-	CDT gmV = sbm.GammaPV(M, L);
-	CDT gmW = sbm.GammaPW(M, L);
-	VevCalculator calc(matM);
-
-	watch.Start();
-	
-	for (int i = 0; i < states2.size(); i++)
-	{
-		for (int j = 0; j < states1.size(); j++)
-		{
-			int ops = (states2[i].Ops << (L - 1)) | states1[j].Ops;
-			CDT delta;
-			if (BitCount(ops) % 2 == 0)
-			{
-				delta = conj(OperatorVev(ops, calc, gmW, omegaW)) * OperatorVev(ops, calc, gmV, omegaV);
-				int ops2 = ops + (1 << (M - 1)) + 1;
-				delta += conj(OperatorVev(ops2, calc, gmW, omegaW)) * OperatorVev(ops2, calc, gmV, omegaV);
-			}
-			else
-			{	
-				delta = conj(OperatorVev(ops + 1, calc, gmW, omegaW)) * OperatorVev(ops + 1, calc, gmV, omegaV);
-				delta += conj(OperatorVev(ops | (1 << (M - 1)), calc, gmW, omegaW)) 
-					* OperatorVev(ops | (1 << (M - 1)), calc, gmV, omegaV);
-			}
-
-			delta = Chop(delta);
-			// delta is not necessary real!!!!
-			//assert(delta.imag() == 0);
-			ret += delta /(E0 - states1[j].Energy - states2[i].Energy) ;
-		}
-	}
-
-	ret = Chop(ret);
-	assert(ret.imag() == 0);
-	if (ret.imag() != 0) cout << "not real energy: " << ret << endl;
-	calculateTime += watch.Stop();
-
-	return ret.real() * K * L * detC / M;
-}
-
-DT EnergyCorrector::EnergyCorrection(int M)
-{
-	totalStates = 0;
-	calculateTime = 0.0;
-	DT ret = 0;
-	for (int L = 1; L < M - 1; L++)
-		ret += EnergyCorrection(M, L);
-
-	return ret;
 }
 
 void TestVevCalculator()
@@ -329,13 +121,13 @@ void TestVevCalculator()
 
 void TestEnergyCorrection()
 {
-	EnergyCorrector corrector;
+	EnergyCalculator calc;
 	Stopwatch watch;
 	for (int i = 3; i <= 25; i += 2)
 	{
 		watch.Start();
-		DT res = corrector.EnergyCorrection(i);
-		cout << "M= " << i << ", totalStates = " << corrector.TotalStates() << ", calculateTime=" << corrector.CalculateTime();
+		DT res = calc.EnergyCorrection(i);
+		cout << "M= " << i << ", totalStates = " << calc.TotalStates() << ", calculateTime=" << calc.CalculateTime();
 		cout << ", totalTime=" << watch.Stop() << ", E=" << res << endl;
 	}
 }
@@ -393,7 +185,7 @@ void TestOperatorVev()
 
 	for (int i = 0; i < (1<<M); i++)
 	{
-		CDT res = OperatorVev(i, calc, gammaW, omegaW);
+		CDT res = EnergyCalculator::OperatorVev(i, calc, gammaW, omegaW);
 		res = Chop(res);
 		if (res != .0)
 			cout << i << ": " << res << endl;
@@ -515,7 +307,7 @@ public:
 
 		for (int i = 0; i < modes.size(); i++)
 		{
-			int op = modes[i];
+			i64 op = modes[i];
 			cout << "modes " << i << " " << modes[i] << ": ";
 			for (int k = 0; k < M - 1; k++)
 			{
@@ -589,7 +381,7 @@ int main()
 {
 	TestMatrixCS();
 	TestMatrixA();
-	//TestAllStates();
+	TestAllStates();
 	TestVevCalculator();
 	//TestEnergyCorrection();
 	TestMatrices(4,1);

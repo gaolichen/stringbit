@@ -10,6 +10,7 @@
 
 using namespace std;
 
+#define esp 1e-10
 typedef double DT;
 typedef std::complex<DT> CDT;
 typedef Eigen::MatrixXcd MatrixSB;
@@ -20,6 +21,10 @@ extern CDT TPI;
 CDT ByPolar(DT r, DT angle);
 
 CDT ByPolar(DT angle);
+
+DT Chop(DT a);
+
+CDT Chop(CDT& a);
 
 class StringBitMatrices
 {
