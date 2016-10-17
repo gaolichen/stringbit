@@ -3,6 +3,7 @@
 #include <vector>
 #include <map>
 #include "BitUtility.h"
+#include "StringBitMatrices.h"
 
 class BitManager
 {
@@ -53,10 +54,6 @@ public:
 	// return all partitions bruteforcely. this function is for test purpose. 
 	// The returned values are equivalent to: v = AllPartitions(); foreach (e in v) ret.push_back(ToArray(e));
 	vector<vector<int> >& AllPartitionsBruteForce();
-
-	//// TODO:
-	////
-	//void distribute(i64 mode, int bit, vector<int>& curr);
 };
 
 class DividePartition
@@ -89,11 +86,17 @@ private:
 	DividePartition* divide1;
 	DividePartition* divide2;
 	vector<vector<i64> > allModes;
+	vector<DT> allEnergies;
+	
+	static DT CalculateEnergy(vector<int>& partition, int M);
 public:
 	ModesGenerator(int M_, int L_, int s_);
 
 	~ModesGenerator();
 
+	int SymmetryFactor(vector<i64>& modes);
+
 	vector<vector<i64> >& Generate();
+	vector<DT>& AllEnergies() { return allEnergies; }
 };
 

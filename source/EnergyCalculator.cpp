@@ -1,6 +1,6 @@
 #pragma warning(disable:4018)
 #include "EnergyCalculator.h"
-
+#include "Partition.h"
 
 CDT VevCalculator::DoCalculate(int ops)
 {
@@ -50,15 +50,38 @@ CDT VevCalculator::CalculateVev(int ops, MatrixSB &omega)
 	return ret + ret;
 }
 
+/*
+EnergyCalculator::EnergyCalculator(int s_) : s(s_)
+{
+}
+*/
+
+
+CDT EnergyCalculator::OperatorVevAllZeros(int ops, int M,  VevCalculator &calc, CDT &gmW, MatrixSB &omegaW, CDT &gmV, MatrixSB &omegaV)
+{
+	CDT delta;
+        if (BitCount(ops) % 2 == 0)
+        {
+		delta = conj(OperatorVev(ops, calc, gmW, omegaW)) * OperatorVev(ops, calc, gmV, omegaV);
+                int ops2 = ops + (1 << (M - 1)) + 1;
+                delta += conj(OperatorVev(ops2, calc, gmW, omegaW)) * OperatorVev(ops2, calc, gmV, omegaV);
+        }
+        else
+        {
+		delta = conj(OperatorVev(ops + 1, calc, gmW, omegaW)) * OperatorVev(ops + 1, calc, gmV, omegaV);
+                delta += conj(OperatorVev(ops | (1 << (M - 1)), calc, gmW, omegaW))
+			* OperatorVev(ops | (1 << (M - 1)), calc, gmV, omegaV);
+	}
+
+	return delta;
+}
+
 DT EnergyCalculator::EnergyCorrection(int M, int L)
 {
 	int K = M - L;
 	CDT ret = .0;
-	DT E0 = -4 / tan(PI/(2*M));
+	DT E0 = -4 / tan(PI/(2*M)) * s;
 	StringBitMatrices sbm;
-	vector<StateInfo> states1 = AllStates(L);
-	vector<StateInfo> states2 = AllStates(K);
-	totalStates += states1.size() * states2.size();
 	MatrixSB matM = sbm.MatrixM(M, L);
 	DT detC = abs(sbm.MatrixC(M, L).determinant());
 	MatrixSB omegaV = sbm.OmegaV(M, L);
@@ -69,29 +92,55 @@ DT EnergyCalculator::EnergyCorrection(int M, int L)
 
 	watch.Start();
 	
-	for (int i = 0; i < states2.size(); i++)
+	if (s == 1)
 	{
-		for (int j = 0; j < states1.size(); j++)
+		vector<StateInfo> states1 = AllStates(L);
+		vector<StateInfo> states2 = AllStates(K);
+		totalStates += states1.size() * states2.size();
+	
+		for (int i = 0; i < states2.size(); i++)
 		{
-			int ops = (states2[i].Ops << (L - 1)) | states1[j].Ops;
-			CDT delta;
-			if (BitCount(ops) % 2 == 0)
+			for (int j = 0; j < states1.size(); j++)
 			{
-				delta = conj(OperatorVev(ops, calc, gmW, omegaW)) * OperatorVev(ops, calc, gmV, omegaV);
-				int ops2 = ops + (1 << (M - 1)) + 1;
-				delta += conj(OperatorVev(ops2, calc, gmW, omegaW)) * OperatorVev(ops2, calc, gmV, omegaV);
-			}
-			else
-			{	
-				delta = conj(OperatorVev(ops + 1, calc, gmW, omegaW)) * OperatorVev(ops + 1, calc, gmV, omegaV);
-				delta += conj(OperatorVev(ops | (1 << (M - 1)), calc, gmW, omegaW)) 
-					* OperatorVev(ops | (1 << (M - 1)), calc, gmV, omegaV);
-			}
+				int ops = (states2[i].Ops << (L - 1)) | states1[j].Ops;
+				CDT delta = OperatorVevAllZeros(ops, M, calc, gmW, omegaW, gmV, omegaV);
+/*
+				CDT delta;
+				if (BitCount(ops) % 2 == 0)
+				{
+					delta = conj(OperatorVev(ops, calc, gmW, omegaW)) * OperatorVev(ops, calc, gmV, omegaV);
+					int ops2 = ops + (1 << (M - 1)) + 1;
+					delta += conj(OperatorVev(ops2, calc, gmW, omegaW)) * OperatorVev(ops2, calc, gmV, omegaV);
+				}
+				else
+				{	
+					delta = conj(OperatorVev(ops + 1, calc, gmW, omegaW)) * OperatorVev(ops + 1, calc, gmV, omegaV);
+					delta += conj(OperatorVev(ops | (1 << (M - 1)), calc, gmW, omegaW)) 
+						* OperatorVev(ops | (1 << (M - 1)), calc, gmV, omegaV);
+				}*/
 
-			delta = Chop(delta);
-			// delta is not necessary real!!!!
-			//assert(delta.imag() == 0);
-			ret += delta /(E0 - states1[j].Energy - states2[i].Energy) ;
+				delta = Chop(delta);
+				// delta is not necessary real!!!!
+				// assert(delta.imag() == 0);
+				ret += delta /(E0 - states1[j].Energy - states2[i].Energy) ;
+			}
+		}
+	}
+	else
+	{
+		ModesGenerator generator(M, L, s);
+		vector<vector<i64> >& modes = generator.Generate();
+		vector<DT>& allEnergies = generator.AllEnergies();
+		for (int i = 0; i < modes.size(); i++)
+		{
+			CDT delta = 1.0;
+			for (int j = 0; j < modes[i].size(); j++)
+			{
+				int ops = modes[i][j];
+				delta *= OperatorVevAllZeros(ops, M, calc, gmW, omegaW, gmV, omegaV);
+			}
+		
+			ret += delta * (generator.SymmetryFactor(modes[i]) /(E0 - allEnergies[i]));
 		}
 	}
 
@@ -100,7 +149,7 @@ DT EnergyCalculator::EnergyCorrection(int M, int L)
 	if (ret.imag() != 0) cout << "not real energy: " << ret << endl;
 	calculateTime += watch.Stop();
 
-	return ret.real() * K * L * detC / M;
+	return ret.real() * K * L * pow(detC, s) / M;
 }
 
 DT EnergyCalculator::EnergyCorrection(int M)

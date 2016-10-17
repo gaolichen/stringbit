@@ -144,6 +144,15 @@ void TestEnergyCorrection(int maxM = 17)
 	cout << "TestEnergyCorrection passed!" << endl;
 }
 
+void TestEnergyCorrection2(int s)
+{
+	EnergyCalculator calc(s);
+	for (int M = 3; M <= 5; M++)
+	{
+		cout << "M=" << M << " s=" << s << " E=" << calc.EnergyCorrection(M) << endl;
+	}
+}
+
 void TestMatrices(int M, int L)
 {
 	StringBitMatrices sbm;
@@ -403,6 +412,7 @@ int main()
 	//TestAllStates();
 	//TestVevCalculator();
 	//TestEnergyCorrection();
+	TestEnergyCorrection2(2);
 	//TestMatrices(4,1);
 	//TestOperatorVev();
 	TestPartition();

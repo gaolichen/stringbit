@@ -48,17 +48,22 @@ public:
 class EnergyCalculator
 {
 private:
+	int s;
 	int totalStates;
 	double calculateTime;
 	Stopwatch watch;
 	DT EnergyCorrection(int M, int L);
-
 public:
+	EnergyCalculator() : s(1) {}
+
+	EnergyCalculator(int s_) : s(s_) {}
 
 	static CDT OperatorVev(int ops, VevCalculator &calc, CDT gamma, MatrixSB &omega)
 	{
 		return 2.0 * (calc.CalculateVev(ops) * gamma + calc.CalculateVev(ops, omega));
 	}
+
+	static CDT OperatorVevAllZeros(int ops, int M, VevCalculator &calc, CDT &gammaW, MatrixSB &omegaW, CDT &gammaV, MatrixSB &omegaV);
 
 	static vector<StateInfo> AllStates(int M)
 	{

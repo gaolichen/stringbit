@@ -194,12 +194,30 @@ ModesGenerator::~ModesGenerator()
 	delete this->divide2;
 }
 
+DT ModesGenerator::CalculateEnergy(vector<int> &partition, int M)
+{
+	DT ret = .0;
+	for (int i = 0; i < partition.size(); i++)
+	{
+		ret += partition[i] * sin((i+1) * PI / M);
+	}
+
+	return ret;
+}
+
 vector<vector<i64> >& ModesGenerator::Generate()
 {
 	vector<vector<int> >& partition1 = partitioner1->AllPartitionsBruteForce();
 	vector<vector<int> >& partition2 = partitioner2->AllPartitionsBruteForce();
-	cout << "partition1 size: " << partition1.size() << endl;
-	cout << "partition2 size: " << partition2.size() << endl;
+	//cout << "partition1 size: " << partition1.size() << endl;
+	//cout << "partition2 size: " << partition2.size() << endl;
+	vector<DT> energies1(partition1.size());
+	vector<DT> energies2(partition2.size());
+
+	for (int i = 0; i < partition1.size(); i++) 
+		energies1[i] = CalculateEnergy(partition1[i], M - L);
+	for (int i = 0; i < partition2.size(); i++)
+		energies2[i] = CalculateEnergy(partition2[i], L);
 
 	for (int i = 0; i < partition1.size(); i++)
 	{
@@ -210,11 +228,38 @@ vector<vector<i64> >& ModesGenerator::Generate()
 			{
 				vector<vector<i64> >& division2 = divide2->Divide2(partition2[j], division1[k]);
 				allModes.insert(allModes.end(), division2.begin(), division2.end());
+				allEnergies.insert(allEnergies.end(), division2.size(), energies1[i] + energies2[j]);
 			}
 		}
 	}
 
 	return allModes;
+}
+
+i64 Factorial(int n)
+{
+	i64 ret = 1;
+	while (n > 0) { ret *= n; n--; }
+	return ret;
+}
+
+int ModesGenerator::SymmetryFactor(vector<i64>& mode)
+{
+	i64 ret = Factorial(s);
+	int r = 1;
+	for (int j = 1; j < mode.size(); j++)
+	{
+		if (mode[j] == mode[j-1]) r++;
+		else
+		{
+			ret /= Factorial(r);
+			r = 1;
+		}
+	}
+
+	ret /= Factorial(r);
+
+	return (int)ret;
 }
 
 //void Partitioner::distribute(i64 mode, int bit, vector<int>& curr)
