@@ -32,6 +32,7 @@ int Gcd(int a, int b);
 string CombinePath(string path1, string path2);
 string Bits2String(int bits, int bitNumber);
 string ToUpper(string s);
+vector<int> Num2Digit(i64 n, int maxBit);
 
 template <typename T>
 std::ostream& operator<< (std::ostream& out, const std::vector<T>& v) {

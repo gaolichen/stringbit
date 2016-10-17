@@ -273,16 +273,37 @@ void TestPartition()
 	cout << "TestPartition passed!" << endl;
 }
 
+void TestModesGenerator()
+{
+	int M = 5;
+	int L = 2;
+	int s = 2;
+	ModesGenerator gen(M, L, s);
+	vector<vector<i64> > res = gen.Generate();
+	cout << res.size() << endl;
+	for (int i = 0; i < res.size(); i++)
+	{
+		cout << "modes " << i << ":\t";
+		for (int j = 0; j < res[i].size(); j++)
+		{
+			//cout << Num2Digit(res[i][j], M) << " ";
+			cout << res[i][j] << " ";
+		}
+		cout << endl;
+	}
+}
+
 int main()
 {
 	TestMatrixCS();
 	TestMatrixA();
 	//TestAllStates();
 	//TestVevCalculator();
-	TestEnergyCorrection();
+	//TestEnergyCorrection();
 	//TestMatrices(4,1);
 	//TestOperatorVev();
 	TestPartition();
 	//TestBitManager();
+	TestModesGenerator();
 	return 0;
 }

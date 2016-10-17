@@ -39,6 +39,18 @@ bool IsBitSet(int n, int bit)
 	return (n & (1 << bit)) != 0;
 }
 
+vector<int> Num2Digit(i64 n, int maxBit)
+{
+	vector<int> ret;
+	ret.reserve(maxBit);
+	for (int i = 0; i < maxBit; i++)
+	{
+		if (IsBitSet(n, i)) ret.push_back(i);
+	}
+
+	return ret;
+}
+
 int InverseNumber(const vector<int>& v)
 {
 	int ret = 0;

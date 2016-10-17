@@ -54,7 +54,47 @@ public:
 	// The returned values are equivalent to: v = AllPartitions(); foreach (e in v) ret.push_back(ToArray(e));
 	vector<vector<int> >& AllPartitionsBruteForce();
 
-	// TODO:
-	//
-	void distribute(i64 mode, int bit, vector<int>& curr);
+	//// TODO:
+	////
+	//void distribute(i64 mode, int bit, vector<int>& curr);
 };
+
+class DividePartition
+{
+private:
+	int M;
+	int s;
+	BitManager bm; 
+	vector<vector<i64> > res;
+
+	void DoDivide(vector<int>& partition, int index, int offset, vector<i64>& division);
+public:
+	DividePartition(int M_, int s_) : M(M_), s(s_)
+	{
+		bm.Init(s + 1);
+	}
+
+	vector<vector<i64> >& Divide(vector<int>& partition, int offset);
+
+	vector<vector<i64> >& Divide2(vector<int>& partition, vector<i64>& division);
+};
+
+class ModesGenerator
+{
+private:
+	int M;
+	int L;
+	int s;
+	Partitioner* partitioner1;
+	Partitioner* partitioner2;
+	DividePartition* divide1;
+	DividePartition* divide2;
+	vector<vector<i64> > allModes;
+public:
+	ModesGenerator(int M_, int L_, int s_);
+
+	~ModesGenerator();
+
+	vector<vector<i64> >& Generate();
+};
+
