@@ -166,14 +166,14 @@ void DividePartition::DoDivide(vector<int>& partition, int index, int offset, ve
 		if (!ok) continue;
 		for (int j = 0; j < s; j++)
 		{
-			if (IsBitSet(pos, s)) division[j] |= ((i64)1<<(index + 1 + offset));
+			if (IsBitSet(pos, j)) division[j] |= ((i64)1<<(index + 1 + offset));
 		}
 
 		DoDivide(partition, index - 1, offset, division);
 
 		for (int j = 0; j < s; j++)
 		{
-			if (IsBitSet(pos, s)) division[j] ^= ((i64)1<<(index + 1 + offset));
+			if (IsBitSet(pos, j)) division[j] ^= ((i64)1<<(index + 1 + offset));
 		}
 	}
 }
@@ -182,8 +182,8 @@ ModesGenerator::ModesGenerator(int M_, int L_, int s_) : M(M_), L(L_), s(s_)
 {
 	this->partitioner1 = new Partitioner(M - L, s);
 	this->partitioner2 = new Partitioner(L, s);
-	this->divide1 = new DividePartition(M - 2, s);
-	this->divide2 = new DividePartition(M - 2, s);
+	this->divide1 = new DividePartition(s);
+	this->divide2 = new DividePartition(s);
 }
 
 ModesGenerator::~ModesGenerator()

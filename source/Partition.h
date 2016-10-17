@@ -62,14 +62,13 @@ public:
 class DividePartition
 {
 private:
-	int M;
 	int s;
 	BitManager bm; 
 	vector<vector<i64> > res;
 
 	void DoDivide(vector<int>& partition, int index, int offset, vector<i64>& division);
 public:
-	DividePartition(int M_, int s_) : M(M_), s(s_)
+	DividePartition(int s_) : s(s_)
 	{
 		bm.Init(s + 1);
 	}

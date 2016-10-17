@@ -51,6 +51,28 @@ vector<int> Num2Digit(i64 n, int maxBit)
 	return ret;
 }
 
+i64 Digit2Num(int* v, int size)
+{
+	i64 ret = 0;
+	for (int i = 0; i < size; i++)
+	{
+		ret |= (1<< v[i]);
+	}
+
+	return ret;
+}
+
+/*i64 Digit2Num(vector<int> v)
+{
+	i64 ret = 0;
+	for (int i = 0; i < v.size(); i++)
+	{
+		ret |= (1<<v[i]);
+	}
+
+	return ret;
+}*/
+
 int InverseNumber(const vector<int>& v)
 {
 	int ret = 0;
