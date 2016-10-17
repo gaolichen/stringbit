@@ -1,6 +1,8 @@
 #pragma once
 #include <vector>
 #include <string>
+#include <iostream>
+#include <iterator>
 #include <sstream>
 #include <time.h>
 using namespace std;
@@ -30,6 +32,16 @@ int Gcd(int a, int b);
 string CombinePath(string path1, string path2);
 string Bits2String(int bits, int bitNumber);
 string ToUpper(string s);
+
+template <typename T>
+std::ostream& operator<< (std::ostream& out, const std::vector<T>& v) {
+  if ( !v.empty() ) {
+    out << '[';
+    std::copy (v.begin(), v.end(), std::ostream_iterator<T>(out, ", "));
+    out << "\b\b]";
+  }
+  return out;
+}
 
 template<class T> string ToString(T a)
 {

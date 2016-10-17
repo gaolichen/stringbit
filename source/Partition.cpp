@@ -41,7 +41,7 @@ Partitioner::Partitioner(int M_, int s_): M(M_), s(s_)
 	bm.Init(s + 1);
 }
 
-void Partitioner::Doit()
+vector<i64>& Partitioner::AllPartitions()
 {
 	i64 n = 1;
 	for (int i = 0; i < M - 1; i++) n *= s + 1;
@@ -78,22 +78,48 @@ void Partitioner::Doit()
 		}
 	}
 
-	for (int i = 0; i < modes.size(); i++)
+	return modes;	
+}
+
+vector<int> Partitioner::ToArray(i64 mode)
+{
+	vector<int> ret(M);
+	for (int i = 0; i < M - 1; i++)
 	{
-		i64 op = modes[i];
-		cout << "modes " << i << " " << modes[i] << ": ";
-		for (int k = 0; k < M - 1; k++)
+		ret[i] = (mode & allOnes);
+		mode >>= bitUnit;
+	}
+
+	return ret;
+}
+
+vector<vector<int> >& Partitioner::AllPartitionsBruteForce()
+{
+	vector<int> partition(M);
+	AllPartitionsRecursive(partition, 0, M - 1);
+	return allPartitionsTest;
+}
+
+void Partitioner::AllPartitionsRecursive(vector<int>& partition, int total, int bit)
+{
+	if (bit == 0)
+	{
+		if (s * (M - 1) % 2 == 0 && total % M == 0)
 		{
-			cout << (op & allOnes) << " ";
-			op >>= bitUnit;
+			allPartitionsTest.push_back(partition);
+		}
+		else if (s * (M - 1) % 2 == 1 && total % M == M / 2)
+		{
+			allPartitionsTest.push_back(partition);
 		}
 
-		cout << endl;
+		return;
 	}
-		
-	for (int i = 0; i < modes.size(); i++)
+	
+	for (int i = 0; i <= s; i++)
 	{
-		//distribute(modes[i], M - 1);
+		partition[bit - 1] = i;
+		AllPartitionsRecursive(partition, total + i * bit, bit - 1);
 	}
 }
 

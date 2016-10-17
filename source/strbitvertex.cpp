@@ -215,13 +215,62 @@ void TestBitManager()
 	cout << endl;
 }
 
-void TestModeDistributor()
+bool TestPartition(int M, int s)
 {
-	cout << "input M and L: ";
-	int M, L;
-	cin >> M >> L;
-	Partitioner par(M, L);
-	par.Doit();
+	Partitioner part(M, s);
+	Stopwatch watch;
+	watch.Start();
+	vector<i64>& res1 = part.AllPartitions();
+	cout << "returned " << res1.size() << " partitions in " <<  watch.Stop() << "s." << endl;
+	watch.Start();
+	vector<vector<int> > & res2 = part.AllPartitionsBruteForce();
+	cout << "expected " <<  res2.size() << " partitions in " << watch.Stop() << "s." << endl;
+	if (res1.size() != res2.size())
+	{
+		cout << "Numbers of partitions are different. Test failed!!!" << endl;
+		return false;
+	}
+
+	// cout << "Partitios from AllPartitions(): " << endl;
+
+	for (int i = 0; i < res1.size(); i++)
+	{
+		vector<int> partition = part.ToArray(res1[i]);
+		if (partition != res2[i])
+		{
+			cout << "partition not match at position " << i << endl;
+			cout << "returned: " << partition << endl;
+			cout << "expected: " << res2[i] << endl;
+			return false;
+		}
+	}
+	
+	/*cout << "partitions from AllPartitionsBruteForce: " << endl;
+	for (int i = 0; i < res2.size(); i++)
+	{
+		cout << "partition " << i << ": " << res2[i] << endl;
+	}*/
+	
+	return true;
+	//cout << "TestPartition passed!" << endl;
+}
+
+void TestPartition()
+{
+	for (int M = 3; M <= 7; M++)
+	{
+		for (int s = 1; s <= 5; s++)
+		{
+			cout << "M =" << M << " s=" << s << endl;
+			if (TestPartition(M, s) == false)
+			{
+				cout << "TestPartition Failed!! " << endl;
+				return;
+			}
+		}
+	}
+
+	cout << "TestPartition passed!" << endl;
 }
 
 int main()
@@ -233,7 +282,7 @@ int main()
 	TestEnergyCorrection();
 	//TestMatrices(4,1);
 	//TestOperatorVev();
-	//TestModeDistributor();
-	TestBitManager();
+	TestPartition();
+	//TestBitManager();
 	return 0;
 }
