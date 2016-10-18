@@ -194,15 +194,16 @@ ModesGenerator::~ModesGenerator()
 	delete this->divide2;
 }
 
-DT ModesGenerator::CalculateEnergy(vector<int> &partition, int M)
+DT ModesGenerator::CalculateEnergy(vector<int> &partition, int M, int s)
 {
+	DT E0 = -4 * s / tan(PI/2/M);
 	DT ret = .0;
 	for (int i = 0; i < partition.size(); i++)
 	{
-		ret += partition[i] * sin((i+1) * PI / M);
+		ret += 8 * partition[i] * sin((i+1) * PI / M);
 	}
 
-	return ret;
+	return ret + E0;
 }
 
 vector<vector<i64> >& ModesGenerator::Generate()
@@ -215,9 +216,9 @@ vector<vector<i64> >& ModesGenerator::Generate()
 	vector<DT> energies2(partition2.size());
 
 	for (int i = 0; i < partition1.size(); i++) 
-		energies1[i] = CalculateEnergy(partition1[i], M - L);
+		energies1[i] = CalculateEnergy(partition1[i], M - L, s);
 	for (int i = 0; i < partition2.size(); i++)
-		energies2[i] = CalculateEnergy(partition2[i], L);
+		energies2[i] = CalculateEnergy(partition2[i], L, s);
 
 	for (int i = 0; i < partition1.size(); i++)
 	{

@@ -147,8 +147,9 @@ void TestEnergyCorrection(int maxM = 17)
 void TestEnergyCorrection2(int s)
 {
 	EnergyCalculator calc(s);
-	for (int M = 3; M <= 5; M++)
+	for (int M = 3; M <= 7; M++)
 	{
+		if ((s * (M - 1)) % 2 == 1) continue;
 		cout << "M=" << M << " s=" << s << " E=" << calc.EnergyCorrection(M) << endl;
 	}
 }
@@ -206,7 +207,7 @@ void TestOperatorVev()
 
 	for (int i = 0; i < (1<<M); i++)
 	{
-		CDT res = EnergyCalculator::OperatorVev(i, calc, gammaW, omegaW);
+		CDT res = EnergyCalculator::OperatorVev(i, M, calc, gammaW, omegaW);
 		res = Chop(res);
 		if (res != .0)
 			cout << i << ": " << res << endl;
@@ -411,13 +412,14 @@ int main()
 	TestMatrixA();
 	//TestAllStates();
 	//TestVevCalculator();
-	//TestEnergyCorrection();
+	TestEnergyCorrection();
 	TestEnergyCorrection2(2);
+	TestEnergyCorrection2(3);
 	//TestMatrices(4,1);
 	//TestOperatorVev();
 	TestPartition();
 	//TestBitManager();
-	TestModesGenerator();
+	//TestModesGenerator();
 	TestDividePartition();
 	return 0;
 }

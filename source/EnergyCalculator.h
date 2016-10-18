@@ -58,37 +58,11 @@ public:
 
 	EnergyCalculator(int s_) : s(s_) {}
 
-	static CDT OperatorVev(int ops, VevCalculator &calc, CDT gamma, MatrixSB &omega)
-	{
-		return 2.0 * (calc.CalculateVev(ops) * gamma + calc.CalculateVev(ops, omega));
-	}
+	static CDT OperatorVev(int ops, int M, VevCalculator &calc, CDT &gamma, MatrixSB &omega);
 
 	static CDT OperatorVevAllZeros(int ops, int M, VevCalculator &calc, CDT &gammaW, MatrixSB &omegaW, CDT &gammaV, MatrixSB &omegaV);
 
-	static vector<StateInfo> AllStates(int M)
-	{
-		vector<StateInfo> ret;
-		DT e0 = -4 / tan(PI/(2 * M));
-	
-		for (int i = 0; i < (1<<M); i+=2)
-		{
-			DT deltE = 0.0;
-			int modes = 0;
-			for (int j = 1; (1<<j) <= i; j++)
-			{
-				if ((i & (1<<j)) == 0) continue;
-				deltE += 8 * sin(j * PI/M);
-				modes += j;	
-			}
-		
-			if ((M % 2 == 1 && modes % M == 0) || (M % 2 ==0 && modes % M == M / 2))
-			{
-				ret.push_back(StateInfo(i, e0 + deltE));
-			}
-		}
-
-		return ret;
-	}
+	static vector<StateInfo> AllStates(int M);
 
 	DT EnergyCorrection(int M);
 

@@ -88,7 +88,7 @@ private:
 	vector<vector<i64> > allModes;
 	vector<DT> allEnergies;
 	
-	static DT CalculateEnergy(vector<int>& partition, int M);
+	static DT CalculateEnergy(vector<int>& partition, int M, int s);
 public:
 	ModesGenerator(int M_, int L_, int s_);
 
