@@ -2715,7 +2715,7 @@ The matrices are the same as
 \begin{eqnarray*}
 \left\langle 1\right\rangle _{V} & = & \frac{2}{M}\gamma^{\prime\left(V\right)}\left\langle \exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
  & = & \frac{2}{M}\gamma^{\prime\left(V\right)}\\
- & = & \frac{8}{\sqrt{3}}-8,
+ & = & \frac{4}{\sqrt{3}}-4,
 \end{eqnarray*}
 
 \end_inset
@@ -2733,7 +2733,7 @@ The matrices are the same as
  Likewise
 \begin_inset Formula 
 \[
-\left\langle 1\right\rangle _{W}=\frac{2}{M}\gamma^{\prime\left(W\right)}=-\frac{16}{\sqrt{3}},\quad\left\langle f_{2}f_{0}\right\rangle _{W}=\frac{4}{M}\Omega_{02}^{\left(W\right)}=2\sqrt{2}\left(1-\frac{2}{\sqrt{3}}\right)
+\left\langle 1\right\rangle _{W}=\frac{2}{M}\gamma^{\prime\left(W\right)}=-\frac{8}{\sqrt{3}},\quad\left\langle f_{2}f_{0}\right\rangle _{W}=\frac{4}{M}\Omega_{02}^{\left(W\right)}=2\sqrt{2}\left(1-\frac{2}{\sqrt{3}}\right)
 \]
 
 \end_inset
@@ -2763,9 +2763,9 @@ reference "eq:energy_pert_DeltaE"
 \begin{eqnarray*}
 \Delta E_{0} & = & \frac{1}{N^{2}}\frac{KLM\left|\det C\right|^{2}}{E_{0}-E_{0}^{\left(2\right)}-0}\left(\left\langle 1\right\rangle _{W}^{*}\left\langle 1\right\rangle _{V}+\left\langle f_{2}f_{0}\right\rangle _{W}^{*}\left\langle f_{2}f_{0}\right\rangle _{V}\right)^{2}\\
  &  & +\frac{1}{N^{2}}\frac{KLM\left|\det C\right|^{2}}{E_{0}-E_{1}^{\left(2\right)}-0}\left(\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V}+\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{V}\right)^{2}\\
- & = & \frac{1}{N^{2}}\frac{1\cdot2\cdot3}{-8\sqrt{3}+8}\left(\frac{2+\sqrt{3}}{4}\right)^{2}\left[\left(-\frac{16}{\sqrt{3}}\right)\left(\frac{8}{\sqrt{3}}-8\right)+2\sqrt{2}\left(1-\frac{2}{\sqrt{3}}\right)2\sqrt{2}\left(1-\frac{2}{\sqrt{3}}\right)\right]^{2}\\
+ & = & \frac{1}{N^{2}}\frac{1\cdot2\cdot3}{-8\sqrt{3}+8}\left(\frac{2+\sqrt{3}}{4}\right)^{2}\left[\left(-\frac{8}{\sqrt{3}}\right)\left(\frac{4}{\sqrt{3}}-4\right)+2\sqrt{2}\left(1-\frac{2}{\sqrt{3}}\right)2\sqrt{2}\left(1-\frac{2}{\sqrt{3}}\right)\right]^{2}\\
  &  & +\frac{1}{N^{2}}\frac{1\cdot2\cdot3}{-8\sqrt{3}-8}\left(\frac{2+\sqrt{3}}{4}\right)^{2}\left[\left(-\frac{2+2i}{\sqrt{3}}\right)\left(-\frac{2-2i}{\sqrt{3}}\right)+8\left(1-\frac{2}{\sqrt{3}}\right)4\left(1-\frac{1}{\sqrt{3}}\right)\right]^{2}\\
- & = & -3\left(136+91\sqrt{3}\right)\frac{1}{N^{2}}
+ & = & -\frac{33\sqrt{3}}{N^{2}}
 \end{eqnarray*}
 
 \end_inset
