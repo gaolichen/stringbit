@@ -107,8 +107,6 @@ public:
 
 	~ModesGenerator();
 
-	int SymmetryFactor(vector<i64>& modes);
-
 	vector<vector<i64> >& Generate();
 	vector<DT>& AllEnergies() { return allEnergies; }
 };
