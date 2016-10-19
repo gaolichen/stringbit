@@ -318,11 +318,11 @@ bool TestDividePartition2(int s, int offset, vector<int>& partition)
 {
 	DividePartitionForTest dpt(s);
 	vector<vector<i64> > &expect = dpt.Divide(partition, offset);
+	sort(expect.begin(), expect.end());
 
 	DividePartition dp(s);
 	vector<vector<i64> > &actual = dp.Divide(partition, offset);
 	sort(actual.begin(), actual.end());
-	reverse(actual.begin(), actual.end());
 
 	if (expect != actual)
 	{
@@ -335,6 +335,7 @@ bool TestDividePartition2(int s, int offset, vector<int>& partition)
 		return true;
 	}
 }
+
 void TestDividePartition2()
 {
 	int total = 10;
@@ -362,6 +363,64 @@ void TestDividePartition2()
 	}
 	
 	cout << "TestDividePartition2 passed" << endl;
+}
+
+bool TestDividePartition3(int s, vector<int> &partition, vector<i64> &division)
+{
+	DividePartitionForTest dpt(s);
+	vector<vector<i64> > &expect = dpt.Divide2(partition, division);
+	sort(expect.begin(), expect.end());
+
+	DividePartition dp(s);
+	vector<vector<i64> > &actual = dp.Divide2(partition, division);
+	sort(actual.begin(), actual.end());
+	
+	if (actual != expect)
+	{
+		cout << "TestDividePartition3 failed!" << endl;
+		OutputReturnAndExpectedDivision(actual, expect);
+		return false;
+	}
+	
+	return true;
+}
+
+void TestDividePartition3()
+{
+	int total = 10;
+	srand(time(NULL));
+
+	for (int i = 0; i < total; i++)
+	{
+		int s = rand() % 7 + 2;
+		int M = rand() % 6 + 2;
+		if (s * M > 32) M = 32 / s;
+		vector<int> partition(M);
+		for (int j = 0; j < M;  j++)
+		{
+			partition[j] = rand() % (s + 1);
+		}
+
+		vector<i64> division(s);
+		for (int j = 0; j < s; j++)
+		{
+			division[j] = (rand() % M) << (M + 1);
+		}
+
+		sort(division.begin(), division.end());
+		reverse(division.begin(), division.end());
+
+		if (!TestDividePartition3(s, partition, division))
+		{
+			cout << "s=" << s << ", M=" << M << endl;
+			cout << "partition: " << partition << endl;
+			cout << "division: " << division << endl;
+			return;
+		}
+		
+	}
+
+	cout << "TestDividePartition3 passed!" << endl;
 }
 
 void TestDividePartition()
@@ -467,5 +526,6 @@ int main()
 	//TestModesGenerator();
 	TestDividePartition();
 	TestDividePartition2();
+	TestDividePartition3();
 	return 0;
 }

@@ -1,6 +1,7 @@
 #pragma warning(disable:4018)
 #include <iostream>
 #include <vector>
+#include <cassert>
 #include "BitUtility.h"
 #include "Partition.h"
 #include "EnergyCalculator.h"
@@ -181,10 +182,7 @@ void DividePartitionForTest::DoDivide(vector<int>& partition, int index, int spi
 {
 	if (index < 0)
 	{
-		vector<i64> toadd = division;
-		sort(toadd.begin(), toadd.end());
-		reverse(toadd.begin(), toadd.end());
-		res.push_back(toadd);
+		res.push_back(division);
 		return;
 	}
 
@@ -200,8 +198,12 @@ void DividePartitionForTest::DoDivide(vector<int>& partition, int index, int spi
 	}
 
 	i64 n = (i64)1<<(index + 1 + offset);
+	assert((division[spin] & n) == 0);
 	
-	DoDivide(partition, index, spin + 1, offset, division);
+	//if ((division[spin] & n) != 0)
+	//{
+	//	cout << "error! DoDivide()! " << endl;
+	//}
 
 	if (spin == 0 || division[spin - 1] >= (division[spin] | n))
 	{
@@ -211,6 +213,15 @@ void DividePartitionForTest::DoDivide(vector<int>& partition, int index, int spi
 		division[spin] ^= n;
 		partition[index]++;
 	}
+
+	DoDivide(partition, index, spin + 1, offset, division);
+}
+
+vector<vector<i64> >& DividePartitionForTest::Divide2(vector<int>& partition, vector<i64>& division)
+{
+	res.clear();
+	DoDivide(partition, partition.size() - 1, 0, 0, division);
+	return res;
 }
 
 vector<vector<i64> >& DividePartitionForTest::Divide(vector<int> &partition, int offset)
@@ -218,8 +229,6 @@ vector<vector<i64> >& DividePartitionForTest::Divide(vector<int> &partition, int
 	vector<i64> division(s);
 	res.clear();
 	DoDivide(partition, partition.size() - 1, 0, offset, division);
-	sort(res.begin(), res.end());
-	reverse(res.begin(), res.end());
 	return res;
 }
 

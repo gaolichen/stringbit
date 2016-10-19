@@ -86,7 +86,7 @@ public:
 
 	vector<vector<i64> >& Divide(vector<int>& partiton, int offset);
 
-	vector<vector<i64> >& Result() {return res;}
+	vector<vector<i64> >& Divide2(vector<int>& partition, vector<i64>& division);
 };
 
 class ModesGenerator
