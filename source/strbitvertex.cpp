@@ -196,15 +196,6 @@ void TestOperatorVev()
 
 	VevCalculator calc(matM);
 
-	// test VevCalculator 
-	/*for (int i = 0; i < (1<<M); i++)
-	{
-		CDT res = calc.CalculateVev(i, omegaV);
-		res = Chop(res);
-		if (res != .0)
-			cout << i << ": " << res << endl;
-	}*/
-
 	for (int i = 0; i < (1<<M); i++)
 	{
 		CDT res = EnergyCalculator::OperatorVev(i, M, calc, gammaW, omegaW);
@@ -263,13 +254,13 @@ bool TestPartition(int M, int s, bool output = false)
 			return false;
 		}
 	}
-	
+
 	/*cout << "partitions from AllPartitionsBruteForce: " << endl;
 	for (int i = 0; i < res2.size(); i++)
 	{
-		cout << "partition " << i << ": " << res2[i] << endl;
+	cout << "partition " << i << ": " << res2[i] << endl;
 	}*/
-	
+
 	return true;
 	//cout << "TestPartition passed!" << endl;
 }
@@ -301,18 +292,18 @@ bool TestDividePartition(int s, int offset, vector<int>& partition, vector<vecto
 	DividePartition dp(s);
 	vector<vector<i64> > res = dp.Divide(partition, offset);
 	if (res != expect)
-        {
-                cout << "TestDividePartition failed! s = " << s << endl;
-                cout << "returned: ";
-                for (int i = 0; i < res.size(); i++) cout << res[i] << ' ';
-                cout << endl;
+	{
+		cout << "TestDividePartition failed! s = " << s << endl;
+		cout << "returned: ";
+		for (int i = 0; i < res.size(); i++) cout << res[i] << ' ';
+		cout << endl;
 
-                cout << "expected: ";
-                for (int i = 0; i < expect.size(); i++) cout << expect[i] << ' ';
-                cout << endl;
-                return false;
-        }
-	
+		cout << "expected: ";
+		for (int i = 0; i < expect.size(); i++) cout << expect[i] << ' ';
+		cout << endl;
+		return false;
+	}
+
 	return true;
 }
 
@@ -330,7 +321,7 @@ void TestDividePartition()
 
 	expect[0][0] = Digit2Num(expect00, 3);
 	expect[0][1] = Digit2Num(expect01, 2);
-	
+
 	if (!TestDividePartition(s, offset, partition, expect))
 	{
 		return;
@@ -344,46 +335,45 @@ void TestDividePartition()
 	int expect42[] = {1, 2};
 
 	int expect30[] = {1, 3};
-        int expect31[] = {3, 1};
-        int expect32[] = {2};
+	int expect31[] = {3, 1};
+	int expect32[] = {2};
 
-        int expect20[] = {2, 3};
-        int expect21[] = {1,3};
-        int expect22[] = {1};
+	int expect20[] = {2, 3};
+	int expect21[] = {1,3};
+	int expect22[] = {1};
 
-        int expect00b[] = {1, 2, 3};
-        int expect01b[] = {1, 3};
-        int expect02[] = {};
+	int expect00b[] = {1, 2, 3};
+	int expect01b[] = {1, 3};
 
-        int expect10[] = {1, 2, 3};
-        int expect11[] = {3};
-        int expect12[] = {1};
+	int expect10[] = {1, 2, 3};
+	int expect11[] = {3};
+	int expect12[] = {1};
 
 	expect[0][0] = Digit2Num(expect00b, LENGTH(expect00));
 	expect[0][1] = Digit2Num(expect01b, LENGTH(expect01b));
 	expect[0][2] = 0;
-	
+
 	expect[1][0] = Digit2Num(expect10, LENGTH(expect10));
-        expect[1][1] = Digit2Num(expect11, LENGTH(expect11));
-        expect[1][2] = Digit2Num(expect12, LENGTH(expect12));
+	expect[1][1] = Digit2Num(expect11, LENGTH(expect11));
+	expect[1][2] = Digit2Num(expect12, LENGTH(expect12));
 
 	expect[2][0] = Digit2Num(expect20, LENGTH(expect20));
-        expect[2][1] = Digit2Num(expect21, LENGTH(expect21));
-        expect[2][2] = Digit2Num(expect22, LENGTH(expect22));
+	expect[2][1] = Digit2Num(expect21, LENGTH(expect21));
+	expect[2][2] = Digit2Num(expect22, LENGTH(expect22));
 
 	expect[3][0] = Digit2Num(expect30, LENGTH(expect30));
-        expect[3][1] = Digit2Num(expect31, LENGTH(expect31));
-        expect[3][2] = Digit2Num(expect32, LENGTH(expect32));
+	expect[3][1] = Digit2Num(expect31, LENGTH(expect31));
+	expect[3][2] = Digit2Num(expect32, LENGTH(expect32));
 
 	expect[4][0] = Digit2Num(expect40, LENGTH(expect40));
-        expect[4][1] = Digit2Num(expect41, LENGTH(expect41));
-        expect[4][2] = Digit2Num(expect42, LENGTH(expect42));
+	expect[4][1] = Digit2Num(expect41, LENGTH(expect41));
+	expect[4][2] = Digit2Num(expect42, LENGTH(expect42));
 
 	if (!TestDividePartition(s, offset, partition, expect))
 	{
 		return;
 	}
-	
+
 	cout << "TestDividePartition passed!" << endl;
 }
 

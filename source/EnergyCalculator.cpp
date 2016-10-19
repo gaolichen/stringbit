@@ -52,41 +52,41 @@ CDT VevCalculator::CalculateVev(int ops, MatrixSB &omega)
 
 DT EnergyCalculator::Operators2Energy(vector<int> &ops, int M, int s)
 {
-        DT E0 = -4 * s / tan(PI/2/M);
-        DT ret = .0;
-        for (int i = 0; i < ops.size(); i++)
-        {
-                ret += 8 * ops[i] * sin((i+1) * PI / M);
-        }
+	DT E0 = -4 * s / tan(PI/2/M);
+	DT ret = .0;
+	for (int i = 0; i < ops.size(); i++)
+	{
+		ret += 8 * ops[i] * sin((i+1) * PI / M);
+	}
 
-        return ret + E0;
+	return ret + E0;
 }
 
 
-	vector<StateInfo> EnergyCalculator::AllStates(int M)
-        {
-                vector<StateInfo> ret;
-                DT e0 = -4 / tan(PI/(2 * M));
+vector<StateInfo> EnergyCalculator::AllStates(int M)
+{
+	vector<StateInfo> ret;
+	DT e0 = -4 / tan(PI/(2 * M));
 
-                for (int i = 0; i < (1<<M); i+=2)
-                {
-                        DT deltE = 0.0;
-                        int modes = 0;
-                        for (int j = 1; (1<<j) <= i; j++)
-                        {
-                                if ((i & (1<<j)) == 0) continue;
-                                deltE += 8 * sin(j * PI/M);
-                                modes += j;
-                        }
+	for (int i = 0; i < (1<<M); i+=2)
+	{
+		DT deltE = 0.0;
+		int modes = 0;
+		for (int j = 1; (1<<j) <= i; j++)
+		{
+			if ((i & (1<<j)) == 0) continue;
+			deltE += 8 * sin(j * PI/M);
+			modes += j;
+		}
 
-                        if ((M % 2 == 1 && modes % M == 0) || (M % 2 ==0 && modes % M == M / 2))
-                        {
-                                ret.push_back(StateInfo(i, e0 + deltE));
-                        }
-                }
+		if ((M % 2 == 1 && modes % M == 0) || (M % 2 ==0 && modes % M == M / 2))
+		{
+			ret.push_back(StateInfo(i, e0 + deltE));
+		}
+	}
 
-                return ret;
-        }
+	return ret;
+}
 
 CDT EnergyCalculator::OperatorVev(int ops, int M,  VevCalculator &calc, CDT &gamma, MatrixSB &omega)
 {
@@ -97,16 +97,16 @@ CDT EnergyCalculator::OperatorVev(int ops, int M,  VevCalculator &calc, CDT &gam
 CDT EnergyCalculator::OperatorVevAllZeros(int ops, int M,  VevCalculator &calc, CDT &gmW, MatrixSB &omegaW, CDT &gmV, MatrixSB &omegaV)
 {
 	CDT delta;
-        if (BitCount(ops) % 2 == 0)
-        {
+	if (BitCount(ops) % 2 == 0)
+	{
 		delta = conj(OperatorVev(ops, M, calc, gmW, omegaW)) * OperatorVev(ops, M, calc, gmV, omegaV);
-                int ops2 = ops + (1 << (M - 1)) + 1;
-                delta += conj(OperatorVev(ops2, M, calc, gmW, omegaW)) * OperatorVev(ops2, M, calc, gmV, omegaV);
-        }
-        else
-        {
+		int ops2 = ops + (1 << (M - 1)) + 1;
+		delta += conj(OperatorVev(ops2, M, calc, gmW, omegaW)) * OperatorVev(ops2, M, calc, gmV, omegaV);
+	}
+	else
+	{
 		delta = conj(OperatorVev(ops + 1, M, calc, gmW, omegaW)) * OperatorVev(ops + 1, M, calc, gmV, omegaV);
-                delta += conj(OperatorVev(ops | (1 << (M - 1)), M, calc, gmW, omegaW))
+		delta += conj(OperatorVev(ops | (1 << (M - 1)), M, calc, gmW, omegaW))
 			* OperatorVev(ops | (1 << (M - 1)), M, calc, gmV, omegaV);
 	}
 
@@ -129,13 +129,13 @@ DT EnergyCalculator::EnergyCorrection(int M, int L)
 	VevCalculator calc(matM);
 
 	watch.Start();
-	
+
 	if (s == 1)
 	{
 		vector<StateInfo> states1 = AllStates(L);
 		vector<StateInfo> states2 = AllStates(K);
 		totalStates += states1.size() * states2.size();
-	
+
 		for (int i = 0; i < states2.size(); i++)
 		{
 			for (int j = 0; j < states1.size(); j++)
@@ -163,7 +163,7 @@ DT EnergyCalculator::EnergyCorrection(int M, int L)
 				int ops = modes[i][j];
 				delta *= OperatorVevAllZeros(ops, M, calc, gmW, omegaW, gmV, omegaV);
 			}
-		
+
 			ret += delta * (generator.SymmetryFactor(modes[i]) /(E0 - allEnergies[i]));
 			//cout << "ret = " << ret << endl;
 		}

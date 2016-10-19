@@ -67,14 +67,12 @@ vector<i64>& Partitioner::AllPartitions()
 		if (((M & 1) == 1) || ((s & 1) == 0))
 		{
 			if (count % M == 0) 
-			{
-				//cout << "a " << count << " " << toadd << endl; 
+			{ 
 				modes.push_back(toadd);
 			}
 		}
 		else if (count % M == M / 2)
 		{
-			//cout << "b " << cout << " " << toadd << endl;
 			modes.push_back(toadd);
 		}
 	}
@@ -251,46 +249,3 @@ int ModesGenerator::SymmetryFactor(vector<i64>& mode)
 
 	return (int)ret;
 }
-
-//void Partitioner::distribute(i64 mode, int bit, vector<int>& curr)
-//{
-//	if (bit == 0)
-//	{
-//		// found a valid one.
-//		res.push_back(curr);
-//		return;
-//	}
-//		
-//	int n = (mode >> (bitUnit * (bit - 1))) & allOnes;
-//	vector<int> numbers = bm.GetNumbers(s, n);
-//	vector<int> checks = bm.GetChecks(s, n);
-//		
-//	for (int i = 0; i < numbers.size(); i++)
-//	{
-//		bool ok = true;
-//		for (int j = 1; j < s; j++)
-//		{
-//			if (!IsBitSet(checks[i], j)) continue;
-//			if (curr[j] < curr[j-1] + bit) { ok = false; break;}
-//		}
-//			
-//		if (!ok) continue;
-//		for (int j = 0; j < s; j++)
-//		{
-//			if (IsBitSet(i, j))
-//			{
-//				curr[j] |= (1 << bit);
-//			}
-//		}
-//			
-//		distribute(mode, bit - 1, curr);
-//			
-//		for (int j = 0; j < s; j++)
-//		{
-//			if (IsBitSet(i, j))
-//			{
-//				curr[j] ^= (1 << bit);
-//			}
-//		}
-//	}
-//}
