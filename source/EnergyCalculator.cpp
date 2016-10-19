@@ -50,11 +50,17 @@ CDT VevCalculator::CalculateVev(int ops, MatrixSB &omega)
 	return ret + ret;
 }
 
-/*
-EnergyCalculator::EnergyCalculator(int s_) : s(s_)
+DT EnergyCalculator::Operators2Energy(vector<int> &ops, int M, int s)
 {
+        DT E0 = -4 * s / tan(PI/2/M);
+        DT ret = .0;
+        for (int i = 0; i < ops.size(); i++)
+        {
+                ret += 8 * ops[i] * sin((i+1) * PI / M);
+        }
+
+        return ret + E0;
 }
-*/
 
 
 	vector<StateInfo> EnergyCalculator::AllStates(int M)
