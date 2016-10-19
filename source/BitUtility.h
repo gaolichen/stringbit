@@ -33,8 +33,8 @@ string CombinePath(string path1, string path2);
 string Bits2String(int bits, int bitNumber);
 string ToUpper(string s);
 vector<int> Num2Digit(i64 n, int maxBit);
-//i64 Digit2Num(vector<int> v);
 i64 Digit2Num(int* v, int size);
+int SymmetryFactor(vector<i64>& mode, int s);
 
 template <typename T>
 std::ostream& operator<< (std::ostream& out, const std::vector<T>& v) {

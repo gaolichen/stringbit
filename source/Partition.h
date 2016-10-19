@@ -75,6 +75,20 @@ public:
 	vector<vector<i64> >& Divide2(vector<int>& partition, vector<i64>& division);
 };
 
+class DividePartitionForTest
+{
+private:
+	int s;
+	vector<vector<i64> > res;
+	void DoDivide(vector<int>& partition, int index, int spin, int offset, vector<i64>& division);
+public:
+	DividePartitionForTest(int s_) : s(s_) {}
+
+	vector<vector<i64> >& Divide(vector<int>& partiton, int offset);
+
+	vector<vector<i64> >& Result() {return res;}
+};
+
 class ModesGenerator
 {
 private:

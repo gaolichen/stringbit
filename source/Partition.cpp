@@ -177,6 +177,52 @@ void DividePartition::DoDivide(vector<int>& partition, int index, int offset, ve
 	}
 }
 
+void DividePartitionForTest::DoDivide(vector<int>& partition, int index, int spin, int offset, vector<i64>& division)
+{
+	if (index < 0)
+	{
+		vector<i64> toadd = division;
+		sort(toadd.begin(), toadd.end());
+		reverse(toadd.begin(), toadd.end());
+		res.push_back(toadd);
+		return;
+	}
+
+	if (partition[index] == 0)
+	{
+		DoDivide(partition, index - 1, 0, offset, division);
+		return;
+	}
+
+	if (spin == s)
+	{
+		return;
+	}
+
+	i64 n = (i64)1<<(index + 1 + offset);
+	
+	DoDivide(partition, index, spin + 1, offset, division);
+
+	if (spin == 0 || division[spin - 1] >= (division[spin] | n))
+	{
+		division[spin] |= n;
+		partition[index]--;
+		DoDivide(partition, index, spin + 1, offset, division);
+		division[spin] ^= n;
+		partition[index]++;
+	}
+}
+
+vector<vector<i64> >& DividePartitionForTest::Divide(vector<int> &partition, int offset)
+{
+	vector<i64> division(s);
+	res.clear();
+	DoDivide(partition, partition.size() - 1, 0, offset, division);
+	sort(res.begin(), res.end());
+	reverse(res.begin(), res.end());
+	return res;
+}
+
 ModesGenerator::ModesGenerator(int M_, int L_, int s_) : M(M_), L(L_), s(s_)
 {
 	this->partitioner1 = new Partitioner(M - L, s);
@@ -222,30 +268,4 @@ vector<vector<i64> >& ModesGenerator::Generate()
 	}
 
 	return allModes;
-}
-
-i64 Factorial(int n)
-{
-	i64 ret = 1;
-	while (n > 0) { ret *= n; n--; }
-	return ret;
-}
-
-int ModesGenerator::SymmetryFactor(vector<i64>& mode)
-{
-	i64 ret = Factorial(s);
-	int r = 1;
-	for (int j = 1; j < mode.size(); j++)
-	{
-		if (mode[j] == mode[j-1]) r++;
-		else
-		{
-			ret /= Factorial(r);
-			r = 1;
-		}
-	}
-
-	ret /= Factorial(r);
-
-	return (int)ret;
 }

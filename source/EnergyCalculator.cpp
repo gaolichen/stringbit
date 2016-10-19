@@ -1,6 +1,7 @@
 #pragma warning(disable:4018)
 #include "EnergyCalculator.h"
 #include "Partition.h"
+#include "BitUtility.h"
 
 CDT VevCalculator::DoCalculate(int ops)
 {
@@ -164,7 +165,7 @@ DT EnergyCalculator::EnergyCorrection(int M, int L)
 				delta *= OperatorVevAllZeros(ops, M, calc, gmW, omegaW, gmV, omegaV);
 			}
 
-			ret += delta * (generator.SymmetryFactor(modes[i]) /(E0 - allEnergies[i]));
+			ret += delta * (SymmetryFactor(modes[i], s) /(E0 - allEnergies[i]));
 			//cout << "ret = " << ret << endl;
 		}
 	}

@@ -62,16 +62,31 @@ i64 Digit2Num(int* v, int size)
 	return ret;
 }
 
-/*i64 Digit2Num(vector<int> v)
+i64 Factorial(int n)
 {
-	i64 ret = 0;
-	for (int i = 0; i < v.size(); i++)
+	i64 ret = 1;
+	while (n > 0) { ret *= n; n--; }
+	return ret;
+}
+
+int SymmetryFactor(vector<i64>& mode, int s)
+{
+	i64 ret = Factorial(s);
+	int r = 1;
+	for (int j = 1; j < mode.size(); j++)
 	{
-		ret |= (1<<v[i]);
+		if (mode[j] == mode[j-1]) r++;
+		else
+		{
+			ret /= Factorial(r);
+			r = 1;
+		}
 	}
 
-	return ret;
-}*/
+	ret /= Factorial(r);
+
+	return (int)ret;
+}
 
 int InverseNumber(const vector<int>& v)
 {

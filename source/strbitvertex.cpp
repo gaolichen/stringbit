@@ -6,6 +6,7 @@
 #include <cassert>
 #include <iomanip>
 #include <vector>
+#include <cstdlib>
 #include <map>
 #include "BitUtility.h"
 #include "StringBitMatrices.h"
@@ -287,6 +288,17 @@ vector<int> ToVector(int* array, int size)
 	return vector<int>(array, array + size);
 }
 
+void OutputReturnAndExpectedDivision(vector<vector<i64> > &actual, vector<vector<i64> > &expect)
+{
+	cout << "returned: ";
+	for (int i = 0; i < actual.size(); i++) cout << actual[i] << ' ';
+	cout << endl;
+
+	cout << "expected: ";
+	for (int i = 0; i < expect.size(); i++) cout << expect[i] << ' ';
+	cout << endl;
+}
+
 bool TestDividePartition(int s, int offset, vector<int>& partition, vector<vector<i64> >& expect)
 {
 	DividePartition dp(s);
@@ -294,13 +306,7 @@ bool TestDividePartition(int s, int offset, vector<int>& partition, vector<vecto
 	if (res != expect)
 	{
 		cout << "TestDividePartition failed! s = " << s << endl;
-		cout << "returned: ";
-		for (int i = 0; i < res.size(); i++) cout << res[i] << ' ';
-		cout << endl;
-
-		cout << "expected: ";
-		for (int i = 0; i < expect.size(); i++) cout << expect[i] << ' ';
-		cout << endl;
+		OutputReturnAndExpectedDivision(res, expect);
 		return false;
 	}
 
@@ -308,6 +314,55 @@ bool TestDividePartition(int s, int offset, vector<int>& partition, vector<vecto
 }
 
 #define LENGTH(a) sizeof(a)/sizeof((a)[0])
+bool TestDividePartition2(int s, int offset, vector<int>& partition)
+{
+	DividePartitionForTest dpt(s);
+	vector<vector<i64> > &expect = dpt.Divide(partition, offset);
+
+	DividePartition dp(s);
+	vector<vector<i64> > &actual = dp.Divide(partition, offset);
+	sort(actual.begin(), actual.end());
+	reverse(actual.begin(), actual.end());
+
+	if (expect != actual)
+	{
+		cout << "TestDividePartition2 failed!" << endl;
+		OutputReturnAndExpectedDivision(actual, expect);
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+void TestDividePartition2()
+{
+	int total = 10;
+	srand(time(NULL));
+
+	for (int i = 0; i < total; i++)
+	{
+		int s = rand() % 7 + 2;
+		int offset = rand() % 6;
+		int M = rand() % 6 + 2;
+		if (s * M > 32) M = 32 / s;
+
+		vector<int> partition(M);
+		for (int j = 0; j < M; j++)
+		{
+			partition[j] = rand() % (s + 1);
+		}
+
+		if (!TestDividePartition2(s, offset, partition))
+		{
+			cout << "s=" << s << ", M=" << M << ", offset=" << offset << endl;
+			cout << "partition = " << partition << endl;
+			return;
+		}
+	}
+	
+	cout << "TestDividePartition2 passed" << endl;
+}
 
 void TestDividePartition()
 {
@@ -411,5 +466,6 @@ int main()
 	//TestBitManager();
 	//TestModesGenerator();
 	TestDividePartition();
+	TestDividePartition2();
 	return 0;
 }
