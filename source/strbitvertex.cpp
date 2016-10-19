@@ -145,13 +145,16 @@ void TestEnergyCorrection(int maxM = 17)
 	cout << "TestEnergyCorrection passed!" << endl;
 }
 
-void TestEnergyCorrection2(int s)
+void TestEnergyCorrection2(int s, int maxM)
 {
 	EnergyCalculator calc(s);
-	for (int M = 3; M <= 7; M++)
+	for (int M = 2; M <= maxM; M++)
 	{
 		if ((s * (M - 1)) % 2 == 1) continue;
-		cout << "M=" << M << " s=" << s << " E=" << calc.EnergyCorrection(M) << endl;
+		Stopwatch watch;
+		watch.Start();
+		cout << "M=" << M << " s=" << s << " E=" << calc.EnergyCorrection(M);
+		cout << " time=" << watch.Stop() << " seconds" << endl;
 	}
 }
 
@@ -517,8 +520,8 @@ int main()
 	//TestAllStates();
 	//TestVevCalculator();
 	TestEnergyCorrection();
-	TestEnergyCorrection2(2);
-	TestEnergyCorrection2(3);
+	TestEnergyCorrection2(2, 12);
+	TestEnergyCorrection2(3, 9);
 	//TestMatrices(4,1);
 	//TestOperatorVev();
 	TestPartition();
