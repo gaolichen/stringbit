@@ -2387,7 +2387,7 @@ For
  We therefore have 
 \begin_inset Formula 
 \begin{eqnarray*}
-\Delta E_{0} & = & \frac{1}{N^{2}}\frac{KLM\left|\det C\right|}{E_{0}-E_{0}^{\left(1\right)}-E_{1}^{\left(2\right)}}\left(\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V}+\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V}\right)\\
+\Delta E_{0} & = & \frac{1}{N^{2}}\frac{KLM\left|\det C\right|}{E_{0}-E_{0}^{\left(1\right)}-E_{1}^{\left(2\right)}}\left(\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V}+\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{V}\right)\\
  & = & \frac{1}{N^{2}}\frac{1\cdot2\cdot3}{-4\sqrt{3}-4}\frac{2+\sqrt{3}}{4}\left[\left(-\frac{2+2i}{\sqrt{3}}\right)\left(-\frac{2-2i}{\sqrt{3}}\right)+8\left(1-\frac{2}{\sqrt{3}}\right)4\left(1-\frac{1}{\sqrt{3}}\right)\right]\\
  & = & -\frac{3}{2}\left(3\sqrt{3}-5\right)\frac{1}{N^{2}}.
 \end{eqnarray*}
