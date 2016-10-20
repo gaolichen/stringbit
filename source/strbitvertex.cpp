@@ -128,15 +128,15 @@ void TestEnergyCorrection(int maxM = 17)
 	DT expected[8] = {-0.2942, 1.5161, 8.8474, 24.8336, 52.487, 94.7313, 154.4182, 234.55};
 	for (int i = 3; i <= maxM; i += 2)
 	{
-		watch.Start();
-		DT res = calc.EnergyCorrection(i);
-		cout << "M= " << i << ", totalStates = " << calc.TotalStates() << ", calculateTime=" << calc.CalculateTime();
-		cout << ", totalTime=" << watch.Stop() << ", E=" << res << endl;
+		//watch.Start();
+		DT res = calc.EnergyCorrection(i, true);
+		//cout << "M= " << i << ", totalStates = " << calc.TotalStates() << ", calculateTime=" << calc.CalculateTime();
+		//cout << ", totalTime=" << watch.Stop() << ", E=" << res << endl;
 
 		// TODO: the error looks a little too big. May require investigate later.
 		if (i <= 17 && abs(res - expected[(i-3)/2])/abs(res) > 1e-2)
 		{
-			cout << "But expected energy correction is " << expected[(i-3)/2] << endl;
+			cout << "Returned : " << res << ". But expected energy correction is " << expected[(i-3)/2] << endl;
 			cout << "!!!!!!!!!!!TestEnergyCorrection failed!!!!!!!!" << endl;
 			return;
 		}

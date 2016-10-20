@@ -1,7 +1,9 @@
 #pragma warning(disable:4018)
+#include<fstream>
 #include "EnergyCalculator.h"
 #include "Partition.h"
 #include "BitUtility.h"
+using namespace std;
 
 CDT VevCalculator::DoCalculate(int ops)
 {
@@ -178,13 +180,30 @@ DT EnergyCalculator::EnergyCorrection(int M, int L)
 	return ret.real() * K * L * M * pow(detC, s);
 }
 
-DT EnergyCalculator::EnergyCorrection(int M)
+DT EnergyCalculator::EnergyCorrection(int M, bool outputCorrections)
 {
 	totalStates = 0;
 	calculateTime = 0.0;
-	DT ret = 0;
+	DT ret = 0.0;
+	vector<DT> delta(M - 2);
 	for (int L = 1; L < M - 1; L++)
-		ret += EnergyCorrection(M, L);
+	{
+		delta[L - 1] = EnergyCorrection(M, L);
+		ret += delta[L - 1];
+	}
+
+	if (outputCorrections)
+	{
+		string file = "s="+ToString(s) + "-M=" + ToString(M) + ".txt";
+		ofstream os(file.c_str());
+		os << "M\tL\tdeltaE" << endl;
+		for (int i = 0; i < delta.size(); i++)
+		{
+			os << M << "\t" << i + 1 << "\t" << delta[i] << endl;
+		}
+
+		os.close();
+	}
 
 	return ret;
 }

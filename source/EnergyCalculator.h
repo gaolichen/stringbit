@@ -66,7 +66,7 @@ public:
 
 	static DT Operators2Energy(vector<int>& ops, int M, int s);
 
-	DT EnergyCorrection(int M);
+	DT EnergyCorrection(int M, bool outputCorrections = false);
 
 	int TotalStates()
 	{
