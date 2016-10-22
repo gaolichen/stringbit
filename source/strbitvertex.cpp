@@ -112,15 +112,6 @@ void TestAllStates()
 	}
 }
 
-void TestVevCalculator()
-{
-	StringBitMatrices sbm;
-	MatrixSB matM = sbm.MatrixM(3, 1);
-	VevCalculator calc(matM);
-	CDT res = calc.CalculateVev(3);
-	cout << res << endl;
-}
-
 void TestEnergyCorrection(int maxM = 17)
 {
 	EnergyCalculator calc;
@@ -207,11 +198,11 @@ void TestOperatorVev()
 	gammaV = Chop(gammaV);
 	gammaW = Chop(gammaW);
 
-	VevCalculator calc(matM);
+	VevCalculator calc(matM, omegaV, omegaW, gammaV, gammaW);
 
 	for (int i = 0; i < (1<<M); i++)
 	{
-		CDT res = EnergyCalculator::OperatorVev(i, M, calc, gammaW, omegaW);
+		CDT res = calc.VevW(i);
 		res = Chop(res);
 		if (res != .0)
 			cout << i << ": " << res << endl;

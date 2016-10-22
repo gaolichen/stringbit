@@ -24,8 +24,8 @@ CDT VevCalculator::DoCalculate(int ops)
 	{
 		if (((1 << i) & ops) == 0) continue;
 		if (sign % 2 == 0)
-			res += matM(lowestBit, i) * DoCalculate(ops ^ (1 << i));
-		else res -= matM(lowestBit, i) * DoCalculate(ops ^ (1 << i));
+			res += (*matM)(lowestBit, i) * DoCalculate(ops ^ (1 << i));
+		else res -= (*matM)(lowestBit, i) * DoCalculate(ops ^ (1 << i));
 		sign++;
 	}
 
@@ -33,7 +33,7 @@ CDT VevCalculator::DoCalculate(int ops)
 	return res;
 }
 
-CDT VevCalculator::CalculateVev(int ops, MatrixSB &omega)
+CDT VevCalculator::CalculateVev(int ops, MatrixSB& omega)
 {
 	CDT ret = 0.0;
 	for (int i = 0; i < M; i++)
@@ -51,6 +51,40 @@ CDT VevCalculator::CalculateVev(int ops, MatrixSB &omega)
 	}
 
 	return ret + ret;
+}
+
+CDT VevCalculator::VevV(int ops)
+{
+	return CalculateVev(ops) * gammaV + CalculateVev(ops, *omegaV);
+}
+
+CDT VevCalculator::VevW(int ops)
+{
+        return CalculateVev(ops) * gammaW + CalculateVev(ops, *omegaW);
+}
+
+CDT VevCalculator::VevAll(int ops)
+{
+	map<int, CDT>::iterator it = cacheAll.find(ops);
+	if (it != cacheAll.end()) return it->second;
+
+	CDT delta;
+        if (BitCount(ops) % 2 == 0)
+        {
+                delta = conj(VevW(ops)) * VevV(ops);
+                int ops2 = ops + (1 << (M - 1)) + 1;
+                delta += conj(VevW(ops2)) * VevV(ops2);
+        }
+        else
+        {
+                delta = conj(VevW(ops + 1)) * VevV(ops + 1);
+                delta += conj(VevW(ops | (1 << (M - 1)))) * VevV(ops | (1 << (M - 1)));
+        }
+
+	// the result of each VevW or VevV need to multiple a 2/M, hence here we need 4/M^2.
+	delta *= 4.0/(M * M);
+	cacheAll[ops] = delta; 
+       return delta;
 }
 
 DT EnergyCalculator::Operators2Energy(vector<int> &ops, int M, int s)
@@ -90,7 +124,7 @@ vector<StateInfo> EnergyCalculator::AllStates(int M)
 
 	return ret;
 }
-
+/*
 CDT EnergyCalculator::OperatorVev(int ops, int M,  VevCalculator &calc, CDT &gamma, MatrixSB &omega)
 {
 	return (calc.CalculateVev(ops) * gamma + calc.CalculateVev(ops, omega)) * (2.0/M);
@@ -105,6 +139,7 @@ CDT EnergyCalculator::OperatorVevAllZeros(int ops, int M,  VevCalculator &calc, 
 		delta = conj(OperatorVev(ops, M, calc, gmW, omegaW)) * OperatorVev(ops, M, calc, gmV, omegaV);
 		int ops2 = ops + (1 << (M - 1)) + 1;
 		delta += conj(OperatorVev(ops2, M, calc, gmW, omegaW)) * OperatorVev(ops2, M, calc, gmV, omegaV);
+		delta += conj(calc.VevW(ops2)) * calc.VevV(ops2);
 	}
 	else
 	{
@@ -114,7 +149,7 @@ CDT EnergyCalculator::OperatorVevAllZeros(int ops, int M,  VevCalculator &calc, 
 	}
 
 	return delta;
-}
+}*/
 
 DT EnergyCalculator::EnergyCorrection(int M, int L)
 {
@@ -129,7 +164,7 @@ DT EnergyCalculator::EnergyCorrection(int M, int L)
 	MatrixSB omegaW = sbm.OmegaW(M, L);
 	CDT gmV = sbm.GammaPV(M, L);
 	CDT gmW = sbm.GammaPW(M, L);
-	VevCalculator calc(matM);
+	VevCalculator calc(matM, omegaV, omegaW, gmV, gmW);
 
 	watch.Start();
 
@@ -144,7 +179,8 @@ DT EnergyCalculator::EnergyCorrection(int M, int L)
 			for (int j = 0; j < states1.size(); j++)
 			{
 				int ops = (states2[i].Ops << (L - 1)) | states1[j].Ops;
-				CDT delta = OperatorVevAllZeros(ops, M, calc, gmW, omegaW, gmV, omegaV);
+				//CDT delta = OperatorVevAllZeros(ops, M, calc, gmW, omegaW, gmV, omegaV);
+				CDT delta = calc.VevAll(ops);
 				delta = Chop(delta);
 				// delta is not necessary real!!!!
 				// assert(delta.imag() == 0);
@@ -164,7 +200,8 @@ DT EnergyCalculator::EnergyCorrection(int M, int L)
 			for (int j = 0; j < modes[i].size(); j++)
 			{
 				int ops = modes[i][j];
-				delta *= OperatorVevAllZeros(ops, M, calc, gmW, omegaW, gmV, omegaV);
+				//delta *= OperatorVevAllZeros(ops, M, calc, gmW, omegaW, gmV, omegaV);
+				delta *= calc.VevAll(ops);
 			}
 
 			ret += delta * (SymmetryFactor(modes[i], s) /(E0 - allEnergies[i]));

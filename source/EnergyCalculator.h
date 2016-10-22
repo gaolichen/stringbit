@@ -14,15 +14,24 @@ using namespace std;
 class VevCalculator
 {
 private:
-	MatrixSB matM;
+	MatrixSB* matM;
+	MatrixSB* omegaV;
+	MatrixSB* omegaW;
+	CDT gammaV;
+	CDT gammaW;
 	int M;
 	map<int, CDT> cache;
+	map<int, CDT> cacheAll;
 	CDT DoCalculate(int ops);
-
 public:
-	VevCalculator(MatrixSB &mat) : matM(mat)
+	VevCalculator(MatrixSB &matM_, MatrixSB &omegaV_, MatrixSB &omegaW_, CDT gammaV_, CDT gammaW_)
 	{
-		M = matM.innerSize();
+		matM = &matM_;
+		omegaV = &omegaV_;
+		omegaW = &omegaW_;
+		gammaV = gammaV_;
+		gammaW = gammaW_;
+		M = matM_.innerSize();
 	}
 
 	CDT CalculateVev(int ops)
@@ -30,6 +39,10 @@ public:
 		if (BitCount(ops) % 2 == 1) return 0.0;
 		return DoCalculate(ops);
 	}
+
+	CDT VevV(int ops);
+	CDT VevW(int ops);
+	CDT VevAll(int ops);
 
 	CDT CalculateVev(int ops, MatrixSB &omega);
 };
@@ -59,9 +72,9 @@ public:
 
 	EnergyCalculator(int s_) : s(s_) {}
 
-	static CDT OperatorVev(int ops, int M, VevCalculator &calc, CDT &gamma, MatrixSB &omega);
+	//static CDT OperatorVev(int ops, int M, VevCalculator &calc, CDT &gamma, MatrixSB &omega);
 
-	static CDT OperatorVevAllZeros(int ops, int M, VevCalculator &calc, CDT &gammaW, MatrixSB &omegaW, CDT &gammaV, MatrixSB &omegaV);
+	//static CDT OperatorVevAllZeros(int ops, int M, VevCalculator &calc, CDT &gammaW, MatrixSB &omegaW, CDT &gammaV, MatrixSB &omegaV);
 
 	static vector<StateInfo> AllStates(int M);
 
