@@ -129,7 +129,7 @@ void TestEnergyCorrection(int maxM = 17)
 	for (int i = 3; i <= maxM; i += 2)
 	{
 		//watch.Start();
-		DT res = calc.EnergyCorrection(i, true);
+		DT res = calc.EnergyCorrection(i);
 		//cout << "M= " << i << ", totalStates = " << calc.TotalStates() << ", calculateTime=" << calc.CalculateTime();
 		//cout << ", totalTime=" << watch.Stop() << ", E=" << res << endl;
 
@@ -145,17 +145,26 @@ void TestEnergyCorrection(int maxM = 17)
 	cout << "TestEnergyCorrection passed!" << endl;
 }
 
-void TestEnergyCorrection2(int s, int maxM)
+void RunEnergyCorrection(int s, int minM, int maxM)
 {
 	EnergyCalculator calc(s);
-	for (int M = 2; M <= maxM; M++)
+	for (int M = minM; M <= maxM; M++)
 	{
 		if ((s * (M - 1)) % 2 == 1) continue;
 		Stopwatch watch;
 		watch.Start();
-		cout << "M=" << M << " s=" << s << " E=" << calc.EnergyCorrection(M);
+		DT res = calc.EnergyCorrection(M, true);
+		cout << "M=" << M << " s=" << s << " E=" << res;
 		cout << " time=" << watch.Stop() << " seconds" << endl;
 	}
+}
+
+void RunEnergyCorrection()
+{
+	int s, minM, maxM;
+	cout << "input the values of s, minM, maxM: " << endl;
+	cin >> s >> minM >> maxM;
+	RunEnergyCorrection(s, minM, maxM);
 }
 
 void TestMatrices(int M, int L)
@@ -520,8 +529,7 @@ int main()
 	//TestAllStates();
 	//TestVevCalculator();
 	TestEnergyCorrection();
-	TestEnergyCorrection2(2, 12);
-	TestEnergyCorrection2(3, 9);
+	//RunEnergyCorrection();
 	//TestMatrices(4,1);
 	//TestOperatorVev();
 	TestPartition();
