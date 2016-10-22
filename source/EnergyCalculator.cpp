@@ -175,6 +175,7 @@ DT EnergyCalculator::EnergyCorrection(int M, int L)
 	ret = Chop(ret);
 	assert(ret.imag() == 0);
 	if (ret.imag() != 0) cout << "not real energy: " << ret << endl;
+	normalizedE.push_back(ret.real());
 	calculateTime += watch.Stop();
 
 	return ret.real() * K * L * M * pow(detC, s);
@@ -185,6 +186,7 @@ DT EnergyCalculator::EnergyCorrection(int M, bool outputCorrections)
 	totalStates = 0;
 	calculateTime = 0.0;
 	DT ret = 0.0;
+	normalizedE.clear();
 	vector<DT> delta(M - 2);
 	for (int L = 1; L < M - 1; L++)
 	{
@@ -200,6 +202,13 @@ DT EnergyCalculator::EnergyCorrection(int M, bool outputCorrections)
 		for (int i = 0; i < delta.size(); i++)
 		{
 			os << M << "\t" << i + 1 << "\t" << delta[i] << endl;
+		}
+
+		os << "=============================" << endl;
+		os << "M\tL\tdeltaE" << endl;
+		for (int i = 0; i < normalizedE.size(); i++)
+		{
+			os << M << "\t" << i + 1 << "\t" << normalizedE[i] << endl;
 		}
 
 		os.close();

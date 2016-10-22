@@ -52,6 +52,7 @@ private:
 	int totalStates;
 	double calculateTime;
 	Stopwatch watch;
+	vector<DT> normalizedE;
 	DT EnergyCorrection(int M, int L);
 public:
 	EnergyCalculator() : s(1) {}
