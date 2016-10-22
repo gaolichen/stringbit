@@ -3643,6 +3643,36 @@ which implies
 \end_inset
 
 
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{mn}\left[\tr\bar{\phi}_{aa_{1}\cdots a_{k}}\phi_{a_{1}\cdots a_{k}},\tr\bar{\phi}_{b_{1}\cdots b_{m}}\bar{\phi}_{c_{1}\cdots c_{n}}\phi_{c_{1}\cdots c_{n}}\phi_{b_{1}\cdots b_{m}}\right] & = & \sum_{mn}\tr\bar{\phi}_{aa_{1}\cdots a_{k}}\phi_{a_{1}\cdots a_{k}}\tr\bar{\phi}_{b_{1}\cdots b_{m}}\bar{\phi}_{c_{1}\cdots c_{n}}\phi_{c_{1}\cdots c_{n}}\phi_{b_{1}\cdots b_{m}}-\sum_{mn}\tr\bar{\phi}_{b_{1}\cdots b_{m}}\bar{\phi}_{c_{1}\cdots c_{n}}\phi_{c_{1}\cdots c_{n}}\phi_{b_{1}\cdots b_{m}}\tr\bar{\phi}_{aa_{1}\cdots a_{k}}\phi_{a_{1}\cdots a_{k}}\\
+ & = & \sum_{n}\tr\bar{\phi}_{aa_{1}\cdots a_{k}}\bar{\phi}_{c_{1}\cdots c_{n}}\phi_{c_{1}\cdots c_{n}}\phi_{a_{1}\cdots a_{k}}+\sum_{m}\left(-\right)^{m}\tr\bar{\phi}_{b_{1}\cdots b_{m}}\bar{\phi}_{aa_{1}\cdots a_{k}}\phi_{a_{1}\cdots a_{k}}\phi_{b_{1}\cdots b_{m}}\\
+ &  & -\sum_{n}\tr\bar{\phi}_{aa_{1}\cdots a_{k}}\bar{\phi}_{c_{1}\cdots c_{n}}\phi_{c_{1}\cdots c_{n}}\phi_{a_{1}\cdots a_{k}}-\sum_{m}\left(-\right)^{m}\tr\bar{\phi}_{b_{1}\cdots b_{m}}\bar{\phi}_{aa_{1}\cdots a_{k}}\phi_{a_{1}\cdots a_{k}}\phi_{b_{1}\cdots b_{m}}\\
+ & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{mn}\left[\tr\bar{\phi}_{a_{1}\cdots a_{k}}\phi_{aa_{1}\cdots a_{k}},\tr\bar{\phi}_{b_{1}\cdots b_{m}}\bar{\phi}_{c_{1}\cdots c_{n}}\phi_{c_{1}\cdots c_{n}}\phi_{b_{1}\cdots b_{m}}\right] & = & \sum_{mn}\tr\bar{\phi}_{a_{1}\cdots a_{k}}\phi_{aa_{1}\cdots a_{k}}\tr\bar{\phi}_{b_{1}\cdots b_{m}}\bar{\phi}_{c_{1}\cdots c_{n}}\phi_{c_{1}\cdots c_{n}}\phi_{b_{1}\cdots b_{m}}-\sum_{mn}\tr\bar{\phi}_{b_{1}\cdots b_{m}}\bar{\phi}_{c_{1}\cdots c_{n}}\phi_{c_{1}\cdots c_{n}}\phi_{b_{1}\cdots b_{m}}\tr\bar{\phi}_{a_{1}\cdots a_{k}}\phi_{aa_{1}\cdots a_{k}}\\
+ & = & \sum_{n}\tr\bar{\phi}_{a_{1}\cdots a_{k}}\bar{\phi}_{c_{1}\cdots c_{n}}\phi_{c_{1}\cdots c_{n}}\phi_{aa_{1}\cdots a_{k}}+\sum_{m}\left(-\right)^{m}\tr\bar{\phi}_{b_{1}\cdots b_{m}}\bar{\phi}_{a_{1}\cdots a_{k}}\phi_{aa_{1}\cdots a_{k}}\phi_{b_{1}\cdots b_{m}}\\
+ &  & -\sum_{n}\tr\bar{\phi}_{a_{1}\cdots a_{k}}\bar{\phi}_{c_{1}\cdots c_{n}}\phi_{c_{1}\cdots c_{n}}\phi_{aa_{1}\cdots a_{k}}-\sum_{m}\left(-\right)^{m}\tr\bar{\phi}_{b_{1}\cdots b_{m}}\bar{\phi}_{a_{1}\cdots a_{k}}\phi_{aa_{1}\cdots a_{k}}\phi_{b_{1}\cdots b_{m}}\\
+ & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+ which implies
+\begin_inset Formula 
+\[
+\left[Q^{a},\tr\bar{\phi}_{b_{1}\cdots b_{m}}\bar{\phi}_{c_{1}\cdots c_{n}}\phi_{c_{1}\cdots c_{n}}\phi_{b_{1}\cdots b_{m}}\right]=0
+\]
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Section
