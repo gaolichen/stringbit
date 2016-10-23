@@ -1,0 +1,13 @@
+M= 3, totalStates = 1, calculateTime=8e-06, totalTime=0.000552, E=-0.294229
+M= 5, totalStates = 6, calculateTime=2.4e-05, totalTime=0.001001, E=1.51612
+M= 7, totalStates = 22, calculateTime=0.00017, totalTime=0.002627, E=8.84788
+M= 9, totalStates = 76, calculateTime=0.001128, totalTime=0.006716, E=24.8366
+M= 11, totalStates = 264, calculateTime=0.007024, totalTime=0.017497, E=52.4987
+M= 13, totalStates = 936, calculateTime=0.042618, totalTime=0.064146, E=94.7675
+M= 15, totalStates = 3378, calculateTime=0.253065, totalTime=0.305248, E=154.512
+M= 17, totalStates = 12352, calculateTime=1.47721, totalTime=1.65775, E=234.55
+M= 19, totalStates = 45622, calculateTime=8.6391, totalTime=9.57418, E=337.654
+M= 21, totalStates = 169844, calculateTime=49.3396, totalTime=53.8149, E=466.562
+M= 23, totalStates = 636214, calculateTime=283.327, totalTime=304.393, E=623.977
+M= 25, totalStates = 2395476, calculateTime=1576.69, totalTime=1673.81, E=812.573
+
