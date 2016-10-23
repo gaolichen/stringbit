@@ -1,0 +1,425 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\newcommand{\tr}{\mathrm{Tr}\,}
+\newcommand{\ba}{\bar{a}}
+\newcommand{\bb}{\bar{b}}
+\newcommand{\normord}[1]{{:}\!\mathrel{#1}\!{:}}
+\newcommand{\ket}[1]{\left|#1\right\rangle}
+\newcommand{\bra}[1]{\left\langle #1\right|}
+\newcommand{\ketp}[1]{\left|#1\right\} }
+\newcommand{\brap}[1]{\left\{ #1\right|}
+\newcommand{\dprod}[2]{\left\langle #1|#2\right\rangle}
+\newcommand{\dprodp}[2]{\left\{ #1|#2\right\} }
+\newcommand{\mat}[1]{\mathbf{#1}}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Building 
+\begin_inset Formula $\Delta H$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+\begin_inset Formula $s=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When 
+\begin_inset Formula $s=1$
+\end_inset
+
+, the color operator is
+\begin_inset Formula 
+\[
+G_{\alpha}^{\beta}=\left(\bar{a}a+\bar{b}b-\normord{a\bar{a}+b\bar{b}}\right)_{\alpha}^{\beta}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\tr G^{2} & = & \tr\left(\bar{a}a+\bar{b}b-\normord{a\bar{a}+b\bar{b}}\right)\left(\bar{a}a+\bar{b}b-\normord{a\bar{a}+b\bar{b}}\right)\\
+ & = & \tr\left(\bar{a}a+\bar{b}b\right)\left(\bar{a}a+\bar{b}b\right)+\tr\left(\normord{a\bar{a}+b\bar{b}}\right)\left(\normord{a\bar{a}+b\bar{b}}\right)\\
+ &  & -\tr\left(\bar{a}a+\bar{b}b\right)\left(\normord{a\bar{a}+b\bar{b}}\right)-\tr\left(\normord{a\bar{a}+b\bar{b}}\right)\left(\bar{a}a+\bar{b}b\right)
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+\text{second term} & = & \tr\left(\normord{a\bar{a}+b\bar{b}}\right)\left(\normord{a\bar{a}+b\bar{b}}\right)\\
+ & = & \tr\normord{a\bar{a}}\normord{a\bar{a}}+\tr\normord{b\bar{b}}\normord{b\bar{b}}\\
+ &  & +\tr\normord{a\bar{a}}\normord{b\bar{b}}+\tr\normord{b\bar{b}}\normord{a\bar{a}}\\
+ & = & \tr\bar{a}\normord{a\bar{a}}a+N\tr\bar{a}a+\tr\bar{b}\normord{b\bar{b}}b+N\tr\bar{b}b\\
+ &  & +\tr\bar{a}\normord{b\bar{b}}a+\tr\bar{b}\normord{a\bar{a}}b\\
+ & = & \tr\bar{a}a\bar{a}a-\tr\bar{b}b\bar{b}b+2N\tr\bar{b}b-\tr\bar{a}b\bar{b}a+N\tr\bar{a}\bar{a}+\tr\bar{b}a\bar{a}b-N\tr\bar{b}b\\
+ & = & \tr\bar{a}a\bar{a}a-\tr\bar{b}b\bar{b}b-\tr\bar{a}b\bar{b}a+\tr\bar{b}a\bar{a}b+N\tr\bar{a}\bar{a}+N\tr\bar{b}b
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\tr\bar{b}a\bar{a}b & = & -\tr a\bar{a}b\bar{b}+N\tr a\bar{a}\\
+ & = & -\tr\bar{a}b\bar{b}a-N\tr b\bar{b}+N\tr\bar{a}a+N^{2}\\
+ & = & -\tr\bar{a}b\bar{b}a+N\tr\bar{b}b+N\tr\bar{a}a
+\end{eqnarray*}
+
+\end_inset
+
+ therefore
+\begin_inset Formula 
+\[
+\text{second term}=\tr\bar{a}a\bar{a}a-\tr\bar{b}b\bar{b}b-2\tr\bar{a}b\bar{b}a+2N\left(\tr\bar{a}\bar{a}+\tr\bar{b}b\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+\begin_inset Formula $s>1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When 
+\begin_inset Formula $s>1$
+\end_inset
+
+ The color operator is defined as 
+\begin_inset Formula 
+\begin{eqnarray*}
+G_{\alpha}^{\beta} & = & \sum_{n=0}^{s}\frac{1}{n!}\left(\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}-\normord{\phi_{a_{1}\cdots a_{n}}\bar{\phi}_{a_{1}\cdots a_{n}}}\right)_{\alpha}^{\beta}\\
+ & = & \sum_{n=0}^{s}\frac{1}{n!}\left(\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}-\left(-\right)^{n}\phi_{a_{1}\cdots a_{n}}\bar{\phi}_{a_{1}\cdots a_{n}}+\delta_{a_{1}a_{1}}\cdots\delta_{a_{n}a_{n}}\right)_{\alpha}^{\beta}\\
+ & = & \sum_{n=0}^{s}\frac{1}{n!}\left[\left(\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}-\left(-\right)^{n}\phi_{a_{1}\cdots a_{n}}\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}+N\delta_{a_{1}a_{1}}\cdots\delta_{a_{n}a_{n}}\delta_{\alpha}^{\beta}\right]\\
+ & = & \left[\sum_{n=0}^{s}\frac{1}{n!}\left(\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}-\left(-\right)^{n}\phi_{a_{1}\cdots a_{n}}\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}+2^{s}N\delta_{\alpha}^{\beta}\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\tr G^{2} & = & \sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\left(\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}-\phi_{a_{1}\cdots a_{n}}\bar{\phi}_{a_{1}\cdots a_{n}}\right)\left(\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}-\phi_{b_{1}\cdots a_{k}}\bar{\phi}_{b_{1}\cdots b_{k}}\right)+2^{s+1}N^{2}\\
+ &  & +2^{s+1}N\sum_{n=0}^{s}\tr\left(\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}-\phi_{a_{1}\cdots a_{n}}\bar{\phi}_{a_{1}\cdots a_{n}}\right)
+\end{eqnarray*}
+
+\end_inset
+
+ Or 
+\begin_inset Formula 
+\begin{eqnarray*}
+\tr G^{2} & = & \sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\left(\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}-\normord{\phi_{a_{1}\cdots a_{n}}\bar{\phi}_{a_{1}\cdots a_{n}}}\right)\left(\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}-\normord{\phi_{b_{1}\cdots a_{k}}\bar{\phi}_{b_{1}\cdots b_{k}}}\right)\\
+ & = & \sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}+\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\normord{\phi_{a_{1}\cdots a_{n}}\bar{\phi}_{a_{1}\cdots a_{n}}}\normord{\phi_{b_{1}\cdots a_{k}}\bar{\phi}_{b_{1}\cdots b_{k}}}\\
+ &  & -\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\normord{\phi_{b_{1}\cdots b_{k}}\bar{\phi}_{b_{1}\cdots b_{k}}}-\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\normord{\phi_{a_{1}\cdots a_{n}}\bar{\phi}_{a_{1}\cdots a_{n}}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+\text{second term} & = & \sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\normord{\phi_{a_{1}\cdots a_{n}}\bar{\phi}_{a_{1}\cdots a_{n}}}\normord{\phi_{b_{1}\cdots b_{k}}\bar{\phi}_{b_{1}\cdots b_{k}}}\\
+ & = & \sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\beta}^{\gamma}\left(\phi_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\left(\bar{\phi}_{b_{1}\cdots b_{k}}\right)_{\sigma}^{\alpha}\left(\phi_{b_{1}\cdots b_{k}}\right)_{\gamma}^{\sigma}\\
+ & = & \sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\beta}^{\gamma}\left(\phi_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\left[\left(\bar{\phi}_{b_{1}\cdots b_{k}}\right)_{\sigma}^{\alpha},\left(\phi_{b_{1}\cdots b_{k}}\right)_{\gamma}^{\sigma}\right]_{\pm}\\
+ &  & +\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\left(-\right)^{k^{2}}\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\beta}^{\gamma}\left(\phi_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\left(\phi_{b_{1}\cdots b_{k}}\right)_{\gamma}^{\sigma}\left(\bar{\phi}_{b_{1}\cdots b_{k}}\right)_{\sigma}^{\alpha}\\
+ & = & \sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\beta}^{\gamma}\left(\phi_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\delta_{\gamma}^{\alpha}\delta_{\sigma}^{\sigma}\delta_{b_{1}b_{1}}\cdots\delta_{b_{k}b_{k}}\\
+ &  & +\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\left(-\right)^{k^{2}+kn}\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\beta}^{\gamma}\left(\phi_{b_{1}\cdots b_{k}}\right)_{\gamma}^{\sigma}\left(\phi_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\left(\bar{\phi}_{b_{1}\cdots b_{k}}\right)_{\sigma}^{\alpha}\\
+ & = & 2^{s}N\sum_{n=0}^{s}\frac{1}{n!}\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\beta}^{\alpha}\left(\phi_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\\
+ &  & +\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\left(-\right)^{k^{2}+kn}\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\beta}^{\gamma}\left(\phi_{b_{1}\cdots b_{k}}\right)_{\gamma}^{\sigma}\left[\left(\phi_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta},\left(\bar{\phi}_{b_{1}\cdots b_{k}}\right)_{\sigma}^{\alpha}\right]\\
+ &  & +\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\left(-\right)^{k^{2}+2kn}\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\beta}^{\gamma}\left(\phi_{b_{1}\cdots b_{k}}\right)_{\gamma}^{\sigma}\left(\bar{\phi}_{b_{1}\cdots b_{k}}\right)_{\sigma}^{\alpha}\left(\phi_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\\
+ & = & 2^{s}N\sum_{n=0}^{s}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}+\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\left(-\right)^{k^{2}+kn}\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\beta}^{\gamma}\left(\phi_{b_{1}\cdots b_{k}}\right)_{\gamma}^{\sigma}\delta_{nk}\delta_{\alpha}^{\alpha}\delta_{\sigma}^{\beta}\delta_{a_{1}b_{1}}\cdots\delta_{a_{n}b_{n}}\\
+ &  & +\sum_{n=0}^{s}\sum_{k=0}^{s}\left(-\right)^{k^{2}}\frac{1}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{b_{1}\cdots b_{k}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}}\\
+ & = & 2^{s}N\sum_{n=0}^{s}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}+N\sum_{n=0}^{s}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\\
+ &  & +\sum_{n=0}^{s}\sum_{k=0}^{s}\left(-\right)^{k^{2}}\frac{1}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{b_{1}\cdots b_{k}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}}\\
+ & = & \left(2^{s}+1\right)N\sum_{n=0}^{s}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}+\sum_{n=0}^{s}\sum_{k=0}^{s}\left(-\right)^{k}\frac{1}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{b_{1}\cdots b_{k}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\text{third term} & = & -\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\normord{\phi_{b_{1}\cdots b_{k}}\bar{\phi}_{b_{1}\cdots b_{k}}}\\
+ & = & -\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\left(\phi_{a_{1}\cdots a_{n}}\right)_{\beta}^{\gamma}\left(\bar{\phi}_{b_{1}\cdots b_{k}}\right)_{\sigma}^{\alpha}\left(\phi_{b_{1}\cdots b_{k}}\right)_{\gamma}^{\sigma}\\
+ & = & -\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\left[\left(\phi_{a_{1}\cdots a_{n}}\right)_{\beta}^{\gamma},\left(\bar{\phi}_{b_{1}\cdots b_{k}}\right)_{\sigma}^{\alpha}\right]_{\pm}\left(\phi_{b_{1}\cdots b_{k}}\right)_{\gamma}^{\sigma}\\
+ &  & -\sum_{n=0}^{s}\sum_{k=0}^{s}\left(-\right)^{nk}\frac{1}{n!k!}\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\left(\bar{\phi}_{b_{1}\cdots b_{k}}\right)_{\sigma}^{\alpha}\left(\phi_{a_{1}\cdots a_{n}}\right)_{\beta}^{\gamma}\left(\phi_{b_{1}\cdots b_{k}}\right)_{\gamma}^{\sigma}\\
+ & = & -\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\left(\phi_{b_{1}\cdots b_{k}}\right)_{\gamma}^{\sigma}\delta_{nk}\delta_{\beta}^{\alpha}\delta_{\sigma}^{\gamma}\delta_{a_{1}b_{1}}\cdots\delta_{a_{n}b_{n}}\\
+ &  & -\sum_{n=0}^{s}\sum_{k=0}^{s}\left(-\right)^{2nk}\frac{1}{n!k!}\left(\bar{\phi}_{b_{1}\cdots b_{k}}\right)_{\sigma}^{\alpha}\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\left(\phi_{a_{1}\cdots a_{n}}\right)_{\beta}^{\gamma}\left(\phi_{b_{1}\cdots b_{k}}\right)_{\gamma}^{\sigma}\\
+ & = & -\sum_{n=0}^{s}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\tr\phi_{a_{1}\cdots a_{n}}-\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\bar{\phi}_{b_{1}\cdots b_{k}}\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\phi_{b_{1}\cdots b_{k}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\text{forth term} & = & -\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\normord{\phi_{a_{1}\cdots a_{n}}\bar{\phi}_{a_{1}\cdots a_{n}}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\\
+ & = & -\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\beta}^{\gamma}\left(\phi_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\left(\bar{\phi}_{b_{1}\cdots b_{k}}\right)_{\gamma}^{\sigma}\left(\phi_{b_{1}\cdots b_{k}}\right)_{\sigma}^{\alpha}\\
+ & = & -\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\beta}^{\gamma}\left[\left(\phi_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta},\left(\bar{\phi}_{b_{1}\cdots b_{k}}\right)_{\gamma}^{\sigma}\right]_{\pm}\left(\phi_{b_{1}\cdots b_{k}}\right)_{\sigma}^{\alpha}\\
+ &  & -\sum_{n=0}^{s}\sum_{k=0}^{s}\left(-\right)^{kn}\frac{1}{n!k!}\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\beta}^{\gamma}\left(\bar{\phi}_{b_{1}\cdots b_{k}}\right)_{\gamma}^{\sigma}\left(\phi_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\left(\phi_{b_{1}\cdots b_{k}}\right)_{\sigma}^{\alpha}\\
+ & = & -\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\beta}^{\gamma}\left(\phi_{b_{1}\cdots b_{k}}\right)_{\sigma}^{\alpha}\delta_{nk}\delta_{\alpha}^{\sigma}\delta_{\gamma}^{\beta}\delta_{a_{1}b_{1}}\cdots\delta_{a_{n}b_{n}}\\
+ &  & -\sum_{n=0}^{s}\sum_{k=0}^{s}\left(-\right)^{2kn}\frac{1}{n!k!}\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\beta}^{\gamma}\left(\bar{\phi}_{b_{1}\cdots b_{k}}\right)_{\gamma}^{\sigma}\left(\phi_{b_{1}\cdots b_{k}}\right)_{\sigma}^{\alpha}\left(\phi_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\\
+ & = & -\sum_{n=0}^{s}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\tr\phi_{a_{1}\cdots a_{n}}-\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}}
+\end{eqnarray*}
+
+\end_inset
+
+ Therefore
+\begin_inset Formula 
+\begin{eqnarray*}
+\tr G^{2} & = & \sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\\
+ &  & +\left(2^{s}+1\right)N\sum_{n=0}^{s}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}+\sum_{n=0}^{s}\sum_{k=0}^{s}\left(-\right)^{k}\frac{1}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{b_{1}\cdots b_{k}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}}\\
+ &  & -\sum_{n=0}^{s}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\tr\phi_{a_{1}\cdots a_{n}}-\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\bar{\phi}_{b_{1}\cdots b_{k}}\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\phi_{b_{1}\cdots b_{k}}\\
+ &  & -\sum_{n=0}^{s}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\tr\phi_{a_{1}\cdots a_{n}}-\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}}\\
+ & = & \sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\\
+ &  & +\sum_{n=0}^{s}\sum_{k=0}^{s}\left(-\right)^{k}\frac{1}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{b_{1}\cdots b_{k}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}}\\
+ &  & -\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{2}{n!k!}\tr\bar{\phi}_{b_{1}\cdots b_{k}}\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\phi_{b_{1}\cdots b_{k}}\\
+ &  & +\left(2^{s}+1\right)N\sum_{n=0}^{s}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}-\sum_{n=0}^{s}\frac{2}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\tr\phi_{a_{1}\cdots a_{n}}
+\end{eqnarray*}
+
+\end_inset
+
+ To make every term normal ordered
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}} & = & \sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{b_{1}\cdots b_{k}}N\delta_{nk}\delta_{a_{1}b_{1}}\cdots\delta_{a_{n}b_{n}}\\
+ &  & +\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{\left(-\right)^{nk}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\normord{\phi_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}}\phi_{b_{1}\cdots b_{k}}\\
+ & = & N\sum_{n=0}^{s}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\\
+ &  & +\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{\left(-\right)^{nk}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\normord{\phi_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}}\phi_{b_{1}\cdots b_{k}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{n=0}^{s}\sum_{k=0}^{s}\left(-\right)^{k}\frac{1}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{b_{1}\cdots b_{k}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}} & = & \sum_{n=0}^{s}\sum_{k=0}^{s}\left(-\right)^{k}\frac{1}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\delta_{b_{1}b_{1}}\cdots\delta_{b_{k}b_{k}}\\
+ &  & +\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\normord{\phi_{b_{1}\cdots b_{k}}\bar{\phi}_{b_{1}\cdots b_{k}}}\phi_{a_{1}\cdots a_{n}}\\
+ & = & \sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\normord{\phi_{b_{1}\cdots b_{k}}\bar{\phi}_{b_{1}\cdots b_{k}}}\phi_{a_{1}\cdots a_{n}}
+\end{eqnarray*}
+
+\end_inset
+
+ which implies
+\begin_inset Formula 
+\begin{eqnarray*}
+\tr G^{2} & = & \sum_{n=0}^{s}\sum_{k=0}^{s}\frac{\left(-\right)^{nk}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\normord{\phi_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}}\phi_{b_{1}\cdots b_{k}}\\
+ &  & +\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\normord{\phi_{b_{1}\cdots b_{k}}\bar{\phi}_{b_{1}\cdots b_{k}}}\phi_{a_{1}\cdots a_{n}}\\
+ &  & -\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{2}{n!k!}\tr\bar{\phi}_{b_{1}\cdots b_{k}}\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\phi_{b_{1}\cdots b_{k}}\\
+ &  & +\left(2^{s}+2\right)N\sum_{n=0}^{s}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}-\sum_{n=0}^{s}\frac{2}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\tr\phi_{a_{1}\cdots a_{n}}
+\end{eqnarray*}
+
+\end_inset
+
+ When 
+\begin_inset Formula $s=1$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{eqnarray*}
+\tr G^{2} & = & \tr\bar{a}\normord{a\bar{a}}a+\tr\bar{a}a\bar{b}b+\tr\bar{b}b\bar{a}a-\tr\bar{b}\normord{b\bar{b}}b\\
+ &  & +\tr\bar{a}\normord{a\bar{a}}a+\tr\bar{a}\normord{b\bar{b}}a+\tr\bar{b}\normord{a\bar{a}}b+\tr\bar{b}\normord{b\bar{b}}b\\
+ &  & -2\left(\tr\bar{a}^{2}a^{2}+\tr\bar{a}\bar{b}ba+\tr\bar{b}\bar{a}ab+\tr\bar{b}^{2}b^{2}\right)\\
+ &  & +4N\tr\left(\bar{a}a+\bar{b}b\right)-2\tr\bar{a}\tr a-2\tr\bar{b}\tr b\\
+ & = & 2\left(\tr\bar{a}\normord{a\bar{a}}a+\tr\bar{a}a\bar{b}b+\tr\bar{a}\normord{b\bar{b}}a\right)\\
+ &  & -\left(\tr\bar{a}^{2}a^{2}+\tr\bar{a}\bar{b}ba+\tr\bar{b}\bar{a}ab+\tr\bar{b}^{2}b^{2}\right)\\
+ &  & +4N\tr\left(\bar{a}a+\bar{b}b\right)-2\tr\bar{a}\tr a-2\tr\bar{b}\tr b
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+Q^{a}=\sum_{n=0}^{s-1}\frac{\left(-1\right)^{n}}{n!}\tr\left[e^{i\pi/4}\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{aa_{1}\cdots a_{n}}+e^{-i\pi/4}\bar{\phi}_{aa_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{k}\left[\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{aa_{1}\cdots a_{n}},\tr\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\right] & = & \sum_{k}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{aa_{1}\cdots a_{n}}\tr\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}-\sum_{k}\tr\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{aa_{1}\cdots a_{n}}\\
+ & = & \tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{aa_{1}\cdots a_{n}}-\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{aa_{1}\cdots a_{n}}=0
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{k}\left[\tr\bar{\phi}_{aa_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}},\tr\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\right] & = & \sum_{k}\tr\bar{\phi}_{aa_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\tr\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}-\sum_{k}\tr\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\tr\bar{\phi}_{aa_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\\
+ & = & \tr\bar{\phi}_{aa_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}-\tr\bar{\phi}_{aa_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}=0,
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+Q^{a}=\sum_{n=0}^{s-1}\frac{\left(-1\right)^{n}}{n!}\tr\left[e^{i\pi/4}\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{aa_{1}\cdots a_{n}}+e^{-i\pi/4}\bar{\phi}_{aa_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{k}\left[\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{aa_{1}\cdots a_{n}},\tr\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\right] & = & \sum_{k}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{aa_{1}\cdots a_{n}}\tr\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}-\sum_{k}\tr\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{aa_{1}\cdots a_{n}}\\
+ & = & \tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{aa_{1}\cdots a_{n}}-\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{aa_{1}\cdots a_{n}}=0
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{k}\left[\tr\bar{\phi}_{aa_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}},\tr\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\right] & = & \sum_{k}\tr\bar{\phi}_{aa_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\tr\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}-\sum_{k}\tr\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\tr\bar{\phi}_{aa_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\\
+ & = & \tr\bar{\phi}_{aa_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}-\tr\bar{\phi}_{aa_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}=0,
+\end{eqnarray*}
+
+\end_inset
+
+which implies
+\begin_inset Formula 
+\[
+\left[Q^{a},\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\right]=0.
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{n}\left[\tr\bar{\phi}_{a_{1}\cdots a_{k}}\phi_{aa_{1}\cdots a_{k}},\tr\bar{\phi}_{a_{1}\cdots a_{n}}\tr\phi_{a_{1}\cdots a_{n}}\right] & = & \sum_{n}\tr\bar{\phi}_{a_{1}\cdots a_{k}}\phi_{aa_{1}\cdots a_{k}}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\tr\phi_{a_{1}\cdots a_{n}}-\sum_{n}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\tr\phi_{a_{1}\cdots a_{n}}\tr\bar{\phi}_{a_{1}\cdots a_{k}}\phi_{aa_{1}\cdots a_{k}}\\
+ & = & \tr\bar{\phi}_{a_{1}\cdots a_{k}}\tr\phi_{aa_{1}\cdots a_{k}}-\tr\bar{\phi}_{a_{1}\cdots a_{k}}\tr\phi_{aa_{1}\cdots a_{k}}=0
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{n}\left[\tr\bar{\phi}_{aa_{1}\cdots a_{k}}\phi_{a_{1}\cdots a_{k}},\tr\bar{\phi}_{a_{1}\cdots a_{n}}\tr\phi_{a_{1}\cdots a_{n}}\right] & = & \sum_{n}\tr\bar{\phi}_{aa_{1}\cdots a_{k}}\phi_{a_{1}\cdots a_{k}}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\tr\phi_{a_{1}\cdots a_{n}}-\sum_{n}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\tr\phi_{a_{1}\cdots a_{n}}\tr\bar{\phi}_{aa_{1}\cdots a_{k}}\phi_{a_{1}\cdots a_{k}}\\
+ & = & \tr\bar{\phi}_{aa_{1}\cdots a_{k}}\tr\phi_{a_{1}\cdots a_{k}}-\tr\bar{\phi}_{aa_{1}\cdots a_{k}}\tr\phi_{a_{1}\cdots a_{k}}=0
+\end{eqnarray*}
+
+\end_inset
+
+ which implies 
+\begin_inset Formula 
+\[
+\left[Q^{a},\tr\bar{\phi}_{a_{1}\cdots a_{n}}\tr\phi_{a_{1}\cdots a_{n}}\right]=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{mn}\left[\tr\bar{\phi}_{aa_{1}\cdots a_{k}}\phi_{a_{1}\cdots a_{k}},\tr\bar{\phi}_{b_{1}\cdots b_{m}}\bar{\phi}_{c_{1}\cdots c_{n}}\phi_{c_{1}\cdots c_{n}}\phi_{b_{1}\cdots b_{m}}\right] & = & \sum_{mn}\tr\bar{\phi}_{aa_{1}\cdots a_{k}}\phi_{a_{1}\cdots a_{k}}\tr\bar{\phi}_{b_{1}\cdots b_{m}}\bar{\phi}_{c_{1}\cdots c_{n}}\phi_{c_{1}\cdots c_{n}}\phi_{b_{1}\cdots b_{m}}-\sum_{mn}\tr\bar{\phi}_{b_{1}\cdots b_{m}}\bar{\phi}_{c_{1}\cdots c_{n}}\phi_{c_{1}\cdots c_{n}}\phi_{b_{1}\cdots b_{m}}\tr\bar{\phi}_{aa_{1}\cdots a_{k}}\phi_{a_{1}\cdots a_{k}}\\
+ & = & \sum_{n}\tr\bar{\phi}_{aa_{1}\cdots a_{k}}\bar{\phi}_{c_{1}\cdots c_{n}}\phi_{c_{1}\cdots c_{n}}\phi_{a_{1}\cdots a_{k}}+\sum_{m}\left(-\right)^{m}\tr\bar{\phi}_{b_{1}\cdots b_{m}}\bar{\phi}_{aa_{1}\cdots a_{k}}\phi_{a_{1}\cdots a_{k}}\phi_{b_{1}\cdots b_{m}}\\
+ &  & -\sum_{n}\tr\bar{\phi}_{aa_{1}\cdots a_{k}}\bar{\phi}_{c_{1}\cdots c_{n}}\phi_{c_{1}\cdots c_{n}}\phi_{a_{1}\cdots a_{k}}-\sum_{m}\left(-\right)^{m}\tr\bar{\phi}_{b_{1}\cdots b_{m}}\bar{\phi}_{aa_{1}\cdots a_{k}}\phi_{a_{1}\cdots a_{k}}\phi_{b_{1}\cdots b_{m}}\\
+ & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{mn}\left[\tr\bar{\phi}_{a_{1}\cdots a_{k}}\phi_{aa_{1}\cdots a_{k}},\tr\bar{\phi}_{b_{1}\cdots b_{m}}\bar{\phi}_{c_{1}\cdots c_{n}}\phi_{c_{1}\cdots c_{n}}\phi_{b_{1}\cdots b_{m}}\right] & = & \sum_{mn}\tr\bar{\phi}_{a_{1}\cdots a_{k}}\phi_{aa_{1}\cdots a_{k}}\tr\bar{\phi}_{b_{1}\cdots b_{m}}\bar{\phi}_{c_{1}\cdots c_{n}}\phi_{c_{1}\cdots c_{n}}\phi_{b_{1}\cdots b_{m}}-\sum_{mn}\tr\bar{\phi}_{b_{1}\cdots b_{m}}\bar{\phi}_{c_{1}\cdots c_{n}}\phi_{c_{1}\cdots c_{n}}\phi_{b_{1}\cdots b_{m}}\tr\bar{\phi}_{a_{1}\cdots a_{k}}\phi_{aa_{1}\cdots a_{k}}\\
+ & = & \sum_{n}\tr\bar{\phi}_{a_{1}\cdots a_{k}}\bar{\phi}_{c_{1}\cdots c_{n}}\phi_{c_{1}\cdots c_{n}}\phi_{aa_{1}\cdots a_{k}}+\sum_{m}\left(-\right)^{m}\tr\bar{\phi}_{b_{1}\cdots b_{m}}\bar{\phi}_{a_{1}\cdots a_{k}}\phi_{aa_{1}\cdots a_{k}}\phi_{b_{1}\cdots b_{m}}\\
+ &  & -\sum_{n}\tr\bar{\phi}_{a_{1}\cdots a_{k}}\bar{\phi}_{c_{1}\cdots c_{n}}\phi_{c_{1}\cdots c_{n}}\phi_{aa_{1}\cdots a_{k}}-\sum_{m}\left(-\right)^{m}\tr\bar{\phi}_{b_{1}\cdots b_{m}}\bar{\phi}_{a_{1}\cdots a_{k}}\phi_{aa_{1}\cdots a_{k}}\phi_{b_{1}\cdots b_{m}}\\
+ & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+ which implies
+\begin_inset Formula 
+\[
+\left[Q^{a},\tr\bar{\phi}_{b_{1}\cdots b_{m}}\bar{\phi}_{c_{1}\cdots c_{n}}\phi_{c_{1}\cdots c_{n}}\phi_{b_{1}\cdots b_{m}}\right]=0
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\end_body
+\end_document
