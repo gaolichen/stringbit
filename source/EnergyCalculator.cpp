@@ -233,22 +233,26 @@ DT EnergyCalculator::EnergyCorrection(int M, bool outputCorrections)
 
 	if (outputCorrections)
 	{
-		string file = "s="+ToString(s) + "-M=" + ToString(M) + ".txt";
-		ofstream os(file.c_str());
+		string filename = "s="+ToString(s) + "-M=" + ToString(M);
+		if (abs(xi) > 1e-6) filename += "-xi=" + ToString((int)floor(xi + 1e-6));
+		ofstream os((filename + ".txt").c_str());
 		os << "M\tL\tdeltaE" << endl;
 		for (int i = 0; i < delta.size(); i++)
 		{
 			os << M << "\t" << i + 1 << "\t" << delta[i] << endl;
 		}
 
-		os << "=============================" << endl;
-		os << "M\tL\tdeltaE" << endl;
+		os.close();
+
+		ofstream os2((filename + "n.txt").c_str());
+
+		os2 << "M\tL\tdeltaE" << endl;
 		for (int i = 0; i < normalizedE.size(); i++)
 		{
-			os << M << "\t" << i + 1 << "\t" << normalizedE[i] << endl;
+			os2 << M << "\t" << i + 1 << "\t" << normalizedE[i] << endl;
 		}
 
-		os.close();
+		os2.close();
 	}
 
 	return ret;
