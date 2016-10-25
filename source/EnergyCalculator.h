@@ -62,6 +62,7 @@ class EnergyCalculator
 {
 private:
 	int s;
+	double xi;
 	int totalStates;
 	double calculateTime;
 	Stopwatch watch;
@@ -70,7 +71,7 @@ private:
 public:
 	EnergyCalculator() : s(1) {}
 
-	EnergyCalculator(int s_) : s(s_) {}
+	EnergyCalculator(int s_, double xi_ = .0) : s(s_), xi(xi_) {}
 
 	//static CDT OperatorVev(int ops, int M, VevCalculator &calc, CDT &gamma, MatrixSB &omega);
 

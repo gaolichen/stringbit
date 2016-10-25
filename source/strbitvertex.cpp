@@ -103,6 +103,16 @@ void TestMatrixA()
 	cout << "TestMatrixA passed!" << endl;
 }
 
+void TestStringBitMatrices()
+{
+	StringBitMatrices sbm;
+	int M = 7;
+	for (int i = 1; i < M; i++)
+	{
+		cout << "M=" << M << " L=" << i << " GammaPV=" << sbm.GammaPV(M, i) << " GammaPW=" << sbm.GammaPW(M, i) << endl;
+	}
+}
+
 void TestAllStates()
 {
 	vector<StateInfo> states = EnergyCalculator::AllStates(5);
@@ -136,9 +146,9 @@ void TestEnergyCorrection(int maxM = 17)
 	cout << "TestEnergyCorrection passed!" << endl;
 }
 
-void RunEnergyCorrection(int s, int minM, int maxM)
+void RunEnergyCorrection(int s, DT xi, int minM, int maxM)
 {
-	EnergyCalculator calc(s);
+	EnergyCalculator calc(s, xi);
 	for (int M = minM; M <= maxM; M++)
 	{
 		if ((s * (M - 1)) % 2 == 1) continue;
@@ -153,9 +163,10 @@ void RunEnergyCorrection(int s, int minM, int maxM)
 void RunEnergyCorrection()
 {
 	int s, minM, maxM;
-	cout << "input the values of s, minM, maxM: " << endl;
-	cin >> s >> minM >> maxM;
-	RunEnergyCorrection(s, minM, maxM);
+	DT xi;
+	cout << "input the values of s, xi, minM, maxM: " << endl;
+	cin >> s >> xi >> minM >> maxM;
+	RunEnergyCorrection(s, xi, minM, maxM);
 }
 
 void TestMatrices(int M, int L)
@@ -517,6 +528,7 @@ int main()
 {
 	TestMatrixCS();
 	TestMatrixA();
+	TestStringBitMatrices();
 	//TestAllStates();
 	//TestVevCalculator();
 	TestEnergyCorrection();

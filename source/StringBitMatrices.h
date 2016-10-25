@@ -55,6 +55,6 @@ public:
 	MatrixSB MatrixAW(int M, int L);
 	MatrixSB OmegaV(int M, int L);
 	MatrixSB OmegaW(int M, int L);
-	CDT GammaPV(int M, int L);
-	CDT GammaPW(int M, int L);
+	CDT GammaPV(int M, int L, DT xi = .0);
+	CDT GammaPW(int M, int L, DT xi = .0);
 };

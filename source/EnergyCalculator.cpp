@@ -162,8 +162,8 @@ DT EnergyCalculator::EnergyCorrection(int M, int L)
 	//cout << "detC=" << detC << endl;
 	MatrixSB omegaV = sbm.OmegaV(M, L);
 	MatrixSB omegaW = sbm.OmegaW(M, L);
-	CDT gmV = sbm.GammaPV(M, L);
-	CDT gmW = sbm.GammaPW(M, L);
+	CDT gmV = sbm.GammaPV(M, L, xi);
+	CDT gmW = sbm.GammaPW(M, L, xi);
 	VevCalculator calc(matM, omegaV, omegaW, gmV, gmW);
 
 	watch.Start();
@@ -224,8 +224,8 @@ DT EnergyCalculator::EnergyCorrection(int M, bool outputCorrections)
 	calculateTime = 0.0;
 	DT ret = 0.0;
 	normalizedE.clear();
-	vector<DT> delta(M - 2);
-	for (int L = 1; L < M - 1; L++)
+	vector<DT> delta(M - 1);
+	for (int L = 1; L <= M - 1; L++)
 	{
 		delta[L - 1] = EnergyCorrection(M, L);
 		ret += delta[L - 1];

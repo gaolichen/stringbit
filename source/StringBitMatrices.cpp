@@ -210,15 +210,15 @@ MatrixSB StringBitMatrices::OmegaW(int M, int L)
         return invc * MatrixAW(M, L).adjoint() * invc.transpose();
 }
 
-CDT StringBitMatrices::GammaPV(int M, int L)
+CDT StringBitMatrices::GammaPV(int M, int L, DT xi)
 {
         CDT tr = (MatrixS(M, L).conjugate() * MatrixC(M, L).inverse() * MatrixAV(M, L).adjoint()).trace();
-        return -1/tan(PI / (2 * M)) - 1 / tan((2 * L + 1) * PI / (2 * M)) - tr;
+        return -1/tan(PI / (2 * M)) - 1 / tan((2 * L + 1) * PI / (2 * M)) + M * xi - tr;
 }
 
-CDT StringBitMatrices::GammaPW(int M, int L)
+CDT StringBitMatrices::GammaPW(int M, int L, DT xi)
 {
         CDT tr = (MatrixS(M, L).conjugate() * MatrixC(M, L).inverse() * MatrixAW(M, L).adjoint()).trace();
-        return -4/tan(PI / (2 * M)) - tr;
+        return -4/tan(PI / (2 * M)) + 2 * M * xi - tr;
 }
 
