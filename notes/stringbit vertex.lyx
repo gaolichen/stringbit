@@ -4,6 +4,8 @@
 \begin_header
 \textclass article
 \begin_preamble
+\usepackage{cancel}
+\newcommand{\zero}[1] {\cancelto{0}{#1}}
 \newcommand{\tr}{\mathrm{Tr}\,}
 \newcommand{\ba}{\bar{a}}
 \newcommand{\bb}{\bar{b}}
@@ -77,8 +79,20 @@
 Stringbit vertex
 \end_layout
 
+\begin_layout Abstract
+This is an abstract.
+\end_layout
+
 \begin_layout Section
-Diagonalization of Hamiltonian
+Introduction
+\end_layout
+
+\begin_layout Standard
+This is introduction.
+\end_layout
+
+\begin_layout Section
+Hamiltonian
 \end_layout
 
 \begin_layout Standard
@@ -351,7 +365,16 @@ reference "eq:ham_Haction_double_trace"
 \end_layout
 
 \begin_layout Standard
-The single trance energy eigenstate can be expressed as 
+At 
+\begin_inset Formula $N=\infty$
+\end_inset
+
+, only the leading term 
+\begin_inset Formula $\bar{h}$
+\end_inset
+
+ survive.
+ The single trance energy eigenstate in this case can be expressed as 
 \begin_inset Formula 
 \begin{equation}
 T_{r}\ket{0}=\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta_{1},\cdots,\theta_{M}\right)\psi_{r}\left(\theta_{1},\dots,\theta_{M}\right)\ket{0},\label{eq:ham_trace_energystate}
@@ -442,7 +465,19 @@ reference "eq:ham_intbyparts"
 \end_inset
 
 .
- Now the energy eigenstate of trace states are equivalent to the eigenfunction
+ 
+\end_layout
+
+\begin_layout Subsection
+Diagonalizing Hamiltonian at 
+\begin_inset Formula $N=\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The energy eigenstate of trace states are equivalent to the eigenfunction
  of the equation 
 \begin_inset Formula 
 \begin{equation}
@@ -451,10 +486,6 @@ h\psi_{r}\left(\theta_{1},\dots,\theta_{M}\right)=E_{r}\psi_{r}\left(\theta_{1},
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 Let us solve the eigenvalue problem 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -715,6 +746,10 @@ nM & \quad\text{for odd }M\\
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Building conjugate wavefunction
 \end_layout
 
 \begin_layout Standard
@@ -1745,7 +1780,7 @@ A_{nm}^{\left(W\right)}=\left[1+\exp\left(\pi i\frac{n+m}{M}\right)\right]\left[
 \end_layout
 
 \begin_layout Section
-Perturbation of Energy Eigenvalue
+Energy Eigenvalue Correction
 \end_layout
 
 \begin_layout Standard
@@ -2031,13 +2066,29 @@ reference "eq:overlap_CMS"
 
  where 
 \begin_inset Formula 
-\[
-\gamma^{\prime}=\gamma-\tr\left(S^{*}C^{-1}A^{\dagger}\right),\quad\Omega=C^{-1}A^{\dagger}\left(C^{-1}\right)^{T}.
-\]
+\begin{equation}
+\gamma^{\prime}=\gamma-\tr\left(S^{*}C^{-1}A^{\dagger}\right),\quad\Omega=C^{-1}A^{\dagger}\left(C^{-1}\right)^{T}.\label{eq:pert_omega_gamma}
+\end{equation}
 
 \end_inset
 
-Note that 
+The derivation of Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:pert_hexp"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:pert_omega_gamma"
+
+\end_inset
+
+ is provided in Appendix.
+ Note that 
 \begin_inset Formula $\Omega$
 \end_inset
 
@@ -2885,508 +2936,28 @@ reference "eq:energy_pert_DeltaE"
 
 \end_layout
 
-\begin_layout Subsection
-Example of 
-\begin_inset Formula $M=5$
-\end_inset
-
- 
+\begin_layout Section
+Numerical Results
 \end_layout
 
 \begin_layout Standard
-For 
-\begin_inset Formula $M=5$
-\end_inset
+This section provides numerical results.
+\end_layout
 
-, 
-\begin_inset Formula $L$
-\end_inset
-
- can be 
-\begin_inset Formula $1$
-\end_inset
-
-, 
-\begin_inset Formula $2$
-\end_inset
-
-, 
-\begin_inset Formula $3$
-\end_inset
-
-.
- 
+\begin_layout Section
+Conclusion
 \end_layout
 
 \begin_layout Standard
-\align center
-\begin_inset Float table
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="5">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $M$
-\end_inset
-
-
+Conclusion
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\psi$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\bar{\psi}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Energy
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Grading of 
-\begin_inset Formula $\psi$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\psi_{0}^{\left(3\right)}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\bar{\psi}_{0}^{\left(3\right)}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $-4\sqrt{3}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-even
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\psi_{2}^{\left(3\right)}=F_{1}^{\left(3\right)\dagger}F_{2}^{\left(3\right)\dagger}\psi_{0}^{3}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\tilde{F}_{2}^{\left(3\right)}\tilde{F}_{1}^{\left(3\right)}\psi_{0}^{3}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $4\sqrt{3}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-even
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-4
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\psi_{1}^{\left(4\right)}=F_{2}^{\left(4\right)\dagger}\psi_{0}^{\left(4\right)}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\tilde{F}_{2}^{\left(4\right)}\bar{\psi}_{0}^{\left(4\right)}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $-4\left(\sqrt{2}-1\right)$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-odd
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-4
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\psi_{3}^{\left(4\right)}=F_{1}^{\left(4\right)\dagger}F_{2}^{\left(4\right)\dagger}F_{3}^{\left(4\right)\dagger}\psi_{0}^{\left(4\right)}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\tilde{F}_{3}^{\left(4\right)}\tilde{F}_{2}^{\left(4\right)}\tilde{F}_{1}^{\left(4\right)}\bar{\psi}_{0}^{\left(4\right)}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $4\left(\sqrt{2}+1\right)$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-odd
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\begin_inset Caption
-
-\begin_layout Plain Layout
-3-bit and 4-bit energy eigenstates which do not contain zero modes
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
+\begin_layout Section
+Acknoledgements
 \end_layout
 
 \begin_layout Standard
-When 
-\begin_inset Formula $L=1$
-\end_inset
-
-, 
-\begin_inset Formula $K=4$
-\end_inset
-
-,
-\begin_inset Formula 
-\[
-f_{1}=F_{1}^{\left(4\right)},\quad f_{2}=F_{2}^{\left(4\right)},\quad F_{3}=F_{3}^{\left(4\right)}
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-M=\begin{pmatrix}0\end{pmatrix}\oplus\begin{pmatrix}0 & 0.0122769+0.0122769i & 0.0327291 & -0.215142\\
--0.0122769-0.0122769i & 0 & 0.0122769-0.0122769i & -0.137765+0.137765i\\
--0.0327291 & -0.0122769+0.0122769i & 0 & 0.215142i\\
-0.215142 & 0.137765-0.137765i & -0.215142i & 0
-\end{pmatrix}
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\left|\det C\right|=0.883232
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\Omega^{\left(V\right)}=\begin{pmatrix}0 & -0.740293+0.259221i & -0.797998+0.797998i & -0.259221+0.740293i & -0.532101\\
-0.740293-0.259221i & 0 & -0.00123611+0.400317i & 0.239782 & -1.34536+0.557266i\\
-0.797998-0.797998i & 0.00123611-0.400317i & 0 & -0.00123611-0.400317i & -1.30592+1.30592i\\
-0.259221-0.740293i & -0.239782 & 0.00123611+0.400317i & 0 & -0.557266+1.34536i\\
-0.532101 & 1.34536-0.557266i & 1.30592-1.30592i & 0.557266-1.34536i & 0
-\end{pmatrix}
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\Omega^{\left(W\right)}=\begin{pmatrix}0 & -0.740293+0.259221i & -0.797998+0.797998i & -0.259221+0.740293i & -0.532101\\
-0.740293-0.259221i & 0 & -0.210816+0.190738i & -0.223077 & 0.175923+0.557266i\\
-0.797998-0.797998i & 0.210816\,-0.190738i & 0 & -0.210816-0.190738i & 0.0717354-0.0717354i\\
-0.259221-0.740293i & 0.223077 & 0.210816+0.190738i & 0 & -0.557266-0.175923i\\
-0.532101 & -0.175923-0.557266i & -0.0717354+0.0717354i & 0.557266+0.175923i & 0
-\end{pmatrix}
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\gamma^{\prime\left(V\right)}=-5.4937,\quad\gamma^{\prime\left(W\right)}=-12.1284
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\left\langle F_{2}^{\left(4\right)}f_{0}\right\rangle _{V} & = & \frac{2}{M}\gamma^{\prime\left(V\right)}\left\langle f_{2}f_{0}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle f_{2}f_{0}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
- & = & \frac{2}{M}\gamma^{\prime\left(V\right)}M_{02}+\frac{4}{M}\Omega_{02}^{\left(V\right)}\\
- & = & -0.638398+0.638398i
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\left\langle F_{2}^{\left(4\right)}f_{4}\right\rangle _{V} & = & \frac{2}{M}\gamma^{\prime\left(V\right)}\left\langle f_{2}f_{4}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle f_{2}f_{4}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
- & = & -\frac{2}{M}\gamma^{\prime\left(V\right)}M_{24}-\frac{4}{M}\Omega_{24}^{\left(V\right)}\\
- & = & 1.07171-1.07171i
-\end{eqnarray*}
-
-\end_inset
-
- Likewise
-\begin_inset Formula 
-\begin{eqnarray*}
-\left\langle F_{2}^{\left(4\right)}f_{0}\right\rangle _{W} & = & \frac{2}{M}\gamma^{\prime\left(W\right)}M_{02}+\frac{4}{M}\Omega_{02}^{\left(W\right)}=-0.638398+0.638398i,\\
-\left\langle F_{2}^{\left(4\right)}f_{4}\right\rangle _{W} & = & -\frac{2}{M}\gamma^{\prime\left(W\right)}M_{24}-\frac{4}{M}\Omega_{24}^{\left(W\right)}=0.00217128-0.00217128i.
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\left\langle F_{3}^{\left(4\right)}F_{2}^{\left(4\right)}F_{1}^{\left(4\right)}f_{0}\right\rangle _{V} & = & \frac{2}{M}\gamma^{\prime\left(V\right)}\left\langle f_{3}f_{2}f_{1}f_{0}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle f_{3}f_{2}f_{1}f_{0}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
- & = & \frac{2}{M}\gamma^{\prime\left(V\right)}\left(M_{32}M_{10}+M_{30}M_{21}-M_{31}M_{20}\right)+\\
- &  & +\frac{4}{M}\left(\Omega_{01}^{\left(V\right)}M_{23}-\Omega_{02}^{\left(V\right)}M_{13}+\Omega_{03}^{\left(V\right)}M_{12}+\Omega_{12}^{\left(V\right)}M_{03}-\Omega_{13}^{\left(V\right)}M_{02}+\Omega_{23}^{\left(V\right)}M_{01}\right)\\
- & = & 0.00635263-0.00635263i?
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\left\langle F_{3}^{\left(4\right)}F_{2}^{\left(4\right)}F_{1}^{\left(4\right)}f_{4}\right\rangle _{V} & = & \frac{2}{M}\gamma^{\prime\left(V\right)}\left\langle f_{3}f_{2}f_{1}f_{4}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle f_{3}f_{2}f_{1}f_{4}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
- & = & \frac{2}{M}\gamma^{\prime\left(V\right)}\left(M_{32}M_{14}+M_{34}M_{21}-M_{31}M_{24}\right)+\\
- &  & +\frac{4}{M}\left(\Omega_{41}^{\left(V\right)}M_{23}-\Omega_{42}^{\left(V\right)}M_{13}+\Omega_{43}^{\left(V\right)}M_{12}+\Omega_{12}^{\left(V\right)}M_{43}-\Omega_{13}^{\left(V\right)}M_{42}+\Omega_{23}^{\left(V\right)}M_{41}\right)\\
- & = & 0.032794-0.032794i
-\end{eqnarray*}
-
-\end_inset
-
- Likewise, 
-\begin_inset Formula 
-\begin{eqnarray*}
-\left\langle F_{3}^{\left(4\right)}F_{2}^{\left(4\right)}F_{1}^{\left(4\right)}f_{0}\right\rangle _{W} & = & \frac{2}{M}\gamma^{\prime\left(W\right)}\left(M_{32}M_{10}+M_{30}M_{21}-M_{31}M_{20}\right)+\\
- &  & +\frac{4}{M}\left(\Omega_{01}^{\left(W\right)}M_{23}-\Omega_{02}^{\left(W\right)}M_{13}+\Omega_{03}^{\left(W\right)}M_{12}+\Omega_{12}^{\left(W\right)}M_{03}-\Omega_{13}^{\left(W\right)}M_{02}+\Omega_{23}^{\left(W\right)}M_{01}\right)\\
- & = & 0.00635263-0.00635263i^{}
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\left\langle F_{3}^{\left(4\right)}F_{2}^{\left(4\right)}F_{1}^{\left(4\right)}f_{4}\right\rangle _{W} & = & \frac{2}{M}\gamma^{\prime\left(W\right)}\left(M_{32}M_{14}+M_{34}M_{21}-M_{31}M_{24}\right)+\\
- &  & +\frac{4}{M}\left(\Omega_{41}^{\left(W\right)}M_{23}-\Omega_{42}^{\left(W\right)}M_{13}+\Omega_{43}^{\left(W\right)}M_{12}+\Omega_{12}^{\left(W\right)}M_{43}-\Omega_{13}^{\left(W\right)}M_{42}+\Omega_{23}^{\left(W\right)}M_{41}\right)\\
- & = & 0.0157997-0.0157997i
-\end{eqnarray*}
-
-\end_inset
-
-
+Acknoledgements
 \end_layout
 
 \begin_layout Section
@@ -3781,19 +3352,17 @@ Applying
 
 
 \begin_inset Formula 
-\begin{eqnarray*}
-\alpha_{0}\beta_{n} & = & \exp\left(\frac{i\pi}{4}\right)\left(-s_{n}F_{0}^{\dagger}F_{M-n}^{\dagger}+c_{n}F_{0}^{\dagger}F_{n}\right)\\
- & = & \exp\left(\frac{i\pi}{4}\right)\left(s_{n}F_{M-n}^{\dagger}F_{0}^{\dagger}+c_{n}F_{0}^{\dagger}F_{n}\right)
-\end{eqnarray*}
+\[
+\alpha_{0}\beta_{n}=\exp\left(\frac{i\pi}{4}\right)\left(s_{n}F_{M-n}^{\dagger}F_{0}^{\dagger}+c_{n}F_{0}^{\dagger}F_{n}\right)
+\]
 
 \end_inset
 
 
 \begin_inset Formula 
-\begin{eqnarray*}
-\alpha_{n}\alpha_{0} & = & \exp\left(\frac{i\pi}{4}\right)\left(c_{n}F_{M-n}^{\dagger}F_{0}^{\dagger}+s_{n}F_{n}F_{0}^{\dagger}\right)\\
- & = & \exp\left(\frac{i\pi}{4}\right)\left(c_{n}F_{M-n}^{\dagger}F_{0}^{\dagger}-s_{n}F_{0}^{\dagger}F_{n}\right)
-\end{eqnarray*}
+\[
+\alpha_{n}\alpha_{0}=\exp\left(\frac{i\pi}{4}\right)\left(c_{n}F_{M-n}^{\dagger}F_{0}^{\dagger}-s_{n}F_{0}^{\dagger}F_{n}\right)
+\]
 
 \end_inset
 
@@ -3829,7 +3398,7 @@ X_{n}=i\left[\exp\left(2\pi i\frac{ln}{M}\right)-\exp\left(2\pi i\frac{kn}{M}\ri
 
 \end_inset
 
- We see that 
+ Now we see that 
 \begin_inset Formula 
 \begin{eqnarray*}
 A_{n0} & = & -\exp\left(2\pi ik\frac{n}{M}\right)\sin\frac{n\pi}{2M}-\exp\left(2\pi i\frac{\left(k+l\right)n}{2M}\right)\sin\frac{\left(l-k-1/2\right)n\pi}{M}\\
@@ -3873,6 +3442,226 @@ h_{kl}=\frac{2}{M}\sum_{n,m=0}^{M-1}\left(A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{
 \begin_inset Formula 
 \[
 \gamma=-\cot\frac{\pi}{2M}+\cot\frac{2\left(k-l\right)+1}{2M}\pi+M\xi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Calculation of Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:pert_hexp"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this section we will derive the formula 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:pert_hexp"
+
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+\left\langle \cdots\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle =-\frac{2}{M}\tr\left(S^{*}C^{-1}\bar{A}\right)\left\langle \cdots\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}\left\langle \cdots f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle 
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $\bar{A}\equiv A^{\dagger}$
+\end_inset
+
+ and
+\begin_inset Formula 
+\[
+\Omega\equiv C^{-1}\bar{A}\left(C^{-1}\right)^{T},
+\]
+
+\end_inset
+
+ and relations among 
+\begin_inset Formula $F_{n}^{\dagger}$
+\end_inset
+
+, 
+\begin_inset Formula $f_{k}$
+\end_inset
+
+, and 
+\begin_inset Formula $f_{k}^{\dagger}$
+\end_inset
+
+ are given by 
+\begin_inset Formula 
+\[
+F_{m}=\sum_{n=0}^{M-1}\left(f_{n}C_{mn}+f_{n}^{\dagger}S_{mn}\right),\quad0\leq m\leq M-1
+\]
+
+\end_inset
+
+ with
+\begin_inset Formula 
+\[
+C_{mn}M_{nl}+S_{ml}=0.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the following calculation, we will suppress summation symbol and use
+ repeating indices to indicate summation.
+ Let 
+\begin_inset Formula $X=\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}$
+\end_inset
+
+, 
+\begin_inset Formula $\ket{G}=\exp\left(X\right)\ket{0}$
+\end_inset
+
+, then 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\[
+F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\ket{G}=\exp\left(X\right)\left(\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}-\left[X,\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\right]+\frac{1}{2}\left[X,\left[X,\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\right]\right]+\cdots\right)\ket{0}.
+\]
+
+\end_inset
+
+Now let us calculate each term in the parenthesis of RHS.
+ For the first term
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\ket{0} & = & \left(\bar{A}_{nm}f_{i}^{\dagger}f_{j}^{\dagger}C_{ni}^{*}C_{mj}^{*}+\bar{A}_{nm}f_{i}S_{ni}^{*}f_{j}^{\dagger}C_{mj}^{*}\right)\ket{0}\\
+ & = & \left(\bar{A}_{nm}f_{i}^{\dagger}f_{j}^{\dagger}C_{ni}^{*}C_{mj}^{*}+\bar{A}_{nm}S_{ni}^{*}C_{mj}^{*}\left\{ f_{i},f_{j}^{\dagger}\right\} \right)\ket{0}\\
+ & = & \left[f_{i}^{\dagger}\left(C^{\dagger}\bar{A}C^{*}\right)_{ij}f_{j}^{\dagger}+\tr\left(\bar{A}C^{*}S^{\dagger}\right)\right]\ket{0}
+\end{eqnarray*}
+
+\end_inset
+
+For the second term, we first find 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{m}^{\dagger}\right] & = & \frac{1}{2}M_{kl}\left[f_{k}^{\dagger}f_{l}^{\dagger},F_{m}^{\dagger}\right]\\
+ & = & \frac{1}{2}M_{kl}\left(f_{k}^{\dagger}\left\{ f_{l}^{\dagger},F_{m}^{\dagger}\right\} -\left\{ f_{k}^{\dagger},F_{m}^{\dagger}\right\} f_{l}^{\dagger}\right)\\
+ & = & \frac{1}{2}M_{kl}\left(f_{k}^{\dagger}\delta_{ln}S_{mn}^{*}-\delta_{kn}S_{mn}^{*}f_{l}^{\dagger}\right)\\
+ & = & -S_{ml}^{*}M_{lk}f_{k}^{\dagger},
+\end{eqnarray*}
+
+\end_inset
+
+ where in the second step we used the identity 
+\begin_inset Formula 
+\[
+\left[AB,C\right]=A\left\{ B,C\right\} -\left\{ A,C\right\} B,
+\]
+
+\end_inset
+
+and in the last step the property that 
+\begin_inset Formula $M_{kl}$
+\end_inset
+
+ is antisymmetric.
+ We then have 
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\right] & = & F_{n}^{\dagger}\bar{A}_{nm}\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{m}^{\dagger}\right]+\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{n}^{\dagger}\right]\bar{A}_{nm}F_{m}^{\dagger}\\
+ & = & -F_{n}^{\dagger}\bar{A}_{nm}S_{ml}^{*}M_{lk}f_{k}^{\dagger}-S_{nl}^{*}M_{lk}f_{k}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\\
+ & = & \bar{A}_{nm}S_{ml}^{*}M_{lk}\left(f_{k}^{\dagger}F_{n}^{\dagger}-\left\{ F_{n}^{\dagger},f_{k}^{\dagger}\right\} \right)-S_{nl}^{*}M_{lk}f_{k}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\\
+ & = & \bar{A}_{nm}S_{ml}^{*}M_{lk}\left(f_{k}^{\dagger}F_{n}^{\dagger}-S_{nk}^{*}\right)-S_{nl}^{*}M_{lk}f_{k}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\\
+ & = & \bar{A}_{nm}S_{ml}^{*}M_{lk}f_{k}^{\dagger}F_{n}^{\dagger}-S_{nl}^{*}M_{lk}f_{k}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}-\bar{A}_{nm}S_{ml}^{*}M_{lk}S_{nk}^{*}\\
+ & = & f_{k}^{\dagger}M_{kl}\left(S^{\dagger}\right)_{lm}\bar{A}_{mn}F_{n}^{\dagger}+f_{k}^{\dagger}M_{kl}\left(S^{\dagger}\right)_{ln}\bar{A}_{nm}F_{m}^{\dagger}-\bar{A}_{nm}S_{ml}^{*}M_{lk}\left(S^{\dagger}\right)_{kn}\\
+ & = & 2f_{k}^{\dagger}\left(MS^{\dagger}\bar{A}\right)_{km}F_{m}^{\dagger}-\tr\left(\bar{A}S^{*}MS^{\dagger}\right).
+\end{eqnarray*}
+
+\end_inset
+
+ It then follows 
+\begin_inset Formula 
+\[
+\left[X,F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\right]\ket{0}=\left[2f_{k}^{\dagger}\left(MS^{\dagger}\bar{A}C^{*}\right)_{kl}f_{l}^{\dagger}-\tr\left(\bar{A}S^{*}MS^{\dagger}\right)\right]\ket{0}.
+\]
+
+\end_inset
+
+ For the third term
+\begin_inset Formula 
+\begin{eqnarray*}
+\left[X,\left[X,\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\right]\right] & = & \left[X,2f_{k}^{\dagger}\left(MS^{\dagger}\bar{A}\right)_{km}F_{m}^{\dagger}\right]-\zero{\left[X,\tr\left(\bar{A}S^{*}MS^{\dagger}\right)\right]}\\
+ & = & 2f_{i}^{\dagger}\left(MS^{\dagger}\bar{A}\right)_{im}\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger},F_{m}^{\dagger}\right]\\
+ & = & -2f_{k}^{\dagger}\left(MS^{\dagger}\bar{A}S^{*}M\right)_{kl}f_{l}^{\dagger}.
+\end{eqnarray*}
+
+\end_inset
+
+ It follows the higher order commutation all vanish.
+ We therefore have
+\begin_inset Formula 
+\begin{eqnarray*}
+F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\ket{G} & = & \exp\left(X\right)\left(\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}-\left[X,\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\right]+\frac{1}{2}\left[X,\left[X,\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\right]\right]\right)\ket{0}\\
+ & = & \left[f_{k}^{\dagger}\left(C^{\dagger}\bar{A}C^{*}\right)_{kl}f_{l}^{\dagger}+\tr\left(\bar{A}C^{*}S^{\dagger}\right)\right]\ket{G}\\
+ &  & -\left[2f_{k}^{\dagger}\left(MS^{\dagger}\bar{A}C^{*}\right)_{kl}f_{l}^{\dagger}-\tr\left(\bar{A}S^{*}MS^{\dagger}\right)\right]\ket{G}\\
+ &  & -f_{k}^{\dagger}\left(MS^{\dagger}\bar{A}S^{*}M\right)_{kl}f_{l}^{\dagger}\ket{G}\\
+ & = & \tr\left[\bar{A}\left(C^{*}+S^{*}M\right)S^{\dagger}\right]\ket{G}\\
+ &  & +f_{k}^{\dagger}\left(C^{\dagger}\bar{A}C^{*}-2MS^{\dagger}\bar{A}C^{*}-MS^{\dagger}\bar{A}S^{*}M\right)_{kl}f_{l}^{\dagger}\ket{G}\\
+ & = & \tr\left[\bar{A}\left(C^{*}+S^{*}M\right)S^{\dagger}\right]\ket{G}\\
+ &  & +f_{k}^{\dagger}\left(C^{\dagger}\bar{A}C^{*}-MS^{\dagger}\bar{A}C^{*}+C^{\dagger}\bar{A}S^{*}M-MS^{\dagger}\bar{A}S^{*}M\right)_{kl}f_{l}^{\dagger}\ket{G}\\
+ & = & \tr\left[\bar{A}\left(C^{*}+S^{*}M\right)S^{\dagger}\right]\ket{G}\\
+ &  & +f_{k}^{\dagger}\left[C^{\dagger}\bar{A}\left(C^{*}+S^{*}M\right)-MS^{\dagger}\bar{A}\left(S^{*}M+C^{*}\right)\right]_{kl}f_{l}^{\dagger}\ket{G}\\
+ & = & \tr\left[\bar{A}\left(C^{*}+S^{*}M\right)S^{\dagger}\right]\ket{G}\\
+ &  & +f_{k}^{\dagger}\left[\left(C^{*}+S^{*}M\right)^{T}\bar{A}\left(C^{*}+S^{*}M\right)\right]_{kl}f_{l}^{\dagger}\ket{G}.
+\end{eqnarray*}
+
+\end_inset
+
+ Since 
+\begin_inset Formula 
+\[
+C^{*}+S^{*}M=C^{*}-C^{*}M^{*}M=C^{*}\left(I-M^{*}M\right)=C^{*}\left(I+MM^{\dagger}\right)^{T}=C^{*}\left(C^{-1}C^{-1\dagger}\right)^{T}=\left(C^{-1}\right)^{T},
+\]
+
+\end_inset
+
+ we have 
+\begin_inset Formula 
+\[
+F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\ket{G}=-\tr\left(S^{*}C^{-1}\bar{A}\right)\ket{G}+f_{k}^{\dagger}\left[C^{-1}\bar{A}\left(C^{-1}\right)^{T}\right]_{kl}f_{l}^{\dagger}\ket{G}
 \]
 
 \end_inset
