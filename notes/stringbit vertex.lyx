@@ -95,11 +95,11 @@ key "Chen:2016hkz"
 
 \end_inset
 
- studied the simplest stringbit model with 
+ studied the stringbit model of 
 \begin_inset Formula $s=1$
 \end_inset
 
- and the Hamiltonian
+ case, of which has the Hamiltonian reads
 \begin_inset Formula 
 \begin{equation}
 H^{s=1}=\frac{2}{N}\tr\left[\left(\bar{a}^{2}-i\bar{b}^{2}\right)a^{2}-\left(\bar{b}^{2}-i\bar{a}^{2}\right)b^{2}+\left(\bar{a}\bar{b}+\bar{b}\bar{a}\right)ba+\left(\bar{a}\bar{b}-\bar{b}\bar{a}\right)ab\right].\label{eq:ham_Hs_1}
@@ -107,11 +107,18 @@ H^{s=1}=\frac{2}{N}\tr\left[\left(\bar{a}^{2}-i\bar{b}^{2}\right)a^{2}-\left(\ba
 
 \end_inset
 
- This Hamitlonian can be generalized to 
-\begin_inset Formula $s>1$
+ This Hamitlonian was generalized to arbitrary 
+\begin_inset Formula $s$
 \end_inset
 
- case.
+ case in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2014hia,Thorn:2015wli"
+
+\end_inset
+
+.
  In analogy with 
 \begin_inset Formula $a$
 \end_inset
@@ -120,7 +127,7 @@ H^{s=1}=\frac{2}{N}\tr\left[\left(\bar{a}^{2}-i\bar{b}^{2}\right)a^{2}-\left(\ba
 \begin_inset Formula $b$
 \end_inset
 
-, we introduce the creation operator 
+, now the creation operator has the form 
 \begin_inset Formula 
 \[
 \left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta},\quad a_{i}=1,\cdots,s,\quad n=0,\cdots,s,\quad\alpha,\beta=1,\cdots,N
@@ -150,7 +157,7 @@ H^{s=1}=\frac{2}{N}\tr\left[\left(\bar{a}^{2}-i\bar{b}^{2}\right)a^{2}-\left(\ba
 \end_inset
 
  is odd.
- It is then convenient to introduce 
+ We then introduce 
 \begin_inset Formula $s$
 \end_inset
 
@@ -170,11 +177,7 @@ H^{s=1}=\frac{2}{N}\tr\left[\left(\bar{a}^{2}-i\bar{b}^{2}\right)a^{2}-\left(\ba
 
 \end_inset
 
-We then define the single trace operators 
-\begin_inset Formula $T$
-\end_inset
-
- as 
+We can now build single trace operator 
 \begin_inset Formula 
 \[
 T\left(\theta_{1},\cdots,\theta_{k}\right)=\tr\psi\left(\theta_{1}\right)\psi\left(\theta_{2}\right)\cdots\psi\left(\theta_{k}\right),
@@ -191,28 +194,31 @@ T\left(\theta_{1},\cdots,\theta_{k}\right)=\tr\psi\left(\theta_{1}\right)\psi\le
 \end_inset
 
 -component Grassmann variables.
- To construct the color singlet subspace of Fock space, we define the vacuum
- state 
+ The the color singlet subspace of Fock space consists of states as 
+\begin_inset Formula 
+\[
+T\left(\theta_{1},\cdots,\theta_{K}\right)T\left(\eta_{1},\cdots,\eta_{K}\right)\cdots\ket{0},
+\]
+
+\end_inset
+
+ where 
 \begin_inset Formula $\ket{0}$
 \end_inset
 
- and express a general state as 
-\begin_inset Formula 
-\[
-T\left(\theta_{1},\cdots,\theta_{K}\right)T\left(\eta_{1},\cdots,\eta_{K}\right)\cdots\ket{0}.
-\]
+ is the vacuum state annihilated by any annihilation operators.
+ The generalized Hamiltonian in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2014hia,Thorn:2015wli"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-The generalized Hamiltonian can be written as 
+ reads 
 \begin_inset Formula 
-\[
-H=\sum_{i=1}^{5}H_{i},
-\]
+\begin{equation}
+H=\sum_{i=1}^{5}H_{i},\label{eq:ham_H_2}
+\end{equation}
 
 \end_inset
 
@@ -228,38 +234,124 @@ reference "eq:App-H-commutation"
 \end_inset
 
 .
- The actions of 
-\begin_inset Formula $H$
-\end_inset
+\end_layout
 
- on trace states are
-\begin_inset Formula 
-\[
-HT\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}=\bar{h}T\left(\theta_{1}\cdots\theta_{M}\right)\ket{0}+\frac{1}{N}\sum_{k,l\neq k,k+1}\bar{h}_{kl}T\left(\theta_{l}\cdots\theta_{k}\right)T\left(\theta_{k+1}\cdots\theta_{l-1}\right)\ket{0}
-\]
+\begin_layout Standard
+As 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chen:2016hkz"
 
 \end_inset
 
+ shows, the 
+\begin_inset Formula $N=\infty$
+\end_inset
 
+ behavior is not affected by adding to 
+\begin_inset Formula $H^{s=1}$
+\end_inset
+
+ the terms in the form
 \begin_inset Formula 
 \begin{eqnarray*}
-HT\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right)\ket{0} & = & \left(\bar{h}_{\theta}+\bar{h}_{\eta}\right)T\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right)+\frac{1}{N}\text{Fission Terms}\\
- &  & +\frac{1}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{kl}T\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\ket{0}\\
- &  & +\frac{1}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{lk}T\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\ket{0},
+\Delta H^{s=1} & = & \frac{2}{N}\tr\left[\bar{a}\bar{b}ba+\bar{b}\bar{a}ab+\bar{a}^{2}a^{2}+\bar{b}^{2}b^{2}-\tilde{M}^{s=1}\right],\\
+\tilde{M}^{s=1} & = & \tr\left(\bar{a}a+\bar{b}b\right)-\frac{1}{N}\left(\tr\bar{a}\tr a+\tr\bar{b}\tr b\right).
 \end{eqnarray*}
+
+\end_inset
+
+For arbitrary 
+\begin_inset Formula $s$
+\end_inset
+
+, 
+\begin_inset Formula $\Delta H$
+\end_inset
+
+ reads 
+\begin_inset Formula 
+\begin{eqnarray*}
+\Delta H & = & \frac{2}{N}\left(\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\bar{\phi}_{b_{1}\cdots b_{k}}\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\phi_{b_{1}\cdots b_{k}}-\tilde{M}\right),\\
+\tilde{M} & = & \sum_{n=0}^{s}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}-\frac{1}{N}\sum_{n=0}^{s}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\tr\phi_{a_{1}\cdots a_{n}}.
+\end{eqnarray*}
+
+\end_inset
+
+Now we have the complete form of Hamiltonian to be studied in this paper
+ 
+\begin_inset Formula 
+\begin{equation}
+H=\sum_{i=1}^{5}H_{i}+s\xi\Delta H,\label{eq:ham_H_3}
+\end{equation}
 
 \end_inset
 
  where 
+\begin_inset Formula $\xi$
+\end_inset
+
+ is a real constant.
+ 
+\end_layout
+
+\begin_layout Standard
+By defining 
 \begin_inset Formula 
-\begin{eqnarray*}
-\bar{h}_{kl} & = & 2\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)+2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}+2\theta_{l}^{a}\frac{d}{d\theta_{k}^{a}}-2i\theta_{k}^{a}\theta_{l}^{a}-2i\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{l}^{a}},\\
-\bar{h} & = & \sum_{k=1}^{M}\bar{h}_{k,k+1}.
-\end{eqnarray*}
+\begin{align}
+\bar{h}_{kl} & =2\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)+2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}+2\theta_{l}^{a}\frac{d}{d\theta_{k}^{a}}-2i\theta_{k}^{a}\theta_{l}^{a}-2i\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{l}^{a}}+2s\xi-2s\delta_{k,l}\label{eq:ham_h_klbar}\\
+\bar{h} & =\sum_{k=1}^{M}\left(\bar{h}_{k,k+1}-2s\xi\right),
+\end{align}
 
 \end_inset
 
-The trace states can be expressed as 
+ we can summarize the action of 
+\begin_inset Formula $H$
+\end_inset
+
+ on trace states as
+\begin_inset Formula 
+\begin{equation}
+HT\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}=\bar{h}T\left(\theta_{1}\cdots\theta_{M}\right)\ket{0}+\frac{1}{N}\sum_{k=1}^{M}\sum_{l\neq k+1}\bar{h}_{kl}T\left(\theta_{l}\cdots\theta_{k}\right)T\left(\theta_{k+1}\cdots\theta_{l-1}\right)\ket{0}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align}
+HT\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right)\ket{0} & =\left(\bar{h}_{\theta}+\bar{h}_{\eta}\right)T\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right)+\frac{1}{N}\text{Fission Terms}\nonumber \\
+ & +\frac{1}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{kl}T\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\ket{0}\nonumber \\
+ & +\frac{1}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{lk}T\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\ket{0}.\label{eq:ham_Haction_double_trace}
+\end{align}
+
+\end_inset
+
+Note that in Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_Haction_double_trace"
+
+\end_inset
+
+, the 
+\begin_inset Formula $-2s\delta_{kl}$
+\end_inset
+
+ term of 
+\begin_inset Formula $h_{kl}$
+\end_inset
+
+ should be zero even if 
+\begin_inset Formula $k=l$
+\end_inset
+
+, as they labeling different variables.
+\end_layout
+
+\begin_layout Standard
+The single trance energy eigenstate can be expressed as 
 \begin_inset Formula 
 \begin{equation}
 T_{r}\ket{0}=\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta_{1},\cdots,\theta_{M}\right)\psi_{r}\left(\theta_{1},\dots,\theta_{M}\right)\ket{0},\label{eq:ham_trace_energystate}
@@ -272,15 +364,19 @@ T_{r}\ket{0}=\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta_{1},\cdo
 \end_inset
 
  is the wave function.
- Because of the cyclic symmetry of 
+ Since 
 \begin_inset Formula $T\left(\theta_{1},\cdots,\theta_{M}\right)$
 \end_inset
 
-, one can impose to 
+ is invariant under cyclic permutation of 
+\begin_inset Formula $\theta_{i}$
+\end_inset
+
+, we can constrain 
 \begin_inset Formula $\psi_{r}$
 \end_inset
 
- the constraint 
+ by 
 \begin_inset Formula 
 \begin{equation}
 \psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)=\left(-\right)^{s\left(M-1\right)}\psi_{r}\left(\theta_{2},\cdots,\theta_{M},\theta_{1}\right)\label{eq:ham_cyclicconstrtaint}
@@ -305,32 +401,48 @@ reference "eq:ham_trace_energystate"
 \end_inset
 
 .
- Via integration on parts, we see that the action on 
-\begin_inset Formula $T\left(\theta_{1}\cdots\theta_{M}\right)$
+ Now the action of 
+\begin_inset Formula $\bar{h}_{kl}$
 \end_inset
 
- by 
-\begin_inset Formula $\bar{h}$
+ on 
+\begin_inset Formula $T\left(\theta\right)$
 \end_inset
 
- is equivalent to the action on 
+ can be transferred to 
 \begin_inset Formula $\psi_{r}$
 \end_inset
 
- by 
-\begin_inset Formula $h$
-\end_inset
-
- defined as
+ by an integration on parts
 \begin_inset Formula 
-\begin{eqnarray}
-h_{kl} & = & -2\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)-2\theta_{k}^{a}\frac{d}{d\theta_{l}^{a}}-2\theta_{k}^{a}\frac{d}{d\theta_{l}^{a}}-2i\theta_{k}^{a}\theta_{l}^{a}-2i\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{l}^{a}},\label{eq:ham_h_kl}\\
-h & = & \sum_{k=1}^{M}h_{k,k+1}.\label{eq:ham_h}
-\end{eqnarray}
+\begin{equation}
+\bar{h}_{kl}T_{r}\ket{0}=\int d\theta\,\bar{h}_{kl}T\left(\theta\right)\psi_{r}\left(\theta\right)\ket{0}=\int d\theta\, T\left(\theta\right)h_{kl}\psi_{r}\left(\theta\right)\ket{0}\label{eq:ham_intbyparts}
+\end{equation}
 
 \end_inset
 
- The energy eigenstate of trace states are equivalent to the eigenfunction
+ where
+\begin_inset Formula 
+\begin{align}
+h_{kl} & =-2\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)-2\theta_{k}^{a}\frac{d}{d\theta_{l}^{a}}-2\theta_{k}^{a}\frac{d}{d\theta_{l}^{a}}-2i\theta_{k}^{a}\theta_{l}^{a}-2i\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{l}^{a}}+2s\xi+2s\delta_{k,l},\label{eq:ham_h_kl}\\
+h & =\sum_{k=1}^{M}\left(h_{k,k+1}-2s\xi\right).\label{eq:ham_h}
+\end{align}
+
+\end_inset
+
+ Note that the 
+\begin_inset Formula $k=l$
+\end_inset
+
+ case needs special treatment in the last step of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_intbyparts"
+
+\end_inset
+
+.
+ Now the energy eigenstate of trace states are equivalent to the eigenfunction
  of the equation 
 \begin_inset Formula 
 \begin{equation}
@@ -1288,13 +1400,13 @@ reference "eq:harm_completeness_1"
 , we have 
 \begin_inset Formula 
 \begin{eqnarray*}
-HT_{r}\ket{0} & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{l=k+2}^{M+k-1}\bar{h}_{kl}T\left(\theta_{l}\cdots\theta_{k}\right)T\left(\theta_{k+1}\cdots\theta_{l-1}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
- & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{L=1}^{M-2}\bar{h}_{k,k+L+1}T\left(\theta_{k+L+1}\cdots\theta_{k}\right)T\left(\theta_{k+1}\cdots\theta_{k+L}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
- & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{L=1}^{M-2}\bar{h}_{k,k+L+1}\sum_{s,t}\left(-\right)^{s\left(Kg_{t}+Lg_{s}\right)}\\
+HT_{r}\ket{0} & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{l=k+2}^{M+k}\bar{h}_{kl}T\left(\theta_{l}\cdots\theta_{k}\right)T\left(\theta_{k+1}\cdots\theta_{l-1}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{L=1}^{M-1}\bar{h}_{k,k+L+1}T\left(\theta_{k+L+1}\cdots\theta_{k}\right)T\left(\theta_{k+1}\cdots\theta_{k+L}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{L=1}^{M-1}\bar{h}_{k,k+L+1}\sum_{s,t}\left(-\right)^{s\left(Kg_{t}+Lg_{s}\right)}\\
  &  & \times T_{t}\bar{\psi}_{t}\left(\theta_{k+L+1}\cdots\theta_{k}\right)T_{s}\bar{\psi}_{s}\left(\theta_{k+1}\cdots\theta_{k+L}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
- & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{L=1}^{M-2}\sum_{s,t}T_{s}T_{t}\ket{0}\left(-\right)^{s\left(Kg_{s}+Lg_{t}\right)}\\
+ & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{L=1}^{M-1}\sum_{s,t}T_{s}T_{t}\ket{0}\left(-\right)^{s\left(Kg_{s}+Lg_{t}\right)}\\
  &  & \times\int d\theta\,\sum_{k=1}^{M}\bar{h}_{k,k+L+1}\bar{\psi}_{t}\left(\theta_{k+L+1}\cdots\theta_{k}\right)\bar{\psi}_{s}\left(\theta_{k+1}\cdots\theta_{k+L}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
- & \equiv & E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{L=1}^{M-2}\sum_{s,t}T_{s}T_{t}\ket{0}V_{str}^{\left(K,L\right)}
+ & \equiv & E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{L=1}^{M-1}\sum_{s,t}T_{s}T_{t}\ket{0}V_{str}^{\left(K,L\right)}
 \end{eqnarray*}
 
 \end_inset
@@ -1579,7 +1691,7 @@ A_{nm}=\exp\left(2\pi ik\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi+\exp\left(2\pi
 
 \begin_inset Formula 
 \[
-\gamma=-\cot\frac{\pi}{2M}+\cot\frac{2\left(k-l\right)+1}{2M}\pi.
+\gamma=-\cot\frac{\pi}{2M}+\cot\frac{2\left(k-l\right)+1}{2M}\pi+M\xi.
 \]
 
 \end_inset
@@ -1604,7 +1716,7 @@ A_{nm}^{\left(V\right)}=\sin\frac{m-n}{2M}\pi+\exp\left(2\pi i\frac{\left(L+1\ri
 
 \begin_inset Formula 
 \[
-\gamma^{\left(V\right)}=-\cot\frac{\pi}{2M}-\cot\frac{2L+1}{2M}\pi,
+\gamma^{\left(V\right)}=-\cot\frac{\pi}{2M}-\cot\frac{2L+1}{2M}\pi+M\xi,
 \]
 
 \end_inset
@@ -1624,7 +1736,7 @@ A_{nm}^{\left(W\right)}=\left[1+\exp\left(\pi i\frac{n+m}{M}\right)\right]\left[
 
 \begin_inset Formula 
 \[
-\gamma^{\left(W\right)}=-4\cot\frac{\pi}{2M}.
+\gamma^{\left(W\right)}=-4\cot\frac{\pi}{2M}+2M\xi.
 \]
 
 \end_inset
@@ -1781,7 +1893,7 @@ If
 Combine above together, we have 
 \begin_inset Formula 
 \begin{equation}
-\Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-2}{\sum_{M_{t}=K,M_{s}=L}}^{\prime}\frac{KLM\left|\det C\right|}{E_{r}-E_{s}-E_{t}}\sum_{\lambda_{i}=0,1}\left\langle \mathbb{F}_{t}\mathbb{F}_{s}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{t}\mathbb{F}_{s}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}},\mathbb{F}_{r}\right\rangle _{V}\label{eq:energy_pert_DeltaE_s1}
+\Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{M_{t}=K,M_{s}=L}}^{\prime}\frac{KLM\left|\det C\right|}{E_{r}-E_{s}-E_{t}}\sum_{\lambda_{i}=0,1}\left\langle \mathbb{F}_{t}\mathbb{F}_{s}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{t}\mathbb{F}_{s}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}},\mathbb{F}_{r}\right\rangle _{V}\label{eq:energy_pert_DeltaE_s1}
 \end{equation}
 
 \end_inset
@@ -1806,8 +1918,8 @@ Combine above together, we have
 , 
 \begin_inset Formula 
 \begin{align}
-\Delta E_{r} & =\frac{1}{N^{2}}\sum_{L=1}^{M-2}{\sum_{M_{t}=K,M_{s}=L}}^{\prime}\frac{KLM\left|\det C\right|^{s}}{E_{r}-E_{s}-E_{t}}\sum_{\left\{ \lambda_{j,i}\right\} }\prod_{a=1}^{s}\left\langle \mathbb{F}_{t}^{a}\mathbb{F}_{s}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{t}^{a}\mathbb{F}_{s}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{V}\nonumber \\
- & =\frac{1}{N^{2}}\sum_{L=1}^{M-2}{\sum_{M_{t}=K,M_{s}=L}}^{\prime}\frac{KLM\left|\det C\right|^{s}}{E_{r}-E_{s}-E_{t}}\prod_{a=1}^{s}\left(\sum_{\lambda_{a,i}}\left\langle \mathbb{F}_{t}^{a}\mathbb{F}_{s}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{t}^{a}\mathbb{F}_{s}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{V}\right),\label{eq:energy_pert_DeltaE}
+\Delta E_{r} & =\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{M_{t}=K,M_{s}=L}}^{\prime}\frac{KLM\left|\det C\right|^{s}}{E_{r}-E_{s}-E_{t}}\sum_{\left\{ \lambda_{j,i}\right\} }\prod_{a=1}^{s}\left\langle \mathbb{F}_{t}^{a}\mathbb{F}_{s}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{t}^{a}\mathbb{F}_{s}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{V}\nonumber \\
+ & =\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{M_{t}=K,M_{s}=L}}^{\prime}\frac{KLM\left|\det C\right|^{s}}{E_{r}-E_{s}-E_{t}}\prod_{a=1}^{s}\left(\sum_{\lambda_{a,i}}\left\langle \mathbb{F}_{t}^{a}\mathbb{F}_{s}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{t}^{a}\mathbb{F}_{s}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{V}\right),\label{eq:energy_pert_DeltaE}
 \end{align}
 
 \end_inset
@@ -3489,35 +3601,104 @@ Calculation of
 \end_layout
 
 \begin_layout Standard
+In this section, we will find the expression of 
+\begin_inset Formula $h_{kl}^{a}$
+\end_inset
+
+ in terms of lowering and raising operators.
+ The 
+\begin_inset Formula $h_{kl}^{a}$
+\end_inset
+
+ in the language of 
+\begin_inset Formula $\theta_{k}$
+\end_inset
+
+ is
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \[
-h_{kl}=-2\left(1-2\theta_{k}\frac{d}{d\theta_{k}}\right)-2\theta_{k}\frac{d}{d\theta_{l}}-2\theta_{l}\frac{d}{d\theta_{k}}-2i\theta_{k}\theta_{l}-2i\frac{d}{d\theta_{k}}\frac{d}{d\theta_{l}}
+h_{kl}=-2\left(1-2\theta_{k}\frac{d}{d\theta_{k}}\right)-2\theta_{k}\frac{d}{d\theta_{l}}-2\theta_{l}\frac{d}{d\theta_{k}}-2i\theta_{k}\theta_{l}-2i\frac{d}{d\theta_{k}}\frac{d}{d\theta_{l}}+2\xi+2\delta_{k,l}.
 \]
 
 \end_inset
 
+We now will temporary drop the last two constant terms and add them back
+ in the end of the calculation.
+\end_layout
 
+\begin_layout Standard
+First, we express 
+\begin_inset Formula $\theta_{k}$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{d}{d\theta_{k}}$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $\alpha_{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta_{n}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+\theta_{k}=\frac{1}{\sqrt{M}}\sum_{n=0}^{M-1}\alpha_{n}e^{2\pi ikn/M},\quad\frac{d}{d\theta_{k}}=\frac{1}{\sqrt{M}}\sum_{n=0}^{M-1}\beta_{n}e^{2\pi ikn/M}.
+\]
+
+\end_inset
+
+ It then follows 
 \begin_inset Formula 
 \begin{eqnarray*}
-h_{kl} & = & -2+\frac{4}{M}\sum_{n,m=1}^{M-1}\alpha_{n}\beta_{m}\exp\left(2\pi ik\frac{m+n}{M}\right)\\
- &  & -\frac{2}{M}\sum_{n,m=1}^{M-1}\left(\alpha_{n}\beta_{m}+\alpha_{m}\beta_{n}+i\alpha_{n}\alpha_{m}+i\beta_{n}\beta_{m}\right)\exp\left(2\pi i\frac{kn+lm}{M}\right)\\
- &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left(\alpha_{n}\beta_{0}+\alpha_{0}\beta_{n}-i\alpha_{n}\alpha_{0}-i\beta_{n}\beta_{0}\right)\left[\exp\left(2\pi i\frac{kn}{M}\right)-\exp\left(2\pi i\frac{ln}{M}\right)\right]
+\theta_{k}\frac{d}{d\theta_{k}} & = & \frac{1}{M}\sum_{n,m=0}^{M-1}\alpha_{n}\beta_{m}\exp\left(2\pi ik\frac{m+n}{M}\right)\\
+\theta_{k}\frac{d}{d\theta_{l}}+\theta_{l}\frac{d}{d\theta_{k}} & = & \frac{1}{M}\sum_{n,m=0}^{M-1}\left(\alpha_{n}\beta_{m}+\alpha_{m}\beta_{n}\right)\left[\exp\left(2\pi i\frac{kn+lm}{M}\right)\right]\\
+\theta_{k}\theta_{l} & = & \frac{1}{M}\sum_{n,m=0}^{M-1}\alpha_{n}\alpha_{m}\exp\left(2\pi i\frac{kn+lm}{M}\right)\\
+\frac{d}{d\theta_{k}}\frac{d}{d\theta_{l}} & = & \frac{1}{M}\sum_{n,m=0}^{M-1}\beta_{n}\beta_{m}\exp\left(2\pi i\frac{kn+lm}{M}\right).
 \end{eqnarray*}
 
 \end_inset
 
- Using Using
+ Substuting above into 
+\begin_inset Formula $h_{kl}$
+\end_inset
+
+, 
 \begin_inset Formula 
-\[
-\alpha_{k}=c_{k}F_{M-k}^{\dagger}+s_{k}F_{k},\quad\beta_{k}=-s_{k}F_{M-k}^{\dagger}+c_{k}F_{k},\quad k=1,\cdots,M-1,
-\]
+\begin{eqnarray*}
+h_{kl} & = & -2+\frac{4}{M}\sum_{n,m=0}^{M-1}\alpha_{n}\beta_{m}\exp\left(2\pi ik\frac{m+n}{M}\right)\\
+ &  & -\frac{2}{M}\sum_{n,m=0}^{M-1}\left(\alpha_{n}\beta_{m}+\alpha_{m}\beta_{n}+i\alpha_{n}\alpha_{m}+i\beta_{n}\beta_{m}\right)\exp\left(2\pi i\frac{kn+lm}{M}\right)\\
+ & = & -2+\frac{4}{M}\sum_{n,m=1}^{M-1}\alpha_{n}\beta_{m}\exp\left(2\pi ik\frac{m+n}{M}\right)\\
+ &  & -\frac{2}{M}\sum_{n,m=1}^{M-1}\left(\alpha_{n}\beta_{m}+\alpha_{m}\beta_{n}+i\alpha_{n}\alpha_{m}+i\beta_{n}\beta_{m}\right)\exp\left(2\pi i\frac{kn+lm}{M}\right)\\
+ &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left(\alpha_{n}\beta_{0}+\alpha_{0}\beta_{n}-i\alpha_{n}\alpha_{0}-i\beta_{n}\beta_{0}\right)\left[\exp\left(2\pi i\frac{kn}{M}\right)-\exp\left(2\pi i\frac{ln}{M}\right)\right]\\
+ & \equiv & h_{kl}^{\left(1\right)}+h_{kl}^{\left(0\right)},
+\end{eqnarray*}
 
 \end_inset
 
+ where in last step we have define the terms involving zero modes as 
+\begin_inset Formula $h_{kl}^{\left(0\right)}$
+\end_inset
 
+ and the rest as 
+\begin_inset Formula $h_{kl}^{\left(1\right)}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Using 
 \begin_inset Formula 
 \[
-\alpha_{0}=F_{0,}^{\dagger}\quad\beta_{0}=F_{0},
+\alpha_{k}=c_{k}F_{M-k}^{\dagger}+s_{k}F_{k},\quad\beta_{k}=-s_{k}F_{M-k}^{\dagger}+c_{k}F_{k},\quad k=1,\cdots,M-1,
 \]
 
 \end_inset
@@ -3546,56 +3727,157 @@ we have
 
 \end_inset
 
- Let 
+ Now
+\begin_inset Formula 
+\begin{align*}
+h_{kl}^{\left(1\right)}= & -2+\frac{4}{M}\sum_{n,m=1}^{M-1}\alpha_{n}\beta_{m}\exp\left(2\pi ik\frac{m+n}{M}\right)\\
+ & -\frac{2}{M}\sum_{n,m=1}^{M-1}\left(\alpha_{n}\beta_{m}+\alpha_{m}\beta_{n}+i\alpha_{n}\alpha_{m}+i\beta_{n}\beta_{m}\right)\exp\left(2\pi i\frac{kn+lm}{M}\right)\\
+= & -2+\frac{4}{M}\sum_{n,m=1}^{M-1}\exp\left(2\pi ik\frac{m+n}{M}\right)\\
+ & \times\left(-c_{n}s_{m}F_{M-n}^{\dagger}F_{M-m}^{\dagger}+c_{m}s_{n}F_{n}F_{m}+c_{n}c_{m}F_{M-n}^{\dagger}F_{m}+s_{n}s_{m}F_{M-m}^{\dagger}F_{n}\right)\\
+ & -\frac{2}{M}\sum_{n,m=1}^{M-1}\exp\left(2\pi i\frac{kn+lm}{M}\right)\left(-c_{n}s_{m}+c_{m}s_{n}+ic_{n}c_{m}+is_{n}s_{m}\right)F_{M-n}^{\dagger}F_{M-m}^{\dagger}\\
+ & -\frac{2}{M}\sum_{n,m=1}^{M-1}\exp\left(2\pi i\frac{kn+lm}{M}\right)\left(c_{m}s_{n}-c_{n}s_{m}+is_{m}s_{n}+ic_{n}c_{m}\right)F_{n}F_{m}\\
+ & -\frac{2}{M}\sum_{n,m=1}^{M-1}\left[\exp\left(2\pi i\frac{kn+lm}{M}\right)+\exp\left(2\pi i\frac{km+ln}{M}\right)\right]\left(c_{n}c_{m}+s_{n}s_{m}\right)F_{M-n}^{\dagger}F_{m}\\
+ & -\frac{2}{M}\sum_{n,m=1}^{M-1}\left[\exp\left(2\pi i\frac{kn+lm}{M}\right)-\exp\left(2\pi i\frac{km+ln}{M}\right)\right]\left(ic_{n}s_{m}-ic_{m}s_{n}\right)F_{M-n}^{\dagger}F_{m}\\
+ & +\frac{4}{M}\sum_{n=1}^{M-1}s_{n}^{2}-\frac{2}{M}\sum_{n=1}^{M-1}\exp\left(2n\pi i\frac{k-l}{M}\right)\left(2s_{n}^{2}+2ic_{n}s_{n}\right).
+\end{align*}
+
+\end_inset
+
+After combining like terms and antisymmetrize 
+\begin_inset Formula $F^{\dagger}F^{\dagger}$
+\end_inset
+
+ and 
+\begin_inset Formula $FF$
+\end_inset
+
+ terms, we obtain 
+\begin_inset Formula 
+\begin{equation}
+h_{kl}^{\left(1\right)}=\frac{2}{M}\sum_{n,m=1}^{M-1}\left(A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}+A_{nm}F_{n}F_{m}+2A_{-n,m}F_{n}^{\dagger}F_{m}\right)-\frac{2}{M}\cot\frac{\pi}{2M}+\frac{2}{M}\cot\frac{2\left(k-l\right)+1}{2M}\pi,\label{eq:app_hkl1}
+\end{equation}
+
+\end_inset
+
+ where 
+\begin_inset Formula 
+\[
+A_{nm}=\exp\left(2\pi ik\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi+\exp\left(2\pi i\frac{\left(k+l\right)\left(m+n\right)}{2M}\right)\sin\frac{\left(l-k-1/2\right)\left(m-n\right)\pi}{M}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Applying 
+\begin_inset Formula 
+\[
+\alpha_{n}\beta_{0}=\exp\left(-\frac{i\pi}{4}\right)c_{n}F_{M-n}^{\dagger}F_{0}+s_{n}F_{n}F_{0}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha_{0}\beta_{n} & = & \exp\left(\frac{i\pi}{4}\right)\left(-s_{n}F_{0}^{\dagger}F_{M-n}^{\dagger}+c_{n}F_{0}^{\dagger}F_{n}\right)\\
+ & = & \exp\left(\frac{i\pi}{4}\right)\left(s_{n}F_{M-n}^{\dagger}F_{0}^{\dagger}+c_{n}F_{0}^{\dagger}F_{n}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\alpha_{n}\alpha_{0} & = & \exp\left(\frac{i\pi}{4}\right)\left(c_{n}F_{M-n}^{\dagger}F_{0}^{\dagger}+s_{n}F_{n}F_{0}^{\dagger}\right)\\
+ & = & \exp\left(\frac{i\pi}{4}\right)\left(c_{n}F_{M-n}^{\dagger}F_{0}^{\dagger}-s_{n}F_{0}^{\dagger}F_{n}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\beta_{n}\beta_{0}=\exp\left(-\frac{i\pi}{4}\right)\left(-s_{n}F_{M-n}^{\dagger}F_{0}+c_{n}F_{n}F_{0}\right)
+\]
+
+\end_inset
+
+ to 
 \begin_inset Formula $h_{kl}^{\left(0\right)}$
 \end_inset
 
- be the part invoving zero modes and 
-\begin_inset Formula $h_{kl}^{\left(1\right)}$
-\end_inset
+, we have
+\end_layout
 
- be the part without zero modes.
- 
+\begin_layout Standard
 \begin_inset Formula 
-\[
-h_{kl}^{\left(1\right)}=\frac{2}{M}\sum_{n,m=1}^{M-1}\left(A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}+A_{nm}F_{n}F_{m}+B_{nm}F_{n}^{\dagger}F_{m}\right)-\frac{2}{M}\cot\frac{\pi}{2M}+\frac{2}{M}\cot\frac{2\left(k-l\right)+1}{2M}\pi
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-h_{kl}^{\left(0\right)}=\frac{2}{M}\sum_{n=1}^{M-1}X_{n}\left(F_{0}^{\dagger}F_{n}^{\dagger}-iF_{n}^{\dagger}F_{0}\right)+\mathrm{h.c.}
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-B_{nm}=2\exp\left(2\pi ik\frac{m-n}{M}\right)\sin\frac{\left(n+m\right)\pi}{2M}+2\exp\left(2\pi i\frac{k+l}{2}\frac{m-n}{M}\right)\sin\frac{\left(l-k-1/2\right)\left(m+n\right)}{M}\pi
-\]
+\begin{eqnarray*}
+h_{kl}^{\left(0\right)} & = & \frac{2}{M}\sum_{n=1}^{M-1}\left(\alpha_{n}\beta_{0}+\alpha_{0}\beta_{n}-i\alpha_{n}\alpha_{0}-i\beta_{n}\beta_{0}\right)\left[\exp\left(2\pi i\frac{kn}{M}\right)-\exp\left(2\pi i\frac{ln}{M}\right)\right]\\
+ & = & \frac{2}{M}\sum_{n=1}^{M-1}X_{n}^{\dagger}\left(F_{0}^{\dagger}F_{n}^{\dagger}-F_{n}^{\dagger}F_{0}\right)+\mathrm{h.c.},
+\end{eqnarray*}
 
 \end_inset
 
  where
 \begin_inset Formula 
 \[
-A_{nm}=\exp\left(2\pi ik\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi+\exp\left(2\pi i\frac{\left(k+l\right)\left(m+n\right)}{2M}\right)\sin\frac{\left(l-k-1/2\right)\left(m-n\right)\pi}{M}
+X_{n}=i\left[\exp\left(2\pi i\frac{ln}{M}\right)-\exp\left(2\pi i\frac{kn}{M}\right)\right]\exp\left(-\frac{in\pi}{2M}\right).
 \]
 
 \end_inset
 
+ We see that 
+\begin_inset Formula 
+\begin{eqnarray*}
+A_{n0} & = & -\exp\left(2\pi ik\frac{n}{M}\right)\sin\frac{n\pi}{2M}-\exp\left(2\pi i\frac{\left(k+l\right)n}{2M}\right)\sin\frac{\left(l-k-1/2\right)n\pi}{M}\\
+ & = & -\exp\left(2\pi ik\frac{n}{M}\right)\sin\frac{n\pi}{2M}-\frac{1}{2i}\exp\left(2\pi i\frac{\left(l-1/2\right)n}{M}\right)+\frac{1}{2i}\exp\left(2\pi i\frac{\left(k+1/2\right)n}{M}\right)\\
+ & = & \exp\left(2\pi ik\frac{n}{M}\right)\left(-\sin\frac{n\pi}{2M}+\frac{1}{2i}\exp\left(\frac{in\pi}{2M}\right)\right)-\frac{1}{2i}\exp\left(2\pi i\frac{ln}{M}\right)\exp\left(-\frac{in\pi}{2M}\right)\\
+ & = & -\frac{i}{2}\exp\left(2\pi ik\frac{n}{M}\right)\exp\left(-\frac{in\pi}{2M}\right)+\frac{i}{2}\exp\left(2\pi i\frac{ln}{M}\right)\exp\left(-\frac{in\pi}{2M}\right)\\
+ & = & \frac{1}{2}X_{n}.
+\end{eqnarray*}
 
+\end_inset
+
+Hence, to add 
+\begin_inset Formula $h_{kl}^{\left(0\right)}$
+\end_inset
+
+ terms, we can simply change the 
+\begin_inset Formula $m,n$
+\end_inset
+
+ index of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:app_hkl1"
+
+\end_inset
+
+ to start from 
+\begin_inset Formula $0$
+\end_inset
+
+.
+ Finally, adding back the constant terms, we have 
 \begin_inset Formula 
 \[
-X_{n}=\left[\exp\left(-2\pi i\frac{kn}{M}\right)-\exp\left(-2\pi i\frac{ln}{M}\right)\right]\left(s_{n}+ic_{n}\right)
+h_{kl}=\frac{2}{M}\sum_{n,m=0}^{M-1}\left(A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}+A_{nm}F_{n}F_{m}+2A_{-n,m}F_{n}^{\dagger}F_{m}\right)+\frac{2}{M}\gamma
 \]
 
 \end_inset
 
- 
+ where 
+\begin_inset Formula 
+\[
+\gamma=-\cot\frac{\pi}{2M}+\cot\frac{2\left(k-l\right)+1}{2M}\pi+M\xi
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

@@ -1031,7 +1031,7 @@ h_{kl}^{\left(1\right)}=\frac{2}{M}\sum_{n,m=1}^{M-1}\left(\bar{A}_{nm}F_{n}^{\d
  where 
 \begin_inset Formula 
 \[
-\bar{A}_{nm}=A_{nm}^{\dagger}=A_{-n,-m}
+\bar{A}_{nm}=A_{nm}^{\dagger}
 \]
 
 \end_inset
