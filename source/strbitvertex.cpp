@@ -3,6 +3,7 @@
 #include<complex>
 #include <cmath>
 #include <sstream>
+#include <fstream>
 #include <cassert>
 #include <iomanip>
 #include <vector>
@@ -146,9 +147,10 @@ void TestEnergyCorrection(int maxM = 17)
 	cout << "TestEnergyCorrection passed!" << endl;
 }
 
-void RunEnergyCorrection(int s, DT xi, int minM, int maxM)
+void RunEnergyCorrection(int s, DT xi, int minM, int maxM, bool outputE)
 {
 	EnergyCalculator calc(s, xi);
+	vector<DT> totalE;
 	for (int M = minM; M <= maxM; M++)
 	{
 		if ((s * (M - 1)) % 2 == 1) continue;
@@ -157,16 +159,35 @@ void RunEnergyCorrection(int s, DT xi, int minM, int maxM)
 		DT res = calc.EnergyCorrection(M, true);
 		cout << "M=" << M << " s=" << s << " E=" << res;
 		cout << " time=" << watch.Stop() << " seconds" << endl;
+		totalE.push_back(res);
+	}
+
+	if (outputE)
+	{
+		string file = "Es=" + ToString(s) + "xi=" + ToString(xi) + ".txt";
+		ofstream os(file.c_str());
+		os << "M\tE" << endl;
+		for (int i = 0; i < totalE.size(); i++)
+		{
+			if (s % 2 == 0)
+			{
+				os << i + minM << "\t" << totalE[i] << endl;
+			}
+			else
+			{
+				os << i * 2 + minM << "\t" << totalE[i] << endl;
+			}
+		}
 	}
 }
 
-void RunEnergyCorrection()
+void RunEnergyCorrection(bool outputE = false)
 {
 	int s, minM, maxM;
 	DT xi;
 	cout << "input the values of s, xi, minM, maxM: " << endl;
 	cin >> s >> xi >> minM >> maxM;
-	RunEnergyCorrection(s, xi, minM, maxM);
+	RunEnergyCorrection(s, xi, minM, maxM, outputE);
 }
 
 void TestMatrices(int M, int L)
@@ -532,7 +553,7 @@ int main()
 	//TestAllStates();
 	//TestVevCalculator();
 	TestEnergyCorrection();
-	//RunEnergyCorrection();
+	//RunEnergyCorrection(true);
 	//TestMatrices(4,1);
 	//TestOperatorVev();
 	TestPartition();
