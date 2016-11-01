@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    154062,       3163]
-NotebookOptionsPosition[    153426,       3140]
-NotebookOutlinePosition[    153760,       3155]
-CellTagsIndexPosition[    153717,       3152]
+NotebookDataLength[    162159,       3370]
+NotebookOptionsPosition[    161357,       3342]
+NotebookOutlinePosition[    161691,       3357]
+CellTagsIndexPosition[    161648,       3354]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -31,14 +31,44 @@ Cell[BoxData[
   RowBox[{
    RowBox[{
     RowBox[{"ClearAll", "[", 
-     RowBox[{"ResultFolder", ",", "LoadEnergyData"}], "]"}], ";"}], 
-   "\[IndentingNewLine]", 
+     RowBox[{"ResultFolder", ",", "LoadEnergyData", ",", "LoadTotalEnergy"}], 
+     "]"}], ";"}], "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"ResultFolder", " ", "=", " ", 
      RowBox[{
       RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
       "\"\<../results/\>\""}]}], ";"}], "\[IndentingNewLine]", 
    "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"LoadTotalEnergy", "[", 
+      RowBox[{"s_", ",", "xi_"}], "]"}], ":=", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"file", ",", "data"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"file", " ", "=", " ", 
+         RowBox[{"\"\<Es=\>\"", "<>", " ", 
+          RowBox[{"ToString", "[", "s", "]"}], " ", "<>", " ", "\"\<xi=\>\"", 
+          "<>", 
+          RowBox[{"ToString", "[", "xi", "]"}]}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"data", " ", "=", " ", 
+         RowBox[{"Import", "[", 
+          RowBox[{
+           RowBox[{
+           "ResultFolder", "<>", " ", "file", " ", "<>", " ", 
+            "\"\<.txt\>\""}], ",", " ", "\"\<Table\>\""}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"data", "=", 
+         RowBox[{"data", "[", 
+          RowBox[{"[", 
+           RowBox[{"2", ";;", 
+            RowBox[{"Length", "[", "data", "]"}]}], "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Return", "[", "data", "]"}], ";"}]}], "\[IndentingNewLine]", 
+      "]"}]}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{"(*", 
     RowBox[{
      RowBox[{"DataSet", ":", " ", 
@@ -262,7 +292,42 @@ Cell[BoxData[
           RowBox[{"Join", "[", 
            RowBox[{
             RowBox[{"{", 
-             RowBox[{"PlotLegends", "\[Rule]", "labels"}], "}"}], ",", 
+             RowBox[{
+              RowBox[{"PlotLegends", "\[Rule]", "labels"}], ",", 
+              RowBox[{"AxesLabel", "\[Rule]", 
+               RowBox[{"{", 
+                RowBox[{
+                "\"\<L/M\>\"", ",", " ", 
+                 "\"\<\!\(\*SubscriptBox[\(E\), \(L\)]\)\>\""}], "}"}]}]}], 
+             "}"}], ",", 
+            RowBox[{"FilterRules", "[", 
+             RowBox[{
+              RowBox[{"{", "opts", "}"}], ",", 
+              RowBox[{"Options", "[", "ListPlot", "]"}]}], "]"}]}], "]"}]}], 
+         "]"}]}]}], "\[IndentingNewLine]", "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"PlotTotalEnergy", "[", 
+      RowBox[{"s_", ",", "xi_", ",", 
+       RowBox[{"opts", ":", 
+        RowBox[{"OptionsPattern", "[", "]"}]}]}], "]"}], ":=", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", "data", "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"data", "=", 
+         RowBox[{"LoadTotalEnergy", "[", 
+          RowBox[{"s", ",", "xi"}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"ListPlot", "[", 
+         RowBox[{"data", ",", 
+          RowBox[{"Join", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"AxesLabel", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"\"\<M\>\"", ",", " ", "\"\<E\>\""}], "}"}]}], "}"}], 
+            ",", 
             RowBox[{"FilterRules", "[", 
              RowBox[{
               RowBox[{"{", "opts", "}"}], ",", 
@@ -366,7 +431,11 @@ Cell[BoxData[
    3.686438350741912*^9}, {3.6864389561528587`*^9, 3.686439088072646*^9}, {
    3.6864391193032923`*^9, 3.6864391852547817`*^9}, {3.686439273662405*^9, 
    3.686439322005787*^9}, {3.686439398036254*^9, 3.686439414990019*^9}, {
-   3.686440291127781*^9, 3.6864402960031567`*^9}}],
+   3.686440291127781*^9, 3.6864402960031567`*^9}, {3.687017955440814*^9, 
+   3.6870181026699867`*^9}, {3.687018140577978*^9, 3.6870182618915443`*^9}, 
+   3.6870188600836287`*^9, {3.687018891125381*^9, 3.6870188945390797`*^9}, {
+   3.687019031325075*^9, 3.687019085039688*^9}, {3.687019120918879*^9, 
+   3.687019142958473*^9}}],
 
 Cell[BoxData[
  TemplateBox[{GraphicsBox[{{}, {{{}, {}, {
@@ -408,8 +477,12 @@ Cell[BoxData[
      PlotRange -> {{0, 0.9130434782608695}, {0, 0.5864064272211721}}, 
      DisplayFunction -> Identity, AspectRatio -> 
      NCache[GoldenRatio^(-1), 0.6180339887498948], Axes -> {True, True}, 
-     AxesLabel -> {None, None}, AxesOrigin -> {0, 0}, DisplayFunction :> 
-     Identity, Frame -> {{False, False}, {False, False}}, 
+     AxesLabel -> {
+       FormBox["\"L/M\"", TraditionalForm], 
+       FormBox[
+       "\"\\!\\(\\*SubscriptBox[\\(E\\), \\(L\\)]\\)\"", TraditionalForm]}, 
+     AxesOrigin -> {0, 0}, DisplayFunction :> Identity, 
+     Frame -> {{False, False}, {False, False}}, 
      FrameLabel -> {{None, None}, {None, None}}, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
      GridLines -> {None, None}, GridLinesStyle -> Directive[
@@ -698,7 +771,9 @@ Cell[BoxData[
    3.686437296352468*^9, {3.6864373998755217`*^9, 3.6864374257324667`*^9}, 
    3.686438353932864*^9, {3.6864390734952374`*^9, 3.686439091681973*^9}, {
    3.686439146427425*^9, 3.6864391868486223`*^9}, 3.686439325776939*^9, {
-   3.686439401216815*^9, 3.686439419497932*^9}, 3.686440297449314*^9}],
+   3.686439401216815*^9, 3.686439419497932*^9}, 3.686440297449314*^9, 
+   3.687018801414892*^9, 3.687018861609901*^9, 3.6870188965505133`*^9, 
+   3.687019088116033*^9, 3.6870191448513813`*^9}],
 
 Cell[BoxData[
  TemplateBox[{GraphicsBox[{{}, {{{}, {}, {
@@ -744,8 +819,12 @@ Cell[BoxData[
      PlotRange -> {{0, 0.9565217391304348}, {-0.4691190926275992, 0}}, 
      DisplayFunction -> Identity, AspectRatio -> 
      NCache[GoldenRatio^(-1), 0.6180339887498948], Axes -> {True, True}, 
-     AxesLabel -> {None, None}, AxesOrigin -> {0, 0}, DisplayFunction :> 
-     Identity, Frame -> {{False, False}, {False, False}}, 
+     AxesLabel -> {
+       FormBox["\"L/M\"", TraditionalForm], 
+       FormBox[
+       "\"\\!\\(\\*SubscriptBox[\\(E\\), \\(L\\)]\\)\"", TraditionalForm]}, 
+     AxesOrigin -> {0, 0}, DisplayFunction :> Identity, 
+     Frame -> {{False, False}, {False, False}}, 
      FrameLabel -> {{None, None}, {None, None}}, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
      GridLines -> {None, None}, GridLinesStyle -> Directive[
@@ -1034,7 +1113,9 @@ Cell[BoxData[
    3.686437296352468*^9, {3.6864373998755217`*^9, 3.6864374257324667`*^9}, 
    3.686438353932864*^9, {3.6864390734952374`*^9, 3.686439091681973*^9}, {
    3.686439146427425*^9, 3.6864391868486223`*^9}, 3.686439325776939*^9, {
-   3.686439401216815*^9, 3.686439419497932*^9}, 3.686440297843555*^9}],
+   3.686439401216815*^9, 3.686439419497932*^9}, 3.686440297449314*^9, 
+   3.687018801414892*^9, 3.687018861609901*^9, 3.6870188965505133`*^9, 
+   3.687019088116033*^9, 3.687019145217595*^9}],
 
 Cell[BoxData[
  TemplateBox[{GraphicsBox[{{}, {{{}, {}, {
@@ -1080,8 +1161,12 @@ Cell[BoxData[
      PlotRange -> {{0, 0.9130434782608695}, {-26.414, 33.29089999999999}}, 
      DisplayFunction -> Identity, AspectRatio -> 
      NCache[GoldenRatio^(-1), 0.6180339887498948], Axes -> {True, True}, 
-     AxesLabel -> {None, None}, AxesOrigin -> {0, 0}, DisplayFunction :> 
-     Identity, Frame -> {{False, False}, {False, False}}, 
+     AxesLabel -> {
+       FormBox["\"L/M\"", TraditionalForm], 
+       FormBox[
+       "\"\\!\\(\\*SubscriptBox[\\(E\\), \\(L\\)]\\)\"", TraditionalForm]}, 
+     AxesOrigin -> {0, 0}, DisplayFunction :> Identity, 
+     Frame -> {{False, False}, {False, False}}, 
      FrameLabel -> {{None, None}, {None, None}}, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
      GridLines -> {None, None}, GridLinesStyle -> Directive[
@@ -1370,7 +1455,9 @@ Cell[BoxData[
    3.686437296352468*^9, {3.6864373998755217`*^9, 3.6864374257324667`*^9}, 
    3.686438353932864*^9, {3.6864390734952374`*^9, 3.686439091681973*^9}, {
    3.686439146427425*^9, 3.6864391868486223`*^9}, 3.686439325776939*^9, {
-   3.686439401216815*^9, 3.686439419497932*^9}, 3.6864402982328987`*^9}],
+   3.686439401216815*^9, 3.686439419497932*^9}, 3.686440297449314*^9, 
+   3.687018801414892*^9, 3.687018861609901*^9, 3.6870188965505133`*^9, 
+   3.687019088116033*^9, 3.687019145570374*^9}],
 
 Cell[BoxData[
  TemplateBox[{GraphicsBox[{{}, {{{}, {}, {
@@ -1415,8 +1502,12 @@ Cell[BoxData[
      PlotRange -> {{0, 0.9130434782608695}, {-0.12168429752066116`, 
        0.01003945179584121}}, DisplayFunction -> Identity, AspectRatio -> 
      NCache[GoldenRatio^(-1), 0.6180339887498948], Axes -> {True, True}, 
-     AxesLabel -> {None, None}, AxesOrigin -> {0, 0}, DisplayFunction :> 
-     Identity, Frame -> {{False, False}, {False, False}}, 
+     AxesLabel -> {
+       FormBox["\"L/M\"", TraditionalForm], 
+       FormBox[
+       "\"\\!\\(\\*SubscriptBox[\\(E\\), \\(L\\)]\\)\"", TraditionalForm]}, 
+     AxesOrigin -> {0, 0}, DisplayFunction :> Identity, 
+     Frame -> {{False, False}, {False, False}}, 
      FrameLabel -> {{None, None}, {None, None}}, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
      GridLines -> {None, None}, GridLinesStyle -> Directive[
@@ -1705,7 +1796,9 @@ Cell[BoxData[
    3.686437296352468*^9, {3.6864373998755217`*^9, 3.6864374257324667`*^9}, 
    3.686438353932864*^9, {3.6864390734952374`*^9, 3.686439091681973*^9}, {
    3.686439146427425*^9, 3.6864391868486223`*^9}, 3.686439325776939*^9, {
-   3.686439401216815*^9, 3.686439419497932*^9}, 3.686440298661059*^9}],
+   3.686439401216815*^9, 3.686439419497932*^9}, 3.686440297449314*^9, 
+   3.687018801414892*^9, 3.687018861609901*^9, 3.6870188965505133`*^9, 
+   3.687019088116033*^9, 3.687019146343794*^9}],
 
 Cell[BoxData[
  TemplateBox[{GraphicsBox[{{}, {{{}, {}, {
@@ -1751,8 +1844,12 @@ Cell[BoxData[
      PlotRange -> {{0, 0.9565217391304348}, {-0.0018244545454545456`, 
        0.005314285714285714}}, DisplayFunction -> Identity, AspectRatio -> 
      NCache[GoldenRatio^(-1), 0.6180339887498948], Axes -> {True, True}, 
-     AxesLabel -> {None, None}, AxesOrigin -> {0, 0}, DisplayFunction :> 
-     Identity, Frame -> {{False, False}, {False, False}}, 
+     AxesLabel -> {
+       FormBox["\"L/M\"", TraditionalForm], 
+       FormBox[
+       "\"\\!\\(\\*SubscriptBox[\\(E\\), \\(L\\)]\\)\"", TraditionalForm]}, 
+     AxesOrigin -> {0, 0}, DisplayFunction :> Identity, 
+     Frame -> {{False, False}, {False, False}}, 
      FrameLabel -> {{None, None}, {None, None}}, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
      GridLines -> {None, None}, GridLinesStyle -> Directive[
@@ -2042,7 +2139,9 @@ Cell[BoxData[
    3.686437296352468*^9, {3.6864373998755217`*^9, 3.6864374257324667`*^9}, 
    3.686438353932864*^9, {3.6864390734952374`*^9, 3.686439091681973*^9}, {
    3.686439146427425*^9, 3.6864391868486223`*^9}, 3.686439325776939*^9, {
-   3.686439401216815*^9, 3.686439419497932*^9}, 3.6864402990049753`*^9}],
+   3.686439401216815*^9, 3.686439419497932*^9}, 3.686440297449314*^9, 
+   3.687018801414892*^9, 3.687018861609901*^9, 3.6870188965505133`*^9, 
+   3.687019088116033*^9, 3.687019146743746*^9}],
 
 Cell[BoxData[
  TemplateBox[{GraphicsBox[{{}, {{{}, {}, {
@@ -2084,8 +2183,12 @@ Cell[BoxData[
      PlotRange -> {{0, 0.9130434782608695}, {-38.990503000000004`, 
        4.5294550000000005`}}, DisplayFunction -> Identity, AspectRatio -> 
      NCache[GoldenRatio^(-1), 0.6180339887498948], Axes -> {True, True}, 
-     AxesLabel -> {None, None}, AxesOrigin -> {0, 0}, DisplayFunction :> 
-     Identity, Frame -> {{False, False}, {False, False}}, 
+     AxesLabel -> {
+       FormBox["\"L/M\"", TraditionalForm], 
+       FormBox[
+       "\"\\!\\(\\*SubscriptBox[\\(E\\), \\(L\\)]\\)\"", TraditionalForm]}, 
+     AxesOrigin -> {0, 0}, DisplayFunction :> Identity, 
+     Frame -> {{False, False}, {False, False}}, 
      FrameLabel -> {{None, None}, {None, None}}, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
      GridLines -> {None, None}, GridLinesStyle -> Directive[
@@ -2374,7 +2477,9 @@ Cell[BoxData[
    3.686437296352468*^9, {3.6864373998755217`*^9, 3.6864374257324667`*^9}, 
    3.686438353932864*^9, {3.6864390734952374`*^9, 3.686439091681973*^9}, {
    3.686439146427425*^9, 3.6864391868486223`*^9}, 3.686439325776939*^9, {
-   3.686439401216815*^9, 3.686439419497932*^9}, 3.686440299608677*^9}],
+   3.686439401216815*^9, 3.686439419497932*^9}, 3.686440297449314*^9, 
+   3.687018801414892*^9, 3.687018861609901*^9, 3.6870188965505133`*^9, 
+   3.687019088116033*^9, 3.687019147088367*^9}],
 
 Cell[BoxData[
  TemplateBox[{GraphicsBox[{{}, {{{}, {}, {
@@ -2429,8 +2534,12 @@ Cell[BoxData[
      PlotRange -> {{0, 0.9310344827586207}, {0, 0.233128418549346}}, 
      DisplayFunction -> Identity, AspectRatio -> 
      NCache[GoldenRatio^(-1), 0.6180339887498948], Axes -> {True, True}, 
-     AxesLabel -> {None, None}, AxesOrigin -> {0, 0}, DisplayFunction :> 
-     Identity, Frame -> {{False, False}, {False, False}}, 
+     AxesLabel -> {
+       FormBox["\"L/M\"", TraditionalForm], 
+       FormBox[
+       "\"\\!\\(\\*SubscriptBox[\\(E\\), \\(L\\)]\\)\"", TraditionalForm]}, 
+     AxesOrigin -> {0, 0}, DisplayFunction :> Identity, 
+     Frame -> {{False, False}, {False, False}}, 
      FrameLabel -> {{None, None}, {None, None}}, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
      GridLines -> {None, None}, GridLinesStyle -> Directive[
@@ -2789,7 +2898,9 @@ Cell[BoxData[
    3.686437296352468*^9, {3.6864373998755217`*^9, 3.6864374257324667`*^9}, 
    3.686438353932864*^9, {3.6864390734952374`*^9, 3.686439091681973*^9}, {
    3.686439146427425*^9, 3.6864391868486223`*^9}, 3.686439325776939*^9, {
-   3.686439401216815*^9, 3.686439419497932*^9}, 3.6864403002877207`*^9}],
+   3.686439401216815*^9, 3.686439419497932*^9}, 3.686440297449314*^9, 
+   3.687018801414892*^9, 3.687018861609901*^9, 3.6870188965505133`*^9, 
+   3.687019088116033*^9, 3.687019147645451*^9}],
 
 Cell[BoxData[
  TemplateBox[{GraphicsBox[{{}, {{{}, {}, {
@@ -2845,8 +2956,12 @@ Cell[BoxData[
      PlotRange -> {{0, 0.9333333333333333}, {-11.848651851851852`, 0}}, 
      DisplayFunction -> Identity, AspectRatio -> 
      NCache[GoldenRatio^(-1), 0.6180339887498948], Axes -> {True, True}, 
-     AxesLabel -> {None, None}, AxesOrigin -> {0, 0}, DisplayFunction :> 
-     Identity, Frame -> {{False, False}, {False, False}}, 
+     AxesLabel -> {
+       FormBox["\"L/M\"", TraditionalForm], 
+       FormBox[
+       "\"\\!\\(\\*SubscriptBox[\\(E\\), \\(L\\)]\\)\"", TraditionalForm]}, 
+     AxesOrigin -> {0, 0}, DisplayFunction :> Identity, 
+     Frame -> {{False, False}, {False, False}}, 
      FrameLabel -> {{None, None}, {None, None}}, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
      GridLines -> {None, None}, GridLinesStyle -> Directive[
@@ -3135,7 +3250,94 @@ Cell[BoxData[
    3.686437296352468*^9, {3.6864373998755217`*^9, 3.6864374257324667`*^9}, 
    3.686438353932864*^9, {3.6864390734952374`*^9, 3.686439091681973*^9}, {
    3.686439146427425*^9, 3.6864391868486223`*^9}, 3.686439325776939*^9, {
-   3.686439401216815*^9, 3.686439419497932*^9}, 3.686440300877535*^9}]
+   3.686439401216815*^9, 3.686439419497932*^9}, 3.686440297449314*^9, 
+   3.687018801414892*^9, 3.687018861609901*^9, 3.6870188965505133`*^9, 
+   3.687019088116033*^9, 3.687019148091283*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"PlotTotalEnergy", "[", 
+    RowBox[{"1", ",", "0", ",", 
+     RowBox[{"Joined", "\[Rule]", "True"}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"PlotTotalEnergy", "[", 
+    RowBox[{"1", ",", 
+     RowBox[{"-", "1"}], ",", 
+     RowBox[{"Joined", "\[Rule]", "True"}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.687018808490451*^9, 3.687018833776434*^9}, {
+  3.687018908610574*^9, 3.687018938860381*^9}, {3.687022344541236*^9, 
+  3.68702234823657*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{}, {}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`],
+      AbsoluteThickness[1.6], 
+     LineBox[{{3., -0.294229}, {5., 1.51612}, {7., 8.84788}, {9., 24.8366}, {
+      11., 52.4987}, {13., 94.7675}, {15., 154.512}, {17., 234.55}, {19., 
+      337.654}, {21., 466.562}, {23., 623.977}, {25., 812.573}, {27., 
+      1035.}, {29., 1293.88}}]}}, {}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{
+    FormBox["\"M\"", TraditionalForm], 
+    FormBox["\"E\"", TraditionalForm]},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{},
+  PlotRange->{{0, 29.}, {-0.294229, 1293.88}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{{3.687018814698616*^9, 3.687018834989801*^9}, {
+   3.687018868256548*^9, 3.68701893976252*^9}, 3.6870191524159117`*^9, 
+   3.68702234946665*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{}, {}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`],
+      AbsoluteThickness[1.6], 
+     LineBox[{{3., -0.633975}, {5., -2.92478}, {7., -6.77101}, {
+      9., -12.1329}, {11., -18.9679}, {13., -27.2339}, {15., -36.8899}, {
+      17., -47.8962}, {19., -60.2142}, {21., -73.8063}, {23., -88.6354}, {
+      25., -104.665}}]}}, {}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{
+    FormBox["\"M\"", TraditionalForm], 
+    FormBox["\"E\"", TraditionalForm]},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{},
+  PlotRange->{{0, 25.}, {-104.665, 0}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.02]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{{3.687018814698616*^9, 3.687018834989801*^9}, {
+   3.687018868256548*^9, 3.68701893976252*^9}, 3.6870191524159117`*^9, 
+   3.68702234959027*^9}]
 }, Open  ]]
 },
 WindowSize->{1278, 947},
@@ -3155,15 +3357,20 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 15053, 346, 1265, "Input"],
-Cell[15636, 370, 16588, 330, 245, "Output"],
-Cell[32227, 702, 16644, 334, 229, "Output"],
-Cell[48874, 1038, 16610, 334, 229, "Output"],
-Cell[65487, 1374, 16695, 333, 223, "Output"],
-Cell[82185, 1709, 16739, 335, 220, "Output"],
-Cell[98927, 2046, 16555, 330, 229, "Output"],
-Cell[115485, 2378, 20830, 413, 241, "Output"],
-Cell[136318, 2793, 17092, 344, 232, "Output"]
+Cell[580, 22, 17881, 415, 1529, "Input"],
+Cell[18464, 439, 16841, 336, 246, "Output"],
+Cell[35308, 777, 16895, 340, 227, "Output"],
+Cell[52206, 1119, 16859, 340, 229, "Output"],
+Cell[69068, 1461, 16946, 339, 223, "Output"],
+Cell[86017, 1802, 16988, 341, 221, "Output"],
+Cell[103008, 2145, 16806, 336, 230, "Output"],
+Cell[119817, 2483, 21079, 419, 242, "Output"],
+Cell[140899, 2904, 17343, 350, 230, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[158279, 3259, 523, 12, 77, "Input"],
+Cell[158805, 3273, 1279, 32, 240, "Output"],
+Cell[160087, 3307, 1254, 32, 231, "Output"]
 }, Open  ]]
 }
 ]
