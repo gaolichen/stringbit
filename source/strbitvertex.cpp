@@ -181,6 +181,41 @@ void RunEnergyCorrection(int s, DT xi, int minM, int maxM, bool outputE)
 	}
 }
 
+void RunEnergyCorrectionForS(int M, int xi, int smin, int smax, bool outputE)
+{
+	vector<DT> totalE;
+	for (int s = smin; s <= smax; s++)
+	{
+		Stopwatch watch;
+		watch.Start();
+		EnergyCalculator calc(s, xi);
+		DT res = calc.EnergyCorrection(M, true);
+		cout << "M=" << M << " s=" << s << " E=" << res;
+		cout << " time=" << watch.Stop() << " seconds" << endl;
+		totalE.push_back(res);
+	}
+
+	if (outputE)
+	{
+		string file = "Exi=" + ToString(xi) + "M=" + ToString(M) + ".txt";
+		ofstream os(file.c_str());
+		os << "s\tE" << endl;
+		for (int s = smin; s <= smax; s++)
+		{
+			os << s << "\t" << totalE[s-smin] << endl;
+		}
+	}
+}
+
+void RunEnergyCorrectionForS(bool outputE = false)
+{
+	int M, smin, smax;
+	DT xi;
+	cout << "intput the values of M, xi, mins, maxs: " << endl;
+	cin >> M >> xi >> smin >> smax;
+	RunEnergyCorrectionForS(M, xi, smin, smax, outputE);
+}
+
 void RunEnergyCorrection(bool outputE = false)
 {
 	int s, minM, maxM;
@@ -553,7 +588,8 @@ int main()
 	//TestAllStates();
 	//TestVevCalculator();
 	TestEnergyCorrection();
-	//RunEnergyCorrection(true);
+	RunEnergyCorrection(true);
+	//RunEnergyCorrectionForS(true);
 	//TestMatrices(4,1);
 	//TestOperatorVev();
 	TestPartition();

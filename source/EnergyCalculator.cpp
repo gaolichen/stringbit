@@ -234,7 +234,7 @@ DT EnergyCalculator::EnergyCorrection(int M, bool outputCorrections)
 	if (outputCorrections)
 	{
 		string filename = "s="+ToString(s) + "-M=" + ToString(M);
-		if (abs(xi) > 1e-6) filename += "-xi=" + ToString((int)floor(xi + 1e-6));
+		if (abs(xi) > 1e-6) filename += "-xi=" + ToString(xi); //ToString((int)floor(xi + 1e-6));
 		ofstream os((filename + ".txt").c_str());
 		os << "M\tL\tdeltaE" << endl;
 		for (int i = 0; i < delta.size(); i++)
