@@ -2944,6 +2944,218 @@ Numerical Results
 This section provides numerical results.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /users/gaolichen/gitroot/stringbit/plots/EvM-s1xi0.pdf
+	width 50col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /users/gaolichen/gitroot/stringbit/plots/SubEvM-s1xi0-a.pdf
+	width 50text%
+	groupId halfcolumn
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /users/gaolichen/gitroot/stringbit/plots/SubEvM-s1xi0-b.pdf
+	width 50text%
+	groupId halfcolumn
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /users/gaolichen/gitroot/stringbit/plots/SubEvM-s1xi0-c.pdf
+	width 50text%
+	groupId halfcolumn
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Change of 
+\begin_inset Formula $E$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $M$
+\end_inset
+
+ for 
+\begin_inset Formula $s=1$
+\end_inset
+
+, 
+\begin_inset Formula $\xi=0$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /users/gaolichen/gitroot/stringbit/plots/EvM-s2xi0.pdf
+	width 50text%
+	groupId halfcolumn
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /users/gaolichen/gitroot/stringbit/plots/SubEvM-s2xi0.pdf
+	width 50text%
+	groupId halfcolumn
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /users/gaolichen/gitroot/stringbit/plots/EvS-xi0-odd.pdf
+	width 50text%
+	groupId halfcolumn
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /users/gaolichen/gitroot/stringbit/plots/EvS-xi0-even.pdf
+	width 50text%
+	groupId halfcolumn
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Change of 
+\begin_inset Formula $E$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $s$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /users/gaolichen/gitroot/stringbit/plots/EvM-s1-manyxi.pdf
+	width 50text%
+	groupId halfcolumn
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /users/gaolichen/gitroot/stringbit/plots/EvM-s2-manyxi.pdf
+	width 50text%
+	groupId halfcolumn
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Change of 
+\begin_inset Formula $E$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $\xi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Conclusion
 \end_layout
