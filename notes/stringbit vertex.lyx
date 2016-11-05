@@ -96,6 +96,11 @@ Hamiltonian
 \end_layout
 
 \begin_layout Standard
+The stringbit model of 
+\begin_inset Formula $s=1$
+\end_inset
+
+ case, studied in
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Sun:2014dga"
@@ -109,11 +114,7 @@ key "Chen:2016hkz"
 
 \end_inset
 
- studied the stringbit model of 
-\begin_inset Formula $s=1$
-\end_inset
-
- case, of which has the Hamiltonian reads
+, has the Hamiltonian of the form
 \begin_inset Formula 
 \begin{equation}
 H^{s=1}=\frac{2}{N}\tr\left[\left(\bar{a}^{2}-i\bar{b}^{2}\right)a^{2}-\left(\bar{b}^{2}-i\bar{a}^{2}\right)b^{2}+\left(\bar{a}\bar{b}+\bar{b}\bar{a}\right)ba+\left(\bar{a}\bar{b}-\bar{b}\bar{a}\right)ab\right].\label{eq:ham_Hs_1}
@@ -121,11 +122,11 @@ H^{s=1}=\frac{2}{N}\tr\left[\left(\bar{a}^{2}-i\bar{b}^{2}\right)a^{2}-\left(\ba
 
 \end_inset
 
- This Hamitlonian was generalized to arbitrary 
+ The generalization of this Hamitlonian to to arbitrary 
 \begin_inset Formula $s$
 \end_inset
 
- case in 
+ cases was presented in 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2014hia,Thorn:2015wli"
@@ -141,11 +142,11 @@ key "Thorn:2014hia,Thorn:2015wli"
 \begin_inset Formula $b$
 \end_inset
 
-, now the creation operator has the form 
+, the generalized creation operators read 
 \begin_inset Formula 
-\[
-\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta},\quad a_{i}=1,\cdots,s,\quad n=0,\cdots,s,\quad\alpha,\beta=1,\cdots,N
-\]
+\begin{equation}
+\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta},\quad a_{i}=1,\cdots,s,\quad n=0,\cdots,s,\quad\alpha,\beta=1,\cdots,N\label{eq:ham_creation_op}
+\end{equation}
 
 \end_inset
 
@@ -157,7 +158,7 @@ key "Thorn:2014hia,Thorn:2015wli"
 \begin_inset Formula $a_{i}$
 \end_inset
 
- are completely antisymmetric spin indices.
+ completely antisymmetric spin indices.
  
 \begin_inset Formula $\bar{\phi}$
 \end_inset
@@ -171,11 +172,11 @@ key "Thorn:2014hia,Thorn:2015wli"
 \end_inset
 
  is odd.
- We then introduce 
+ We then introduces 
 \begin_inset Formula $s$
 \end_inset
 
- Grassmann coordinate 
+ Grassmann coordinates 
 \begin_inset Formula $\theta^{a}$
 \end_inset
 
@@ -266,7 +267,7 @@ key "Chen:2016hkz"
 \begin_inset Formula $H^{s=1}$
 \end_inset
 
- the terms in the form
+ the terms of the form
 \begin_inset Formula 
 \begin{eqnarray*}
 \Delta H^{s=1} & = & \frac{2}{N}\tr\left[\bar{a}\bar{b}ba+\bar{b}\bar{a}ab+\bar{a}^{2}a^{2}+\bar{b}^{2}b^{2}-\tilde{M}^{s=1}\right],\\
@@ -275,15 +276,15 @@ key "Chen:2016hkz"
 
 \end_inset
 
-For arbitrary 
+We can generalize 
+\begin_inset Formula $\Delta H^{s=1}$
+\end_inset
+
+ to arbitrary 
 \begin_inset Formula $s$
 \end_inset
 
-, 
-\begin_inset Formula $\Delta H$
-\end_inset
-
- reads 
+ cases, which reads 
 \begin_inset Formula 
 \begin{eqnarray*}
 \Delta H & = & \frac{2}{N}\left(\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\bar{\phi}_{b_{1}\cdots b_{k}}\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\phi_{b_{1}\cdots b_{k}}-\tilde{M}\right),\\
@@ -365,16 +366,17 @@ reference "eq:ham_Haction_double_trace"
 \end_layout
 
 \begin_layout Standard
-At 
+To study the perturbation of the system, it is helpful to introduce the
+ single trace energy eigenstate of the system at 
 \begin_inset Formula $N=\infty$
 \end_inset
 
-, only the leading term 
+, where only the leading term, 
 \begin_inset Formula $\bar{h}$
 \end_inset
 
- survive.
- The single trance energy eigenstate in this case can be expressed as 
+, survive.
+ This single trace energy eigenstate can be expressed as 
 \begin_inset Formula 
 \begin{equation}
 T_{r}\ket{0}=\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta_{1},\cdots,\theta_{M}\right)\psi_{r}\left(\theta_{1},\dots,\theta_{M}\right)\ket{0},\label{eq:ham_trace_energystate}
@@ -429,14 +431,10 @@ reference "eq:ham_trace_energystate"
 \end_inset
 
  on 
-\begin_inset Formula $T\left(\theta\right)$
+\begin_inset Formula $T_{r}\ket{0}$
 \end_inset
 
- can be transferred to 
-\begin_inset Formula $\psi_{r}$
-\end_inset
-
- by an integration on parts
+ is
 \begin_inset Formula 
 \begin{equation}
 \bar{h}_{kl}T_{r}\ket{0}=\int d\theta\,\bar{h}_{kl}T\left(\theta\right)\psi_{r}\left(\theta\right)\ket{0}=\int d\theta\, T\left(\theta\right)h_{kl}\psi_{r}\left(\theta\right)\ket{0}\label{eq:ham_intbyparts}
@@ -444,16 +442,39 @@ reference "eq:ham_trace_energystate"
 
 \end_inset
 
- where
+ where we have performed a integration by parts in the last step and 
+\begin_inset Formula $h_{kl}$
+\end_inset
+
+
 \begin_inset Formula 
-\begin{align}
-h_{kl} & =-2\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)-2\theta_{k}^{a}\frac{d}{d\theta_{l}^{a}}-2\theta_{k}^{a}\frac{d}{d\theta_{l}^{a}}-2i\theta_{k}^{a}\theta_{l}^{a}-2i\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{l}^{a}}+2s\xi+2s\delta_{k,l},\label{eq:ham_h_kl}\\
-h & =\sum_{k=1}^{M}\left(h_{k,k+1}-2s\xi\right).\label{eq:ham_h}
-\end{align}
+\begin{equation}
+h_{kl}=-2\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)-2\theta_{k}^{a}\frac{d}{d\theta_{l}^{a}}-2\theta_{k}^{a}\frac{d}{d\theta_{l}^{a}}-2i\theta_{k}^{a}\theta_{l}^{a}-2i\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{l}^{a}}+2s\xi+2s\delta_{k,l},\label{eq:ham_h_kl}
+\end{equation}
 
 \end_inset
 
- Note that the 
+Likewise, the action of 
+\begin_inset Formula $\bar{h}$
+\end_inset
+
+ on 
+\begin_inset Formula $T\left(\theta\right)$
+\end_inset
+
+ is equivalent to the action of 
+\begin_inset Formula $\psi_{r}\left(\theta\right)$
+\end_inset
+
+ by 
+\begin_inset Formula 
+\begin{equation}
+h=\sum_{k=1}^{M}\left(h_{k,k+1}-2s\xi\right).\label{eq:ham_h}
+\end{equation}
+
+\end_inset
+
+Note that the 
 \begin_inset Formula $k=l$
 \end_inset
 
@@ -486,23 +507,27 @@ h\psi_{r}\left(\theta_{1},\dots,\theta_{M}\right)=E_{r}\psi_{r}\left(\theta_{1},
 
 \end_inset
 
-Let us solve the eigenvalue problem 
+The eigenvalue problem 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:ham_eigenequation"
 
 \end_inset
 
+ can be solved exactly
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
+\end_inset
+
 .
- Because each term in 
+ Since each term of 
 \begin_inset Formula $h$
 \end_inset
 
- contains only variables or derivatives of the same component 
-\begin_inset Formula $a$
-\end_inset
-
-, it is suffice to solve the equation with only one component.
+ contains only variables or derivatives of the same spin component, it is
+ suffice to solve the equation with only one component.
  We therefore suppress the spinor index 
 \begin_inset Formula $a$
 \end_inset
@@ -511,7 +536,7 @@ reference "eq:ham_eigenequation"
 \end_layout
 
 \begin_layout Standard
-We introduce Fourier transformation
+We introduce Fourier transformations
 \begin_inset Formula 
 \begin{eqnarray}
 \alpha_{n} & = & \frac{1}{\sqrt{M}}\sum_{k=1}^{M}\theta_{k}e^{-2\pi ikn/M},\quad\beta_{n}=\frac{1}{\sqrt{M}}\sum_{k=1}^{M}\frac{d}{d\theta_{k}}e^{-2\pi ikn/M},\label{eq:ham_alpha_beta}\\
@@ -521,23 +546,19 @@ n & = & 0,\dots M-1,\quad k=1,\dots M.\nonumber
 
 \end_inset
 
- where
+which satisfy
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-\left\{ \alpha_{n},\beta_{m}\right\} =\delta_{m+n,M}+\delta_{m,0}\delta_{n,0}.
-\]
+\begin{equation}
+\left\{ \alpha_{n},\beta_{m}\right\} =\delta_{m+n,M}+\delta_{m,0}\delta_{n,0}.\label{eq:ham_alpha_beta_anticom}
+\end{equation}
 
 \end_inset
 
  The Hermitianlity of Hamiltonian implies that 
-\begin_inset Formula 
-\[
-\theta_{k}^{\dagger}=\frac{d}{d\theta_{k}},\quad\frac{d}{d\theta_{k}}^{\dagger}=\theta_{k},
-\]
-
+\begin_inset Formula $\theta_{k}^{\dagger}=\frac{d}{d\theta_{k}},\,\frac{d}{d\theta_{k}}^{\dagger}=\theta_{k},$
 \end_inset
 
  from which it follows that 
@@ -548,7 +569,11 @@ n & = & 0,\dots M-1,\quad k=1,\dots M.\nonumber
 
 \end_inset
 
- With 
+ We can express 
+\begin_inset Formula $h$
+\end_inset
+
+ in terms of 
 \begin_inset Formula $\alpha_{n}$
 \end_inset
 
@@ -556,31 +581,36 @@ n & = & 0,\dots M-1,\quad k=1,\dots M.\nonumber
 \begin_inset Formula $\beta_{n}$
 \end_inset
 
-, we can express 
-\begin_inset Formula $h$
-\end_inset
-
- as 
+ 
 \begin_inset Formula 
 \begin{multline}
 h=2\sum_{n=1}^{M-1}\Big[\left(\alpha_{n}\alpha_{M-n}+\beta_{n}\beta_{M-n}\right)\sin\frac{2n\pi}{M}+\\
-+2\left(1-\cos\frac{2n\pi}{M}\right)\left(\alpha_{n}\beta_{M-n}+\alpha_{M-n}\beta_{n}\right)\Big]-2M\label{eq:eigen_h}
++2\left(1-\cos\frac{2n\pi}{M}\right)\left(\alpha_{n}\beta_{M-n}+\alpha_{M-n}\beta_{n}\right)\Big]-2M.\label{eq:eigen_h}
 \end{multline}
 
 \end_inset
 
-We now seek for eigenoperator of the form 
-\begin_inset Formula $F_{k}=r_{k}\alpha_{k}+\beta_{k}$
+We now seek for eigenoperators of 
+\begin_inset Formula $h$
 \end_inset
 
- satisfying
+ 
 \begin_inset Formula 
 \begin{equation}
-\left[h,F_{k}\right]=\epsilon_{k}F_{k}.\label{eq:ham_operator_eq}
+F_{k}=r_{k}\alpha_{k}+\beta_{k},\quad\left[h,F_{k}\right]=\epsilon_{k}F_{k},\label{eq:ham_operator_eq}
 \end{equation}
 
 \end_inset
 
+ where 
+\begin_inset Formula $r_{k}$
+\end_inset
+
+ and 
+\begin_inset Formula $\epsilon_{k}$
+\end_inset
+
+ are constants.
  Substituting 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -595,7 +625,7 @@ reference "eq:ham_operator_eq"
 
 \end_inset
 
-, we obtain
+ yields
 \begin_inset Formula 
 \[
 \epsilon_{k}^{\pm}=\pm8\sin\frac{k\pi}{M},\quad r_{k}^{\pm}=\tan\frac{k\pi}{M}\pm\sec\frac{k\pi}{M}.
@@ -603,7 +633,11 @@ reference "eq:ham_operator_eq"
 
 \end_inset
 
- By proper normalization, we obtain the lowering and raising and operators
+ For convenience, we normalize the coefficients of 
+\begin_inset Formula $F_{k}$
+\end_inset
+
+ and obtain the lowering and raising operators
 \begin_inset Formula 
 \begin{equation}
 F_{k}=s_{k}\alpha_{k}+c_{k}\beta_{k},\quad\bar{F}_{k}=c_{k}\alpha_{k}-s_{k}\beta_{k},\quad k=1,\cdots,M-1,\label{eq:ham_F_Fbar}
@@ -613,9 +647,9 @@ F_{k}=s_{k}\alpha_{k}+c_{k}\beta_{k},\quad\bar{F}_{k}=c_{k}\alpha_{k}-s_{k}\beta
 
 where
 \begin_inset Formula 
-\[
+\begin{equation}
 c_{k}=\cos\left(\frac{\pi}{4}-\frac{k\pi}{2M}\right),\quad s_{k}=\sin\left(\frac{\pi}{4}-\frac{k\pi}{2M}\right).
-\]
+\end{equation}
 
 \end_inset
 
@@ -627,20 +661,12 @@ F_{0}=F_{M}=e^{i\pi/4}\beta_{0},\quad\bar{F}_{0}=\bar{F}_{M}=e^{-i\pi/4}\alpha_{
 
 \end_inset
 
-The phase factor of the zero mode is choose so that the matrix 
-\begin_inset Formula $A$
+The phase factors are chosen so that the expression of 
+\begin_inset Formula $h_{kl}$
 \end_inset
 
- defined in 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:exp_h_kl"
-
-\end_inset
-
-.
- has a simple form.
- Using 
+ in terms of eigenoperators will have a simple form.
+ It then follows from 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:ham_F_Fbar"
@@ -654,7 +680,7 @@ reference "eq:ham_F0"
 
 \end_inset
 
-, we have 
+ that 
 \begin_inset Formula 
 \begin{equation}
 F_{k}^{\dagger}=\bar{F}_{M-k},\quad0\leq k\leq M-1,\label{eq:ham_Fdagger}
@@ -662,7 +688,7 @@ F_{k}^{\dagger}=\bar{F}_{M-k},\quad0\leq k\leq M-1,\label{eq:ham_Fdagger}
 
 \end_inset
 
- and the anticommutation relations among these operators:
+ and the anticommutation relations
 \begin_inset Formula 
 \begin{equation}
 \left\{ F_{k},F_{l}\right\} =\left\{ F_{k}^{\dagger},F_{l}^{\dagger}\right\} =0,\quad\left\{ F_{k},F_{l}^{\dagger}\right\} =\delta_{kl},\quad0\leq k,l\leq M-1.\label{eq:ham_F_anticommutation}
@@ -674,48 +700,110 @@ F_{k}^{\dagger}=\bar{F}_{M-k},\quad0\leq k\leq M-1,\label{eq:ham_Fdagger}
 \end_layout
 
 \begin_layout Standard
-To construct the ground eigenfunction 
+To obtain the energy spectrum, we then need to find the ground energy 
+\begin_inset Formula $E_{0}$
+\end_inset
+
+ and the ground eigenfunction 
 \begin_inset Formula $\psi_{0}$
 \end_inset
 
- satisfying 
+, which should satisify 
 \begin_inset Formula $F_{m}\psi_{0}=0$
 \end_inset
 
-, we notice that
+ for 
+\begin_inset Formula $0\leq m<M$
+\end_inset
+
+.
+ By inspection, we find the ground eifenfunction can be written as 
 \begin_inset Formula 
-\[
+\begin{equation}
+\psi_{0}=\prod_{k=1}^{\left\lfloor \left(M-1\right)/2\right\rfloor }\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right),\quad0\leq m\leq M-1.\label{eq:ham_ground_eigenfunction}
+\end{equation}
+
+\end_inset
+
+Using 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_alpha_beta_anticom"
+
+\end_inset
+
+, we see that
+\begin_inset Formula 
+\begin{equation}
 F_{k}\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right)=F_{M-k}\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right)=0,\quad1\leq k\leq M-1,
-\]
+\end{equation}
 
 \end_inset
 
- and
+ and that 
+\begin_inset Formula $c_{l}-s_{l}\alpha_{M-l}\alpha_{l}$
+\end_inset
+
+ commutes with 
+\begin_inset Formula $F_{k}$
+\end_inset
+
+ and 
+\begin_inset Formula $F_{M-k}$
+\end_inset
+
+ for 
+\begin_inset Formula $k\neq l$
+\end_inset
+
+.
+ It then follows that 
+\begin_inset Formula $F_{m}\psi_{0}=0$
+\end_inset
+
+.
+ Acting 
+\begin_inset Formula $h$
+\end_inset
+
+ on the ground eigenfunction, we obtain the ground energy
 \begin_inset Formula 
 \[
-\left[F_{k},c_{l}-s_{l}\alpha_{M-l}\alpha_{l}\right]=\left[F_{M-k},c_{l}-s_{l}\alpha_{M-l}\alpha_{l}\right]=0,\quad k\neq l,\,0\leq k\leq M-1,\,1\leq\neq l\leq M-1.
+E_{0}=-4\sum_{k=1}^{M-1}\sin\frac{k\pi}{M}=-4\cot\frac{\pi}{2M}.
 \]
 
 \end_inset
 
- We therefore have the ground eigenfunction
-\begin_inset Formula 
-\[
-\psi_{0}=\prod_{k=1}^{\left\lfloor \left(M-1\right)/2\right\rfloor }\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right),\quad F_{m}\psi_{0}=0,\quad0\leq m\leq M-1.
-\]
 
-\end_inset
+\end_layout
 
- A general eigenfunction is obtained by acting on the ground eigenfunction
+\begin_layout Standard
+A general eigenfunction is obtained by acting on the ground eigenfunction
  with raising operators
 \begin_inset Formula 
-\[
-\psi=F_{k_{1}}^{\dagger}\cdots F_{k_{p}}^{\dagger}\psi_{0},\quad0\leq k_{1}<\cdots<k_{p}\leq M-1.
-\]
+\begin{equation}
+\psi=F_{k_{1}}^{\dagger}\cdots F_{k_{p}}^{\dagger}\psi_{0},\quad0\leq k_{1}<\cdots<k_{p}\leq M-1.\label{eq:ham_general_eigenfunction}
+\end{equation}
 
 \end_inset
 
- Under the transformation 
+The wavefunction 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_general_eigenfunction"
+
+\end_inset
+
+ produce a valid energy eigenstate only when it satisfy the cyclic constraint
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_cyclicconstrtaint"
+
+\end_inset
+
+.
+ Under the cyclic transformation 
 \begin_inset Formula $\theta_{k}\to\theta_{k+1}$
 \end_inset
 
@@ -727,20 +815,34 @@ F_{k}\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right)=F_{M-k}\left(c_{k}-s_{k}\alp
 \begin_inset Formula $F_{k}^{\dagger}\to e^{-2ik\pi/M}F_{k}^{\dagger}$
 \end_inset
 
-, from which it follow that the the cyclic symmetry 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:ham_cyclicconstrtaint"
-
+.
+ It then follows that the modes 
+\begin_inset Formula $k_{i}$
 \end_inset
 
- requires 
+ must satisfy 
 \begin_inset Formula 
 \begin{equation}
 \sum_{i=1}^{p}k_{i}=\begin{cases}
 nM & \quad\text{for odd }M\\
 \left(n+\frac{1}{2}\right)M & \quad\text{for even }M
 \end{cases}.\label{eq:ham_cyclic_constraint}
+\end{equation}
+
+\end_inset
+
+ Finally, we note that the energy eigenvalue corresponds to eigenfunction
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_general_eigenfunction"
+
+\end_inset
+
+ is
+\begin_inset Formula 
+\begin{equation}
+E_{\left\{ k_{i}\right\} }=E_{0}+8\sum_{i=1}^{p}\sin\frac{k_{i}\pi}{M}.
 \end{equation}
 
 \end_inset
