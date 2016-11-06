@@ -683,7 +683,7 @@ reference "eq:ham_F0"
  that 
 \begin_inset Formula 
 \begin{equation}
-F_{k}^{\dagger}=\bar{F}_{M-k},\quad0\leq k\leq M-1,\label{eq:ham_Fdagger}
+F_{k}^{\dagger}=\bar{F}_{M-k}=c_{k}\alpha_{M-k}+s_{k}\beta_{M-k},\quad0\leq k\leq M-1,\label{eq:ham_Fdagger}
 \end{equation}
 
 \end_inset
@@ -919,30 +919,21 @@ So far we have obtained the energy eigenfunctions of single trace space.
  and the completeness relation 
 \begin_inset Formula 
 \begin{equation}
-\sum_{r}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\bar{\psi}_{r}\left(\eta_{1},\cdots,\eta_{M}\right)=\delta^{\left(c\right)}\left(\theta-\eta\right).\label{eq:ham_completeness}
+\sum_{r}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\bar{\psi}_{r}\left(\eta_{1},\cdots,\eta_{M}\right)=\tilde{\delta}\left(\theta-\eta\right).\label{eq:ham_completeness}
 \end{equation}
 
 \end_inset
 
- Here, 
-\begin_inset Formula $\delta^{\left(c\right)}\left(\theta-\eta\right)$
+Here, 
+\begin_inset Formula $\tilde{\delta}\left(\theta-\eta\right)$
 \end_inset
 
- is the Dirac Delta function constrained in the space of function satisfying
- the cyclic constraint 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:ham_cyclicconstrtaint"
-
+ behaves like the Dirac Delta function when it is applied to a polynomial
+ of 
+\begin_inset Formula $\theta$
 \end_inset
 
-.
- That being said, 
-\begin_inset Formula $\delta^{\left(c\right)}\left(\theta-\phi\right)$
-\end_inset
-
- behaves like the Dirac Delta function only when it is applied to a polynomial
- of c-numbers coefficients and satisfying Eqs.
+ with c-numbers coefficients and satisfying Eqs.
  
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -951,114 +942,67 @@ reference "eq:ham_cyclicconstrtaint"
 \end_inset
 
 .
- When the coefficients of the polynomial are Grassmann values, it needs
- an extra sign factor to compensate the negative sign introduced by exchanges
- of the measure the 
-\begin_inset Formula $d^{s}\theta_{1}\cdots d^{s}\theta_{M}$
+ If 
+\begin_inset Formula $f\left(\theta\right)$
 \end_inset
 
- with Grassmann coefficients.
- Particularly, when applying the completeness relation to 
+ is such a polynomial and 
+\begin_inset Formula $c$
+\end_inset
+
+ is a Grassmann constant with grading 
+\begin_inset Formula $G\left(c\right)$
+\end_inset
+
+, then the action of 
+\begin_inset Formula $\tilde{\delta}$
+\end_inset
+
+ on 
+\begin_inset Formula $cf\left(\theta\right)$
+\end_inset
+
+ produces extra sign factor because of the reordering between the measure
+ and 
+\begin_inset Formula $c$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{equation}
+\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\,\bar{\psi}_{r}\, cf\left(\theta\right)\tilde{\delta}\left(\theta-\eta\right)=\left(-\right)^{sMG\left(c\right)}c\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, f\left(\theta\right)\tilde{\delta}\left(\theta-\eta\right)=\left(-\right)^{sMG\left(c\right)}cf\left(\eta\right).\label{eq:ham_delta_sign_fatctor}
+\end{equation}
+
+\end_inset
+
+To eliminate the sign factor on RHS of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_delta_sign_fatctor"
+
+\end_inset
+
+, we can add extra the sign factor to the LHS of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_completeness"
+
+\end_inset
+
+.
+ Particularly for 
 \begin_inset Formula $T\left(\theta\right)$
 \end_inset
 
 , we have 
 \begin_inset Formula 
 \begin{equation}
-\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta\right)\sum_{r}\left(-\right)^{sMG\left(\bar{\psi}_{r}\right)}\psi_{r}\left(\theta\right)\bar{\psi}_{r}\left(\phi\right)=\sum_{r}\left(-\right)^{sMG\left(T_{r}\right)}T_{r}\bar{\psi}_{r}\left(\phi\right)=T\left(\theta\right),\label{eq:harm_completeness_1}
+\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta\right)\sum_{r}\left(-\right)^{sMG\left(\bar{\psi}_{r}\right)}\psi_{r}\left(\theta\right)\bar{\psi}_{r}\left(\phi\right)=\sum_{r}\left(-\right)^{sMG\left(T_{r}\right)}T_{r}\bar{\psi}_{r}\left(\phi\right)=T\left(\theta\right).\label{eq:harm_completeness_1}
 \end{equation}
 
 \end_inset
 
-where 
-\begin_inset Formula $T_{r}$
-\end_inset
 
- and 
-\begin_inset Formula $\bar{\psi}_{r}$
-\end_inset
-
- in the supersctipt of 
-\begin_inset Formula $\left(-\right)$
-\end_inset
-
- indicate the grading of 
-\begin_inset Formula $T_{r}$
-\end_inset
-
- and 
-\begin_inset Formula $\bar{\psi}_{r}$
-\end_inset
-
- .
-\end_layout
-
-\begin_layout Standard
-We first find the conjugate function of 
-\begin_inset Formula $\psi_{0}$
-\end_inset
-
-.
- For odd 
-\begin_inset Formula $M$
-\end_inset
-
-, we have
-\begin_inset Formula 
-\[
-\bar{\psi}_{0}=\left(-i\right)^{\left\lfloor M/2\right\rfloor }\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right),
-\]
-
-\end_inset
-
-and for even 
-\begin_inset Formula $M$
-\end_inset
-
-, 
-\begin_inset Formula 
-\[
-\bar{\psi}_{0}=\left(-i\right)^{M/2+1}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\alpha_{0}\alpha_{M/2}.
-\]
-
-\end_inset
-
-To verify the normalization condition 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:ham_normalization"
-
-\end_inset
-
-, we have 
-\begin_inset Formula 
-\begin{eqnarray*}
-\int d^{M}\theta\,\tilde{\psi}_{0}\psi_{0} & = & \left(-i\right)^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\,\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\left(c_{i}-s_{i}\alpha_{M-i}\alpha_{i}\right)\\
- & = & \left(-i\right)^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\,\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(s_{i}^{2}+c_{i}^{2}\right)\alpha_{M-i}\alpha_{i}\\
- & = & \left(-i\right)^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\,\prod_{i=1}^{M}\alpha_{M-i}\\
- & = & 1,
-\end{eqnarray*}
-
-\end_inset
-
- where we used
-\begin_inset Formula 
-\[
-\int d^{M}\theta\,\prod_{i=1}^{M}\alpha_{M-i}=i^{\left\lfloor \left(M-1\right)/2\right\rfloor }=\begin{cases}
-i^{\left(M-1\right)/2} & \text{for odd }M\\
-\left(-i\right)^{M/2-1} & \text{for even }M
-\end{cases}
-\]
-
-\end_inset
-
- in the last step.
- The similar calculation can be done for even 
-\begin_inset Formula $M$
-\end_inset
-
- case.
- 
 \end_layout
 
 \begin_layout Standard
@@ -1070,7 +1014,11 @@ For constructing the general conjugate function of
 \begin_inset Formula $\tilde{F}^{\pm}$
 \end_inset
 
- as follows.
+ as a conjugate operator of 
+\begin_inset Formula $F$
+\end_inset
+
+ obtained by a integration by parts.
  For grassmanian even function 
 \begin_inset Formula $\psi\left(\theta\right)$
 \end_inset
@@ -1082,12 +1030,12 @@ For constructing the general conjugate function of
  as 
 \begin_inset Formula 
 \[
-\int d^{M}\theta\,\left[\tilde{F}_{k}^{+}\psi\left(\theta\right)\right]\chi\left(\theta\right)=\int d^{M}\theta\,\psi\left(\theta\right)\left[F_{k}\chi\left(\theta\right)\right].
+\int d^{M}\theta\,\left[\tilde{F}_{k}^{+}\psi\left(\theta\right)\right]\chi\left(\theta\right)=\int d^{M}\theta\,\psi\left(\theta\right)\left[F_{k}\chi\left(\theta\right)\right],
 \]
 
 \end_inset
 
-Likewise, for grassmanian odd function 
+and for grassmanian odd function 
 \begin_inset Formula $\psi\left(\theta\right)$
 \end_inset
 
@@ -1106,12 +1054,165 @@ Likewise, for grassmanian odd function
 It follows that 
 \begin_inset Formula 
 \[
-\tilde{F}_{0}^{\pm}=\mp\beta_{0},\quad\tilde{F}_{k}^{\pm}=\pm\left(s_{k}\alpha_{k}-c_{k}\beta_{k}\right),\quad1\leq k\leq M-1.
+\tilde{F}_{0}^{\pm}=\mp e^{i\pi/4}\beta_{0},\quad\tilde{F}_{k}^{\pm}=\pm\left(s_{k}\alpha_{k}-c_{k}\beta_{k}\right),\quad1\leq k\leq M-1.
 \]
 
 \end_inset
 
- Now the conjugate function of a genral eigenfunction can be expressed as
+ Likewise, we define
+\begin_inset Formula 
+\[
+\tilde{F}_{0}^{\dagger\pm}=\pm e^{-i\pi/4}\alpha_{0},\quad\tilde{F}_{k}^{\dagger\pm}=\pm\left(c_{k}\alpha_{M-k}-s_{k}\beta_{M-k}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now let us find the conjugate function of the groune eigenfunction 
+\begin_inset Formula $\psi_{0}$
+\end_inset
+
+ for 
+\begin_inset Formula $s=1$
+\end_inset
+
+ case.
+ We claim that 
+\begin_inset Formula 
+\[
+\bar{\psi}_{0}=\begin{cases}
+\left(-i\right)^{\left\lfloor M/2\right\rfloor }\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right) & \text{for odd }M\\
+\left(-i\right)^{M/2+1}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\alpha_{0}\alpha_{M/2} & \text{for even }M
+\end{cases}.
+\]
+
+\end_inset
+
+We can verify that 
+\begin_inset Formula $\bar{\psi}_{0}$
+\end_inset
+
+ satisfies the normalization condition 
+\begin_inset Formula $\int d^{M}\theta\,\bar{\psi}_{0}\psi_{r}=\delta_{0r}$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $r=0$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{eqnarray*}
+\int d^{M}\theta\,\tilde{\psi}_{0}\psi_{0} & = & \left(-i\right)^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\,\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\left(c_{i}-s_{i}\alpha_{M-i}\alpha_{i}\right)\\
+ & = & \left(-i\right)^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\,\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(s_{i}^{2}+c_{i}^{2}\right)\alpha_{M-i}\alpha_{i}\\
+ & = & \left(-i\right)^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\,\prod_{i=1}^{M}\alpha_{M-i}\\
+ & = & 1,
+\end{eqnarray*}
+
+\end_inset
+
+ where in the last step we used
+\begin_inset Formula 
+\[
+\int d^{M}\theta\,\prod_{i=1}^{M}\alpha_{M-i}=i^{\left\lfloor \left(M-1\right)/2\right\rfloor }=\begin{cases}
+i^{\left(M-1\right)/2} & \text{for odd }M\\
+\left(-i\right)^{M/2-1} & \text{for even }M
+\end{cases}.
+\]
+
+\end_inset
+
+For 
+\begin_inset Formula $r\neq0$
+\end_inset
+
+, suffice to show that 
+\begin_inset Formula $\int d^{M}\theta\,\bar{\psi}_{0}F_{k}^{\dagger}\psi^{\prime}$
+\end_inset
+
+ vanishes for all 
+\begin_inset Formula $0\leq k\leq M-1$
+\end_inset
+
+ and eigenfunction 
+\begin_inset Formula $\psi^{\prime}$
+\end_inset
+
+ .
+ If 
+\begin_inset Formula $k=0$
+\end_inset
+
+, it clearly vanishes because both 
+\begin_inset Formula $F_{0}^{\dagger}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{\psi}_{0}$
+\end_inset
+
+ contain 
+\begin_inset Formula $\alpha_{0}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $0<k<M/2$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{equation}
+\int d^{M}\theta\,\bar{\psi}_{0}F_{k}^{\dagger}\psi^{\prime}=\int d^{M}\theta\,\left(\tilde{F}_{k}^{\dagger\pm}\bar{\psi}_{0}\right)\psi^{\prime}.\label{eq:ham_psibar_norm1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $\tilde{F}_{k}^{\dagger\pm}\bar{\psi}_{0}$
+\end_inset
+
+ on RHS of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_psibar_norm1"
+
+\end_inset
+
+ vanishes because 
+\begin_inset Formula 
+\[
+\tilde{F}_{k}^{\dagger\pm}\left(-s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)=\tilde{F}_{M-k}^{\dagger\pm}\left(-s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)=0,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[\tilde{F}_{k}^{\dagger\pm},-s_{l}+c_{l}\alpha_{M-l}\alpha_{l}\right]=0,\quad l\neq k.
+\]
+
+\end_inset
+
+We can show similarly that 
+\begin_inset Formula $\tilde{F}_{k}^{\dagger\pm}\bar{\psi}_{0}=0$
+\end_inset
+
+ for 
+\begin_inset Formula $M/2\leq k\leq M-1$
+\end_inset
+
+.
+ Therefore, the normalization codition is proved.
+\end_layout
+
+\begin_layout Standard
+Now the conjugate function of a genral eigenfunction can be expressed as
 \begin_inset Formula 
 \[
 \bar{\psi}=\tilde{F}_{k_{p}}\cdots\tilde{F}_{k_{1}}\bar{\psi}_{0},\quad0\leq k_{1}<\cdots<k_{p}\leq M-1,
