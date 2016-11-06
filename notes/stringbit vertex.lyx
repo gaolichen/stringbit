@@ -782,7 +782,7 @@ A general eigenfunction is obtained by acting on the ground eigenfunction
  with raising operators
 \begin_inset Formula 
 \begin{equation}
-\psi=F_{k_{1}}^{\dagger}\cdots F_{k_{p}}^{\dagger}\psi_{0},\quad0\leq k_{1}<\cdots<k_{p}\leq M-1.\label{eq:ham_general_eigenfunction}
+\psi=\prod_{k=0}^{M-1}\left(F_{k}^{\dagger}\right)^{\lambda_{k}}\psi_{0},\quad\lambda_{k}=0,\,1.\label{eq:ham_general_eigenfunction}
 \end{equation}
 
 \end_inset
@@ -794,7 +794,7 @@ reference "eq:ham_general_eigenfunction"
 
 \end_inset
 
- produce a valid energy eigenstate only when it satisfy the cyclic constraint
+ produce a valid energy eigenstate only when it satisfies the cyclic constraint
  
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -823,7 +823,7 @@ reference "eq:ham_cyclicconstrtaint"
  must satisfy 
 \begin_inset Formula 
 \begin{equation}
-\sum_{i=1}^{p}k_{i}=\begin{cases}
+\sum_{i=1}^{M-1}k\lambda_{k}=\begin{cases}
 nM & \quad\text{for odd }M\\
 \left(n+\frac{1}{2}\right)M & \quad\text{for even }M
 \end{cases}.\label{eq:ham_cyclic_constraint}
@@ -831,7 +831,7 @@ nM & \quad\text{for odd }M\\
 
 \end_inset
 
- Finally, we note that the energy eigenvalue corresponds to eigenfunction
+ Finally, we note that the corresponding energy eigenvalue of eigenfunction
  
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -842,7 +842,7 @@ reference "eq:ham_general_eigenfunction"
  is
 \begin_inset Formula 
 \begin{equation}
-E_{\left\{ k_{i}\right\} }=E_{0}+8\sum_{i=1}^{p}\sin\frac{k_{i}\pi}{M}.
+E_{\left\{ k_{i}\right\} }=-4\cot\frac{\pi}{2M}+8\sum_{i=1}^{M-1}\lambda_{k}\sin\frac{k\pi}{M}.
 \end{equation}
 
 \end_inset
@@ -850,26 +850,65 @@ E_{\left\{ k_{i}\right\} }=E_{0}+8\sum_{i=1}^{p}\sin\frac{k_{i}\pi}{M}.
 
 \end_layout
 
+\begin_layout Standard
+The above results can be easily generalized to arbitrary 
+\begin_inset Formula $s$
+\end_inset
+
+ case.
+ The ground eigenfunction and energy are 
+\begin_inset Formula 
+\begin{equation}
+\psi_{0}=\prod_{a=1}^{s}\psi_{0}^{\left(a\right)},\quad E_{0}=-4s\cot\frac{\pi}{M}.
+\end{equation}
+
+\end_inset
+
+ The general eigenfunction and energy are
+\begin_inset Formula 
+\begin{equation}
+\psi=\prod_{a=1}^{s}\prod_{k=0}^{M-1}\left(F_{k}^{\left(a\right)\dagger}\right)^{\lambda_{a,k}}\psi_{0},\quad E=-sE_{0}+\sum_{a,k}\lambda_{a,k}\sin\frac{k\pi}{M},\quad\lambda_{a,k}=0,\,1.
+\end{equation}
+
+\end_inset
+
+The cyclic constraint becomes 
+\begin_inset Formula 
+\begin{equation}
+\sum_{a=1}^{s}\sum_{i=1}^{M-1}k\lambda_{a,k}=\begin{cases}
+nM & \quad\text{for even }s\left(M-1\right)\\
+\left(n+\frac{1}{2}\right)M & \quad\text{for odd }s\left(M-1\right)
+\end{cases}.
+\end{equation}
+
+\end_inset
+
+Since the zero modes do not change the energy, a general eigenstate has
+ 
+\begin_inset Formula $2^{s}$
+\end_inset
+
+ degeneracies.
+ 
+\end_layout
+
 \begin_layout Subsection
 Building conjugate wavefunction
 \end_layout
 
 \begin_layout Standard
-To calculation the 
+So far we have obtained the energy eigenfunctions of single trace space.
+ To formalize the 
 \begin_inset Formula $1/N$
 \end_inset
 
- expansion, we need to find the conjugate function of the eigenfunction
- 
-\begin_inset Formula $\psi_{r}$
-\end_inset
-
-, which denoted as 
+ expansion calculation, we also need to find functions conjugate to the
+ eigenfunctions.
+ The conjugate functions, denoted as 
 \begin_inset Formula $\bar{\psi}_{r}$
 \end_inset
 
-.
- The conjugate function should satisfy the normalization condition 
+, should satisfy the normalization condition 
 \begin_inset Formula 
 \begin{equation}
 \int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\,\bar{\psi}_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\psi_{s}\left(\theta_{1},\cdots,\theta_{M}\right)=\delta_{rs},\label{eq:ham_normalization}
@@ -885,33 +924,48 @@ To calculation the
 
 \end_inset
 
-We stress that 
-\begin_inset Formula $\delta^{\left(c\right)}\left(\theta-\phi\right)$
+ Here, 
+\begin_inset Formula $\delta^{\left(c\right)}\left(\theta-\eta\right)$
 \end_inset
 
- behaves like the Dirac Delta function only when it is applied to a polynomial
- constrained by 
+ is the Dirac Delta function constrained in the space of function satisfying
+ the cyclic constraint 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:ham_cyclicconstrtaint"
 
 \end_inset
 
- and with c-numbers coefficients.
- When a polynomial of 
-\begin_inset Formula $\theta_{i}$
+.
+ That being said, 
+\begin_inset Formula $\delta^{\left(c\right)}\left(\theta-\phi\right)$
 \end_inset
 
- with Grassmann value coefficients, we need to compensate the negative sign
- introduced by exchange of the 
-\begin_inset Formula $\theta_{i}$
+ behaves like the Dirac Delta function only when it is applied to a polynomial
+ of c-numbers coefficients and satisfying Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_cyclicconstrtaint"
+
 \end_inset
 
- with the Grassmann value coefficients.
- Particularly, we have 
+.
+ When the coefficients of the polynomial are Grassmann values, it needs
+ an extra sign factor to compensate the negative sign introduced by exchanges
+ of the measure the 
+\begin_inset Formula $d^{s}\theta_{1}\cdots d^{s}\theta_{M}$
+\end_inset
+
+ with Grassmann coefficients.
+ Particularly, when applying the completeness relation to 
+\begin_inset Formula $T\left(\theta\right)$
+\end_inset
+
+, we have 
 \begin_inset Formula 
 \begin{equation}
-\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta\right)\sum_{r}\left(-\right)^{sM\bar{\psi}_{r}}\psi_{r}\left(\theta\right)\bar{\psi}_{r}\left(\phi\right)=\sum_{r}\left(-\right)^{sMT_{r}}T_{r}\bar{\psi}_{r}\left(\phi\right)=T\left(\theta\right),\label{eq:harm_completeness_1}
+\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta\right)\sum_{r}\left(-\right)^{sMG\left(\bar{\psi}_{r}\right)}\psi_{r}\left(\theta\right)\bar{\psi}_{r}\left(\phi\right)=\sum_{r}\left(-\right)^{sMG\left(T_{r}\right)}T_{r}\bar{\psi}_{r}\left(\phi\right)=T\left(\theta\right),\label{eq:harm_completeness_1}
 \end{equation}
 
 \end_inset
@@ -928,7 +982,7 @@ where
 \begin_inset Formula $\left(-\right)$
 \end_inset
 
- indicate the Grassmann oddness of 
+ indicate the grading of 
 \begin_inset Formula $T_{r}$
 \end_inset
 
@@ -1147,7 +1201,7 @@ For arbitrary
  The general eigenfunction
 \begin_inset Formula 
 \[
-\psi=\prod_{i=1}^{s}\prod_{k=0}^{M-1}\left(F_{k}^{\dagger\left(i\right)}\right)^{\lambda_{k,i}}\psi_{0},\quad\bar{\psi}=\prod_{i=0}^{s-1}\prod_{k=1}^{M}\left(\tilde{F}_{M-k}^{\left(s-i\right)}\right)^{\lambda_{M-k,s-i}}\psi_{0},
+\psi=\prod_{i=1}^{s}\prod_{k=0}^{M-1}\left(F_{k}^{\left(i\right)\dagger}\right)^{\lambda_{k,i}}\psi_{0},\quad\bar{\psi}=\prod_{i=0}^{s-1}\prod_{k=1}^{M}\left(\tilde{F}_{M-k}^{\left(s-i\right)}\right)^{\lambda_{M-k,s-i}}\psi_{0},
 \]
 
 \end_inset
