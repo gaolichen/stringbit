@@ -1212,19 +1212,26 @@ We can show similarly that
 \end_layout
 
 \begin_layout Standard
-Now the conjugate function of a genral eigenfunction can be expressed as
+Now the conjugate function of the genral eigenfunction 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_general_eigenfunction"
+
+\end_inset
+
+ can be expressed as
 \begin_inset Formula 
 \[
-\bar{\psi}=\tilde{F}_{k_{p}}\cdots\tilde{F}_{k_{1}}\bar{\psi}_{0},\quad0\leq k_{1}<\cdots<k_{p}\leq M-1,
+\bar{\psi}=\prod_{k=1}^{M}\left(\tilde{F}_{M-k}\right)^{\lambda_{M-k}}\bar{\psi}_{0},\quad\lambda_{k}=0,\,1
 \]
 
 \end_inset
 
- where 
+ where all the 
 \begin_inset Formula $\tilde{F}$
 \end_inset
 
- picks 
+ pick 
 \begin_inset Formula $\tilde{F}^{-}$
 \end_inset
 
@@ -1244,14 +1251,43 @@ Now the conjugate function of a genral eigenfunction can be expressed as
  To verify the normalization condition, we have
 \begin_inset Formula 
 \begin{eqnarray*}
-\int d^{M}\theta\,\bar{\psi}\psi & = & \int d^{M}\theta\,\left(\tilde{F}_{k_{p}}\tilde{F}_{k_{p-1}}\cdots\tilde{F}_{k_{1}}\bar{\psi}_{0}\right)F_{k_{1}}^{\dagger}\cdots F_{k_{p}}^{\dagger}\psi_{0}\\
- & = & \int d^{M}\theta\,\bar{\psi}_{0}F_{k_{p}}F_{k_{p-1}}\cdots F_{k_{1}}F_{k_{1}}^{\dagger}\cdots F_{k_{p}}^{\dagger}\psi_{0}\\
+\int d^{M}\theta\,\bar{\psi}\psi & = & \int d^{M}\theta\,\prod_{k=1}^{M}\left(\tilde{F}_{M-k}\right)^{\lambda_{M-k}}\bar{\psi}_{0}\prod_{l=0}^{M-1}\left(F_{l}^{\dagger}\right)^{\lambda_{l}}\psi_{0}\\
+ & = & \int d^{M}\theta\,\bar{\psi}_{0}\prod_{k=1}^{M}\left(F_{M-k}\right)^{\lambda_{M-k}}\prod_{l=0}^{M-1}\left(F_{k}^{\dagger}\right)^{\lambda_{k}}\psi_{0}\\
  & = & \int d^{M}\theta\,\bar{\psi}_{0}\psi_{0}\\
  & = & 1
 \end{eqnarray*}
 
 \end_inset
 
+If a eigenfunction 
+\begin_inset Formula $\psi^{\prime}$
+\end_inset
+
+ has different 
+\begin_inset Formula $\lambda_{k}$
+\end_inset
+
+ with 
+\begin_inset Formula $\bar{\psi}$
+\end_inset
+
+, then there must be at leat one 
+\begin_inset Formula $F$
+\end_inset
+
+ or 
+\begin_inset Formula $F^{\dagger}$
+\end_inset
+
+ not being contracted, which then annihilates 
+\begin_inset Formula $\psi^{\prime}$
+\end_inset
+
+ or 
+\begin_inset Formula $\bar{\psi}$
+\end_inset
+
+.
  The normalization condition and cyclic constraint automatically implies
  the completeness relation 
 \begin_inset CommandInset ref
@@ -1273,15 +1309,19 @@ For arbitrary
 \begin_inset Formula $\psi_{0}$
 \end_inset
 
- is the product of the ground eigenfunction of each components: 
+ is the product of the ground eigenfunction of each components 
 \begin_inset Formula 
 \[
-\psi_{0}=\psi_{0}^{\left(1\right)}\psi_{0}^{\left(2\right)}\cdots\psi_{0}^{\left(s\right)}.
+\psi_{0}=\psi_{0}^{\left(1\right)}\psi_{0}^{\left(2\right)}\cdots\psi_{0}^{\left(s\right)},
 \]
 
 \end_inset
 
- Likewise, 
+ and the corresponding 
+\begin_inset Formula $\bar{\psi}_{0}$
+\end_inset
+
+ is 
 \begin_inset Formula 
 \[
 \bar{\psi}_{0}=\left(-1\right)^{s\left(s-1\right)M\left(M-1\right)/4}\bar{\psi}_{0}^{\left(s\right)}\cdots\bar{\psi}_{0}^{\left(1\right)},
