@@ -490,6 +490,12 @@ reference "eq:ham_intbyparts"
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Diagonalizing-Hamiltonian"
+
+\end_inset
+
 Diagonalizing Hamiltonian at 
 \begin_inset Formula $N=\infty$
 \end_inset
@@ -1430,7 +1436,12 @@ key "Thorn:2015wli"
 \end_layout
 
 \begin_layout Standard
-Let 
+Let us only consider the 
+\begin_inset Formula $s=1$
+\end_inset
+
+ case.
+ Let 
 \begin_inset Formula $F_{m}^{\left(1\right)}$
 \end_inset
 
@@ -1486,7 +1497,7 @@ and
 \begin_inset Formula $S$
 \end_inset
 
- must satisfy 
+ satisfy 
 \begin_inset Formula 
 \begin{equation}
 CS^{T}+SC^{T}=0,\quad CC^{\dagger}+SS^{\dagger}=I,\label{eq:overlap_CS_relation}
@@ -1552,31 +1563,7 @@ reference "eq:overlap_S_mM1"
 \end_inset
 
 .
- 
-\end_layout
-
-\begin_layout Standard
-We then express the ground eigenfunction of large chain as
-\begin_inset Formula 
-\begin{equation}
-\psi_{0}=\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\psi_{0}^{\left(1\right)}\psi_{0}^{\left(2\right)}\left[\det\left(I+MM^{\dagger}\right)\right]^{-1/4}.\label{eq:overlap_psi_M}
-\end{equation}
-
-\end_inset
-
-The constraints 
-\begin_inset Formula $F_{m}\psi_{0}=0$
-\end_inset
-
- implies 
-\begin_inset Formula 
-\begin{equation}
-C_{mn}M_{nl}+S_{ml}=0.\label{eq:overlap_CMS}
-\end{equation}
-
-\end_inset
-
- In our construction, the matrices 
+ In above construction, the matrices 
 \begin_inset Formula $C$
 \end_inset
 
@@ -1617,6 +1604,30 @@ C=\begin{pmatrix}1\end{pmatrix}\oplus C^{\prime},\quad S=\begin{pmatrix}0\end{pm
 \end_layout
 
 \begin_layout Standard
+We then express the ground eigenfunction of large chain as
+\begin_inset Formula 
+\begin{equation}
+\psi_{0}=\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\psi_{0}^{\left(1\right)}\psi_{0}^{\left(2\right)}\left[\det\left(I+MM^{\dagger}\right)\right]^{-1/4}.\label{eq:overlap_psi_M}
+\end{equation}
+
+\end_inset
+
+The constraints 
+\begin_inset Formula $F_{m}\psi_{0}=0$
+\end_inset
+
+ implies 
+\begin_inset Formula 
+\begin{equation}
+C_{mn}M_{nl}+S_{ml}=0.\label{eq:overlap_CMS}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 With 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -1631,20 +1642,18 @@ reference "eq:overlap_CMS"
 
 \end_inset
 
-, we can further simplify 
+, we can simplify 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:overlap_psi_M"
 
 \end_inset
 
-, 
+: 
 \begin_inset Formula 
-\begin{eqnarray*}
-\det\left(I+MM^{\dagger}\right) & = & \frac{\det\left[C\left(I+MM^{\dagger}\right)C^{\dagger}\right]}{\det\left[CC^{\dagger}\right]}\\
- & = & \frac{\det\left[CC^{\dagger}+SS^{\dagger}\right]}{\det\left(CC^{\dagger}\right)}\\
- & = & \left[\det\left(CC^{\dagger}\right)\right]^{-1},
-\end{eqnarray*}
+\[
+\det\left(I+MM^{\dagger}\right)=\frac{\det\left[C\left(I+MM^{\dagger}\right)C^{\dagger}\right]}{\det\left[CC^{\dagger}\right]}=\frac{\det\left[CC^{\dagger}+SS^{\dagger}\right]}{\det\left(CC^{\dagger}\right)}=\left[\det\left(CC^{\dagger}\right)\right]^{-1},
+\]
 
 \end_inset
 
@@ -1656,7 +1665,7 @@ reference "eq:overlap_psi_M"
 
 \end_inset
 
-The conjugate function is
+The corresponding conjugate function is
 \begin_inset Formula 
 \begin{equation}
 \bar{\psi}_{0}=\left|\det C\right|^{1/2}\exp\left(\frac{1}{2}\sum_{kl}\tilde{f}_{k}M_{kl}^{\dagger}\tilde{f}_{l}\right)\bar{\psi}_{0}^{\left(2\right)}\bar{\psi}_{0}^{\left(1\right)},\label{eq:overlap_psibar_M}
@@ -1695,34 +1704,60 @@ The conjugate function is
 \end_layout
 
 \begin_layout Standard
-Now let us calculate the action of Hamiltonin on the leading order energy
+The basic idea of 
+\begin_inset Formula $1/N$
+\end_inset
+
+ expansion of the stringbit model has been introduced in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
+\end_inset
+
+.
+ In this section, we will first follow the idea to define the three string
+ vertices, and then derive a caculable formula for them.
+ 
+\end_layout
+
+\begin_layout Standard
+The zeroth order result is given by Subsection 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Diagonalizing-Hamiltonian"
+
+\end_inset
+
+.
+ Now let us consider the action of Hamiltonin on the zeroth order energy
  eigenstate 
 \begin_inset Formula $T_{r}\ket{0}$
 \end_inset
 
 .
  In the following calculation we denote 
-\begin_inset Formula $g_{s,t}$
+\begin_inset Formula $g_{s}\equiv G\left(T_{r}\right)$
 \end_inset
 
- as the grading of single trace energy eigenstate 
-\begin_inset Formula $T_{s,t}$
+ to be the grading of single trace energy eigenstate 
+\begin_inset Formula $T_{r}$
 \end_inset
 
-, and hence the grading of 
-\begin_inset Formula $\bar{\psi}_{s,t}$
+, and then the gradings of 
+\begin_inset Formula $\bar{\psi}_{r}$
 \end_inset
 
  and 
-\begin_inset Formula $\psi_{s,t}$
+\begin_inset Formula $\psi_{r}$
 \end_inset
 
  are 
-\begin_inset Formula $g_{s,t}$
+\begin_inset Formula $g_{r}$
 \end_inset
 
  and 
-\begin_inset Formula $sM-g_{s,t}$
+\begin_inset Formula $sM-g_{r}$
 \end_inset
 
  respectively.
@@ -1780,7 +1815,7 @@ HT_{r}\ket{0} & = & E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\su
 \end_inset
 
 -bit and 
-\begin_inset Formula $\left(M-L\right)$
+\begin_inset Formula $K$
 \end_inset
 
 -bit chains respectively and 
