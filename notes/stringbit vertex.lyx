@@ -334,11 +334,11 @@ HT\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}=\bar{h}T\left(\theta_{1}\cdot
 
 
 \begin_inset Formula 
-\begin{align}
-HT\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right)\ket{0} & =\left(\bar{h}_{\theta}+\bar{h}_{\eta}\right)T\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right)+\frac{1}{N}\text{Fission Terms}\nonumber \\
- & +\frac{1}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{kl}T\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\ket{0}\nonumber \\
- & +\frac{1}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{lk}T\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\ket{0}.\label{eq:ham_Haction_double_trace}
-\end{align}
+\begin{multline}
+HT\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right)\ket{0}=\left(\bar{h}_{\theta}+\bar{h}_{\eta}\right)T\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right)\\
++\frac{1}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{kl}T\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\ket{0}\\
++\frac{1}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{lk}T\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\ket{0}+\frac{1}{N}\text{Fission Terms}.\label{eq:ham_Haction_double_trace}
+\end{multline}
 
 \end_inset
 
@@ -1652,7 +1652,7 @@ reference "eq:overlap_psi_M"
 : 
 \begin_inset Formula 
 \[
-\det\left(I+MM^{\dagger}\right)=\frac{\det\left[C\left(I+MM^{\dagger}\right)C^{\dagger}\right]}{\det\left[CC^{\dagger}\right]}=\frac{\det\left[CC^{\dagger}+SS^{\dagger}\right]}{\det\left(CC^{\dagger}\right)}=\left[\det\left(CC^{\dagger}\right)\right]^{-1},
+\det\left(I+MM^{\dagger}\right)=\frac{\det\left[C\left(I+MM^{\dagger}\right)C^{\dagger}\right]}{\det\left[CC^{\dagger}\right]}=\frac{\det\left[CC^{\dagger}+SS^{\dagger}\right]}{\det\left(CC^{\dagger}\right)}=\left|\det C\right|^{-2},
 \]
 
 \end_inset
@@ -1752,10 +1752,10 @@ reference "eq:ham_Haction_single_trace"
 
 , we have 
 \begin_inset Formula 
-\begin{align*}
-HT_{r}\ket{0} & =E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{l=k+2}^{M+k}\bar{h}_{kl}T\left(\theta_{l}\cdots\theta_{k}\right)T\left(\theta_{k+1}\cdots\theta_{l-1}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
- & =E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{L=1}^{M-1}\bar{h}_{k,k+L+1}T\left(\theta_{k+L+1}\cdots\theta_{k}\right)T\left(\theta_{k+1}\cdots\theta_{k+L}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right),
-\end{align*}
+\begin{multline*}
+HT_{r}\ket{0}=E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{l=k+2}^{M+k}\bar{h}_{kl}T\left(\theta_{l}\cdots\theta_{k}\right)T\left(\theta_{k+1}\cdots\theta_{l-1}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+=E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{L=1}^{M-1}\bar{h}_{k,k+L+1}T\left(\theta_{k+L+1}\cdots\theta_{k}\right)T\left(\theta_{k+1}\cdots\theta_{k+L}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right),
+\end{multline*}
 
 \end_inset
 
@@ -1902,18 +1902,18 @@ The action of
  on double trace produces both fussion and fission terms.
  
 \begin_inset Formula 
-\begin{align*}
-HT_{s}T_{t}\ket{0} & =\left(E_{s}+E_{t}\right)T_{s}T_{k}\ket{0}\\
- & +\frac{1}{N}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\left(-\right)^{sK\left(g_{s}-sL\right)}\bar{h}_{lk}T\left(\theta_{l+1}\cdots\theta_{l}\eta_{k}\cdots\eta_{k-1}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{t}\left(\eta_{1}\cdots\eta_{K}\right)\ket{0}\\
- & +\frac{1}{N}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\left(-\right)^{sK\left(g_{s}-sL\right)}\bar{h}_{kl}T\left(\theta_{l}\cdots\theta_{l-1}\eta_{k+1}\cdots\eta_{k}\right)\psi_{s}\left(\theta\right)\psi_{t}\left(\eta\right)\ket{0}+\text{fission terms}.
-\end{align*}
+\begin{multline*}
+HT_{s}T_{t}\ket{0}=\left(E_{s}+E_{t}\right)T_{s}T_{k}\ket{0}\\
++\frac{1}{N}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\left(-\right)^{sK\left(g_{s}-sL\right)}\bar{h}_{lk}T\left(\theta_{l+1}\cdots\theta_{l}\eta_{k}\cdots\eta_{k-1}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{t}\left(\eta_{1}\cdots\eta_{K}\right)\ket{0}\\
++\frac{1}{N}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\left(-\right)^{sK\left(g_{s}-sL\right)}\bar{h}_{kl}T\left(\theta_{l}\cdots\theta_{l-1}\eta_{k+1}\cdots\eta_{k}\right)\psi_{s}\left(\theta\right)\psi_{t}\left(\eta\right)\ket{0}+\frac{1}{N}\text{Fission Terms}.
+\end{multline*}
 
 \end_inset
 
  Similarly, we can express the results as
 \begin_inset Formula 
 \[
-HT_{s}T_{t}\ket{0}=\left(E_{s}+E_{t}\right)T_{s}T_{k}\ket{0}+\frac{1}{N}\sum_{r}T_{r}\ket{0}\left(W_{rst}^{\left(1\right)}+W_{rst}^{\left(2\right)}\right)+\text{fission terms},
+HT_{s}T_{t}\ket{0}=\left(E_{s}+E_{t}\right)T_{s}T_{k}\ket{0}+\frac{1}{N}\sum_{r}T_{r}\ket{0}\left(W_{rst}^{\left(1\right)}+W_{rst}^{\left(2\right)}\right)+\cdots
 \]
 
 \end_inset
@@ -2002,9 +2002,10 @@ By the same reasoning as the
 
  to give 
 \begin_inset Formula 
-\begin{equation}
-W_{rst}^{\left(L,K\right)}=W_{rst}^{\left(1\right)}+W_{rst}^{\left(2\right)}=\left(-\right)^{sK\left(g_{s}-L\right)}KL\int d\theta\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)\left(h_{L,L+1}+h_{M,1}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{t}\left(\theta_{L+1}\cdots\theta_{M}\right).\label{eq:pert_Wrst}
-\end{equation}
+\begin{multline}
+W_{rst}^{\left(L,K\right)}=W_{rst}^{\left(1\right)}+W_{rst}^{\left(2\right)}\\
+=\left(-\right)^{sK\left(g_{s}-L\right)}KL\int d\theta\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)\left(h_{L,L+1}+h_{M,1}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{t}\left(\theta_{L+1}\cdots\theta_{M}\right).\label{eq:pert_Wrst}
+\end{multline}
 
 \end_inset
 
@@ -2064,51 +2065,31 @@ Let us now express
 \begin_inset Formula $s=1$
 \end_inset
 
- case for simplicity and introduce products of lowering eigenoperators 
-\begin_inset Formula $\mathbb{F}_{s,t,r}$
+ case and introduce products of eigenoperators 
+\begin_inset Formula $\mathbb{F}_{r}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{\mathbb{F}}_{r}$
 \end_inset
 
  as
 \begin_inset Formula 
 \[
-\psi_{s}=\prod_{k=0}^{M-1}\left(F_{k}^{\dagger}\right)^{\lambda_{k}}\psi_{0}\equiv\mathbb{F}_{s}^{\dagger}\psi_{0}^{\left(L\right)},\quad\psi_{t}=\prod_{k=0}^{M-1}\left(F_{k}^{\dagger}\right)^{\mu_{k}}\psi_{0}=\mathbb{F}_{t}^{\dagger}\psi_{0}^{\left(K\right)},\quad\psi_{r}=\prod_{k=0}^{M-1}\left(F_{k}^{\dagger}\right)^{\xi_{k}}\psi_{0}\equiv\mathbb{F}_{r}^{\dagger}\bar{\psi}_{0}^{\left(M\right)},
+\psi_{r}=\prod_{k=0}^{M-1}\left(F_{k}^{\dagger}\right)^{\lambda_{k}}\psi_{0}\equiv\mathbb{F}_{r}^{\dagger}\bar{\psi}_{0}^{\left(M\right)},\quad\bar{\psi}_{r}=\prod_{k=1}^{M}\left(\tilde{F}_{M-k}\right)^{\lambda_{M-k}}\equiv\tilde{\mathbb{F}}_{r}\psi_{0}^{\left(M\right)},
 \]
 
 \end_inset
 
- where 
-\begin_inset Formula $\lambda_{k}$
+and similarly for 
+\begin_inset Formula $\mathbb{F}_{s,t}$
 \end_inset
 
-, 
-\begin_inset Formula $\mu_{k}$
-\end_inset
-
-, 
-\begin_inset Formula $\xi_{k}$
-\end_inset
-
- are either 
-\begin_inset Formula $0$
-\end_inset
-
- or 
-\begin_inset Formula $1$
+ and 
+\begin_inset Formula $\tilde{\mathbb{F}}_{s,t}$
 \end_inset
 
 .
- Similarly, 
-\begin_inset Formula $\tilde{\mathbb{F}}_{s,t,r}$
-\end_inset
-
- are defined as 
-\begin_inset Formula 
-\[
-\bar{\psi}_{s}=\prod_{k=1}^{M}\left(\tilde{F}_{M-k}\right)^{\lambda_{M-k}}=\tilde{\mathbb{F}}_{s}\bar{\psi}_{0}^{\left(L\right)},\quad\bar{\psi}_{t}=\prod_{k=1}^{M}\left(\tilde{F}_{M-k}\right)^{\mu_{M-k}}=\tilde{\mathbb{F}}_{t}\bar{\psi}_{0}^{\left(K\right)},\quad\bar{\psi}_{r}=\prod_{k=1}^{M}\left(\tilde{F}_{M-k}\right)^{\xi_{M-k}}=\tilde{\mathbb{F}}_{r}\psi_{0}^{\left(M\right)}.
-\]
-
-\end_inset
-
  Now 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -2118,29 +2099,45 @@ reference "eq:pert_Vstr_2"
 
  becomes
 \begin_inset Formula 
-\[
-V_{tsr}^{\left(K,L\right)}=\left(-\right)^{s\left(Kg_{s}+Lg_{t}\right)}M\int d\theta\,\tilde{\mathbb{F}}_{t}\bar{\psi}_{0}^{\left(K\right)}\tilde{\mathbb{F}}_{s}\bar{\psi}_{0}^{\left(L\right)}h_{M,L+1}\mathbb{F}_{r}^{\dagger}\psi_{0}^{\left(M\right)}.
-\]
+\begin{eqnarray*}
+V_{tsr}^{\left(K,L\right)} & = & \left(-\right)^{s\left(Kg_{s}+Lg_{t}\right)}M\int d\theta\,\tilde{\mathbb{F}}_{t}\bar{\psi}_{0}^{\left(K\right)}\tilde{\mathbb{F}}_{s}\bar{\psi}_{0}^{\left(L\right)}h_{M,L+1}\mathbb{F}_{r}^{\dagger}\psi_{0}^{\left(M\right)}\\
+ & = & \left(-\right)^{s\left(Kg_{s}+Lg_{t}\right)+sL\left(g_{t}-sK\right)}M\int d\theta\,\bar{\psi}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}\mathbb{F}_{t}\mathbb{F}_{s}h_{M,L+1}\mathbb{F}_{r}^{\dagger}\psi_{0}^{\left(M\right)},
+\end{eqnarray*}
 
 \end_inset
 
-We now move the operators of 
-\begin_inset Formula $\tilde{\mathbb{F}}_{t}$
+ where the change of the sign factor is due to 
+\begin_inset Formula $\mathbb{F}_{t}$
 \end_inset
 
- and 
-\begin_inset Formula $\tilde{\mathbb{F}}_{s}$
-\end_inset
-
- to the position between 
+ passing through 
 \begin_inset Formula $\psi_{0}^{\left(L\right)}$
 \end_inset
 
- and 
-\begin_inset Formula $h_{M,L+1}$
+.
+ The 
+\begin_inset Formula $2Lg_{t}$
 \end_inset
 
-, and use 
+ in the power of 
+\begin_inset Formula $\left(-\right)$
+\end_inset
+
+ can be removed and 
+\begin_inset Formula $\left(-\right)^{s^{2}KL}$
+\end_inset
+
+ equals 
+\begin_inset Formula $\left(-\right)^{sKL}$
+\end_inset
+
+.
+ So the sign factor can be simplifed to be 
+\begin_inset Formula $\left(-\right)^{sK\left(g_{s}-L\right)}$
+\end_inset
+
+.
+ We then use 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:overlap_psi_M1"
@@ -2148,7 +2145,7 @@ reference "eq:overlap_psi_M1"
 \end_inset
 
  to express 
-\begin_inset Formula $\psi_{0}^{M}$
+\begin_inset Formula $\psi_{0}^{\left(M\right)}$
 \end_inset
 
  in terms of 
@@ -2159,41 +2156,58 @@ reference "eq:overlap_psi_M1"
 \begin_inset Formula $\psi_{0}^{\left(K\right)}$
 \end_inset
 
-.
- We then arrive at 
+ and arrive at 
 \begin_inset Formula 
-\begin{eqnarray*}
-V_{tsr}^{\left(K,L\right)} & = & \left(-\right)^{sK\left(g_{s}-L\right)}M\left[\det\left(CC^{\dagger}\right)\right]^{\frac{1}{4}}\int d\theta\,\bar{\psi}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}\mathbb{F}_{t}\mathbb{F}_{s}h_{M,L+1}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\psi_{0}^{\left(L\right)}\psi_{0}^{\left(K\right)},\\
- & \equiv & \left(-\right)^{sK\left(g_{s}-L\right)}M\left[\det\left(CC^{\dagger}\right)\right]^{\frac{1}{4}}\left\langle \mathbb{F}_{t}\mathbb{F}_{s}h_{M,L+1}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ,
-\end{eqnarray*}
+\[
+V_{tsr}^{\left(K,L\right)}=\left(-\right)^{sK\left(g_{s}-L\right)}M\left|\det C\right|^{\frac{1}{2}}\left\langle \mathbb{F}_{t}\mathbb{F}_{s}h_{M,L+1}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ,
+\]
 
 \end_inset
 
- where the sign factor is changed as 
-\begin_inset Formula $\mathbb{F}_{t}$
+ where
+\begin_inset Formula 
+\begin{multline}
+\left\langle \mathbb{F}_{t}\mathbb{F}_{s}h_{M,L+1}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+\equiv\int d\theta\,\bar{\psi}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}\mathbb{F}_{t}\mathbb{F}_{s}h_{M,L+1}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\psi_{0}^{\left(L\right)}\psi_{0}^{\left(K\right)}.\label{eq:pert_vev}
+\end{multline}
+
 \end_inset
 
- passes through 
+The ground eigenfunction 
 \begin_inset Formula $\psi_{0}^{\left(L\right)}$
 \end_inset
 
-.
- 
-\end_layout
+, 
+\begin_inset Formula $\psi_{0}^{\left(K\right)}$
+\end_inset
 
-\begin_layout Standard
-\begin_inset Formula 
-\begin{eqnarray*}
-W_{rst}^{\left(L,K\right)} & = & \left(-\right)^{sK\left(g_{s}-L\right)}KL\int d^{M}\theta\,\tilde{\mathbb{F}}_{r}\bar{\psi}_{0}h^{\left(W\right)}\mathbb{F}_{s}^{\dagger}\psi_{0}^{\left(L\right)}\mathbb{F}_{t}^{\dagger}\psi_{0}^{\left(K\right)}\\
- & = & \left(-\right)^{sK\left(g_{s}-L\right)}KL\int d^{M}\theta\,\bar{\psi}_{0}\mathbb{F}_{r}h^{\left(W\right)}\mathbb{F}_{s}^{\dagger}\mathbb{F}_{t}^{\dagger}\psi_{0}^{\left(L\right)}\psi_{0}^{\left(K\right)}\\
- & = & \left(-\right)^{sK\left(g_{s}-L\right)}KL\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\int d^{M}\theta\,\exp\left(\frac{1}{2}\sum_{kl}\tilde{f}_{k}M_{kl}^{\dagger}\tilde{f}_{l}\right)\bar{\psi}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}\mathbb{F}_{r}h^{\left(W\right)}\mathbb{F}_{s}^{\dagger}\mathbb{F}_{t}^{\dagger}\psi_{0}^{\left(L\right)}\psi_{0}^{\left(K\right)}\\
- & = & \left(-\right)^{sK\left(g_{s}-L\right)}KL\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left\langle \exp\left(\frac{1}{2}\sum_{kl}f_{k}M_{kl}^{\dagger}f_{l}\right)\mathbb{F}_{r}h^{\left(W\right)}\mathbb{F}_{s}^{\dagger}\mathbb{F}_{t}^{\dagger}\right\rangle \\
- & = & \left(-\right)^{sK\left(g_{s}-L\right)}KL\left[\det\left(CC^{\dagger}\right)\right]^{1/4}\left\langle \mathbb{F}_{t}\mathbb{F}_{s}h^{\left(W\right)}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ^{\dagger}.
-\end{eqnarray*}
+, and their conjugates are annihilated by any lowering eigenoperators of
+ smaller chains, so we can consider them as vacuum states and LHS of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:pert_vev"
 
 \end_inset
 
- 
+ as the vacuum expectation value of the operator inside the braket.
+ We perform similar calculation for 
+\begin_inset Formula $W_{rst}^{\left(L,K\right)}$
+\end_inset
+
+ and find 
+\begin_inset Formula 
+\begin{multline*}
+W_{rst}^{\left(L,K\right)}=\left(-\right)^{sK\left(g_{s}-L\right)}KL\left|\det C\right|^{\frac{1}{2}}\left\langle \exp\left(\frac{1}{2}\sum_{kl}f_{k}M_{kl}^{\dagger}f_{l}\right)\mathbb{F}_{r}\left(h_{L,L+1}+h_{M,1}\right)\mathbb{F}_{s}^{\dagger}\mathbb{F}_{t}^{\dagger}\right\rangle \\
+=\left(-\right)^{sK\left(g_{s}-L\right)}KL\left|\det C\right|^{\frac{1}{2}}\left\langle \mathbb{F}_{t}\mathbb{F}_{s}\left(h_{L,L+1}+h_{M,1}\right)\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ^{\dagger}.
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note that 
 \begin_inset Formula $V_{tsr}^{\left(K,L\right)}$
 \end_inset
 
@@ -2201,40 +2215,44 @@ W_{rst}^{\left(L,K\right)} & = & \left(-\right)^{sK\left(g_{s}-L\right)}KL\int d
 \begin_inset Formula $W_{rst}^{\left(L,K\right)}$
 \end_inset
 
- have the same sign factor.
- We shall see that the 
-\begin_inset Formula $1/N$
+ have the same sign factor 
+\begin_inset Formula $\left(-\right)^{sK\left(g_{s}-L\right)}$
 \end_inset
 
- energy perturbation only depends on the product of these two.
- Thus, the sign factors are cancelled out and unphysics.
- For 
-\begin_inset Formula $s>0$
+.
+ We shall see that the physical observables, like the energy correction
+ to the zeroth order, only depend on the product of these two.
+ It implies that the sign factors are unphysical and will be cancelled out
+ in the calculation of physical quantity.
+ So we can simply drop out the sign factor.
+ For arbitrary 
+\begin_inset Formula $s$
 \end_inset
 
-, denoting 
-\begin_inset Formula $\mathbb{F}^{a}$
-\end_inset
-
- as the products of lowering operators of 
-\begin_inset Formula $a$
-\end_inset
-
--th spinor index, we have 
+, we then have 
 \begin_inset Formula 
 \begin{align}
-V_{tsr}^{\left(K,L\right)} & =M\left[\det\left(CC^{\dagger}\right)\right]^{s/4}\prod_{a=1}^{s}\left\langle \mathbb{F}_{t}^{a}\mathbb{F}_{s}^{a}h_{M,L+1}^{a}\mathbb{F}_{r}^{a\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{a\dagger}M_{kl}f_{l}^{a\dagger}\right)\right\rangle ,\label{eq:pert_Vtsr_final}\\
-W_{rst}^{\left(L,K\right)} & =KL\left[\det\left(CC^{\dagger}\right)\right]^{s/4}\prod_{a=1}^{s}\left\langle \mathbb{F}_{t}^{a}\mathbb{F}_{s}^{a}\left(h_{L,L+1}^{a}+h_{M,1}^{a}\right)\mathbb{F}_{r}^{a\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{a\dagger}M_{kl}f_{l}^{a\dagger}\right)\right\rangle ^{\dagger},\label{eq:pert_Wrst_final}
+V_{tsr}^{\left(K,L\right)} & =M\left|\det C\right|^{\frac{s}{2}}\prod_{a=1}^{s}\left\langle \mathbb{F}_{t}^{a}\mathbb{F}_{s}^{a}h_{M,L+1}^{a}\mathbb{F}_{r}^{a\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{a\dagger}M_{kl}f_{l}^{a\dagger}\right)\right\rangle ,\label{eq:pert_Vtsr_final}\\
+W_{rst}^{\left(L,K\right)} & =KL\left|\det C\right|^{\frac{s}{2}}\prod_{a=1}^{s}\left\langle \mathbb{F}_{t}^{a}\mathbb{F}_{s}^{a}\left(h_{L,L+1}^{a}+h_{M,1}^{a}\right)\mathbb{F}_{r}^{a\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{a\dagger}M_{kl}f_{l}^{a\dagger}\right)\right\rangle ^{\dagger},\label{eq:pert_Wrst_final}
 \end{align}
 
 \end_inset
 
- up to an common unphysics sign factor.
+ up to a common unphysical sign factor.
+ Here 
+\begin_inset Formula $\mathbb{F}^{a}$
+\end_inset
+
+ is the products of lowering eigenoperators of 
+\begin_inset Formula $a$
+\end_inset
+
+-th spinor index.
  
 \end_layout
 
 \begin_layout Standard
-We now express 
+To calculate the vacuum expectation values, we need to express 
 \begin_inset Formula $h_{kl}$
 \end_inset
 
@@ -2247,35 +2265,15 @@ We now express
 \end_inset
 
 .
- Using 
+ This is done in Appendix 
 \begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:ham_h_kl"
+LatexCommand ref
+reference "sec:App_h_kl"
 
 \end_inset
 
-, 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:ham_alpha_beta"
-
-\end_inset
-
-, 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:ham_F_Fbar"
-
-\end_inset
-
-, and 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:ham_F0"
-
-\end_inset
-
-, it follows that 
+.
+ Let us summarize the results: 
 \begin_inset Formula 
 \begin{eqnarray}
 h_{kl} & = & \frac{2}{M}\sum_{n,m=0}^{M-1}\left(A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}+A_{nm}F_{n}F_{m}+2A_{-n,m}F_{n}^{\dagger}F_{m}\right)+\frac{2}{M}\gamma,\label{eq:exp_h_kl}
@@ -2299,13 +2297,8 @@ A_{nm}=\exp\left(2\pi ik\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi+\exp\left(2\pi
 
 \end_inset
 
- The calculation of 
-\begin_inset Formula $h_{kl}$
-\end_inset
-
- is in Appendix.
- For 
-\begin_inset Formula $h_{M,L+1}$
+For 
+\begin_inset Formula $h^{\left(V\right)}=h_{M,L+1}$
 \end_inset
 
 , these coefficients become
@@ -2325,7 +2318,7 @@ A_{nm}^{\left(V\right)}=\sin\frac{m-n}{2M}\pi+\exp\left(2\pi i\frac{\left(L+1\ri
 \end_inset
 
  and for 
-\begin_inset Formula $h_{L,L+1}+h_{M,1}$
+\begin_inset Formula $h^{\left(W\right)}=h_{L,L+1}+h_{M,1}$
 \end_inset
 
 
@@ -4085,6 +4078,12 @@ H_{2}T\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:App_h_kl"
+
+\end_inset
+
 Calculation of 
 \begin_inset Formula $h_{kl}$
 \end_inset
