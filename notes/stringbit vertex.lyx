@@ -2341,7 +2341,7 @@ A_{nm}^{\left(W\right)}=\left[1+\exp\left(\pi i\frac{n+m}{M}\right)\right]\left[
 \end_layout
 
 \begin_layout Section
-Energy Eigenvalue Correction
+Correction to Ground Energy
 \end_layout
 
 \begin_layout Standard
@@ -2353,11 +2353,11 @@ One application of the vertext
 \begin_inset Formula $W$
 \end_inset
 
- is to calculate the correction to the energy eigenvalues when 
+ is to calculate the correction to the energy eigenvalues for finite 
 \begin_inset Formula $N$
 \end_inset
 
- is finite.
+.
  In this section, we will follow the formalism of 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2369,18 +2369,17 @@ key "Thorn:2015wli"
 \begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
 \end_inset
 
- correction of the ground energy.
+ correction to the ground energy.
  We then apply the results of previous section to the calculation and obtain
- a formula that can be used for numerical calculation.
+ a formula for analytic and numerical computation.
 \end_layout
 
 \begin_layout Standard
-Let us use the following ansaz for a general energy eigenstate for finite
- 
+For finite 
 \begin_inset Formula $N$
 \end_inset
 
- 
+ energy eigenstates, we use the ansatz 
 \begin_inset Formula 
 \[
 \ket{E}=T_{r}\ket{0}C_{r}^{1}+T_{s}^{\left(L\right)}T_{t}^{\left(K\right)}\ket{0}C_{st}^{2}+T_{s}T_{t}T_{u}\ket{0}C_{stu}^{3}+\cdots,
@@ -2388,11 +2387,11 @@ Let us use the following ansaz for a general energy eigenstate for finite
 
 \end_inset
 
- where 
+ where the 
 \begin_inset Formula $C$
 \end_inset
 
-s are c-numbers coefficients.
+ coefficients are c-numbers.
  Imposing the eigenvalue equation 
 \begin_inset Formula $\left(H-E\right)\ket{E}=0$
 \end_inset
@@ -2407,7 +2406,7 @@ s are c-numbers coefficients.
 
 \end_inset
 
- Collecting like terms, we obtain 
+ Collect like terms to give 
 \begin_inset Formula 
 \begin{eqnarray}
 \left(E_{r}-E\right)C_{r}^{1}+\frac{1}{N}W_{rst}^{\left(L,K\right)}C_{st}^{2} & = & 0,\label{eq:eec_eq1}\\
@@ -2443,27 +2442,27 @@ C_{st}^{2} & = & \frac{1}{E-E_{s}-E_{t}}\frac{1}{N}V_{tsr}C_{r}^{1}+\mathcal{O}\
 
 \end_inset
 
- It implies that the leading order energy correction 
+ It follows that the leading order correction 
 \begin_inset Formula $\Delta E\equiv E-E_{r}$
 \end_inset
 
  is determined by the eigenvalues of the matrix
 \begin_inset Formula 
-\[
+\begin{equation}
 \Delta_{ru}=\frac{1}{N^{2}}W_{rst}^{\left(L,K\right)}\frac{1}{E_{r}-E_{s}-E_{t}}V_{tsu}^{\left(K,L\right)}.
-\]
+\end{equation}
 
 \end_inset
 
- Particularly, when 
+ Particularly if 
 \begin_inset Formula $T_{r}\ket{0}$
 \end_inset
 
- is ground eigenstate, i.e., 
+ is the ground eigenstate, i.e., 
 \begin_inset Formula $C_{r}^{1}=1$
 \end_inset
 
-, we have
+,
 \begin_inset Formula 
 \begin{equation}
 \Delta E_{0}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}\sum_{M_{s}=L,M_{t}=K}W_{0st}^{\left(L,K\right)}\frac{1}{E_{0}-E_{s}-E_{t}}V_{ts0}^{\left(K,L\right)},\label{eq:eec_deltaE0}
@@ -2471,12 +2470,12 @@ C_{st}^{2} & = & \frac{1}{E-E_{s}-E_{t}}\frac{1}{N}V_{tsr}C_{r}^{1}+\mathcal{O}\
 
 \end_inset
 
- where we restored the summations.
+ where we restored the summations explicitly.
  
 \end_layout
 
 \begin_layout Standard
-We now applying the formula of 
+We now apply the formula of 
 \begin_inset Formula $V$
 \end_inset
 
@@ -2522,8 +2521,8 @@ reference "eq:pert_Wrst_final"
  are simply
 \begin_inset Formula 
 \begin{eqnarray}
-V_{tsr}^{\left(K,L\right)} & = & M\left[\det\left(CC^{\dagger}\right)\right]^{s/4}\prod_{a=1}^{s}\left\langle \mathbb{F}_{t}^{a}\mathbb{F}_{s}^{a},\mathbb{F}_{r}^{a\dagger}\right\rangle _{V},\label{eq:ecc_Vtsr}\\
-W_{rst}^{\left(L,K\right)} & = & KL\left[\det\left(CC^{\dagger}\right)\right]^{s/4}\prod_{a=1}^{s}\left\langle \mathbb{F}_{t}^{a}\mathbb{F}_{s}^{a},\mathbb{F}_{r}^{a\dagger}\right\rangle _{W}^{\dagger}.\label{eq:ecc_Wrst}
+V_{tsr}^{\left(K,L\right)} & = & M\left|\det C\right|^{s/2}\prod_{a=1}^{s}\left\langle \mathbb{F}_{t}^{a}\mathbb{F}_{s}^{a},\mathbb{F}_{r}^{a\dagger}\right\rangle _{V},\label{eq:ecc_Vtsr}\\
+W_{rst}^{\left(L,K\right)} & = & KL\left|\det C\right|^{s/2}\prod_{a=1}^{s}\left\langle \mathbb{F}_{t}^{a}\mathbb{F}_{s}^{a},\mathbb{F}_{r}^{a\dagger}\right\rangle _{W}^{\dagger}.\label{eq:ecc_Wrst}
 \end{eqnarray}
 
 \end_inset
@@ -2532,12 +2531,12 @@ W_{rst}^{\left(L,K\right)} & = & KL\left[\det\left(CC^{\dagger}\right)\right]^{s
 \end_layout
 
 \begin_layout Standard
-Let us consider 
+Let us first consider the 
 \begin_inset Formula $s=1$
 \end_inset
 
- case first.
- The zero modes require special handling.
+ case.
+ The zero modes require special treatment.
  Let us substitute 
 \begin_inset CommandInset ref
 LatexCommand eqref
