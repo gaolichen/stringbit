@@ -1460,12 +1460,12 @@ Let us only consider the
 -bit chains.
  Define a set of operators 
 \begin_inset Formula 
-\begin{eqnarray*}
-f_{0} & = & F_{0}=F_{0}^{\left(1\right)}\sqrt{\frac{L}{M}}+F_{0}^{\left(2\right)}\sqrt{\frac{K}{M}},\\
+\begin{eqnarray}
+f_{0} & = & F_{0}=F_{0}^{\left(1\right)}\sqrt{\frac{L}{M}}+F_{0}^{\left(2\right)}\sqrt{\frac{K}{M}},\label{eq:overlap_f0}\\
 f_{n} & = & F_{n}^{\left(1\right)},\quad1\leq n\leq L-1,\\
 f_{n+L} & = & F_{n}^{\left(2\right)},\quad1\leq n\leq K-1,\\
-f_{M-1} & = & F_{0}^{\left(1\right)}\sqrt{\frac{K}{M}}-F_{0}^{\left(2\right)}\sqrt{\frac{L}{M}},
-\end{eqnarray*}
+f_{M-1} & = & F_{0}^{\left(1\right)}\sqrt{\frac{K}{M}}-F_{0}^{\left(2\right)}\sqrt{\frac{L}{M}},\label{eq:overlap_fm1}
+\end{eqnarray}
 
 \end_inset
 
@@ -2229,25 +2229,44 @@ Note that
 \begin_inset Formula $s$
 \end_inset
 
-, we then have 
+, up to a common unphysical sign factor, we can express 
+\begin_inset Formula $V$
+\end_inset
+
+ and 
+\begin_inset Formula $W$
+\end_inset
+
+ as 
 \begin_inset Formula 
 \begin{align}
-V_{tsr}^{\left(K,L\right)} & =M\left|\det C\right|^{\frac{s}{2}}\prod_{a=1}^{s}\left\langle \mathbb{F}_{t}^{a}\mathbb{F}_{s}^{a}h_{M,L+1}^{a}\mathbb{F}_{r}^{a\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{a\dagger}M_{kl}f_{l}^{a\dagger}\right)\right\rangle ,\label{eq:pert_Vtsr_final}\\
-W_{rst}^{\left(L,K\right)} & =KL\left|\det C\right|^{\frac{s}{2}}\prod_{a=1}^{s}\left\langle \mathbb{F}_{t}^{a}\mathbb{F}_{s}^{a}\left(h_{L,L+1}^{a}+h_{M,1}^{a}\right)\mathbb{F}_{r}^{a\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{a\dagger}M_{kl}f_{l}^{a\dagger}\right)\right\rangle ^{\dagger},\label{eq:pert_Wrst_final}
+V_{tsr}^{\left(K,L\right)} & =M\left|\det C\right|^{\frac{s}{2}}\prod_{a=1}^{s}\left\langle \mathbb{F}_{ts}^{a}h_{M,L+1}^{a}\mathbb{F}_{r}^{a\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{a\dagger}M_{kl}f_{l}^{a\dagger}\right)\right\rangle ,\label{eq:pert_Vtsr_final}\\
+W_{rst}^{\left(L,K\right)} & =KL\left|\det C\right|^{\frac{s}{2}}\prod_{a=1}^{s}\left\langle \mathbb{F}_{ts}^{a}\left(h_{L,L+1}^{a}+h_{M,1}^{a}\right)\mathbb{F}_{r}^{a\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{a\dagger}M_{kl}f_{l}^{a\dagger}\right)\right\rangle ^{\dagger},\label{eq:pert_Wrst_final}
 \end{align}
 
 \end_inset
 
- up to a common unphysical sign factor.
- Here 
-\begin_inset Formula $\mathbb{F}^{a}$
+where 
+\begin_inset Formula $\mathbb{F}_{ts}^{a}\equiv\mathbb{F}_{t}^{a}\mathbb{F}_{s}^{a}$
 \end_inset
 
- is the products of lowering eigenoperators of 
+ and 
+\begin_inset Formula $\mathbb{F}_{t}^{a}$
+\end_inset
+
+ 
+\begin_inset Formula $ $
+\end_inset
+
+is the products of lowering eigenoperators of 
 \begin_inset Formula $a$
 \end_inset
 
--th spinor index.
+-th spinor index of 
+\begin_inset Formula $\psi_{t}$
+\end_inset
+
+.
  
 \end_layout
 
@@ -2303,17 +2322,17 @@ For
 
 , these coefficients become
 \begin_inset Formula 
-\[
-A_{nm}^{\left(V\right)}=\sin\frac{m-n}{2M}\pi+\exp\left(2\pi i\frac{\left(L+1\right)\left(m+n\right)}{2M}\right)\sin\frac{\left(L+1/2\right)\left(m-n\right)\pi}{M},
-\]
+\begin{equation}
+A_{nm}^{\left(V\right)}=\sin\frac{m-n}{2M}\pi+\exp\left(2\pi i\frac{\left(L+1\right)\left(m+n\right)}{2M}\right)\sin\frac{\left(L+1/2\right)\left(m-n\right)\pi}{M},\label{eq:pert_AV}
+\end{equation}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-\gamma^{\left(V\right)}=-\cot\frac{\pi}{2M}-\cot\frac{2L+1}{2M}\pi+M\xi,
-\]
+\begin{equation}
+\gamma^{\left(V\right)}=-\cot\frac{\pi}{2M}-\cot\frac{2L+1}{2M}\pi+M\xi,\label{eq:pert_gammaV}
+\end{equation}
 
 \end_inset
 
@@ -2323,17 +2342,17 @@ A_{nm}^{\left(V\right)}=\sin\frac{m-n}{2M}\pi+\exp\left(2\pi i\frac{\left(L+1\ri
 
 
 \begin_inset Formula 
-\[
-A_{nm}^{\left(W\right)}=\left[1+\exp\left(\pi i\frac{n+m}{M}\right)\right]\left[1+\exp\left(2\pi iL\frac{m+n}{M}\right)\right]\sin\frac{m-n}{2M}\pi
-\]
+\begin{equation}
+A_{nm}^{\left(W\right)}=\left[1+\exp\left(\pi i\frac{n+m}{M}\right)\right]\left[1+\exp\left(2\pi iL\frac{m+n}{M}\right)\right]\sin\frac{m-n}{2M}\pi\label{eq:pert_Aw}
+\end{equation}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-\gamma^{\left(W\right)}=-4\cot\frac{\pi}{2M}+2M\xi.
-\]
+\begin{equation}
+\gamma^{\left(W\right)}=-4\cot\frac{\pi}{2M}+2M\xi.\label{eq:pert_gammaW}
+\end{equation}
 
 \end_inset
 
@@ -2382,7 +2401,7 @@ For finite
  energy eigenstates, we use the ansatz 
 \begin_inset Formula 
 \[
-\ket{E}=T_{r}\ket{0}C_{r}^{1}+T_{s}^{\left(L\right)}T_{t}^{\left(K\right)}\ket{0}C_{st}^{2}+T_{s}T_{t}T_{u}\ket{0}C_{stu}^{3}+\cdots,
+\ket{E}=T_{r}\ket{0}C_{r}^{1}+T_{s}T_{t}\ket{0}C_{st}^{2}+T_{s}T_{t}T_{u}\ket{0}C_{stu}^{3}+\cdots,
 \]
 
 \end_inset
@@ -2518,11 +2537,11 @@ reference "eq:pert_Wrst_final"
 
 \end_inset
 
- are simply
+ become
 \begin_inset Formula 
 \begin{eqnarray}
-V_{tsr}^{\left(K,L\right)} & = & M\left|\det C\right|^{s/2}\prod_{a=1}^{s}\left\langle \mathbb{F}_{t}^{a}\mathbb{F}_{s}^{a},\mathbb{F}_{r}^{a\dagger}\right\rangle _{V},\label{eq:ecc_Vtsr}\\
-W_{rst}^{\left(L,K\right)} & = & KL\left|\det C\right|^{s/2}\prod_{a=1}^{s}\left\langle \mathbb{F}_{t}^{a}\mathbb{F}_{s}^{a},\mathbb{F}_{r}^{a\dagger}\right\rangle _{W}^{\dagger}.\label{eq:ecc_Wrst}
+V_{tsr}^{\left(K,L\right)} & = & M\left|\det C\right|^{s/2}\prod_{a=1}^{s}\left\langle \mathbb{F}_{ts}^{a},\mathbb{F}_{r}^{a\dagger}\right\rangle _{V},\label{eq:ecc_Vtsr}\\
+W_{rst}^{\left(L,K\right)} & = & KL\left|\det C\right|^{s/2}\prod_{a=1}^{s}\left\langle \mathbb{F}_{ts}^{a},\mathbb{F}_{r}^{a\dagger}\right\rangle _{W}^{\dagger}.\label{eq:ecc_Wrst}
 \end{eqnarray}
 
 \end_inset
@@ -2558,30 +2577,29 @@ reference "eq:eec_deltaE0"
 
 \end_inset
 
- and write the zero modes explicitly.
- If 
-\begin_inset Formula $\mathbb{F}_{t}$
+ and write the smmation over zero modes explicitly.
+ 
+\begin_inset Formula 
+\[
+\Delta E_{0}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{s,t}}^{\prime}\frac{KLM\left|\det C\right|}{E_{0}-E_{s}-E_{t}}\sum_{\lambda,\xi=0,1}\left\langle \mathbb{F}_{ts}F_{0,L}^{\lambda}F_{0,K}^{\xi},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{ts}F_{0,L}^{\lambda}F_{0,K}^{\xi},\mathbb{F}_{r}\right\rangle _{V},
+\]
+
 \end_inset
 
-, 
-\begin_inset Formula $\mathbb{F}_{s}$
+ where 
+\begin_inset Formula ${\sum_{s,t}}^{\prime}$
 \end_inset
 
- do not contain zero mode.
- If 
-\begin_inset Formula $g_{t}+g_{s}+g_{r}$
-\end_inset
-
- is even, then 
-\begin_inset Formula $\left\langle \mathbb{F}_{t}\mathbb{F}_{s},\mathbb{F}_{r}\right\rangle _{V}$
+ indicates summation over states without zero modes.
+ Solving for 
+\begin_inset Formula $F_{0}^{\left(L\right)}$
 \end_inset
 
  and 
-\begin_inset Formula $\left\langle \mathbb{F}_{t}\mathbb{F}_{s}F_{0}^{\left(L\right)}F_{0}^{\left(K\right)},\mathbb{F}_{r}\right\rangle _{V}$
+\begin_inset Formula $F_{0}^{\left(K\right)}$
 \end_inset
 
- are nonzero.
- Since 
+ gives 
 \begin_inset Formula 
 \[
 F_{0}^{\left(L\right)}=f_{0}\sqrt{\frac{L}{M}}+f_{M-1}\sqrt{\frac{K}{M}},\quad F_{0}^{\left(K\right)}=f_{0}\sqrt{\frac{K}{M}}-f_{M-1}\sqrt{\frac{L}{M}},
@@ -2589,125 +2607,81 @@ F_{0}^{\left(L\right)}=f_{0}\sqrt{\frac{L}{M}}+f_{M-1}\sqrt{\frac{K}{M}},\quad F
 
 \end_inset
 
-
+ from which it follows
 \begin_inset Formula 
 \[
-F_{0}^{\left(L\right)}F_{0}^{\left(K\right)}=f_{M-1}f_{0}\left(\frac{L}{M}+\frac{K}{M}\right)=f_{M-1}f_{0}.
+F_{0}^{\left(L\right)}F_{0}^{\left(K\right)}=f_{M-1}f_{0},
 \]
 
 \end_inset
 
-It follows that 
+ and
 \begin_inset Formula 
-\[
-\Delta E_{st}=\frac{1}{N^{2}}\frac{KLM\left|\det C\right|}{E_{r}-E_{s}-E_{t}}\left(\left\langle \mathbb{F}_{t}\mathbb{F}_{s},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{t}\mathbb{F}_{s},\mathbb{F}_{r}\right\rangle _{V}+\left\langle \mathbb{F}_{t}\mathbb{F}_{s}f_{0}f_{M-1},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{t}\mathbb{F}_{s}f_{0}f_{M-1},\mathbb{F}_{r}\right\rangle _{V}\right).
-\]
+\begin{multline*}
+\left\langle \mathbb{F}_{ts}F_{0}^{\left(L\right)},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{ts}F_{0}^{\left(L\right)},\mathbb{F}_{r}\right\rangle _{V}+\left\langle \mathbb{F}_{ts}F_{0}^{\left(K\right)},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{ts}F_{0}^{\left(K\right)},\mathbb{F}_{r}\right\rangle _{V}\\
+=\left\langle \mathbb{F}_{ts}f_{0},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{ts}f_{0},\mathbb{F}_{r}\right\rangle _{V}+\left\langle \mathbb{F}_{ts}f_{M-1},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{ts}f_{M-1},\mathbb{F}_{r}\right\rangle _{V}.
+\end{multline*}
 
 \end_inset
 
-If 
-\begin_inset Formula $g_{t}+g_{s}+g_{r}$
-\end_inset
-
- is odd, then 
-\begin_inset Formula $\left\langle \mathbb{F}_{t}\mathbb{F}_{s}F_{0}^{\left(K\right)},\mathbb{F}_{r}\right\rangle _{V}$
+ So the summation over 
+\begin_inset Formula $F_{0}^{\left(K\right)}$
 \end_inset
 
  and 
-\begin_inset Formula $\left\langle \mathbb{F}_{t}\mathbb{F}_{s}F_{0}^{\left(K\right)},\mathbb{F}_{r}\right\rangle _{V}$
+\begin_inset Formula $F_{0}^{\left(L\right)}$
 \end_inset
 
- make nonzero contribution: 
-\begin_inset Formula 
-\begin{eqnarray*}
-\Delta E_{st} & = & \frac{1}{N^{2}}\frac{KLM\left|\det C\right|}{E_{r}-E_{s}-E_{t}}\left(\left\langle \mathbb{F}_{t}\mathbb{F}_{s}F_{0}^{\left(K\right)},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{t}\mathbb{F}_{s}F_{0}^{\left(K\right)},\mathbb{F}_{r}\right\rangle _{V}+\left\langle \mathbb{F}_{t}\mathbb{F}_{s}F_{0}^{\left(L\right)},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{t}\mathbb{F}_{s}F_{0}^{\left(L\right)},\mathbb{F}_{r}\right\rangle _{V}\right)\\
- & = & \frac{1}{N^{2}}\frac{KLM\left|\det C\right|}{E_{r}-E_{s}-E_{t}}\left(\left\langle \mathbb{F}_{t}\mathbb{F}_{s}f_{0},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{t}\mathbb{F}_{s}f_{0},\mathbb{F}_{r}\right\rangle _{V}+\left\langle \mathbb{F}_{t}\mathbb{F}_{s}f_{M-1},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{t}\mathbb{F}_{s}f_{M-1},\mathbb{F}_{r}\right\rangle _{V}\right).
-\end{eqnarray*}
-
+  can be replaced by the one over 
+\begin_inset Formula $f_{0}$
 \end_inset
 
-Combine above together, we have 
+ and 
+\begin_inset Formula $f_{M-1}$
+\end_inset
+
+: 
 \begin_inset Formula 
 \begin{equation}
-\Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{M_{t}=K,M_{s}=L}}^{\prime}\frac{KLM\left|\det C\right|}{E_{r}-E_{s}-E_{t}}\sum_{\lambda_{i}=0,1}\left\langle \mathbb{F}_{t}\mathbb{F}_{s}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{t}\mathbb{F}_{s}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}},\mathbb{F}_{r}\right\rangle _{V}\label{eq:energy_pert_DeltaE_s1}
+\Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{M_{t}=K,M_{s}=L}}^{\prime}\frac{KLM\left|\det C\right|}{E_{r}-E_{s}-E_{t}}\sum_{\lambda_{i}=0,1}\left\langle \mathbb{F}_{ts}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{ts}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}},\mathbb{F}_{r}\right\rangle _{V}.\label{eq:energy_pert_DeltaE_s1}
 \end{equation}
 
 \end_inset
 
- where 
-\begin_inset Formula ${\sum_{st}}^{\prime}$
-\end_inset
-
- indicates sum over all 
-\begin_inset Formula $\mathbb{F}_{s}$
-\end_inset
-
- and 
-\begin_inset Formula $\mathbb{F}_{t}$
-\end_inset
-
- without zero modes.
- For any 
+For arbitary 
 \begin_inset Formula $s$
 \end_inset
 
-, 
+, the energy correction is 
 \begin_inset Formula 
-\begin{align}
-\Delta E_{r} & =\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{M_{t}=K,M_{s}=L}}^{\prime}\frac{KLM\left|\det C\right|^{s}}{E_{r}-E_{s}-E_{t}}\sum_{\left\{ \lambda_{j,i}\right\} }\prod_{a=1}^{s}\left\langle \mathbb{F}_{t}^{a}\mathbb{F}_{s}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{t}^{a}\mathbb{F}_{s}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{V}\nonumber \\
- & =\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{M_{t}=K,M_{s}=L}}^{\prime}\frac{KLM\left|\det C\right|^{s}}{E_{r}-E_{s}-E_{t}}\prod_{a=1}^{s}\left(\sum_{\lambda_{a,i}}\left\langle \mathbb{F}_{t}^{a}\mathbb{F}_{s}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{t}^{a}\mathbb{F}_{s}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{V}\right),\label{eq:energy_pert_DeltaE}
-\end{align}
+\begin{equation}
+\Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{t,s}}^{\prime}\frac{KLM\left|\det C\right|^{s}}{E_{r}-E_{s}-E_{t}}\sum_{\lambda_{i,j}}\prod_{a=1}^{s}\left\langle \mathbb{F}_{ts}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{ts}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{V}.
+\end{equation}
 
 \end_inset
 
- where 
-\begin_inset Formula $\lambda_{a,0}$
+We can commute the summation over 
+\begin_inset Formula $\lambda_{i,j}$
 \end_inset
 
- and 
-\begin_inset Formula $\lambda_{a,M-1}$
+ and product over 
+\begin_inset Formula $a$
 \end_inset
 
- are either 
-\begin_inset Formula $0$
+ to give
+\begin_inset Formula 
+\begin{equation}
+\Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{t,s}}^{\prime}\frac{KLM\left|\det C\right|^{s}}{E_{r}-E_{s}-E_{t}}\prod_{a=1}^{s}\left(\sum_{\lambda_{a,i}}\left\langle \mathbb{F}_{ts}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{ts}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{V}\right).\label{eq:energy_pert_DeltaE}
+\end{equation}
+
 \end_inset
 
- or 
-\begin_inset Formula $1$
-\end_inset
 
-.
- 
 \end_layout
 
 \begin_layout Standard
-To calculate 
-\begin_inset Formula $\left\langle \cdot\right\rangle _{V}$
-\end_inset
-
- and 
-\begin_inset Formula $\left\langle \cdot\right\rangle _{W}$
-\end_inset
-
-, we consider the simplest case when 
-\begin_inset Formula $\mathbb{F}_{r}$
-\end_inset
-
- is empty and 
-\begin_inset Formula $s=1$
-\end_inset
-
-.
- The 
-\begin_inset Formula $s>1$
-\end_inset
-
- case is built out of products of 
-\begin_inset Formula $s=1$
-\end_inset
-
- case as we see from Eq.
- 
+In principle, we can calculate energy correction to any single trace energy
+ state with 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:energy_pert_DeltaE"
@@ -2715,95 +2689,134 @@ reference "eq:energy_pert_DeltaE"
 \end_inset
 
 .
- For 
+ But in general the calculation is very tedious.
+ Let us now consider the simplest case where 
+\begin_inset Formula $\psi_{r}$
+\end_inset
+
+ is the ground state, i.e., 
+\begin_inset Formula $\mathbb{F}_{r}$
+\end_inset
+
+ is empty.
+ We only need to consider the 
+\begin_inset Formula $s=1$
+\end_inset
+
+ case, since the 
+\begin_inset Formula $s>1$
+\end_inset
+
+ cases are simply products of the 
+\begin_inset Formula $s=1$
+\end_inset
+
+ case.
+ 
+\end_layout
+
+\begin_layout Standard
+We need to calculate the vacuum expectation value 
+\begin_inset Formula $\left\langle \cdots h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle $
+\end_inset
+
+.
+ We have written 
 \begin_inset Formula $h$
 \end_inset
 
  in the form of 
+\begin_inset Formula $F$
+\end_inset
+
+ and 
+\begin_inset Formula $F^{\dagger}$
+\end_inset
+
+ as 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:exp_h_kl"
 
 \end_inset
 
-, we have
+.
+ Since 
+\begin_inset Formula $F_{m}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\psi_{0}^{\left(L\right)}\psi_{0}^{\left(K\right)}=F_{m}\psi_{0}^{\left(M\right)}=0$
+\end_inset
+
+, only 
+\begin_inset Formula $F^{\dagger}F^{\dagger}$
+\end_inset
+
+ and constant terms survive: 
 \begin_inset Formula 
 \[
-\left\langle \cdots h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle =\frac{2}{M}\left\langle \cdots\left(A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}+\gamma\right)\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ,
+\left\langle \cdots h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle =\frac{2}{M}\left\langle \cdots\left(A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}+\gamma\right)\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle .
 \]
 
 \end_inset
 
- other terms vanish because 
-\begin_inset Formula $F_{m}\psi_{0}^{\left(M\right)}=0$
+The action of 
+\begin_inset Formula $A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}$
+\end_inset
+
+ term of RHS can be calculated using Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:app_AFF_1"
+
+\end_inset
+
+ of Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:app_AFF"
+
 \end_inset
 
 .
- Commuting 
-\begin_inset Formula $F_{m}^{\dagger}$
-\end_inset
-
- through the expotential and using 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:overlap_CS_relation"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:overlap_CMS"
-
-\end_inset
-
- yield
+ It then follows
 \begin_inset Formula 
-\begin{equation}
-\left\langle \cdots h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle =\frac{2}{M}\gamma^{\prime}\left\langle \cdots\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}\left\langle \cdots f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \label{eq:pert_hexp}
-\end{equation}
+\begin{multline}
+\left\langle \cdots h\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle =\frac{2}{M}\left[\gamma-\tr\left(S^{*}C^{-1}A^{\dagger}\right)\right]\left\langle \cdots\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
++\frac{2}{M}\left[C^{-1}A^{\dagger}\left(C^{-1}\right)^{T}\right]_{mn}\left\langle \cdots f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle .\label{eq:pert_hexp}
+\end{multline}
+
+\end_inset
+
+So we have 
+\begin_inset Formula 
+\begin{multline}
+\left\langle \mathbb{F}_{ts}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}\right\rangle _{V}=\frac{2}{M}\gamma^{\prime\left(V\right)}\left\langle \mathbb{F}_{ts}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
++\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle \mathbb{F}_{ts}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ,\label{eq:pert_vev_v}
+\end{multline}
 
 \end_inset
 
  where 
 \begin_inset Formula 
-\begin{equation}
-\gamma^{\prime}=\gamma-\tr\left(S^{*}C^{-1}A^{\dagger}\right),\quad\Omega=C^{-1}A^{\dagger}\left(C^{-1}\right)^{T}.\label{eq:pert_omega_gamma}
-\end{equation}
+\[
+\gamma^{\prime\left(V\right)}=\gamma^{\left(V\right)}-\tr\left(S^{*}C^{-1}A^{\left(V\right)\dagger}\right),\quad\Omega=C^{-1}A^{\left(V\right)\dagger}\left(C^{-1}\right)^{T}
+\]
 
 \end_inset
 
-The derivation of Eqs.
- 
+ and similarly for 
+\begin_inset Formula $\left\langle \cdot\right\rangle _{W}$
+\end_inset
+
+.
+ Finally, the vacuum expectation value on RHS of 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:pert_hexp"
+reference "eq:pert_vev_v"
 
 \end_inset
 
- and 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:pert_omega_gamma"
-
-\end_inset
-
- is provided in Appendix.
- Note that 
-\begin_inset Formula $\Omega$
-\end_inset
-
- is an antisymmetric matrix.
- It follows that 
-\begin_inset Formula 
-\begin{multline*}
-\left\langle \mathbb{F}_{t}\mathbb{F}_{s}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}\right\rangle _{V}=\frac{2}{M}\gamma^{\prime}\left\langle \mathbb{F}_{t}\mathbb{F}_{s}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
-+\frac{2}{M}\Omega_{mn}\left\langle \mathbb{F}_{t}\mathbb{F}_{s}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle 
-\end{multline*}
-
-\end_inset
-
-Finally, we need the formula
+.
+ The first term can be done using
 \begin_inset Formula 
 \[
 \left\langle f_{i_{1}}f_{i_{2}}\cdots f_{i_{2n-1}}f_{i_{2n}}\exp\left(-\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ={\sum_{p\in S_{2n}}}^{\prime}\left(-\right)^{p}M_{i_{p(1)}i_{p(2)}}M_{i_{p(3)}i_{p(4)}}\cdots M_{i_{p(2n-1)}i_{p(2n)}},
@@ -2833,23 +2846,26 @@ Finally, we need the formula
 
  indicates suming over permutations satisfying 
 \begin_inset Formula 
-\begin{eqnarray*}
-p\left(1\right) & < & p\left(2\right),\quad p\left(3\right)<p\left(4\right),\cdots,p\left(2n-1\right)<p\left(2n\right),\\
-p\left(1\right) & < & p\left(3\right)<p\left(5\right)<\cdots<p\left(2n-1\right).
-\end{eqnarray*}
+\begin{align*}
+p\left(1\right) & <p\left(2\right),\quad p\left(3\right)<p\left(4\right),\cdots,p\left(2n-1\right)<p\left(2n\right),\\
+p\left(1\right) & <p\left(3\right)<p\left(5\right)<\cdots<p\left(2n-1\right).
+\end{align*}
 
 \end_inset
 
-For a product of odd number of 
-\begin_inset Formula $f$
+The second term on RHS of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:pert_vev_v"
+
 \end_inset
 
-, the result is zero.
- We also need 
+ can be calculated using 
 \begin_inset Formula 
-\[
-\left\langle f_{i_{1}}f_{i_{2}}\cdots f_{i_{2j-1}}f_{i_{2j}}f_{n}^{\dagger}f_{m}^{\dagger}\exp\left(-\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle =-\frac{d}{dM_{nm}}\left\langle f_{i_{1}}f_{i_{2}}\cdots f_{i_{2j-1}}f_{i_{2j}}\exp\left(-\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle .
-\]
+\begin{multline*}
+\left\langle f_{i_{1}}f_{i_{2}}\cdots f_{i_{2j-1}}f_{i_{2j}}f_{n}^{\dagger}f_{m}^{\dagger}\exp\left(-\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle =\\
+-\frac{d}{dM_{nm}}\left\langle f_{i_{1}}f_{i_{2}}\cdots f_{i_{2j-1}}f_{i_{2j}}\exp\left(-\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle .
+\end{multline*}
 
 \end_inset
 
@@ -4369,12 +4385,14 @@ h_{kl}=\frac{2}{M}\sum_{n,m=0}^{M-1}\left(A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{
 \end_layout
 
 \begin_layout Section
-Calculation of Eqs.
- 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:pert_hexp"
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:app_AFF"
 
+\end_inset
+
+Calculation of 
+\begin_inset Formula $\left\langle \cdots\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle $
 \end_inset
 
 
@@ -4382,17 +4400,10 @@ reference "eq:pert_hexp"
 
 \begin_layout Standard
 In this section we will derive the formula 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:pert_hexp"
-
-\end_inset
-
-: 
 \begin_inset Formula 
-\[
-\left\langle \cdots\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle =-\frac{2}{M}\tr\left(S^{*}C^{-1}\bar{A}\right)\left\langle \cdots\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}\left\langle \cdots f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle 
-\]
+\begin{equation}
+\left\langle \cdots\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle =-\frac{2}{M}\tr\left(S^{*}C^{-1}\bar{A}\right)\left\langle \cdots\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}\left\langle \cdots f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \label{eq:app_AFF_1}
+\end{equation}
 
 \end_inset
 
