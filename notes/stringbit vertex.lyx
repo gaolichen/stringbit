@@ -2808,7 +2808,7 @@ So we have
 \end_inset
 
 .
- Finally, the vacuum expectation value on RHS of 
+ Finally, we need to calculate the vacuum expectation values on RHS of 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:pert_vev_v"
@@ -2819,7 +2819,7 @@ reference "eq:pert_vev_v"
  The first term can be done using
 \begin_inset Formula 
 \[
-\left\langle f_{i_{1}}f_{i_{2}}\cdots f_{i_{2n-1}}f_{i_{2n}}\exp\left(-\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ={\sum_{p\in S_{2n}}}^{\prime}\left(-\right)^{p}M_{i_{p(1)}i_{p(2)}}M_{i_{p(3)}i_{p(4)}}\cdots M_{i_{p(2n-1)}i_{p(2n)}},
+\left\langle f_{i_{1}}f_{i_{2}}\cdots f_{i_{2n-1}}f_{i_{2n}}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle =\left(-\right)^{n}{\sum_{p\in S_{2n}}}^{\prime}\left(-\right)^{p}M_{i_{p(1)}i_{p(2)}}M_{i_{p(3)}i_{p(4)}}\cdots M_{i_{p(2n-1)}i_{p(2n)}},
 \]
 
 \end_inset
@@ -2828,7 +2828,7 @@ reference "eq:pert_vev_v"
 \begin_inset Formula $S_{2n}$
 \end_inset
 
- is the set of permutations 
+ is the set of all permutations of 
 \begin_inset Formula $2n$
 \end_inset
 
@@ -2863,8 +2863,17 @@ reference "eq:pert_vev_v"
  can be calculated using 
 \begin_inset Formula 
 \begin{multline*}
-\left\langle f_{i_{1}}f_{i_{2}}\cdots f_{i_{2j-1}}f_{i_{2j}}f_{n}^{\dagger}f_{m}^{\dagger}\exp\left(-\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle =\\
--\frac{d}{dM_{nm}}\left\langle f_{i_{1}}f_{i_{2}}\cdots f_{i_{2j-1}}f_{i_{2j}}\exp\left(-\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle .
+\left\langle f_{i_{1}}f_{i_{2}}\cdots f_{i_{2j-1}}f_{i_{2j}}f_{n}^{\dagger}f_{m}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle =\\
+\frac{d}{dM_{nm}}\left\langle f_{i_{1}}f_{i_{2}}\cdots f_{i_{2j-1}}f_{i_{2j}}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle .
+\end{multline*}
+
+\end_inset
+
+ or
+\begin_inset Formula 
+\begin{multline*}
+\left\langle f_{i_{1}}f_{i_{2}}\cdots f_{i_{2j-1}}f_{i_{2j}}f_{n}^{\dagger}f_{m}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle =\\
+\sum_{p<q}\left(-\right)^{q-p-1}\left(\delta_{i_{p}m}\delta_{i_{q}n}-\delta_{i_{p}n}\delta_{i_{q}m}\right)\left\langle f_{i_{1}}f_{i_{2}}\cdots f_{i_{p-1}}f_{i_{p+1}}\cdots f_{i_{q-1}}f_{i_{q+1}}\cdots f_{i_{2j}}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle .
 \end{multline*}
 
 \end_inset
@@ -2881,24 +2890,35 @@ Examples of
 \end_layout
 
 \begin_layout Standard
-Let us calculate a simple example for 
+Let us give an example of 
 \begin_inset Formula $M=3$
 \end_inset
 
-, where 
+ case, where 
 \begin_inset Formula $L$
 \end_inset
 
- can only be 
+ can be 
 \begin_inset Formula $1$
 \end_inset
 
- and 
-\begin_inset Formula $K=2$
+ or 
+\begin_inset Formula $2$
 \end_inset
 
 .
- The 
+\end_layout
+
+\begin_layout Standard
+When 
+\begin_inset Formula $L=1$
+\end_inset
+
+, 
+\begin_inset Formula $K=2$
+\end_inset
+
+, the 
 \begin_inset Formula $C$
 \end_inset
 
@@ -2910,7 +2930,7 @@ Let us calculate a simple example for
 \begin_inset Formula $M$
 \end_inset
 
- are 
+ matrices are 
 \begin_inset Formula 
 \begin{eqnarray*}
 C & = & \begin{pmatrix}1\end{pmatrix}\oplus\frac{1+\sqrt{3}}{4}\begin{pmatrix}e^{i\frac{\pi}{6}} & -e^{i\frac{\pi}{12}}\\
@@ -2920,12 +2940,12 @@ S & = & \begin{pmatrix}0\end{pmatrix}\oplus\frac{\sqrt{3}-1}{4}\begin{pmatrix}e^
 e^{i\frac{\pi}{6}} & e^{-i\frac{\pi}{12}}
 \end{pmatrix},\quad M=\begin{pmatrix}0\end{pmatrix}\oplus\left(2-\sqrt{3}\right)\begin{pmatrix}0 & e^{i\frac{3\pi}{4}}\\
 e^{-i\frac{\pi}{4}} & 0
-\end{pmatrix}.
+\end{pmatrix},
 \end{eqnarray*}
 
 \end_inset
 
- Matrices 
+ and matrices 
 \begin_inset Formula $A$
 \end_inset
 
@@ -2947,15 +2967,15 @@ A^{\left(V\right)} & = & \begin{pmatrix}0 & i\frac{\sqrt{3}}{2} & \frac{\sqrt{3}
 -\frac{i\sqrt{3}}{2} & 0 & 0\\
 -\frac{\sqrt{3}}{2} & 0 & 0
 \end{pmatrix}\\
-\Omega^{\left(V\right)} & = & \begin{pmatrix}0 & \sqrt{\frac{3}{2}}e^{i\frac{3\pi}{4}} & -\sqrt{\frac{3}{2}}\left(2-\sqrt{3}\right)\\
-\sqrt{\frac{3}{2}}e^{-i\frac{\pi}{4}} & 0 & 6\left(2-\sqrt{3}\right)e^{i\frac{3\pi}{4}}\\
-\sqrt{\frac{3}{2}}\left(2-\sqrt{3}\right) & 6\left(2-\sqrt{3}\right)e^{-i\frac{\pi}{4}} & 0
+\Omega^{\left(V\right)} & = & \begin{pmatrix}0 & \sqrt{\frac{3}{2}}e^{i\frac{3\pi}{4}} & -\frac{\sqrt{\frac{3}{2}}}{2+\sqrt{3}}\\
+\sqrt{\frac{3}{2}}e^{-i\frac{\pi}{4}} & 0 & \frac{6e^{i\frac{3\pi}{4}}}{2+\sqrt{3}}\\
+\frac{\sqrt{\frac{3}{2}}}{2+\sqrt{3}} & \frac{6}{2+\sqrt{3}}e^{-i\frac{\pi}{4}} & 0
 \end{pmatrix},\\
-\Omega^{\left(W\right)} & = & \begin{pmatrix}0 & \sqrt{\frac{3}{2}}e^{i\frac{3\pi}{4}} & -\sqrt{\frac{3}{2}}\left(2-\sqrt{3}\right)\\
+\Omega^{\left(W\right)} & = & \begin{pmatrix}0 & \sqrt{\frac{3}{2}}e^{i\frac{3\pi}{4}} & -\frac{\sqrt{\frac{3}{2}}}{2+\sqrt{3}}\\
 \sqrt{\frac{3}{2}}e^{-i\frac{\pi}{4}} & 0 & 0\\
-\sqrt{\frac{3}{2}}\left(2-\sqrt{3}\right) & 0 & 0
+\frac{\sqrt{\frac{3}{2}}}{2+\sqrt{3}} & 0 & 0
 \end{pmatrix},\\
-\gamma^{\prime\left(V\right)} & = & -2\left(3-\sqrt{3}\right),\quad\gamma^{\prime\left(W\right)}=-4\sqrt{3}.
+\gamma^{\prime\left(V\right)} & = & -2\left(3-\sqrt{3}\right)+3\xi,\quad\gamma^{\prime\left(W\right)}=-4\sqrt{3}+6\xi.
 \end{eqnarray*}
 
 \end_inset
@@ -2967,7 +2987,7 @@ The operators
  are 
 \begin_inset Formula 
 \[
-f_{0}=F_{0}^{\left(3\right)},\quad f_{1}=F_{1}^{\left(2\right)},\quad f_{2}=\sqrt{\frac{2}{3}}F_{0}^{\left(1\right)}-F_{0}^{\left(2\right)}\sqrt{\frac{2}{3}}
+f_{0}=F_{0},\quad f_{1}=F_{1}^{\left(2\right)},\quad f_{2}=\sqrt{\frac{2}{3}}F_{0}^{\left(1\right)}-F_{0}^{\left(2\right)}\sqrt{\frac{2}{3}}.
 \]
 
 \end_inset
@@ -3201,7 +3221,7 @@ name "tab:Energy-eigenstates-1"
 \begin_inset Formula $s=1$
 \end_inset
 
- which do not contain zero modes
+ which do not contain zero modes.
 \end_layout
 
 \end_inset
@@ -3219,20 +3239,32 @@ name "tab:Energy-eigenstates-1"
 \end_layout
 
 \begin_layout Standard
-According to formular 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:energy_pert_DeltaE_s1"
+The contribution of 
+\begin_inset Formula $L=1$
+\end_inset
+
+ to the energy correction is 
+\begin_inset Formula 
+\begin{equation}
+\Delta E_{0}^{\prime}=\frac{1}{N^{2}}\frac{KLM\left|\det C\right|}{E_{0}-E_{0}^{\left(1\right)}-E_{1}^{\left(2\right)}}\left(\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V}+\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{V}\right).\label{eq:exmp_deltaEp}
+\end{equation}
 
 \end_inset
 
-, we need to calculate 
+So we need to calculate 
+\begin_inset Formula $\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V,W}$
+\end_inset
+
+ and 
+\begin_inset Formula $\left\langle F_{1}^{\left(2\right)}f_{1}\right\rangle _{V,W}$
+\end_inset
+
+: 
 \begin_inset Formula 
 \begin{eqnarray*}
-\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V} & = & \frac{2}{M}\gamma^{\prime\left(V\right)}\left\langle f_{1}f_{0}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle f_{1}f_{0}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V} & = & \frac{2}{M}\gamma^{\prime\left(V\right)}\zero{\left\langle f_{1}f_{0}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle }+\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle f_{1}f_{0}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
  & = & \frac{4}{M}\Omega_{0n}^{\left(V\right)}\left\langle f_{1}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
- & = & \frac{4}{M}\Omega_{01}^{\left(V\right)}\\
- & = & -\frac{2-2i}{\sqrt{3}}
+ & = & \frac{4}{M}\Omega_{01}^{\left(V\right)}=-\frac{2-2i}{\sqrt{3}},
 \end{eqnarray*}
 
 \end_inset
@@ -3241,8 +3273,7 @@ reference "eq:energy_pert_DeltaE_s1"
 \begin_inset Formula 
 \begin{eqnarray*}
 \left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{V} & = & \frac{2}{M}\gamma^{\prime\left(V\right)}\left\langle f_{1}f_{2}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle f_{1}f_{2}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
- & = & -\frac{2}{M}\gamma^{\prime\left(V\right)}M_{12}-\frac{4}{M}\Omega_{12}^{\left(V\right)}\\
- & = & 4\left(1-\frac{1}{\sqrt{3}}\right)e^{-i\frac{\pi}{4}}
+ & = & -\frac{2}{M}\gamma^{\prime\left(V\right)}M_{12}-\frac{4}{M}\Omega_{12}^{\left(V\right)}=4\left(1-\frac{1}{\sqrt{3}}+\xi\right)e^{-i\frac{\pi}{4}}.
 \end{eqnarray*}
 
 \end_inset
@@ -3250,27 +3281,113 @@ reference "eq:energy_pert_DeltaE_s1"
  Likewise
 \begin_inset Formula 
 \[
-\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W}=\frac{4}{M}\Omega_{01}^{\left(W\right)}=-\frac{2-2i}{\sqrt{3}},\quad\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{W}=-\frac{2}{M}\gamma^{\prime\left(W\right)}M_{12}-\frac{4}{M}\Omega_{12}^{\left(W\right)}=8\left(1-\frac{2}{\sqrt{3}}\right)e^{-i\frac{\pi}{4}}.
+\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W}=\frac{4}{M}\Omega_{01}^{\left(W\right)}=-\frac{2-2i}{\sqrt{3}},\quad\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{W}=-\frac{2}{M}\gamma^{\prime\left(W\right)}M_{12}-\frac{4}{M}\Omega_{12}^{\left(W\right)}=8\left(1-\frac{2}{\sqrt{3}}+\xi-\frac{\sqrt{3}}{2}\xi\right)e^{-i\frac{\pi}{4}}.
 \]
 
 \end_inset
 
-For 
-\begin_inset Formula $M=3$
-\end_inset
-
-, the ground energy 
+Substituting above results and ground energy 
 \begin_inset Formula $E_{0}=-4\sqrt{3}$
 \end_inset
 
+ into 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:exmp_deltaEp"
+
+\end_inset
+
+ yields 
+\begin_inset Formula $\Delta E_{0}^{\prime}=-\frac{3}{2}\left(3\sqrt{3}-5\right)\left(1+\xi\right)^{2}\frac{1}{N^{2}}$
+\end_inset
+
 .
- We therefore have 
+ 
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $L=2$
+\end_inset
+
+, the energy eigenstate are the same as 
+\begin_inset Formula $L=1$
+\end_inset
+
+, so the energy correction is still given by 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:exmp_deltaEp"
+
+\end_inset
+
+.
+ Now the matrices and constants are 
 \begin_inset Formula 
-\begin{eqnarray*}
-\Delta E_{0} & = & \frac{1}{N^{2}}\frac{KLM\left|\det C\right|}{E_{0}-E_{0}^{\left(1\right)}-E_{1}^{\left(2\right)}}\left(\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V}+\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{V}\right)\\
- & = & \frac{1}{N^{2}}\frac{1\cdot2\cdot3}{-4\sqrt{3}-4}\frac{2+\sqrt{3}}{4}\left[\left(-\frac{2+2i}{\sqrt{3}}\right)\left(-\frac{2-2i}{\sqrt{3}}\right)+8\left(1-\frac{2}{\sqrt{3}}\right)4\left(1-\frac{1}{\sqrt{3}}\right)\right]\\
- & = & -\frac{3}{2}\left(3\sqrt{3}-5\right)\frac{1}{N^{2}}.
-\end{eqnarray*}
+\[
+C=\begin{pmatrix}1\end{pmatrix}\oplus\frac{1+\sqrt{3}}{4}\begin{pmatrix}i & e^{\frac{3\pi}{4}}\\
+-i & e^{\frac{3\pi}{4}}
+\end{pmatrix},\quad\left|\det C\right|=\frac{2+\sqrt{3}}{4},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+S=\begin{pmatrix}0\end{pmatrix}\oplus\frac{\sqrt{3}-1}{4}\begin{pmatrix}i & -e^{\frac{\pi}{4}}\\
+i & e^{\frac{\pi}{4}}
+\end{pmatrix},\quad M=\begin{pmatrix}0\end{pmatrix}\oplus\left(2-\sqrt{3}\right)\begin{pmatrix}0 & e^{-i\frac{\pi}{4}}\\
+e^{i\frac{3\pi}{4}} & 0
+\end{pmatrix},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+A^{\left(V\right)}=0,\quad A^{\left(W\right)}=\begin{pmatrix}0 & \frac{1}{2}\left(1-(-1)^{2/3}\right) & \frac{1}{4}\left(3i-\sqrt{3}\right)\\
+\frac{1}{2}\left(-1+(-1)^{2/3}\right) & 0 & 0\\
+\frac{1}{4}\left(-3i+\sqrt{3}\right) & 0 & 0
+\end{pmatrix},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Omega^{\left(V\right)}=0,\quad\Omega^{\left(W\right)}=\left(\begin{array}{ccc}
+0 & \sqrt{\frac{3}{2}}e^{i\frac{3\pi}{4}} & \sqrt{6}-\frac{3}{\sqrt{2}}\\
+\sqrt{\frac{3}{2}}e^{-i\frac{\pi}{4}} & 0 & 0\\
+\frac{3}{\sqrt{2}}-\sqrt{6} & 0 & 0
+\end{array}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\gamma^{\prime\left(V\right)}=3\xi,\quad\gamma^{\prime\left(W\right)}=-4\sqrt{3}+6\xi.
+\]
+
+\end_inset
+
+With above results, we find the 
+\begin_inset Formula $L=2$
+\end_inset
+
+ contribution is 
+\begin_inset Formula $\Delta E_{0}^{\prime\prime}=\frac{\left(2\sqrt{3}-3\xi\right)\xi}{3\sqrt{3}+5}\frac{1}{N^{2}}$
+\end_inset
+
+ and the final result of energy correction is
+\begin_inset Formula 
+\[
+\Delta E_{0}=\Delta E_{0}^{\prime}+\Delta E_{0}^{\prime\prime}=-3\left(3\sqrt{3}-5\right)\xi^{2}+2\left(12-7\sqrt{3}\right)\xi-\frac{3}{2}\left(3\sqrt{3}-5\right).
+\]
 
 \end_inset
 
@@ -3282,22 +3399,51 @@ For
 \begin_inset Formula $s=2$
 \end_inset
 
-, the energy eigenstate of 
-\begin_inset Formula $1$
+, the matrices and constants are the same as the 
+\begin_inset Formula $s=1$
 \end_inset
 
--bit and 
-\begin_inset Formula $2$
-\end_inset
-
--bit system are given in Table 
+ case.
+ But as Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Energy-eigenstates-2"
 
 \end_inset
 
+ shows, the energy eigenstates of smaller chains are different.
+ The energy correction now is now given by 
+\begin_inset Formula 
+\begin{multline*}
+\Delta E_{0}=\frac{1}{N^{2}}\sum_{L=1}^{2}\frac{KLM\left|\det C\right|^{2}}{E_{0}-E_{0}^{\left(2\right)}-0}\left(\left\langle 1\right\rangle _{W}^{*}\left\langle 1\right\rangle _{V}+\left\langle f_{2}f_{0}\right\rangle _{W}^{*}\left\langle f_{2}f_{0}\right\rangle _{V}\right)^{2}\\
++\frac{1}{N^{2}}\sum_{L=1}^{2}\frac{KLM\left|\det C\right|^{2}}{E_{0}-E_{1}^{\left(2\right)}-0}\left(\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V}+\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{V}\right)^{2}.
+\end{multline*}
+
+\end_inset
+
+ We have calcualted the 
+\begin_inset Formula $\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V,W}$
+\end_inset
+
+ and 
+\begin_inset Formula $\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{V,W}$
+\end_inset
+
+ in the 
+\begin_inset Formula $s=1$
+\end_inset
+
+ case.
+ Now let us find 
+\begin_inset Formula $\left\langle 1\right\rangle _{V,W}$
+\end_inset
+
+ and 
+\begin_inset Formula $\left\langle f_{2}f_{0}\right\rangle _{V,W}$
+\end_inset
+
 .
+ 
 \end_layout
 
 \begin_layout Standard
@@ -3563,11 +3709,11 @@ name "tab:Energy-eigenstates-2"
 \end_inset
 
 1-bit and 2-bit energy eigenstates of 
-\begin_inset Formula $s=12$
+\begin_inset Formula $s=2$
 \end_inset
 
- which do not contain zero modes.
- The first index in 
+ that do not contain zero modes.
+ The first index in the superscript of 
 \begin_inset Formula $F_{1}^{\left(1,2\right)}$
 \end_inset
 
@@ -3585,17 +3731,18 @@ name "tab:Energy-eigenstates-2"
 \end_layout
 
 \begin_layout Standard
-The matrices are the same as 
-\begin_inset Formula $s=1$
+For 
+\begin_inset Formula $L=1$
 \end_inset
 
- case.
- Now we need to calculate
+,
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-\left\langle 1\right\rangle _{V} & = & \frac{2}{M}\gamma^{\prime\left(V\right)}\left\langle \exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
- & = & \frac{2}{M}\gamma^{\prime\left(V\right)}\\
- & = & \frac{4}{\sqrt{3}}-4,
+\left\langle 1\right\rangle _{V} & = & \frac{2}{M}\gamma^{\prime\left(V\right)}\left\langle \exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}^{\left(V\right)}\zero{\left\langle f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle }\\
+ & = & \frac{2}{M}\gamma^{\prime\left(V\right)}=\frac{4}{\sqrt{3}}-4+2\xi,
 \end{eqnarray*}
 
 \end_inset
@@ -3603,9 +3750,8 @@ The matrices are the same as
 
 \begin_inset Formula 
 \begin{eqnarray*}
-\left\langle f_{2}f_{0}\right\rangle _{V} & = & \frac{2}{M}\gamma^{\prime\left(V\right)}\left\langle f_{2}f_{0}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle f_{2}f_{0}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
- & = & \frac{4}{M}\Omega_{02}^{\left(V\right)}\\
- & = & 2\sqrt{2}\left(1-\frac{2}{\sqrt{3}}\right)
+\left\langle f_{2}f_{0}\right\rangle _{V} & = & \frac{2}{M}\gamma^{\prime\left(V\right)}\zero{\left\langle f_{2}f_{0}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle }+\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle f_{2}f_{0}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+ & = & \frac{4}{M}\Omega_{02}^{\left(V\right)}=2\sqrt{2}\left(1-\frac{2}{\sqrt{3}}\right),
 \end{eqnarray*}
 
 \end_inset
@@ -3613,25 +3759,24 @@ The matrices are the same as
  Likewise
 \begin_inset Formula 
 \[
-\left\langle 1\right\rangle _{W}=\frac{2}{M}\gamma^{\prime\left(W\right)}=-\frac{8}{\sqrt{3}},\quad\left\langle f_{2}f_{0}\right\rangle _{W}=\frac{4}{M}\Omega_{02}^{\left(W\right)}=2\sqrt{2}\left(1-\frac{2}{\sqrt{3}}\right)
+\left\langle 1\right\rangle _{W}=\frac{2}{M}\gamma^{\prime\left(W\right)}=-\frac{8}{\sqrt{3}}+4\xi,\quad\left\langle f_{2}f_{0}\right\rangle _{W}=\frac{4}{M}\Omega_{02}^{\left(W\right)}=2\sqrt{2}\left(1-\frac{2}{\sqrt{3}}\right).
 \]
 
 \end_inset
 
- 
-\begin_inset Formula $\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V,W}$
+ For 
+\begin_inset Formula $L=2$
 \end_inset
 
- and 
-\begin_inset Formula $\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{V,W}$
+, 
+\begin_inset Formula 
+\[
+\left\langle 1\right\rangle _{V}=2\xi,\quad\left\langle f_{2}f_{0}\right\rangle _{V}=0,\quad\left\langle 1\right\rangle _{W}=-\frac{8}{\sqrt{3}}+4\xi,\quad\left\langle f_{2}f_{0}\right\rangle _{W}=-2\sqrt{2}\left(1-\frac{2}{\sqrt{3}}\right)
+\]
+
 \end_inset
 
- are the same as 
-\begin_inset Formula $s=1$
-\end_inset
-
- case.
- Applying formular 
+Applying formular 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:energy_pert_DeltaE"
@@ -3639,18 +3784,10 @@ reference "eq:energy_pert_DeltaE"
 \end_inset
 
 , we obtain
-\begin_inset Formula 
-\begin{eqnarray*}
-\Delta E_{0} & = & \frac{1}{N^{2}}\frac{KLM\left|\det C\right|^{2}}{E_{0}-E_{0}^{\left(2\right)}-0}\left(\left\langle 1\right\rangle _{W}^{*}\left\langle 1\right\rangle _{V}+\left\langle f_{2}f_{0}\right\rangle _{W}^{*}\left\langle f_{2}f_{0}\right\rangle _{V}\right)^{2}\\
- &  & +\frac{1}{N^{2}}\frac{KLM\left|\det C\right|^{2}}{E_{0}-E_{1}^{\left(2\right)}-0}\left(\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V}+\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{V}\right)^{2}\\
- & = & \frac{1}{N^{2}}\frac{1\cdot2\cdot3}{-8\sqrt{3}+8}\left(\frac{2+\sqrt{3}}{4}\right)^{2}\left[\left(-\frac{8}{\sqrt{3}}\right)\left(\frac{4}{\sqrt{3}}-4\right)+2\sqrt{2}\left(1-\frac{2}{\sqrt{3}}\right)2\sqrt{2}\left(1-\frac{2}{\sqrt{3}}\right)\right]^{2}\\
- &  & +\frac{1}{N^{2}}\frac{1\cdot2\cdot3}{-8\sqrt{3}-8}\left(\frac{2+\sqrt{3}}{4}\right)^{2}\left[\left(-\frac{2+2i}{\sqrt{3}}\right)\left(-\frac{2-2i}{\sqrt{3}}\right)+8\left(1-\frac{2}{\sqrt{3}}\right)4\left(1-\frac{1}{\sqrt{3}}\right)\right]^{2}\\
- & = & -\frac{33\sqrt{3}}{N^{2}}
-\end{eqnarray*}
-
+\begin_inset Formula $\Delta E_{0}=\frac{1}{N^{2}}\left(-66\sqrt{3}\xi^{4}+360\xi^{3}-242\sqrt{3}\xi^{2}+228\xi-33\sqrt{3}\right)$
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Section
@@ -3658,7 +3795,11 @@ Numerical Results
 \end_layout
 
 \begin_layout Standard
-This section provides numerical results.
+We have derived a formula for the energy correction to the ground energy.
+ However, from previous section, we see that the calculation is tedious
+ even for the simpliest case.
+ We therefore turn to the numerical computation.
+ 
 \end_layout
 
 \begin_layout Standard
