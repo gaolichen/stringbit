@@ -184,8 +184,11 @@ void RunEnergyCorrection(int s, DT xi, int minM, int maxM, bool outputE)
 void RunEnergyCorrectionForS(int M, int xi, int smin, int smax, bool outputE)
 {
 	vector<DT> totalE;
+	vector<int> vs;
 	for (int s = smin; s <= smax; s++)
 	{
+		if (((M-1) * s) % 2 == 1) continue;
+
 		Stopwatch watch;
 		watch.Start();
 		EnergyCalculator calc(s, xi);
@@ -193,6 +196,7 @@ void RunEnergyCorrectionForS(int M, int xi, int smin, int smax, bool outputE)
 		cout << "M=" << M << " s=" << s << " E=" << res;
 		cout << " time=" << watch.Stop() << " seconds" << endl;
 		totalE.push_back(res);
+		vs.push_back(s);
 	}
 
 	if (outputE)
@@ -200,9 +204,9 @@ void RunEnergyCorrectionForS(int M, int xi, int smin, int smax, bool outputE)
 		string file = "Exi=" + ToString(xi) + "M=" + ToString(M) + ".txt";
 		ofstream os(file.c_str());
 		os << "s\tE" << endl;
-		for (int s = smin; s <= smax; s++)
+		for (int i = 0; i < vs.size(); i++)
 		{
-			os << s << "\t" << totalE[s-smin] << endl;
+			os << vs[i] << "\t" << totalE[i] << endl;
 		}
 	}
 }
