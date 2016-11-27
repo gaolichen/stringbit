@@ -3940,12 +3940,8 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Change of 
-\begin_inset Formula $E$
-\end_inset
-
- with respect to 
-\begin_inset Formula $M$
+(a) Ground energy as a function of 
+\begin_inset Formula $1/N$
 \end_inset
 
  for 
@@ -3957,6 +3953,19 @@ Change of
 \end_inset
 
 .
+ The solid lines are perturbation results up to 
+\begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
+\end_inset
+
+ while the dashed lines are exact numerical results from the method of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chen:2016hkz"
+
+\end_inset
+
+.
+ (b)
 \end_layout
 
 \end_inset
