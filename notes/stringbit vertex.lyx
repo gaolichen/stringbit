@@ -865,7 +865,7 @@ The above results can be easily generalized to arbitrary
  The ground eigenfunction and energy are 
 \begin_inset Formula 
 \begin{equation}
-\psi_{0}=\prod_{a=1}^{s}\psi_{0}^{\left(a\right)},\quad E_{0}=-4s\cot\frac{\pi}{M}.\label{eq:ham_ground_state_s}
+\psi_{0}=\prod_{a=1}^{s}\psi_{0}^{\left(a\right)},\quad E_{0}=-4s\cot\frac{\pi}{2M}.\label{eq:ham_ground_state_s}
 \end{equation}
 
 \end_inset
@@ -3810,17 +3810,58 @@ status open
 
 \begin_layout Plain Layout
 \align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \begin_inset Graphics
-	filename /users/gaolichen/gitroot/stringbit/plots/EvM-s1xi0.pdf
-	width 50col%
+	filename /users/gaolichen/gitroot/stringbit/plots/EvM-compare.pdf
+	width 50text%
+	groupId halfcolumn
 
 \end_inset
 
 
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \begin_inset Graphics
-	filename /users/gaolichen/gitroot/stringbit/plots/SubEvM-s1xi0-a.pdf
+	filename /users/gaolichen/gitroot/stringbit/plots/EvM-s1-manyxi.pdf
 	width 50text%
 	groupId halfcolumn
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -3829,18 +3870,66 @@ status open
 
 \begin_layout Plain Layout
 \align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \begin_inset Graphics
-	filename /users/gaolichen/gitroot/stringbit/plots/SubEvM-s1xi0-b.pdf
+	filename /users/gaolichen/gitroot/stringbit/plots/EvM-s2-manyxi.pdf
 	width 50text%
 	groupId halfcolumn
 
 \end_inset
 
 
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \begin_inset Graphics
-	filename /users/gaolichen/gitroot/stringbit/plots/SubEvM-s1xi0-c.pdf
+	filename /users/gaolichen/gitroot/stringbit/plots/EvS-xi0.pdf
 	width 50text%
 	groupId halfcolumn
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \end_inset
 
@@ -3892,14 +3981,44 @@ status open
 
 \begin_layout Plain Layout
 \align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \begin_inset Graphics
-	filename /users/gaolichen/gitroot/stringbit/plots/EvM-s2xi0.pdf
+	filename /users/gaolichen/gitroot/stringbit/plots/SubEvM-s1xi0.pdf
 	width 50text%
 	groupId halfcolumn
 
 \end_inset
 
 
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename /users/gaolichen/gitroot/stringbit/plots/SubEvM-s2xi0.pdf
 	width 50text%
@@ -3908,40 +4027,9 @@ status open
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename /users/gaolichen/gitroot/stringbit/plots/EvS-xi0-odd.pdf
-	width 50text%
-	groupId halfcolumn
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename /users/gaolichen/gitroot/stringbit/plots/EvS-xi0-even.pdf
-	width 50text%
-	groupId halfcolumn
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Change of 
-\begin_inset Formula $E$
-\end_inset
-
- with respect to 
-\begin_inset Formula $s$
-\end_inset
-
 
 \end_layout
 
@@ -3953,32 +4041,6 @@ Change of
 \begin_layout Plain Layout
 
 \end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename /users/gaolichen/gitroot/stringbit/plots/EvM-s1-manyxi.pdf
-	width 50text%
-	groupId halfcolumn
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename /users/gaolichen/gitroot/stringbit/plots/EvM-s2-manyxi.pdf
-	width 50text%
-	groupId halfcolumn
 
 \end_inset
 
