@@ -3798,7 +3798,7 @@ Numerical Results
 We have derived a formula for the energy correction to the ground energy.
  However, from previous section, we see that the calculation is tedious
  even for the simpliest case.
- We therefore turn to the numerical computation.
+ We therefore turn to numerical computation.
  
 \end_layout
 
@@ -3827,6 +3827,12 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:E_compare"
+
+\end_inset
+
 
 \end_layout
 
@@ -3855,6 +3861,12 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:EvM-s1-manyxi"
+
+\end_inset
+
 
 \end_layout
 
@@ -3887,6 +3899,12 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:EvM-s2-manyxi"
+
+\end_inset
+
 
 \end_layout
 
@@ -3919,6 +3937,12 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:EvS-xi0"
+
+\end_inset
+
 
 \end_layout
 
@@ -3965,7 +3989,57 @@ key "Chen:2016hkz"
 \end_inset
 
 .
- (b)
+ (b) The 
+\begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
+\end_inset
+
+ order correction 
+\begin_inset Formula $\Delta E$
+\end_inset
+
+ as function of 
+\begin_inset Formula $M$
+\end_inset
+
+ for 
+\begin_inset Formula $s=1$
+\end_inset
+
+ case.
+ (c) The 
+\begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
+\end_inset
+
+ order correction 
+\begin_inset Formula $\Delta E$
+\end_inset
+
+ as function of 
+\begin_inset Formula $M$
+\end_inset
+
+ for 
+\begin_inset Formula $s=2$
+\end_inset
+
+ case.
+ (d) 
+\begin_inset Formula $\ln\left|\Delta E\right|$
+\end_inset
+
+ as function of 
+\begin_inset Formula $s$
+\end_inset
+
+ for 
+\begin_inset Formula $M=3$
+\end_inset
+
+ to 
+\begin_inset Formula $6$
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -3980,6 +4054,87 @@ key "Chen:2016hkz"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:E_compare"
+
+\end_inset
+
+ plots the change of ground energy with respect to 
+\begin_inset Formula $1/N$
+\end_inset
+
+ for the case 
+\begin_inset Formula $s=1$
+\end_inset
+
+ and 
+\begin_inset Formula $s=0$
+\end_inset
+
+.
+ The solid lines are results up to 
+\begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
+\end_inset
+
+ while the dashed ones are for exact numerical results obtained by the method
+ of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chen:2016hkz"
+
+\end_inset
+
+.
+ It shows that, when 
+\begin_inset Formula $N$
+\end_inset
+
+ is large enough, the 
+\begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
+\end_inset
+
+ results are very close to exact results.
+ Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:EvM-s1-manyxi"
+
+\end_inset
+
+ shows how 
+\begin_inset Formula $\Delta E$
+\end_inset
+
+ changes as 
+\begin_inset Formula $M$
+\end_inset
+
+ increases for 
+\begin_inset Formula $s=1$
+\end_inset
+
+ case.
+ Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:EvM-s2-manyxi"
+
+\end_inset
+
+ is the same plot for 
+\begin_inset Formula $s=2$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -4007,6 +4162,12 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:SubEvM-s1xi0"
+
+\end_inset
+
 
 \end_layout
 
@@ -4039,6 +4200,12 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:SubEvM-s2xi0"
+
+\end_inset
+
 
 \end_layout
 
@@ -4060,15 +4227,41 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Change of 
-\begin_inset Formula $E$
+\begin_inset Formula $\Delta E_{i}$
 \end_inset
 
- with respect to 
-\begin_inset Formula $\xi$
+ as function of 
+\begin_inset Formula $i=L/M$
 \end_inset
 
+.
+ 
+\begin_inset Formula $\Delta E_{i}$
+\end_inset
 
+ is normalized by a factor of 
+\begin_inset Formula $1/M^{2}$
+\end_inset
+
+.
+ (a) 
+\begin_inset Formula $s=1$
+\end_inset
+
+, 
+\begin_inset Formula $\xi=0$
+\end_inset
+
+.
+ (2) 
+\begin_inset Formula $s=2$
+\end_inset
+
+, 
+\begin_inset Formula $\xi=0$
+\end_inset
+
+.
 \end_layout
 
 \end_inset
