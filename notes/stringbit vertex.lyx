@@ -4100,7 +4100,11 @@ key "Chen:2016hkz"
 \end_inset
 
  results are very close to exact results.
- Fig.
+ 
+\end_layout
+
+\begin_layout Standard
+Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -4121,7 +4125,37 @@ reference "fig:EvM-s1-manyxi"
 \end_inset
 
  case.
- Fig.
+ One interesting feature of the plot is that the curves of 
+\begin_inset Formula $\left|\xi\right|$
+\end_inset
+
+ and 
+\begin_inset Formula $-\left|\xi\right|$
+\end_inset
+
+ almost coincide with each other.
+ It also suggests that the trend of the cureves depends on 
+\begin_inset Formula $\left|\xi\right|$
+\end_inset
+
+: when 
+\begin_inset Formula $\xi=0$
+\end_inset
+
+ the curve goes upward and is steepest; the curve become gradual as 
+\begin_inset Formula $\left|\xi\right|$
+\end_inset
+
+ increase; when 
+\begin_inset Formula $\left|\xi\right|$
+\end_inset
+
+ greater than certain value, the curve turns downward.
+ The 
+\begin_inset Formula $s=2$
+\end_inset
+
+ case, as Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -4129,11 +4163,79 @@ reference "fig:EvM-s2-manyxi"
 
 \end_inset
 
- is the same plot for 
+ shows, is very different with 
+\begin_inset Formula $s=1$
+\end_inset
+
+ case.
+ The 
+\begin_inset Formula $\Delta E$
+\end_inset
+
+ is always negative for 
 \begin_inset Formula $s=2$
 \end_inset
 
+ and all the curves go downward.
+ 
+\begin_inset Formula $\xi=1$
+\end_inset
+
+ is the most gradual case, and as 
+\begin_inset Formula $\xi>1$
+\end_inset
+
+ increases or 
+\begin_inset Formula $\xi<1$
+\end_inset
+
+ decreases, the curves become steeper and steeper.
+\end_layout
+
+\begin_layout Standard
+Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:EvS-xi0"
+
+\end_inset
+
+ plots 
+\begin_inset Formula $\ln\left|\Delta E\right|$
+\end_inset
+
+ as function of 
+\begin_inset Formula $s$
+\end_inset
+
+ for different 
+\begin_inset Formula $M$
+\end_inset
+
 .
+ For even 
+\begin_inset Formula $M$
+\end_inset
+
+, the ground energy state exists only when 
+\begin_inset Formula $s$
+\end_inset
+
+ is even and 
+\begin_inset Formula $\ln\Delta E$
+\end_inset
+
+ almost increase linearly.
+ For odd 
+\begin_inset Formula $M$
+\end_inset
+
+, 
+\begin_inset Formula $\ln\Delta E$
+\end_inset
+
+ goes zig-zag with general increase trends.
  
 \end_layout
 
