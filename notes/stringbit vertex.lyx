@@ -4232,10 +4232,126 @@ reference "fig:EvS-xi0"
 \end_inset
 
 , 
-\begin_inset Formula $\ln\Delta E$
+\begin_inset Formula $\ln\left|\Delta E\right|$
 \end_inset
 
- zig-zag with an overall increase trend.
+ has an overall increasing trend but oscillates between even and odd 
+\begin_inset Formula $s$
+\end_inset
+
+ with crest at even 
+\begin_inset Formula $s$
+\end_inset
+
+ and trough at odd 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ The overall linearly increase of 
+\begin_inset Formula $\ln\left|\Delta E\right|$
+\end_inset
+
+ is simply because that the energy correction 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:energy_pert_DeltaE"
+
+\end_inset
+
+ is a product of 
+\begin_inset Formula $s$
+\end_inset
+
+ terms.
+ 
+\end_layout
+
+\begin_layout Standard
+We also investigated the 
+\begin_inset Quotes eld
+\end_inset
+
+inner structure
+\begin_inset Quotes erd
+\end_inset
+
+ of the ground energy correction, i.e., the contribution from each 
+\begin_inset Formula $L$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+\Delta E=\sum_{L=1}^{M-1}\Delta E_{i},\quad i=\frac{L}{M}.
+\]
+
+\end_inset
+
+ The plots are shown as Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:SubEvM-s1xi0"
+
+\end_inset
+
+ for 
+\begin_inset Formula $s=1$
+\end_inset
+
+, 
+\begin_inset Formula $\xi=0$
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:SubEvM-s2xi0"
+
+\end_inset
+
+ for 
+\begin_inset Formula $s=2$
+\end_inset
+
+, 
+\begin_inset Formula $\xi=0$
+\end_inset
+
+.
+ In the 
+\begin_inset Formula $s=1$
+\end_inset
+
+ case, 
+\begin_inset Formula $\Delta E_{i}$
+\end_inset
+
+ is positive for odd 
+\begin_inset Formula $L$
+\end_inset
+
+ and negative for even 
+\begin_inset Formula $L$
+\end_inset
+
+.
+ So for each 
+\begin_inset Formula $M$
+\end_inset
+
+, we connect odd 
+\begin_inset Formula $L$
+\end_inset
+
+ points and even 
+\begin_inset Formula $L$
+\end_inset
+
+ points separately.
+ It shows that the both odd and even curves are asymptotically converge
+ to one particularly lines.
  
 \end_layout
 
@@ -4337,11 +4453,11 @@ name "fig:SubEvM-s2xi0"
 \end_inset
 
 .
- 
+ In the plots, 
 \begin_inset Formula $\Delta E_{i}$
 \end_inset
 
- is normalized by a factor of 
+ are normalized by a factor of 
 \begin_inset Formula $1/M^{2}$
 \end_inset
 
@@ -4368,10 +4484,6 @@ name "fig:SubEvM-s2xi0"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
