@@ -4350,8 +4350,46 @@ reference "fig:SubEvM-s2xi0"
 \end_inset
 
  points separately.
- It shows that the both odd and even curves are asymptotically converge
- to one particularly lines.
+ Both odd and even curves go upward and have asymptotic curves.
+ Since the vertical axis is normalized by 
+\begin_inset Formula $1/M^{2}$
+\end_inset
+
+, it implies that the 
+\begin_inset Formula $\Delta E\sim\mathcal{O}\left(M^{3}\right)$
+\end_inset
+
+ for large 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $s=2$
+\end_inset
+
+, all the 
+\begin_inset Formula $\Delta E_{i}$
+\end_inset
+
+ points are negative.
+ The lowest value of 
+\begin_inset Formula $\Delta E_{i}$
+\end_inset
+
+ occurs around the midpoint, i.e., 
+\begin_inset Formula $L=M/2$
+\end_inset
+
+, while the highest values occur at two endpoints, 
+\begin_inset Formula $L=1$
+\end_inset
+
+ or 
+\begin_inset Formula $L=M-1$
+\end_inset
+
+.
  
 \end_layout
 
