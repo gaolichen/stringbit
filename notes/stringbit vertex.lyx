@@ -76,7 +76,36 @@
 \begin_body
 
 \begin_layout Title
-Stringbit vertex
+String bit interaction vertex and ground energy correction
+\end_layout
+
+\begin_layout Author
+Gaoli Chen
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Email: gchen@ufl.edu
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\emph on
+Institute for Fundamental Theory, 
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\emph on
+Department of Physics, University of Florida, Gainesville, Florida 32611,
+ USA
 \end_layout
 
 \begin_layout Abstract
@@ -88,7 +117,103 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-This is introduction.
+In string bit models, strings are comprised of pointlike entities called
+ string bit 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:1991fv,Giles:1977mpa"
+
+\end_inset
+
+.
+ In the formulation of type II-B superstring as a string bit model
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bergman:1995wh"
+
+\end_inset
+
+, the superstring bit creation operator has the form
+\begin_inset Formula 
+\[
+\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\left(\mathbf{x}\right),\quad a_{i}=1,\cdots,s,\quad n=0,\cdots,s,\quad\alpha,\beta=1,\cdots,N,
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ are totally antisymmetric spinor indices, and 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, 
+\begin_inset Formula $\beta$
+\end_inset
+
+ are color indices of 
+\begin_inset Formula $U\left(N\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ are the transverse components of lightcone coordinates 
+\begin_inset Formula $x^{\pm}=\left(x^{0}\pm x^{1}\right)/\sqrt{2},\,\mathbf{x}=\left(x^{2},\cdots,x^{d+1}\right).$
+\end_inset
+
+ 
+\begin_inset Formula $\bar{\phi}$
+\end_inset
+
+ is bosoinic when 
+\begin_inset Formula $s$
+\end_inset
+
+ is even and fermionic when 
+\begin_inset Formula $s$
+\end_inset
+
+ is odd.
+ In Fock space, a closed string is represented by a color singlet trace
+ operator acting on vacuum state, that is of the form 
+\begin_inset Formula $\tr\bar{\phi}\cdots\bar{\phi}\ket{0}$
+\end_inset
+
+, where all indices of 
+\begin_inset Formula $\bar{\phi}$
+\end_inset
+
+ are suppressed.
+ The number of 
+\begin_inset Formula $\bar{\phi}$
+\end_inset
+
+ in the trace operator is the eigenvalue of the bit number operator 
+\begin_inset Formula 
+\[
+M=\sum_{n}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The string bits Galilei which is naturally identified as the '
+\begin_inset Formula $+$
+\end_inset
+
+' component momentum 
+\begin_inset Formula $P^{+}=\left(P^{0}+P^{1}\right)/\sqrt{2}=mM$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
