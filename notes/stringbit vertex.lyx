@@ -4901,10 +4901,10 @@ The Hamiltonian and its action on color singlets
 The (anti)-communication relations among string bit creation and annihilation
  operators is
 \begin_inset Formula 
-\begin{eqnarray}
-\left[\left(\phi_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta},\left(\bar{\phi}_{b_{1}\cdots b_{m}}\right)_{\gamma}^{\delta}\right]_{\pm} & \equiv & \left(\phi_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\left(\bar{\phi}_{b_{1}\cdots b_{m}}\right)_{\gamma}^{\delta}-\left(-1\right)^{mn}\left(\bar{\phi}_{b_{1}\cdots b_{m}}\right)_{\gamma}^{\delta}\left(\phi_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\nonumber \\
- & = & \delta_{mn}\delta_{\alpha}^{\delta}\delta_{\gamma}^{\beta}\sum_{P}\left(-1\right)^{P}\delta_{a_{1}b_{P_{1}}}\cdots\delta_{a_{n}b_{P_{n}}}.\label{eq:App-H-commutation}
-\end{eqnarray}
+\begin{multline}
+\left[\left(\phi_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta},\left(\bar{\phi}_{b_{1}\cdots b_{m}}\right)_{\gamma}^{\delta}\right]_{\pm}\equiv\left(\phi_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\left(\bar{\phi}_{b_{1}\cdots b_{m}}\right)_{\gamma}^{\delta}-\left(-1\right)^{mn}\left(\bar{\phi}_{b_{1}\cdots b_{m}}\right)_{\gamma}^{\delta}\left(\phi_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\\
+=\delta_{mn}\delta_{\alpha}^{\delta}\delta_{\gamma}^{\beta}\sum_{P}\left(-1\right)^{P}\delta_{a_{1}b_{P_{1}}}\cdots\delta_{a_{n}b_{P_{n}}}.\label{eq:App-H-commutation}
+\end{multline}
 
 \end_inset
 
@@ -5021,46 +5021,46 @@ reference "eq:App-H-commutation"
 
  on single trace states:
 \begin_inset Formula 
-\begin{eqnarray*}
-H_{1}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0} & = & 2\sum_{k=1}^{M}\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
- &  & +\frac{2}{N}\sum_{k=1}^{M}\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)\sum_{l\neq k,k+1}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0}
-\end{eqnarray*}
+\begin{multline*}
+H_{1}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}=2\sum_{k=1}^{M}\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
++\frac{2}{N}\sum_{k=1}^{M}\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)\sum_{l\neq k,k+1}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0}
+\end{multline*}
 
 \end_inset
 
  
 \begin_inset Formula 
-\begin{eqnarray*}
-H_{2}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0} & = & 2\sum_{k=1}^{M}\theta_{k}^{a}\frac{d}{d\theta_{k+1}^{a}}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
- &  & +\frac{2}{N}\sum_{k=1}^{M}\sum_{l\neq k,k+1}\theta_{k}^{a}\frac{d}{d\theta_{l}^{a}}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0}
-\end{eqnarray*}
+\begin{multline*}
+H_{2}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}=2\sum_{k=1}^{M}\theta_{k}^{a}\frac{d}{d\theta_{k+1}^{a}}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
++\frac{2}{N}\sum_{k=1}^{M}\sum_{l\neq k,k+1}\theta_{k}^{a}\frac{d}{d\theta_{l}^{a}}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0}
+\end{multline*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\begin{eqnarray*}
-H_{3}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0} & = & 2\sum_{k=1}^{M}\theta_{k+1}^{a}\frac{d}{d\theta_{k}^{a}}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
- &  & +\frac{2}{N}\sum_{k=1}^{M}\sum_{l\neq k,k+1}\theta_{l}^{a}\frac{d}{d\theta_{k}^{a}}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0}
-\end{eqnarray*}
+\begin{multline*}
+H_{3}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}=2\sum_{k=1}^{M}\theta_{k+1}^{a}\frac{d}{d\theta_{k}^{a}}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
++\frac{2}{N}\sum_{k=1}^{M}\sum_{l\neq k,k+1}\theta_{l}^{a}\frac{d}{d\theta_{k}^{a}}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0}
+\end{multline*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\begin{eqnarray*}
-H_{4}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0} & = & -2i\sum_{k=1}^{M}\theta_{k}^{a}\theta_{k+1}^{a}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
- &  & -\frac{2i}{N}\sum_{k=1}^{M}\sum_{l\neq k,k+1}\theta_{k}^{a}\theta_{l}^{a}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0}
-\end{eqnarray*}
+\begin{multline*}
+H_{4}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}=-2i\sum_{k=1}^{M}\theta_{k}^{a}\theta_{k+1}^{a}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
+-\frac{2i}{N}\sum_{k=1}^{M}\sum_{l\neq k,k+1}\theta_{k}^{a}\theta_{l}^{a}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0}
+\end{multline*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\begin{eqnarray*}
-H_{5}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0} & = & -2i\sum_{k=1}^{M}\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{k+1}^{a}}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
- &  & -\frac{2i}{N}\sum_{k=1}^{M}\sum_{l\neq k,k+1}\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{l}^{a}}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0}
-\end{eqnarray*}
+\begin{multline*}
+H_{5}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}=-2i\sum_{k=1}^{M}\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{k+1}^{a}}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
+-\frac{2i}{N}\sum_{k=1}^{M}\sum_{l\neq k,k+1}\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{l}^{a}}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0}
+\end{multline*}
 
 \end_inset
 
@@ -5070,19 +5070,19 @@ H_{5}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0} & = & -2i\sum_{k=1}^{M}\f
 
  on double traces
 \begin_inset Formula 
-\begin{eqnarray*}
-H_{1}T\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right)\ket{0}_{\mathrm{Fussion}} & = & \frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)T\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\ket{0}\\
- &  & +\frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\left(s-2\eta_{l}^{a}\frac{d}{d\eta_{l}^{a}}\right)T\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\ket{0}
-\end{eqnarray*}
+\begin{multline*}
+H_{1}T\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right)\ket{0}_{\mathrm{Fussion}}=\frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)T\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\ket{0}\\
++\frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\left(s-2\eta_{l}^{a}\frac{d}{d\eta_{l}^{a}}\right)T\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\ket{0}
+\end{multline*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\begin{eqnarray*}
-H_{2}T\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right)\ket{0}_{\mathrm{Fussion}} & = & \frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\theta_{k}^{a}\frac{d}{d\eta_{l}}T\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\ket{0}\\
- &  & +\frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\eta_{l}^{a}\frac{d}{d\theta_{k}^{a}}T\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\ket{0}.
-\end{eqnarray*}
+\begin{multline*}
+H_{2}T\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right)\ket{0}_{\mathrm{Fussion}}=\frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\theta_{k}^{a}\frac{d}{d\eta_{l}}T\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\ket{0}\\
++\frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\eta_{l}^{a}\frac{d}{d\theta_{k}^{a}}T\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\ket{0}.
+\end{multline*}
 
 \end_inset
 
@@ -5104,7 +5104,7 @@ Calculation of
 \end_layout
 
 \begin_layout Standard
-In this section, we will find the expression of 
+In this appendix, we will find the expression of 
 \begin_inset Formula $h_{kl}^{a}$
 \end_inset
 
@@ -5396,7 +5396,7 @@ Calculation of
 \end_layout
 
 \begin_layout Standard
-In this section we will derive the formula 
+In this appendix we will derive the formula 
 \begin_inset Formula 
 \begin{multline}
 \left\langle \cdots\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle =\\
