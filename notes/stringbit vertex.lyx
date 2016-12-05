@@ -117,23 +117,32 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-In string bit models, strings are comprised of pointlike entities called
- string bit 
+In string bit models
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Thorn:1991fv,Giles:1977mpa"
+key "Thorn:1991fv,Bergman:1995wh"
 
 \end_inset
 
-.
- In the formulation of type II-B superstring as a string bit model
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Bergman:1995wh"
-
+, a strings is a chain comprised of pointlike entities called string bit,
+ which move in 
+\begin_inset Formula $D-2$
 \end_inset
 
-, the superstring bit creation operator has the form
+ transverse coordinates with '
+\begin_inset Formula $+$
+\end_inset
+
+' under Galilei symmetry.
+ When the bit number of a string bit chain is large enough, the chain behave
+ like a continuous string and one additional spatial dimension is gained.
+ is produced and Lorentz invariance emerge.
+ 
+\end_layout
+
+\begin_layout Standard
+In the formulation of type II-B superstring as a string bit mode, the superstrin
+g bit creation operator has the form
 \begin_inset Formula 
 \[
 \left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\left(\mathbf{x}\right),\quad a_{i}=1,\cdots,s,\quad n=0,\cdots,s,\quad\alpha,\beta=1,\cdots,N,
@@ -159,13 +168,10 @@ key "Bergman:1995wh"
 
 .
  
-\begin_inset Formula $\mathbf{x}$
+\begin_inset Formula $\mathbf{x}=\left(x^{2},\cdots,x^{d+1}\right)$
 \end_inset
 
- are the transverse components of lightcone coordinates 
-\begin_inset Formula $x^{\pm}=\left(x^{0}\pm x^{1}\right)/\sqrt{2},\,\mathbf{x}=\left(x^{2},\cdots,x^{d+1}\right).$
-\end_inset
-
+ are the transverse components of lightcone coordinates.
  
 \begin_inset Formula $\bar{\phi}$
 \end_inset
@@ -205,15 +211,113 @@ M=\sum_{n}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}.
 \end_layout
 
 \begin_layout Standard
-The string bits Galilei which is naturally identified as the '
+The string bit models provide an implementation of 't Hooft's idea of holography.
+ In general Lorentz invariant theory, spacetime is describled by transverse
+ dimensions 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ and '
+\begin_inset Formula $\pm$
+\end_inset
+
+' dimensions 
+\begin_inset Formula $x^{\pm}=\left(x^{0}+x^{2}\right)/\sqrt{2}$
+\end_inset
+
+.
+ In string bit models, the 
+\begin_inset Formula $x^{-}$
+\end_inset
+
+ coordinate of the string bits is missing, and hence, the Lorentz invariant
+ is not 
+\shape italic
+a priori
+\shape default
+.
+ String bits enjoy the dynamic of Galilei symmetry, under which the '
 \begin_inset Formula $+$
 \end_inset
 
 ' component momentum 
-\begin_inset Formula $P^{+}=\left(P^{0}+P^{1}\right)/\sqrt{2}=mM$
+\begin_inset Formula $P^{+}=\left(P^{0}+P^{1}\right)/\sqrt{2}$
+\end_inset
+
+ is identified as 
+\begin_inset Formula $mM$
+\end_inset
+
+, where 
+\begin_inset Formula $m$
+\end_inset
+
+ is the mass of one string bit.
+ When 
+\begin_inset Formula $M$
+\end_inset
+
+ is large enough and 
+\begin_inset Formula $P^{+}$
+\end_inset
+
+ is fixed, 
+\begin_inset Formula $P^{+}$
+\end_inset
+
+ behaves like a continuous variable and its conjugate 
+\begin_inset Formula $x^{-}$
+\end_inset
+
+ can be considered the missing coordinate.
+ The Lorentz invariance is therefore regained.
+ 
+\end_layout
+
+\begin_layout Standard
+Two recent papers 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Sun:2014dga,Thorn:2014hia"
+
+\end_inset
+
+ propose a more drastic form of holography, in which string bits have no
+ transverse coordinates and hence no space to move.
+ In such a string bit model, some spin degrees of freedom of string bits
+ can be converted to one dimensional spin waves if suitable dy dynamics
+ is applied to a long chain.
+ The spin waves then can act as compactified bosonic coordinates.
+ In these two papers, the string bit creation operator has the form 
+\begin_inset Formula 
+\[
+\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta},\quad a_{i}=1,\cdots,s,\quad n=0,\cdots,s,\quad\alpha,\beta=1,\cdots,N.
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Recently, the 
+\begin_inset Formula $1/N$
+\end_inset
+
+ perturbation of the superstring bit model was studied in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
 \end_inset
 
 .
+ The three string interaction vertex was calculated and its application
+ in the eigenenergy calculation was discussed.
+ In this paper, we will perform more detailed calculation on the three string
+ interaction vertex, then derive a formula to compute the leading order
+ correction to the energy eigenvalues.
+ 
 \end_layout
 
 \begin_layout Section
