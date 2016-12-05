@@ -4,6 +4,11 @@
 \begin_header
 \textclass article
 \begin_preamble
+\usepackage{babel}
+\usepackage{url}
+\usepackage[numbers,sort&compress]{natbib}
+\bibliographystyle{unsrt}
+
 \usepackage{cancel}
 \newcommand{\zero}[1] {\cancelto{0}{#1}}
 \newcommand{\tr}{\mathrm{Tr}\,}
@@ -112,6 +117,13 @@ Department of Physics, University of Florida, Gainesville, Florida 32611,
 This is an abstract.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Introduction
 \end_layout
@@ -120,101 +132,25 @@ Introduction
 In string bit models
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Thorn:1991fv,Bergman:1995wh"
+key "Thorn:1991fv"
 
 \end_inset
 
-, a strings is a chain comprised of pointlike entities called string bit,
- which move in 
-\begin_inset Formula $D-2$
+, a string is a chain comprised of pointlike entities called string bits.
+ While a string is discritized as a string bit chain, it behaves like a
+ continuous string when the bit number 
+\begin_inset Formula $M$
 \end_inset
 
- transverse coordinates with '
-\begin_inset Formula $+$
-\end_inset
-
-' under Galilei symmetry.
- When the bit number of a string bit chain is large enough, the chain behave
- like a continuous string and one additional spatial dimension is gained.
- is produced and Lorentz invariance emerge.
+ is large enough.
  
 \end_layout
 
 \begin_layout Standard
-In the formulation of type II-B superstring as a string bit mode, the superstrin
-g bit creation operator has the form
-\begin_inset Formula 
-\[
-\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\left(\mathbf{x}\right),\quad a_{i}=1,\cdots,s,\quad n=0,\cdots,s,\quad\alpha,\beta=1,\cdots,N,
-\]
-
-\end_inset
-
- where 
-\begin_inset Formula $a_{i}$
-\end_inset
-
- are totally antisymmetric spinor indices, and 
-\begin_inset Formula $\alpha$
-\end_inset
-
-, 
-\begin_inset Formula $\beta$
-\end_inset
-
- are color indices of 
-\begin_inset Formula $U\left(N\right)$
-\end_inset
-
-.
- 
-\begin_inset Formula $\mathbf{x}=\left(x^{2},\cdots,x^{d+1}\right)$
-\end_inset
-
- are the transverse components of lightcone coordinates.
- 
-\begin_inset Formula $\bar{\phi}$
-\end_inset
-
- is bosoinic when 
-\begin_inset Formula $s$
-\end_inset
-
- is even and fermionic when 
-\begin_inset Formula $s$
-\end_inset
-
- is odd.
- In Fock space, a closed string is represented by a color singlet trace
- operator acting on vacuum state, that is of the form 
-\begin_inset Formula $\tr\bar{\phi}\cdots\bar{\phi}\ket{0}$
-\end_inset
-
-, where all indices of 
-\begin_inset Formula $\bar{\phi}$
-\end_inset
-
- are suppressed.
- The number of 
-\begin_inset Formula $\bar{\phi}$
-\end_inset
-
- in the trace operator is the eigenvalue of the bit number operator 
-\begin_inset Formula 
-\[
-M=\sum_{n}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}.
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The string bit models provide an implementation of 't Hooft's idea of holography.
- In general Lorentz invariant theory, spacetime is describled by transverse
- dimensions 
-\begin_inset Formula $\mathbf{x}$
+The string bit models provide implementations of 't Hooft's idea of holography.
+ In usual Lorentz invariant theory, spacetime can be describled by lightcone
+ coordinates with transverse dimensions 
+\begin_inset Formula $\mathbf{x}=\left(x^{2},\cdots,x^{D-1}\right)$
 \end_inset
 
  and '
@@ -222,7 +158,7 @@ The string bit models provide an implementation of 't Hooft's idea of holography
 \end_inset
 
 ' dimensions 
-\begin_inset Formula $x^{\pm}=\left(x^{0}+x^{2}\right)/\sqrt{2}$
+\begin_inset Formula $x^{\pm}=\left(x^{0}+x^{1}\right)/\sqrt{2}$
 \end_inset
 
 .
@@ -230,7 +166,7 @@ The string bit models provide an implementation of 't Hooft's idea of holography
 \begin_inset Formula $x^{-}$
 \end_inset
 
- coordinate of the string bits is missing, and hence, the Lorentz invariant
+ coordinate of string bits is missing, and hence, the Lorentz invariance
  is not 
 \shape italic
 a priori
@@ -265,46 +201,122 @@ a priori
 \begin_inset Formula $P^{+}$
 \end_inset
 
- behaves like a continuous variable and its conjugate 
+ can be considered as a continuous variable and its conjugate 
 \begin_inset Formula $x^{-}$
 \end_inset
 
- can be considered the missing coordinate.
- The Lorentz invariance is therefore regained.
- 
+ can be interpreted as the missing coordinate.
+ The Lorentz invariance is therefore regained and string theory emerges.
 \end_layout
 
 \begin_layout Standard
-Two recent papers 
+In the formulation of type II-B superstring as a string bit mode
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Sun:2014dga,Thorn:2014hia"
+key "Bergman:1995wh"
 
 \end_inset
 
- propose a more drastic form of holography, in which string bits have no
- transverse coordinates and hence no space to move.
- In such a string bit model, some spin degrees of freedom of string bits
- can be converted to one dimensional spin waves if suitable dy dynamics
- is applied to a long chain.
- The spin waves then can act as compactified bosonic coordinates.
- In these two papers, the string bit creation operator has the form 
+, the superstring bit creation operator has the form
+\begin_inset Formula 
+\begin{equation}
+\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\left(\mathbf{x}\right),\quad a_{i}=1,\cdots,s,\quad n=0,\cdots,s,\quad\alpha,\beta=1,\cdots,N,
+\end{equation}
+
+\end_inset
+
+ where 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ are totally antisymmetric spin indices, 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, 
+\begin_inset Formula $\beta$
+\end_inset
+
+ color indices of 
+\begin_inset Formula $U\left(N\right)$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ the transverse coordinates.
+ 
+\begin_inset Formula $\bar{\phi}$
+\end_inset
+
+ is bosoinic when 
+\begin_inset Formula $s$
+\end_inset
+
+ is even and fermionic when 
+\begin_inset Formula $s$
+\end_inset
+
+ is odd.
+ In Fock space, a closed string is represented by a color singlet trace
+ operator acting on vacuum state, that is of the form 
+\begin_inset Formula $\tr\bar{\phi}\cdots\bar{\phi}\ket{0}$
+\end_inset
+
+, where all indices of 
+\begin_inset Formula $\bar{\phi}$
+\end_inset
+
+ are suppressed.
+ The number of 
+\begin_inset Formula $\bar{\phi}$
+\end_inset
+
+ in the trace operator is the eigenvalue of the bit number operator 
 \begin_inset Formula 
 \[
-\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta},\quad a_{i}=1,\cdots,s,\quad n=0,\cdots,s,\quad\alpha,\beta=1,\cdots,N.
+M=\sum_{n}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}},
 \]
 
 \end_inset
 
- 
+ where repeated indices implies summation.
 \end_layout
 
 \begin_layout Standard
-Recently, the 
+A more drastic form of holography was studied in recent papers 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Sun:2014dga,Thorn:2014hia,Chen:2016hkz,Thorn:2015wli"
+
+\end_inset
+
+.
+ In these papers, string bits have no transverse coordinate and hence no
+ space to move.
+ In such a model, however, new compactified bosonic coordinates can be generated
+ from spin degrees of freedom of string bits.
+ If suitable dynamics is chosen, these spin degrees of freedom are converted
+ to one dimensional spin waves, which then act as compactified bosonic coordinat
+es.
+ The superstring bit creation operator now is 
+\begin_inset Formula 
+\begin{equation}
+\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta},\quad a_{i}=1,\cdots,s,\quad n=0,\cdots,s,\quad\alpha,\beta=1,\cdots,N.\label{eq:ham_creation_op}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The 
 \begin_inset Formula $1/N$
 \end_inset
 
- perturbation of the superstring bit model was studied in 
+ perturbation of the later model was studied in 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2015wli"
@@ -313,14 +325,94 @@ key "Thorn:2015wli"
 
 .
  The three string interaction vertex was calculated and its application
- in the eigenenergy calculation was discussed.
- In this paper, we will perform more detailed calculation on the three string
+ in the calculation of 
+\begin_inset Formula $1/N^{2}$
+\end_inset
+
+ energy eigenvalue correction was discussed.
+ In this paper, we will perform more detailed study on the three string
  interaction vertex, then derive a formula to compute the leading order
  correction to the energy eigenvalues.
  
 \end_layout
 
+\begin_layout Standard
+The rest of this paper is organized as follows.
+ In Sec 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Hamiltonian"
+
+\end_inset
+
+, we give the Hamiltonian of the model, solve for the energy eigenstates
+ in large 
+\begin_inset Formula $N$
+\end_inset
+
+ limit, and build conjugate to the energy eigenstates.
+ In Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Three-Chain-overlap"
+
+\end_inset
+
+, we summarize the three chains overlap calculation.
+ In Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:1N-Expansion"
+
+\end_inset
+
+, the three string interaction vertices are introduced by 
+\begin_inset Formula $1/N$
+\end_inset
+
+ purturbation of the model.
+ We then derive a formula to calculate the vertices.
+ In Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:EnergyCorrection"
+
+\end_inset
+
+, we use the three string interaction results to find the 
+\begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
+\end_inset
+
+ correction to the energy eigenstates.
+ As an example, the calculation for energy correction of 
+\begin_inset Formula $M=3$
+\end_inset
+
+ is given.
+ In Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Numerical-Results"
+
+\end_inset
+
+, numerical computation for ground energy correction and its results are
+ presented.
+ The main text is closed with a conclusion section.
+ Finally, several appendices are included for technical details.
+\end_layout
+
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Hamiltonian"
+
+\end_inset
+
 Hamiltonian
 \end_layout
 
@@ -351,7 +443,7 @@ H^{s=1}=\frac{2}{N}\tr\left[\left(\bar{a}^{2}-i\bar{b}^{2}\right)a^{2}-\left(\ba
 
 \end_inset
 
- The generalization of this Hamitlonian to to arbitrary 
+ The generalization of this Hamitlonian to the arbitrary 
 \begin_inset Formula $s$
 \end_inset
 
@@ -363,45 +455,8 @@ key "Thorn:2014hia,Thorn:2015wli"
 \end_inset
 
 .
- In analogy with 
-\begin_inset Formula $a$
-\end_inset
-
- and 
-\begin_inset Formula $b$
-\end_inset
-
-, the generalized creation operators read 
-\begin_inset Formula 
-\begin{equation}
-\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta},\quad a_{i}=1,\cdots,s,\quad n=0,\cdots,s,\quad\alpha,\beta=1,\cdots,N\label{eq:ham_creation_op}
-\end{equation}
-
-\end_inset
-
- where 
-\begin_inset Formula $\alpha,\,\beta$
-\end_inset
-
- are color indices and 
-\begin_inset Formula $a_{i}$
-\end_inset
-
- completely antisymmetric spin indices.
- 
-\begin_inset Formula $\bar{\phi}$
-\end_inset
-
- is bosonic if 
-\begin_inset Formula $n$
-\end_inset
-
- is even and fermion if 
-\begin_inset Formula $n$
-\end_inset
-
- is odd.
- We then introduces 
+ Let us recap here.
+ We introduce 
 \begin_inset Formula $s$
 \end_inset
 
@@ -1216,9 +1271,10 @@ reference "eq:ham_cyclicconstrtaint"
 
  will be 
 \begin_inset Formula 
-\begin{equation}
-\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, cf\left(\theta\right)\tilde{\delta}\left(\theta-\eta\right)=\left(-\right)^{sMG\left(c\right)}c\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, f\left(\theta\right)\tilde{\delta}\left(\theta-\eta\right)=\left(-\right)^{sMG\left(c\right)}cf\left(\eta\right),\label{eq:ham_delta_sign_fatctor}
-\end{equation}
+\begin{multline}
+\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, cf\left(\theta\right)\tilde{\delta}\left(\theta-\eta\right)=\\
+\left(-\right)^{sMG\left(c\right)}c\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, f\left(\theta\right)\tilde{\delta}\left(\theta-\eta\right)=\left(-\right)^{sMG\left(c\right)}cf\left(\eta\right),\label{eq:ham_delta_sign_fatctor}
+\end{multline}
 
 \end_inset
 
@@ -1626,6 +1682,12 @@ reference "eq:ham_general_eigenfunction_s"
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Three-Chain-overlap"
+
+\end_inset
+
 Three Chain overlap
 \end_layout
 
@@ -1926,6 +1988,13 @@ The corresponding conjugate function is
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:1N-Expansion"
+
+\end_inset
+
+
 \begin_inset Formula $1/N$
 \end_inset
 
@@ -2589,6 +2658,12 @@ A_{nm}^{\left(W\right)}=\left[1+\exp\left(\pi i\frac{n+m}{M}\right)\right]\left[
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:EnergyCorrection"
+
+\end_inset
+
 Correction to Ground Energy
 \end_layout
 
@@ -3509,9 +3584,10 @@ So we need to calculate
 
  Likewise
 \begin_inset Formula 
-\[
-\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W}=\frac{4}{M}\Omega_{01}^{\left(W\right)}=-\frac{2-2i}{\sqrt{3}},\quad\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{W}=-\frac{2}{M}\gamma^{\prime\left(W\right)}M_{12}-\frac{4}{M}\Omega_{12}^{\left(W\right)}=8\left(1-\frac{2}{\sqrt{3}}+\xi-\frac{\sqrt{3}}{2}\xi\right)e^{-i\frac{\pi}{4}}.
-\]
+\begin{eqnarray*}
+\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W} & = & \frac{4}{M}\Omega_{01}^{\left(W\right)}=-\frac{2-2i}{\sqrt{3}},\\
+\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{W} & = & -\frac{2}{M}\gamma^{\prime\left(W\right)}M_{12}-\frac{4}{M}\Omega_{12}^{\left(W\right)}=8\left(1-\frac{2}{\sqrt{3}}+\xi-\frac{\sqrt{3}}{2}\xi\right)e^{-i\frac{\pi}{4}}.
+\end{eqnarray*}
 
 \end_inset
 
@@ -4012,7 +4088,7 @@ reference "eq:energy_pert_DeltaE"
 
 \end_inset
 
-, we obtain
+, we obtain 
 \begin_inset Formula $\Delta E_{0}=\frac{1}{N^{2}}\left(-66\sqrt{3}\xi^{4}+360\xi^{3}-242\sqrt{3}\xi^{2}+228\xi-33\sqrt{3}\right)$
 \end_inset
 
@@ -4020,6 +4096,12 @@ reference "eq:energy_pert_DeltaE"
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Numerical-Results"
+
+\end_inset
+
 Numerical Results
 \end_layout
 
@@ -4760,6 +4842,12 @@ name "fig:SubEvM-s2xi0"
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Conclusion"
+
+\end_inset
+
 Conclusion
 \end_layout
 
@@ -4775,8 +4863,31 @@ Acknoledgements
 Acknoledgements
 \end_layout
 
-\begin_layout Section
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \start_of_appendix
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+numberwithin{equation}{section}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:app_hamiltonian"
@@ -5287,9 +5398,10 @@ Calculation of
 \begin_layout Standard
 In this section we will derive the formula 
 \begin_inset Formula 
-\begin{equation}
-\left\langle \cdots\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle =-\frac{2}{M}\tr\left(S^{*}C^{-1}\bar{A}\right)\left\langle \cdots\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}\left\langle \cdots f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \label{eq:app_AFF_1}
-\end{equation}
+\begin{multline}
+\left\langle \cdots\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle =\\
+-\frac{2}{M}\tr\left(S^{*}C^{-1}\bar{A}\right)\left\langle \cdots\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}\left\langle \cdots f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \label{eq:app_AFF_1}
+\end{multline}
 
 \end_inset
 
