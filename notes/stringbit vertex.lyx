@@ -417,46 +417,96 @@ Hamiltonian
 \end_layout
 
 \begin_layout Standard
-The stringbit model of 
-\begin_inset Formula $s=1$
+To perform 
+\begin_inset Formula $1/N$
 \end_inset
 
- case, studied in
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Sun:2014dga"
-
+ perturbation, we first need to solve for energy eigenstates at 
+\begin_inset Formula $N=\infty$
 \end_inset
 
- and 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Chen:2016hkz"
-
+ as zeroth order results.
+ In this section, we first introduce the Hamiltonian of the model and then
+ solve for the energy eigenstates at 
+\begin_inset Formula $N=\infty$
 \end_inset
 
-, has the Hamiltonian of the form
-\begin_inset Formula 
-\begin{equation}
-H^{s=1}=\frac{2}{N}\tr\left[\left(\bar{a}^{2}-i\bar{b}^{2}\right)a^{2}-\left(\bar{b}^{2}-i\bar{a}^{2}\right)b^{2}+\left(\bar{a}\bar{b}+\bar{b}\bar{a}\right)ba+\left(\bar{a}\bar{b}-\bar{b}\bar{a}\right)ab\right].\label{eq:ham_Hs_1}
-\end{equation}
-
+.
+ Finally, we build the conjugates to the energy eigenstates, which will
+ be used later for 
+\begin_inset Formula $1/N$
 \end_inset
 
- The generalization of this Hamitlonian to the arbitrary 
-\begin_inset Formula $s$
-\end_inset
+ expansion.
+\end_layout
 
- cases was presented in 
+\begin_layout Standard
+The Hamiltonian to be studied in this paper is based on one of 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2014hia,Thorn:2015wli"
 
 \end_inset
 
+ with an additional 
+\begin_inset Formula $\mathcal{O}\left(1/N\right)$
+\end_inset
+
+ term vanishing at 
+\begin_inset Formula $N=\infty$
+\end_inset
+
 .
- Let us recap here.
- We introduce 
+ Let us give a quick recap of the 
+\begin_inset Formula $\mathcal{O}\left(1\right)$
+\end_inset
+
+ terms which survive at 
+\begin_inset Formula $N=\infty$
+\end_inset
+
+.
+ The Hamiltonian of the stringbit model of 
+\begin_inset Formula $s=1$
+\end_inset
+
+ case has the form 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Sun:2014dga,Chen:2016hkz"
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{equation}
+H^{s=1}=\frac{2}{N}\tr\left[\left(\bar{a}^{2}-i\bar{b}^{2}\right)a^{2}-\left(\bar{b}^{2}-i\bar{a}^{2}\right)b^{2}+\left(\bar{a}\bar{b}+\bar{b}\bar{a}\right)ba+\left(\bar{a}\bar{b}-\bar{b}\bar{a}\right)ab\right],\label{eq:ham_Hs_1}
+\end{equation}
+
+\end_inset
+
+ where 
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+ 
+\begin_inset Formula $\left(\bar{b}\right)$
+\end_inset
+
+ is bosonic (fermionic) creation operator and 
+\begin_inset Formula $a$
+\end_inset
+
+ (
+\begin_inset Formula $b$
+\end_inset
+
+) is the corresponding annihilation operator.
+ To generalize it to arbitary 
+\begin_inset Formula $s$
+\end_inset
+
+ case, we introduce 
 \begin_inset Formula $s$
 \end_inset
 
@@ -476,7 +526,7 @@ key "Thorn:2014hia,Thorn:2015wli"
 
 \end_inset
 
-We can now build single trace operator 
+We can now build a single trace operator 
 \begin_inset Formula 
 \[
 T\left(\theta_{1},\cdots,\theta_{k}\right)=\tr\psi\left(\theta_{1}\right)\psi\left(\theta_{2}\right)\cdots\psi\left(\theta_{k}\right),
@@ -493,7 +543,8 @@ T\left(\theta_{1},\cdots,\theta_{k}\right)=\tr\psi\left(\theta_{1}\right)\psi\le
 \end_inset
 
 -component Grassmann variables.
- The the color singlet subspace of Fock space consists of states as 
+ The color singlet subspace of Fock space is then spaned by states like
+ 
 \begin_inset Formula 
 \[
 T\left(\theta_{1},\cdots,\theta_{K}\right)T\left(\eta_{1},\cdots,\eta_{K}\right)\cdots\ket{0},
@@ -506,7 +557,7 @@ T\left(\theta_{1},\cdots,\theta_{K}\right)T\left(\eta_{1},\cdots,\eta_{K}\right)
 \end_inset
 
  is the vacuum state annihilated by any annihilation operators.
- The generalized Hamiltonian in 
+ In the trace states space, the generalized Hamiltonian in 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2014hia,Thorn:2015wli"
@@ -528,7 +579,7 @@ where each
  is given in Appendix 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:App-H-commutation"
+reference "sec:app_hamiltonian"
 
 \end_inset
 
@@ -536,7 +587,12 @@ reference "eq:App-H-commutation"
 \end_layout
 
 \begin_layout Standard
-As 
+We now add an 
+\begin_inset Formula $\mathcal{O}\left(1/N\right)$
+\end_inset
+
+ term to the Hamiltonian.
+ As 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Chen:2016hkz"
@@ -547,11 +603,15 @@ key "Chen:2016hkz"
 \begin_inset Formula $N=\infty$
 \end_inset
 
- behavior is not affected by adding to 
+ behavior is not affected by a 
+\begin_inset Formula $\Delta H^{s=1}$
+\end_inset
+
+ term to 
 \begin_inset Formula $H^{s=1}$
 \end_inset
 
- the terms of the form
+, where
 \begin_inset Formula 
 \begin{eqnarray*}
 \Delta H^{s=1} & = & \frac{2}{N}\tr\left[\bar{a}\bar{b}ba+\bar{b}\bar{a}ab+\bar{a}^{2}a^{2}+\bar{b}^{2}b^{2}-\tilde{M}^{s=1}\right],\\
@@ -560,7 +620,7 @@ key "Chen:2016hkz"
 
 \end_inset
 
-We can generalize 
+The generalization of 
 \begin_inset Formula $\Delta H^{s=1}$
 \end_inset
 
@@ -568,7 +628,7 @@ We can generalize
 \begin_inset Formula $s$
 \end_inset
 
- cases, which reads 
+ case is 
 \begin_inset Formula 
 \begin{eqnarray*}
 \Delta H & = & \frac{2}{N}\left(\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\bar{\phi}_{b_{1}\cdots b_{k}}\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\phi_{b_{1}\cdots b_{k}}-\tilde{M}\right),\\
@@ -577,7 +637,19 @@ We can generalize
 
 \end_inset
 
-Now we have the complete form of Hamiltonian to be studied in this paper
+ The detailed derivation of 
+\begin_inset Formula $\Delta H$
+\end_inset
+
+ is given in Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:app_hamiltonian"
+
+\end_inset
+
+.
+ Now we have the complete form of Hamiltonian to be studied in this paper
  
 \begin_inset Formula 
 \begin{equation}
@@ -608,7 +680,7 @@ By defining
 \begin_inset Formula $H$
 \end_inset
 
- on trace states as
+ on single trace states
 \begin_inset Formula 
 \begin{equation}
 HT\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}=\bar{h}T\left(\theta_{1}\cdots\theta_{M}\right)\ket{0}+\frac{1}{N}\sum_{k=1}^{M}\sum_{l\neq k+1}\bar{h}_{kl}T\left(\theta_{l}\cdots\theta_{k}\right)T\left(\theta_{k+1}\cdots\theta_{l-1}\right)\ket{0}\label{eq:ham_Haction_single_trace}
@@ -639,7 +711,7 @@ reference "eq:ham_Haction_double_trace"
 \end_inset
 
  term of 
-\begin_inset Formula $h_{kl}$
+\begin_inset Formula $\bar{h}_{kl}$
 \end_inset
 
  should be zero even if 
@@ -655,11 +727,11 @@ To study the perturbation of the system, it is helpful to introduce the
 \begin_inset Formula $N=\infty$
 \end_inset
 
-, where only the leading term, 
+, where only the leading term 
 \begin_inset Formula $\bar{h}$
 \end_inset
 
-, survive.
+ survive.
  This single trace energy eigenstate can be expressed as 
 \begin_inset Formula 
 \begin{equation}
@@ -2895,7 +2967,22 @@ reference "eq:eec_deltaE0"
 \end_inset
 
  indicates summation over states without zero modes.
- Solving for 
+ From Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_f0"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_fm1"
+
+\end_inset
+
+, we solve for 
 \begin_inset Formula $F_{0}^{\left(L\right)}$
 \end_inset
 
@@ -2903,7 +2990,7 @@ reference "eq:eec_deltaE0"
 \begin_inset Formula $F_{0}^{\left(K\right)}$
 \end_inset
 
- gives 
+ 
 \begin_inset Formula 
 \[
 F_{0}^{\left(L\right)}=f_{0}\sqrt{\frac{L}{M}}+f_{M-1}\sqrt{\frac{K}{M}},\quad F_{0}^{\left(K\right)}=f_{0}\sqrt{\frac{K}{M}}-f_{M-1}\sqrt{\frac{L}{M}},
