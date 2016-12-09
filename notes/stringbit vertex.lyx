@@ -332,8 +332,12 @@ key "Thorn:2015wli"
  energy eigenvalue correction was discussed.
  In this paper, we will perform more detailed study on the three string
  interaction vertex, then derive a formula to compute the leading order
- correction to the energy eigenvalues.
- 
+ correction to the energy spectrum.
+ We will give an example of calculating correction to ground energy of 
+\begin_inset Formula $M=3$
+\end_inset
+
+ case 
 \end_layout
 
 \begin_layout Standard
@@ -421,7 +425,7 @@ To perform
 \begin_inset Formula $1/N$
 \end_inset
 
- perturbation, we first need to solve for energy eigenstates at 
+ perturbation, we first need to find the energy spectrum at 
 \begin_inset Formula $N=\infty$
 \end_inset
 
@@ -441,36 +445,24 @@ To perform
 \end_layout
 
 \begin_layout Standard
-The Hamiltonian to be studied in this paper is based on one of 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Thorn:2014hia,Thorn:2015wli"
-
-\end_inset
-
- with an additional 
-\begin_inset Formula $\mathcal{O}\left(1/N\right)$
-\end_inset
-
- term vanishing at 
-\begin_inset Formula $N=\infty$
-\end_inset
-
-.
- Let us give a quick recap of the 
+The Hamiltonian to be studied in this paper consists of 
 \begin_inset Formula $\mathcal{O}\left(1\right)$
 \end_inset
 
- terms which survive at 
-\begin_inset Formula $N=\infty$
+ terms and 
+\begin_inset Formula $\mathcal{O}\left(1/N\right)$
 \end_inset
 
-.
- The Hamiltonian of the stringbit model of 
+ terms.
+ The 
+\begin_inset Formula $\mathcal{O}\left(1\right)$
+\end_inset
+
+ terms are the generalization of the Hamiltonian of 
 \begin_inset Formula $s=1$
 \end_inset
 
- case has the form 
+ string bit model
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Sun:2014dga,Chen:2016hkz"
@@ -502,69 +494,34 @@ H^{s=1}=\frac{2}{N}\tr\left[\left(\bar{a}^{2}-i\bar{b}^{2}\right)a^{2}-\left(\ba
 \end_inset
 
 ) is the corresponding annihilation operator.
- To generalize it to arbitary 
-\begin_inset Formula $s$
-\end_inset
-
- case, we introduce 
-\begin_inset Formula $s$
-\end_inset
-
- Grassmann coordinates 
-\begin_inset Formula $\theta^{a}$
-\end_inset
-
-, 
-\begin_inset Formula $a=1,\cdots,s$
-\end_inset
-
- and a super bit creation operator 
-\begin_inset Formula 
-\[
-\psi\left(\theta\right)=\sum_{k=0}^{s}\frac{1}{k!}\bar{\phi}_{c_{1}\cdots c_{k}}\theta^{c_{1}}\cdots\theta^{c_{k}}.
-\]
-
-\end_inset
-
-We can now build a single trace operator 
-\begin_inset Formula 
-\[
-T\left(\theta_{1},\cdots,\theta_{k}\right)=\tr\psi\left(\theta_{1}\right)\psi\left(\theta_{2}\right)\cdots\psi\left(\theta_{k}\right),
-\]
-
-\end_inset
-
- where 
-\begin_inset Formula $\theta_{i}$
-\end_inset
-
- are 
-\begin_inset Formula $s$
-\end_inset
-
--component Grassmann variables.
- The color singlet subspace of Fock space is then spaned by states like
  
-\begin_inset Formula 
-\[
-T\left(\theta_{1},\cdots,\theta_{K}\right)T\left(\eta_{1},\cdots,\eta_{K}\right)\cdots\ket{0},
-\]
+\begin_inset Formula $H^{s=1}$
+\end_inset
+
+ produces the Green-Schwarz Hamiltonian 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Green:1980zg,Green:1983hw"
 
 \end_inset
 
- where 
-\begin_inset Formula $\ket{0}$
+ at 
+\begin_inset Formula $N=\infty$
 \end_inset
 
- is the vacuum state annihilated by any annihilation operators.
- In the trace states space, the generalized Hamiltonian in 
+.
+ For 
+\begin_inset Formula $s>1$
+\end_inset
+
+, it is generalized to 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2014hia,Thorn:2015wli"
 
 \end_inset
 
- reads 
+ 
 \begin_inset Formula 
 \begin{equation}
 H=\sum_{i=1}^{5}H_{i},\label{eq:ham_H_2}
@@ -572,30 +529,93 @@ H=\sum_{i=1}^{5}H_{i},\label{eq:ham_H_2}
 
 \end_inset
 
-where each 
-\begin_inset Formula $H_{i}$
+ where
+\begin_inset Formula 
+\begin{equation}
+H_{1}=\frac{2}{N}\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{s-2n}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}},
+\end{equation}
+
 \end_inset
 
- is given in Appendix 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:app_hamiltonian"
 
+\begin_inset Formula 
+\begin{equation}
+H_{2}=\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{bb_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{ba_{1}\cdots a_{n}},
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+H_{3}=\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{ba_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{bb_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}},
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+H_{4}=\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{bb_{1}\cdots b_{k}}\phi_{ba_{1}\cdots a_{n}},
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+H_{5}=-\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{ba_{1}\cdots a_{n}}\bar{\phi}_{bb_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}}.
+\end{equation}
+
+\end_inset
+
+One can check that for 
+\begin_inset Formula $s=1$
+\end_inset
+
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_H_2"
+
+\end_inset
+
+ is reduced to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_Hs_1"
+
+\end_inset
+
+ if one identify 
+\begin_inset Formula $\bar{\phi}$
+\end_inset
+
+ as 
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{\phi}_{1}$
+\end_inset
+
+ as 
+\begin_inset Formula $\bar{b}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-We now add an 
+We now add 
 \begin_inset Formula $\mathcal{O}\left(1/N\right)$
 \end_inset
 
- term to the Hamiltonian.
+ terms to the Hamiltonian.
  As 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Chen:2016hkz"
+key "Chen:2016hkz,Sun:2014dga"
 
 \end_inset
 
@@ -603,54 +623,38 @@ key "Chen:2016hkz"
 \begin_inset Formula $N=\infty$
 \end_inset
 
- behavior is not affected by a 
-\begin_inset Formula $\Delta H^{s=1}$
+ behavior is not affected by the 
+\begin_inset Formula $\mathcal{O}\left(1/N\right)$
 \end_inset
 
- term to 
-\begin_inset Formula $H^{s=1}$
-\end_inset
-
-, where
+ terms
 \begin_inset Formula 
-\begin{eqnarray*}
+\begin{eqnarray}
 \Delta H^{s=1} & = & \frac{2}{N}\tr\left[\bar{a}\bar{b}ba+\bar{b}\bar{a}ab+\bar{a}^{2}a^{2}+\bar{b}^{2}b^{2}-\tilde{M}^{s=1}\right],\\
 \tilde{M}^{s=1} & = & \tr\left(\bar{a}a+\bar{b}b\right)-\frac{1}{N}\left(\tr\bar{a}\tr a+\tr\bar{b}\tr b\right).
-\end{eqnarray*}
+\end{eqnarray}
 
 \end_inset
 
-The generalization of 
+Similarly, 
 \begin_inset Formula $\Delta H^{s=1}$
 \end_inset
 
- to arbitrary 
+ can be generalized to arbitrary 
 \begin_inset Formula $s$
 \end_inset
 
- case is 
+ case as 
 \begin_inset Formula 
-\begin{eqnarray*}
+\begin{eqnarray}
 \Delta H & = & \frac{2}{N}\left(\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\bar{\phi}_{b_{1}\cdots b_{k}}\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\phi_{b_{1}\cdots b_{k}}-\tilde{M}\right),\\
 \tilde{M} & = & \sum_{n=0}^{s}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}-\frac{1}{N}\sum_{n=0}^{s}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\tr\phi_{a_{1}\cdots a_{n}}.
-\end{eqnarray*}
+\end{eqnarray}
 
 \end_inset
 
- The detailed derivation of 
-\begin_inset Formula $\Delta H$
-\end_inset
-
- is given in Appendix 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:app_hamiltonian"
-
-\end_inset
-
-.
- Now we have the complete form of Hamiltonian to be studied in this paper
- 
+Combining two parts together, we have the complete form of Hamiltonian to
+ be studied in this paper 
 \begin_inset Formula 
 \begin{equation}
 H=\sum_{i=1}^{5}H_{i}+s\xi\Delta H,\label{eq:ham_H_3}
@@ -667,20 +671,97 @@ H=\sum_{i=1}^{5}H_{i}+s\xi\Delta H,\label{eq:ham_H_3}
 \end_layout
 
 \begin_layout Standard
-By defining 
+Let us now consider the action of 
+\begin_inset Formula $H$
+\end_inset
+
+ on trace states space, which is defined as follows.
+ We introduce 
+\begin_inset Formula $s$
+\end_inset
+
+ Grassmann coordinates 
+\begin_inset Formula $\theta^{a}$
+\end_inset
+
+, 
+\begin_inset Formula $a=1,\cdots,s$
+\end_inset
+
+ and then define a super bit creation operator 
+\begin_inset Formula 
+\[
+\psi\left(\theta\right)=\sum_{k=0}^{s}\frac{1}{k!}\bar{\phi}_{c_{1}\cdots c_{k}}\theta^{c_{1}}\cdots\theta^{c_{k}}.
+\]
+
+\end_inset
+
+and a single trace operator 
+\begin_inset Formula 
+\[
+T\left(\theta_{1},\cdots,\theta_{k}\right)=\tr\psi\left(\theta_{1}\right)\psi\left(\theta_{2}\right)\cdots\psi\left(\theta_{k}\right),
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $\theta_{i}$
+\end_inset
+
+ are 
+\begin_inset Formula $s$
+\end_inset
+
+-component Grassmann variables.
+ The trace states space, i.e., color singlet subspace of Fock space, is then
+ spaned by states like 
+\begin_inset Formula 
+\[
+T\left(\theta_{1},\cdots,\theta_{K}\right)T\left(\eta_{1},\cdots,\eta_{L}\right)\cdots\ket{0},
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $\ket{0}$
+\end_inset
+
+ is the vacuum state.
+ Let us define 
 \begin_inset Formula 
 \begin{align}
-\bar{h}_{kl} & =2\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)+2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}+2\theta_{l}^{a}\frac{d}{d\theta_{k}^{a}}-2i\theta_{k}^{a}\theta_{l}^{a}-2i\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{l}^{a}}+2s\xi-2s\delta_{k,l}\label{eq:ham_h_klbar}\\
-\bar{h} & =\sum_{k=1}^{M}\left(\bar{h}_{k,k+1}-2s\xi\right),
+\bar{h}_{kl} & =2\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)+2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}+2\theta_{l}^{a}\frac{d}{d\theta_{k}^{a}}-2i\theta_{k}^{a}\theta_{l}^{a}-2i\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{l}^{a}}+2s\xi-2s\delta_{k,l},\label{eq:ham_h_klbar}\\
+\bar{h} & =\sum_{k=1}^{M}\left(\bar{h}_{k,k+1}-2s\xi\right).
 \end{align}
 
 \end_inset
 
- we can summarize the action of 
+Then the actions of 
 \begin_inset Formula $H$
 \end_inset
 
- on single trace states
+ on single and double trace states can be written as
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+The actions of each 
+\begin_inset Formula $H_{i}$
+\end_inset
+
+ on single and double trace states are shown in Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:app_hamiltonian"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{equation}
 HT\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}=\bar{h}T\left(\theta_{1}\cdots\theta_{M}\right)\ket{0}+\frac{1}{N}\sum_{k=1}^{M}\sum_{l\neq k+1}\bar{h}_{kl}T\left(\theta_{l}\cdots\theta_{k}\right)T\left(\theta_{k+1}\cdots\theta_{l-1}\right)\ket{0}\label{eq:ham_Haction_single_trace}
@@ -706,7 +787,7 @@ reference "eq:ham_Haction_double_trace"
 
 \end_inset
 
-, the 
+ the 
 \begin_inset Formula $-2s\delta_{kl}$
 \end_inset
 
@@ -718,21 +799,48 @@ reference "eq:ham_Haction_double_trace"
 \begin_inset Formula $k=l$
 \end_inset
 
-, as they labeling different variables.
+, as they label different variables.
 \end_layout
 
 \begin_layout Standard
-To study the perturbation of the system, it is helpful to introduce the
- single trace energy eigenstate of the system at 
+While 
+\begin_inset Formula $\bar{h}_{kl}$
+\end_inset
+
+ acts on the trace states, to solve for energy eigenstate, it is helpful
+ to convert 
+\begin_inset Formula $\bar{h}_{kl}$
+\end_inset
+
+ to an equivalent form acting on the wave function of an energy eigenstate
+ at 
 \begin_inset Formula $N=\infty$
 \end_inset
 
-, where only the leading term 
-\begin_inset Formula $\bar{h}$
+.
+ The wave function 
+\begin_inset Formula $\psi_{r}$
 \end_inset
 
- survive.
- This single trace energy eigenstate can be expressed as 
+ is defined as follows.
+ It from from Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_Haction_single_trace"
+
+\end_inset
+
+ that, at 
+\begin_inset Formula $N=\infty$
+\end_inset
+
+, 
+\begin_inset Formula $H$
+\end_inset
+
+ evolves single trace states to single trace states.
+ Therefore, we can express a single trace energy state as 
 \begin_inset Formula 
 \begin{equation}
 T_{r}\ket{0}=\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta_{1},\cdots,\theta_{M}\right)\psi_{r}\left(\theta_{1},\dots,\theta_{M}\right)\ket{0},\label{eq:ham_trace_energystate}
@@ -749,8 +857,8 @@ T_{r}\ket{0}=\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta_{1},\cdo
 \begin_inset Formula $T\left(\theta_{1},\cdots,\theta_{M}\right)$
 \end_inset
 
- is invariant under cyclic permutation of 
-\begin_inset Formula $\theta_{i}$
+ is invariant under the cyclic permutation 
+\begin_inset Formula $\theta_{i}\to\theta_{i+1}$
 \end_inset
 
 , we can constrain 
@@ -766,14 +874,11 @@ T_{r}\ket{0}=\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta_{1},\cdo
 \end_inset
 
  without loss of generality.
- The sign factor follows from that the measure of 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:ham_trace_energystate"
-
+ The sign factor follows from that the measure 
+\begin_inset Formula $d^{s}\theta_{1}\cdots d^{s}\theta_{M}$
 \end_inset
 
- is multiplied by 
+ is changed by a factor 
 \begin_inset Formula $\left(-\right)^{s\left(M-1\right)}$
 \end_inset
 
@@ -798,11 +903,7 @@ reference "eq:ham_trace_energystate"
 
 \end_inset
 
- where we have performed a integration by parts in the last step and 
-\begin_inset Formula $h_{kl}$
-\end_inset
-
-
+ where we have performed an integration by parts in the last step and
 \begin_inset Formula 
 \begin{equation}
 h_{kl}=-2\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)-2\theta_{k}^{a}\frac{d}{d\theta_{l}^{a}}-2\theta_{k}^{a}\frac{d}{d\theta_{l}^{a}}-2i\theta_{k}^{a}\theta_{l}^{a}-2i\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{l}^{a}}+2s\xi+2s\delta_{k,l},\label{eq:ham_h_kl}
@@ -810,7 +911,16 @@ h_{kl}=-2\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)-2\theta_{k}^{a}
 
 \end_inset
 
-Likewise, the action of 
+Note that, in the derivation of 
+\begin_inset Formula $h_{kl}$
+\end_inset
+
+, the 
+\begin_inset Formula $k=l$
+\end_inset
+
+ case needs special treatment.
+ Likewise, the action of 
 \begin_inset Formula $\bar{h}$
 \end_inset
 
@@ -818,7 +928,7 @@ Likewise, the action of
 \begin_inset Formula $T\left(\theta\right)$
 \end_inset
 
- is equivalent to the action of 
+ is equivalent to the action on 
 \begin_inset Formula $\psi_{r}\left(\theta\right)$
 \end_inset
 
@@ -830,19 +940,7 @@ h=\sum_{k=1}^{M}\left(h_{k,k+1}-2s\xi\right).\label{eq:ham_h}
 
 \end_inset
 
-Note that the 
-\begin_inset Formula $k=l$
-\end_inset
 
- case needs special treatment in the last step of 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:ham_intbyparts"
-
-\end_inset
-
-.
- 
 \end_layout
 
 \begin_layout Subsection
@@ -860,8 +958,19 @@ Diagonalizing Hamiltonian at
 \end_layout
 
 \begin_layout Standard
-The energy eigenstate of trace states are equivalent to the eigenfunction
- of the equation 
+In this subsection, let us solve for the energy spectrum of the model at
+ 
+\begin_inset Formula $N=\infty$
+\end_inset
+
+.
+ We will find the general expression of single trace energy eigenvalues
+ and eigenstates.
+ The single trace energy eigenstate is determined by the eigenfunction 
+\begin_inset Formula $\psi_{r}$
+\end_inset
+
+ satisfying the equation 
 \begin_inset Formula 
 \begin{equation}
 h\psi_{r}\left(\theta_{1},\dots,\theta_{M}\right)=E_{r}\psi_{r}\left(\theta_{1},\dots,\theta_{M}\right).\label{eq:ham_eigenequation}
@@ -876,7 +985,7 @@ reference "eq:ham_eigenequation"
 
 \end_inset
 
- can be solved exactly
+ has been solved exactly
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2015wli"
@@ -884,13 +993,25 @@ key "Thorn:2015wli"
 \end_inset
 
 .
- Since each term of 
+ From 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_h_kl"
+
+\end_inset
+
+, we see that each term of 
 \begin_inset Formula $h$
 \end_inset
 
- contains only variables or derivatives of the same spin component, it is
- suffice to solve the equation with only one component.
- We therefore suppress the spinor index 
+ contains only variables or derivatives of the same 
+\begin_inset Formula $\theta^{a}$
+\end_inset
+
+.
+ It implies the variables can be separated and we only need to solve the
+ equation of one variable.
+ We therefore drop the spinor index 
 \begin_inset Formula $a$
 \end_inset
 
@@ -931,7 +1052,7 @@ which satisfy
 
 \end_inset
 
- We can express 
+ We now express 
 \begin_inset Formula $h$
 \end_inset
 
@@ -952,7 +1073,7 @@ h=2\sum_{n=1}^{M-1}\Big[\left(\alpha_{n}\alpha_{M-n}+\beta_{n}\beta_{M-n}\right)
 
 \end_inset
 
-We now seek for eigenoperators of 
+and seek for eigenoperators of 
 \begin_inset Formula $h$
 \end_inset
 
@@ -995,11 +1116,15 @@ reference "eq:ham_operator_eq"
 
 \end_inset
 
- For convenience, we normalize the coefficients of 
+We then normalize the coefficients of 
 \begin_inset Formula $F_{k}$
 \end_inset
 
- and obtain the lowering and raising operators
+ to obtain the lowering and raising operators for 
+\begin_inset Formula $k\geq1$
+\end_inset
+
+:
 \begin_inset Formula 
 \begin{equation}
 F_{k}=s_{k}\alpha_{k}+c_{k}\beta_{k},\quad\bar{F}_{k}=c_{k}\alpha_{k}-s_{k}\beta_{k},\quad k=1,\cdots,M-1,\label{eq:ham_F_Fbar}
@@ -1015,10 +1140,25 @@ c_{k}=\cos\left(\frac{\pi}{4}-\frac{k\pi}{2M}\right),\quad s_{k}=\sin\left(\frac
 
 \end_inset
 
-We define the zero modes as 
+It follows from 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_F_Fbar"
+
+\end_inset
+
+ that 
 \begin_inset Formula 
 \begin{equation}
-F_{0}=F_{M}=e^{i\pi/4}\beta_{0},\quad\bar{F}_{0}=\bar{F}_{M}=e^{-i\pi/4}\alpha_{0}.\label{eq:ham_F0}
+F_{k}^{\dagger}=\bar{F}_{M-k}=c_{k}\alpha_{M-k}+s_{k}\beta_{M-k},\quad1\leq k\leq M-1,\label{eq:ham_Fdagger}
+\end{equation}
+
+\end_inset
+
+The zero modes need special treatment: 
+\begin_inset Formula 
+\begin{equation}
+F_{0}=F_{M}=e^{i\pi/4}\beta_{0},\quad F_{0}^{\dagger}=\bar{F}_{0}=\bar{F}_{M}=e^{-i\pi/4}\alpha_{0}.\label{eq:ham_F0}
 \end{equation}
 
 \end_inset
@@ -1028,29 +1168,8 @@ The phase factors are chosen so that the expression of
 \end_inset
 
  in terms of eigenoperators will have a simple form.
- It then follows from 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:ham_F_Fbar"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:ham_F0"
-
-\end_inset
-
- that 
-\begin_inset Formula 
-\begin{equation}
-F_{k}^{\dagger}=\bar{F}_{M-k}=c_{k}\alpha_{M-k}+s_{k}\beta_{M-k},\quad0\leq k\leq M-1,\label{eq:ham_Fdagger}
-\end{equation}
-
-\end_inset
-
- and the anticommutation relations
+ A direct calculation shows the eigenoperators satisfy the following anticommuta
+tion relations
 \begin_inset Formula 
 \begin{equation}
 \left\{ F_{k},F_{l}\right\} =\left\{ F_{k}^{\dagger},F_{l}^{\dagger}\right\} =0,\quad\left\{ F_{k},F_{l}^{\dagger}\right\} =\delta_{kl},\quad0\leq k,l\leq M-1.\label{eq:ham_F_anticommutation}
@@ -1062,7 +1181,7 @@ F_{k}^{\dagger}=\bar{F}_{M-k}=c_{k}\alpha_{M-k}+s_{k}\beta_{M-k},\quad0\leq k\le
 \end_layout
 
 \begin_layout Standard
-To obtain the energy spectrum, we then need to find the ground energy 
+To obtain the energy spectrum, we need to find the ground energy 
 \begin_inset Formula $E_{0}$
 \end_inset
 
@@ -1070,61 +1189,37 @@ To obtain the energy spectrum, we then need to find the ground energy
 \begin_inset Formula $\psi_{0}$
 \end_inset
 
-, which should satisify 
-\begin_inset Formula $F_{m}\psi_{0}=0$
+, which is annihilated by all lowering operators.
+ Since the zero mode do not change the energy eigenvalue, there are degeneracy
+ in the ground state.
+ To eliminate the ambiguity, we require the ground eigenfunction to be annihilat
+ed by the zero mode 
+\begin_inset Formula $F_{0}$
 \end_inset
 
- for 
-\begin_inset Formula $0\leq m<M$
-\end_inset
-
-.
- By inspection, we find the ground eifenfunction can be written as 
+ as well.
+ By inspection, we find the ground eigenfunction as 
 \begin_inset Formula 
 \begin{equation}
-\psi_{0}=\prod_{k=1}^{\left\lfloor \left(M-1\right)/2\right\rfloor }\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right),\quad0\leq m\leq M-1.\label{eq:ham_ground_eigenfunction}
+\psi_{0}=\prod_{k=1}^{\left\lfloor \left(M-1\right)/2\right\rfloor }\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right).\label{eq:ham_ground_eigenfunction}
 \end{equation}
 
 \end_inset
 
-Using 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:ham_alpha_beta_anticom"
-
-\end_inset
-
-, we see that
-\begin_inset Formula 
-\begin{equation}
-F_{k}\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right)=F_{M-k}\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right)=0,\quad1\leq k\leq M-1,
-\end{equation}
-
-\end_inset
-
- and that 
-\begin_inset Formula $c_{l}-s_{l}\alpha_{M-l}\alpha_{l}$
-\end_inset
-
- commutes with 
-\begin_inset Formula $F_{k}$
-\end_inset
-
- and 
-\begin_inset Formula $F_{M-k}$
-\end_inset
-
- for 
-\begin_inset Formula $k\neq l$
-\end_inset
-
-.
- It then follows that 
+To verify the requirement 
 \begin_inset Formula $F_{m}\psi_{0}=0$
 \end_inset
 
-.
- Acting 
+ one only need to check that
+\begin_inset Formula 
+\begin{align}
+F_{k}\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right) & =F_{M-k}\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right)=0,\quad1\leq k\leq M-1,\\
+\left[F_{k},c_{l}-s_{l}\alpha_{M-l}\alpha_{l}\right] & =0,\quad k\neq l,\, k\neq M-l.
+\end{align}
+
+\end_inset
+
+Acting 
 \begin_inset Formula $h$
 \end_inset
 
@@ -1156,8 +1251,7 @@ reference "eq:ham_general_eigenfunction"
 
 \end_inset
 
- produce a valid energy eigenstate only when it satisfies the cyclic constraint
- 
+ needs to satisfy the cyclic constraint 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:ham_cyclicconstrtaint"
@@ -1165,7 +1259,7 @@ reference "eq:ham_cyclicconstrtaint"
 \end_inset
 
 .
- Under the cyclic transformation 
+ Under the cyclic permutation 
 \begin_inset Formula $\theta_{k}\to\theta_{k+1}$
 \end_inset
 
@@ -1193,8 +1287,7 @@ nM & \quad\text{for odd }M\\
 
 \end_inset
 
- Finally, we note that the corresponding energy eigenvalue of eigenfunction
- 
+ Finally, we note that the energy eigenvalue of the eigenfunction 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:ham_general_eigenfunction"
@@ -1213,7 +1306,11 @@ E_{\left\{ k_{i}\right\} }=-4\cot\frac{\pi}{2M}+8\sum_{i=1}^{M-1}\lambda_{k}\sin
 \end_layout
 
 \begin_layout Standard
-The above results can be easily generalized to arbitrary 
+We now add the spin index 
+\begin_inset Formula $a$
+\end_inset
+
+ back and generalize the results to arbitrary 
 \begin_inset Formula $s$
 \end_inset
 
@@ -1226,7 +1323,7 @@ The above results can be easily generalized to arbitrary
 
 \end_inset
 
- The general eigenfunction and energy are
+ The general energy eigenfunction and eigenvalue are
 \begin_inset Formula 
 \begin{equation}
 \psi=\prod_{a=1}^{s}\prod_{k=0}^{M-1}\left(F_{k}^{\left(a\right)\dagger}\right)^{\lambda_{a,k}}\psi_{0},\quad E=-sE_{0}+\sum_{a,k}\lambda_{a,k}\sin\frac{k\pi}{M},\quad\lambda_{a,k}=0,\,1.\label{eq:ham_general_eigenfunction_s}
@@ -1245,28 +1342,31 @@ nM & \quad\text{for even }s\left(M-1\right)\\
 
 \end_inset
 
-Since the zero modes do not change the energy, a energy eigenstate has at
- least 
+Since the zero modes do not change the energy, the ground energy eigenstate
+ has at least 
 \begin_inset Formula $2^{s}$
 \end_inset
 
  degeneracies.
- 
 \end_layout
 
 \begin_layout Subsection
-Building conjugate wavefunction
+Conjugate eigenfunctions
 \end_layout
 
 \begin_layout Standard
-So far we have obtained the energy eigenfunctions of single trace space.
- To formalize the 
+We have obtained the energy eigenfunctions of 
+\begin_inset Formula $N=\infty$
+\end_inset
+
+.
+ To calculate 
 \begin_inset Formula $1/N$
 \end_inset
 
- expansion calculation, we will need functions conjugate to energy eigenfunction
-s.
- The conjugate functions, denoted as 
+ expansion results, we also need functions conjugate to these energy eigenfuncti
+ons.
+ The conjugate eigenfunctions, denoted as 
 \begin_inset Formula $\bar{\psi}_{r}$
 \end_inset
 
@@ -1290,13 +1390,12 @@ Here,
 \begin_inset Formula $\tilde{\delta}\left(\theta-\eta\right)$
 \end_inset
 
- behaves like the Dirac Delta function when it is applied to a polynomial
- of 
+ behaves like the Dirac Delta function when it is applied to a c-number-coeffici
+ent polynomial of 
 \begin_inset Formula $\theta$
 \end_inset
 
- with c-number coefficients and satisfying Eq.
- 
+ satisfying the cyclic constraint 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:ham_cyclicconstrtaint"
@@ -1304,7 +1403,7 @@ reference "eq:ham_cyclicconstrtaint"
 \end_inset
 
 .
- For polynomial of 
+ For a polynomial of 
 \begin_inset Formula $\theta$
 \end_inset
 
@@ -1312,16 +1411,8 @@ reference "eq:ham_cyclicconstrtaint"
 \begin_inset Formula $\tilde{\delta}$
 \end_inset
 
- may produce extra sign prefactor.
- If 
-\begin_inset Formula $\lambda f\left(\theta\right)$
-\end_inset
-
- is a polynomial of 
-\begin_inset Formula $\theta$
-\end_inset
-
- and 
+ on it may produce an extra sign prefactor.
+ For example, if 
 \begin_inset Formula $\lambda$
 \end_inset
 
@@ -1329,11 +1420,12 @@ reference "eq:ham_cyclicconstrtaint"
 \begin_inset Formula $G\left(\lambda\right)$
 \end_inset
 
- and there is no other Grassmann value coefficient in 
+ and 
 \begin_inset Formula $f\left(\theta\right)$
 \end_inset
 
-, then the action of 
+ is a c-number-coefficient polynomial satisfying the cyclic constraint,
+ then the action of 
 \begin_inset Formula $\tilde{\delta}$
 \end_inset
 
@@ -1341,41 +1433,73 @@ reference "eq:ham_cyclicconstrtaint"
 \begin_inset Formula $\lambda f\left(\theta\right)$
 \end_inset
 
- will be 
+ is 
 \begin_inset Formula 
 \begin{multline}
-\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, cf\left(\theta\right)\tilde{\delta}\left(\theta-\eta\right)=\\
-\left(-\right)^{sMG\left(c\right)}c\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, f\left(\theta\right)\tilde{\delta}\left(\theta-\eta\right)=\left(-\right)^{sMG\left(c\right)}cf\left(\eta\right),\label{eq:ham_delta_sign_fatctor}
+\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\,\lambda f\left(\theta\right)\tilde{\delta}\left(\theta-\eta\right)=\\
+\left(-\right)^{sMG\left(\lambda\right)}\lambda\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, f\left(\theta\right)\tilde{\delta}\left(\theta-\eta\right)=\left(-\right)^{sM\, G\left(\lambda\right)}\lambda f\left(\eta\right),\label{eq:ham_delta_sign_fatctor}
 \end{multline}
 
 \end_inset
 
- where the sign factor is produced because of the exchange of meansure and
- 
+ where the sign factor comes from the exchange of the meansure and 
 \begin_inset Formula $\lambda$
 \end_inset
 
 .
- Now consider its action on 
+ 
+\end_layout
+
+\begin_layout Standard
+Now we can write the trace operator 
 \begin_inset Formula $T\left(\theta\right)$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $\bar{\psi}_{r}$
 \end_inset
 
 .
- To make it like a Delta function when acting on 
-\begin_inset Formula $T\left(\theta\right)$
+ Let 
+\begin_inset Formula $T\left(\theta\right)=\sum_{t}X_{t}\bar{\psi}_{t}\left(\theta\right)$
 \end_inset
 
-, we need to add sign factors on LHS of 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:ham_completeness"
-
-\end_inset
-
-: 
+, then 
 \begin_inset Formula 
 \begin{equation}
-\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta\right)\sum_{r}\left(-\right)^{sMG\left(\bar{\psi}_{r}\right)}\psi_{r}\left(\theta\right)\bar{\psi}_{r}\left(\phi\right)=\sum_{r}\left(-\right)^{sMG\left(T_{r}\right)}T_{r}\bar{\psi}_{r}\left(\phi\right)=T\left(\theta\right).\label{eq:harm_completeness_1}
+\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta\right)\psi_{r}\left(\theta\right)=\sum_{t}\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, X_{t}\bar{\psi}_{t}\left(\theta\right)\psi_{r}\left(\theta\right)=\left(-\right)^{sM\, G\left(X_{r}\right)}X_{r}.\label{eq:ham_at}
+\end{equation}
+
+\end_inset
+
+Note that the LHS of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_at"
+
+\end_inset
+
+ is simply 
+\begin_inset Formula $T_{r}$
+\end_inset
+
+, from which it follows that 
+\begin_inset Formula $X_{r}$
+\end_inset
+
+ differs 
+\begin_inset Formula $T_{r}$
+\end_inset
+
+ only by a sign factor.
+ So we have 
+\begin_inset Formula $G\left(X_{r}\right)=G\left(T_{r}\right)\equiv g_{r}$
+\end_inset
+
+ and 
+\begin_inset Formula 
+\begin{equation}
+T\left(\theta\right)=\sum_{r}\left(-\right)^{sMg_{r}}T_{r}\bar{\psi}_{r}\left(\theta\right).\label{eq:harm_completeness_1}
 \end{equation}
 
 \end_inset
@@ -1384,20 +1508,20 @@ reference "eq:ham_completeness"
 \end_layout
 
 \begin_layout Standard
-For constructing the general conjugate function of 
-\begin_inset Formula $\psi$
+To construct 
+\begin_inset Formula $\bar{\psi}_{r}$
 \end_inset
 
-, it is convenient to define operator 
-\begin_inset Formula $\tilde{F}^{\pm}$
+ explicitly, it is convenient to define operators 
+\begin_inset Formula $\tilde{F}_{k}^{\pm}$
 \end_inset
 
- as a conjugate operator of 
-\begin_inset Formula $F$
+ as conjugate to 
+\begin_inset Formula $F_{k}$
 \end_inset
 
- obtained by a integration by parts.
- For grassmanian even function 
+ under integration by parts.
+ For Grassmanian even function 
 \begin_inset Formula $\psi\left(\theta\right)$
 \end_inset
 
@@ -1413,7 +1537,7 @@ For constructing the general conjugate function of
 
 \end_inset
 
-and for grassmanian odd function 
+and for Grassmanian odd function 
 \begin_inset Formula $\psi\left(\theta\right)$
 \end_inset
 
@@ -1431,25 +1555,29 @@ and for grassmanian odd function
 
 It follows that 
 \begin_inset Formula 
-\[
+\begin{equation}
 \tilde{F}_{0}^{\pm}=\mp e^{i\pi/4}\beta_{0},\quad\tilde{F}_{k}^{\pm}=\pm\left(s_{k}\alpha_{k}-c_{k}\beta_{k}\right),\quad1\leq k\leq M-1,
-\]
+\end{equation}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-\tilde{F}_{0}^{\dagger\pm}=\pm e^{-i\pi/4}\alpha_{0},\quad\tilde{F}_{k}^{\dagger\pm}=\pm\left(c_{k}\alpha_{M-k}-s_{k}\beta_{M-k}\right).
-\]
+\begin{equation}
+\tilde{F}_{0}^{\dagger\pm}=\pm e^{-i\pi/4}\alpha_{0},\quad\tilde{F}_{k}^{\dagger\pm}=\pm\left(c_{k}\alpha_{M-k}-s_{k}\beta_{M-k}\right),\quad1\leq k\leq M-1.\label{eq:ham_F_dagger_tilder}
+\end{equation}
 
 \end_inset
 
+In the remainder of this paper, we may suppress the superscript 
+\begin_inset Formula $\pm$
+\end_inset
 
+ if there is no danger of ambiguity.
 \end_layout
 
 \begin_layout Standard
-Now let us consider the conjugate functions 
+Now let us consider the the 
 \begin_inset Formula $s=1$
 \end_inset
 
@@ -1458,7 +1586,7 @@ Now let us consider the conjugate functions
 \begin_inset Formula $\psi_{0}$
 \end_inset
 
- has the form 
+ is 
 \begin_inset Formula 
 \[
 \bar{\psi}_{0}=\begin{cases}
@@ -1516,7 +1644,7 @@ For
 \begin_inset Formula $0\leq k\leq M-1$
 \end_inset
 
- and eigenfunction 
+ and any eigenfunction 
 \begin_inset Formula $\psi^{\prime}$
 \end_inset
 
@@ -1550,18 +1678,18 @@ For
 
 \end_inset
 
-
-\begin_inset Formula $\tilde{F}_{k}^{\dagger\pm}\bar{\psi}_{0}$
-\end_inset
-
- on RHS of 
+RHS of 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:ham_psibar_norm1"
 
 \end_inset
 
- vanishes because 
+ vanishes because of 
+\begin_inset Formula $\tilde{F}_{k}^{\dagger\pm}\bar{\psi}_{0}=0$
+\end_inset
+
+, which can be verified by checking that 
 \begin_inset Formula 
 \[
 \tilde{F}_{k}^{\dagger\pm}\left(-s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)=\tilde{F}_{M-k}^{\dagger\pm}\left(-s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)=0,
@@ -1572,12 +1700,12 @@ reference "eq:ham_psibar_norm1"
 
 \begin_inset Formula 
 \[
-\left[\tilde{F}_{k}^{\dagger\pm},-s_{l}+c_{l}\alpha_{M-l}\alpha_{l}\right]=0,\quad l\neq k.
+\left[\tilde{F}_{k}^{\dagger\pm},-s_{l}+c_{l}\alpha_{M-l}\alpha_{l}\right]=0,\quad k\neq l,\, k\neq M-l.
 \]
 
 \end_inset
 
-We can show similarly that 
+Similarly, we can show that 
 \begin_inset Formula $\tilde{F}_{k}^{\dagger\pm}\bar{\psi}_{0}=0$
 \end_inset
 
@@ -1585,12 +1713,13 @@ We can show similarly that
 \begin_inset Formula $M/2\leq k\leq M-1$
 \end_inset
 
- and, therefore, the normalization codition 
+.
+ Therefore, the normalization codition 
 \begin_inset Formula $\int d^{M}\theta\,\bar{\psi}_{0}\psi_{r}=\delta_{0r}$
 \end_inset
 
  is proved.
- The conjugate functions of the genral eigenfunction 
+ The function conjugate to the general eigenfunction 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:ham_general_eigenfunction"
@@ -1602,14 +1731,14 @@ reference "eq:ham_general_eigenfunction"
 \end_inset
 
  with 
-\begin_inset Formula $\tilde{F}$
+\begin_inset Formula $\tilde{F}_{k}$
 \end_inset
 
 : 
 \begin_inset Formula 
-\[
-\bar{\psi}=\prod_{k=1}^{M}\left(\tilde{F}_{M-k}\right)^{\lambda_{M-k}}\bar{\psi}_{0},\quad\lambda_{k}=0,\,1,
-\]
+\begin{equation}
+\bar{\psi}=\prod_{k=1}^{M}\left(\tilde{F}_{M-k}\right)^{\lambda_{M-k}}\bar{\psi}_{0},\quad\lambda_{k}=0,\,1,\label{eq:ham_psibar_general}
+\end{equation}
 
 \end_inset
 
@@ -1634,7 +1763,7 @@ reference "eq:ham_general_eigenfunction"
 \end_inset
 
 .
- It is easy to see 
+ It is easy to see that 
 \begin_inset Formula $\bar{\psi}$
 \end_inset
 
@@ -1654,14 +1783,14 @@ If a eigenfunction
 \end_inset
 
  has different 
-\begin_inset Formula $\lambda_{k}$
+\begin_inset Formula $\left\{ \lambda_{k}\right\} $
 \end_inset
 
  with 
 \begin_inset Formula $\bar{\psi}$
 \end_inset
 
-, then there must be at leat one 
+, then there is at least one 
 \begin_inset Formula $F$
 \end_inset
 
@@ -1669,7 +1798,7 @@ If a eigenfunction
 \begin_inset Formula $F^{\dagger}$
 \end_inset
 
- not being contracted, which then annihilates 
+ cannot be contracted, which then annihilates 
 \begin_inset Formula $\psi^{\prime}$
 \end_inset
 
@@ -1678,28 +1807,24 @@ If a eigenfunction
 \end_inset
 
 .
- Therefore, 
+ It follows that 
 \begin_inset Formula $\bar{\psi}$
 \end_inset
 
- is orthogonal to those 
-\begin_inset Formula $\psi$
-\end_inset
-
-s with different set of 
-\begin_inset Formula $\lambda_{i}$
+ is orthogonal to the eigenfunctions with different 
+\begin_inset Formula $\left\{ \lambda_{i}\right\} $
 \end_inset
 
 .
- We do not show proof here, but the completeness relation 
+ Finally, note that the completeness relation 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:ham_completeness"
 
 \end_inset
 
- is satisifed automatically given all the eigenfunction and there conjugates
- are normalized.
+ is satisifed automatically if all the eigenfunction and their conjugates
+ satisfied the normalization condition.
 \end_layout
 
 \begin_layout Standard
@@ -1707,14 +1832,14 @@ For arbitrary
 \begin_inset Formula $s$
 \end_inset
 
- case, the ground eigenfunction is given by 
+, the conjugate to the ground eigenfunction 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:ham_ground_state_s"
 
 \end_inset
 
- and its corresponding conjugate is 
+ is 
 \begin_inset Formula 
 \begin{equation}
 \bar{\psi}_{0}=\left(-1\right)^{s\left(s-1\right)M\left(M-1\right)/4}\prod_{i=0}^{s-1}\bar{\psi}_{0}^{\left(s-i\right)},
@@ -1722,7 +1847,7 @@ reference "eq:ham_ground_state_s"
 
 \end_inset
 
- where the sign factor comes from rearrangment of measure 
+ where the sign factor comes from rearrangment of the measure 
 \begin_inset Formula $d^{s}\theta_{1}\cdots d^{s}\theta_{M}$
 \end_inset
 
@@ -1731,7 +1856,7 @@ reference "eq:ham_ground_state_s"
 \end_inset
 
 .
- The conjugate function of the general eigenfunction 
+ The conjugate function to the general eigenfunction 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:ham_general_eigenfunction_s"
@@ -1741,16 +1866,12 @@ reference "eq:ham_general_eigenfunction_s"
  is
 \begin_inset Formula 
 \begin{equation}
-\bar{\psi}=\prod_{i=0}^{s-1}\prod_{k=1}^{M}\left(\tilde{F}_{M-k}^{\left(s-i\right)}\right)^{\lambda_{M-k,s-i}}\psi_{0},
+\bar{\psi}=\prod_{i=0}^{s-1}\prod_{k=1}^{M}\left(\tilde{F}_{M-k}^{\left(s-i\right)}\right)^{\lambda_{M-k,s-i}}\psi_{0},\quad\quad\lambda_{k}=0,\,1.
 \end{equation}
 
 \end_inset
 
- where 
-\begin_inset Formula $\lambda_{k,i}$
-\end_inset
 
- are either zero or one.
 \end_layout
 
 \begin_layout Section
@@ -1764,8 +1885,11 @@ Three Chain overlap
 \end_layout
 
 \begin_layout Standard
-So far we have constructed the energy eigenfunctions and their conjugates
- for our stringbit model.
+We have constructed the energy eigenfunctions and their conjugates for 
+\begin_inset Formula $N=\infty$
+\end_inset
+
+.
  To obtain the 
 \begin_inset Formula $1/N$
 \end_inset
@@ -4939,7 +5063,13 @@ Conclusion
 \end_layout
 
 \begin_layout Standard
-Conclusion
+We have presented a formalism to calculation three string interaction vertex
+ for superstring bit model and its application to the 
+\begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
+\end_inset
+
+ correction to energy spectrum of the model.
+ 
 \end_layout
 
 \begin_layout Section
