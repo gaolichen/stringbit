@@ -368,7 +368,7 @@ reference "sec:Three-Chain-overlap"
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:1N-Expansion"
+reference "sec:interaction-vertex"
 
 \end_inset
 
@@ -1881,7 +1881,7 @@ name "sec:Three-Chain-overlap"
 
 \end_inset
 
-Three Chain overlap
+Three Chains Overlap
 \end_layout
 
 \begin_layout Standard
@@ -1894,8 +1894,8 @@ We have constructed the energy eigenfunctions and their conjugates for
 \begin_inset Formula $1/N$
 \end_inset
 
- expansion results, we also need to calculate the overlap among three bit
- chains: one larger chain of 
+ expansion results, we also need to calculate the overlap among three chains:
+ one larger chain of 
 \begin_inset Formula $M$
 \end_inset
 
@@ -1964,35 +1964,23 @@ f_{M-1} & = & F_{0}^{\left(1\right)}\sqrt{\frac{K}{M}}-F_{0}^{\left(2\right)}\sq
 
 \end_inset
 
-Express lowering operators of 
-\begin_inset Formula $M$
+We then express the larger chain operators in terms of 
+\begin_inset Formula $f$
 \end_inset
 
--bit chain in terms of eigenoperators of two smaller ones 
+ and 
+\begin_inset Formula $f^{\dagger}$
+\end_inset
+
+: 
 \begin_inset Formula 
 \[
-F_{m}=\sum_{n=0}^{M-1}\left(f_{n}C_{mn}+f_{n}^{\dagger}S_{mn}\right),\quad0\leq m\leq M-1,
+F_{m}=\sum_{n=0}^{M-1}\left(f_{n}C_{mn}+f_{n}^{\dagger}S_{mn}\right),\quad0\leq m\leq M-1.
 \]
 
 \end_inset
 
-where 
-\begin_inset Formula $C$
-\end_inset
-
-and 
-\begin_inset Formula $S$
-\end_inset
-
- satisfy 
-\begin_inset Formula 
-\begin{equation}
-CS^{T}+SC^{T}=0,\quad CC^{\dagger}+SS^{\dagger}=I,\label{eq:overlap_CS_relation}
-\end{equation}
-
-\end_inset
-
-by the requirements of anticommutation relation among 
+The anticommutation relation among 
 \begin_inset Formula $F_{m}$
 \end_inset
 
@@ -2000,8 +1988,15 @@ by the requirements of anticommutation relation among
 \begin_inset Formula $F_{m}^{\dagger}$
 \end_inset
 
-.
- The matrix elements of 
+ requires 
+\begin_inset Formula 
+\begin{equation}
+CS^{T}+SC^{T}=0,\quad CC^{\dagger}+SS^{\dagger}=I.\label{eq:overlap_CS_relation}
+\end{equation}
+
+\end_inset
+
+The matrix elements of 
 \begin_inset Formula $C$
 \end_inset
 
@@ -2186,7 +2181,7 @@ The corresponding conjugate function is
 \begin_layout Section
 \begin_inset CommandInset label
 LatexCommand label
-name "sec:1N-Expansion"
+name "sec:interaction-vertex"
 
 \end_inset
 
@@ -2194,37 +2189,28 @@ name "sec:1N-Expansion"
 \begin_inset Formula $1/N$
 \end_inset
 
- Expansion
+ Three String Interaction Vertices
 \end_layout
 
 \begin_layout Standard
-The basic idea of 
-\begin_inset Formula $1/N$
-\end_inset
-
- expansion of the stringbit model has been introduced in 
+In this section, we will first follow the formalism of 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2015wli"
 
 \end_inset
 
-.
- In this section, we will first follow the idea to define the three string
- vertices, and then derive a caculable formula for them.
+ to introduce the three string vertices through 
+\begin_inset Formula $1/N$
+\end_inset
+
+ perturbation and then, using the results of previous sections, we derive
+ a formula to calculate the vertices.
  
 \end_layout
 
 \begin_layout Standard
-The zeroth order result is given by Subsection 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sub:Diagonalizing-Hamiltonian"
-
-\end_inset
-
-.
- Now let us consider the action of Hamiltonin on the zeroth order energy
+Let us now consider the action of the Hamiltonin on the zeroth order energy
  eigenstate 
 \begin_inset Formula $T_{r}\ket{0}$
 \end_inset
@@ -2277,10 +2263,10 @@ reference "eq:harm_completeness_1"
 
 \end_inset
 
-, we arrive 
+, we arrive at 
 \begin_inset Formula 
 \[
-HT_{r}\ket{0}=E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{L=1}^{M-1}\sum_{s,t}T_{s}T_{t}\ket{0}V_{str}^{\left(K,L\right)}.
+HT_{r}\ket{0}=E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{L=1}^{M-1}\sum_{s,t}T_{s}T_{t}\ket{0}V_{tsr}^{\left(K,L\right)}.
 \]
 
 \end_inset
@@ -2297,15 +2283,15 @@ where
 \begin_inset Formula $L$
 \end_inset
 
--bit and 
+ bits and 
 \begin_inset Formula $K$
 \end_inset
 
--bit chain with 
+ bits with 
 \begin_inset Formula $K+L=M$
 \end_inset
 
- and.
+.
  The vertex 
 \begin_inset Formula $V_{tsr}^{\left(K,L\right)}$
 \end_inset
@@ -5115,7 +5101,7 @@ The Hamiltonian and its action on color singlets
 \end_layout
 
 \begin_layout Standard
-The (anti)-communication relations among string bit creation and annihilation
+The (anti)communication relations among string bit creation and annihilation
  operators is
 \begin_inset Formula 
 \begin{multline}
