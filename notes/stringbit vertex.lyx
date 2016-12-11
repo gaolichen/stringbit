@@ -2519,11 +2519,12 @@ Let us continue to simplify the vertices
 \end_inset
 
  with the results of previous sections.
- Let us consider the 
+ We first consider the 
 \begin_inset Formula $s=1$
 \end_inset
 
- case and introduce products of eigenoperators 
+ case.
+ We introduce products of eigenoperators 
 \begin_inset Formula $\mathbb{F}_{r}$
 \end_inset
 
@@ -2558,8 +2559,8 @@ reference "eq:pert_Vstr_2"
  becomes
 \begin_inset Formula 
 \begin{eqnarray*}
-V_{tsr}^{\left(K,L\right)} & = & \left(-\right)^{s\left(Kg_{s}+Lg_{t}\right)}M\int d\theta\,\tilde{\mathbb{F}}_{t}\bar{\psi}_{0}^{\left(K\right)}\tilde{\mathbb{F}}_{s}\bar{\psi}_{0}^{\left(L\right)}h_{M,L+1}\mathbb{F}_{r}^{\dagger}\psi_{0}^{\left(M\right)}\\
- & = & \left(-\right)^{s\left(Kg_{s}+Lg_{t}\right)+sL\left(g_{t}-sK\right)}M\int d\theta\,\bar{\psi}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}\mathbb{F}_{t}\mathbb{F}_{s}h_{M,L+1}\mathbb{F}_{r}^{\dagger}\psi_{0}^{\left(M\right)},
+V_{tsr}^{\left(K,L\right)} & = & \left(-\right)^{Kg_{s}+Lg_{t}}M\int d\theta\,\tilde{\mathbb{F}}_{t}\bar{\psi}_{0}^{\left(K\right)}\tilde{\mathbb{F}}_{s}\bar{\psi}_{0}^{\left(L\right)}h_{M,L+1}\mathbb{F}_{r}^{\dagger}\psi_{0}^{\left(M\right)}\\
+ & = & \left(-\right)^{Kg_{s}+Lg_{t}+L\left(g_{t}-K\right)}M\int d\theta\,\bar{\psi}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}\mathbb{F}_{t}\mathbb{F}_{s}h_{M,L+1}\mathbb{F}_{r}^{\dagger}\psi_{0}^{\left(M\right)},
 \end{eqnarray*}
 
 \end_inset
@@ -2581,17 +2582,9 @@ V_{tsr}^{\left(K,L\right)} & = & \left(-\right)^{s\left(Kg_{s}+Lg_{t}\right)}M\i
 \begin_inset Formula $\left(-\right)$
 \end_inset
 
- can be removed and 
-\begin_inset Formula $\left(-\right)^{s^{2}KL}$
-\end_inset
-
- equals 
-\begin_inset Formula $\left(-\right)^{sKL}$
-\end_inset
-
-.
+ can be removed.
  So the sign factor can be simplifed to be 
-\begin_inset Formula $\left(-\right)^{sK\left(g_{s}-L\right)}$
+\begin_inset Formula $\left(-\right)^{K\left(g_{s}-L\right)}$
 \end_inset
 
 .
@@ -2617,7 +2610,7 @@ reference "eq:overlap_psi_M1"
  and arrive at 
 \begin_inset Formula 
 \[
-V_{tsr}^{\left(K,L\right)}=\left(-\right)^{sK\left(g_{s}-L\right)}M\left|\det C\right|^{\frac{1}{2}}\left\langle \mathbb{F}_{t}\mathbb{F}_{s}h_{M,L+1}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ,
+V_{tsr}^{\left(K,L\right)}=\left(-\right)^{K\left(g_{s}-L\right)}M\left|\det C\right|^{\frac{1}{2}}\left\langle \mathbb{F}_{t}\mathbb{F}_{s}h_{M,L+1}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ,
 \]
 
 \end_inset
@@ -2655,8 +2648,8 @@ reference "eq:pert_vev"
  and find 
 \begin_inset Formula 
 \begin{multline*}
-W_{rst}^{\left(L,K\right)}=\left(-\right)^{sK\left(g_{s}-L\right)}KL\left|\det C\right|^{\frac{1}{2}}\left\langle \exp\left(\frac{1}{2}\sum_{kl}f_{k}M_{kl}^{\dagger}f_{l}\right)\mathbb{F}_{r}\left(h_{L,L+1}+h_{M,1}\right)\mathbb{F}_{s}^{\dagger}\mathbb{F}_{t}^{\dagger}\right\rangle \\
-=\left(-\right)^{sK\left(g_{s}-L\right)}KL\left|\det C\right|^{\frac{1}{2}}\left\langle \mathbb{F}_{t}\mathbb{F}_{s}\left(h_{L,L+1}+h_{M,1}\right)\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ^{\dagger}.
+W_{rst}^{\left(L,K\right)}=\left(-\right)^{K\left(g_{s}-L\right)}KL\left|\det C\right|^{\frac{1}{2}}\left\langle \exp\left(\frac{1}{2}\sum_{kl}f_{k}M_{kl}^{\dagger}f_{l}\right)\mathbb{F}_{r}\left(h_{L,L+1}+h_{M,1}\right)\mathbb{F}_{s}^{\dagger}\mathbb{F}_{t}^{\dagger}\right\rangle \\
+=\left(-\right)^{K\left(g_{s}-L\right)}KL\left|\det C\right|^{\frac{1}{2}}\left\langle \mathbb{F}_{t}\mathbb{F}_{s}\left(h_{L,L+1}+h_{M,1}\right)\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ^{\dagger}.
 \end{multline*}
 
 \end_inset
@@ -2674,7 +2667,7 @@ Note that
 \end_inset
 
  have the same sign factor 
-\begin_inset Formula $\left(-\right)^{sK\left(g_{s}-L\right)}$
+\begin_inset Formula $\left(-\right)^{K\left(g_{s}-L\right)}$
 \end_inset
 
 .
