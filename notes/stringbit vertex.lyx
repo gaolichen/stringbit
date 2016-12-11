@@ -22,6 +22,7 @@
 \newcommand{\dprod}[2]{\left\langle #1|#2\right\rangle}
 \newcommand{\dprodp}[2]{\left\{ #1|#2\right\} }
 \newcommand{\mat}[1]{\mathbf{#1}}
+\newcommand{\g}{\mathrm{g}}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -1201,13 +1202,13 @@ ed by the zero mode
  By inspection, we find the ground eigenfunction as 
 \begin_inset Formula 
 \begin{equation}
-\psi_{0}=\prod_{k=1}^{\left\lfloor \left(M-1\right)/2\right\rfloor }\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right).\label{eq:ham_ground_eigenfunction}
+\psi_{G}=\prod_{k=1}^{\left\lfloor \left(M-1\right)/2\right\rfloor }\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right).\label{eq:ham_ground_eigenfunction}
 \end{equation}
 
 \end_inset
 
 To verify the requirement 
-\begin_inset Formula $F_{m}\psi_{0}=0$
+\begin_inset Formula $F_{m}\psi_{G}=0$
 \end_inset
 
  one only need to check that
@@ -1239,7 +1240,7 @@ A general eigenfunction is obtained by acting on the ground eigenfunction
  with raising operators
 \begin_inset Formula 
 \begin{equation}
-\psi=\prod_{k=0}^{M-1}\left(F_{k}^{\dagger}\right)^{\lambda_{k}}\psi_{0},\quad\lambda_{k}=0,\,1.\label{eq:ham_general_eigenfunction}
+\psi=\prod_{k=0}^{M-1}\left(F_{k}^{\dagger}\right)^{\lambda_{k}}\psi_{G},\quad\lambda_{k}=0,\,1.\label{eq:ham_general_eigenfunction}
 \end{equation}
 
 \end_inset
@@ -1318,7 +1319,7 @@ We now add the spin index
  The ground eigenfunction and energy are 
 \begin_inset Formula 
 \begin{equation}
-\psi_{0}=\prod_{a=1}^{s}\psi_{0}^{\left(a\right)},\quad E_{0}=-4s\cot\frac{\pi}{2M}.\label{eq:ham_ground_state_s}
+\psi_{G}=\prod_{a=1}^{s}\psi_{G}^{\left(a\right)},\quad E_{G}=-4s\cot\frac{\pi}{2M}.\label{eq:ham_ground_state_s}
 \end{equation}
 
 \end_inset
@@ -1326,7 +1327,7 @@ We now add the spin index
  The general energy eigenfunction and eigenvalue are
 \begin_inset Formula 
 \begin{equation}
-\psi=\prod_{a=1}^{s}\prod_{k=0}^{M-1}\left(F_{k}^{\left(a\right)\dagger}\right)^{\lambda_{a,k}}\psi_{0},\quad E=-sE_{0}+\sum_{a,k}\lambda_{a,k}\sin\frac{k\pi}{M},\quad\lambda_{a,k}=0,\,1.\label{eq:ham_general_eigenfunction_s}
+\psi=\prod_{a=1}^{s}\prod_{k=0}^{M-1}\left(F_{k}^{\left(a\right)\dagger}\right)^{\lambda_{a,k}}\psi_{G},\quad E=-sE_{G}+\sum_{a,k}\lambda_{a,k}\sin\frac{k\pi}{M},\quad\lambda_{a,k}=0,\,1.\label{eq:ham_general_eigenfunction_s}
 \end{equation}
 
 \end_inset
@@ -1417,7 +1418,7 @@ reference "eq:ham_cyclicconstrtaint"
 \end_inset
 
  is the Grassmann coefficients of grading 
-\begin_inset Formula $G\left(\lambda\right)$
+\begin_inset Formula $\g\left(\lambda\right)$
 \end_inset
 
  and 
@@ -1437,7 +1438,7 @@ reference "eq:ham_cyclicconstrtaint"
 \begin_inset Formula 
 \begin{multline}
 \int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\,\lambda f\left(\theta\right)\tilde{\delta}\left(\theta-\eta\right)=\\
-\left(-\right)^{sMG\left(\lambda\right)}\lambda\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, f\left(\theta\right)\tilde{\delta}\left(\theta-\eta\right)=\left(-\right)^{sM\, G\left(\lambda\right)}\lambda f\left(\eta\right),\label{eq:ham_delta_sign_fatctor}
+\left(-\right)^{sMG\left(\lambda\right)}\lambda\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, f\left(\theta\right)\tilde{\delta}\left(\theta-\eta\right)=\left(-\right)^{sM\g\left(\lambda\right)}\lambda f\left(\eta\right),\label{eq:ham_delta_sign_fatctor}
 \end{multline}
 
 \end_inset
@@ -1467,7 +1468,7 @@ Now we can write the trace operator
 , then 
 \begin_inset Formula 
 \begin{equation}
-\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta\right)\psi_{r}\left(\theta\right)=\sum_{t}\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, X_{t}\bar{\psi}_{t}\left(\theta\right)\psi_{r}\left(\theta\right)=\left(-\right)^{sM\, G\left(X_{r}\right)}X_{r}.\label{eq:ham_at}
+\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta\right)\psi_{r}\left(\theta\right)=\sum_{t}\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, X_{t}\bar{\psi}_{t}\left(\theta\right)\psi_{r}\left(\theta\right)=\left(-\right)^{sM\g\left(X_{r}\right)}X_{r}.\label{eq:ham_at}
 \end{equation}
 
 \end_inset
@@ -1493,7 +1494,7 @@ reference "eq:ham_at"
 
  only by a sign factor.
  So we have 
-\begin_inset Formula $G\left(X_{r}\right)=G\left(T_{r}\right)\equiv g_{r}$
+\begin_inset Formula $\g\left(X_{r}\right)=\g\left(T_{r}\right)\equiv g_{r}$
 \end_inset
 
  and 
@@ -1583,13 +1584,13 @@ Now let us consider the the
 
  case.
  The conjugate of the ground eigenfunction 
-\begin_inset Formula $\psi_{0}$
+\begin_inset Formula $\psi_{G}$
 \end_inset
 
  is 
 \begin_inset Formula 
 \[
-\bar{\psi}_{0}=\begin{cases}
+\bar{\psi}_{G}=\begin{cases}
 \left(-i\right)^{\left\lfloor M/2\right\rfloor }\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right) & \text{for odd }M\\
 \left(-i\right)^{M/2+1}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\alpha_{0}\alpha_{M/2} & \text{for even }M
 \end{cases}.
@@ -1597,23 +1598,22 @@ Now let us consider the the
 
 \end_inset
 
-We can verify that 
-\begin_inset Formula $\bar{\psi}_{0}$
+We can check that 
+\begin_inset Formula $\bar{\psi}_{G}$
 \end_inset
 
  satisfies the normalization condition 
-\begin_inset Formula $\int d^{M}\theta\,\bar{\psi}_{0}\psi_{r}=\delta_{0r}$
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_normalization"
+
 \end_inset
 
 .
- For 
-\begin_inset Formula $r=0$
-\end_inset
-
-, 
+ First, we have 
 \begin_inset Formula 
 \begin{eqnarray*}
-\int d^{M}\theta\,\tilde{\psi}_{0}\psi_{0} & = & \left(-i\right)^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\,\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\left(c_{i}-s_{i}\alpha_{M-i}\alpha_{i}\right)\\
+\int d^{M}\theta\,\bar{\psi}_{G}\psi_{G} & = & \left(-i\right)^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\,\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\left(c_{i}-s_{i}\alpha_{M-i}\alpha_{i}\right)\\
  & = & \left(-i\right)^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\,\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(s_{i}^{2}+c_{i}^{2}\right)\alpha_{M-i}\alpha_{i}\\
  & = & \left(-i\right)^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\,\prod_{i=1}^{M}\alpha_{M-i}\\
  & = & 1,
@@ -1632,12 +1632,16 @@ i^{\left(M-1\right)/2} & \text{for odd }M\\
 
 \end_inset
 
-For 
-\begin_inset Formula $r\neq0$
+To show
+\begin_inset Formula $\int d^{M}\theta\,\bar{\psi}_{G}\psi_{r}=0$
 \end_inset
 
-, suffice to show that 
-\begin_inset Formula $\int d^{M}\theta\,\bar{\psi}_{0}F_{k}^{\dagger}\psi^{\prime}$
+ for 
+\begin_inset Formula $r\neq G$
+\end_inset
+
+, it suffice to show that 
+\begin_inset Formula $\int d^{M}\theta\,\bar{\psi}_{G}F_{k}^{\dagger}\psi^{\prime}$
 \end_inset
 
  vanishes for all 
@@ -1658,7 +1662,7 @@ For
 \end_inset
 
  and 
-\begin_inset Formula $\bar{\psi}_{0}$
+\begin_inset Formula $\bar{\psi}_{G}$
 \end_inset
 
  contain 
@@ -1673,7 +1677,7 @@ For
 , 
 \begin_inset Formula 
 \begin{equation}
-\int d^{M}\theta\,\bar{\psi}_{0}F_{k}^{\dagger}\psi^{\prime}=\int d^{M}\theta\,\left(\tilde{F}_{k}^{\dagger\pm}\bar{\psi}_{0}\right)\psi^{\prime}.\label{eq:ham_psibar_norm1}
+\int d^{M}\theta\,\bar{\psi}_{G}F_{k}^{\dagger}\psi^{\prime}=\int d^{M}\theta\,\left(\tilde{F}_{k}^{\dagger\pm}\bar{\psi}_{G}\right)\psi^{\prime}.\label{eq:ham_psibar_norm1}
 \end{equation}
 
 \end_inset
@@ -1686,7 +1690,7 @@ reference "eq:ham_psibar_norm1"
 \end_inset
 
  vanishes because of 
-\begin_inset Formula $\tilde{F}_{k}^{\dagger\pm}\bar{\psi}_{0}=0$
+\begin_inset Formula $\tilde{F}_{k}^{\dagger\pm}\bar{\psi}_{G}=0$
 \end_inset
 
 , which can be verified by checking that 
@@ -1706,7 +1710,7 @@ reference "eq:ham_psibar_norm1"
 \end_inset
 
 Similarly, we can show that 
-\begin_inset Formula $\tilde{F}_{k}^{\dagger\pm}\bar{\psi}_{0}=0$
+\begin_inset Formula $\tilde{F}_{k}^{\dagger\pm}\bar{\psi}_{G}=0$
 \end_inset
 
  for 
@@ -1715,7 +1719,7 @@ Similarly, we can show that
 
 .
  Therefore, the normalization codition 
-\begin_inset Formula $\int d^{M}\theta\,\bar{\psi}_{0}\psi_{r}=\delta_{0r}$
+\begin_inset Formula $\int d^{M}\theta\,\bar{\psi}_{G}\psi_{r}=\delta_{Gr}$
 \end_inset
 
  is proved.
@@ -1727,7 +1731,7 @@ reference "eq:ham_general_eigenfunction"
 \end_inset
 
  can be built by acting on 
-\begin_inset Formula $\bar{\psi}_{0}$
+\begin_inset Formula $\bar{\psi}_{G}$
 \end_inset
 
  with 
@@ -1737,7 +1741,7 @@ reference "eq:ham_general_eigenfunction"
 : 
 \begin_inset Formula 
 \begin{equation}
-\bar{\psi}=\prod_{k=1}^{M}\left(\tilde{F}_{M-k}\right)^{\lambda_{M-k}}\bar{\psi}_{0},\quad\lambda_{k}=0,\,1,\label{eq:ham_psibar_general}
+\bar{\psi}=\prod_{k=1}^{M}\left(\tilde{F}_{M-k}\right)^{\lambda_{M-k}}\bar{\psi}_{G},\quad\lambda_{k}=0,\,1,\label{eq:ham_psibar_general}
 \end{equation}
 
 \end_inset
@@ -1770,10 +1774,9 @@ reference "eq:ham_general_eigenfunction"
  is normalized:
 \begin_inset Formula 
 \begin{eqnarray*}
-\int d^{M}\theta\,\bar{\psi}\psi & = & \int d^{M}\theta\,\prod_{k=1}^{M}\left(\tilde{F}_{M-k}\right)^{\lambda_{M-k}}\bar{\psi}_{0}\prod_{l=0}^{M-1}\left(F_{l}^{\dagger}\right)^{\lambda_{l}}\psi_{0}\\
- & = & \int d^{M}\theta\,\bar{\psi}_{0}\prod_{k=1}^{M}\left(F_{M-k}\right)^{\lambda_{M-k}}\prod_{l=0}^{M-1}\left(F_{k}^{\dagger}\right)^{\lambda_{k}}\psi_{0}\\
- & = & \int d^{M}\theta\,\bar{\psi}_{0}\psi_{0}\\
- & = & 1.
+\int d^{M}\theta\,\bar{\psi}\psi & = & \int d^{M}\theta\,\prod_{k=1}^{M}\left(\tilde{F}_{M-k}\right)^{\lambda_{M-k}}\bar{\psi}_{G}\prod_{l=0}^{M-1}\left(F_{l}^{\dagger}\right)^{\lambda_{l}}\psi_{G}\\
+ & = & \int d^{M}\theta\,\bar{\psi}_{G}\prod_{k=1}^{M}\left(F_{M-k}\right)^{\lambda_{M-k}}\prod_{l=0}^{M-1}\left(F_{k}^{\dagger}\right)^{\lambda_{k}}\psi_{G}\\
+ & = & \int d^{M}\theta\,\bar{\psi}_{G}\psi_{G}
 \end{eqnarray*}
 
 \end_inset
@@ -1842,7 +1845,7 @@ reference "eq:ham_ground_state_s"
  is 
 \begin_inset Formula 
 \begin{equation}
-\bar{\psi}_{0}=\left(-1\right)^{s\left(s-1\right)M\left(M-1\right)/4}\prod_{i=0}^{s-1}\bar{\psi}_{0}^{\left(s-i\right)},
+\bar{\psi}_{G}=\left(-1\right)^{s\left(s-1\right)M\left(M-1\right)/4}\prod_{i=0}^{s-1}\bar{\psi}_{G}^{\left(s-i\right)},
 \end{equation}
 
 \end_inset
@@ -1866,7 +1869,7 @@ reference "eq:ham_general_eigenfunction_s"
  is
 \begin_inset Formula 
 \begin{equation}
-\bar{\psi}=\prod_{i=0}^{s-1}\prod_{k=1}^{M}\left(\tilde{F}_{M-k}^{\left(s-i\right)}\right)^{\lambda_{M-k,s-i}}\psi_{0},\quad\quad\lambda_{k}=0,\,1.
+\bar{\psi}=\prod_{i=0}^{s-1}\prod_{k=1}^{M}\left(\tilde{F}_{M-k}^{\left(s-i\right)}\right)^{\lambda_{M-k,s-i}}\bar{\psi}_{G},\quad\quad\lambda_{k}=0,\,1.
 \end{equation}
 
 \end_inset
@@ -2089,13 +2092,13 @@ C=\begin{pmatrix}1\end{pmatrix}\oplus C^{\prime},\quad S=\begin{pmatrix}0\end{pm
 We then express the ground eigenfunction of large chain as
 \begin_inset Formula 
 \begin{equation}
-\psi_{0}=\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\psi_{0}^{\left(1\right)}\psi_{0}^{\left(2\right)}\left[\det\left(I+MM^{\dagger}\right)\right]^{-1/4}.\label{eq:overlap_psi_M}
+\psi_{G}=\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\psi_{G}^{\left(1\right)}\psi_{G}^{\left(2\right)}\left[\det\left(I+MM^{\dagger}\right)\right]^{-1/4}.\label{eq:overlap_psi_M}
 \end{equation}
 
 \end_inset
 
 The constraints 
-\begin_inset Formula $F_{m}\psi_{0}=0$
+\begin_inset Formula $F_{m}\psi_{G}=0$
 \end_inset
 
  implies 
@@ -2142,7 +2145,7 @@ reference "eq:overlap_psi_M"
  
 \begin_inset Formula 
 \begin{equation}
-\psi_{0}=\left|\det C\right|^{1/2}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\psi_{0}^{\left(1\right)}\psi_{0}^{\left(2\right)}.\label{eq:overlap_psi_M1}
+\psi_{G}=\left|\det C\right|^{1/2}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\psi_{G}^{\left(1\right)}\psi_{G}^{\left(2\right)}.\label{eq:overlap_psi_M1}
 \end{equation}
 
 \end_inset
@@ -2524,7 +2527,7 @@ Let us continue to simplify the vertices
 \end_inset
 
  case.
- We introduce products of eigenoperators 
+ For convenience, we introduce the notation to represent 
 \begin_inset Formula $\mathbb{F}_{r}$
 \end_inset
 
@@ -2535,7 +2538,7 @@ Let us continue to simplify the vertices
  as
 \begin_inset Formula 
 \[
-\psi_{r}=\prod_{k=0}^{M-1}\left(F_{k}^{\dagger}\right)^{\lambda_{k}}\psi_{0}\equiv\mathbb{F}_{r}^{\dagger}\psi_{0}^{\left(M\right)},\quad\bar{\psi}_{r}=\prod_{k=1}^{M}\left(\tilde{F}_{M-k}\right)^{\lambda_{M-k}}\bar{\psi}_{0}^{\left(M\right)}\equiv\tilde{\mathbb{F}}_{r}\bar{\psi}_{0}^{\left(M\right)},
+\psi_{r}=\prod_{k=0}^{M-1}\left(F_{k}^{\dagger}\right)^{\lambda_{k}}\psi_{G}^{\left(M\right)}\equiv\mathbb{F}_{r}^{\dagger}\psi_{G}^{\left(M\right)},\quad\bar{\psi}_{r}=\prod_{k=1}^{M}\left(\tilde{F}_{M-k}\right)^{\lambda_{M-k}}\bar{\psi}_{G}^{\left(M\right)}\equiv\tilde{\mathbb{F}}_{r}\bar{\psi}_{G}^{\left(M\right)},
 \]
 
 \end_inset
@@ -2559,8 +2562,8 @@ reference "eq:pert_Vstr_2"
  becomes
 \begin_inset Formula 
 \begin{eqnarray*}
-V_{tsr}^{\left(K,L\right)} & = & \left(-\right)^{Kg_{s}+Lg_{t}}M\int d\theta\,\tilde{\mathbb{F}}_{t}\bar{\psi}_{0}^{\left(K\right)}\tilde{\mathbb{F}}_{s}\bar{\psi}_{0}^{\left(L\right)}h_{M,L+1}\mathbb{F}_{r}^{\dagger}\psi_{0}^{\left(M\right)}\\
- & = & \left(-\right)^{Kg_{s}+Lg_{t}+L\left(g_{t}-K\right)}M\int d\theta\,\bar{\psi}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}\mathbb{F}_{t}\mathbb{F}_{s}h_{M,L+1}\mathbb{F}_{r}^{\dagger}\psi_{0}^{\left(M\right)},
+V_{tsr}^{\left(K,L\right)} & = & \left(-\right)^{Kg_{s}+Lg_{t}}M\int d\theta\,\tilde{\mathbb{F}}_{t}\bar{\psi}_{0}^{\left(K\right)}\tilde{\mathbb{F}}_{s}\bar{\psi}_{G}^{\left(L\right)}h_{M,L+1}\mathbb{F}_{r}^{\dagger}\psi_{G}^{\left(M\right)}\\
+ & = & \left(-\right)^{Kg_{s}+Lg_{t}+L\left(g_{t}-K\right)}M\int d\theta\,\bar{\psi}_{G}^{\left(K\right)}\bar{\psi}_{G}^{\left(L\right)}\mathbb{F}_{t}\mathbb{F}_{s}h_{M,L+1}\mathbb{F}_{r}^{\dagger}\psi_{G}^{\left(M\right)},
 \end{eqnarray*}
 
 \end_inset
@@ -2570,7 +2573,7 @@ V_{tsr}^{\left(K,L\right)} & = & \left(-\right)^{Kg_{s}+Lg_{t}}M\int d\theta\,\t
 \end_inset
 
  passing through 
-\begin_inset Formula $\psi_{0}^{\left(L\right)}$
+\begin_inset Formula $\psi_{G}^{\left(L\right)}$
 \end_inset
 
 .
@@ -2596,15 +2599,15 @@ reference "eq:overlap_psi_M1"
 \end_inset
 
  to express 
-\begin_inset Formula $\psi_{0}^{\left(M\right)}$
+\begin_inset Formula $\psi_{G}^{\left(M\right)}$
 \end_inset
 
  in terms of 
-\begin_inset Formula $\psi_{0}^{\left(L\right)}$
+\begin_inset Formula $\psi_{G}^{\left(L\right)}$
 \end_inset
 
  and 
-\begin_inset Formula $\psi_{0}^{\left(K\right)}$
+\begin_inset Formula $\psi_{G}^{\left(K\right)}$
 \end_inset
 
  and arrive at 
@@ -2619,17 +2622,17 @@ V_{tsr}^{\left(K,L\right)}=\left(-\right)^{K\left(g_{s}-L\right)}M\left|\det C\r
 \begin_inset Formula 
 \begin{multline}
 \left\langle \mathbb{F}_{t}\mathbb{F}_{s}h_{M,L+1}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
-\equiv\int d\theta\,\bar{\psi}_{0}^{\left(K\right)}\bar{\psi}_{0}^{\left(L\right)}\mathbb{F}_{t}\mathbb{F}_{s}h_{M,L+1}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\psi_{0}^{\left(L\right)}\psi_{0}^{\left(K\right)}.\label{eq:pert_vev}
+\equiv\int d\theta\,\bar{\psi}_{G}^{\left(K\right)}\bar{\psi}_{G}^{\left(L\right)}\mathbb{F}_{t}\mathbb{F}_{s}h_{M,L+1}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\psi_{G}^{\left(L\right)}\psi_{G}^{\left(K\right)}.\label{eq:pert_vev}
 \end{multline}
 
 \end_inset
 
 The ground eigenfunction 
-\begin_inset Formula $\psi_{0}^{\left(L\right)}$
+\begin_inset Formula $\psi_{G}^{\left(L\right)}$
 \end_inset
 
 , 
-\begin_inset Formula $\psi_{0}^{\left(K\right)}$
+\begin_inset Formula $\psi_{G}^{\left(K\right)}$
 \end_inset
 
 , and their conjugates are annihilated by any lowering eigenoperators of
@@ -2821,15 +2824,8 @@ Correction to Ground Energy
 \end_layout
 
 \begin_layout Standard
-One application of the vertext 
-\begin_inset Formula $V$
-\end_inset
-
- and 
-\begin_inset Formula $W$
-\end_inset
-
- is to calculate the correction to the energy eigenvalues for finite 
+One application of the interaction vertices is to calculate the energy spectrum
+ correction for finite 
 \begin_inset Formula $N$
 \end_inset
 
@@ -2930,18 +2926,18 @@ C_{st}^{2} & = & \frac{1}{E-E_{s}-E_{t}}\frac{1}{N}V_{tsr}C_{r}^{1}+\mathcal{O}\
 
 \end_inset
 
- Particularly if 
+ Particularly, if the zeroth order is the single trace eigen state 
 \begin_inset Formula $T_{r}\ket{0}$
 \end_inset
 
- is the ground eigenstate, i.e., 
-\begin_inset Formula $C_{r}^{1}=1$
+, i.e., 
+\begin_inset Formula $C_{u}^{1}=\delta_{ur}$
 \end_inset
 
 ,
 \begin_inset Formula 
 \begin{equation}
-\Delta E_{0}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}\sum_{M_{s}=L,M_{t}=K}W_{0st}^{\left(L,K\right)}\frac{1}{E_{0}-E_{s}-E_{t}}V_{ts0}^{\left(K,L\right)},\label{eq:eec_deltaE0}
+\Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}\sum_{M_{s}=L,M_{t}=K}W_{rst}^{\left(L,K\right)}\frac{1}{E_{r}-E_{s}-E_{t}}V_{tsr}^{\left(K,L\right)},\label{eq:eec_deltaE0}
 \end{equation}
 
 \end_inset
@@ -3038,7 +3034,7 @@ reference "eq:eec_deltaE0"
  
 \begin_inset Formula 
 \[
-\Delta E_{0}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{s,t}}^{\prime}\frac{KLM\left|\det C\right|}{E_{0}-E_{s}-E_{t}}\sum_{\lambda,\xi=0,1}\left\langle \mathbb{F}_{ts}F_{0,L}^{\lambda}F_{0,K}^{\xi},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{ts}F_{0,L}^{\lambda}F_{0,K}^{\xi},\mathbb{F}_{r}\right\rangle _{V},
+\Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{s,t}}^{\prime}\frac{KLM\left|\det C\right|}{E_{r}-E_{s}-E_{t}}\sum_{\lambda,\xi=0,1}\left\langle \mathbb{F}_{ts}F_{0,L}^{\lambda}F_{0,K}^{\xi},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{ts}F_{0,L}^{\lambda}F_{0,K}^{\xi},\mathbb{F}_{r}\right\rangle _{V},
 \]
 
 \end_inset
@@ -3574,7 +3570,7 @@ Grading of
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\psi_{0}^{\left(1\right)}=1$
+\begin_inset Formula $\psi_{G}^{\left(1\right)}=1$
 \end_inset
 
 
@@ -3586,7 +3582,7 @@ Grading of
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\bar{\psi}_{0}^{\left(1\right)}=\theta_{1}$
+\begin_inset Formula $\bar{\psi}_{G}^{\left(1\right)}=\theta_{1}$
 \end_inset
 
 
@@ -3598,7 +3594,7 @@ Grading of
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $E_{0}^{\left(1\right)}=0$
+\begin_inset Formula $E_{G}^{\left(1\right)}=0$
 \end_inset
 
 
@@ -3630,7 +3626,7 @@ even
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\psi_{1}^{\left(2\right)}=F_{1}^{\left(2\right)\dagger}\psi_{0}^{\left(2\right)}$
+\begin_inset Formula $\psi_{1}^{\left(2\right)}=F_{1}^{\left(2\right)\dagger}\psi_{G}^{\left(2\right)}$
 \end_inset
 
 
@@ -3642,7 +3638,7 @@ even
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\bar{\psi}_{1}^{\left(2\right)}=\tilde{F}_{1}^{\left(2\right)}\bar{\psi}_{0}^{\left(2\right)}$
+\begin_inset Formula $\bar{\psi}_{1}^{\left(2\right)}=\tilde{F}_{1}^{\left(2\right)}\bar{\psi}_{G}^{\left(2\right)}$
 \end_inset
 
 
@@ -3718,7 +3714,7 @@ The contribution of
  to the energy correction is 
 \begin_inset Formula 
 \begin{equation}
-\Delta E_{0}^{\prime}=\frac{1}{N^{2}}\frac{KLM\left|\det C\right|}{E_{0}-E_{0}^{\left(1\right)}-E_{1}^{\left(2\right)}}\left(\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V}+\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{V}\right).\label{eq:exmp_deltaEp}
+\Delta E_{G}^{\prime}=\frac{1}{N^{2}}\frac{KLM\left|\det C\right|}{E_{G}-E_{G}^{\left(1\right)}-E_{1}^{\left(2\right)}}\left(\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V}+\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{V}\right).\label{eq:exmp_deltaEp}
 \end{equation}
 
 \end_inset
@@ -3760,7 +3756,7 @@ So we need to calculate
 \end_inset
 
 Substituting above results and ground energy 
-\begin_inset Formula $E_{0}=-4\sqrt{3}$
+\begin_inset Formula $E_{G}=-4\sqrt{3}$
 \end_inset
 
  into 
@@ -3771,7 +3767,7 @@ reference "eq:exmp_deltaEp"
 \end_inset
 
  yields 
-\begin_inset Formula $\Delta E_{0}^{\prime}=-\frac{3}{2}\left(3\sqrt{3}-5\right)\left(1+\xi\right)^{2}\frac{1}{N^{2}}$
+\begin_inset Formula $\Delta E_{G}^{\prime}=-\frac{3}{2}\left(3\sqrt{3}-5\right)\left(1+\xi\right)^{2}\frac{1}{N^{2}}$
 \end_inset
 
 .
@@ -3853,13 +3849,13 @@ With above results, we find the
 \end_inset
 
  contribution is 
-\begin_inset Formula $\Delta E_{0}^{\prime\prime}=\frac{\left(2\sqrt{3}-3\xi\right)\xi}{3\sqrt{3}+5}\frac{1}{N^{2}}$
+\begin_inset Formula $\Delta E_{G}^{\prime\prime}=\frac{\left(2\sqrt{3}-3\xi\right)\xi}{3\sqrt{3}+5}\frac{1}{N^{2}}$
 \end_inset
 
  and the final result of energy correction is
 \begin_inset Formula 
 \[
-\Delta E_{0}=\Delta E_{0}^{\prime}+\Delta E_{0}^{\prime\prime}=-3\left(3\sqrt{3}-5\right)\xi^{2}+2\left(12-7\sqrt{3}\right)\xi-\frac{3}{2}\left(3\sqrt{3}-5\right).
+\Delta E_{G}=\Delta E_{G}^{\prime}+\Delta E_{G}^{\prime\prime}=-3\left(3\sqrt{3}-5\right)\xi^{2}+2\left(12-7\sqrt{3}\right)\xi-\frac{3}{2}\left(3\sqrt{3}-5\right).
 \]
 
 \end_inset
@@ -3888,8 +3884,8 @@ reference "tab:Energy-eigenstates-2"
  The energy correction now is now given by 
 \begin_inset Formula 
 \begin{multline*}
-\Delta E_{0}=\frac{1}{N^{2}}\sum_{L=1}^{2}\frac{KLM\left|\det C\right|^{2}}{E_{0}-E_{0}^{\left(2\right)}-0}\left(\left\langle 1\right\rangle _{W}^{*}\left\langle 1\right\rangle _{V}+\left\langle f_{2}f_{0}\right\rangle _{W}^{*}\left\langle f_{2}f_{0}\right\rangle _{V}\right)^{2}\\
-+\frac{1}{N^{2}}\sum_{L=1}^{2}\frac{KLM\left|\det C\right|^{2}}{E_{0}-E_{1}^{\left(2\right)}-0}\left(\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V}+\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{V}\right)^{2}.
+\Delta E_{G}=\frac{1}{N^{2}}\sum_{L=1}^{2}\frac{KLM\left|\det C\right|^{2}}{E_{G}-E_{G}^{\left(2\right)}-0}\left(\left\langle 1\right\rangle _{W}^{*}\left\langle 1\right\rangle _{V}+\left\langle f_{2}f_{0}\right\rangle _{W}^{*}\left\langle f_{2}f_{0}\right\rangle _{V}\right)^{2}\\
++\frac{1}{N^{2}}\sum_{L=1}^{2}\frac{KLM\left|\det C\right|^{2}}{E_{G}-E_{1}^{\left(2\right)}-0}\left(\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V}+\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{V}\right)^{2}.
 \end{multline*}
 
 \end_inset
@@ -4010,7 +4006,7 @@ Grading of
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\psi_{0}^{\left(1\right)}=1$
+\begin_inset Formula $\psi_{G}^{\left(1\right)}=1$
 \end_inset
 
 
@@ -4022,7 +4018,7 @@ Grading of
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\bar{\psi}_{0}^{\left(1\right)}=\theta_{1}$
+\begin_inset Formula $\bar{\psi}_{G}^{\left(1\right)}=\theta_{1}$
 \end_inset
 
 
@@ -4034,7 +4030,7 @@ Grading of
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $E_{0}^{\left(1\right)}=0$
+\begin_inset Formula $E_{G}^{\left(1\right)}=0$
 \end_inset
 
 
@@ -4066,7 +4062,7 @@ even
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\psi_{0}^{\left(2\right)}$
+\begin_inset Formula $\psi_{G}^{\left(2\right)}$
 \end_inset
 
 
@@ -4078,7 +4074,7 @@ even
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\bar{\psi}_{0}^{\left(2\right)}$
+\begin_inset Formula $\bar{\psi}_{G}^{\left(2\right)}$
 \end_inset
 
 
@@ -4090,7 +4086,7 @@ even
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $E_{0}^{\left(2\right)}=-8$
+\begin_inset Formula $E_{G}^{\left(2\right)}=-8$
 \end_inset
 
 
@@ -4257,7 +4253,7 @@ reference "eq:energy_pert_DeltaE"
 \end_inset
 
 , we obtain 
-\begin_inset Formula $\Delta E_{0}=\frac{1}{N^{2}}\left(-66\sqrt{3}\xi^{4}+360\xi^{3}-242\sqrt{3}\xi^{2}+228\xi-33\sqrt{3}\right)$
+\begin_inset Formula $\Delta E_{G}=\frac{1}{N^{2}}\left(-66\sqrt{3}\xi^{4}+360\xi^{3}-242\sqrt{3}\xi^{2}+228\xi-33\sqrt{3}\right)$
 \end_inset
 
 .
