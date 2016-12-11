@@ -1487,7 +1487,7 @@ reference "eq:ham_at"
 \begin_inset Formula $X_{r}$
 \end_inset
 
- differs 
+ differs from 
 \begin_inset Formula $T_{r}$
 \end_inset
 
@@ -2193,7 +2193,7 @@ name "sec:interaction-vertex"
 \end_layout
 
 \begin_layout Standard
-In this section, we will first follow the formalism of 
+In this section, we first follow the formalism of 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2015wli"
@@ -2299,35 +2299,29 @@ where
  is defined as 
 \begin_inset Formula 
 \begin{equation}
-V_{tsr}^{\left(K,L\right)}=\left(-\right)^{s\left(Kg_{s}+Lg_{t}\right)}\sum_{k=1}^{M}\int d\theta\,\bar{h}_{k,k+L+1}\bar{\psi}_{t}\left(\theta_{k+L+1}\cdots\theta_{k}\right)\bar{\psi}_{s}\left(\theta_{k+1}\cdots\theta_{k+L}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right),\label{eq:pert_Vstr}
+V_{tsr}^{\left(K,L\right)}=\left(-\right)^{s\left(Kg_{s}+Lg_{t}\right)}\sum_{k=1}^{M}\int d\theta\,\bar{h}_{k,k+L+1}\bar{\psi}_{t}\left(\theta_{k+L+1}\cdots\theta_{k}\right)\bar{\psi}_{s}\left(\theta_{k+1}\cdots\theta_{k+L}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\label{eq:pert_Vstr}
 \end{equation}
 
 \end_inset
 
- where 
-\begin_inset Formula $g_{s,t}\equiv G\left(T_{s,t}\right)$
+Note that all the 
+\begin_inset Formula $M$
 \end_inset
 
- are the grading of single trace eigenstates.
- Note that each single integral of 
+ integrals of 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:pert_Vstr"
 
 \end_inset
 
- is invariant under the change 
-\begin_inset Formula $k\to k+1$
+ are the same.
+ It can be shown as follows.
+ For the integral with index 
+\begin_inset Formula $k$
 \end_inset
 
-.
- It can be seen as follows.
- The change 
-\begin_inset Formula $k\to k+1$
-\end_inset
-
- can be considered as combination of two changes: renaming all integration
- variables from 
+, we can first rename all integration variables from 
 \begin_inset Formula $\theta_{i}$
 \end_inset
 
@@ -2335,35 +2329,37 @@ reference "eq:pert_Vstr"
 \begin_inset Formula $\theta_{i+1}$
 \end_inset
 
- and applying the cyclic constraint 
+ and then use the cyclic constraint 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:ham_cyclicconstrtaint"
 
 \end_inset
 
- to bring the measure and 
+ to bring 
 \begin_inset Formula $\psi_{r}$
 \end_inset
 
- to their original form.
- Each single integral is invariant under both changes.
- We can therefore replace the summation of 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:pert_Vstr"
-
+ and the measure to their original form.
+ The value of the integral does not change under both changes while the
+ index 
+\begin_inset Formula $k$
 \end_inset
 
- with 
-\begin_inset Formula $M$
+ of the integrand is changed to 
+\begin_inset Formula $k+1$
 \end_inset
 
- and fix 
+.
+ It implies that all the integrals are independent of 
+\begin_inset Formula $k$
+\end_inset
+
+, we can therefore fix 
 \begin_inset Formula $k=M$
 \end_inset
 
- for each the integral: 
+ for each integral to give 
 \begin_inset Formula 
 \begin{equation}
 V_{tsr}^{\left(K,L\right)}=\left(-\right)^{s\left(Kg_{s}+Lg_{t}\right)}M\int d\theta\,\bar{\psi}_{t}\left(\theta_{L+1}\cdots\theta_{M}\right)\bar{\psi}_{s}\left(\theta_{1}\cdots\theta_{L}\right)h_{M,L+1}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right).\label{eq:pert_Vstr_2}
@@ -2379,8 +2375,7 @@ The action of
 \begin_inset Formula $H$
 \end_inset
 
- on double trace produces both fussion and fission terms.
- 
+ on double trace produces both fussion and fission terms: 
 \begin_inset Formula 
 \begin{multline*}
 HT_{s}T_{t}\ket{0}=\left(E_{s}+E_{t}\right)T_{s}T_{k}\ket{0}\\
@@ -2414,11 +2409,7 @@ W_{rst}^{\left(2\right)}=\left(-\right)^{sK\left(g_{s}-L\right)}\sum_{k=1}^{K}\s
 
 \end_inset
 
-By the same reasoning as the 
-\begin_inset Formula $V_{tsr}$
-\end_inset
-
- case, 
+Likewise, 
 \begin_inset Formula $W^{\left(1\right)}$
 \end_inset
 
@@ -2434,24 +2425,11 @@ By the same reasoning as the
 \begin_inset Formula $l\to l+1$
 \end_inset
 
+ so that we simply change the summations to 
+\begin_inset Formula $K\times L$
+\end_inset
+
 .
- So we can replace the summations over 
-\begin_inset Formula $k$
-\end_inset
-
- and 
-\begin_inset Formula $l$
-\end_inset
-
- by 
-\begin_inset Formula $K$
-\end_inset
-
- and 
-\begin_inset Formula $L$
-\end_inset
-
- respectively.
  We then rename 
 \begin_inset Formula $\eta_{1},\dots,\eta_{K}$
 \end_inset
@@ -2460,7 +2438,7 @@ By the same reasoning as the
 \begin_inset Formula $\theta_{L+1},\dots,\eta_{M}$
 \end_inset
 
- and choose 
+ and fix the indecies 
 \begin_inset Formula $\left(l,k\right)$
 \end_inset
 
@@ -2532,7 +2510,7 @@ The expression of
 \end_layout
 
 \begin_layout Standard
-Let us now express 
+Let us continue to simplify the vertices 
 \begin_inset Formula $V$
 \end_inset
 
@@ -2540,7 +2518,7 @@ Let us now express
 \begin_inset Formula $W$
 \end_inset
 
- in forms which can be calculated with the results of previous sections.
+ with the results of previous sections.
  Let us consider the 
 \begin_inset Formula $s=1$
 \end_inset
@@ -2556,7 +2534,7 @@ Let us now express
  as
 \begin_inset Formula 
 \[
-\psi_{r}=\prod_{k=0}^{M-1}\left(F_{k}^{\dagger}\right)^{\lambda_{k}}\psi_{0}\equiv\mathbb{F}_{r}^{\dagger}\bar{\psi}_{0}^{\left(M\right)},\quad\bar{\psi}_{r}=\prod_{k=1}^{M}\left(\tilde{F}_{M-k}\right)^{\lambda_{M-k}}\equiv\tilde{\mathbb{F}}_{r}\psi_{0}^{\left(M\right)},
+\psi_{r}=\prod_{k=0}^{M-1}\left(F_{k}^{\dagger}\right)^{\lambda_{k}}\psi_{0}\equiv\mathbb{F}_{r}^{\dagger}\psi_{0}^{\left(M\right)},\quad\bar{\psi}_{r}=\prod_{k=1}^{M}\left(\tilde{F}_{M-k}\right)^{\lambda_{M-k}}\bar{\psi}_{0}^{\left(M\right)}\equiv\tilde{\mathbb{F}}_{r}\bar{\psi}_{0}^{\left(M\right)},
 \]
 
 \end_inset
