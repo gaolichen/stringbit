@@ -4299,7 +4299,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /users/gaolichen/gitroot/stringbit/plots/EvM-compare.pdf
+	filename plots/EvM-compare.pdf
 	width 50text%
 	groupId halfcolumn
 
@@ -4333,7 +4333,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /users/gaolichen/gitroot/stringbit/plots/EvM-s1-manyxi.pdf
+	filename plots/EvM-s1-manyxi.pdf
 	width 50text%
 	groupId halfcolumn
 
@@ -4371,7 +4371,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /users/gaolichen/gitroot/stringbit/plots/EvM-s2-manyxi.pdf
+	filename plots/EvM-s2-manyxi.pdf
 	width 50text%
 	groupId halfcolumn
 
@@ -4409,7 +4409,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /users/gaolichen/gitroot/stringbit/plots/EvS-xi0.pdf
+	filename plots/EvS-xi0.pdf
 	width 50text%
 	groupId halfcolumn
 
@@ -4890,7 +4890,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /users/gaolichen/gitroot/stringbit/plots/SubEvM-s1xi0.pdf
+	filename plots/SubEvM-s1xi0.pdf
 	width 50text%
 	groupId halfcolumn
 
@@ -4928,7 +4928,7 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /users/gaolichen/gitroot/stringbit/plots/SubEvM-s2xi0.pdf
+	filename plots/SubEvM-s2xi0.pdf
 	width 50text%
 	groupId halfcolumn
 
