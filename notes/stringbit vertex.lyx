@@ -5110,7 +5110,7 @@ The (anti)communication relations among string bit creation and annihilation
 The Hamiltonian in the paper can be written as 
 \begin_inset Formula 
 \[
-H_{S}=H_{1}+H_{2}+H_{3}+H_{4}+H_{5},
+H_{S}=H_{1}+H_{2}+H_{3}+H_{4}+H_{5}+s\xi\Delta H,
 \]
 
 \end_inset
@@ -5119,10 +5119,17 @@ H_{S}=H_{1}+H_{2}+H_{3}+H_{4}+H_{5},
 \begin_inset Formula $H_{i}$
 \end_inset
 
- are
+ are terms introduced by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2014hia,Thorn:2015wli"
+
+\end_inset
+
+
 \begin_inset Formula 
 \[
-H_{1}=\frac{2}{N}\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{s-2n}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}}
+H_{1}=\frac{2}{N}\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{s-2n}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}},
 \]
 
 \end_inset
@@ -5130,7 +5137,7 @@ H_{1}=\frac{2}{N}\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{s-2n}{n!k!}\tr\bar{\phi}_{a_{
 
 \begin_inset Formula 
 \[
-H_{2}=\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{bb_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{ba_{1}\cdots a_{n}}
+H_{2}=\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{bb_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{ba_{1}\cdots a_{n}},
 \]
 
 \end_inset
@@ -5138,7 +5145,7 @@ H_{2}=\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!
 
 \begin_inset Formula 
 \[
-H_{3}=\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{ba_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{bb_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}}
+H_{3}=\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{ba_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{bb_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}},
 \]
 
 \end_inset
@@ -5146,7 +5153,7 @@ H_{3}=\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!
 
 \begin_inset Formula 
 \[
-H_{4}=\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{bb_{1}\cdots b_{k}}\phi_{ba_{1}\cdots a_{n}}
+H_{4}=\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{bb_{1}\cdots b_{k}}\phi_{ba_{1}\cdots a_{n}},
 \]
 
 \end_inset
@@ -5154,8 +5161,21 @@ H_{4}=\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k
 
 \begin_inset Formula 
 \[
-H_{5}=-\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{ba_{1}\cdots a_{n}}\bar{\phi}_{bb_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}}.
+H_{5}=-\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{ba_{1}\cdots a_{n}}\bar{\phi}_{bb_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}},
 \]
+
+\end_inset
+
+ and 
+\begin_inset Formula $\Delta H$
+\end_inset
+
+ is the new term introduced
+\begin_inset Formula 
+\begin{align*}
+\Delta H & =\frac{2}{N}\left(\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\bar{\phi}_{b_{1}\cdots b_{k}}\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\phi_{b_{1}\cdots b_{k}}-\tilde{M}\right),\\
+\tilde{M} & =\sum_{n=0}^{s}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}-\frac{1}{N}\sum_{n=0}^{s}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\tr\phi_{a_{1}\cdots a_{n}}.
+\end{align*}
 
 \end_inset
 
@@ -5166,7 +5186,7 @@ H_{5}=-\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!
  commutes with the supersymmetry operators 
 \begin_inset Formula 
 \[
-Q^{a}=\sum_{n=0}^{s-1}\frac{\left(-1\right)^{n}}{n!}\tr\left[e^{i\pi/4}\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{aa_{1}\cdots a_{n}}+e^{-i\pi/4}\bar{\phi}_{aa_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\right]
+Q^{a}=\sum_{n=0}^{s-1}\frac{\left(-1\right)^{n}}{n!}\tr\left[e^{i\pi/4}\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{aa_{1}\cdots a_{n}}+e^{-i\pi/4}\bar{\phi}_{aa_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\right],
 \]
 
 \end_inset
@@ -5196,11 +5216,18 @@ reference "eq:App-H-commutation"
 \begin_inset Formula $H_{i}$
 \end_inset
 
- on single trace states:
+ on single trace states
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{multline*}
 H_{1}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}=2\sum_{k=1}^{M}\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
-+\frac{2}{N}\sum_{k=1}^{M}\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)\sum_{l\neq k,k+1}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0}
++\frac{2}{N}\sum_{k=1}^{M}\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)\sum_{l\neq k,k+1}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0},
 \end{multline*}
 
 \end_inset
@@ -5209,7 +5236,7 @@ H_{1}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}=2\sum_{k=1}^{M}\left(s-2\
 \begin_inset Formula 
 \begin{multline*}
 H_{2}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}=2\sum_{k=1}^{M}\theta_{k}^{a}\frac{d}{d\theta_{k+1}^{a}}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
-+\frac{2}{N}\sum_{k=1}^{M}\sum_{l\neq k,k+1}\theta_{k}^{a}\frac{d}{d\theta_{l}^{a}}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0}
++\frac{2}{N}\sum_{k=1}^{M}\sum_{l\neq k,k+1}\theta_{k}^{a}\frac{d}{d\theta_{l}^{a}}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0},
 \end{multline*}
 
 \end_inset
@@ -5218,7 +5245,7 @@ H_{2}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}=2\sum_{k=1}^{M}\theta_{k}
 \begin_inset Formula 
 \begin{multline*}
 H_{3}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}=2\sum_{k=1}^{M}\theta_{k+1}^{a}\frac{d}{d\theta_{k}^{a}}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
-+\frac{2}{N}\sum_{k=1}^{M}\sum_{l\neq k,k+1}\theta_{l}^{a}\frac{d}{d\theta_{k}^{a}}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0}
++\frac{2}{N}\sum_{k=1}^{M}\sum_{l\neq k,k+1}\theta_{l}^{a}\frac{d}{d\theta_{k}^{a}}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0},
 \end{multline*}
 
 \end_inset
@@ -5227,7 +5254,7 @@ H_{3}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}=2\sum_{k=1}^{M}\theta_{k+
 \begin_inset Formula 
 \begin{multline*}
 H_{4}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}=-2i\sum_{k=1}^{M}\theta_{k}^{a}\theta_{k+1}^{a}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
--\frac{2i}{N}\sum_{k=1}^{M}\sum_{l\neq k,k+1}\theta_{k}^{a}\theta_{l}^{a}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0}
+-\frac{2i}{N}\sum_{k=1}^{M}\sum_{l\neq k,k+1}\theta_{k}^{a}\theta_{l}^{a}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0},
 \end{multline*}
 
 \end_inset
@@ -5236,20 +5263,39 @@ H_{4}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}=-2i\sum_{k=1}^{M}\theta_{
 \begin_inset Formula 
 \begin{multline*}
 H_{5}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}=-2i\sum_{k=1}^{M}\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{k+1}^{a}}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
--\frac{2i}{N}\sum_{k=1}^{M}\sum_{l\neq k,k+1}\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{l}^{a}}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0}
+-\frac{2i}{N}\sum_{k=1}^{M}\sum_{l\neq k,k+1}\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{l}^{a}}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0}.
 \end{multline*}
 
 \end_inset
 
- The action of 
+ Similarly, the action of 
+\begin_inset Formula $\Delta H$
+\end_inset
+
+ on single trace state is
+\begin_inset Formula 
+\[
+\Delta HT\left(\theta_{1},\dots,\theta_{M}\right)\ket{0}=\frac{2}{N}\sum_{i=1}^{M}\sum_{j\neq i+1}^{M}T\left(\theta_{j},\dots\theta_{i}\right)T\left(\theta_{i+1},\dots\theta_{j-1}\right)\ket{0}.
+\]
+
+\end_inset
+
+ The actions of 
 \begin_inset Formula $H_{i}$
 \end_inset
 
- on double traces
+ on double traces are 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
+\end_inset
+
+ 
 \begin_inset Formula 
 \begin{multline*}
 H_{1}T\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right)\ket{0}_{\mathrm{Fussion}}=\frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)T\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\ket{0}\\
-+\frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\left(s-2\eta_{l}^{a}\frac{d}{d\eta_{l}^{a}}\right)T\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\ket{0}
++\frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\left(s-2\eta_{l}^{a}\frac{d}{d\eta_{l}^{a}}\right)T\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\ket{0},
 \end{multline*}
 
 \end_inset
@@ -5263,7 +5309,102 @@ H_{2}T\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right
 
 \end_inset
 
+ Similarly, the action of 
+\begin_inset Formula $\Delta H$
+\end_inset
 
+ on double trace states is
+\begin_inset Formula 
+\begin{multline*}
+\Delta HT\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right)\ket{0}_{\mathrm{Fussion}}=\frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}T\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\ket{0}\\
++\frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}T\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\ket{0}.
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is noteworthy the action of 
+\begin_inset Formula $\Delta H$
+\end_inset
+
+ on color singlet is the same as a term 
+\begin_inset Formula $H^{\prime}$
+\end_inset
+
+, which is defined as
+\begin_inset Formula 
+\[
+H^{\prime}=\frac{1}{N}\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\left(\tr\bar{\phi}_{a_{1}\cdots a_{n}}\normord{\phi_{b_{1}\cdots b_{k}}\bar{\phi}_{b_{1}\cdots b_{k}}}\phi_{a_{1}\cdots a_{n}}+\left(-\right)^{nk}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\normord{\phi_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}}\phi_{b_{1}\cdots b_{k}}\right),
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $\normord{\phi_{b_{1}\cdots b_{k}}\bar{\phi}_{b_{1}\cdots b_{k}}}$
+\end_inset
+
+ indicates normal ordering.
+ Let us sketch the proof here.
+ The similar proof for 
+\begin_inset Formula $s=1$
+\end_inset
+
+ case has been given in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chen:2016hkz"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The color operator is defined as
+\begin_inset Formula 
+\[
+G_{\alpha}^{\beta}=\sum_{n=0}^{s}\frac{1}{n!}\left(\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}-\normord{\phi_{a_{1}\cdots a_{n}}\bar{\phi}_{a_{1}\cdots a_{n}}}\right)_{\alpha}^{\beta}.
+\]
+
+\end_inset
+
+One can verify that the action of 
+\begin_inset Formula $G_{\alpha}^{\beta}$
+\end_inset
+
+ on any color singlet vanishes:
+\begin_inset Formula 
+\[
+G_{\alpha}^{\beta}\ket{\text{any color singlet}}=0.
+\]
+
+\end_inset
+
+ By expanding 
+\begin_inset Formula $G^{2}$
+\end_inset
+
+, one then find that
+\begin_inset Formula 
+\[
+\tr G^{2}=N\left(H^{\prime}-\Delta H\right),
+\]
+
+\end_inset
+
+ from which it follows that 
+\begin_inset Formula $\Delta H$
+\end_inset
+
+ and 
+\begin_inset Formula $H^{\prime}$
+\end_inset
+
+ lead to the same action on any color singlets.
+  
 \end_layout
 
 \begin_layout Section
