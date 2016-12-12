@@ -4302,8 +4302,35 @@ We have derived a formula for the
  As the previous section shows, however, the calculation is tedious even
  for the simpliest case.
  We therefore turn to numerical computation.
- In this section, since we only consider the ground energy, we simply write
- the ground energy 
+ As the complexicity of the calculation grows very fast, we performed the
+ numerical computation up to 
+\begin_inset Formula $M=29$
+\end_inset
+
+ for 
+\begin_inset Formula $s=1$
+\end_inset
+
+ and 
+\begin_inset Formula $M=15$
+\end_inset
+
+ for 
+\begin_inset Formula $s=1$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $3\leq s\leq10$
+\end_inset
+
+, we only computed the cases of 
+\begin_inset Formula $M\leq6$
+\end_inset
+
+.
+ Since only the ground energy is considered, we will simply write the ground
+ energy 
 \begin_inset Formula $E_{G}$
 \end_inset
 
@@ -4319,7 +4346,7 @@ We have derived a formula for the
 \begin_inset Formula $\Delta E$
 \end_inset
 
-, and moreover, omit the 
+, and also, omit the 
 \begin_inset Formula $1/N^{2}$
 \end_inset
 
@@ -4509,23 +4536,16 @@ name "fig:EvS-xi0"
 \begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
 \end_inset
 
- while the dashed lines are exact numerical results from the method of 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Chen:2016hkz"
-
-\end_inset
-
-.
+ while the dashed lines are exact numerical results.
  (b) The 
 \begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
 \end_inset
 
- order correction 
+ ground energy correction 
 \begin_inset Formula $\Delta E$
 \end_inset
 
- as function of 
+ as a function of 
 \begin_inset Formula $M$
 \end_inset
 
@@ -4538,7 +4558,7 @@ key "Chen:2016hkz"
 \begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
 \end_inset
 
- order correction 
+ ground energy correction 
 \begin_inset Formula $\Delta E$
 \end_inset
 
@@ -4555,7 +4575,7 @@ key "Chen:2016hkz"
 \begin_inset Formula $\ln\left|\Delta E\right|$
 \end_inset
 
- as function of 
+ as a function of 
 \begin_inset Formula $s$
 \end_inset
 
@@ -4665,20 +4685,20 @@ reference "fig:EvM-s1-manyxi"
 
 \end_inset
 
- shows how 
+ shows 
 \begin_inset Formula $\Delta E$
 \end_inset
 
- changes as 
+ as a function of 
 \begin_inset Formula $M$
 \end_inset
 
- increases for 
+ for the 
 \begin_inset Formula $s=1$
 \end_inset
 
  case.
- One interesting feature of the plot is that the curves of 
+ It shows that the curves of 
 \begin_inset Formula $\left|\xi\right|$
 \end_inset
 
@@ -4687,7 +4707,7 @@ reference "fig:EvM-s1-manyxi"
 \end_inset
 
  almost coincide with each other.
- It also suggests that the trend of the cureves depends on 
+ It also suggests that the trend of the curves depends on 
 \begin_inset Formula $\left|\xi\right|$
 \end_inset
 
@@ -4695,15 +4715,12 @@ reference "fig:EvM-s1-manyxi"
 \begin_inset Formula $\xi=0$
 \end_inset
 
- the curve goes upward and is steepest; the curve become gradual as 
+ the curve goes up steadily; it then slow down and eventually goes down
+ as 
 \begin_inset Formula $\left|\xi\right|$
 \end_inset
 
- increase; when 
-\begin_inset Formula $\left|\xi\right|$
-\end_inset
-
- greater than certain value, the curve turns downward.
+ increase.
  The 
 \begin_inset Formula $s=2$
 \end_inset
@@ -4721,7 +4738,7 @@ reference "fig:EvM-s2-manyxi"
 \end_inset
 
  case.
- The 
+ 
 \begin_inset Formula $\Delta E$
 \end_inset
 
@@ -4729,7 +4746,7 @@ reference "fig:EvM-s2-manyxi"
 \begin_inset Formula $s=2$
 \end_inset
 
- and all the curves go downward.
+ and all the curves decline.
  
 \begin_inset Formula $\xi=1$
 \end_inset
@@ -4742,11 +4759,24 @@ reference "fig:EvM-s2-manyxi"
 \begin_inset Formula $\xi<1$
 \end_inset
 
- decreases, the curves become steeper and steeper.
+ decreases, the decline becomes more drastic.
+ 
 \end_layout
 
 \begin_layout Standard
-Fig.
+Next we investigate how 
+\begin_inset Formula $\ln\left|\Delta E\right|$
+\end_inset
+
+ changes as a function of 
+\begin_inset Formula $s$
+\end_inset
+
+ for fixed 
+\begin_inset Formula $M$
+\end_inset
+
+ values, as Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -4754,41 +4784,29 @@ reference "fig:EvS-xi0"
 
 \end_inset
 
- plots 
-\begin_inset Formula $\ln\left|\Delta E\right|$
-\end_inset
-
- as function of 
-\begin_inset Formula $s$
-\end_inset
-
- for different 
+ shows.
+ When 
 \begin_inset Formula $M$
 \end_inset
 
-.
- For even 
-\begin_inset Formula $M$
-\end_inset
-
-, the ground energy state exists only when 
+ is even, the ground energy state exists only when 
 \begin_inset Formula $s$
 \end_inset
 
  is even and 
-\begin_inset Formula $\ln\Delta E$
-\end_inset
-
- almost increase linearly.
- For odd 
-\begin_inset Formula $M$
-\end_inset
-
-, 
 \begin_inset Formula $\ln\left|\Delta E\right|$
 \end_inset
 
- has an overall increasing trend but oscillates between even and odd 
+ almost increase linearly.
+ When 
+\begin_inset Formula $M$
+\end_inset
+
+ is odd, 
+\begin_inset Formula $\ln\left|\Delta E\right|$
+\end_inset
+
+ has an overall increasing trend but fluctuates between even and odd 
 \begin_inset Formula $s$
 \end_inset
 
@@ -4805,14 +4823,14 @@ reference "fig:EvS-xi0"
 \begin_inset Formula $\ln\left|\Delta E\right|$
 \end_inset
 
- is simply because that the energy correction 
+ can be seen from the energy correction 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:energy_pert_DeltaE"
 
 \end_inset
 
- is a product of 
+, which is a product of 
 \begin_inset Formula $s$
 \end_inset
 
@@ -4829,11 +4847,15 @@ inner structure
 \begin_inset Quotes erd
 \end_inset
 
- of the ground energy correction, i.e., the contribution from each 
+ of the ground energy correction, i.e., the contribution 
+\begin_inset Formula $\Delta E_{i}$
+\end_inset
+
+ from each 
 \begin_inset Formula $L$
 \end_inset
 
-: 
+ defined as 
 \begin_inset Formula 
 \[
 \Delta E=\sum_{L=1}^{M-1}\Delta E_{i},\quad i=\frac{L}{M}.
@@ -4841,7 +4863,7 @@ inner structure
 
 \end_inset
 
- The plots are shown as Fig.
+The plots are shown as Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -4890,11 +4912,7 @@ reference "fig:SubEvM-s2xi0"
 \end_inset
 
 .
- So for each 
-\begin_inset Formula $M$
-\end_inset
-
-, we connect odd 
+ Therefore the odd 
 \begin_inset Formula $L$
 \end_inset
 
@@ -4902,17 +4920,38 @@ reference "fig:SubEvM-s2xi0"
 \begin_inset Formula $L$
 \end_inset
 
- points separately.
- Both odd and even curves go upward and have asymptotic curves.
- Since the vertical axis is normalized by 
+ points are connected separately for each 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Both odd and even curves rise as 
+\begin_inset Formula $L$
+\end_inset
+
+ increase.
+ It also suggests that both curves have asymptotic behavor when 
+\begin_inset Formula $M$
+\end_inset
+
+ is large.
+ If this is true, as the 
+\begin_inset Formula $\Delta E_{i}$
+\end_inset
+
+ is normalized by 
 \begin_inset Formula $1/M^{2}$
 \end_inset
 
 , it implies that the 
-\begin_inset Formula $\Delta E\sim\mathcal{O}\left(M^{3}\right)$
+\begin_inset Formula $\Delta E$
 \end_inset
 
- for large 
+ diverges as 
+\begin_inset Formula $\mathcal{O}\left(M^{3}\right)$
+\end_inset
+
+ at large 
 \begin_inset Formula $M$
 \end_inset
 
@@ -4925,16 +4964,16 @@ reference "fig:SubEvM-s2xi0"
 \begin_inset Formula $\Delta E_{i}$
 \end_inset
 
- points are negative.
- The lowest value of 
+ are negative and the curves have a V-like shape.
+ The lowest values of 
 \begin_inset Formula $\Delta E_{i}$
 \end_inset
 
- occurs around the midpoint, i.e., 
+ occur around the midpoint 
 \begin_inset Formula $L=M/2$
 \end_inset
 
-, while the highest values occur at two endpoints, 
+, while the highest values occur at the endpoints, 
 \begin_inset Formula $L=1$
 \end_inset
 
@@ -4943,6 +4982,43 @@ reference "fig:SubEvM-s2xi0"
 \end_inset
 
 .
+ Clearly 
+\begin_inset Formula $\Delta E$
+\end_inset
+
+ diverges more severely than 
+\begin_inset Formula $M^{3}$
+\end_inset
+
+ at large 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Finally, we note that, while we do not present plot for higher 
+\begin_inset Formula $s$
+\end_inset
+
+ case, we can infer that the odd 
+\begin_inset Formula $s$
+\end_inset
+
+ plots are similar to the 
+\begin_inset Formula $s=1$
+\end_inset
+
+ case and the even 
+\begin_inset Formula $s$
+\end_inset
+
+ plots are similar to the 
+\begin_inset Formula $s=2$
+\end_inset
+
+ case.
  
 \end_layout
 
@@ -5039,12 +5115,12 @@ name "fig:SubEvM-s2xi0"
 \begin_inset Formula $\Delta E_{i}$
 \end_inset
 
- as function of 
+ as a function of 
 \begin_inset Formula $i=L/M$
 \end_inset
 
 .
- In the plots, 
+ In both plots, 
 \begin_inset Formula $\Delta E_{i}$
 \end_inset
 
@@ -5053,7 +5129,7 @@ name "fig:SubEvM-s2xi0"
 \end_inset
 
 .
- (a) 
+ Plot (a) is for 
 \begin_inset Formula $s=1$
 \end_inset
 
@@ -5062,7 +5138,7 @@ name "fig:SubEvM-s2xi0"
 \end_inset
 
 .
- (2) 
+ Plot (b) is for 
 \begin_inset Formula $s=2$
 \end_inset
 
