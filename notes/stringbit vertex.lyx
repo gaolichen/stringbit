@@ -122,14 +122,14 @@ We provide a formalism to calculate the three string interaction vertices
 \end_inset
 
  spin degree of freedom but no space to move.
- The calculation of interaction vertices is done by finding the vacuum expactati
-on values of eigenoperators.
+ The calculation is done by finding the vacuum expactation values of eigenoperat
+ors.
  With the vertices, we obtain a formula for 
 \begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
 \end_inset
 
  correction to the energy specturm.
- We calculated analytically the 
+ We calculate analytically the 
 \begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
 \end_inset
 
@@ -143,7 +143,7 @@ on values of eigenoperators.
 
 .
  By numerical computation of ground energy correction for higher bit number,
- we find the correction diverges as high order polynomial of 
+ we find that the correction diverges as high degree polynomial of 
 \begin_inset Formula $M$
 \end_inset
 
@@ -158,7 +158,7 @@ on values of eigenoperators.
 \begin_inset Formula $\mathcal{O}\left(1/N\right)$
 \end_inset
 
- or higher order terms, the expected stringy behavior, 
+ or higher order such terms, the expected stringy behavior, 
 \begin_inset Formula $E\sim M^{-1}$
 \end_inset
 
@@ -4314,7 +4314,30 @@ reference "eq:energy_pert_DeltaE"
 
 \end_inset
 
+ 
+\end_layout
 
+\begin_layout Standard
+From the results and the formula 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:energy_pert_DeltaE"
+
+\end_inset
+
+, we see that 
+\begin_inset Formula $\Delta E_{G}$
+\end_inset
+
+ is a polynomial of 
+\begin_inset Formula $\xi$
+\end_inset
+
+ of degree 
+\begin_inset Formula $2s$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -5229,11 +5252,11 @@ Conclusion
 
 \begin_layout Standard
 We have presented a formalism to calculation three string interaction vertex
- for superstring bit model and its application to the 
+ for stable string bit model and its application in 
 \begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
 \end_inset
 
- correction to energy spectrum of the model.
+ correction to the energy spectrum of the model.
  The calculation of both are transferred to the calculation of vacuum expectatio
 n value of eigenoperators.
  As we see, however, the formulas are very complicated and the complexicity
@@ -5296,7 +5319,7 @@ The numerical computation of ground energy correction shows that the
 \end_inset
 
  or higher order terms to regulate the divergence.
- If the energy correction before regulation diverges as 
+ If the energy correction diverges as 
 \begin_inset Formula $M^{n}$
 \end_inset
 
