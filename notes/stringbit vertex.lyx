@@ -5185,7 +5185,7 @@ We have presented a formalism to calculation three string interaction vertex
 
  correction to energy spectrum of the model.
  The calculation of both are transferred to the calculation of vacuum expectatio
-n values of eigenoperators.
+n value of eigenoperators.
  As we see, however, the formulas are very complicated and the complexicity
  of the calculation increase dramastically as the bit number 
 \begin_inset Formula $M$
@@ -5200,7 +5200,7 @@ The numerical computation of ground energy correction shows that the
 \begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
 \end_inset
 
- correction diverges as 
+ ground energy correction diverges as 
 \begin_inset Formula $M^{3}$
 \end_inset
 
@@ -5222,6 +5222,7 @@ The numerical computation of ground energy correction shows that the
 \end_inset
 
  term.
+ This has an interesting consequence.
  In general, the divergence is more severe for larger 
 \begin_inset Formula $s$
 \end_inset
