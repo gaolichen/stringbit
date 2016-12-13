@@ -116,7 +116,57 @@ Department of Physics, University of Florida, Gainesville, Florida 32611,
 \end_layout
 
 \begin_layout Abstract
-This is an abstract.
+We provide a formalism to calculate the three string interaction vertices
+ of the stable string bit model, in which string bits have 
+\begin_inset Formula $s$
+\end_inset
+
+ spin degree of freedom but no space to move.
+ The calculation of interaction vertices is done by finding the vacuum expactati
+on values of eigenoperators.
+ With the vertices, we obtain a formula for 
+\begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
+\end_inset
+
+ correction to the energy specturm.
+ We calculated analytically the 
+\begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
+\end_inset
+
+ ground energy correction of the system with bit number 
+\begin_inset Formula $M=3$
+\end_inset
+
+ and 
+\begin_inset Formula $s=1,\,2$
+\end_inset
+
+.
+ By numerical computation of ground energy correction for higher bit number,
+ we find the correction diverges as high order polynomial of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ The results also suggest that such divergence can be cancelled by adding
+ 
+\begin_inset Formula $\mathcal{O}\left(1/N\right)$
+\end_inset
+
+ terms to the Hamiltonian.
+ If this is true, by adding suitable 
+\begin_inset Formula $\mathcal{O}\left(1/N\right)$
+\end_inset
+
+ or higher order terms, the expected stringy behavior, 
+\begin_inset Formula $E\sim M^{-1}$
+\end_inset
+
+, can be produced at least up to 
+\begin_inset Formula $1/N^{2}$
+\end_inset
+
+ order.
 \end_layout
 
 \begin_layout Standard
@@ -5231,7 +5281,7 @@ The numerical computation of ground energy correction shows that the
 \end_inset
 
 .
- Therefore, we need a way to cancel the unexpected divergence.
+ Therefore, we need to cancel the unexpected divergence.
  As we see from the numerical results, by choosing suitable 
 \begin_inset Formula $\xi\Delta H$
 \end_inset
@@ -5242,11 +5292,11 @@ The numerical computation of ground energy correction shows that the
 
  limit, one can make the divergence less severe.
  It suggests that we can use 
-\begin_inset Formula $\xi$
+\begin_inset Formula $\mathcal{O}\left(1/N\right)$
 \end_inset
 
- like terms to regulate the divergence.
- If the energy correction before regulation diverge as 
+ or higher order terms to regulate the divergence.
+ If the energy correction before regulation diverges as 
 \begin_inset Formula $M^{n}$
 \end_inset
 
@@ -5254,13 +5304,18 @@ The numerical computation of ground energy correction shows that the
 \begin_inset Formula $n$
 \end_inset
 
-, or fewer if accidental cancellation occurs, 
-\begin_inset Formula $\xi$
+, or fewer if accidental cancellation occurs, such terms to cancel the divergenc
+e.
+ Also, such terms are also demanded for generating operator insertion at
+ the break/join points of the overlap among one single closed string with
+ two smaller closed strings
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2014hia"
+
 \end_inset
 
- like terms to cancel the divergence.
- Also, such terms are also demand for producing the three string overlap
- that has the same structure as superstring.
+.
  This can be a direction for our future work.
 \end_layout
 
