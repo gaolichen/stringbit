@@ -5213,22 +5213,55 @@ The numerical computation of ground energy correction shows that the
 \end_inset
 
 .
- This behavior can be changed by a 
-\begin_inset Formula $\mathcal{O}\left(1/N\right)$
-\end_inset
-
- term in the Hamiltonian, i.e., the 
-\begin_inset Formula $\xi$
-\end_inset
-
- term.
- This has an interesting consequence.
- In general, the divergence is more severe for larger 
+ In general, the divergence become more severe for large 
 \begin_inset Formula $s$
 \end_inset
 
 .
- 
+ However, to produce the stringy behavior, we expect 
+\begin_inset Formula $E\sim M^{-1}$
+\end_inset
+
+ at large 
+\begin_inset Formula $M$
+\end_inset
+
+ at every order of 
+\begin_inset Formula $1/N$
+\end_inset
+
+.
+ Therefore, we need a way to cancel the unexpected divergence.
+ As we see from the numerical results, by choosing suitable 
+\begin_inset Formula $\xi\Delta H$
+\end_inset
+
+, which does not affect large 
+\begin_inset Formula $N$
+\end_inset
+
+ limit, one can make the divergence less severe.
+ It suggests that we can use 
+\begin_inset Formula $\xi$
+\end_inset
+
+ like terms to regulate the divergence.
+ If the energy correction before regulation diverge as 
+\begin_inset Formula $M^{n}$
+\end_inset
+
+, in general one need to find 
+\begin_inset Formula $n$
+\end_inset
+
+, or fewer if accidental cancellation occurs, 
+\begin_inset Formula $\xi$
+\end_inset
+
+ like terms to cancel the divergence.
+ Also, such terms are also demand for producing the three string overlap
+ that has the same structure as superstring.
+ This can be a direction for our future work.
 \end_layout
 
 \begin_layout Section
