@@ -189,8 +189,8 @@ key "Thorn:1991fv"
 \end_inset
 
 , a string is a chain comprised of pointlike entities called string bits.
- While a string is discretized as a string bit chain, it behaves like a
- continuous string when the bit number 
+ While the chain is discretized, it behaves like a continuous string when
+ the bit number 
 \begin_inset Formula $M$
 \end_inset
 
@@ -199,13 +199,20 @@ key "Thorn:1991fv"
 \end_layout
 
 \begin_layout Standard
-The string bit models provide implementations of 't Hooft's idea of holography.
- In usual Lorentz invariant theory, spacetime can be described by lightcone
+The string bit models provide implementations of 't Hooft's idea of holography
+\begin_inset CommandInset citation
+LatexCommand cite
+key "'tHooft:1987,'tHooft:1990eb,'tHooft:1993gx"
+
+\end_inset
+
+.
+ In regular Lorentz invariant theory, spacetime can be described by lightcone
  coordinates with transverse dimensions 
 \begin_inset Formula $\mathbf{x}=\left(x^{2},\cdots,x^{D-1}\right)$
 \end_inset
 
- and '
+ and the '
 \begin_inset Formula $\pm$
 \end_inset
 
@@ -262,7 +269,7 @@ a priori
 \end_layout
 
 \begin_layout Standard
-In the formulation of type II-B superstring as a string bit mode
+In the formulation of type II-B superstring as a string bit model
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Bergman:1995wh"
@@ -311,8 +318,25 @@ key "Bergman:1995wh"
 \end_inset
 
  is odd.
- In Fock space, a closed string is represented by a color singlet trace
- operator acting on vacuum state, that is of the form 
+ The annihilation operator 
+\begin_inset Formula $\phi$
+\end_inset
+
+ is the hermition conjugate of 
+\begin_inset Formula $\bar{\phi}$
+\end_inset
+
+, and they satisfy the graded bracket relations 
+\begin_inset Formula 
+\begin{multline}
+\left[\phi_{a_{1}\cdots a_{n}}\left(\mathbf{x}\right)_{\alpha}^{\beta},\bar{\phi}_{b_{1}\cdots b_{m}}\left(\mathbf{y}\right)_{\gamma}^{\delta}\right]_{\pm}\equiv\phi_{a_{1}\cdots a_{n}}\left(\mathbf{x}\right)_{\alpha}^{\beta}\bar{\phi}_{b_{1}\cdots b_{m}}\left(\mathbf{y}\right)_{\gamma}^{\delta}-\left(-1\right)^{mn}\bar{\phi}_{b_{1}\cdots b_{m}}\left(\mathbf{y}\right)_{\gamma}^{\delta}\phi_{a_{1}\cdots a_{n}}\left(\mathbf{x}\right)_{\alpha}^{\beta}\\
+=\delta_{mn}\delta_{\alpha}^{\delta}\delta_{\gamma}^{\beta}\delta\left(\mathbf{x}-\mathbf{y}\right)\sum_{P}\left(-1\right)^{P}\delta_{a_{1}b_{P_{1}}}\cdots\delta_{a_{n}b_{P_{n}}}.\label{eq:intro-phi-phib-relation}
+\end{multline}
+
+\end_inset
+
+In Fock space, a closed string is represented by a color singlet trace operator
+ acting on vacuum state, that is of the form 
 \begin_inset Formula $\tr\bar{\phi}\cdots\bar{\phi}\ket{0}$
 \end_inset
 
@@ -360,7 +384,26 @@ es.
 
 \end_inset
 
+The annihilation and creation operators satisfy the same relation as 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:intro-phi-phib-relation"
 
+\end_inset
+
+ without 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{y}$
+\end_inset
+
+, and 
+\begin_inset Formula $\delta\left(\mathbf{x}-\mathbf{y}\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
