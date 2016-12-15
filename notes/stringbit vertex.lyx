@@ -122,13 +122,13 @@ We provide a formalism to calculate the three string interaction vertices
 \end_inset
 
  spin degree of freedom but no space to move.
- The calculation is done by finding the vacuum expactation values of eigenoperat
+ The calculation is done by finding the vacuum expectation values of eigenoperat
 ors.
  With the vertices, we obtain a formula for 
 \begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
 \end_inset
 
- correction to the energy specturm.
+ correction to the energy spectrum.
  We calculate analytically the 
 \begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
 \end_inset
@@ -148,7 +148,7 @@ ors.
 \end_inset
 
 .
- The results also suggest that such divergence can be cancelled by adding
+ The results also suggest that such divergence can be canceled by adding
  
 \begin_inset Formula $\mathcal{O}\left(1/N\right)$
 \end_inset
@@ -189,7 +189,7 @@ key "Thorn:1991fv"
 \end_inset
 
 , a string is a chain comprised of pointlike entities called string bits.
- While a string is discritized as a string bit chain, it behaves like a
+ While a string is discretized as a string bit chain, it behaves like a
  continuous string when the bit number 
 \begin_inset Formula $M$
 \end_inset
@@ -200,7 +200,7 @@ key "Thorn:1991fv"
 
 \begin_layout Standard
 The string bit models provide implementations of 't Hooft's idea of holography.
- In usual Lorentz invariant theory, spacetime can be describled by lightcone
+ In usual Lorentz invariant theory, spacetime can be described by lightcone
  coordinates with transverse dimensions 
 \begin_inset Formula $\mathbf{x}=\left(x^{2},\cdots,x^{D-1}\right)$
 \end_inset
@@ -224,7 +224,7 @@ The string bit models provide implementations of 't Hooft's idea of holography.
 a priori
 \shape default
 .
- String bits enjoy the dynamic of Galilei symmetry, under which the '
+ String bits enjoy the dynamic of Galilean symmetry, under which the '
 \begin_inset Formula $+$
 \end_inset
 
@@ -302,7 +302,7 @@ key "Bergman:1995wh"
 \begin_inset Formula $\bar{\phi}$
 \end_inset
 
- is bosoinic when 
+ is bosonic when 
 \begin_inset Formula $s$
 \end_inset
 
@@ -428,7 +428,7 @@ reference "sec:interaction-vertex"
 \begin_inset Formula $1/N$
 \end_inset
 
- purturbation of the model.
+ perturbation of the model.
  We then derive a formula to calculate the vertices.
  In Sec.
  
@@ -766,7 +766,7 @@ T\left(\theta_{1},\cdots,\theta_{k}\right)=\tr\psi\left(\theta_{1}\right)\psi\le
 
 -component Grassmann variables.
  The trace states space, i.e., color singlet subspace of Fock space, is then
- spaned by states like 
+ spanned by states like 
 \begin_inset Formula 
 \[
 T\left(\theta_{1},\cdots,\theta_{K}\right)T\left(\eta_{1},\cdots,\eta_{L}\right)\cdots\ket{0},
@@ -1063,7 +1063,7 @@ reference "eq:ham_h_kl"
 .
  It implies the variables can be separated and we only need to solve the
  equation of one variable.
- We therefore drop the spinor index 
+ We therefore drop the spin index 
 \begin_inset Formula $a$
 \end_inset
 
@@ -1092,7 +1092,7 @@ which satisfy
 
 \end_inset
 
- The Hermitianlity of Hamiltonian implies that 
+ The Hermiticity of Hamiltonian implies that 
 \begin_inset Formula $\theta_{k}^{\dagger}=\frac{d}{d\theta_{k}},\,\frac{d}{d\theta_{k}}^{\dagger}=\theta_{k},$
 \end_inset
 
@@ -1494,7 +1494,7 @@ reference "eq:ham_cyclicconstrtaint"
 
 \end_inset
 
- where the sign factor comes from the exchange of the meansure and 
+ where the sign factor comes from the exchange of the measure and 
 \begin_inset Formula $\lambda$
 \end_inset
 
@@ -1573,7 +1573,7 @@ To construct
 \end_inset
 
  under integration by parts.
- For Grassmanian even function 
+ For Grassmann even function 
 \begin_inset Formula $\psi\left(\theta\right)$
 \end_inset
 
@@ -1589,7 +1589,7 @@ To construct
 
 \end_inset
 
-and for Grassmanian odd function 
+and for Grassmann odd function 
 \begin_inset Formula $\psi\left(\theta\right)$
 \end_inset
 
@@ -1769,7 +1769,7 @@ Similarly, we can show that
 \end_inset
 
 .
- Therefore, the normalization codition 
+ Therefore, the normalization condition 
 \begin_inset Formula $\int d^{M}\theta\,\bar{\psi}_{G}\psi_{r}=\delta_{Gr}$
 \end_inset
 
@@ -1877,7 +1877,7 @@ reference "eq:ham_completeness"
 
 \end_inset
 
- is satisifed automatically if all the eigenfunction and their conjugates
+ is satisfied automatically if all the eigenfunction and their conjugates
  satisfied the normalization condition.
 \end_layout
 
@@ -1901,7 +1901,7 @@ reference "eq:ham_ground_state_s"
 
 \end_inset
 
- where the sign factor comes from the rearrangment of the measure 
+ where the sign factor comes from the rearrangement of the measure 
 \begin_inset Formula $d^{s}\theta_{1}\cdots d^{s}\theta_{M}$
 \end_inset
 
@@ -2264,7 +2264,7 @@ key "Thorn:2015wli"
 \end_layout
 
 \begin_layout Standard
-Let us now consider the action of the Hamiltonin on the zeroth order energy
+Let us now consider the action of the Hamiltonian on the zeroth order energy
  eigenstate 
 \begin_inset Formula $T_{r}\ket{0}$
 \end_inset
@@ -2293,7 +2293,7 @@ HT_{r}\ket{0}=E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{l=k
 
 \end_inset
 
- where in the last step we shiftted the summation indices as 
+ where in the last step we shifted the summation indices as 
 \begin_inset Formula $l\to L+k+1$
 \end_inset
 
@@ -2429,7 +2429,7 @@ The action of
 \begin_inset Formula $H$
 \end_inset
 
- on double trace produces both fussion and fission terms: 
+ on double trace produces both fusion and fission terms: 
 \begin_inset Formula 
 \begin{multline*}
 HT_{s}T_{t}\ket{0}=\left(E_{s}+E_{t}\right)T_{s}T_{k}\ket{0}\\
@@ -2492,7 +2492,7 @@ Likewise,
 \begin_inset Formula $\theta_{L+1},\dots,\eta_{M}$
 \end_inset
 
- and fix the indecies 
+ and fix the indices 
 \begin_inset Formula $\left(l,k\right)$
 \end_inset
 
@@ -2642,7 +2642,7 @@ V_{tsr}^{\left(K,L\right)} & =\left(-\right)^{Kg_{s}+Lg_{t}}M\int d\theta\,\tild
 \end_inset
 
  can be removed.
- So the sign factor can be simplifed to be 
+ So the sign factor can be simplified to be 
 \begin_inset Formula $\left(-\right)^{K\left(g_{s}-L\right)}$
 \end_inset
 
@@ -2738,7 +2738,7 @@ Note that
 \end_inset
 
 .
- It implies that the sign factors are unphysical and will be cancelled out
+ It implies that the sign factors are unphysical and will be canceled out
  in the calculation of physical observables.
  So we can simply drop out the sign factor.
  For arbitrary 
@@ -3075,7 +3075,7 @@ reference "eq:eec_deltaE0"
 
 \end_inset
 
- and write the smmation over zero modes explicitly: 
+ and write the sum over zero modes explicitly: 
 \begin_inset Formula 
 \[
 \Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{s,t}}^{\prime}\frac{KLM\left|\det C\right|}{E_{r}-E_{s}-E_{t}}\sum_{\lambda,\xi=0,1}\left\langle \mathbb{F}_{ts}F_{0,L}^{\lambda}F_{0,K}^{\xi},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{ts}F_{0,L}^{\lambda}F_{0,K}^{\xi},\mathbb{F}_{r}\right\rangle _{V},
@@ -3156,7 +3156,7 @@ F_{0}^{\left(L\right)}=f_{0}\sqrt{\frac{L}{M}}+f_{M-1}\sqrt{\frac{K}{M}},\quad F
 
 \end_inset
 
-For arbitary 
+For arbitrary 
 \begin_inset Formula $s$
 \end_inset
 
@@ -3395,7 +3395,7 @@ Combine above together, we can calculate the
  correction to the ground energy.
  As the complete formula is very complicated, we do not bother writing it
  here.
- In the following subsection, let us give an exmaple of the calculation
+ In the following subsection, let us give an example of the calculation
  for the 
 \begin_inset Formula $M=3$
 \end_inset
@@ -3514,7 +3514,7 @@ f_{0}=F_{0},\quad f_{1}=F_{1}^{\left(2\right)},\quad f_{2}=\sqrt{\frac{2}{3}}F_{
 
 \end_inset
 
- The eifenfunctions and their conjugates of 
+ The eigenfunctions and their conjugates of 
 \begin_inset Formula $1$
 \end_inset
 
@@ -3944,7 +3944,7 @@ reference "tab:Energy-eigenstates-2"
 
 \end_inset
 
- We have calcualted the 
+ We have calculated the 
 \begin_inset Formula $\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V,W}$
 \end_inset
 
@@ -4299,7 +4299,7 @@ For
 
 \end_inset
 
-Applying formular 
+Applying formula 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:energy_pert_DeltaE"
@@ -4374,9 +4374,9 @@ We have derived a formula for the
 
  correction to the ground energy.
  As the previous section shows, however, the calculation is tedious even
- for the simpliest case.
+ for the simplest case.
  We therefore turn to numerical computation.
- As the complexicity of the calculation grows very fast, we performed the
+ As the complexity of the calculation grows very fast, we performed the
  numerical computation up to 
 \begin_inset Formula $M=29$
 \end_inset
@@ -5011,7 +5011,7 @@ reference "fig:SubEvM-s2xi0"
 \end_inset
 
  increase.
- It also suggests that both curves have asymptotic behavor when 
+ It also suggests that both curves have asymptotic behavior when 
 \begin_inset Formula $M$
 \end_inset
 
@@ -5259,8 +5259,8 @@ We have presented a formalism to calculation three string interaction vertex
  correction to the energy spectrum of the model.
  The calculation of both are transferred to the calculation of vacuum expectatio
 n value of eigenoperators.
- As we see, however, the formulas are very complicated and the complexicity
- of the calculation increase dramastically as the bit number 
+ As we see, however, the formulas are very complicated and the complexity
+ of the calculation increase dramatically as the bit number 
 \begin_inset Formula $M$
 \end_inset
 
@@ -5343,11 +5343,11 @@ key "Thorn:2014hia"
 \end_layout
 
 \begin_layout Section
-Acknoledgements
+Acknowledgments
 \end_layout
 
 \begin_layout Standard
-Acknoledgements
+Acknowledgments
 \end_layout
 
 \begin_layout Standard
@@ -5509,7 +5509,7 @@ Q^{a}=\sum_{n=0}^{s-1}\frac{\left(-1\right)^{n}}{n!}\tr\left[e^{i\pi/4}\bar{\phi
 
 \end_inset
 
- which will guarantee equal numbers of bosonic and fermionic eigensates
+ which will guarantee equal numbers of bosonic and fermionic eigenstates
  at each energy level.
  
 \end_layout
@@ -5522,7 +5522,7 @@ reference "eq:App-H-commutation"
 
 \end_inset
 
-, we otain the action of 
+, we obtain the action of 
 \begin_inset Formula $H_{i}$
 \end_inset
 
@@ -5796,7 +5796,7 @@ First, we express
 
 \end_inset
 
- Substuting above into 
+ Substituting above into 
 \begin_inset Formula $h_{kl}$
 \end_inset
 
