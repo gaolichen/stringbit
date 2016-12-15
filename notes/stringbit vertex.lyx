@@ -3431,7 +3431,7 @@ reference "eq:pert_vev_v"
 \end_layout
 
 \begin_layout Standard
-Combine above together, we can calculate the 
+Combining above together, we can calculate the 
 \begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
 \end_inset
 
