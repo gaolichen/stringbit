@@ -1489,7 +1489,7 @@ reference "eq:ham_cyclicconstrtaint"
 \begin_inset Formula 
 \begin{multline}
 \int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\,\lambda f\left(\theta\right)\tilde{\delta}\left(\theta-\eta\right)=\\
-\left(-\right)^{sMG\left(\lambda\right)}\lambda\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, f\left(\theta\right)\tilde{\delta}\left(\theta-\eta\right)=\left(-\right)^{sM\g\left(\lambda\right)}\lambda f\left(\eta\right),\label{eq:ham_delta_sign_fatctor}
+\left(-\right)^{sM\g\left(\lambda\right)}\lambda\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, f\left(\theta\right)\tilde{\delta}\left(\theta-\eta\right)=\left(-\right)^{sM\g\left(\lambda\right)}\lambda f\left(\eta\right),\label{eq:ham_delta_sign_fatctor}
 \end{multline}
 
 \end_inset
@@ -2320,17 +2320,17 @@ reference "eq:harm_completeness_1"
 , we arrive at 
 \begin_inset Formula 
 \[
-HT_{r}\ket{0}=E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{L=1}^{M-1}\sum_{s,t}T_{s}T_{t}\ket{0}V_{tsr}^{\left(K,L\right)}.
+HT_{r}\ket{0}=E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{L=1}^{M-1}\sum_{p,q}T_{p}T_{q}\ket{0}V_{qpr}^{\left(K,L\right)}.
 \]
 
 \end_inset
 
 where 
-\begin_inset Formula $T_{t}$
+\begin_inset Formula $T_{p}$
 \end_inset
 
  and 
-\begin_inset Formula $T_{s}$
+\begin_inset Formula $T_{q}$
 \end_inset
 
  are single trace energy state of smaller chains of 
@@ -2347,13 +2347,13 @@ where
 
 .
  The vertex 
-\begin_inset Formula $V_{tsr}^{\left(K,L\right)}$
+\begin_inset Formula $V_{qpr}^{\left(K,L\right)}$
 \end_inset
 
  is defined as 
 \begin_inset Formula 
 \begin{equation}
-V_{tsr}^{\left(K,L\right)}=\left(-\right)^{s\left(Kg_{s}+Lg_{t}\right)}\sum_{k=1}^{M}\int d\theta\,\bar{h}_{k,k+L+1}\bar{\psi}_{t}\left(\theta_{k+L+1}\cdots\theta_{k}\right)\bar{\psi}_{s}\left(\theta_{k+1}\cdots\theta_{k+L}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\label{eq:pert_Vstr}
+V_{qpr}^{\left(K,L\right)}=\left(-\right)^{s\left(Kg_{p}+Lg_{q}\right)}\sum_{k=1}^{M}\int d\theta\,\bar{h}_{k,k+L+1}\bar{\psi}_{q}\left(\theta_{k+L+1}\cdots\theta_{k}\right)\bar{\psi}_{p}\left(\theta_{k+1}\cdots\theta_{k+L}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\label{eq:pert_Vstr}
 \end{equation}
 
 \end_inset
@@ -2416,7 +2416,7 @@ reference "eq:ham_cyclicconstrtaint"
  for each integral to give 
 \begin_inset Formula 
 \begin{equation}
-V_{tsr}^{\left(K,L\right)}=\left(-\right)^{s\left(Kg_{s}+Lg_{t}\right)}M\int d\theta\,\bar{\psi}_{t}\left(\theta_{L+1}\cdots\theta_{M}\right)\bar{\psi}_{s}\left(\theta_{1}\cdots\theta_{L}\right)h_{M,L+1}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right).\label{eq:pert_Vstr_2}
+V_{qpr}^{\left(K,L\right)}=\left(-\right)^{s\left(Kg_{p}+Lg_{q}\right)}M\int d\theta\,\bar{\psi}_{q}\left(\theta_{L+1}\cdots\theta_{M}\right)\bar{\psi}_{p}\left(\theta_{1}\cdots\theta_{L}\right)h_{M,L+1}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right).\label{eq:pert_Vstr_2}
 \end{equation}
 
 \end_inset
@@ -2432,9 +2432,9 @@ The action of
  on double trace produces both fusion and fission terms: 
 \begin_inset Formula 
 \begin{multline*}
-HT_{s}T_{t}\ket{0}=\left(E_{s}+E_{t}\right)T_{s}T_{k}\ket{0}\\
-+\frac{1}{N}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\left(-\right)^{sK\left(g_{s}-sL\right)}\bar{h}_{lk}T\left(\theta_{l+1}\cdots\theta_{l}\eta_{k}\cdots\eta_{k-1}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{t}\left(\eta_{1}\cdots\eta_{K}\right)\ket{0}\\
-+\frac{1}{N}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\left(-\right)^{sK\left(g_{s}-sL\right)}\bar{h}_{kl}T\left(\theta_{l}\cdots\theta_{l-1}\eta_{k+1}\cdots\eta_{k}\right)\psi_{s}\left(\theta\right)\psi_{t}\left(\eta\right)\ket{0}+\frac{1}{N}\text{Fission Terms}.
+HT_{p}T_{q}\ket{0}=\left(E_{p}+E_{q}\right)T_{p}T_{q}\ket{0}\\
++\frac{1}{N}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\left(-\right)^{sK\left(g_{p}-sL\right)}\bar{h}_{lk}T\left(\theta_{l+1}\cdots\theta_{l}\eta_{k}\cdots\eta_{k-1}\right)\psi_{p}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{q}\left(\eta_{1}\cdots\eta_{K}\right)\ket{0}\\
++\frac{1}{N}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\left(-\right)^{sK\left(g_{p}-sL\right)}\bar{h}_{kl}T\left(\theta_{l}\cdots\theta_{l-1}\eta_{k+1}\cdots\eta_{k}\right)\psi_{p}\left(\theta\right)\psi_{q}\left(\eta\right)\ket{0}+\frac{1}{N}\text{Fission Terms}.
 \end{multline*}
 
 \end_inset
@@ -2442,7 +2442,7 @@ HT_{s}T_{t}\ket{0}=\left(E_{s}+E_{t}\right)T_{s}T_{k}\ket{0}\\
  Similarly, we can express the results as
 \begin_inset Formula 
 \[
-HT_{s}T_{t}\ket{0}=\left(E_{s}+E_{t}\right)T_{s}T_{k}\ket{0}+\frac{1}{N}\sum_{r}T_{r}\ket{0}\left(W_{rst}^{\left(1\right)}+W_{rst}^{\left(2\right)}\right)+\cdots
+HT_{p}T_{q}\ket{0}=\left(E_{p}+E_{q}\right)T_{p}T_{q}\ket{0}+\frac{1}{N}\sum_{r}T_{r}\ket{0}\left(W_{rpq}^{\left(1\right)}+W_{rpq}^{\left(2\right)}\right)+\cdots
 \]
 
 \end_inset
@@ -2450,7 +2450,7 @@ HT_{s}T_{t}\ket{0}=\left(E_{s}+E_{t}\right)T_{s}T_{k}\ket{0}+\frac{1}{N}\sum_{r}
  where 
 \begin_inset Formula 
 \[
-W_{rst}^{\left(1\right)}=\left(-\right)^{sK\left(g_{s}-L\right)}\sum_{k=1}^{K}\sum_{l=1}^{L}\int d\theta d\eta\,\bar{h}_{lk}\bar{\psi}_{r}\left(\theta_{l+1}\cdots\theta_{l}\eta_{k}\cdots\eta_{k-1}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{t}\left(\eta_{1}\cdots\eta_{K}\right),
+W_{rpq}^{\left(1\right)}=\left(-\right)^{sK\left(g_{p}-L\right)}\sum_{k=1}^{K}\sum_{l=1}^{L}\int d\theta d\eta\,\bar{h}_{lk}\bar{\psi}_{r}\left(\theta_{l+1}\cdots\theta_{l}\eta_{k}\cdots\eta_{k-1}\right)\psi_{p}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{q}\left(\eta_{1}\cdots\eta_{K}\right),
 \]
 
 \end_inset
@@ -2458,7 +2458,7 @@ W_{rst}^{\left(1\right)}=\left(-\right)^{sK\left(g_{s}-L\right)}\sum_{k=1}^{K}\s
 
 \begin_inset Formula 
 \[
-W_{rst}^{\left(2\right)}=\left(-\right)^{sK\left(g_{s}-L\right)}\sum_{k=1}^{K}\sum_{l=1}^{L}\int d\theta d\eta\,\bar{h}_{kl}\bar{\psi}_{r}\left(\theta_{l}\cdots\theta_{l-1}\eta_{k+1}\cdots\eta_{k}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{t}\left(\eta_{1}\cdots\eta_{K}\right).
+W_{rpq}^{\left(2\right)}=\left(-\right)^{sK\left(g_{p}-L\right)}\sum_{k=1}^{K}\sum_{l=1}^{L}\int d\theta d\eta\,\bar{h}_{kl}\bar{\psi}_{r}\left(\theta_{l}\cdots\theta_{l-1}\eta_{k+1}\cdots\eta_{k}\right)\psi_{p}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{q}\left(\eta_{1}\cdots\eta_{K}\right).
 \]
 
 \end_inset
@@ -2515,8 +2515,8 @@ Likewise,
  to give 
 \begin_inset Formula 
 \begin{multline}
-W_{rst}^{\left(L,K\right)}=W_{rst}^{\left(1\right)}+W_{rst}^{\left(2\right)}\\
-=\left(-\right)^{sK\left(g_{s}-L\right)}KL\int d\theta\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)\left(h_{L,L+1}+h_{M,1}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{t}\left(\theta_{L+1}\cdots\theta_{M}\right).\label{eq:pert_Wrst}
+W_{rpq}^{\left(L,K\right)}=W_{rpq}^{\left(1\right)}+W_{rpq}^{\left(2\right)}\\
+=\left(-\right)^{sK\left(g_{p}-L\right)}KL\int d\theta\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)\left(h_{L,L+1}+h_{M,1}\right)\psi_{p}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{q}\left(\theta_{L+1}\cdots\theta_{M}\right).\label{eq:pert_Wrst}
 \end{multline}
 
 \end_inset
@@ -2526,7 +2526,7 @@ W_{rst}^{\left(L,K\right)}=W_{rst}^{\left(1\right)}+W_{rst}^{\left(2\right)}\\
 
 \begin_layout Standard
 The expression of 
-\begin_inset Formula $V_{tsr}^{\left(K,L\right)}$
+\begin_inset Formula $V_{qpr}^{\left(K,L\right)}$
 \end_inset
 
  shows that when a large chain splits into two smaller chains of 
@@ -2543,12 +2543,12 @@ The expression of
 
  ways to to choose the break points, and each way contributes equally to
  
-\begin_inset Formula $V_{tsr}^{\left(K,L\right)}$
+\begin_inset Formula $V_{qpr}^{\left(K,L\right)}$
 \end_inset
 
 .
  Likewise, the expression of 
-\begin_inset Formula $W_{rst}^{\left(L,K\right)}$
+\begin_inset Formula $W_{rpq}^{\left(L,K\right)}$
 \end_inset
 
  shows that when two smaller chains join to a large chain, there are 
@@ -2556,7 +2556,7 @@ The expression of
 \end_inset
 
  ways to choose the joint points, and each way contributes equally to 
-\begin_inset Formula $W_{rst}^{\left(L,K\right)}$
+\begin_inset Formula $W_{rpq}^{\left(L,K\right)}$
 \end_inset
 
 .
@@ -2595,11 +2595,11 @@ Let us continue to simplify the vertices
 \end_inset
 
 and similarly for 
-\begin_inset Formula $\psi_{s,t}$
+\begin_inset Formula $\psi_{p,q}$
 \end_inset
 
  and 
-\begin_inset Formula $\bar{\psi}_{s,t}$
+\begin_inset Formula $\bar{\psi}_{p,q}$
 \end_inset
 
 .
@@ -2618,14 +2618,14 @@ reference "eq:pert_Vstr_2"
  becomes
 \begin_inset Formula 
 \begin{align*}
-V_{tsr}^{\left(K,L\right)} & =\left(-\right)^{Kg_{s}+Lg_{t}}M\int d\theta\,\tilde{\mathbb{F}}_{t}\bar{\psi}_{G}^{\left(K\right)}\tilde{\mathbb{F}}_{s}\bar{\psi}_{G}^{\left(L\right)}h^{\left(V\right)}\mathbb{F}_{r}^{\dagger}\psi_{G}^{\left(M\right)}\\
- & =\left(-\right)^{Kg_{s}+Lg_{t}+L\left(g_{t}-K\right)}M\int d\theta\,\bar{\psi}_{G}^{\left(K\right)}\bar{\psi}_{G}^{\left(L\right)}\mathbb{F}_{t}\mathbb{F}_{s}h^{\left(V\right)}\mathbb{F}_{r}^{\dagger}\psi_{G}^{\left(M\right)},
+V_{qpr}^{\left(K,L\right)} & =\left(-\right)^{Kg_{p}+Lg_{q}}M\int d\theta\,\tilde{\mathbb{F}}_{q}\bar{\psi}_{G}^{\left(K\right)}\tilde{\mathbb{F}}_{p}\bar{\psi}_{G}^{\left(L\right)}h^{\left(V\right)}\mathbb{F}_{r}^{\dagger}\psi_{G}^{\left(M\right)}\\
+ & =\left(-\right)^{Kg_{p}+Lg_{q}+L\left(g_{q}-K\right)}M\int d\theta\,\bar{\psi}_{G}^{\left(K\right)}\bar{\psi}_{G}^{\left(L\right)}\mathbb{F}_{q}\mathbb{F}_{p}h^{\left(V\right)}\mathbb{F}_{r}^{\dagger}\psi_{G}^{\left(M\right)},
 \end{align*}
 
 \end_inset
 
  where the change of the sign factor is due to 
-\begin_inset Formula $\mathbb{F}_{t}$
+\begin_inset Formula $\mathbb{F}_{q}$
 \end_inset
 
  passing through 
@@ -2634,7 +2634,7 @@ V_{tsr}^{\left(K,L\right)} & =\left(-\right)^{Kg_{s}+Lg_{t}}M\int d\theta\,\tild
 
 .
  The 
-\begin_inset Formula $2Lg_{t}$
+\begin_inset Formula $2Lg_{q}$
 \end_inset
 
  in the power of 
@@ -2643,7 +2643,7 @@ V_{tsr}^{\left(K,L\right)} & =\left(-\right)^{Kg_{s}+Lg_{t}}M\int d\theta\,\tild
 
  can be removed.
  So the sign factor can be simplified to be 
-\begin_inset Formula $\left(-\right)^{K\left(g_{s}-L\right)}$
+\begin_inset Formula $\left(-\right)^{K\left(g_{p}-L\right)}$
 \end_inset
 
 .
@@ -2669,7 +2669,7 @@ reference "eq:overlap_psi_M1"
  and arrive at 
 \begin_inset Formula 
 \[
-V_{tsr}^{\left(K,L\right)}=\left(-\right)^{K\left(g_{s}-L\right)}M\left|\det C\right|^{\frac{1}{2}}\left\langle \mathbb{F}_{t}\mathbb{F}_{s}h^{\left(V\right)}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ,
+V_{qpr}^{\left(K,L\right)}=\left(-\right)^{K\left(g_{p}-L\right)}M\left|\det C\right|^{\frac{1}{2}}\left\langle \mathbb{F}_{q}\mathbb{F}_{p}h^{\left(V\right)}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ,
 \]
 
 \end_inset
@@ -2677,8 +2677,8 @@ V_{tsr}^{\left(K,L\right)}=\left(-\right)^{K\left(g_{s}-L\right)}M\left|\det C\r
  where
 \begin_inset Formula 
 \begin{multline}
-\left\langle \mathbb{F}_{t}\mathbb{F}_{s}h^{\left(V\right)}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
-\equiv\int d\theta\,\bar{\psi}_{G}^{\left(K\right)}\bar{\psi}_{G}^{\left(L\right)}\mathbb{F}_{t}\mathbb{F}_{s}h^{\left(V\right)}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\psi_{G}^{\left(L\right)}\psi_{G}^{\left(K\right)}.\label{eq:pert_vev}
+\left\langle \mathbb{F}_{q}\mathbb{F}_{p}h^{\left(V\right)}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+\equiv\int d\theta\,\bar{\psi}_{G}^{\left(K\right)}\bar{\psi}_{G}^{\left(L\right)}\mathbb{F}_{q}\mathbb{F}_{p}h^{\left(V\right)}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\psi_{G}^{\left(L\right)}\psi_{G}^{\left(K\right)}.\label{eq:pert_vev}
 \end{multline}
 
 \end_inset
@@ -2709,8 +2709,8 @@ reference "eq:pert_vev"
  and find 
 \begin_inset Formula 
 \begin{multline*}
-W_{rst}^{\left(L,K\right)}=\left(-\right)^{K\left(g_{s}-L\right)}KL\left|\det C\right|^{\frac{1}{2}}\left\langle \exp\left(\frac{1}{2}\sum_{kl}f_{k}M_{kl}^{\dagger}f_{l}\right)\mathbb{F}_{r}h^{\left(W\right)}\mathbb{F}_{s}^{\dagger}\mathbb{F}_{t}^{\dagger}\right\rangle \\
-=\left(-\right)^{K\left(g_{s}-L\right)}KL\left|\det C\right|^{\frac{1}{2}}\left\langle \mathbb{F}_{t}\mathbb{F}_{s}h^{\left(W\right)}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ^{\dagger}.
+W_{rpq}^{\left(L,K\right)}=\left(-\right)^{K\left(g_{p}-L\right)}KL\left|\det C\right|^{\frac{1}{2}}\left\langle \exp\left(\frac{1}{2}\sum_{kl}f_{k}M_{kl}^{\dagger}f_{l}\right)\mathbb{F}_{r}h^{\left(W\right)}\mathbb{F}_{p}^{\dagger}\mathbb{F}_{q}^{\dagger}\right\rangle \\
+=\left(-\right)^{K\left(g_{p}-L\right)}KL\left|\det C\right|^{\frac{1}{2}}\left\langle \mathbb{F}_{q}\mathbb{F}_{p}h^{\left(W\right)}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ^{\dagger}.
 \end{multline*}
 
 \end_inset
@@ -2720,21 +2720,21 @@ W_{rst}^{\left(L,K\right)}=\left(-\right)^{K\left(g_{s}-L\right)}KL\left|\det C\
 
 \begin_layout Standard
 Note that 
-\begin_inset Formula $V_{tsr}^{\left(K,L\right)}$
+\begin_inset Formula $V_{qpr}^{\left(K,L\right)}$
 \end_inset
 
  and 
-\begin_inset Formula $W_{rst}^{\left(L,K\right)}$
+\begin_inset Formula $W_{rpq}^{\left(L,K\right)}$
 \end_inset
 
  have the same sign factor 
-\begin_inset Formula $\left(-\right)^{K\left(g_{s}-L\right)}$
+\begin_inset Formula $\left(-\right)^{K\left(g_{p}-L\right)}$
 \end_inset
 
 .
  We shall see that the physical observables, like the energy correction
  to the zeroth order ground energy, only depend on products like 
-\begin_inset Formula $W_{rst}V_{tsr}$
+\begin_inset Formula $W_{rpq}V_{qpr}$
 \end_inset
 
 .
@@ -2756,14 +2756,14 @@ Note that
  as 
 \begin_inset Formula 
 \begin{align}
-V_{tsr}^{\left(K,L\right)} & =M\left|\det C\right|^{\frac{s}{2}}\prod_{a=1}^{s}\left\langle \mathbb{F}_{ts}^{a}h^{\left(V,a\right)}\mathbb{F}_{r}^{a\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{a\dagger}M_{kl}f_{l}^{a\dagger}\right)\right\rangle ,\label{eq:pert_Vtsr_final}\\
-W_{rst}^{\left(L,K\right)} & =KL\left|\det C\right|^{\frac{s}{2}}\prod_{a=1}^{s}\left\langle \mathbb{F}_{ts}^{a}h^{\left(W,a\right)}\mathbb{F}_{r}^{a\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{a\dagger}M_{kl}f_{l}^{a\dagger}\right)\right\rangle ^{\dagger},\label{eq:pert_Wrst_final}
+V_{qpr}^{\left(K,L\right)} & =M\left|\det C\right|^{\frac{s}{2}}\prod_{a=1}^{s}\left\langle \mathbb{F}_{qp}^{a}h^{\left(V,a\right)}\mathbb{F}_{r}^{a\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{a\dagger}M_{kl}f_{l}^{a\dagger}\right)\right\rangle ,\label{eq:pert_Vtsr_final}\\
+W_{rpq}^{\left(L,K\right)} & =KL\left|\det C\right|^{\frac{s}{2}}\prod_{a=1}^{s}\left\langle \mathbb{F}_{qp}^{a}h^{\left(W,a\right)}\mathbb{F}_{r}^{a\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{a\dagger}M_{kl}f_{l}^{a\dagger}\right)\right\rangle ^{\dagger},\label{eq:pert_Wrst_final}
 \end{align}
 
 \end_inset
 
 where 
-\begin_inset Formula $\mathbb{F}_{ts}^{a}\equiv\mathbb{F}_{t}^{a}\mathbb{F}_{s}^{a}$
+\begin_inset Formula $\mathbb{F}_{qp}^{a}\equiv\mathbb{F}_{q}^{a}\mathbb{F}_{p}^{a}$
 \end_inset
 
  and all the superscript 
@@ -2899,7 +2899,7 @@ For finite
  energy eigenstates, we use the ansatz 
 \begin_inset Formula 
 \[
-\ket{E}=T_{r}\ket{0}C_{r}^{1}+T_{s}T_{t}\ket{0}C_{st}^{2}+T_{s}T_{t}T_{u}\ket{0}C_{stu}^{3}+\cdots,
+\ket{E}=T_{r}\ket{0}C_{r}^{1}+T_{p}T_{q}\ket{0}C_{pq}^{2}+T_{p}T_{q}T_{t}\ket{0}C_{pqt}^{3}+\cdots,
 \]
 
 \end_inset
@@ -2916,9 +2916,9 @@ For finite
  yields
 \begin_inset Formula 
 \begin{align*}
-0= & \left(E_{r}-E\right)T_{r}\ket{0}C_{r}^{1}+\left(E_{s}+E_{t}-E\right)T_{s}T_{r}\ket{0}C_{st}^{2}\\
- & +\left(E_{s}+E_{t}+E_{u}-E\right)T_{s}T_{t}T_{u}\ket{0}C_{stu}^{2}\\
- & +\frac{1}{N}T_{s}T_{t}\ket{0}V_{tsr}+\frac{1}{N}T_{r}\ket{0}W_{rst}^{\left(L,K\right)}C_{st}^{2}+\cdots.
+0= & \left(E_{r}-E\right)T_{r}\ket{0}C_{r}^{1}+\left(E_{p}+E_{q}-E\right)T_{p}T_{q}\ket{0}C_{pq}^{2}\\
+ & +\left(E_{p}+E_{q}+E_{t}-E\right)T_{p}T_{q}T_{t}\ket{0}C_{pqt}^{2}\\
+ & +\frac{1}{N}T_{p}T_{q}\ket{0}V_{qpr}+\frac{1}{N}T_{r}\ket{0}W_{rpq}^{\left(L,K\right)}C_{pq}^{2}+\cdots.
 \end{align*}
 
 \end_inset
@@ -2926,14 +2926,14 @@ For finite
  Collect like terms to give 
 \begin_inset Formula 
 \begin{eqnarray}
-\left(E_{r}-E\right)C_{r}^{1}+\frac{1}{N}W_{rst}^{\left(L,K\right)}C_{st}^{2} & = & 0,\label{eq:eec_eq1}\\
-\left(E_{s}+E_{t}-E\right)C_{st}^{2}+\frac{1}{N}V_{tsr}^{\left(K,L\right)}C_{r}^{1}+C^{3}\mathrm{Terms} & = & 0.\label{eq:eec_eq2}
+\left(E_{r}-E\right)C_{r}^{1}+\frac{1}{N}W_{rpq}^{\left(L,K\right)}C_{pq}^{2} & = & 0,\label{eq:eec_eq1}\\
+\left(E_{p}+E_{q}-E\right)C_{st}^{2}+\frac{1}{N}V_{qpr}^{\left(K,L\right)}C_{r}^{1}+C^{3}\mathrm{Terms} & = & 0.\label{eq:eec_eq2}
 \end{eqnarray}
 
 \end_inset
 
  We now solve for 
-\begin_inset Formula $C_{st}^{2}$
+\begin_inset Formula $C_{pq}^{2}$
 \end_inset
 
  from 
@@ -2953,8 +2953,8 @@ reference "eq:eec_eq1"
 , 
 \begin_inset Formula 
 \begin{eqnarray*}
-C_{st}^{2} & = & \frac{1}{E-E_{s}-E_{t}}\frac{1}{N}V_{tsr}C_{r}^{1}+\mathcal{O}\left(N^{-2}\right),\\
-\left(E-E_{r}\right)C_{r}^{1} & = & \frac{1}{N^{2}}W_{rst}^{\left(L,K\right)}\frac{1}{E-E_{s}-E_{t}}V_{tsu}^{\left(K,L\right)}C_{u}^{1}+\mathcal{O}\left(N^{-3}\right).
+C_{pq}^{2} & = & \frac{1}{E-E_{p}-E_{q}}\frac{1}{N}V_{qpr}C_{r}^{1}+\mathcal{O}\left(N^{-2}\right),\\
+\left(E-E_{r}\right)C_{r}^{1} & = & \frac{1}{N^{2}}W_{rpq}^{\left(L,K\right)}\frac{1}{E-E_{p}-E_{q}}V_{qpt}^{\left(K,L\right)}C_{t}^{1}+\mathcal{O}\left(N^{-3}\right).
 \end{eqnarray*}
 
 \end_inset
@@ -2966,7 +2966,7 @@ C_{st}^{2} & = & \frac{1}{E-E_{s}-E_{t}}\frac{1}{N}V_{tsr}C_{r}^{1}+\mathcal{O}\
  is determined by the eigenvalues of the matrix
 \begin_inset Formula 
 \begin{equation}
-\Delta_{ru}=\frac{1}{N^{2}}W_{rst}^{\left(L,K\right)}\frac{1}{E_{r}-E_{s}-E_{t}}V_{tsu}^{\left(K,L\right)}.
+\Delta_{rt}=\frac{1}{N^{2}}W_{rpq}^{\left(L,K\right)}\frac{1}{E_{r}-E_{p}-E_{q}}V_{qpt}^{\left(K,L\right)}.
 \end{equation}
 
 \end_inset
@@ -2976,13 +2976,13 @@ C_{st}^{2} & = & \frac{1}{E-E_{s}-E_{t}}\frac{1}{N}V_{tsr}C_{r}^{1}+\mathcal{O}\
 \end_inset
 
 , i.e., 
-\begin_inset Formula $C_{u}^{1}=\delta_{ur}$
+\begin_inset Formula $C_{t}^{1}=\delta_{tr}$
 \end_inset
 
 ,
 \begin_inset Formula 
 \begin{equation}
-\Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}\sum_{M_{s}=L,M_{t}=K}W_{rst}^{\left(L,K\right)}\frac{1}{E_{r}-E_{s}-E_{t}}V_{tsr}^{\left(K,L\right)},\label{eq:eec_deltaE0}
+\Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}\sum_{M_{p}=L,M_{q}=K}W_{rpq}^{\left(L,K\right)}\frac{1}{E_{r}-E_{p}-E_{q}}V_{qpr}^{\left(K,L\right)},\label{eq:eec_deltaE0}
 \end{equation}
 
 \end_inset
@@ -3038,8 +3038,8 @@ reference "eq:pert_Wrst_final"
  become
 \begin_inset Formula 
 \begin{eqnarray}
-V_{tsr}^{\left(K,L\right)} & = & M\left|\det C\right|^{s/2}\prod_{a=1}^{s}\left\langle \mathbb{F}_{ts}^{a},\mathbb{F}_{r}^{a\dagger}\right\rangle _{V},\label{eq:ecc_Vtsr}\\
-W_{rst}^{\left(L,K\right)} & = & KL\left|\det C\right|^{s/2}\prod_{a=1}^{s}\left\langle \mathbb{F}_{ts}^{a},\mathbb{F}_{r}^{a\dagger}\right\rangle _{W}^{\dagger}.\label{eq:ecc_Wrst}
+V_{qpr}^{\left(K,L\right)} & = & M\left|\det C\right|^{s/2}\prod_{a=1}^{s}\left\langle \mathbb{F}_{qp}^{a},\mathbb{F}_{r}^{a\dagger}\right\rangle _{V},\label{eq:ecc_Vtsr}\\
+W_{rpq}^{\left(L,K\right)} & = & KL\left|\det C\right|^{s/2}\prod_{a=1}^{s}\left\langle \mathbb{F}_{qp}^{a},\mathbb{F}_{r}^{a\dagger}\right\rangle _{W}^{\dagger}.\label{eq:ecc_Wrst}
 \end{eqnarray}
 
 \end_inset
@@ -3078,13 +3078,13 @@ reference "eq:eec_deltaE0"
  and write the sum over zero modes explicitly: 
 \begin_inset Formula 
 \[
-\Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{s,t}}^{\prime}\frac{KLM\left|\det C\right|}{E_{r}-E_{s}-E_{t}}\sum_{\lambda,\xi=0,1}\left\langle \mathbb{F}_{ts}F_{0,L}^{\lambda}F_{0,K}^{\xi},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{ts}F_{0,L}^{\lambda}F_{0,K}^{\xi},\mathbb{F}_{r}\right\rangle _{V},
+\Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{p,q}}^{\prime}\frac{KLM\left|\det C\right|}{E_{r}-E_{p}-E_{q}}\sum_{\lambda,\xi=0,1}\left\langle \mathbb{F}_{qp}F_{0,L}^{\lambda}F_{0,K}^{\xi},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{qp}F_{0,L}^{\lambda}F_{0,K}^{\xi},\mathbb{F}_{r}\right\rangle _{V},
 \]
 
 \end_inset
 
  where 
-\begin_inset Formula ${\sum_{s,t}}^{\prime}$
+\begin_inset Formula ${\sum_{p,q}}^{\prime}$
 \end_inset
 
  indicates summation over states without zero modes.
@@ -3126,8 +3126,8 @@ F_{0}^{\left(L\right)}=f_{0}\sqrt{\frac{L}{M}}+f_{M-1}\sqrt{\frac{K}{M}},\quad F
  and
 \begin_inset Formula 
 \begin{multline*}
-\left\langle \mathbb{F}_{ts}F_{0}^{\left(L\right)},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{ts}F_{0}^{\left(L\right)},\mathbb{F}_{r}\right\rangle _{V}+\left\langle \mathbb{F}_{ts}F_{0}^{\left(K\right)},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{ts}F_{0}^{\left(K\right)},\mathbb{F}_{r}\right\rangle _{V}\\
-=\left\langle \mathbb{F}_{ts}f_{0},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{ts}f_{0},\mathbb{F}_{r}\right\rangle _{V}+\left\langle \mathbb{F}_{ts}f_{M-1},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{ts}f_{M-1},\mathbb{F}_{r}\right\rangle _{V}.
+\left\langle \mathbb{F}_{qp}F_{0}^{\left(L\right)},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{qp}F_{0}^{\left(L\right)},\mathbb{F}_{r}\right\rangle _{V}+\left\langle \mathbb{F}_{qp}F_{0}^{\left(K\right)},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{qp}F_{0}^{\left(K\right)},\mathbb{F}_{r}\right\rangle _{V}\\
+=\left\langle \mathbb{F}_{qp}f_{0},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{qp}f_{0},\mathbb{F}_{r}\right\rangle _{V}+\left\langle \mathbb{F}_{qp}f_{M-1},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{qp}f_{M-1},\mathbb{F}_{r}\right\rangle _{V}.
 \end{multline*}
 
 \end_inset
@@ -3151,7 +3151,7 @@ F_{0}^{\left(L\right)}=f_{0}\sqrt{\frac{L}{M}}+f_{M-1}\sqrt{\frac{K}{M}},\quad F
 : 
 \begin_inset Formula 
 \begin{equation}
-\Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{M_{t}=K,M_{s}=L}}^{\prime}\frac{KLM\left|\det C\right|}{E_{r}-E_{s}-E_{t}}\sum_{\lambda_{i}=0,1}\left\langle \mathbb{F}_{ts}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{ts}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}},\mathbb{F}_{r}\right\rangle _{V}.\label{eq:energy_pert_DeltaE_s1}
+\Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{M_{q}=K,M_{p}=L}}^{\prime}\frac{KLM\left|\det C\right|}{E_{r}-E_{p}-E_{q}}\sum_{\lambda_{i}=0,1}\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}},\mathbb{F}_{r}\right\rangle _{V}.\label{eq:energy_pert_DeltaE_s1}
 \end{equation}
 
 \end_inset
@@ -3163,7 +3163,7 @@ For arbitrary
 , the result is 
 \begin_inset Formula 
 \begin{equation}
-\Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{t,s}}^{\prime}\frac{KLM\left|\det C\right|^{s}}{E_{r}-E_{s}-E_{t}}\sum_{\lambda_{i,j}}\prod_{a=1}^{s}\left\langle \mathbb{F}_{ts}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{ts}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{V}.
+\Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{p,q}}^{\prime}\frac{KLM\left|\det C\right|^{s}}{E_{r}-E_{p}-E_{q}}\sum_{\lambda_{i,j}}\prod_{a=1}^{s}\left\langle \mathbb{F}_{qp}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{qp}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{V}.
 \end{equation}
 
 \end_inset
@@ -3184,7 +3184,7 @@ Note that the sum over
  energy correction
 \begin_inset Formula 
 \begin{equation}
-\Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{t,s}}^{\prime}\frac{KLM\left|\det C\right|^{s}}{E_{r}-E_{s}-E_{t}}\prod_{a=1}^{s}\left(\sum_{\lambda_{a,i}}\left\langle \mathbb{F}_{ts}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{ts}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{V}\right).\label{eq:energy_pert_DeltaE}
+\Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{p,q}}^{\prime}\frac{KLM\left|\det C\right|^{s}}{E_{r}-E_{p}-E_{q}}\prod_{a=1}^{s}\left(\sum_{\lambda_{a,i}}\left\langle \mathbb{F}_{qp}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{qp}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{V}\right).\label{eq:energy_pert_DeltaE}
 \end{equation}
 
 \end_inset
@@ -3295,8 +3295,8 @@ reference "eq:app_AFF_1"
 So we have 
 \begin_inset Formula 
 \begin{multline}
-\left\langle \mathbb{F}_{ts}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}\right\rangle _{V}=\frac{2}{M}\gamma^{\prime\left(V\right)}\left\langle \mathbb{F}_{ts}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
-+\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle \mathbb{F}_{ts}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ,\label{eq:pert_vev_v}
+\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}\right\rangle _{V}=\frac{2}{M}\gamma^{\prime\left(V\right)}\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
++\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle ,\label{eq:pert_vev_v}
 \end{multline}
 
 \end_inset
@@ -3310,7 +3310,7 @@ So we have
 \end_inset
 
  and similarly for 
-\begin_inset Formula $\left\langle \mathbb{F}_{ts}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}\right\rangle _{W}$
+\begin_inset Formula $\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}\right\rangle _{W}$
 \end_inset
 
 .
