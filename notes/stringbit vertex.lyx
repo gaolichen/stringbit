@@ -1446,7 +1446,7 @@ Since the zero modes do not change the energy, the ground energy eigenstate
 \end_layout
 
 \begin_layout Subsection
-Conjugate eigenfunctions
+Conjugate Eigenfunctions
 \end_layout
 
 \begin_layout Standard
@@ -2908,7 +2908,7 @@ name "sec:EnergyCorrection"
 
 \end_inset
 
-Correction to Ground Energy
+Correction to Energy Spectrum
 \end_layout
 
 \begin_layout Standard
@@ -3233,6 +3233,10 @@ Note that the sum over
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Ground Energy Correction
 \end_layout
 
 \begin_layout Standard
@@ -3622,10 +3626,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\bar{\psi}$
-\end_inset
-
-
+Conjugate
 \end_layout
 
 \end_inset
@@ -4058,10 +4059,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\bar{\psi}$
-\end_inset
-
-
+Conjugate
 \end_layout
 
 \end_inset
