@@ -310,11 +310,11 @@ key "Bergman:1995wh"
 \end_inset
 
  is bosonic when 
-\begin_inset Formula $s$
+\begin_inset Formula $n$
 \end_inset
 
  is even and fermionic when 
-\begin_inset Formula $s$
+\begin_inset Formula $n$
 \end_inset
 
  is odd.
@@ -419,20 +419,16 @@ key "Thorn:2015wli"
 \end_inset
 
 .
- The three string interaction vertex was calculated and its application
+ The three string interaction vertex was introduced and its application
  in the calculation of 
 \begin_inset Formula $1/N^{2}$
 \end_inset
 
  energy eigenvalue correction was discussed.
- In this paper, we will perform more detailed study on the three string
- interaction vertex, then derive a formula to compute the leading order
- correction to the energy spectrum.
- We will give an example of calculating correction to ground energy of 
-\begin_inset Formula $M=3$
-\end_inset
-
- case 
+ In this paper, we will perform detailed study on the three string interaction
+ vertex, then derive a formula to compute the leading order correction to
+ the energy spectrum.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -449,7 +445,7 @@ reference "sec:Hamiltonian"
 \begin_inset Formula $N$
 \end_inset
 
- limit, and build conjugate to the energy eigenstates.
+ limit, and build conjugates to the energy eigenstates.
  In Sec.
  
 \begin_inset CommandInset ref
@@ -486,12 +482,17 @@ reference "sec:EnergyCorrection"
 \end_inset
 
  correction to the energy eigenstates.
- As an example, the calculation for energy correction of 
+ As an example, the calculation for ground energy correction of 
 \begin_inset Formula $M=3$
 \end_inset
 
  is given.
- In Sec.
+ We perform the numerical computation for ground energy correction of higher
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ in Sec.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -499,8 +500,7 @@ reference "sec:Numerical-Results"
 
 \end_inset
 
-, numerical computation for ground energy correction and its results are
- presented.
+.
  The main text is closed with a conclusion section.
  Finally, several appendices are included for technical details.
 \end_layout
