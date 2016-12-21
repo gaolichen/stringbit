@@ -1,0 +1,496 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{babel}
+\usepackage{url}
+\usepackage[numbers,sort&compress]{natbib}
+\bibliographystyle{unsrt}
+
+\usepackage[subrefformat=parens,labelformat=parens]{subfig}
+\usepackage{cancel}
+\newcommand{\zero}[1] {\cancelto{0}{#1}}
+\newcommand{\tr}{\mathrm{Tr}\,}
+\newcommand{\ba}{\bar{a}}
+\newcommand{\bb}{\bar{b}}
+\newcommand{\normord}[1]{{:}\!\mathrel{#1}\!{:}}
+\newcommand{\ket}[1]{\left|#1\right\rangle}
+\newcommand{\bra}[1]{\left\langle #1\right|}
+\newcommand{\ketp}[1]{\left|#1\right\} }
+\newcommand{\brap}[1]{\left\{ #1\right|}
+\newcommand{\dprod}[2]{\left\langle #1|#2\right\rangle}
+\newcommand{\dprodp}[2]{\left\{ #1|#2\right\} }
+\newcommand{\mat}[1]{\mathbf{#1}}
+\newcommand{\g}{\mathrm{g}}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Example of 
+\begin_inset Formula $M=5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We calculate the case 
+\begin_inset Formula $L=2$
+\end_inset
+
+ and 
+\begin_inset Formula $L=3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+\begin_inset Formula $L=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The states of 2 bits of 3 bits are shown in Table .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $M$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\psi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Conjugates
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Energy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Grading of 
+\begin_inset Formula $\psi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $F_{1}^{\left(2\right)\dagger}\psi_{G}^{\left(2\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\tilde{F}_{1}^{\left(2\right)}\bar{\psi}_{G}^{\left(2\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $E_{1}^{\left(2\right)}=4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+odd
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\psi_{G}^{\left(3\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{\psi}_{G}^{\left(3\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $E_{G}^{\left(3\right)}=-4\sqrt{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+even
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $F_{2}^{\left(3\right)\dagger}F_{1}^{\left(3\right)^{\dagger}}\psi_{G}^{\left(3\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $F_{2}^{\left(3\right)\dagger}F_{1}^{\left(3\right)^{\dagger}}\psi_{G}^{\left(3\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $E_{1}^{\left(3\right)}=4\sqrt{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+even
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Energy states of 2 bits and 3 bits for 
+\begin_inset Formula $s=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The matrices are 
+\begin_inset Formula 
+\[
+M=\begin{pmatrix}0\end{pmatrix}\oplus\left(\begin{array}{cccc}
+0 & 0.0180699+0.0104327i & -0.0180699+0.0104327i & 0.212966-0.212966i\\
+-0.0180699-0.0104327i & 0 & 0.0334243 & -0.249741+0.066918i\\
+0.0180699-0.0104327i & -0.0334243 & 0 & -0.066918+0.249741i\\
+-0.212966+0.212966i & 0.249741\,-0.066918i & 0.066918\,-0.249741i & 0
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Omega^{\left(V\right)}=\left(\begin{array}{ccccc}
+0 & 0.00853869-0.00853869i & -0.986931+0.526654i & -0.526654+0.986931i & -0.558438\\
+-0.00853869+0.00853869i & 0 & -0.0868309+0.2911i & 0.0868309+0.2911i & -0.090133+0.090133i\\
+0.986931-0.526654i & 0.0868309-0.2911i & 0 & 0.29991 & -1.94066+1.12044i\\
+0.526654-0.986931i & -0.0868309-0.2911i & -0.29991 & 0 & -1.12044+1.94066i\\
+0.558438 & 0.090133-0.090133i & 1.94066-1.12044i & 1.12044-1.94066i & 0
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Omega^{\left(W\right)}=\left(\begin{array}{ccccc}
+0 & -1.1095+1.1095i & -0.978392+0.558521i & -0.558521+0.978392i & -0.0822311\\
+1.1095-1.1095i & 0 & -0.093868-0.2911i & 0.093868-0.2911i & 0.090133-0.090133i\\
+0.978392-0.558521i & 0.093868\,+0.2911i & 0 & -0.29991 & 0.357363+0.462856i\\
+0.558521-0.978392i & -0.093868+0.2911i & 0.29991 & 0 & -0.462856-0.357363i\\
+0.0822311 & -0.090133+0.090133i & -0.357363-0.462856i & 0.462856\,+0.357363i & 0
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\gamma_{\left(V\right)}^{\prime}=-4.86158+5\xi,\quad\gamma_{\left(W\right)}^{\prime}=-12.1514+10\xi
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f_{0},\quad f_{1}=F_{1}^{\left(2\right)},\quad f_{2}=F_{1}^{\left(3\right)},\quad f_{3}=F_{2}^{\left(3\right)},\quad f_{4}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+\Delta E_{G}^{\prime}=\frac{1}{N^{2}}\frac{KLM\left|\det C\right|}{E_{G}-E_{1}^{\left(2\right)}-E_{G}^{\left(3\right)}}\left(\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V}+\left\langle F_{1}^{\left(2\right)}f_{4}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{4}\right\rangle _{V}\right)\\
++\frac{1}{N^{2}}\frac{KLM\left|\det C\right|}{E_{G}-E_{1}^{\left(2\right)}-E_{1}^{\left(3\right)}}\left\langle F_{1}^{\left(2\right)}F_{2}^{\left(3\right)}F_{1}^{\left(3\right)}f_{0}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}F_{2}^{\left(3\right)}F_{1}^{\left(3\right)}f_{0}\right\rangle _{V}\\
++\frac{1}{N^{2}}\frac{KLM\left|\det C\right|}{E_{G}-E_{1}^{\left(2\right)}-E_{1}^{\left(3\right)}}\left\langle F_{1}^{\left(2\right)}F_{2}^{\left(3\right)}F_{1}^{\left(3\right)}f_{4}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}F_{2}^{\left(3\right)}F_{1}^{\left(3\right)}f_{0}f_{4}\right\rangle _{V}
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V} & =\frac{2}{M}\gamma^{\prime\left(V\right)}\zero{\left\langle f_{1}f_{0}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle }+\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle f_{1}f_{0}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+ & =\frac{4}{M}\Omega_{01}^{\left(V\right)}=
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\left\langle F_{1}^{\left(2\right)}f_{4}\right\rangle _{V} & =\frac{2}{M}\gamma^{\prime\left(V\right)}\left\langle f_{1}f_{4}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle f_{1}f_{4}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+ & =-\frac{2}{M}\gamma^{\prime\left(V\right)}M_{14}+\frac{4}{M}\Omega_{41}^{\left(V\right)}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\left\langle F_{1}^{\left(2\right)}F_{2}^{\left(3\right)}F_{1}^{\left(3\right)}f_{0}\right\rangle _{V} & =\left\langle f_{1}f_{2}f_{3}f_{0}\right\rangle _{V}\\
+ & =\frac{2}{M}\gamma^{\prime\left(V\right)}\zero{\left\langle f_{1}f_{2}f_{3}f_{0}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle }+\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle f_{1}f_{2}f_{3}f_{0}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+ & =\frac{4}{M}\left(\Omega_{03}^{\left(V\right)}M_{21}+\Omega_{02}^{\left(V\right)}M_{13}+\Omega_{01}^{\left(V\right)}M_{32}\right)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\left\langle F_{1}^{\left(2\right)}F_{2}^{\left(3\right)}F_{1}^{\left(3\right)}f_{4}\right\rangle _{V} & =\left\langle f_{1}f_{2}f_{3}f_{4}\right\rangle _{V}\\
+ & =\frac{2}{M}\gamma^{\prime\left(V\right)}\left\langle f_{1}f_{2}f_{3}f_{4}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle f_{1}f_{2}f_{3}f_{4}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+ & =\frac{2}{M}\gamma^{\prime\left(V\right)}\left(M_{12}M_{34}-M_{13}M_{24}+M_{14}M_{23}\right)\\
+ & +\frac{4}{M}\left(\Omega_{43}^{\left(V\right)}M_{21}-\Omega_{42}^{\left(V\right)}M_{31}+\Omega_{41}^{\left(V\right)}M_{32}+\Omega_{32}^{\left(V\right)}M_{41}-\Omega_{31}^{\left(V\right)}M_{42}+\Omega_{21}^{\left(V\right)}M_{43}\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

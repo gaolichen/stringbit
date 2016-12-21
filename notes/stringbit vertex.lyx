@@ -1392,7 +1392,7 @@ reference "eq:ham_general_eigenfunction"
  is
 \begin_inset Formula 
 \begin{equation}
-E_{\left\{ k_{i}\right\} }=-4\cot\frac{\pi}{2M}+8\sum_{i=1}^{M-1}\lambda_{k}\sin\frac{k\pi}{M}.
+E_{\left\{ \lambda_{k}\right\} }=-4\cot\frac{\pi}{2M}+8\sum_{k=1}^{M-1}\lambda_{k}\sin\frac{k\pi}{M}.
 \end{equation}
 
 \end_inset
@@ -1421,7 +1421,7 @@ We now add the spin index
  The general energy eigenfunction and eigenvalue are
 \begin_inset Formula 
 \begin{equation}
-\psi=\prod_{a=1}^{s}\prod_{k=0}^{M-1}\left(F_{k}^{\left(a\right)\dagger}\right)^{\lambda_{a,k}}\psi_{G},\quad E=-sE_{G}+\sum_{a,k}\lambda_{a,k}\sin\frac{k\pi}{M},\quad\lambda_{a,k}=0,\,1.\label{eq:ham_general_eigenfunction_s}
+\psi=\prod_{a=1}^{s}\prod_{k=0}^{M-1}\left(F_{k}^{\left(a\right)\dagger}\right)^{\lambda_{a,k}}\psi_{G},\quad E=-sE_{G}+8\sum_{a=1}^{s}\sum_{k=1}^{M-1}\lambda_{a,k}\sin\frac{k\pi}{M},\quad\lambda_{a,k}=0,\,1.\label{eq:ham_general_eigenfunction_s}
 \end{equation}
 
 \end_inset
@@ -3372,7 +3372,7 @@ reference "eq:pert_vev_v"
  The first term can be calculated using
 \begin_inset Formula 
 \[
-\left\langle f_{i_{1}}f_{i_{2}}\cdots f_{i_{2n-1}}f_{i_{2n}}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle =\left(-\right)^{n}{\sum_{p\in S_{2n}}}^{\prime}\left(-\right)^{p}M_{i_{p(1)}i_{p(2)}}M_{i_{p(3)}i_{p(4)}}\cdots M_{i_{p(2n-1)}i_{p(2n)}},
+\left\langle f_{i_{1}}f_{i_{2}}\cdots f_{i_{2n-1}}f_{i_{2n}}\exp\left(\frac{1}{2}f_{k}^{\dagger}M_{kl}f_{l}^{\dagger}\right)\right\rangle =\left(-\right)^{n}{\sum_{P\in S_{2n}}}^{\prime}\left(-\right)^{P}M_{i_{P(1)}i_{P(2)}}M_{i_{P(3)}i_{P(4)}}\cdots M_{i_{P(2n-1)}i_{P(2n)}},
 \]
 
 \end_inset
@@ -3386,11 +3386,11 @@ reference "eq:pert_vev_v"
 \end_inset
 
  integers, 
-\begin_inset Formula $\left(-\right)^{p}$
+\begin_inset Formula $\left(-\right)^{P}$
 \end_inset
 
  the signature of permutation 
-\begin_inset Formula $p$
+\begin_inset Formula $P$
 \end_inset
 
 , and 
@@ -3400,8 +3400,8 @@ reference "eq:pert_vev_v"
  indicates summing over permutations satisfying 
 \begin_inset Formula 
 \begin{align*}
-p\left(1\right) & <p\left(2\right),\quad p\left(3\right)<p\left(4\right),\cdots,p\left(2n-1\right)<p\left(2n\right),\\
-p\left(1\right) & <p\left(3\right)<p\left(5\right)<\cdots<p\left(2n-1\right).
+P\left(1\right) & <P\left(2\right),\quad P\left(3\right)<P\left(4\right),\cdots,P\left(2n-1\right)<P\left(2n\right),\\
+P\left(1\right) & <P\left(3\right)<P\left(5\right)<\cdots<P\left(2n-1\right).
 \end{align*}
 
 \end_inset
