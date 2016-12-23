@@ -2113,10 +2113,10 @@ C_{0n}=C_{n0}=\delta_{0,n},\quad S_{0,n}=S_{n,0}=0,\quad0\leq n<M
 \begin_inset Formula 
 \begin{align}
 C_{mn} & =-\frac{1}{\sqrt{ML}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi i\left(n/L-m/M\right)}}\cos\left(\frac{n\pi}{2L}-\frac{m\pi}{2M}\right),\quad1\leq n<L\label{eq:overlap_C_mn1}\\
-C_{m,L+n} & =\frac{1}{\sqrt{ML}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi i\left(n/K-m/M\right)}}\cos\left(\frac{n\pi}{2K}-\frac{m\pi}{2M}\right),\quad1\leq n<K\\
+C_{m,L+n-1} & =\frac{1}{\sqrt{ML}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi i\left(n/K-m/M\right)}}\cos\left(\frac{n\pi}{2K}-\frac{m\pi}{2M}\right),\quad1\leq n<K\\
 C_{m,M-1} & =-\frac{1}{\sqrt{LK}}\frac{1-e^{-2\pi imL/M}}{1-e^{2i\pi m/M}}\cos\left(\frac{m\pi}{2M}-\frac{\pi}{4}\right)e^{-i\pi/4},\\
 S_{mn} & =-\frac{1}{\sqrt{ML}}\frac{1-e^{-2\pi imL/M}}{1-e^{2\pi i\left(n/L+m/M\right)}}\cos\left(\frac{n\pi}{2L}+\frac{m\pi}{2M}\right),\quad1\leq n<L\\
-S_{m,L+n} & =\frac{1}{\sqrt{MK}}\frac{1-e^{-2\pi imL/M}}{1-e^{2\pi i\left(n/K+m/M\right)}}\cos\left(\frac{n\pi}{2K}+\frac{m\pi}{2M}\right),\quad1\leq n<K\\
+S_{m,L+n-1} & =\frac{1}{\sqrt{MK}}\frac{1-e^{-2\pi imL/M}}{1-e^{2\pi i\left(n/K+m/M\right)}}\cos\left(\frac{n\pi}{2K}+\frac{m\pi}{2M}\right),\quad1\leq n<K\\
 S_{m,M-1} & =-\frac{1}{LK}\frac{1-e^{-2\pi imL/M}}{1-e^{2\pi im/M}}\cos\left(\frac{m\pi}{2M}+\frac{\pi}{4}\right)e^{i\pi/4},\label{eq:overlap_S_mM1}
 \end{align}
 
@@ -2273,6 +2273,118 @@ The corresponding conjugate function is
 \end_inset
 
  is odd.
+\end_layout
+
+\begin_layout Standard
+Let us explore the symmetry of the matrices.
+ Define 
+\begin_inset Formula 
+\[
+\hat{n}=\begin{cases}
+L-n, & \quad\text{for }1\leq n<L\\
+M-n-1+L, & \quad\text{for }L\leq n<M-1
+\end{cases}
+\]
+
+\end_inset
+
+From 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_C_mn1"
+
+\end_inset
+
+ to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_S_mM1"
+
+\end_inset
+
+, we see that
+\begin_inset Formula 
+\begin{equation}
+C_{mn}=C_{M-m,\hat{n}}^{*},\quad S_{mn}=-S_{M-m,\hat{n}}^{*},\quad1\leq n<M-1,\label{eq:CS_symmetry1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+C_{m,M-1}=-iC_{M-m,M-1}^{*},\quad S_{m,M-1}=-iS_{M-m,M-1}^{*},\label{eq:CS_symmetry2}
+\end{equation}
+
+\end_inset
+
+ where 
+\begin_inset Formula $1\leq m<M$
+\end_inset
+
+.
+ We now rename the indices of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_CMS"
+
+\end_inset
+
+ as 
+\begin_inset Formula $m\to M-m$
+\end_inset
+
+, 
+\begin_inset Formula $n\to\hat{n}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+C_{M-m,\hat{n}}M_{\hat{n}\hat{l}}+S_{M-m,\hat{l}}=0.
+\]
+
+\end_inset
+
+ Taking compex conjugate and applying 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:CS_symmetry1"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:CS_symmetry2"
+
+\end_inset
+
+ yields
+\begin_inset Formula 
+\[
+\sum_{n=1}^{M-2}C_{mn}M_{\hat{n}\hat{l}}^{*}+iC_{m,M-1}M_{M-1,\hat{l}}^{*}-S_{ml}=0,\quad1\leq l<M-1
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sum_{n=1}^{M-2}C_{mn}M_{\hat{n},M-1}^{*}+iC_{m,M-1}M_{M-1,M-1}^{*}+iS_{m,M-1}=0
+\]
+
+\end_inset
+
+ from which it follows that
+\begin_inset Formula 
+\[
+M_{\hat{n}\hat{l}}^{*}=-M_{nl},\quad M_{M-1,\hat{l}}^{*}=iM_{l,M-1}=-iM_{M-1,l}.
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
