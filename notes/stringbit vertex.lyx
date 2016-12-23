@@ -1429,7 +1429,7 @@ We now add the spin index
 The cyclic constraint becomes 
 \begin_inset Formula 
 \begin{equation}
-\sum_{a=1}^{s}\sum_{i=1}^{M-1}k\lambda_{a,k}=\begin{cases}
+\sum_{a=1}^{s}\sum_{k=1}^{M-1}k\lambda_{a,k}=\begin{cases}
 nM & \quad\text{for even }s\left(M-1\right)\\
 \left(n+\frac{1}{2}\right)M & \quad\text{for odd }s\left(M-1\right)
 \end{cases}.
@@ -2115,9 +2115,9 @@ C_{0n}=C_{n0}=\delta_{0,n},\quad S_{0,n}=S_{n,0}=0,\quad0\leq n<M
 C_{mn} & =-\frac{1}{\sqrt{ML}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi i\left(n/L-m/M\right)}}\cos\left(\frac{n\pi}{2L}-\frac{m\pi}{2M}\right),\quad1\leq n<L\label{eq:overlap_C_mn1}\\
 C_{m,L+n} & =\frac{1}{\sqrt{ML}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi i\left(n/K-m/M\right)}}\cos\left(\frac{n\pi}{2K}-\frac{m\pi}{2M}\right),\quad1\leq n<K\\
 C_{m,M-1} & =-\frac{1}{\sqrt{LK}}\frac{1-e^{-2\pi imL/M}}{1-e^{2i\pi m/M}}\cos\left(\frac{m\pi}{2M}-\frac{\pi}{4}\right)e^{-i\pi/4},\\
-S_{mn} & =-\frac{1}{\sqrt{ML}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi im/M}}\cos\left(\frac{n\pi}{2L}+\frac{m\pi}{2M}\right),\quad1\leq n<L\\
-S_{m,L+n} & =\frac{1}{\sqrt{MK}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi i\left(n/K+m/M\right)}}\cos\left(\frac{n\pi}{2K}+\frac{m\pi}{2M}\right),\quad1\leq n<K\\
-S_{m,M-1} & =-\frac{1}{LK}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi im/M}}\cos\left(\frac{m\pi}{2M}+\frac{\pi}{4}\right)e^{i\pi/4},\label{eq:overlap_S_mM1}
+S_{mn} & =-\frac{1}{\sqrt{ML}}\frac{1-e^{-2\pi imL/M}}{1-e^{2\pi i\left(n/L+m/M\right)}}\cos\left(\frac{n\pi}{2L}+\frac{m\pi}{2M}\right),\quad1\leq n<L\\
+S_{m,L+n} & =\frac{1}{\sqrt{MK}}\frac{1-e^{-2\pi imL/M}}{1-e^{2\pi i\left(n/K+m/M\right)}}\cos\left(\frac{n\pi}{2K}+\frac{m\pi}{2M}\right),\quad1\leq n<K\\
+S_{m,M-1} & =-\frac{1}{LK}\frac{1-e^{-2\pi imL/M}}{1-e^{2\pi im/M}}\cos\left(\frac{m\pi}{2M}+\frac{\pi}{4}\right)e^{i\pi/4},\label{eq:overlap_S_mM1}
 \end{align}
 
 \end_inset
