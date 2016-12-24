@@ -2277,13 +2277,14 @@ The corresponding conjugate function is
 
 \begin_layout Standard
 Let us explore the symmetry of the matrices.
- Define 
+ For convenience, we define 
 \begin_inset Formula 
 \[
 \hat{n}=\begin{cases}
-L-n, & \quad\text{for }1\leq n<L\\
-M-n-1+L, & \quad\text{for }L\leq n<M-1
-\end{cases}
+L-n, & \quad1\leq n<L\\
+M-n-1+L, & \quad L\leq n<M-1\\
+M-1, & \quad n=M-1
+\end{cases}.
 \]
 
 \end_inset
@@ -2295,17 +2296,21 @@ reference "eq:overlap_C_mn1"
 
 \end_inset
 
- to 
+-
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:overlap_S_mM1"
 
 \end_inset
 
-, we see that
+, we see that, for 
+\begin_inset Formula $1\leq m\leq M-1$
+\end_inset
+
+,
 \begin_inset Formula 
 \begin{equation}
-C_{mn}=C_{M-m,\hat{n}}^{*},\quad S_{mn}=-S_{M-m,\hat{n}}^{*},\quad1\leq n<M-1,\label{eq:CS_symmetry1}
+C_{mn}=C_{M-m,\hat{n}}^{*},\quad S_{mn}=-S_{M-m,\hat{n}}^{*},\quad1\leq n<M-1,\label{eq:overlap_CS_symmetry1}
 \end{equation}
 
 \end_inset
@@ -2313,17 +2318,12 @@ C_{mn}=C_{M-m,\hat{n}}^{*},\quad S_{mn}=-S_{M-m,\hat{n}}^{*},\quad1\leq n<M-1,\l
 
 \begin_inset Formula 
 \begin{equation}
-C_{m,M-1}=-iC_{M-m,M-1}^{*},\quad S_{m,M-1}=-iS_{M-m,M-1}^{*},\label{eq:CS_symmetry2}
+C_{m,M-1}=-iC_{M-m,M-1}^{*},\quad S_{m,M-1}=-iS_{M-m,M-1}^{*}.\label{eq:overlap_CS_symmetry2}
 \end{equation}
 
 \end_inset
 
- where 
-\begin_inset Formula $1\leq m<M$
-\end_inset
-
-.
- We now rename the indices of 
+We now rename the indices of 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:overlap_CMS"
@@ -2340,46 +2340,67 @@ reference "eq:overlap_CMS"
 
 , 
 \begin_inset Formula 
-\[
-C_{M-m,\hat{n}}M_{\hat{n}\hat{l}}+S_{M-m,\hat{l}}=0.
-\]
+\begin{equation}
+\sum_{n=1}^{M-2}C_{M-m,\hat{n}}M_{\hat{n}\hat{l}}+C_{M-m,M-1}M_{M-1,\hat{l}}+S_{M-m,\hat{l}}=0.
+\end{equation}
 
 \end_inset
 
  Taking compex conjugate and applying 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:CS_symmetry1"
+reference "eq:overlap_CS_symmetry1"
 
 \end_inset
 
  and 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:CS_symmetry2"
+reference "eq:overlap_CS_symmetry2"
 
 \end_inset
 
  yields
 \begin_inset Formula 
-\[
-\sum_{n=1}^{M-2}C_{mn}M_{\hat{n}\hat{l}}^{*}+iC_{m,M-1}M_{M-1,\hat{l}}^{*}-S_{ml}=0,\quad1\leq l<M-1
-\]
+\begin{equation}
+\sum_{n=1}^{M-2}C_{mn}M_{\hat{n}\hat{l}}^{*}+iC_{m,M-1}M_{M-1,\hat{l}}^{*}-S_{ml}=0,\quad1\leq l<M-1,\label{eq:overlap_CMS2}
+\end{equation}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-\sum_{n=1}^{M-2}C_{mn}M_{\hat{n},M-1}^{*}+iC_{m,M-1}M_{M-1,M-1}^{*}+iS_{m,M-1}=0
-\]
+\begin{equation}
+\sum_{n=1}^{M-2}C_{mn}M_{\hat{n},M-1}^{*}+iC_{m,M-1}M_{M-1,M-1}^{*}+iS_{m,M-1}=0.\label{eq:over_CMS3}
+\end{equation}
 
 \end_inset
 
- from which it follows that
+Comparing 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_CMS2"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:over_CMS3"
+
+\end_inset
+
+ with 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_CMS"
+
+\end_inset
+
+, we arrive at
 \begin_inset Formula 
 \[
-M_{\hat{n}\hat{l}}^{*}=-M_{nl},\quad M_{M-1,\hat{l}}^{*}=iM_{l,M-1}=-iM_{M-1,l}.
+M_{nl}=-M_{\hat{n}\hat{l}}^{*},\quad M_{M-1,l}=-iM_{M-1,\hat{l}}^{*},\quad M_{n,M-1}=-iM_{\hat{n},M-1}^{*}
 \]
 
 \end_inset
