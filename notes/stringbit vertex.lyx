@@ -2275,139 +2275,6 @@ The corresponding conjugate function is
  is odd.
 \end_layout
 
-\begin_layout Standard
-Let us explore the symmetry of the matrices.
- For convenience, we define 
-\begin_inset Formula 
-\[
-\hat{n}=\begin{cases}
-L-n, & \quad1\leq n<L\\
-M-n-1+L, & \quad L\leq n<M-1\\
-M-1, & \quad n=M-1
-\end{cases}.
-\]
-
-\end_inset
-
-From 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:overlap_C_mn1"
-
-\end_inset
-
--
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:overlap_S_mM1"
-
-\end_inset
-
-, we see that, for 
-\begin_inset Formula $1\leq m\leq M-1$
-\end_inset
-
-,
-\begin_inset Formula 
-\begin{equation}
-C_{mn}=C_{M-m,\hat{n}}^{*},\quad S_{mn}=-S_{M-m,\hat{n}}^{*},\quad1\leq n<M-1,\label{eq:overlap_CS_symmetry1}
-\end{equation}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{equation}
-C_{m,M-1}=-iC_{M-m,M-1}^{*},\quad S_{m,M-1}=-iS_{M-m,M-1}^{*}.\label{eq:overlap_CS_symmetry2}
-\end{equation}
-
-\end_inset
-
-We now rename the indices of 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:overlap_CMS"
-
-\end_inset
-
- as 
-\begin_inset Formula $m\to M-m$
-\end_inset
-
-, 
-\begin_inset Formula $n\to\hat{n}$
-\end_inset
-
-, 
-\begin_inset Formula 
-\begin{equation}
-\sum_{n=1}^{M-2}C_{M-m,\hat{n}}M_{\hat{n}\hat{l}}+C_{M-m,M-1}M_{M-1,\hat{l}}+S_{M-m,\hat{l}}=0.
-\end{equation}
-
-\end_inset
-
- Taking compex conjugate and applying 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:overlap_CS_symmetry1"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:overlap_CS_symmetry2"
-
-\end_inset
-
- yields
-\begin_inset Formula 
-\begin{equation}
-\sum_{n=1}^{M-2}C_{mn}M_{\hat{n}\hat{l}}^{*}+iC_{m,M-1}M_{M-1,\hat{l}}^{*}-S_{ml}=0,\quad1\leq l<M-1,\label{eq:overlap_CMS2}
-\end{equation}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{equation}
-\sum_{n=1}^{M-2}C_{mn}M_{\hat{n},M-1}^{*}+iC_{m,M-1}M_{M-1,M-1}^{*}+iS_{m,M-1}=0.\label{eq:over_CMS3}
-\end{equation}
-
-\end_inset
-
-Comparing 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:overlap_CMS2"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:over_CMS3"
-
-\end_inset
-
- with 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:overlap_CMS"
-
-\end_inset
-
-, we arrive at
-\begin_inset Formula 
-\[
-M_{nl}=-M_{\hat{n}\hat{l}}^{*},\quad M_{M-1,l}=-iM_{M-1,\hat{l}}^{*},\quad M_{n,M-1}=-iM_{\hat{n},M-1}^{*}
-\]
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 \begin_inset CommandInset label
 LatexCommand label
@@ -6400,6 +6267,347 @@ F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\ket{G}=-\tr\left(S^{*}C^{-1}\bar{A}\r
 \end_layout
 
 \begin_layout Section
+More Mathematical Details
+\end_layout
+
+\begin_layout Subsection
+Symmetry of Matrices
+\end_layout
+
+\begin_layout Standard
+Let us explore the symmetry of the matrices.
+ For convenience, we define 
+\begin_inset Formula 
+\[
+\hat{n}=\begin{cases}
+L-n, & \quad1\leq n<L\\
+M-n-1+L, & \quad L\leq n<M-1\\
+M-1, & \quad n=M-1
+\end{cases}.
+\]
+
+\end_inset
+
+From 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_C_mn1"
+
+\end_inset
+
+-
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_S_mM1"
+
+\end_inset
+
+, we see that, for 
+\begin_inset Formula $1\leq m\leq M-1$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{equation}
+C_{mn}=C_{M-m,\hat{n}}^{*},\quad S_{mn}=-S_{M-m,\hat{n}}^{*},\quad1\leq n<M-1,\label{eq:overlap_CS_symmetry1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+C_{m,M-1}=-iC_{M-m,M-1}^{*},\quad S_{m,M-1}=-iS_{M-m,M-1}^{*}.\label{eq:overlap_CS_symmetry2}
+\end{equation}
+
+\end_inset
+
+We now rename the indices of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_CMS"
+
+\end_inset
+
+ as 
+\begin_inset Formula $m\to M-m$
+\end_inset
+
+, 
+\begin_inset Formula $n\to\hat{n}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{equation}
+\sum_{n=1}^{M-2}C_{M-m,\hat{n}}M_{\hat{n}\hat{l}}+C_{M-m,M-1}M_{M-1,\hat{l}}+S_{M-m,\hat{l}}=0.
+\end{equation}
+
+\end_inset
+
+ Taking compex conjugate and applying 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_CS_symmetry1"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_CS_symmetry2"
+
+\end_inset
+
+ yields
+\begin_inset Formula 
+\begin{equation}
+\sum_{n=1}^{M-2}C_{mn}M_{\hat{n}\hat{l}}^{*}+iC_{m,M-1}M_{M-1,\hat{l}}^{*}-S_{ml}=0,\quad1\leq l<M-1,\label{eq:overlap_CMS2}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\sum_{n=1}^{M-2}C_{mn}M_{\hat{n},M-1}^{*}+iC_{m,M-1}M_{M-1,M-1}^{*}+iS_{m,M-1}=0.\label{eq:over_CMS3}
+\end{equation}
+
+\end_inset
+
+Comparing 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_CMS2"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:over_CMS3"
+
+\end_inset
+
+ with 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_CMS"
+
+\end_inset
+
+, we arrive at
+\begin_inset Formula 
+\[
+M_{nl}=-M_{\hat{n}\hat{l}}^{*},\quad M_{M-1,l}=-iM_{M-1,\hat{l}}^{*},\quad M_{n,M-1}=-iM_{\hat{n},M-1}^{*}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now let us consider 
+\begin_inset Formula $C^{-1}$
+\end_inset
+
+, which satisfies 
+\begin_inset Formula 
+\[
+C_{mn}C_{nl}^{-1}-\delta_{ml}=0.
+\]
+
+\end_inset
+
+ Renaming the indecie as 
+\begin_inset Formula $m\to M-m$
+\end_inset
+
+, 
+\begin_inset Formula $n\to\hat{n}$
+\end_inset
+
+, 
+\begin_inset Formula $l\to M-l$
+\end_inset
+
+ and taking complex conjugates yield 
+\begin_inset Formula 
+\[
+C_{M-m,\hat{n}}^{*}\left(C_{\hat{n},M-l}^{-1}\right)^{*}-\delta_{ml}=0.
+\]
+
+\end_inset
+
+Using 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_CS_symmetry1"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_CS_symmetry2"
+
+\end_inset
+
+, we obtain 
+\begin_inset Formula 
+\[
+\sum_{n=1}^{M-2}C_{mn}C_{\hat{n},M-l}^{-1*}+iC_{m,M-1}C_{M-1,M-l}^{-1*}-\delta_{ml}=0,
+\]
+
+\end_inset
+
+ from which it follows
+\begin_inset Formula 
+\[
+C_{M-1,m}^{-1}=iC_{M-1,M-m}^{-1*},\quad C_{nm}^{-1}=C_{\hat{n},M-m}^{-1*},\quad1\leq n<M-1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+With above results, we can show that 
+\begin_inset Formula $\gamma^{\prime}=\gamma-\tr S^{*}C^{-1}A^{\dagger}$
+\end_inset
+
+ is always real.
+ As 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is real, we only need to show 
+\begin_inset Formula $\tr S^{*}C^{-1}A^{\dagger}$
+\end_inset
+
+ is real.
+ By inspection, we see that
+\begin_inset Formula 
+\[
+A_{nm}=-A_{M-n,M-m}^{*},
+\]
+
+\end_inset
+
+which implies 
+\begin_inset Formula $A^{\dagger}$
+\end_inset
+
+ also satisifies the same relation 
+\begin_inset Formula 
+\[
+A_{nm}^{\dagger}=-\left(A_{M-n,M-m}^{\dagger}\right)^{*}.
+\]
+
+\end_inset
+
+ Now let 
+\begin_inset Formula $X=\tr S^{*}C^{-1}A^{\dagger}$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+X^{*}=S_{mn}C_{nl}^{-1*}A_{ml}.
+\]
+
+\end_inset
+
+ Renaming indices as 
+\begin_inset Formula $m\to M-m$
+\end_inset
+
+, 
+\begin_inset Formula $n\to\hat{n}$
+\end_inset
+
+, 
+\begin_inset Formula $l\to M-l$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{align*}
+X^{*} & =S_{M-m,\hat{n}}C_{\hat{n},M-l}^{-1*}A_{M-m,M-l}\\
+ & =\sum_{n=1}^{M-2}\sum_{m,l=1}^{M-1}S_{mn}^{*}C_{nl}^{-1}A_{ml}^{*}+S_{M-m,M-1}C_{M-1,M-l}^{-1*}A_{M-m,M-l}\\
+ & =\sum_{n=1}^{M-2}\sum_{m,l=1}^{M-1}S_{mn}^{*}C_{nl}^{-1}A_{ml}^{*}+\left(-i\right)S_{m,M-1}^{*}\left(-i\right)C_{M-1,l}^{-1}\left(-1\right)A_{ml}^{*}\\
+ & =\sum_{m,n,l=1}^{M-1}S_{mn}^{*}C_{nl}^{-1}A_{ml}^{*}=X.
+\end{align*}
+
+\end_inset
+
+It then follows that 
+\begin_inset Formula $X$
+\end_inset
+
+ is real and 
+\begin_inset Formula $\gamma^{\prime}$
+\end_inset
+
+ is real.
+\end_layout
+
+\begin_layout Standard
+We now consider the matrix 
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+ We have 
+\begin_inset Formula 
+\[
+\Omega_{nk}=C_{nm}^{-1}A_{lm}^{*}C_{kl}^{-1}.
+\]
+
+\end_inset
+
+ Changing indices as 
+\begin_inset Formula $n\to\hat{n}$
+\end_inset
+
+, 
+\begin_inset Formula $m\to M-m$
+\end_inset
+
+, 
+\begin_inset Formula $l\to M-l$
+\end_inset
+
+, 
+\begin_inset Formula $k\to\hat{k}$
+\end_inset
+
+ and taking complex conjugate yields 
+\begin_inset Formula 
+\begin{align*}
+\Omega_{\hat{n}\hat{k}}^{*} & =\sum_{m,l=1}^{M-1}C_{\hat{n},M-m}^{-1*}A_{M-l,M-m}C_{\hat{k},M-l}^{-1*}
+\end{align*}
+
+\end_inset
+
+ If 
+\begin_inset Formula $n,k<M-1$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+\Omega_{\hat{n}\hat{k}}^{*}=-\sum_{m,l=1}^{M-1}C_{nm}^{-1}A_{lm}C_{kl}^{-1}=-\Omega_{nk}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Divergence of Bosonic String One-Loop Amplitudes
 \end_layout
 
@@ -6461,7 +6669,7 @@ For two string interaction, the conformal mapping is
 \end_inset
 
  Let 
-\begin_inset Formula $x\to-1+\epsilon_{1}$
+\begin_inset Formula $x\to-1+\epsilon$
 \end_inset
 
 , 
@@ -6471,9 +6679,12 @@ For two string interaction, the conformal mapping is
 , 
 \begin_inset Formula 
 \begin{align*}
-\Re\ln\psi\left(x,\omega\right) & =\Re\ln\left(\frac{2-\epsilon_{1}}{\sqrt{-1+\epsilon_{1}}}\right)+\Re\frac{\ln^{2}\left(-1+\epsilon_{1}\right)}{2\ln\left(1-\delta\right)}+\Re\sum_{n=1}^{\infty}\ln\left(1-w^{n}x-w^{n}/x+w^{2n}\right)\\
- & =\ln\frac{2-\epsilon_{1}}{1-\epsilon_{1}/2}+\frac{\ln^{2}\left(1-\epsilon_{1}\right)-\pi^{2}}{2\ln\left(1-\delta\right)}+\Re\sum_{n=1}^{\infty}\ln\left(1-w^{n}\left(-1+\epsilon_{1}\right)+\frac{w^{n}}{1-\epsilon_{1}}+w^{2n}\right)\\
- & =\ln2-\frac{\epsilon_{1}^{2}}{2\delta}+\frac{\pi^{2}}{2\delta}+\Re\sum_{n=1}^{\infty}\ln\left(1-2w^{n}+w^{2n}\right)
+\Re\ln\psi\left(x,\omega\right) & =\Re\ln\left(\frac{2-\epsilon}{\sqrt{-1+\epsilon}}\right)+\Re\frac{\ln^{2}\left(-1+\epsilon\right)}{2\ln\left(1-\delta\right)}+\Re\sum_{n=1}^{\infty}\ln\left(1-w^{n}x-w^{n}/x+w^{2n}\right)\\
+ & =\ln\frac{2-\epsilon}{\sqrt{1-\epsilon}}+\frac{\ln^{2}\left(1-\epsilon\right)-\pi^{2}}{2\ln\left(1-\delta\right)}+\sum_{n=1}^{\infty}\ln\left(1-w^{n}\left(-1+\epsilon\right)+\frac{w^{n}}{1-\epsilon}+w^{2n}\right)\\
+ & \approx\ln2+\frac{\epsilon^{2}}{8}-\frac{\epsilon^{2}+\epsilon^{3}}{2\delta}+\frac{\pi^{2}}{2\delta}\\
+ & +\sum_{n=1}^{\infty}\ln\left(1+2w^{n}+w^{2n}+\epsilon^{2}w^{n}+\epsilon^{3}w^{n}\right)+\mathcal{O}\left(\epsilon^{3}\right)\\
+ & \approx\ln2+\frac{\epsilon^{2}}{8}-\frac{\epsilon^{2}+\epsilon^{3}}{2\delta}+\frac{\pi^{2}}{2\delta}\\
+ & +\sum_{n=1}^{\infty}2\ln\left(1+w^{n}\right)+\sum_{n=1}^{\infty}\frac{w^{n}}{\left(1+w^{n}\right)^{2}}\left(\epsilon^{2}+\epsilon^{3}\right)+\mathcal{O}\left(\epsilon^{3}\right)
 \end{align*}
 
 \end_inset
@@ -6481,12 +6692,39 @@ For two string interaction, the conformal mapping is
 
 \begin_inset Formula 
 \[
-\Re\ln\psi\left(x_{1},w\right)-\Re\ln\psi\left(x_{2},w\right)=\frac{\epsilon_{2}^{2}-\epsilon_{1}^{2}}{2\delta}
+\Re\ln\psi\left(x_{1},w\right)-\Re\ln\psi\left(x_{2},w\right)=\left(\epsilon_{1}^{2}-\epsilon_{2}^{2}\right)\left(8-\frac{1}{2\delta}+X\right)+\left(\epsilon_{1}^{3}-\epsilon_{2}^{3}\right)\left(X-\frac{1}{2\delta}\right),
 \]
 
 \end_inset
 
-The length of the cut is determined by
+ where 
+\begin_inset Formula 
+\[
+\epsilon_{1}=\frac{x_{1}}{z}+1,\quad\epsilon_{2}=\frac{w}{z}+1
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\Re\rho\left(\epsilon_{1},\epsilon_{2};\delta\right) & =\alpha_{1}\left(\epsilon_{1}^{2}-\epsilon_{2}^{2}\right)\left(8-\frac{1}{2\delta}+X\right)+\alpha_{1}\left(\epsilon_{1}^{3}-\epsilon_{2}^{3}\right)\left(X-\frac{1}{2\delta}\right)\\
+ & \equiv\alpha_{1}\left(\epsilon_{1}^{2}-\epsilon_{2}^{2}\right)A+\alpha_{1}\left(\epsilon_{1}^{3}-\epsilon_{2}^{3}\right)B
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\Re\frac{d\rho}{dz} & =\Re\frac{\partial\rho}{\partial\epsilon_{1}}\frac{d\epsilon_{1}}{dz}+\Re\frac{\partial\rho}{\partial\epsilon_{2}}\frac{d\epsilon_{2}}{dz}\\
+ & =\alpha_{1}\left(2\epsilon_{1}A+3\epsilon_{1}^{2}B\right)\left(-\frac{x_{1}}{z^{2}}\right)-\alpha_{1}\left(2\epsilon_{2}A+3\epsilon_{2}^{2}B\right)\left(-\frac{w}{z^{2}}\right)\\
+ & =2\frac{\alpha_{1}}{z^{2}}A\left(-\epsilon_{1}x_{1}+\epsilon_{2}w\right)+3\frac{\alpha_{1}}{z^{2}}B\left(-\epsilon_{1}^{2}x_{1}+\epsilon_{2}^{2}w\right)
+\end{align*}
+
+\end_inset
+
+ The length of the cut is determined by
 \begin_inset Formula 
 \begin{multline*}
 \frac{d}{dx}\ln\psi\left(x,w\right)=\frac{\sqrt{x}}{1-x}+\left(-\frac{1}{2}x^{-3/2}-\frac{1}{2}x^{-1/2}\right)+\frac{\ln x}{x\ln w}+\sum_{n=1}^{\infty}\left[-\frac{w^{n}}{1-w^{n}x}+\frac{w^{n}}{x^{2}\left(1-w^{n}/x\right)}\right]\\
