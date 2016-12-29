@@ -184,6 +184,14 @@ DT EnergyCalculator::EnergyCorrection(int M, int L)
 				delta = Chop(delta);
 				// delta is not necessary real!!!!
 				// assert(delta.imag() == 0);
+				//if (delta.imag() != 0)
+				//{
+				//	cout << "not real delta:" << delta; 
+				//	cout << ", M=" << M << ",L=" << L;
+				//	cout << ", E1=" << states2[i].Energy << ", E2=" << states1[j].Energy;
+				//	cout << ", state1=" << states2[i].Ops << ", state2=" << states1[j].Ops << endl;
+				//}
+
 				ret += delta /(E0 - states1[j].Energy - states2[i].Energy) ;
 			}
 		}
