@@ -584,23 +584,36 @@ void TestModesGenerator()
 	}
 }
 
-int main()
+int main(int argc, char *argv[])
 {
 	TestMatrixCS();
 	TestMatrixA();
 	TestStringBitMatrices();
 	//TestAllStates();
-	//TestVevCalculator();
-	TestEnergyCorrection();
-	RunEnergyCorrection(true);
-	//RunEnergyCorrectionForS(true);
-	//TestMatrices(4,1);
-	//TestOperatorVev();
 	TestPartition();
-	//TestBitManager();
-	//TestModesGenerator();
 	TestDividePartition();
 	TestDividePartition2();
 	TestDividePartition3();
+	//TestVevCalculator();
+	//TestMatrices(4,1);
+	//TestOperatorVev();
+	//TestBitManager();
+	//TestModesGenerator();
+	
+	TestEnergyCorrection();
+	
+	string s = "";	
+	if (argc >= 2) s = argv[1];
+
+	if (s == "-m")
+	{
+		RunEnergyCorrection(true);
+	}
+
+	if (s == "-s")
+	{
+		RunEnergyCorrectionForS(true);
+	}
+
 	return 0;
 }
