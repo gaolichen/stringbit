@@ -6608,7 +6608,142 @@ We now consider the matrix
 , then 
 \begin_inset Formula 
 \[
-\Omega_{\hat{n}\hat{k}}^{*}=-\sum_{m,l=1}^{M-1}C_{nm}^{-1}A_{lm}C_{kl}^{-1}=-\Omega_{nk}
+\Omega_{\hat{n}\hat{k}}^{*}=-\sum_{m,l=1}^{M-1}C_{nm}^{-1}A_{lm}^{*}C_{kl}^{-1}=-\Omega_{nk}
+\]
+
+\end_inset
+
+ If 
+\begin_inset Formula $n=M-1$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+\Omega_{M-1,\hat{k}}^{*}=\left(-i\right)\left(-1\right)\sum_{m,l=1}^{M-1}C_{M-1,m}^{-1}A_{lm}^{*}C_{k,l}^{-1}=i\Omega_{M-1,k}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We now consider the relation of matrices for 
+\begin_inset Formula $L$
+\end_inset
+
+ and 
+\begin_inset Formula $K$
+\end_inset
+
+.
+ also have 
+\begin_inset Formula 
+\[
+C_{mn}^{\left(K\right)}=-\frac{1-e^{2\pi imK/M}}{1-e^{2\pi imL/M}}C_{m,L+n-1}\equiv-u_{m}^{\left(K\right)}C_{m,L+n-1}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+C_{m,K+n-1}^{\left(K\right)}=-u_{m}^{\left(K\right)}C_{mn}^{\left(L\right)},\quad C_{m,M-1}^{\left(K\right)}=u_{m}C_{m,M-1}^{\left(L\right)}.
+\]
+
+\end_inset
+
+In matrix multiplication, we have
+\begin_inset Formula 
+\[
+C^{\left(K\right)}=\begin{pmatrix}u_{1}^{\left(K\right)}\\
+ & \ddots\\
+ &  & u_{M-1}^{\left(K\right)}
+\end{pmatrix}C^{\left(L\right)}\begin{pmatrix} & -\mathbf{I}_{L}\\
+-\mathbf{I}_{K}\\
+ &  & 1
+\end{pmatrix}.
+\]
+
+\end_inset
+
+ Similarly, for the 
+\begin_inset Formula $S$
+\end_inset
+
+ matrix
+\begin_inset Formula 
+\[
+S^{\left(K\right)}=\begin{pmatrix}u_{1}^{\left(K\right)}\\
+ & \ddots\\
+ &  & u_{M-1}^{\left(K\right)}
+\end{pmatrix}S^{\left(L\right)}\begin{pmatrix} & -\mathbf{I}_{L}\\
+-\mathbf{I}_{K}\\
+ &  & 1
+\end{pmatrix}.
+\]
+
+\end_inset
+
+It then follows 
+\begin_inset Formula 
+\[
+D^{\left(K\right)}=\begin{pmatrix} & -\mathbf{I}_{K}\\
+-\mathbf{I}_{L}\\
+ &  & 1
+\end{pmatrix}D^{\left(L\right)}\begin{pmatrix} & -\mathbf{I}_{L}\\
+-\mathbf{I}_{K}\\
+ &  & 1
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+D_{mn}^{\left(K\right)}=D_{L+m-1,L+n-1}^{\left(L\right)},\quad1\leq m,n<K
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+D_{m,K+n-1}^{\left(K\right)}=D_{L+m-1,n}^{\left(L\right)},\quad1\leq m<K,\,1\leq n<L
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+D_{m,M-1}^{\left(K\right)}=-D_{L+m-1,M-1}^{\left(L\right)},\quad1\leq m<K
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+D_{K+m-1,n}^{\left(K\right)}=D_{m,L+n-1}^{\left(L\right)},\quad1\leq m<L,\,1\leq n<K
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+D_{K+m-1,K+n-1}^{\left(K\right)}=D_{m,n}^{\left(L\right)},\quad1\leq m<L,\,1\leq n<L
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+D_{K+m-1,M-1}^{\left(K\right)}=-D_{m,M-1}^{\left(L\right)}\quad1\leq m<L
 \]
 
 \end_inset
