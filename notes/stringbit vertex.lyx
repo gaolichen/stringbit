@@ -2096,7 +2096,7 @@ Let us only consider the
 f_{0} & = & F_{0}=F_{0}^{\left(1\right)}\sqrt{\frac{L}{M}}+F_{0}^{\left(2\right)}\sqrt{\frac{K}{M}},\label{eq:overlap_f0}\\
 f_{n} & = & F_{n}^{\left(1\right)},\quad1\leq n\leq L-1,\\
 f_{n+L} & = & F_{n}^{\left(2\right)},\quad1\leq n\leq K-1,\\
-f_{M-1} & = & F_{0}^{\left(1\right)}\sqrt{\frac{K}{M}}-F_{0}^{\left(2\right)}\sqrt{\frac{L}{M}},\label{eq:overlap_fm1}
+f_{M-1} & = & e^{-i\pi/4}\left(F_{0}^{\left(1\right)}\sqrt{\frac{K}{M}}-F_{0}^{\left(2\right)}\sqrt{\frac{L}{M}}\right),\label{eq:overlap_fm1}
 \end{eqnarray}
 
 \end_inset
@@ -2162,10 +2162,10 @@ C_{0n}=C_{n0}=\delta_{0,n},\quad S_{0,n}=S_{n,0}=0,\quad0\leq n<M
 \begin{align}
 C_{mn} & =-\frac{1}{\sqrt{ML}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi i\left(n/L-m/M\right)}}\cos\left(\frac{n\pi}{2L}-\frac{m\pi}{2M}\right),\quad1\leq n<L\label{eq:overlap_C_mn1}\\
 C_{m,L+n-1} & =\frac{1}{\sqrt{MK}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi i\left(n/K-m/M\right)}}\cos\left(\frac{n\pi}{2K}-\frac{m\pi}{2M}\right),\quad1\leq n<K\\
-C_{m,M-1} & =-\frac{1}{\sqrt{LK}}\frac{1-e^{-2\pi imL/M}}{1-e^{2i\pi m/M}}\cos\left(\frac{m\pi}{2M}-\frac{\pi}{4}\right)e^{-i\pi/4},\\
+C_{m,M-1} & =-\frac{1}{\sqrt{LK}}\frac{1-e^{-2\pi imL/M}}{1-e^{2i\pi m/M}}\cos\left(\frac{m\pi}{2M}-\frac{\pi}{4}\right),\\
 S_{mn} & =-\frac{1}{\sqrt{ML}}\frac{1-e^{-2\pi imL/M}}{1-e^{2\pi i\left(n/L+m/M\right)}}\cos\left(\frac{n\pi}{2L}+\frac{m\pi}{2M}\right),\quad1\leq n<L\\
 S_{m,L+n-1} & =\frac{1}{\sqrt{MK}}\frac{1-e^{-2\pi imL/M}}{1-e^{2\pi i\left(n/K+m/M\right)}}\cos\left(\frac{n\pi}{2K}+\frac{m\pi}{2M}\right),\quad1\leq n<K\\
-S_{m,M-1} & =-\frac{1}{\sqrt{LK}}\frac{1-e^{-2\pi imL/M}}{1-e^{2\pi im/M}}\cos\left(\frac{m\pi}{2M}+\frac{\pi}{4}\right)e^{i\pi/4},\label{eq:overlap_S_mM1}
+S_{m,M-1} & =-\frac{1}{\sqrt{LK}}\frac{1-e^{-2\pi imL/M}}{1-e^{2\pi im/M}}\cos\left(\frac{m\pi}{2M}+\frac{\pi}{4}\right),\label{eq:overlap_S_mM1}
 \end{align}
 
 \end_inset
@@ -2802,7 +2802,7 @@ reference "eq:pert_vev"
 \end_inset
 
  can be interpreted as vacuum expectation value of the operator inside the
- braket.
+ bracket.
  We perform similar calculation for 
 \begin_inset Formula $W_{rst}^{\left(L,K\right)}$
 \end_inset
@@ -3215,7 +3215,7 @@ reference "eq:overlap_fm1"
  
 \begin_inset Formula 
 \[
-F_{0}^{\left(L\right)}=f_{0}\sqrt{\frac{L}{M}}+f_{M-1}\sqrt{\frac{K}{M}},\quad F_{0}^{\left(K\right)}=f_{0}\sqrt{\frac{K}{M}}-f_{M-1}\sqrt{\frac{L}{M}},
+F_{0}^{\left(L\right)}=f_{0}\sqrt{\frac{L}{M}}+f_{M-1}\sqrt{\frac{K}{M}}e^{i\pi/4},\quad F_{0}^{\left(K\right)}=f_{0}\sqrt{\frac{K}{M}}-f_{M-1}\sqrt{\frac{L}{M}}e^{i\pi/4},
 \]
 
 \end_inset
@@ -3560,13 +3560,13 @@ When
  matrices are 
 \begin_inset Formula 
 \begin{eqnarray*}
-C & = & \begin{pmatrix}1\end{pmatrix}\oplus\frac{1+\sqrt{3}}{4}\begin{pmatrix}e^{i\frac{\pi}{6}} & -e^{i\frac{\pi}{12}}\\
-e^{-i\frac{\pi}{6}} & e^{i\frac{5\pi}{12}}
+C & = & \begin{pmatrix}1\end{pmatrix}\oplus\frac{1+\sqrt{3}}{4}\begin{pmatrix}e^{i\frac{\pi}{6}} & -e^{i\frac{2\pi}{3}}\\
+e^{-i\frac{\pi}{6}} & e^{i\frac{2\pi}{3}}
 \end{pmatrix},\quad\left|\det C\right|=\frac{2+\sqrt{3}}{4}\\
-S & = & \begin{pmatrix}0\end{pmatrix}\oplus\frac{\sqrt{3}-1}{4}\begin{pmatrix}e^{-i\frac{\pi}{6}} & e^{-i\frac{5\pi}{12}}\\
-e^{i\frac{\pi}{6}} & e^{-i\frac{\pi}{12}}
-\end{pmatrix},\quad D=\begin{pmatrix}0\end{pmatrix}\oplus\left(2-\sqrt{3}\right)\begin{pmatrix}0 & e^{i\frac{3\pi}{4}}\\
-e^{-i\frac{\pi}{4}} & 0
+S & = & \begin{pmatrix}0\end{pmatrix}\oplus\frac{\sqrt{3}-1}{4}\begin{pmatrix}e^{-i\frac{\pi}{6}} & e^{-i\frac{2\pi}{3}}\\
+e^{-i\frac{5\pi}{6}} & e^{-i\frac{\pi}{3}}
+\end{pmatrix},\quad D=\begin{pmatrix}0\end{pmatrix}\oplus\left(2-\sqrt{3}\right)\begin{pmatrix}0 & i\\
+-i & 0
 \end{pmatrix},
 \end{eqnarray*}
 
@@ -3594,13 +3594,13 @@ A^{\left(V\right)} & = & \begin{pmatrix}0 & i\frac{\sqrt{3}}{2} & \frac{\sqrt{3}
 -\frac{i\sqrt{3}}{2} & 0 & 0\\
 -\frac{\sqrt{3}}{2} & 0 & 0
 \end{pmatrix}\\
-\Omega^{\left(V\right)} & = & \begin{pmatrix}0 & \sqrt{\frac{3}{2}}e^{i\frac{3\pi}{4}} & -\frac{\sqrt{\frac{3}{2}}}{2+\sqrt{3}}\\
-\sqrt{\frac{3}{2}}e^{-i\frac{\pi}{4}} & 0 & \frac{6e^{i\frac{3\pi}{4}}}{2+\sqrt{3}}\\
-\frac{\sqrt{\frac{3}{2}}}{2+\sqrt{3}} & \frac{6}{2+\sqrt{3}}e^{-i\frac{\pi}{4}} & 0
+\Omega^{\left(V\right)} & = & \begin{pmatrix}0 & \sqrt{\frac{3}{2}}e^{3i\pi/4} & \sqrt{\frac{3}{2}}\left(2-\sqrt{3}\right)e^{3i\pi/4}\\
+\sqrt{\frac{3}{2}}e^{-i\pi/4} & 0 & 6i\left(2-\sqrt{3}\right)\\
+\sqrt{\frac{3}{2}}\left(2-\sqrt{3}\right)e^{-i\pi/4} & -6i\left(2-\sqrt{3}\right) & 0
 \end{pmatrix},\\
-\Omega^{\left(W\right)} & = & \begin{pmatrix}0 & \sqrt{\frac{3}{2}}e^{i\frac{3\pi}{4}} & -\frac{\sqrt{\frac{3}{2}}}{2+\sqrt{3}}\\
-\sqrt{\frac{3}{2}}e^{-i\frac{\pi}{4}} & 0 & 0\\
-\frac{\sqrt{\frac{3}{2}}}{2+\sqrt{3}} & 0 & 0
+\Omega^{\left(W\right)} & = & \begin{pmatrix}0 & \sqrt{\frac{3}{2}}e^{3i\pi/4} & \sqrt{\frac{3}{2}}\left(2-\sqrt{3}\right)e^{3i\pi/4}\\
+\sqrt{\frac{3}{2}}e^{-i\pi/4} & 0 & 0\\
+\sqrt{\frac{3}{2}}\left(2-\sqrt{3}\right)e^{-i\pi/4} & 0 & 0
 \end{pmatrix},\\
 \gamma^{\prime\left(V\right)} & = & -2\left(3-\sqrt{3}\right)+3\xi,\quad\gamma^{\prime\left(W\right)}=-4\sqrt{3}+6\xi.
 \end{eqnarray*}
@@ -3614,7 +3614,7 @@ The operators
  are 
 \begin_inset Formula 
 \[
-f_{0}=F_{0},\quad f_{1}=F_{1}^{\left(2\right)},\quad f_{2}=\sqrt{\frac{2}{3}}F_{0}^{\left(1\right)}-F_{0}^{\left(2\right)}\sqrt{\frac{2}{3}}.
+f_{0}=F_{0},\quad f_{1}=F_{1}^{\left(2\right)},\quad f_{2}=e^{-i\pi/4}\left(\sqrt{\frac{2}{3}}F_{0}^{\left(1\right)}-F_{0}^{\left(2\right)}\sqrt{\frac{1}{3}}\right).
 \]
 
 \end_inset
@@ -3888,7 +3888,7 @@ So we need to calculate
 \begin{align*}
 \left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V} & =\frac{2}{M}\gamma^{\prime\left(V\right)}\zero{\left\langle f_{1}f_{0}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle }+\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle f_{1}f_{0}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \\
  & =\frac{4}{M}\Omega_{0n}^{\left(V\right)}\left\langle f_{1}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \\
- & =\frac{4}{M}\Omega_{01}^{\left(V\right)}=-\frac{2-2i}{\sqrt{3}},
+ & =\frac{4}{M}\Omega_{01}^{\left(V\right)}=2\sqrt{\frac{2}{3}}e^{3i\pi/4},
 \end{align*}
 
 \end_inset
@@ -3897,7 +3897,7 @@ So we need to calculate
 \begin_inset Formula 
 \begin{align*}
 \left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{V} & =\frac{2}{M}\gamma^{\prime\left(V\right)}\left\langle f_{1}f_{2}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle f_{1}f_{2}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \\
- & =-\frac{2}{M}\gamma^{\prime\left(V\right)}M_{12}-\frac{4}{M}\Omega_{12}^{\left(V\right)}=4\left(1-\frac{1}{\sqrt{3}}+\xi\right)e^{-i\frac{\pi}{4}}.
+ & =-\frac{2}{M}\gamma^{\prime\left(V\right)}D_{12}-\frac{4}{M}\Omega_{12}^{\left(V\right)}=-4i\left(1-\frac{1}{\sqrt{3}}+\xi-\frac{\sqrt{3}}{2}\xi\right).
 \end{align*}
 
 \end_inset
@@ -3905,8 +3905,8 @@ So we need to calculate
  Likewise
 \begin_inset Formula 
 \begin{align*}
-\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W} & =\frac{4}{M}\Omega_{01}^{\left(W\right)}=-\frac{2-2i}{\sqrt{3}},\\
-\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{W} & =-\frac{2}{M}\gamma^{\prime\left(W\right)}M_{12}-\frac{4}{M}\Omega_{12}^{\left(W\right)}=8\left(1-\frac{2}{\sqrt{3}}+\xi-\frac{\sqrt{3}}{2}\xi\right)e^{-i\frac{\pi}{4}}.
+\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W} & =\frac{4}{M}\Omega_{01}^{\left(W\right)}=2\sqrt{\frac{2}{3}}e^{3i\pi/4},\\
+\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{W} & =-\frac{2}{M}\gamma^{\prime\left(W\right)}D_{12}-\frac{4}{M}\Omega_{12}^{\left(W\right)}=-8i\left(1-\frac{2}{\sqrt{3}}+\xi-\frac{\sqrt{3}}{2}\xi\right).
 \end{align*}
 
 \end_inset
@@ -3950,8 +3950,8 @@ reference "eq:exmp_deltaEp"
  Now the matrices and constants are 
 \begin_inset Formula 
 \[
-C=\begin{pmatrix}1\end{pmatrix}\oplus\frac{1+\sqrt{3}}{4}\begin{pmatrix}i & e^{\frac{3\pi}{4}}\\
--i & e^{\frac{3\pi}{4}}
+C=\begin{pmatrix}1\end{pmatrix}\oplus\frac{1+\sqrt{3}}{4}\begin{pmatrix}i & -1\\
+-i & -1
 \end{pmatrix},\quad\left|\det C\right|=\frac{2+\sqrt{3}}{4},
 \]
 
@@ -3960,10 +3960,10 @@ C=\begin{pmatrix}1\end{pmatrix}\oplus\frac{1+\sqrt{3}}{4}\begin{pmatrix}i & e^{\
 
 \begin_inset Formula 
 \[
-S=\begin{pmatrix}0\end{pmatrix}\oplus\frac{\sqrt{3}-1}{4}\begin{pmatrix}i & -e^{\frac{\pi}{4}}\\
-i & e^{\frac{\pi}{4}}
-\end{pmatrix},\quad D=\begin{pmatrix}0\end{pmatrix}\oplus\left(2-\sqrt{3}\right)\begin{pmatrix}0 & e^{-i\frac{\pi}{4}}\\
-e^{i\frac{3\pi}{4}} & 0
+S=\begin{pmatrix}0\end{pmatrix}\oplus\frac{\sqrt{3}-1}{4}\begin{pmatrix}i & -1\\
+i & 1
+\end{pmatrix},\quad D=\begin{pmatrix}0\end{pmatrix}\oplus\left(2-\sqrt{3}\right)\begin{pmatrix}0 & -i\\
+i & 0
 \end{pmatrix},
 \]
 
@@ -3984,9 +3984,9 @@ A^{\left(V\right)}=0,\quad A^{\left(W\right)}=\begin{pmatrix}0 & \frac{1}{2}\lef
 \begin_inset Formula 
 \[
 \Omega^{\left(V\right)}=0,\quad\Omega^{\left(W\right)}=\left(\begin{array}{ccc}
-0 & \sqrt{\frac{3}{2}}e^{i\frac{3\pi}{4}} & \sqrt{6}-\frac{3}{\sqrt{2}}\\
-\sqrt{\frac{3}{2}}e^{-i\frac{\pi}{4}} & 0 & 0\\
-\frac{3}{\sqrt{2}}-\sqrt{6} & 0 & 0
+0 & \sqrt{\frac{3}{2}}e^{3i\pi/4} & \left(\sqrt{6}-\frac{3}{\sqrt{2}}\right)e^{-i\pi/4}\\
+\sqrt{\frac{3}{2}}e^{-i\pi/4} & 0 & 0\\
+\left(\sqrt{6}-\frac{3}{\sqrt{2}}\right)e^{3i\pi/4} & 0 & 0
 \end{array}\right),
 \]
 
@@ -4373,7 +4373,7 @@ For
 \begin_inset Formula 
 \begin{align*}
 \left\langle f_{2}f_{0}\right\rangle _{V} & =\frac{2}{M}\gamma^{\prime\left(V\right)}\zero{\left\langle f_{2}f_{0}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle }+\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle f_{2}f_{0}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \\
- & =\frac{4}{M}\Omega_{02}^{\left(V\right)}=2\sqrt{2}\left(1-\frac{2}{\sqrt{3}}\right),
+ & =\frac{4}{M}\Omega_{02}^{\left(V\right)}=2\sqrt{2}\left(\frac{2}{\sqrt{3}}-1\right)e^{3i\pi/4},
 \end{align*}
 
 \end_inset
@@ -4381,7 +4381,7 @@ For
  Likewise
 \begin_inset Formula 
 \[
-\left\langle 1\right\rangle _{W}=\frac{2}{M}\gamma^{\prime\left(W\right)}=-\frac{8}{\sqrt{3}}+4\xi,\quad\left\langle f_{2}f_{0}\right\rangle _{W}=\frac{4}{M}\Omega_{02}^{\left(W\right)}=2\sqrt{2}\left(1-\frac{2}{\sqrt{3}}\right).
+\left\langle 1\right\rangle _{W}=\frac{2}{M}\gamma^{\prime\left(W\right)}=-\frac{8}{\sqrt{3}}+4\xi,\quad\left\langle f_{2}f_{0}\right\rangle _{W}=\frac{4}{M}\Omega_{02}^{\left(W\right)}=2\sqrt{2}\left(\frac{2}{\sqrt{3}}-1\right)e^{3i\pi/4}.
 \]
 
 \end_inset
@@ -4393,7 +4393,7 @@ For
 , 
 \begin_inset Formula 
 \[
-\left\langle 1\right\rangle _{V}=2\xi,\quad\left\langle f_{2}f_{0}\right\rangle _{V}=0,\quad\left\langle 1\right\rangle _{W}=-\frac{8}{\sqrt{3}}+4\xi,\quad\left\langle f_{2}f_{0}\right\rangle _{W}=-2\sqrt{2}\left(1-\frac{2}{\sqrt{3}}\right)
+\left\langle 1\right\rangle _{V}=2\xi,\quad\left\langle f_{2}f_{0}\right\rangle _{V}=0,\quad\left\langle 1\right\rangle _{W}=-\frac{8}{\sqrt{3}}+4\xi,\quad\left\langle f_{2}f_{0}\right\rangle _{W}=2\sqrt{2}\left(\frac{2}{\sqrt{3}}-1\right)e^{-i\pi/4}
 \]
 
 \end_inset

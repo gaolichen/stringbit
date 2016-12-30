@@ -85,7 +85,7 @@ CDT StringBitMatrices::Cmn2(int M, int L, int K, int m, int n)
 
 CDT StringBitMatrices::CmM(int M, int L, int K, int m)
 {
-        return DotW(M, L, K, m) * cos(m * PI / (2 * M) - PI / 4) * ByPolar(-PI / 4);
+        return DotW(M, L, K, m) * cos(m * PI / (2 * M) - PI / 4);// * ByPolar(-PI / 4);
 }
 
 CDT StringBitMatrices::Smn1(int M, int L, int K, int m, int n)
@@ -100,7 +100,7 @@ CDT StringBitMatrices::Smn2(int M, int L, int K, int m, int n)
 
 CDT StringBitMatrices::SmM(int M, int L, int K, int m)
 {
-        return DotW(M, L, K, m) * cos(m * PI / (2 * M) + PI / 4) * ByPolar(PI / 4);
+        return DotW(M, L, K, m) * cos(m * PI / (2 * M) + PI / 4); //* ByPolar(PI / 4);
 }
 
 CDT StringBitMatrices::ElementC(int M, int L, int K, int m, int n)
