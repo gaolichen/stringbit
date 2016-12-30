@@ -329,7 +329,8 @@ key "Bergman:1995wh"
 , and they satisfy the graded bracket relations 
 \begin_inset Formula 
 \begin{multline}
-\left[\phi_{a_{1}\cdots a_{n}}\left(\mathbf{x}\right)_{\alpha}^{\beta},\bar{\phi}_{b_{1}\cdots b_{m}}\left(\mathbf{y}\right)_{\gamma}^{\delta}\right]_{\pm}\equiv\phi_{a_{1}\cdots a_{n}}\left(\mathbf{x}\right)_{\alpha}^{\beta}\bar{\phi}_{b_{1}\cdots b_{m}}\left(\mathbf{y}\right)_{\gamma}^{\delta}-\left(-\right)^{mn}\bar{\phi}_{b_{1}\cdots b_{m}}\left(\mathbf{y}\right)_{\gamma}^{\delta}\phi_{a_{1}\cdots a_{n}}\left(\mathbf{x}\right)_{\alpha}^{\beta}\\
+\left[\phi_{a_{1}\cdots a_{n}}\left(\mathbf{x}\right)_{\alpha}^{\beta},\bar{\phi}_{b_{1}\cdots b_{m}}\left(\mathbf{y}\right)_{\gamma}^{\delta}\right]_{\pm}\\
+\equiv\phi_{a_{1}\cdots a_{n}}\left(\mathbf{x}\right)_{\alpha}^{\beta}\bar{\phi}_{b_{1}\cdots b_{m}}\left(\mathbf{y}\right)_{\gamma}^{\delta}-\left(-\right)^{mn}\bar{\phi}_{b_{1}\cdots b_{m}}\left(\mathbf{y}\right)_{\gamma}^{\delta}\phi_{a_{1}\cdots a_{n}}\left(\mathbf{x}\right)_{\alpha}^{\beta}\\
 =\delta_{mn}\delta_{\alpha}^{\delta}\delta_{\gamma}^{\beta}\delta\left(\mathbf{x}-\mathbf{y}\right)\sum_{P}\left(-\right)^{P}\delta_{a_{1}b_{P_{1}}}\cdots\delta_{a_{n}b_{P_{n}}}.\label{eq:intro-phi-phib-relation}
 \end{multline}
 
@@ -1764,6 +1765,15 @@ reference "eq:ham_alpha_prod"
 \end_inset
 
  shows.
+ Similarly, we can show 
+\begin_inset Formula $\int d^{M}\theta\,\bar{\psi}_{G}\psi_{G}=1$
+\end_inset
+
+ for even 
+\begin_inset Formula $M$
+\end_inset
+
+.
  To show
 \begin_inset Formula $\int d^{M}\theta\,\bar{\psi}_{G}\psi_{r}=0$
 \end_inset
@@ -1772,7 +1782,7 @@ reference "eq:ham_alpha_prod"
 \begin_inset Formula $r\neq G$
 \end_inset
 
-, it sufficed to show that 
+, it suffices to show that 
 \begin_inset Formula $\int d^{M}\theta\,\bar{\psi}_{G}F_{k}^{\dagger}\psi^{\prime}$
 \end_inset
 
