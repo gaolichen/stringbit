@@ -329,8 +329,8 @@ key "Bergman:1995wh"
 , and they satisfy the graded bracket relations 
 \begin_inset Formula 
 \begin{multline}
-\left[\phi_{a_{1}\cdots a_{n}}\left(\mathbf{x}\right)_{\alpha}^{\beta},\bar{\phi}_{b_{1}\cdots b_{m}}\left(\mathbf{y}\right)_{\gamma}^{\delta}\right]_{\pm}\equiv\phi_{a_{1}\cdots a_{n}}\left(\mathbf{x}\right)_{\alpha}^{\beta}\bar{\phi}_{b_{1}\cdots b_{m}}\left(\mathbf{y}\right)_{\gamma}^{\delta}-\left(-1\right)^{mn}\bar{\phi}_{b_{1}\cdots b_{m}}\left(\mathbf{y}\right)_{\gamma}^{\delta}\phi_{a_{1}\cdots a_{n}}\left(\mathbf{x}\right)_{\alpha}^{\beta}\\
-=\delta_{mn}\delta_{\alpha}^{\delta}\delta_{\gamma}^{\beta}\delta\left(\mathbf{x}-\mathbf{y}\right)\sum_{P}\left(-1\right)^{P}\delta_{a_{1}b_{P_{1}}}\cdots\delta_{a_{n}b_{P_{n}}}.\label{eq:intro-phi-phib-relation}
+\left[\phi_{a_{1}\cdots a_{n}}\left(\mathbf{x}\right)_{\alpha}^{\beta},\bar{\phi}_{b_{1}\cdots b_{m}}\left(\mathbf{y}\right)_{\gamma}^{\delta}\right]_{\pm}\equiv\phi_{a_{1}\cdots a_{n}}\left(\mathbf{x}\right)_{\alpha}^{\beta}\bar{\phi}_{b_{1}\cdots b_{m}}\left(\mathbf{y}\right)_{\gamma}^{\delta}-\left(-\right)^{mn}\bar{\phi}_{b_{1}\cdots b_{m}}\left(\mathbf{y}\right)_{\gamma}^{\delta}\phi_{a_{1}\cdots a_{n}}\left(\mathbf{x}\right)_{\alpha}^{\beta}\\
+=\delta_{mn}\delta_{\alpha}^{\delta}\delta_{\gamma}^{\beta}\delta\left(\mathbf{x}-\mathbf{y}\right)\sum_{P}\left(-\right)^{P}\delta_{a_{1}b_{P_{1}}}\cdots\delta_{a_{n}b_{P_{n}}}.\label{eq:intro-phi-phib-relation}
 \end{multline}
 
 \end_inset
@@ -350,14 +350,10 @@ In Fock space, a closed string is represented by a color singlet trace operator
 \end_inset
 
  in the trace operator is the eigenvalue of the bit number operator 
-\begin_inset Formula 
-\[
-M=\sum_{n}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}},
-\]
-
+\begin_inset Formula $M=\sum_{n}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}$
 \end_inset
 
- where repeated indices implies summation.
+, where repeated indices implies summation.
 \end_layout
 
 \begin_layout Standard
@@ -1285,23 +1281,32 @@ To obtain the energy spectrum, we need to find the ground energy
 \end_inset
 
 , which is annihilated by all lowering operators.
- Since the zero mode do not change the energy eigenvalue, there are degeneracy
- in the ground state.
+ Since the zero mode do not change energy eigenvalue, there are degeneracies
+ in ground state.
  To eliminate the ambiguity, we require the ground eigenfunction to be annihilat
 ed by the zero mode 
 \begin_inset Formula $F_{0}$
 \end_inset
 
  as well.
- By inspection, we find the ground eigenfunction as 
+ By inspection, we find that the ground eigenfunction can be 
 \begin_inset Formula 
 \begin{equation}
-\psi_{G}=\prod_{k=1}^{\left\lfloor \left(M-1\right)/2\right\rfloor }\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right).\label{eq:ham_ground_eigenfunction}
+\psi_{G}=\prod_{k=1}^{\left\lfloor \left(M-1\right)/2\right\rfloor }\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right),\label{eq:ham_ground_eigenfunction}
 \end{equation}
 
 \end_inset
 
-To verify the requirement 
+ where 
+\begin_inset Formula $\left\lfloor \left(M-1\right)/2\right\rfloor $
+\end_inset
+
+ indicates integral part of 
+\begin_inset Formula $\left(M-1\right)/2$
+\end_inset
+
+.
+ To verify the requirement 
 \begin_inset Formula $F_{m}\psi_{G}=0$
 \end_inset
 
@@ -1704,7 +1709,11 @@ reference "eq:ham_normalization"
 \end_inset
 
 .
- First, we have 
+ For odd 
+\begin_inset Formula $M$
+\end_inset
+
+, 
 \begin_inset Formula 
 \begin{eqnarray*}
 \int d^{M}\theta\,\bar{\psi}_{G}\psi_{G} & = & \left(-i\right)^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\,\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\left(c_{i}-s_{i}\alpha_{M-i}\alpha_{i}\right)\\
@@ -1716,17 +1725,46 @@ reference "eq:ham_normalization"
 \end_inset
 
  where in the last step we used
-\begin_inset Formula 
-\[
-\int d^{M}\theta\,\prod_{i=1}^{M}\alpha_{M-i}=i^{\left\lfloor \left(M-1\right)/2\right\rfloor }=\begin{cases}
-i^{\left(M-1\right)/2} & \text{for odd }M\\
-\left(-i\right)^{M/2-1} & \text{for even }M
-\end{cases}.
-\]
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+We do not prove the formula 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_alpha_prod"
 
 \end_inset
 
-To show
+ here.
+ But we have verified it by Mathematica program.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\int d^{M}\theta\,\prod_{i=1}^{M}\alpha_{M-i}\equiv\int d^{M}\theta\,\alpha_{M-1}\alpha_{M-2}\cdots\alpha_{0}=i^{\left\lfloor \left(M-1\right)/2\right\rfloor }.\label{eq:ham_alpha_prod}
+\end{equation}
+
+\end_inset
+
+Note that in the remainder of this paper, all the products defined by the
+ '
+\begin_inset Formula $\prod$
+\end_inset
+
+' symbol are ordered by the index that the product runs over, as the first
+ equality of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_alpha_prod"
+
+\end_inset
+
+ shows.
+ To show
 \begin_inset Formula $\int d^{M}\theta\,\bar{\psi}_{G}\psi_{r}=0$
 \end_inset
 
@@ -1734,7 +1772,7 @@ To show
 \begin_inset Formula $r\neq G$
 \end_inset
 
-, it suffice to show that 
+, it sufficed to show that 
 \begin_inset Formula $\int d^{M}\theta\,\bar{\psi}_{G}F_{k}^{\dagger}\psi^{\prime}$
 \end_inset
 
@@ -1746,7 +1784,7 @@ To show
 \begin_inset Formula $\psi^{\prime}$
 \end_inset
 
- .
+.
  If 
 \begin_inset Formula $k=0$
 \end_inset
@@ -2256,7 +2294,7 @@ reference "eq:overlap_psi_M"
 The corresponding conjugate function is
 \begin_inset Formula 
 \begin{equation}
-\bar{\psi}_{0}=\left|\det C\right|^{1/2}\exp\left(\frac{1}{2}\sum_{kl}\tilde{f}_{k}D_{kl}^{\dagger}\tilde{f}_{l}\right)\bar{\psi}_{0}^{\left(2\right)}\bar{\psi}_{0}^{\left(1\right)},\label{eq:overlap_psibar_M}
+\bar{\psi}_{G}=\left|\det C\right|^{1/2}\exp\left(\frac{1}{2}\sum_{kl}\tilde{f}_{k}D_{kl}^{\dagger}\tilde{f}_{l}\right)\bar{\psi}_{0}^{\left(2\right)}\bar{\psi}_{0}^{\left(1\right)},\label{eq:overlap_psibar_M}
 \end{equation}
 
 \end_inset
@@ -2603,7 +2641,8 @@ The expression of
 \begin_inset Formula $W_{rpq}^{\left(L,K\right)}$
 \end_inset
 
- shows that when two smaller chains join to a large chain, there are 
+ shows that, when two smaller chains join into a large chain, there are
+ 
 \begin_inset Formula $K\times L$
 \end_inset
 
@@ -2681,7 +2720,7 @@ V_{qpr}^{\left(K,L\right)} & =\left(-\right)^{Kg_{p}+Lg_{q}}M\int d\theta\,\tild
 \end_inset
 
  passing through 
-\begin_inset Formula $\psi_{G}^{\left(L\right)}$
+\begin_inset Formula $\bar{\psi}_{G}^{\left(L\right)}$
 \end_inset
 
 .
@@ -2752,8 +2791,8 @@ reference "eq:pert_vev"
 
 \end_inset
 
- can be is interpreted as vacuum expectation value of the operator inside
- the braket.
+ can be interpreted as vacuum expectation value of the operator inside the
+ braket.
  We perform similar calculation for 
 \begin_inset Formula $W_{rst}^{\left(L,K\right)}$
 \end_inset
@@ -3184,7 +3223,7 @@ F_{0}^{\left(L\right)}=f_{0}\sqrt{\frac{L}{M}}+f_{M-1}\sqrt{\frac{K}{M}},\quad F
 
 \end_inset
 
- So the summation over 
+ So the sum over 
 \begin_inset Formula $F_{0}^{\left(K\right)}$
 \end_inset
 
@@ -3988,7 +4027,7 @@ reference "tab:Energy-eigenstates-2"
 \end_inset
 
  shows, the energy eigenstates of smaller chains are different.
- The energy correction now is now given by 
+ The energy correction now is given by 
 \begin_inset Formula 
 \begin{multline*}
 \Delta E_{G}=\frac{1}{N^{2}}\sum_{L=1}^{2}\frac{KLM\left|\det C\right|^{2}}{E_{G}-E_{G}^{\left(2\right)}-0}\left(\left\langle 1\right\rangle _{W}^{*}\left\langle 1\right\rangle _{V}+\left\langle f_{2}f_{0}\right\rangle _{W}^{*}\left\langle f_{2}f_{0}\right\rangle _{V}\right)^{2}\\
@@ -5301,8 +5340,8 @@ Conclusion
 \end_layout
 
 \begin_layout Standard
-We have presented a formalism to calculation three string interaction vertex
- for stable string bit model and its application in 
+We have presented a formalism to calculate the three string interaction
+ vertex for stable string bit model and its application in the 
 \begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
 \end_inset
 
@@ -5336,7 +5375,7 @@ The numerical computation of ground energy correction shows that the
 \end_inset
 
 .
- In general, the divergence become more severe for large 
+ In general, the divergence becomes more severe for large 
 \begin_inset Formula $s$
 \end_inset
 

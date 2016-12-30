@@ -1,0 +1,217 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{babel}
+\usepackage{url}
+\usepackage[numbers,sort&compress]{natbib}
+\bibliographystyle{unsrt}
+
+\usepackage[subrefformat=parens,labelformat=parens]{subfig}
+\usepackage{cancel}
+\newcommand{\zero}[1] {\cancelto{0}{#1}}
+\newcommand{\tr}{\mathrm{Tr}\,}
+\newcommand{\ba}{\bar{a}}
+\newcommand{\bb}{\bar{b}}
+\newcommand{\normord}[1]{{:}\!\mathrel{#1}\!{:}}
+\newcommand{\ket}[1]{\left|#1\right\rangle}
+\newcommand{\bra}[1]{\left\langle #1\right|}
+\newcommand{\ketp}[1]{\left|#1\right\} }
+\newcommand{\brap}[1]{\left\{ #1\right|}
+\newcommand{\dprod}[2]{\left\langle #1|#2\right\rangle}
+\newcommand{\dprodp}[2]{\left\{ #1|#2\right\} }
+\newcommand{\mat}[1]{\mathbf{#1}}
+\newcommand{\g}{\mathrm{g}}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\begin_inset Formula $s=2$
+\end_inset
+
+ case
+\end_layout
+
+\begin_layout Standard
+The Hamiltonian in the paper can be written as 
+\begin_inset Formula 
+\[
+H_{S}=H_{1}+H_{2}+H_{3}+H_{4}+H_{5}+s\xi\Delta H,
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $H_{i}$
+\end_inset
+
+ are
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H_{1}=\frac{2}{N}\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{s-2n}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+H_{2}=\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{bb_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{ba_{1}\cdots a_{n}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+H_{3}=\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{ba_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{bb_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+H_{4}=\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{bb_{1}\cdots b_{k}}\phi_{ba_{1}\cdots a_{n}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+H_{5}=-\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{ba_{1}\cdots a_{n}}\bar{\phi}_{bb_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}}.
+\]
+
+\end_inset
+
+ For 
+\begin_inset Formula $s=2$
+\end_inset
+
+, define 
+\begin_inset Formula 
+\[
+a=\phi,\quad b=\phi_{1},\quad c=\phi_{12},\quad d=\phi_{2}
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{align*}
+H_{1} & =\frac{4}{N}\tr\bar{a}\left(\bar{a}a+\bar{b}b+\bar{d}d+\bar{c}\bar{c}\right)a\\
+ & -\frac{4}{N}\tr\bar{c}\left(\bar{a}a+\bar{b}b+\bar{d}d+\bar{c}c\right)c
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+H_{2} & =\frac{2}{N}\left[\tr\bar{\phi}\bar{\phi}_{1}\phi\phi_{1}+\tr\bar{\phi}\bar{\phi}_{2}\phi\phi_{2}-\tr\bar{\phi}\bar{\phi}_{21}\phi_{1}\phi_{2}-\tr\bar{\phi}\bar{\phi}_{12}\phi_{2}\phi_{1}\right]\\
+ & +\frac{2}{N}\left[\tr\bar{\phi}_{1}\bar{\phi}_{2}\phi\phi_{21}-\tr\bar{\phi}_{1}\bar{\phi}_{21}\phi_{1}\phi_{21}+\tr\bar{\phi}_{2}\bar{\phi}_{1}\phi\phi_{12}-\tr\bar{\phi}_{2}\bar{\phi}_{12}\phi_{2}\phi_{12}\right]\\
+ & =\frac{2}{N}\left(\tr\bar{a}\bar{b}ab+\tr\bar{a}\bar{d}ad+\tr\bar{a}\bar{c}bd-\tr\bar{a}\bar{c}db\right)\\
+ & +\frac{2}{N}\left(-\tr\bar{b}\bar{d}ac-\tr b\bar{c}bc+\tr\bar{d}\bar{b}ac-\tr\bar{d}\bar{c}dc\right)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+H_{3} & =\frac{2}{N}\left(\tr\bar{\phi}_{1}\bar{\phi}\phi_{1}\phi+\tr\bar{\phi}_{2}\bar{\phi}\phi_{2}\phi-\tr\bar{\phi}_{2}\bar{\phi}_{1}\phi_{21}\phi-\tr\bar{\phi}_{1}\bar{\phi}_{2}\phi_{12}\phi\right)\\
+ & +\frac{2}{N}\left(\tr\bar{\phi}_{21}\bar{\phi}\phi_{2}\phi_{1}+\tr\bar{\phi}_{12}\bar{\phi}\phi_{1}\phi_{2}-\tr\bar{\phi}_{21}\bar{\phi}_{1}\phi_{21}\phi_{1}-\tr\bar{\phi}_{12}\bar{\phi}_{2}\phi_{12}\phi_{2}\right)\\
+ & =\frac{2}{N}\left(\tr\bar{b}\bar{a}ba+\tr\bar{d}\bar{a}da+\tr\bar{d}\bar{b}ca-\tr\bar{b}\bar{d}ca\right)\\
+ & +\frac{2}{N}\left(-\tr\bar{c}\bar{a}db+\tr\bar{c}\bar{a}bd-\tr\bar{c}\bar{b}cb-\tr\bar{c}\bar{d}cd\right)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+H_{4} & =\frac{2i}{N}\left(\tr\bar{\phi}\bar{\phi}\phi_{1}\phi_{1}+\tr\bar{\phi}\bar{\phi}\phi_{2}\phi_{2}-\tr\bar{\phi}\bar{\phi}_{1}\phi_{21}\phi_{2}-\tr\bar{\phi}\bar{\phi}_{2}\phi_{12}\phi_{1}\right)\\
+ & +\frac{2i}{N}\left(\tr\bar{\phi}_{1}\bar{\phi}\phi_{2}\phi_{21}+\tr\bar{\phi}_{2}\bar{\phi}\phi_{1}\phi_{12}-\tr\bar{\phi}_{1}\bar{\phi}_{1}\phi_{21}\phi_{21}-\tr\bar{\phi}_{2}\bar{\phi}_{2}\phi_{12}\phi_{12}\right)\\
+ & =\frac{2i}{N}\left(\tr\bar{a}\bar{a}bb+\tr\bar{a}\bar{a}dd+\tr\bar{a}\bar{b}cd-\tr\bar{a}\bar{d}cb\right)\\
+ & +\frac{2i}{N}\left(-\tr\bar{b}\bar{a}dc+\tr\bar{d}\bar{a}bc-\tr\bar{b}\bar{b}cc-\tr\bar{d}\bar{d}cc\right)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+H_{5} & =-\frac{2i}{N}\left(\tr\bar{\phi}_{1}\bar{\phi}_{1}\phi\phi+\tr\bar{\phi}_{2}\bar{\phi}_{2}\phi\phi-\tr\bar{\phi}_{1}\bar{\phi}_{12}\phi_{2}\phi-\tr\bar{\phi}_{2}\bar{\phi}_{21}\phi_{1}\phi\right)\\
+ & -\frac{2i}{N}\left(\tr\bar{\phi}_{21}\bar{\phi}_{2}\phi\phi_{1}+\tr\bar{\phi}_{12}\bar{\phi}_{1}\phi\phi_{2}-\tr\bar{\phi}_{21}\bar{\phi}_{21}\phi_{1}\phi_{1}-\tr\bar{\phi}_{12}\bar{\phi}_{12}\phi_{2}\phi_{2}\right)\\
+ & =-\frac{2i}{N}\left(\tr\bar{b}\bar{b}aa+\tr\bar{d}\bar{d}aa-\tr\bar{b}\bar{c}da+\tr\bar{d}\bar{c}ba\right)\\
+ & -\frac{2i}{N}\left(-\tr\bar{c}\bar{d}ab+\tr\bar{c}\bar{b}ad-\tr\bar{c}\bar{c}bb-\tr\bar{c}\bar{c}dd\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
