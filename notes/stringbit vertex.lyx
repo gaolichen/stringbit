@@ -6367,15 +6367,7 @@ reference "eq:overlap_S_mM1"
 ,
 \begin_inset Formula 
 \begin{equation}
-C_{mn}=C_{M-m,\hat{n}}^{*},\quad S_{mn}=-S_{M-m,\hat{n}}^{*},\quad1\leq n<M-1,\label{eq:overlap_CS_symmetry1}
-\end{equation}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{equation}
-C_{m,M-1}=-iC_{M-m,M-1}^{*},\quad S_{m,M-1}=-iS_{M-m,M-1}^{*}.\label{eq:overlap_CS_symmetry2}
+C_{mn}=C_{M-m,\hat{n}}^{*},\quad S_{mn}=-S_{M-m,\hat{n}}^{*},\quad1\leq n\leq M-1,\label{eq:overlap_CS_symmetry1}
 \end{equation}
 
 \end_inset
@@ -6398,7 +6390,7 @@ reference "eq:overlap_CMS"
 , 
 \begin_inset Formula 
 \begin{equation}
-\sum_{n=1}^{M-2}C_{M-m,\hat{n}}D_{\hat{n}\hat{l}}+C_{M-m,M-1}D_{M-1,\hat{l}}+S_{M-m,\hat{l}}=0.
+\sum_{n=1}^{M-1}C_{M-m,\hat{n}}D_{\hat{n}\hat{l}}+S_{M-m,\hat{l}}=0.
 \end{equation}
 
 \end_inset
@@ -6410,25 +6402,10 @@ reference "eq:overlap_CS_symmetry1"
 
 \end_inset
 
- and 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:overlap_CS_symmetry2"
-
-\end_inset
-
  yields
 \begin_inset Formula 
 \begin{equation}
-\sum_{n=1}^{M-2}C_{mn}D_{\hat{n}\hat{l}}^{*}+iC_{m,M-1}D_{M-1,\hat{l}}^{*}-S_{ml}=0,\quad1\leq l<M-1,\label{eq:overlap_CMS2}
-\end{equation}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{equation}
-\sum_{n=1}^{M-2}C_{mn}D_{\hat{n},M-1}^{*}+iC_{m,M-1}D_{M-1,M-1}^{*}+iS_{m,M-1}=0.\label{eq:over_CMS3}
+\sum_{n=1}^{M-1}C_{mn}D_{\hat{n}\hat{l}}^{*}-S_{ml}=0,\quad1\leq l\leq M-1,\label{eq:overlap_CMS2}
 \end{equation}
 
 \end_inset
@@ -6457,7 +6434,7 @@ reference "eq:overlap_CMS"
 , we arrive at
 \begin_inset Formula 
 \[
-D_{nl}=-D_{\hat{n}\hat{l}}^{*},\quad D_{M-1,l}=-iD_{M-1,\hat{l}}^{*},\quad D_{n,M-1}=-iD_{\hat{n},M-1}^{*}.
+D_{nl}=-D_{\hat{n}\hat{l}}^{*}.
 \]
 
 \end_inset
@@ -6505,17 +6482,10 @@ reference "eq:overlap_CS_symmetry1"
 
 \end_inset
 
- and 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:overlap_CS_symmetry2"
-
-\end_inset
-
 , we obtain 
 \begin_inset Formula 
 \[
-\sum_{n=1}^{M-2}C_{mn}C_{\hat{n},M-l}^{-1*}+iC_{m,M-1}C_{M-1,M-l}^{-1*}-\delta_{ml}=0,
+\sum_{n=1}^{M-1}C_{mn}C_{\hat{n},M-l}^{-1*}-\delta_{ml}=0,
 \]
 
 \end_inset
@@ -6523,7 +6493,7 @@ reference "eq:overlap_CS_symmetry2"
  from which it follows
 \begin_inset Formula 
 \[
-C_{M-1,m}^{-1}=iC_{M-1,M-m}^{-1*},\quad C_{nm}^{-1}=C_{\hat{n},M-m}^{-1*},\quad1\leq n<M-1
+C_{nm}^{-1}=C_{\hat{n},M-m}^{-1*},\quad1\leq n<M-1
 \]
 
 \end_inset
@@ -6592,12 +6562,9 @@ X^{*}=S_{mn}C_{nl}^{-1*}A_{ml}.
 
 , 
 \begin_inset Formula 
-\begin{align*}
-X^{*} & =S_{M-m,\hat{n}}C_{\hat{n},M-l}^{-1*}A_{M-m,M-l}\\
- & =\sum_{n=1}^{M-2}\sum_{m,l=1}^{M-1}S_{mn}^{*}C_{nl}^{-1}A_{ml}^{*}+S_{M-m,M-1}C_{M-1,M-l}^{-1*}A_{M-m,M-l}\\
- & =\sum_{n=1}^{M-2}\sum_{m,l=1}^{M-1}S_{mn}^{*}C_{nl}^{-1}A_{ml}^{*}+\left(-i\right)S_{m,M-1}^{*}\left(-i\right)C_{M-1,l}^{-1}\left(-1\right)A_{ml}^{*}\\
- & =\sum_{m,n,l=1}^{M-1}S_{mn}^{*}C_{nl}^{-1}A_{ml}^{*}=X.
-\end{align*}
+\[
+X^{*}=S_{M-m,\hat{n}}C_{\hat{n},M-l}^{-1*}A_{M-m,M-l}=S_{mn}^{*}C_{nl}^{-1}A_{ml}^{*}=X
+\]
 
 \end_inset
 
@@ -6645,32 +6612,8 @@ We now consider the matrix
  and taking complex conjugate yields 
 \begin_inset Formula 
 \begin{align*}
-\Omega_{\hat{n}\hat{k}}^{*} & =\sum_{m,l=1}^{M-1}C_{\hat{n},M-m}^{-1*}A_{M-l,M-m}C_{\hat{k},M-l}^{-1*}
+\Omega_{\hat{n}\hat{k}}^{*} & =\sum_{m,l=1}^{M-1}C_{\hat{n},M-m}^{-1*}A_{M-l,M-m}C_{\hat{k},M-l}^{-1*}=-\sum_{m,l=1}^{M-1}C_{nm}^{-1}A_{lm}^{*}C_{kl}^{-1}=-\Omega_{nk}
 \end{align*}
-
-\end_inset
-
- If 
-\begin_inset Formula $n,k<M-1$
-\end_inset
-
-, then 
-\begin_inset Formula 
-\[
-\Omega_{\hat{n}\hat{k}}^{*}=-\sum_{m,l=1}^{M-1}C_{nm}^{-1}A_{lm}^{*}C_{kl}^{-1}=-\Omega_{nk}
-\]
-
-\end_inset
-
- If 
-\begin_inset Formula $n=M-1$
-\end_inset
-
-, then 
-\begin_inset Formula 
-\[
-\Omega_{M-1,\hat{k}}^{*}=\left(-i\right)\left(-1\right)\sum_{m,l=1}^{M-1}C_{M-1,m}^{-1}A_{lm}^{*}C_{k,l}^{-1}=i\Omega_{M-1,k}.
-\]
 
 \end_inset
 
@@ -6687,7 +6630,7 @@ We now consider the relation of matrices for
 \end_inset
 
 .
- also have 
+ By inspection, we have 
 \begin_inset Formula 
 \[
 C_{mn}^{\left(K\right)}=-\frac{1-e^{2\pi imK/M}}{1-e^{2\pi imL/M}}C_{m,L+n-1}\equiv-u_{m}^{\left(K\right)}C_{m,L+n-1}
