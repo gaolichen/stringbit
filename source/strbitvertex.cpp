@@ -181,7 +181,7 @@ void RunEnergyCorrection(int s, DT xi, int minM, int maxM, bool outputE)
 	}
 }
 
-void RunEnergyCorrectionForS(int M, int xi, int smin, int smax, bool outputE)
+void RunEnergyCorrectionForS(int M, DT xi, int smin, int smax, bool outputE)
 {
 	vector<DT> totalE;
 	vector<int> vs;
