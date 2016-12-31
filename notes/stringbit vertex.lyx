@@ -1327,7 +1327,7 @@ Acting
  on the ground eigenfunction, we obtain the ground energy
 \begin_inset Formula 
 \[
-E_{0}=-4\sum_{k=1}^{M-1}\sin\frac{k\pi}{M}=-4\cot\frac{\pi}{2M}.
+E_{G}=-4\sum_{k=1}^{M-1}\sin\frac{k\pi}{M}=-4\cot\frac{\pi}{2M}=-\frac{8M}{\pi}+\frac{2\pi}{3M}+\mathcal{O}\left(M^{-3}\right).
 \]
 
 \end_inset
@@ -1427,7 +1427,7 @@ We now add the spin index
  The general energy eigenfunction and eigenvalue are
 \begin_inset Formula 
 \begin{equation}
-\psi=\prod_{a=1}^{s}\prod_{k=0}^{M-1}\left(F_{k}^{\left(a\right)\dagger}\right)^{\lambda_{a,k}}\psi_{G},\quad E=-sE_{G}+8\sum_{a=1}^{s}\sum_{k=1}^{M-1}\lambda_{a,k}\sin\frac{k\pi}{M},\quad\lambda_{a,k}=0,\,1.\label{eq:ham_general_eigenfunction_s}
+\psi=\prod_{a=1}^{s}\prod_{k=0}^{M-1}\left(F_{k}^{\left(a\right)\dagger}\right)^{\lambda_{a,k}}\psi_{G},\quad E=-4s\cot\frac{\pi}{2M}+8\sum_{a=1}^{s}\sum_{k=1}^{M-1}\lambda_{a,k}\sin\frac{k\pi}{M},\quad\lambda_{a,k}=0,\,1.\label{eq:ham_general_eigenfunction_s}
 \end{equation}
 
 \end_inset
