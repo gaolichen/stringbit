@@ -140,8 +140,17 @@ H_{4}=\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k
 
 \begin_inset Formula 
 \[
-H_{5}=-\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{ba_{1}\cdots a_{n}}\bar{\phi}_{bb_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}}.
+H_{5}=-\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{ba_{1}\cdots a_{n}}\bar{\phi}_{bb_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}},
 \]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\Delta H & =\frac{2}{N}\left(\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\bar{\phi}_{b_{1}\cdots b_{k}}\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\phi_{b_{1}\cdots b_{k}}-\tilde{M}\right),\\
+\tilde{M} & =\sum_{n=0}^{s}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}-\frac{1}{N}\sum_{n=0}^{s}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\tr\phi_{a_{1}\cdots a_{n}}.
+\end{align*}
 
 \end_inset
 
@@ -206,6 +215,20 @@ H_{5} & =-\frac{2i}{N}\left(\tr\bar{\phi}_{1}\bar{\phi}_{1}\phi\phi+\tr\bar{\phi
  & -\frac{2i}{N}\left(\tr\bar{\phi}_{21}\bar{\phi}_{2}\phi\phi_{1}+\tr\bar{\phi}_{12}\bar{\phi}_{1}\phi\phi_{2}-\tr\bar{\phi}_{21}\bar{\phi}_{21}\phi_{1}\phi_{1}-\tr\bar{\phi}_{12}\bar{\phi}_{12}\phi_{2}\phi_{2}\right)\\
  & =-\frac{2i}{N}\left(\tr\bar{b}\bar{b}aa+\tr\bar{d}\bar{d}aa-\tr\bar{b}\bar{c}da+\tr\bar{d}\bar{c}ba\right)\\
  & -\frac{2i}{N}\left(-\tr\bar{c}\bar{d}ab+\tr\bar{c}\bar{b}ad-\tr\bar{c}\bar{c}bb-\tr\bar{c}\bar{c}dd\right)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\Delta H & =\frac{2}{N}\left(\sum_{k=0}^{s}\sum_{n=0}^{s}\frac{1}{n!k!}\tr\bar{\phi}_{b_{1}\cdots b_{k}}\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\phi_{b_{1}\cdots b_{k}}-\tilde{M}\right)\\
+ & =\frac{2}{N}\tr\bar{\phi}\left(\bar{\phi}\phi+\bar{\phi}_{1}\phi_{1}+\bar{\phi}_{2}\phi_{2}+\bar{\phi}_{12}\phi_{12}\right)\phi\\
+ & +\frac{2}{N}\tr\bar{\phi}_{1}\left(\bar{\phi}\phi+\bar{\phi}_{1}\phi_{1}+\bar{\phi}_{2}\phi_{2}+\bar{\phi}_{12}\phi_{12}\right)\phi_{1}\\
+ & +\frac{2}{N}\tr\bar{\phi}_{2}\left(\bar{\phi}\phi+\bar{\phi}_{1}\phi_{1}+\bar{\phi}_{2}\phi_{2}+\bar{\phi}_{12}\phi_{12}\right)\phi_{2}\\
+ & +\frac{2}{N}\tr\bar{\phi}_{12}\left(\bar{\phi}\phi+\bar{\phi}_{1}\phi_{1}+\bar{\phi}_{2}\phi_{2}+\bar{\phi}_{12}\phi_{12}\right)\phi_{12}\\
+ & -\frac{2}{N}\tr\left(\bar{\phi}\phi+\bar{\phi}_{1}\phi_{1}+\bar{\phi}_{2}\phi_{2}+\bar{\phi}_{12}\phi_{12}\right)\\
+ & +\frac{2}{N^{2}}\left(\tr\bar{\phi}\tr\phi+\tr\bar{\phi}_{1}\tr\phi_{1}+\tr\bar{\phi}_{2}\tr\phi_{2}+\tr\bar{\phi}_{12}\tr\phi_{12}\right)
 \end{align*}
 
 \end_inset
