@@ -2332,6 +2332,135 @@ The corresponding conjugate function is
  is odd.
 \end_layout
 
+\begin_layout Standard
+When 
+\begin_inset Formula $M$
+\end_inset
+
+ is large, we have
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\det CC^{\dagger}\sim\frac{0.9290}{\left(KLM\right)^{1/6}}\left(\frac{L}{M}\right)^{\left(M/K-L/M\right)/3-2/3}\left(\frac{K}{M}\right)^{\left(M/L-K/M\right)/3-2/3}.\label{eq:overlap_detC}
+\end{equation}
+
+\end_inset
+
+ To introduce other properties of these matrices, it is convenient to define
+\begin_inset Formula 
+\[
+\hat{n}=\begin{cases}
+L-n, & \quad1\leq n<L\\
+M-n-1+L, & \quad L\leq n<M-1\\
+M-1, & \quad n=M-1
+\end{cases}.
+\]
+
+\end_inset
+
+Then for 
+\begin_inset Formula $1\leq n\leq M-1$
+\end_inset
+
+, we have
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S_{mn}=C_{-m,n}^{*}$
+\end_inset
+
+, 
+\begin_inset Formula $C_{mn}=C_{M-m,\hat{n}}^{*}$
+\end_inset
+
+, 
+\begin_inset Formula $S_{mn}=-S_{M-m,\hat{n}}^{*}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $D_{nl}=-D_{\hat{n}\hat{l}}^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $C^{\left(K\right)}$
+\end_inset
+
+ be the 
+\begin_inset Formula $C$
+\end_inset
+
+ matrix corresponding to 
+\begin_inset Formula $K=M-L$
+\end_inset
+
+, and similarly for 
+\begin_inset Formula $S^{\left(K\right)}$
+\end_inset
+
+ and 
+\begin_inset Formula $D^{\left(K\right)}$
+\end_inset
+
+.
+ We then have 
+\begin_inset Formula 
+\[
+C^{\left(K\right)}=\begin{pmatrix}u_{1}^{\left(K\right)}\\
+ & \ddots\\
+ &  & u_{M-1}^{\left(K\right)}
+\end{pmatrix}C^{\left(L\right)}\begin{pmatrix}0 & -\mathbf{I}_{L} & 0\\
+-\mathbf{I}_{K} & 0 & 0\\
+0 & 0 & 1
+\end{pmatrix},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+S^{\left(K\right)}=\begin{pmatrix}u_{1}^{\left(K\right)}\\
+ & \ddots\\
+ &  & u_{M-1}^{\left(K\right)}
+\end{pmatrix}S^{\left(L\right)}\begin{pmatrix}0 & -\mathbf{I}_{L} & 0\\
+-\mathbf{I}_{K} & 0 & 0\\
+0 & 0 & 1
+\end{pmatrix},
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+D^{\left(K\right)}=\begin{pmatrix}0 & -\mathbf{I}_{K} & 0\\
+-\mathbf{I}_{L} & 0 & 0\\
+0 & 0 & 1
+\end{pmatrix}D^{\left(L\right)}\begin{pmatrix}0 & -\mathbf{I}_{L} & 0\\
+-\mathbf{I}_{K} & 0 & 0\\
+0 & 0 & 1
+\end{pmatrix}.
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 \begin_inset CommandInset label
 LatexCommand label
@@ -3506,6 +3635,152 @@ Combining above together, we can calculate the
 \end_inset
 
  case.
+\end_layout
+
+\begin_layout Standard
+We now consider the large 
+\begin_inset Formula $M$
+\end_inset
+
+ behavior of the ground energy correction.
+ The product in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:energy_pert_DeltaE"
+
+\end_inset
+
+ depends only the ration of 
+\begin_inset Formula $L/M$
+\end_inset
+
+, therefore, can be considered as 
+\begin_inset Formula $\mathcal{O}\left(1\right)$
+\end_inset
+
+.
+ So we have 
+\begin_inset Formula 
+\begin{equation}
+\Delta E_{G}\sim\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{p,q}}^{\prime}\frac{KLM\left|\det C\right|^{s}}{E_{r}-E_{p}-E_{q}}.\label{eq:energy_per_largeM}
+\end{equation}
+
+\end_inset
+
+In 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:energy_per_largeM"
+
+\end_inset
+
+, the factor 
+\begin_inset Formula $KLM$
+\end_inset
+
+ scales as 
+\begin_inset Formula $M^{3}$
+\end_inset
+
+ and 
+\begin_inset Formula $\left|\det C\right|$
+\end_inset
+
+ as 
+\begin_inset Formula $M^{-s/4}$
+\end_inset
+
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_detC"
+
+\end_inset
+
+.
+ Among all states 
+\begin_inset Formula $p$
+\end_inset
+
+, 
+\begin_inset Formula $q$
+\end_inset
+
+, the factor 
+\begin_inset Formula $1/\left(E_{r}-E_{p}-E_{q}\right)$
+\end_inset
+
+ scales as 
+\begin_inset Formula $\mathcal{O}\left(M\right)$
+\end_inset
+
+ only when both 
+\begin_inset Formula $p$
+\end_inset
+
+, 
+\begin_inset Formula $q$
+\end_inset
+
+ are ground states.
+ This is possible only when 
+\begin_inset Formula $s$
+\end_inset
+
+ is even.
+ For all the other cases, 
+\begin_inset Formula $1/\left(E_{r}-E_{p}-E_{q}\right)$
+\end_inset
+
+ is 
+\begin_inset Formula $\mathcal{O}\left(1\right)$
+\end_inset
+
+.
+ The sum over 
+\begin_inset Formula $L$
+\end_inset
+
+ produces another 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $\Delta E_{G}$
+\end_inset
+
+ scales 
+\begin_inset Formula $M^{5-s/4}$
+\end_inset
+
+ for even 
+\begin_inset Formula $s$
+\end_inset
+
+ and 
+\begin_inset Formula $M^{4-s/24}$
+\end_inset
+
+ for odd 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ Particularly, when 
+\begin_inset Formula $s=24$
+\end_inset
+
+, 
+\begin_inset Formula $\Delta E_{G}\sim1/M\sim1/P^{+}$
+\end_inset
+
+, which is the expected Poincare invariant dispersion relation 
+\begin_inset Formula $P^{-}P^{+}=\left(\mathbf{P}^{2}+\mu^{2}\right)$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Subsection
@@ -6652,9 +6927,9 @@ In matrix multiplication, we have
 C^{\left(K\right)}=\begin{pmatrix}u_{1}^{\left(K\right)}\\
  & \ddots\\
  &  & u_{M-1}^{\left(K\right)}
-\end{pmatrix}C^{\left(L\right)}\begin{pmatrix} & -\mathbf{I}_{L}\\
--\mathbf{I}_{K}\\
- &  & 1
+\end{pmatrix}C^{\left(L\right)}\begin{pmatrix}0 & -\mathbf{I}_{L} & 0\\
+-\mathbf{I}_{K} & 0 & 0\\
+0 & 0 & 1
 \end{pmatrix}.
 \]
 
@@ -6670,9 +6945,9 @@ C^{\left(K\right)}=\begin{pmatrix}u_{1}^{\left(K\right)}\\
 S^{\left(K\right)}=\begin{pmatrix}u_{1}^{\left(K\right)}\\
  & \ddots\\
  &  & u_{M-1}^{\left(K\right)}
-\end{pmatrix}S^{\left(L\right)}\begin{pmatrix} & -\mathbf{I}_{L}\\
--\mathbf{I}_{K}\\
- &  & 1
+\end{pmatrix}S^{\left(L\right)}\begin{pmatrix}0 & -\mathbf{I}_{L} & 0\\
+-\mathbf{I}_{K} & 0 & 0\\
+0 & 0 & 1
 \end{pmatrix}.
 \]
 
@@ -6681,12 +6956,12 @@ S^{\left(K\right)}=\begin{pmatrix}u_{1}^{\left(K\right)}\\
 It then follows 
 \begin_inset Formula 
 \[
-D^{\left(K\right)}=\begin{pmatrix} & -\mathbf{I}_{K}\\
--\mathbf{I}_{L}\\
- &  & 1
-\end{pmatrix}D^{\left(L\right)}\begin{pmatrix} & -\mathbf{I}_{L}\\
--\mathbf{I}_{K}\\
- &  & 1
+D^{\left(K\right)}=\begin{pmatrix}0 & -\mathbf{I}_{K} & 0\\
+-\mathbf{I}_{L} & 0 & 0\\
+0 & 0 & 1
+\end{pmatrix}D^{\left(L\right)}\begin{pmatrix}0 & -\mathbf{I}_{L} & 0\\
+-\mathbf{I}_{K} & 0 & 0\\
+0 & 0 & 1
 \end{pmatrix}
 \]
 
