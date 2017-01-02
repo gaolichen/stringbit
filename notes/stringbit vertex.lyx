@@ -4778,261 +4778,12 @@ We have derived a formula for the
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename plots/EvM-compare.pdf
-	width 50text%
-	groupId halfcolumn
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "subfig:E_compare"
-
-\end_inset
-
-
-\begin_inset Caption
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename plots/EvM-s1-manyxi.pdf
-	width 50text%
-	groupId halfcolumn
-
-\end_inset
-
-
-\begin_inset Caption
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "subfig:EvM-s1-manyxi"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename plots/EvM-s2-manyxi.pdf
-	width 50text%
-	groupId halfcolumn
-
-\end_inset
-
-
-\begin_inset Caption
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "subfig:EvM-s2-manyxi"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Graphics
-	filename plots/EvS-xi0.pdf
-	width 50text%
-	groupId halfcolumn
-
-\end_inset
-
-
-\begin_inset Caption
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "subfig:EvS-xi0"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:energy-plot"
-
-\end_inset
-
-(a) Ground energy as a function of 
-\begin_inset Formula $1/N$
-\end_inset
-
- for 
-\begin_inset Formula $s=1$
-\end_inset
-
-, 
-\begin_inset Formula $\xi=0$
-\end_inset
-
-.
- The solid lines are perturbation results up to 
-\begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
-\end_inset
-
- while the dashed lines are exact numerical results.
- (b) The 
-\begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
-\end_inset
-
- ground energy correction 
-\begin_inset Formula $\Delta E$
-\end_inset
-
- as a function of 
-\begin_inset Formula $M$
-\end_inset
-
- for 
-\begin_inset Formula $s=1$
-\end_inset
-
- case.
- (c) The 
-\begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
-\end_inset
-
- ground energy correction 
-\begin_inset Formula $\Delta E$
-\end_inset
-
- as function of 
-\begin_inset Formula $M$
-\end_inset
-
- for 
-\begin_inset Formula $s=2$
-\end_inset
-
- case.
- (d) 
-\begin_inset Formula $\ln\left|\Delta E\right|$
-\end_inset
-
- as a function of 
-\begin_inset Formula $s$
-\end_inset
-
- for 
-\begin_inset Formula $M=3$
-\end_inset
-
- to 
-\begin_inset Formula $6$
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 We first compare the 
 \begin_inset Formula $1/N^{2}$
 \end_inset
 
- results with the exact numerical computation, which was done in 
+ results with the exact numerical results, which are obtained by the method
+ of 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Chen:2016hkz"
@@ -5044,7 +4795,7 @@ key "Chen:2016hkz"
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subfig:E_compare"
+reference "fig:E_compare"
 
 \end_inset
 
@@ -5052,26 +4803,18 @@ reference "subfig:E_compare"
 \begin_inset Formula $1/N$
 \end_inset
 
- for 
-\begin_inset Formula $s=1,\,\xi=0$
-\end_inset
-
 .
- The solid lines are results up to 
+ The solid lines are 
 \begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
 \end_inset
 
- while the dashed ones are exact numerical results.
- As we expect, when 
+ perturbation results and the dashed ones are exact numerical results.
+ When 
 \begin_inset Formula $N$
 \end_inset
 
- is large enough, the 
-\begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
-\end_inset
-
- results are very close to exact results.
- One interesting feature is that, when 
+ is large enough, perturbation results are very close to exact results.
+ One interesting observation is that, when 
 \begin_inset Formula $1/N$
 \end_inset
 
@@ -5105,173 +4848,91 @@ reference "subfig:E_compare"
 \end_layout
 
 \begin_layout Standard
-Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "subfig:EvM-s1-manyxi"
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename plots/EvM-compare.pdf
+	width 50text%
+	groupId halfcolumn
 
 \end_inset
 
- shows 
-\begin_inset Formula $\Delta E$
-\end_inset
 
- as a function of 
-\begin_inset Formula $M$
-\end_inset
-
- for the 
-\begin_inset Formula $s=1$
-\end_inset
-
- case.
- It shows that the curves of 
-\begin_inset Formula $\left|\xi\right|$
-\end_inset
-
- and 
-\begin_inset Formula $-\left|\xi\right|$
-\end_inset
-
- almost coincide with each other.
- It also suggests that the trend of the curves depends on 
-\begin_inset Formula $\left|\xi\right|$
-\end_inset
-
-: when 
-\begin_inset Formula $\xi=0$
-\end_inset
-
- the curve goes up steadily; it then slow down and eventually goes down
- as 
-\begin_inset Formula $\left|\xi\right|$
-\end_inset
-
- increase.
- The 
-\begin_inset Formula $s=2$
-\end_inset
-
- case, as Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "subfig:EvM-s2-manyxi"
+\begin_inset Graphics
+	filename plots/EvM-compare2.pdf
+	width 50text%
+	groupId halfcolumn
 
 \end_inset
 
- shows, is very different with 
-\begin_inset Formula $s=1$
-\end_inset
 
- case.
- 
-\begin_inset Formula $\Delta E$
-\end_inset
-
- is always negative for 
-\begin_inset Formula $s=2$
-\end_inset
-
- and all the curves decline.
- 
-\begin_inset Formula $\xi\approx1.2$
-\end_inset
-
- is the most gradual case, and as 
-\begin_inset Formula $\xi>1.2$
-\end_inset
-
- increases or 
-\begin_inset Formula $\xi<1.2$
-\end_inset
-
- decreases, the decline becomes more drastic.
- 
 \end_layout
 
-\begin_layout Standard
-Next we investigate how 
-\begin_inset Formula $\ln\left|\Delta E\right|$
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:E_compare"
+
 \end_inset
 
- changes as a function of 
-\begin_inset Formula $s$
+Ground energy as function of 
+\begin_inset Formula $1/N$
 \end_inset
 
- for fixed 
-\begin_inset Formula $M$
+ for (a) 
+\begin_inset Formula $s=1\,\xi=0$
 \end_inset
 
- values, as Fig.
+ case and (b) 
+\begin_inset Formula $s=1\,\xi=1$
+\end_inset
+
+ case.
+ The solid lines are the exact numerical results by the method of Ref.
  
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "subfig:EvS-xi0"
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chen:2016hkz"
 
-\end_inset
-
- shows.
- When 
-\begin_inset Formula $M$
-\end_inset
-
- is even, the ground energy state exists only when 
-\begin_inset Formula $s$
-\end_inset
-
- is even and 
-\begin_inset Formula $\ln\left|\Delta E\right|$
-\end_inset
-
- almost increase linearly.
- When 
-\begin_inset Formula $M$
-\end_inset
-
- is odd, 
-\begin_inset Formula $\ln\left|\Delta E\right|$
-\end_inset
-
- has an overall increasing trend but fluctuates between even and odd 
-\begin_inset Formula $s$
-\end_inset
-
- with crest at even 
-\begin_inset Formula $s$
-\end_inset
-
- and trough at odd 
-\begin_inset Formula $s$
 \end_inset
 
 .
- The overall linearly increase of 
-\begin_inset Formula $\ln\left|\Delta E\right|$
+ The dashed lines are 
+\begin_inset Formula $1/N^{2}$
 \end_inset
 
- can be seen from the energy correction 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:energy_pert_DeltaE"
-
-\end_inset
-
-, which is a product of 
-\begin_inset Formula $s$
-\end_inset
-
- terms.
+ order perturbation results.
  
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
-We want to confirm the large 
+We then want to confirm the large 
 \begin_inset Formula $M$
 \end_inset
 
- behavior of the ground energy correction numerically.
+ behavior of 
+\begin_inset Formula $\Delta E$
+\end_inset
+
+ numerically.
  Instead of simply plotting 
 \begin_inset Formula $\Delta E$
 \end_inset
@@ -5288,15 +4949,15 @@ inner structure
 \begin_inset Quotes erd
 \end_inset
 
-, contributions of each 
+, contribution of each 
 \begin_inset Formula $L$
 \end_inset
 
-, which is denoted as 
+, denoted by 
 \begin_inset Formula $\Delta E_{i}$
 \end_inset
 
-: 
+ and defined as: 
 \begin_inset Formula 
 \[
 \Delta E=\sum_{L=1}^{M-1}\Delta E_{i},\quad i=\frac{L}{M}.
@@ -5316,7 +4977,7 @@ The power of
 \begin_inset Formula $\Delta E_{i}$
 \end_inset
 
- should be one lower than 
+ should be one lower than that of 
 \begin_inset Formula $\Delta E$
 \end_inset
 
@@ -5325,7 +4986,7 @@ The power of
 \begin_inset Formula $M$
 \end_inset
 
- dependence, we define the normalized 
+ dependence, we introduce the normalized 
 \begin_inset Formula $\Delta E_{i}$
 \end_inset
 
@@ -5340,16 +5001,24 @@ The power of
 
 \end_inset
 
-We now expect that 
+We expect that, for given 
+\begin_inset Formula $s$
+\end_inset
+
+ and 
+\begin_inset Formula $\xi$
+\end_inset
+
+, 
 \begin_inset Formula $\Delta\hat{E}_{i}$
 \end_inset
 
- depends on the ratio 
-\begin_inset Formula $L/M$
+ is independent of 
+\begin_inset Formula $M$
 \end_inset
 
- rather than 
-\begin_inset Formula $M$
+ and only depends on the ratio 
+\begin_inset Formula $L/M$
 \end_inset
 
 .
@@ -5390,7 +5059,7 @@ reference "fig:SubEvsMxi0"
 
 .
  The positive branches (the curve above the horizontal axis) consist of
- point from odd 
+ points of odd 
 \begin_inset Formula $L$
 \end_inset
 
@@ -5408,167 +5077,13 @@ reference "fig:SubEvsMxi0"
 \begin_inset Formula $s=1$
 \end_inset
 
- case, although it is not obvious, it also suggest such asymptotic behavior.
-\end_layout
-
-\begin_layout Standard
-The plots are shown as Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:SubEvM-s1xi0"
-
-\end_inset
-
- for 
-\begin_inset Formula $s=1$
-\end_inset
-
-, 
-\begin_inset Formula $\xi=0$
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:SubEvM-s2xi0"
-
-\end_inset
-
- for 
-\begin_inset Formula $s=2$
-\end_inset
-
-, 
-\begin_inset Formula $\xi=0$
-\end_inset
-
-.
- In the 
-\begin_inset Formula $s=1$
-\end_inset
-
- case, 
-\begin_inset Formula $\Delta E_{i}$
-\end_inset
-
- is positive for odd 
-\begin_inset Formula $L$
-\end_inset
-
- and negative for even 
-\begin_inset Formula $L$
-\end_inset
-
-.
- Therefore the odd 
-\begin_inset Formula $L$
-\end_inset
-
- points and even 
-\begin_inset Formula $L$
-\end_inset
-
- points are connected separately for each 
+ case, although it is not obvious, there is no inconsistent with asymptotic
+ behavior.
+ It is therefore fair to conclude that the large 
 \begin_inset Formula $M$
 \end_inset
 
-.
- Both odd and even curves rise as 
-\begin_inset Formula $L$
-\end_inset
-
- increase.
- It also suggests that both curves have asymptotic behavior when 
-\begin_inset Formula $M$
-\end_inset
-
- is large.
- If this is true, as the 
-\begin_inset Formula $\Delta E_{i}$
-\end_inset
-
- is normalized by 
-\begin_inset Formula $1/M^{2}$
-\end_inset
-
-, it implies that the 
-\begin_inset Formula $\Delta E$
-\end_inset
-
- diverges as 
-\begin_inset Formula $\mathcal{O}\left(M^{3}\right)$
-\end_inset
-
- at large 
-\begin_inset Formula $M$
-\end_inset
-
-.
- For 
-\begin_inset Formula $s=2$
-\end_inset
-
-, all the 
-\begin_inset Formula $\Delta E_{i}$
-\end_inset
-
- are negative and the curves have a V-like shape.
- The lowest values of 
-\begin_inset Formula $\Delta E_{i}$
-\end_inset
-
- occur around the midpoint 
-\begin_inset Formula $L=M/2$
-\end_inset
-
-, while the highest values occur at the endpoints, 
-\begin_inset Formula $L=1$
-\end_inset
-
- or 
-\begin_inset Formula $L=M-1$
-\end_inset
-
-.
- Clearly 
-\begin_inset Formula $\Delta E$
-\end_inset
-
- diverges more severely than 
-\begin_inset Formula $M^{3}$
-\end_inset
-
- at large 
-\begin_inset Formula $M$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Finally, we note that, while we do not present plot for higher 
-\begin_inset Formula $s$
-\end_inset
-
- case, we can infer that the odd 
-\begin_inset Formula $s$
-\end_inset
-
- plots are similar to the 
-\begin_inset Formula $s=1$
-\end_inset
-
- case and the even 
-\begin_inset Formula $s$
-\end_inset
-
- plots are similar to the 
-\begin_inset Formula $s=2$
-\end_inset
-
- case.
- 
+ behavior is confirmed.
 \end_layout
 
 \begin_layout Standard
@@ -5636,7 +5151,19 @@ name "fig:SubEvsMxi0"
 \end_inset
 
 .
- 
+ For odd 
+\begin_inset Formula $s$
+\end_inset
+
+ cases, the curves above horizontal axis are for odd 
+\begin_inset Formula $L$
+\end_inset
+
+ points and the curves below are for even 
+\begin_inset Formula $L$
+\end_inset
+
+ points.
 \end_layout
 
 \end_inset
@@ -5686,6 +5213,93 @@ name "fig:SubEvsMs2"
 \end_inset
 
 
+\begin_inset Formula $\Delta\hat{E}_{i}$
+\end_inset
+
+ as a function of 
+\begin_inset Formula $i=L/M$
+\end_inset
+
+ for the cases of 
+\begin_inset Formula $s=2,\,\xi=1$
+\end_inset
+
+ and 
+\begin_inset Formula $s=2,\,\xi=2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename plots/EvS-M6.pdf
+	width 50text%
+	groupId halfcolumn
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename plots/EvS-M5.pdf
+	width 50text%
+	groupId halfcolumn
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ln\left|\Delta\hat{E}\right|$
+\end_inset
+
+ as function of 
+\begin_inset Formula $s$
+\end_inset
+
+ for (a) 
+\begin_inset Formula $M=6$
+\end_inset
+
+ and even 
+\begin_inset Formula $s$
+\end_inset
+
+ (b) 
+\begin_inset Formula $M=5$
+\end_inset
+
+.
+ Note that in (a) the 
+\begin_inset Formula $\xi=0$
+\end_inset
+
+ (blue) and 
+\begin_inset Formula $\xi=2$
+\end_inset
+
+ (red) curves almost coincide.
 \end_layout
 
 \end_inset
