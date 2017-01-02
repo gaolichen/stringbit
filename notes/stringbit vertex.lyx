@@ -3698,15 +3698,7 @@ reference "eq:overlap_detC"
 \end_inset
 
 .
- Among all states 
-\begin_inset Formula $p$
-\end_inset
-
-, 
-\begin_inset Formula $q$
-\end_inset
-
-, the factor 
+ Among all the states of smaller chains, the factor 
 \begin_inset Formula $1/\left(E_{r}-E_{p}-E_{q}\right)$
 \end_inset
 
@@ -3714,15 +3706,7 @@ reference "eq:overlap_detC"
 \begin_inset Formula $\mathcal{O}\left(M\right)$
 \end_inset
 
- only when both 
-\begin_inset Formula $p$
-\end_inset
-
-, 
-\begin_inset Formula $q$
-\end_inset
-
- are ground states.
+ only when both smaller chains are in ground states.
  This is possible only when 
 \begin_inset Formula $s$
 \end_inset
@@ -3732,11 +3716,7 @@ reference "eq:overlap_detC"
 \begin_inset Formula $1/\left(E_{r}-E_{p}-E_{q}\right)$
 \end_inset
 
- is 
-\begin_inset Formula $\mathcal{O}\left(1\right)$
-\end_inset
-
-.
+ is of order one.
  The sum over 
 \begin_inset Formula $L$
 \end_inset
@@ -4755,28 +4735,20 @@ We have derived a formula for the
 \begin_inset Formula $M=29$
 \end_inset
 
- for 
+ for the 
 \begin_inset Formula $s=1$
 \end_inset
 
- and 
-\begin_inset Formula $M=16$
+ case.
+ For larger 
+\begin_inset Formula $s$
 \end_inset
 
- for 
-\begin_inset Formula $s=2$
+, the highest 
+\begin_inset Formula $M$
 \end_inset
 
-.
- For 
-\begin_inset Formula $3\leq s\leq10$
-\end_inset
-
-, we only computed the cases of 
-\begin_inset Formula $M\leq6$
-\end_inset
-
-.
+ become smaller.
  Since only the ground energy is considered, we will simply write the ground
  energy 
 \begin_inset Formula $E_{G}$
@@ -5295,7 +5267,20 @@ reference "eq:energy_pert_DeltaE"
 \end_layout
 
 \begin_layout Standard
-We also investigated the 
+We want to confirm the large 
+\begin_inset Formula $M$
+\end_inset
+
+ behavior of the ground energy correction numerically.
+ Instead of simply plotting 
+\begin_inset Formula $\Delta E$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $L$
+\end_inset
+
+, we study its 
 \begin_inset Quotes eld
 \end_inset
 
@@ -5303,15 +5288,15 @@ inner structure
 \begin_inset Quotes erd
 \end_inset
 
- of the ground energy correction, i.e., the contribution 
-\begin_inset Formula $\Delta E_{i}$
-\end_inset
-
- from each 
+, contributions of each 
 \begin_inset Formula $L$
 \end_inset
 
- defined as 
+, which is denoted as 
+\begin_inset Formula $\Delta E_{i}$
+\end_inset
+
+: 
 \begin_inset Formula 
 \[
 \Delta E=\sum_{L=1}^{M-1}\Delta E_{i},\quad i=\frac{L}{M}.
@@ -5319,6 +5304,114 @@ inner structure
 
 \end_inset
 
+The power of 
+\begin_inset Formula $M$
+\end_inset
+
+ in the large 
+\begin_inset Formula $M$
+\end_inset
+
+ behavior of 
+\begin_inset Formula $\Delta E_{i}$
+\end_inset
+
+ should be one lower than 
+\begin_inset Formula $\Delta E$
+\end_inset
+
+.
+ Therefore, to remove the 
+\begin_inset Formula $M$
+\end_inset
+
+ dependence, we define the normalized 
+\begin_inset Formula $\Delta E_{i}$
+\end_inset
+
+ as 
+\begin_inset Formula 
+\[
+\Delta\hat{E}_{i}=\begin{cases}
+\Delta E_{i}M^{-4+s/4} & \quad\text{for even }s\\
+\Delta E_{i}M^{-3+s/4} & \quad\text{for odd }s
+\end{cases}.
+\]
+
+\end_inset
+
+We now expect that 
+\begin_inset Formula $\Delta\hat{E}_{i}$
+\end_inset
+
+ depends on the ratio 
+\begin_inset Formula $L/M$
+\end_inset
+
+ rather than 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The plots of 
+\begin_inset Formula $\Delta\hat{E}_{i}$
+\end_inset
+
+ as a function of 
+\begin_inset Formula $i=L/M$
+\end_inset
+
+ are shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:SubEvsMxi0"
+
+\end_inset
+
+.
+ We set 
+\begin_inset Formula $\xi=0$
+\end_inset
+
+ in all the four subplots.
+ When 
+\begin_inset Formula $s$
+\end_inset
+
+ is odd, as the subfigures (a) and (c) shows, there are two branches for
+ each 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ The positive branches (the curve above the horizontal axis) consist of
+ point from odd 
+\begin_inset Formula $L$
+\end_inset
+
+ and the negative branches are for even 
+\begin_inset Formula $L$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $s=2,\,3,\,4$
+\end_inset
+
+ cases, it is evident that the curves show a asymptotic behavior.
+ For the 
+\begin_inset Formula $s=1$
+\end_inset
+
+ case, although it is not obvious, it also suggest such asymptotic behavior.
+\end_layout
+
+\begin_layout Standard
 The plots are shown as Fig.
  
 \begin_inset CommandInset ref
@@ -5535,7 +5628,7 @@ name "fig:SubEvsMxi0"
 \end_inset
 
 
-\begin_inset Formula $\Delta E_{i}$
+\begin_inset Formula $\Delta\hat{E}_{i}$
 \end_inset
 
  as a function of 
@@ -5543,33 +5636,7 @@ name "fig:SubEvsMxi0"
 \end_inset
 
 .
- In both plots, 
-\begin_inset Formula $\Delta E_{i}$
-\end_inset
-
- are normalized by a factor of 
-\begin_inset Formula $1/M^{2}$
-\end_inset
-
-.
- Plot (a) is for 
-\begin_inset Formula $s=1$
-\end_inset
-
-, 
-\begin_inset Formula $\xi=0$
-\end_inset
-
-.
- Plot (b) is for 
-\begin_inset Formula $s=2$
-\end_inset
-
-, 
-\begin_inset Formula $\xi=0$
-\end_inset
-
-.
+ 
 \end_layout
 
 \end_inset
