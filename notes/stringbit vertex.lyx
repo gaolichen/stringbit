@@ -4750,7 +4750,7 @@ We have derived a formula for the
  As the previous section shows, however, the calculation is tedious even
  for the simplest case.
  We therefore turn to numerical computation.
- As the complexity of the calculation grows very fast, we performed the
+ As the complexity of the calculation grows dramatically, we performed the
  numerical computation up to 
 \begin_inset Formula $M=29$
 \end_inset
@@ -4760,11 +4760,11 @@ We have derived a formula for the
 \end_inset
 
  and 
-\begin_inset Formula $M=15$
+\begin_inset Formula $M=16$
 \end_inset
 
  for 
-\begin_inset Formula $s=1$
+\begin_inset Formula $s=2$
 \end_inset
 
 .
@@ -5129,6 +5129,7 @@ reference "subfig:E_compare"
 \end_inset
 
 .
+ 
 \end_layout
 
 \begin_layout Standard
@@ -5485,12 +5486,6 @@ status open
 
 \begin_layout Plain Layout
 \align center
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
 \begin_inset Graphics
 	filename plots/SubEvM-s1xi0.pdf
 	width 50text%
@@ -5499,36 +5494,6 @@ status open
 \end_inset
 
 
-\begin_inset Caption
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:SubEvM-s1xi0"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
 \begin_inset Graphics
 	filename plots/SubEvM-s2xi0.pdf
 	width 50text%
@@ -5537,36 +5502,39 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename plots/SubEvM-s3xi0.pdf
+	width 50text%
+	groupId halfcolumn
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename plots/SubEvM-s4xi0.pdf
+	width 50text%
+	groupId halfcolumn
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:SubEvM-s2xi0"
+name "fig:SubEvsMxi0"
 
 \end_inset
 
 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
 \begin_inset Formula $\Delta E_{i}$
 \end_inset
 
@@ -5606,6 +5574,59 @@ name "fig:SubEvM-s2xi0"
 
 \end_inset
 
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename plots/SubEvM-s2xi1.pdf
+	width 50text%
+	groupId halfcolumn
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename plots/SubEvM-s2xi2.pdf
+	width 50text%
+	groupId halfcolumn
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:SubEvsMs2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 
