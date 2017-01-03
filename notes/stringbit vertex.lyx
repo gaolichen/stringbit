@@ -5047,7 +5047,7 @@ reference "fig:SubEvsMxi0"
 \begin_inset Formula $\xi=0$
 \end_inset
 
- in all the four subplots.
+ in all the four plots.
  When 
 \begin_inset Formula $s$
 \end_inset
@@ -5077,8 +5077,8 @@ reference "fig:SubEvsMxi0"
 \begin_inset Formula $s=1$
 \end_inset
 
- case, although it is not obvious, there is no inconsistent with asymptotic
- behavior.
+ case, despite not converging as fast as the other cases, it suggests a
+ trend of asymptotic behavior.
  It is therefore fair to conclude that the large 
 \begin_inset Formula $M$
 \end_inset
@@ -5177,6 +5177,45 @@ name "fig:SubEvsMxi0"
 \end_layout
 
 \begin_layout Standard
+We next consider the effect of 
+\begin_inset Formula $\xi$
+\end_inset
+
+ parameter on the large 
+\begin_inset Formula $M$
+\end_inset
+
+ behavior.
+ Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:SubEvsMs2"
+
+\end_inset
+
+ shows the results for 
+\begin_inset Formula $\xi=1$
+\end_inset
+
+ and 
+\begin_inset Formula $\xi=2$
+\end_inset
+
+ in the 
+\begin_inset Formula $s=2$
+\end_inset
+
+ case.
+ In spite of the fact that the shape of the curves are changed for different
+ values of 
+\begin_inset Formula $\xi$
+\end_inset
+
+, the asympotic behavior does not change.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -5242,6 +5281,48 @@ name "fig:SubEvsMs2"
 \end_layout
 
 \begin_layout Standard
+Finally, we studies the dependence of 
+\begin_inset Formula $\Delta\hat{E}$
+\end_inset
+
+ on 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ The plots are shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:EvS"
+
+\end_inset
+
+.
+ Figure (a) is for chain with even bit number, which only survive in even
+ 
+\begin_inset Formula $s$
+\end_inset
+
+ case.
+ Figure (b) The Note that even bit number chain can only survive in even
+ 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ Since we already eliminat the 
+\begin_inset Formula $M$
+\end_inset
+
+ dependence from 
+\begin_inset Formula $\Delta\hat{E}$
+\end_inset
+
+ in leading order, 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -5271,6 +5352,13 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:EvS"
+
+\end_inset
+
+
 \begin_inset Formula $\ln\left|\Delta\hat{E}\right|$
 \end_inset
 
