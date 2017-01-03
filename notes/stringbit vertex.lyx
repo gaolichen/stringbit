@@ -624,7 +624,7 @@ H=\sum_{i=1}^{5}H_{i},\label{eq:ham_H_2}
  where
 \begin_inset Formula 
 \begin{equation}
-H_{1}=\frac{2}{N}\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{s-2n}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}},
+H_{1}=\frac{2}{N}\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{s-2n}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}},\label{eq:ham_H1}
 \end{equation}
 
 \end_inset
@@ -5281,7 +5281,7 @@ name "fig:SubEvsMs2"
 \end_layout
 
 \begin_layout Standard
-Finally, we studies the dependence of 
+We next study the dependence of 
 \begin_inset Formula $\Delta\hat{E}$
 \end_inset
 
@@ -5290,7 +5290,7 @@ Finally, we studies the dependence of
 \end_inset
 
 .
- The plots are shown in Fig.
+ Fig.
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -5298,28 +5298,245 @@ reference "fig:EvS"
 
 \end_inset
 
-.
- Figure (a) is for chain with even bit number, which only survive in even
- 
+a plots the change of 
+\begin_inset Formula $\ln\left|\Delta\hat{E}\right|$
+\end_inset
+
+ with respect to 
 \begin_inset Formula $s$
 \end_inset
 
- case.
- Figure (b) The Note that even bit number chain can only survive in even
- 
+ for 
+\begin_inset Formula $6$
+\end_inset
+
+-bit chain, which only survives in even 
 \begin_inset Formula $s$
 \end_inset
 
-.
- Since we already eliminat the 
-\begin_inset Formula $M$
+ cases.
+ Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:EvS"
+
 \end_inset
 
- dependence from 
+b is the same plot for 
+\begin_inset Formula $5$
+\end_inset
+
+-bit chain for all 
+\begin_inset Formula $s$
+\end_inset
+
+ cases.
+ Since 
 \begin_inset Formula $\Delta\hat{E}$
 \end_inset
 
- in leading order, 
+ is independent of 
+\begin_inset Formula $s$
+\end_inset
+
+ in leading order, we only need to choose one 
+\begin_inset Formula $M$
+\end_inset
+
+ for each plot.
+ For each 
+\begin_inset Formula $M$
+\end_inset
+
+ we choose 
+\begin_inset Formula $\xi=0,\,1,\,2,\,3$
+\end_inset
+
+.
+ For the 
+\begin_inset Formula $M=6$
+\end_inset
+
+ case, all the curves almost rise linearly.
+ Of all the four curves, 
+\begin_inset Formula $\xi=3$
+\end_inset
+
+ is the steepest case and 
+\begin_inset Formula $\xi=1$
+\end_inset
+
+ is the flatest one.
+ 
+\begin_inset Formula $\xi=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\xi=2$
+\end_inset
+
+ almost coincide with each other.
+ For the 
+\begin_inset Formula $M=5$
+\end_inset
+
+ case, the over trend of the curves are the same as the 
+\begin_inset Formula $M=6$
+\end_inset
+
+ case, except for slight oscillation between even and odd 
+\begin_inset Formula $s$
+\end_inset
+
+ points.
+ When 
+\begin_inset Formula $\xi=3$
+\end_inset
+
+, the oscillation is very negligible.
+ Actually, if only even 
+\begin_inset Formula $s$
+\end_inset
+
+ points are sampled, the plots are the same as 
+\begin_inset Formula $M=6$
+\end_inset
+
+ case.
+ 
+\end_layout
+
+\begin_layout Standard
+From the numerical results, approximately the 
+\begin_inset Formula $\Delta\hat{E}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\Delta\hat{E}_{\xi=0}\sim,\quad\Delta\hat{E}_{\xi=1}\sim2.51^{s},\quad\Delta\hat{E}_{\xi=3}\sim
+\]
+
+\end_inset
+
+The exponential dependent of 
+\begin_inset Formula $\Delta\hat{E}$
+\end_inset
+
+ on 
+\begin_inset Formula $s$
+\end_inset
+
+ stem from the fact the the ground energy has 
+\begin_inset Formula $2^{s}$
+\end_inset
+
+ degeneracies.
+ 
+\end_layout
+
+\begin_layout Standard
+It seems to suggest that 
+\begin_inset Formula $\xi=1$
+\end_inset
+
+ is the case that the curve has lowest slope
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Actually, as far as the the regime 
+\begin_inset Formula $1\leq s\leq10$
+\end_inset
+
+ is concerned, the lowest slope is achieved when 
+\begin_inset Formula $\xi\approx1.04$
+\end_inset
+
+.
+ However, the results of 
+\begin_inset Formula $\xi=1$
+\end_inset
+
+ and 
+\begin_inset Formula $\xi=1.04$
+\end_inset
+
+ cases are very close and we cannot exclude the possibility that 
+\begin_inset Formula $\xi=1$
+\end_inset
+
+ eventually achieve a lower slope when 
+\begin_inset Formula $s$
+\end_inset
+
+ is large enough.
+ We tend to believe the 
+\begin_inset Formula $\xi=1$
+\end_inset
+
+ case is the ultimate minimum because 
+\begin_inset Formula $\xi=1$
+\end_inset
+
+ is a special case as mentioned in the main text.
+\end_layout
+
+\end_inset
+
+.
+ The 
+\begin_inset Formula $\xi=1$
+\end_inset
+
+ case is very special.
+ Recall the 
+\begin_inset Formula $H_{1}$
+\end_inset
+
+ term 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_H1"
+
+\end_inset
+
+ of the Hamiltonian.
+ It can produce a term like 
+\begin_inset Formula $-s\tr\bar{\phi}_{12\cdots s}\bar{\phi}_{12\cdots s}\phi_{12\cdots s}\phi_{12\cdots s}$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $s$
+\end_inset
+
+ is even, 
+\begin_inset Formula $\phi_{12\cdots s}$
+\end_inset
+
+ is a scalar and this term behaves as a scalar potential with negative coefficie
+nt, which would lead to dangerous instability.
+ But when 
+\begin_inset Formula $\xi=1$
+\end_inset
+
+, this term is cancelled exactly by the 
+\begin_inset Formula $\xi\Delta H$
+\end_inset
+
+ term.
+ That being said, for even 
+\begin_inset Formula $s$
+\end_inset
+
+, 
+\begin_inset Formula $\xi=1$
+\end_inset
+
+ is the minimal value for the potential to be bounded below.
+ 
 \end_layout
 
 \begin_layout Standard
