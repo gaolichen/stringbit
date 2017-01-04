@@ -4950,7 +4950,7 @@ inner structure
 \begin_inset Formula $\Delta E_{i}$
 \end_inset
 
- and defined as: 
+ and defined as 
 \begin_inset Formula 
 \[
 \Delta E=\sum_{L=1}^{M-1}\Delta E_{i},\quad i=\frac{L}{M}.
@@ -4958,7 +4958,7 @@ inner structure
 
 \end_inset
 
-The power of 
+Since the power of 
 \begin_inset Formula $M$
 \end_inset
 
@@ -4970,20 +4970,19 @@ The power of
 \begin_inset Formula $\Delta E_{i}$
 \end_inset
 
- should be one lower than that of 
+ is one lower than that of 
 \begin_inset Formula $\Delta E$
 \end_inset
 
-.
- Therefore, to remove the 
-\begin_inset Formula $M$
-\end_inset
-
- dependence, we introduce the normalized 
+, we introduce the normalized 
 \begin_inset Formula $\Delta E_{i}$
 \end_inset
 
- as 
+ to remove the 
+\begin_inset Formula $M$
+\end_inset
+
+ dependence: 
 \begin_inset Formula 
 \[
 \Delta\hat{E}_{i}=\begin{cases}
@@ -4994,7 +4993,7 @@ The power of
 
 \end_inset
 
-We expect that, for given 
+We expect that, for fixed 
 \begin_inset Formula $s$
 \end_inset
 
@@ -5006,11 +5005,7 @@ We expect that, for given
 \begin_inset Formula $\Delta\hat{E}_{i}$
 \end_inset
 
- is independent of 
-\begin_inset Formula $M$
-\end_inset
-
- and only depends on the ratio 
+ only depends on the ratio 
 \begin_inset Formula $L/M$
 \end_inset
 
@@ -5035,37 +5030,38 @@ reference "fig:SubEvsMxi0"
 
 \end_inset
 
-.
- We set 
+, where 
 \begin_inset Formula $\xi=0$
 \end_inset
 
- in all the four plots.
+ for all the four plots.
  When 
 \begin_inset Formula $s$
 \end_inset
 
- is odd, as the subfigures (a) and (c) shows, there are two branches for
- each 
+ is odd, only odd values of 
+\begin_inset Formula $M$
+\end_inset
+
+ are allowed and there are two curves for each 
 \begin_inset Formula $M$
 \end_inset
 
 .
- The positive branches (the curve above the horizontal axis) consist of
- points of odd 
+ The curves above the horizontal axis consist of odd 
 \begin_inset Formula $L$
 \end_inset
 
- and the negative branches are for even 
+ points and the ones below consist of even 
 \begin_inset Formula $L$
 \end_inset
 
-.
+ points.
  For 
 \begin_inset Formula $s=2,\,3,\,4$
 \end_inset
 
- cases, it is evident that the curves show a asymptotic behavior.
+ cases, it is evident that the curves show an asymptotic behavior.
  For the 
 \begin_inset Formula $s=1$
 \end_inset
