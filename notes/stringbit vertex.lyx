@@ -4730,25 +4730,23 @@ We have derived a formula for the
  As the previous section shows, however, the calculation is tedious even
  for the simplest case.
  We therefore turn to numerical computation.
- As the complexity of the calculation grows dramatically, we performed the
- numerical computation up to 
-\begin_inset Formula $M=29$
-\end_inset
-
- for the 
-\begin_inset Formula $s=1$
-\end_inset
-
- case.
- For larger 
-\begin_inset Formula $s$
-\end_inset
-
-, the highest 
+ As the complexity of the calculation grows dramatically, the highest 
 \begin_inset Formula $M$
 \end_inset
 
- become smaller.
+ for which we performed numerical computation is 29 for 
+\begin_inset Formula $s=1$
+\end_inset
+
+ and 16 for 
+\begin_inset Formula $s=2$
+\end_inset
+
+, and continue decreasing as 
+\begin_inset Formula $s$
+\end_inset
+
+ increases.
  Since only the ground energy is considered, we will simply write the ground
  energy 
 \begin_inset Formula $E_{G}$
@@ -4758,11 +4756,7 @@ We have derived a formula for the
 \begin_inset Formula $E$
 \end_inset
 
- and its correction 
-\begin_inset Formula $\Delta E_{G}$
-\end_inset
-
- as 
+ and its correction as 
 \begin_inset Formula $\Delta E$
 \end_inset
 
@@ -4770,20 +4764,12 @@ We have derived a formula for the
 \begin_inset Formula $1/N^{2}$
 \end_inset
 
- factor of 
-\begin_inset Formula $\Delta E$
-\end_inset
-
- in the plots.
+ factor.
 \end_layout
 
 \begin_layout Standard
-We first compare the 
-\begin_inset Formula $1/N^{2}$
-\end_inset
-
- results with the exact numerical results, which are obtained by the method
- of 
+We first compare the perturbation results with the exact numerical results,
+ which are obtained by the method of 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Chen:2016hkz"
@@ -4803,34 +4789,42 @@ reference "fig:E_compare"
 \begin_inset Formula $1/N$
 \end_inset
 
-.
- The solid lines are 
-\begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
-\end_inset
-
- perturbation results and the dashed ones are exact numerical results.
- When 
-\begin_inset Formula $N$
-\end_inset
-
- is large enough, perturbation results are very close to exact results.
- One interesting observation is that, when 
-\begin_inset Formula $1/N$
-\end_inset
-
- is large, the 
-\begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
-\end_inset
-
- curve of 
+ for 
 \begin_inset Formula $M=3$
 \end_inset
 
- is below the exact curve while the one of 
+ and 
+\begin_inset Formula $5$
+\end_inset
+
+ in 
+\begin_inset Formula $s=1$
+\end_inset
+
+ case.
+ The solid lines are exact numerical resultsand the dashed lines are 
+\begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
+\end_inset
+
+ perturbation results.
+ We see that the two types of results match very well when 
+\begin_inset Formula $N$
+\end_inset
+
+ large enough.
+ One interesting observation is that, when 
+\begin_inset Formula $N$
+\end_inset
+
+ is small, the perturbation results of 
+\begin_inset Formula $M=3$
+\end_inset
+
+ are lower than the exact results while the perturbation results of 
 \begin_inset Formula $M=5$
 \end_inset
 
- is above the exact curve.
+ are above the exact results.
  It implies the 
 \begin_inset Formula $\mathcal{O}\left(1/N^{4}\right)$
 \end_inset
@@ -4887,16 +4881,16 @@ Ground energy as function of
 \begin_inset Formula $1/N$
 \end_inset
 
- for (a) 
-\begin_inset Formula $s=1\,\xi=0$
+ for 
+\begin_inset Formula $s=1,\,\xi=0$
 \end_inset
 
- case and (b) 
-\begin_inset Formula $s=1\,\xi=1$
+ and 
+\begin_inset Formula $s=1.\,\xi=1$
 \end_inset
 
  case.
- The solid lines are the exact numerical results by the method of Ref.
+ The solid lines plot the exact numerical results by the method of Ref.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -4905,12 +4899,11 @@ key "Chen:2016hkz"
 \end_inset
 
 .
- The dashed lines are 
+ The dashed lines plot the 
 \begin_inset Formula $1/N^{2}$
 \end_inset
 
  order perturbation results.
- 
 \end_layout
 
 \end_inset
@@ -4924,7 +4917,7 @@ key "Chen:2016hkz"
 \end_layout
 
 \begin_layout Standard
-We then want to confirm the large 
+We then want to verify the large 
 \begin_inset Formula $M$
 \end_inset
 
@@ -4932,13 +4925,13 @@ We then want to confirm the large
 \begin_inset Formula $\Delta E$
 \end_inset
 
- numerically.
- Instead of simply plotting 
+.
+ Instead of plotting 
 \begin_inset Formula $\Delta E$
 \end_inset
 
  with respect to 
-\begin_inset Formula $L$
+\begin_inset Formula $M$
 \end_inset
 
 , we study its 
@@ -4949,7 +4942,7 @@ inner structure
 \begin_inset Quotes erd
 \end_inset
 
-, contribution of each 
+, that is the contribution of each 
 \begin_inset Formula $L$
 \end_inset
 
@@ -5408,19 +5401,24 @@ b is the same plot for
 \end_layout
 
 \begin_layout Standard
-From the numerical results, approximately the 
+From the numerically results, when 
+\begin_inset Formula $s$
+\end_inset
+
+ is large, we can approximate
 \begin_inset Formula $\Delta\hat{E}$
 \end_inset
 
- 
+ as 
 \begin_inset Formula 
 \[
-\Delta\hat{E}_{\xi=0}\sim,\quad\Delta\hat{E}_{\xi=1}\sim2.51^{s},\quad\Delta\hat{E}_{\xi=3}\sim
+\Delta\hat{E}_{\xi=0}\sim-14.0^{s},\quad\Delta\hat{E}_{\xi=1}\sim-2.51^{s},\quad\Delta\hat{E}_{\xi=3}\sim-50.6^{s},
 \]
 
 \end_inset
 
-The exponential dependent of 
+ up to constant prefactors.
+ The exponential dependence of 
 \begin_inset Formula $\Delta\hat{E}$
 \end_inset
 
@@ -5428,12 +5426,12 @@ The exponential dependent of
 \begin_inset Formula $s$
 \end_inset
 
- stem from the fact the the ground energy has 
+ stems from the degeneracy of energy eigenstates.
+ Each ground states has 
 \begin_inset Formula $2^{s}$
 \end_inset
 
  degeneracies.
- 
 \end_layout
 
 \begin_layout Standard
