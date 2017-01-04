@@ -5061,13 +5061,20 @@ reference "fig:SubEvsMxi0"
 \begin_inset Formula $s=2,\,3,\,4$
 \end_inset
 
- cases, it is evident that the curves show an asymptotic behavior.
+ cases, the curves of different 
+\begin_inset Formula $M$
+\end_inset
+
+ values are very close to each other, so the asymptotic behavior is evident.
  For the 
 \begin_inset Formula $s=1$
 \end_inset
 
- case, despite not converging as fast as the other cases, it suggests a
- trend of asymptotic behavior.
+ case, the gaps between consecutive curves become smaller as 
+\begin_inset Formula $M$
+\end_inset
+
+ increase, which is consistent with the expected asymptotic behavior.
  It is therefore fair to conclude that the large 
 \begin_inset Formula $M$
 \end_inset
@@ -5166,11 +5173,130 @@ name "fig:SubEvsMxi0"
 \end_layout
 
 \begin_layout Standard
+The fact that, in the case of odd 
+\begin_inset Formula $s$
+\end_inset
+
+ and odd 
+\begin_inset Formula $M$
+\end_inset
+
+, 
+\begin_inset Formula $\Delta E$
+\end_inset
+
+ is positive for odd 
+\begin_inset Formula $L$
+\end_inset
+
+ and negative for even 
+\begin_inset Formula $L$
+\end_inset
+
+ can be understood as follows.
+ The large chain is splitted into two small chains of 
+\begin_inset Formula $L$
+\end_inset
+
+ and 
+\begin_inset Formula $K=M-L$
+\end_inset
+
+ bits, where 
+\begin_inset Formula $K$
+\end_inset
+
+-bit chain is the one that 
+\begin_inset Formula $h_{kl}$
+\end_inset
+
+ acts on.
+ It means that the 
+\begin_inset Formula $K$
+\end_inset
+
+-bit chain is evolved from the large chain under the action of 
+\begin_inset Formula $h_{kl}$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $K$
+\end_inset
+
+ is even, the lowest state of 
+\begin_inset Formula $K$
+\end_inset
+
+-bit chain is 
+\begin_inset Formula $F_{K/2}^{\dagger}\psi_{G}^{\left(K\right)}$
+\end_inset
+
+, which has energy 
+\begin_inset Formula $-8K/\pi+8+2\pi/3K$
+\end_inset
+
+.
+ While for odd 
+\begin_inset Formula $K$
+\end_inset
+
+, the lowest state is the ground state, which has energy 
+\begin_inset Formula $-8K/\pi+2\pi/3K$
+\end_inset
+
+.
+ The term linear in 
+\begin_inset Formula $K$
+\end_inset
+
+ is irrelevant for interaction
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Giles:1977mpa"
+
+\end_inset
+
+.
+ It then follows that it is more difficult to evolve the large chain into
+ a smaller chain with even 
+\begin_inset Formula $K$
+\end_inset
+
+ than odd 
+\begin_inset Formula $K$
+\end_inset
+
+.
+ Therefore, a point of even 
+\begin_inset Formula $K$
+\end_inset
+
+ (odd 
+\begin_inset Formula $L$
+\end_inset
+
+) corresponds to a higher 
+\begin_inset Formula $\Delta E_{i}$
+\end_inset
+
+ than a point of odd 
+\begin_inset Formula $K$
+\end_inset
+
+ (even 
+\begin_inset Formula $L$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
 We next consider the effect of 
 \begin_inset Formula $\xi$
 \end_inset
 
- parameter on the large 
+ parameter in the large 
 \begin_inset Formula $M$
 \end_inset
 
@@ -5183,7 +5309,7 @@ reference "fig:SubEvsMs2"
 
 \end_inset
 
- shows the results for 
+ shows the results of 
 \begin_inset Formula $\xi=1$
 \end_inset
 
@@ -5201,7 +5327,7 @@ reference "fig:SubEvsMs2"
 \begin_inset Formula $\xi$
 \end_inset
 
-, the asympotic behavior does not change.
+, the asympotic behavior remains.
 \end_layout
 
 \begin_layout Standard
@@ -5287,7 +5413,7 @@ reference "fig:EvS"
 
 \end_inset
 
-a plots the change of 
+ plots the change of 
 \begin_inset Formula $\ln\left|\Delta\hat{E}\right|$
 \end_inset
 
@@ -5295,45 +5421,40 @@ a plots the change of
 \begin_inset Formula $s$
 \end_inset
 
- for 
-\begin_inset Formula $6$
+ for chains for 
+\begin_inset Formula $M=5$
 \end_inset
 
--bit chain, which only survives in even 
+ and 
+\begin_inset Formula $M=6$
+\end_inset
+
+.
+ For the 
+\begin_inset Formula $M=5$
+\end_inset
+
+ case we sampled 
+\begin_inset Formula $s$
+\end_inset
+
+ from 1 to 
+\begin_inset Formula $10$
+\end_inset
+
+, while for 
+\begin_inset Formula $M=6$
+\end_inset
+
+ only even 
+\begin_inset Formula $s$
+\end_inset
+
+ points are sampled as its ground states only survive in even 
 \begin_inset Formula $s$
 \end_inset
 
  cases.
- Fig.
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:EvS"
-
-\end_inset
-
-b is the same plot for 
-\begin_inset Formula $5$
-\end_inset
-
--bit chain for all 
-\begin_inset Formula $s$
-\end_inset
-
- cases.
- Since 
-\begin_inset Formula $\Delta\hat{E}$
-\end_inset
-
- is independent of 
-\begin_inset Formula $s$
-\end_inset
-
- in leading order, we only need to choose one 
-\begin_inset Formula $M$
-\end_inset
-
- for each plot.
  For each 
 \begin_inset Formula $M$
 \end_inset
@@ -5352,7 +5473,7 @@ b is the same plot for
 \begin_inset Formula $\xi=3$
 \end_inset
 
- is the steepest case and 
+ is the steepest one and 
 \begin_inset Formula $\xi=1$
 \end_inset
 
@@ -5370,42 +5491,54 @@ b is the same plot for
 \begin_inset Formula $M=5$
 \end_inset
 
- case, the over trend of the curves are the same as the 
+ case, the over trend of the curves are the same as 
 \begin_inset Formula $M=6$
 \end_inset
 
- case, except for slight oscillation between even and odd 
+, except for slight oscillations between even and odd 
 \begin_inset Formula $s$
 \end_inset
 
  points.
- When 
+ For 
+\begin_inset Formula $\xi=0,\,1$
+\end_inset
+
+, the oscillation is relatively noticeable, but for 
 \begin_inset Formula $\xi=3$
 \end_inset
 
-, the oscillation is very negligible.
+, it becomes very negligible.
  Actually, if only even 
 \begin_inset Formula $s$
 \end_inset
 
- points are sampled, the plots are the same as 
+ points of 
+\begin_inset Formula $M=5$
+\end_inset
+
+ are sampled, the plots are almost the same as 
 \begin_inset Formula $M=6$
 \end_inset
 
- case.
+.
  
 \end_layout
 
 \begin_layout Standard
-From the numerically results, when 
-\begin_inset Formula $s$
-\end_inset
-
- is large, we can approximate
+From the numerically results, we can approximate
 \begin_inset Formula $\Delta\hat{E}$
 \end_inset
 
- as 
+ at each 
+\begin_inset Formula $\xi$
+\end_inset
+
+ value when 
+\begin_inset Formula $s$
+\end_inset
+
+ is large as 
 \begin_inset Formula 
 \[
 \Delta\hat{E}_{\xi=0}\sim-14.0^{s},\quad\Delta\hat{E}_{\xi=1}\sim-2.51^{s},\quad\Delta\hat{E}_{\xi=3}\sim-50.6^{s},
@@ -5413,7 +5546,11 @@ From the numerically results, when
 
 \end_inset
 
- up to constant prefactors.
+ up to factors at most polynomial in 
+\begin_inset Formula $s$
+\end_inset
+
+.
  The exponential dependence of 
 \begin_inset Formula $\Delta\hat{E}$
 \end_inset
@@ -5422,8 +5559,7 @@ From the numerically results, when
 \begin_inset Formula $s$
 \end_inset
 
- stems from the degeneracy of energy eigenstates.
- Each ground states has 
+ stems from the fact that each ground states has 
 \begin_inset Formula $2^{s}$
 \end_inset
 
@@ -5431,16 +5567,25 @@ From the numerically results, when
 \end_layout
 
 \begin_layout Standard
-It seems to suggest that 
+Based on our further numerical computation, it seems to suggest that , of
+ all the values of 
+\begin_inset Formula $\xi$
+\end_inset
+
+, 
 \begin_inset Formula $\xi=1$
 \end_inset
 
- is the case that the curve has lowest slope
+ is the case that the 
+\begin_inset Formula $\ln\left|\Delta\hat{E}\right|$
+\end_inset
+
+ has lowest slope
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-Actually, as far as the the regime 
+Actually, as far as the regime 
 \begin_inset Formula $1\leq s\leq10$
 \end_inset
 
@@ -5466,7 +5611,7 @@ Actually, as far as the the regime
 \end_inset
 
  is large enough.
- We tend to believe the 
+ We prone to believe that the 
 \begin_inset Formula $\xi=1$
 \end_inset
 
@@ -5480,24 +5625,24 @@ Actually, as far as the the regime
 \end_inset
 
 .
- The 
+ This might be related to a special feature of the 
 \begin_inset Formula $\xi=1$
 \end_inset
 
- case is very special.
- Recall the 
+ case.
+ Recall that the Hamiltonian has an 
 \begin_inset Formula $H_{1}$
 \end_inset
 
- term 
+ part shown as 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:ham_H1"
 
 \end_inset
 
- of the Hamiltonian.
- It can produce a term like 
+.
+ This part can produce a term like 
 \begin_inset Formula $-s\tr\bar{\phi}_{12\cdots s}\bar{\phi}_{12\cdots s}\phi_{12\cdots s}\phi_{12\cdots s}$
 \end_inset
 
@@ -5510,17 +5655,17 @@ reference "eq:ham_H1"
 \begin_inset Formula $\phi_{12\cdots s}$
 \end_inset
 
- is a scalar and this term behaves as a scalar potential with negative coefficie
-nt, which would lead to dangerous instability.
+ is a scalar and this term behaves like a scalar potential with negative
+ coefficient, which can lead to dangerous instability.
  But when 
 \begin_inset Formula $\xi=1$
 \end_inset
 
-, this term is cancelled exactly by the 
+, this term is cancelled exactly by 
 \begin_inset Formula $\xi\Delta H$
 \end_inset
 
- term.
+.
  That being said, for even 
 \begin_inset Formula $s$
 \end_inset
@@ -5577,19 +5722,15 @@ name "fig:EvS"
 \begin_inset Formula $s$
 \end_inset
 
- for (a) 
+ for 
 \begin_inset Formula $M=6$
 \end_inset
 
- and even 
-\begin_inset Formula $s$
-\end_inset
-
- (b) 
+ and 
 \begin_inset Formula $M=5$
 \end_inset
 
-.
+ cases.
  Note that in (a) the 
 \begin_inset Formula $\xi=0$
 \end_inset
@@ -5635,11 +5776,77 @@ We have presented a formalism to calculate the three string interaction
  The calculation of both are transferred to the calculation of vacuum expectatio
 n value of eigenoperators.
  As we see, however, the formulas are very complicated and the complexity
- of the calculation increase dramatically as the bit number 
+ of the calculation increases dramatically as the bit number 
 \begin_inset Formula $M$
 \end_inset
 
  increases.
+ 
+\end_layout
+
+\begin_layout Standard
+When the big number 
+\begin_inset Formula $M$
+\end_inset
+
+ is large, the ground energy correction 
+\begin_inset Formula $\Delta E_{G}$
+\end_inset
+
+ scales as 
+\begin_inset Formula $M^{5-s/4}$
+\end_inset
+
+ for even 
+\begin_inset Formula $s$
+\end_inset
+
+ and 
+\begin_inset Formula $M^{4-s/4}$
+\end_inset
+
+ for odd 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ In the case of 
+\begin_inset Formula $s=24$
+\end_inset
+
+, it produce the nice result 
+\begin_inset Formula $\Delta E_{G}\sim1/M\sim1/P^{+}$
+\end_inset
+
+, which assembles the relation 
+\begin_inset Formula $P^{-}=\left(\mathbf{P}^{2}+\mu^{2}\right)/P^{+}$
+\end_inset
+
+ under Poincare symmetry.
+ The negative coefficient of 
+\begin_inset Formula $s$
+\end_inset
+
+ in the power of 
+\begin_inset Formula $M$
+\end_inset
+
+ reflects the fermionic nature of string bits.
+ The leading order contribution to 
+\begin_inset Formula $\Delta E_{G}$
+\end_inset
+
+ comes from the ground states of smaller chains.
+ Notwithstanding that the number of excited states increases exponentially
+ as 
+\begin_inset Formula $s$
+\end_inset
+
+ increases, the contribution of excited states to 
+\begin_inset Formula $\Delta E_{G}$
+\end_inset
+
+ cancelled out.
  
 \end_layout
 
