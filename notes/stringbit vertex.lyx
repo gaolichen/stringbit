@@ -5785,7 +5785,7 @@ n value of eigenoperators.
 \end_layout
 
 \begin_layout Standard
-When the big number 
+When the bit number 
 \begin_inset Formula $M$
 \end_inset
 
@@ -5814,114 +5814,40 @@ When the big number
 \begin_inset Formula $s=24$
 \end_inset
 
-, it produce the nice result 
+, it leads to 
 \begin_inset Formula $\Delta E_{G}\sim1/M\sim1/P^{+}$
 \end_inset
 
-, which assembles the relation 
+, which resembles the Poincaré invariant dispersion relation 
 \begin_inset Formula $P^{-}=\left(\mathbf{P}^{2}+\mu^{2}\right)/P^{+}$
 \end_inset
 
- under Poincare symmetry.
- The negative coefficient of 
-\begin_inset Formula $s$
-\end_inset
-
- in the power of 
-\begin_inset Formula $M$
-\end_inset
-
- reflects the fermionic nature of string bits.
- The leading order contribution to 
+.
+ The 
 \begin_inset Formula $\Delta E_{G}$
 \end_inset
 
- comes from the ground states of smaller chains.
- Notwithstanding that the number of excited states increases exponentially
- as 
-\begin_inset Formula $s$
-\end_inset
-
- increases, the contribution of excited states to 
+ calcualted in this paper corresponds to the one-loop self energy of field
+ theory.
+ In fact, the leading order of 
 \begin_inset Formula $\Delta E_{G}$
 \end_inset
 
- cancelled out.
- 
-\end_layout
-
-\begin_layout Standard
-The numerical computation of ground energy correction shows that the 
-\begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
-\end_inset
-
- ground energy correction diverges as 
-\begin_inset Formula $M^{3}$
-\end_inset
-
- at large 
+ only comes from the contribution of the ground states of smaller chains.
+ Notwithstanding that the number of excited states is an exponential function
+ of 
 \begin_inset Formula $M$
 \end_inset
 
- for the case 
-\begin_inset Formula $s=1,\,\xi=0$
-\end_inset
 
-.
- In general, the divergence becomes more severe for large 
-\begin_inset Formula $s$
-\end_inset
-
-.
- However, to produce the stringy behavior, we expect 
-\begin_inset Formula $E\sim M^{-1}$
-\end_inset
-
- at large 
-\begin_inset Formula $M$
-\end_inset
-
- at every order of 
-\begin_inset Formula $1/N$
-\end_inset
-
-.
- Therefore, we need to cancel the unexpected divergence.
- As we see from the numerical results, by choosing suitable 
-\begin_inset Formula $\xi\Delta H$
-\end_inset
-
-, which does not affect large 
-\begin_inset Formula $N$
-\end_inset
-
- limit, one can make the divergence less severe.
- It suggests that we can use 
-\begin_inset Formula $\mathcal{O}\left(1/N\right)$
-\end_inset
-
- or higher order terms to regulate the divergence.
- If the energy correction diverges as 
-\begin_inset Formula $M^{n}$
-\end_inset
-
-, in general one need to find 
-\begin_inset Formula $n$
-\end_inset
-
-, or fewer if accidental cancellation occurs, such terms to cancel the divergenc
-e.
- Also, such terms are also demanded for generating operator insertion at
- the break/join points of the overlap among one single closed string with
- two smaller closed strings
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Thorn:2014hia"
+key "Chen:2016hkz"
 
 \end_inset
 
-.
- This can be a direction for our future work.
+, excited states contributions are cancelled out due to the fermionic nature
+ of string bits.
 \end_layout
 
 \begin_layout Section
