@@ -2639,6 +2639,425 @@ Denote
 \end_layout
 
 \begin_layout Section
+More Mathematical Details
+\end_layout
+
+\begin_layout Subsection
+Symmetry of Matrices
+\end_layout
+
+\begin_layout Standard
+Let us explore the symmetry of the matrices.
+ For convenience, we define 
+\begin_inset Formula 
+\[
+\hat{n}=\begin{cases}
+L-n, & \quad1\leq n<L\\
+M-n-1+L, & \quad L\leq n<M-1\\
+M-1, & \quad n=M-1
+\end{cases}.
+\]
+
+\end_inset
+
+From 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_C_mn1"
+
+\end_inset
+
+-
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_S_mM1"
+
+\end_inset
+
+, we see that, for 
+\begin_inset Formula $1\leq m\leq M-1$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{equation}
+C_{mn}=C_{M-m,\hat{n}}^{*},\quad S_{mn}=-S_{M-m,\hat{n}}^{*},\quad1\leq n\leq M-1,\label{eq:overlap_CS_symmetry1}
+\end{equation}
+
+\end_inset
+
+We now rename the indices of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_CMS"
+
+\end_inset
+
+ as 
+\begin_inset Formula $m\to M-m$
+\end_inset
+
+, 
+\begin_inset Formula $n\to\hat{n}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{equation}
+\sum_{n=1}^{M-1}C_{M-m,\hat{n}}D_{\hat{n}\hat{l}}+S_{M-m,\hat{l}}=0.
+\end{equation}
+
+\end_inset
+
+ Taking compex conjugate and applying 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_CS_symmetry1"
+
+\end_inset
+
+ yields
+\begin_inset Formula 
+\begin{equation}
+\sum_{n=1}^{M-1}C_{mn}D_{\hat{n}\hat{l}}^{*}-S_{ml}=0,\quad1\leq l\leq M-1,\label{eq:overlap_CMS2}
+\end{equation}
+
+\end_inset
+
+Comparing 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_CMS2"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:over_CMS3"
+
+\end_inset
+
+ with 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_CMS"
+
+\end_inset
+
+, we arrive at
+\begin_inset Formula 
+\[
+D_{nl}=-D_{\hat{n}\hat{l}}^{*}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now let us consider 
+\begin_inset Formula $C^{-1}$
+\end_inset
+
+, which satisfies 
+\begin_inset Formula 
+\[
+C_{mn}C_{nl}^{-1}-\delta_{ml}=0.
+\]
+
+\end_inset
+
+ Renaming the indecie as 
+\begin_inset Formula $m\to M-m$
+\end_inset
+
+, 
+\begin_inset Formula $n\to\hat{n}$
+\end_inset
+
+, 
+\begin_inset Formula $l\to M-l$
+\end_inset
+
+ and taking complex conjugates yield 
+\begin_inset Formula 
+\[
+C_{M-m,\hat{n}}^{*}\left(C_{\hat{n},M-l}^{-1}\right)^{*}-\delta_{ml}=0.
+\]
+
+\end_inset
+
+Using 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_CS_symmetry1"
+
+\end_inset
+
+, we obtain 
+\begin_inset Formula 
+\[
+\sum_{n=1}^{M-1}C_{mn}C_{\hat{n},M-l}^{-1*}-\delta_{ml}=0,
+\]
+
+\end_inset
+
+ from which it follows
+\begin_inset Formula 
+\[
+C_{nm}^{-1}=C_{\hat{n},M-m}^{-1*},\quad1\leq n<M-1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+With above results, we can show that 
+\begin_inset Formula $\gamma^{\prime}=\gamma-\tr S^{*}C^{-1}A^{\dagger}$
+\end_inset
+
+ is always real.
+ As 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ is real, we only need to show 
+\begin_inset Formula $\tr S^{*}C^{-1}A^{\dagger}$
+\end_inset
+
+ is real.
+ By inspection, we see that
+\begin_inset Formula 
+\[
+A_{nm}=-A_{M-n,M-m}^{*},
+\]
+
+\end_inset
+
+which implies 
+\begin_inset Formula $A^{\dagger}$
+\end_inset
+
+ also satisifies the same relation 
+\begin_inset Formula 
+\[
+A_{nm}^{\dagger}=-\left(A_{M-n,M-m}^{\dagger}\right)^{*}.
+\]
+
+\end_inset
+
+ Now let 
+\begin_inset Formula $X=\tr S^{*}C^{-1}A^{\dagger}$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+X^{*}=S_{mn}C_{nl}^{-1*}A_{ml}.
+\]
+
+\end_inset
+
+ Renaming indices as 
+\begin_inset Formula $m\to M-m$
+\end_inset
+
+, 
+\begin_inset Formula $n\to\hat{n}$
+\end_inset
+
+, 
+\begin_inset Formula $l\to M-l$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+X^{*}=S_{M-m,\hat{n}}C_{\hat{n},M-l}^{-1*}A_{M-m,M-l}=S_{mn}^{*}C_{nl}^{-1}A_{ml}^{*}=X
+\]
+
+\end_inset
+
+It then follows that 
+\begin_inset Formula $X$
+\end_inset
+
+ is real and 
+\begin_inset Formula $\gamma^{\prime}$
+\end_inset
+
+ is real.
+\end_layout
+
+\begin_layout Standard
+We now consider the matrix 
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+ We have 
+\begin_inset Formula 
+\[
+\Omega_{nk}=C_{nm}^{-1}A_{lm}^{*}C_{kl}^{-1}.
+\]
+
+\end_inset
+
+ Changing indices as 
+\begin_inset Formula $n\to\hat{n}$
+\end_inset
+
+, 
+\begin_inset Formula $m\to M-m$
+\end_inset
+
+, 
+\begin_inset Formula $l\to M-l$
+\end_inset
+
+, 
+\begin_inset Formula $k\to\hat{k}$
+\end_inset
+
+ and taking complex conjugate yields 
+\begin_inset Formula 
+\begin{align*}
+\Omega_{\hat{n}\hat{k}}^{*} & =\sum_{m,l=1}^{M-1}C_{\hat{n},M-m}^{-1*}A_{M-l,M-m}C_{\hat{k},M-l}^{-1*}=-\sum_{m,l=1}^{M-1}C_{nm}^{-1}A_{lm}^{*}C_{kl}^{-1}=-\Omega_{nk}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We now consider the relation of matrices for 
+\begin_inset Formula $L$
+\end_inset
+
+ and 
+\begin_inset Formula $K$
+\end_inset
+
+.
+ By inspection, we have 
+\begin_inset Formula 
+\[
+C_{mn}^{\left(K\right)}=-\frac{1-e^{2\pi imK/M}}{1-e^{2\pi imL/M}}C_{m,L+n-1}\equiv-u_{m}^{\left(K\right)}C_{m,L+n-1}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+C_{m,K+n-1}^{\left(K\right)}=-u_{m}^{\left(K\right)}C_{mn}^{\left(L\right)},\quad C_{m,M-1}^{\left(K\right)}=u_{m}C_{m,M-1}^{\left(L\right)}.
+\]
+
+\end_inset
+
+In matrix multiplication, we have
+\begin_inset Formula 
+\[
+C^{\left(K\right)}=\begin{pmatrix}u_{1}^{\left(K\right)}\\
+ & \ddots\\
+ &  & u_{M-1}^{\left(K\right)}
+\end{pmatrix}C^{\left(L\right)}\begin{pmatrix}0 & -\mathbf{I}_{L} & 0\\
+-\mathbf{I}_{K} & 0 & 0\\
+0 & 0 & 1
+\end{pmatrix}.
+\]
+
+\end_inset
+
+ Similarly, for the 
+\begin_inset Formula $S$
+\end_inset
+
+ matrix
+\begin_inset Formula 
+\[
+S^{\left(K\right)}=\begin{pmatrix}u_{1}^{\left(K\right)}\\
+ & \ddots\\
+ &  & u_{M-1}^{\left(K\right)}
+\end{pmatrix}S^{\left(L\right)}\begin{pmatrix}0 & -\mathbf{I}_{L} & 0\\
+-\mathbf{I}_{K} & 0 & 0\\
+0 & 0 & 1
+\end{pmatrix}.
+\]
+
+\end_inset
+
+It then follows 
+\begin_inset Formula 
+\[
+D^{\left(K\right)}=\begin{pmatrix}0 & -\mathbf{I}_{K} & 0\\
+-\mathbf{I}_{L} & 0 & 0\\
+0 & 0 & 1
+\end{pmatrix}D^{\left(L\right)}\begin{pmatrix}0 & -\mathbf{I}_{L} & 0\\
+-\mathbf{I}_{K} & 0 & 0\\
+0 & 0 & 1
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+D_{mn}^{\left(K\right)}=D_{L+m-1,L+n-1}^{\left(L\right)},\quad1\leq m,n<K
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+D_{m,K+n-1}^{\left(K\right)}=D_{L+m-1,n}^{\left(L\right)},\quad1\leq m<K,\,1\leq n<L
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+D_{m,M-1}^{\left(K\right)}=-D_{L+m-1,M-1}^{\left(L\right)},\quad1\leq m<K
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+D_{K+m-1,n}^{\left(K\right)}=D_{m,L+n-1}^{\left(L\right)},\quad1\leq m<L,\,1\leq n<K
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+D_{K+m-1,K+n-1}^{\left(K\right)}=D_{m,n}^{\left(L\right)},\quad1\leq m<L,\,1\leq n<L
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+D_{K+m-1,M-1}^{\left(K\right)}=-D_{m,M-1}^{\left(L\right)}\quad1\leq m<L
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Divergence of Bosonic String One-Loop Amplitudes
 \end_layout
 
