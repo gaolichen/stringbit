@@ -83,7 +83,8 @@
 \begin_body
 
 \begin_layout Title
-Cubic Interaction Vertices and One-loop Self Energy in Stable Bit Models
+Cubic Interaction Vertices and One-loop Self Energy in Stable String Bit
+ Models
 \end_layout
 
 \begin_layout Author
@@ -225,12 +226,20 @@ key "'tHooft:1987,'tHooft:1990eb,'tHooft:1993gx"
 \begin_inset Formula $\mathbf{x}=\left(x^{2},\cdots,x^{D-1}\right)$
 \end_inset
 
- and the '
+ and the 
+\begin_inset Quotes els
+\end_inset
+
+
 \begin_inset Formula $\pm$
 \end_inset
 
-' dimensions 
-\begin_inset Formula $x^{\pm}=\left(x^{0}+x^{1}\right)/\sqrt{2}$
+
+\begin_inset Quotes ers
+\end_inset
+
+ dimensions 
+\begin_inset Formula $x^{\pm}=\left(x^{0}\pm x^{1}\right)/\sqrt{2}$
 \end_inset
 
 .
@@ -354,7 +363,7 @@ In Fock space, a closed string is represented by a color singlet trace operator
 \begin_inset Formula $\tr\bar{\phi}\cdots\bar{\phi}\ket{0}$
 \end_inset
 
-, where all indices of 
+, where all the indices of 
 \begin_inset Formula $\bar{\phi}$
 \end_inset
 
@@ -429,7 +438,7 @@ key "Thorn:2015wli"
 \end_inset
 
 , where the cubic interaction vertices and their application to one-loop
- self energy calculation was discussed.
+ self energy was discussed.
  In this paper, we will perform detailed study on them.
  The calculation of the vertices and one-loop self energy will be done by
  finding the vacuum expectation values of ladder operators.
