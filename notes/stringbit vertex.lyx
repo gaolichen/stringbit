@@ -83,7 +83,7 @@
 \begin_body
 
 \begin_layout Title
-String bit interaction vertex and ground energy correction
+Cubic Interaction Vertices and One-loop Self Energy in Stable Bit Models
 \end_layout
 
 \begin_layout Author
@@ -116,24 +116,20 @@ Department of Physics, University of Florida, Gainesville, Florida 32611,
 \end_layout
 
 \begin_layout Abstract
-We provide a formalism to calculate the three string interaction vertices
- of the stable string bit model, in which string bits have 
+We provide a formalism to calculate the cubic interaction vertices of stable
+ string bit models, in which string bits have 
 \begin_inset Formula $s$
 \end_inset
 
  spin degree of freedom but no space to move.
- The calculation is done by finding the vacuum expectation values of eigenoperat
-ors.
- With the vertices, we obtain a formula for 
+ With the vertices, we obtain a formula for one-loop self energy, i.e., the
+ 
 \begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
 \end_inset
 
  correction to the energy spectrum.
- We calculate analytically the 
-\begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
-\end_inset
-
- ground energy correction of the system with bit number 
+ We calculate analytically the leading order correction to the ground energy
+ of the system with bit number 
 \begin_inset Formula $M=3$
 \end_inset
 
@@ -142,31 +138,48 @@ ors.
 \end_inset
 
 .
- By numerical computation of ground energy correction for higher bit number,
- we find that the correction diverges as high degree polynomial of 
+ We confirm numerically that, when 
 \begin_inset Formula $M$
 \end_inset
 
+ is large, the ground energy correction 
+\begin_inset Formula $\Delta E_{G}$
+\end_inset
+
+ scales as 
+\begin_inset Formula $M^{5-s/4}$
+\end_inset
+
+ for even 
+\begin_inset Formula $s$
+\end_inset
+
+ and 
+\begin_inset Formula $M^{4-s/4}$
+\end_inset
+
+ for odd 
+\begin_inset Formula $s$
+\end_inset
+
 .
- The results also suggest that such divergence can be canceled by adding
- 
-\begin_inset Formula $\mathcal{O}\left(1/N\right)$
+ Particularly, in the critical Grassmann dimension 
+\begin_inset Formula $s=24$
 \end_inset
 
- terms to the Hamiltonian.
- If this is true, by adding suitable 
-\begin_inset Formula $\mathcal{O}\left(1/N\right)$
+, the Poincare invariant relation in lightcone coordinates 
+\begin_inset Formula $P^{-}\sim1/P^{+}$
 \end_inset
 
- or higher order such terms, the expected stringy behavior, 
-\begin_inset Formula $E\sim M^{-1}$
+ is produced under the identification 
+\begin_inset Formula $P^{-}\sim E$
 \end_inset
 
-, can be produced at least up to 
-\begin_inset Formula $1/N^{2}$
+, 
+\begin_inset Formula $P^{+}\sim M$
 \end_inset
 
- order.
+.
 \end_layout
 
 \begin_layout Standard
@@ -415,16 +428,32 @@ key "Thorn:2015wli"
 
 \end_inset
 
-.
- The three string interaction vertex was introduced and its application
- in the calculation of 
-\begin_inset Formula $1/N^{2}$
+, where the cubic interaction vertices and their application to one-loop
+ self energy calculation was discussed.
+ In this paper, we will perform detailed study on them.
+ The calculation of the vertices and one-loop self energy will be done by
+ finding the vacuum expectation values of ladder operators.
+ We will confirm that, in large 
+\begin_inset Formula $M$
 \end_inset
 
- energy eigenvalue correction was discussed.
- In this paper, we will perform detailed study on the three string interaction
- vertex, then derive a formula to compute the leading order correction to
- the energy spectrum.
+ limit, the one-loop self energy scales like 
+\begin_inset Formula $M^{5-s/4}$
+\end_inset
+
+ for even 
+\begin_inset Formula $s$
+\end_inset
+
+ and 
+\begin_inset Formula $M^{4-s/4}$
+\end_inset
+
+ for odd 
+\begin_inset Formula $s$
+\end_inset
+
+.
  
 \end_layout
 
@@ -460,12 +489,11 @@ reference "sec:interaction-vertex"
 
 \end_inset
 
-, the three string interaction vertices are introduced by 
+, the cubic interaction vertices are studied by 
 \begin_inset Formula $1/N$
 \end_inset
 
  perturbation of the model.
- We then derive a formula to calculate the vertices.
  In Sec.
  
 \begin_inset CommandInset ref
@@ -474,21 +502,13 @@ reference "sec:EnergyCorrection"
 
 \end_inset
 
-, we use the three string interaction results to find the 
-\begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
-\end_inset
-
- correction to the energy eigenstates.
- As an example, the calculation for ground energy correction of 
+, we use the cubic interaction vertices to find the one-loop self energy.
+ The analytic calculation for 
 \begin_inset Formula $M=3$
 \end_inset
 
- is given.
- We perform the numerical computation for ground energy correction of higher
- 
-\begin_inset Formula $M$
-\end_inset
-
+ case is given as an example.
+ We analyze the results of numerical computation for one-loop self energy
  in Sec.
  
 \begin_inset CommandInset ref
@@ -1274,11 +1294,11 @@ tion relations
 
 \begin_layout Standard
 To obtain the energy spectrum, we need to find the ground energy 
-\begin_inset Formula $E_{0}$
+\begin_inset Formula $E_{G}$
 \end_inset
 
  and the ground eigenfunction 
-\begin_inset Formula $\psi_{0}$
+\begin_inset Formula $\psi_{G}$
 \end_inset
 
 , which is annihilated by all lowering operators.
@@ -2517,11 +2537,7 @@ name "sec:interaction-vertex"
 
 \end_inset
 
-
-\begin_inset Formula $1/N$
-\end_inset
-
- Three String Interaction Vertices
+Cubic Interaction Vertices
 \end_layout
 
 \begin_layout Standard
@@ -2532,7 +2548,7 @@ key "Thorn:2015wli"
 
 \end_inset
 
- to introduce the three string vertices through 
+ to introduce the cubic interaction vertices through 
 \begin_inset Formula $1/N$
 \end_inset
 
@@ -3144,16 +3160,16 @@ name "sec:EnergyCorrection"
 
 \end_inset
 
-Correction to Energy Spectrum
+One-loop Self Energy
 \end_layout
 
 \begin_layout Standard
-One application of the interaction vertices is to calculate the energy spectrum
- correction for finite 
-\begin_inset Formula $N$
+One application of the interaction vertices is to calculate the one-loop
+ self energy, i.e., the 
+\begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
 \end_inset
 
-.
+ correction to energy spectrum.
  In this section, we will follow the formalism of 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -3161,13 +3177,9 @@ key "Thorn:2015wli"
 
 \end_inset
 
- to obtain the formula of the 
-\begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
-\end_inset
-
- correction to the ground energy.
- We then apply the results of previous section to the calculation and obtain
- a formula for analytic and numerical computation.
+ to express the one-loop self energy in terms of cubic interaction vertices.
+ We then apply the results of previous section and obtain a formula for
+ analytic and numerical computation.
 \end_layout
 
 \begin_layout Standard
@@ -3667,27 +3679,18 @@ reference "eq:pert_vev_v"
 
 \end_inset
 
- 
-\end_layout
-
-\begin_layout Standard
-Combining above together, we can calculate the 
+ Combining above together, we can calculate the 
 \begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
 \end_inset
 
  correction to the ground energy.
  As the complete formula is very complicated, we do not bother writing it
  here.
- In the following subsection, let us give an example of the calculation
- for the 
-\begin_inset Formula $M=3$
-\end_inset
-
- case.
+ 
 \end_layout
 
 \begin_layout Standard
-We now consider the large 
+We conclude this subsection by considering the large 
 \begin_inset Formula $M$
 \end_inset
 
@@ -3735,15 +3738,8 @@ reference "eq:energy_per_largeM"
 \begin_inset Formula $\left|\det C\right|$
 \end_inset
 
- as 
+ scales as 
 \begin_inset Formula $M^{-s/4}$
-\end_inset
-
- 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:overlap_detC"
-
 \end_inset
 
 .
@@ -3766,7 +3762,7 @@ reference "eq:overlap_detC"
 \end_inset
 
  is of order one.
- The sum over 
+ Finally, the sum over 
 \begin_inset Formula $L$
 \end_inset
 
@@ -3775,7 +3771,7 @@ reference "eq:overlap_detC"
 \end_inset
 
 .
- So 
+ Combing above together, 
 \begin_inset Formula $\Delta E_{G}$
 \end_inset
 
@@ -3796,16 +3792,16 @@ reference "eq:overlap_detC"
 \end_inset
 
 .
- Particularly, when 
+ Particularly, in the critical Grassmann dimension 
 \begin_inset Formula $s=24$
 \end_inset
 
-, 
+, we have 
 \begin_inset Formula $\Delta E_{G}\sim1/M\sim1/P^{+}$
 \end_inset
 
-, which is the expected Poincare invariant dispersion relation 
-\begin_inset Formula $P^{-}P^{+}=\left(\mathbf{P}^{2}+\mu^{2}\right)$
+, which is the expected Poincaré invariant dispersion relation 
+\begin_inset Formula $P^{-}=\left(\mathbf{P}^{2}+\mu^{2}\right)/P^{+}$
 \end_inset
 
 .
@@ -3817,6 +3813,22 @@ Examples of
 \begin_inset Formula $M=3$
 \end_inset
 
+ 
+\end_layout
+
+\begin_layout Standard
+In this subsection, let us calculate the ground energy correction for 
+\begin_inset Formula $M=3$
+\end_inset
+
+ using formula 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:energy_pert_DeltaE"
+
+\end_inset
+
+.
  
 \end_layout
 
@@ -3838,10 +3850,7 @@ For
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-When 
+ When 
 \begin_inset Formula $L=1$
 \end_inset
 
@@ -4363,7 +4372,7 @@ reference "tab:Energy-eigenstates-2"
 \end_inset
 
  case.
- Now let us find 
+ We only need to find 
 \begin_inset Formula $\left\langle 1\right\rangle _{V,W}$
 \end_inset
 
@@ -5869,7 +5878,10 @@ Acknowledgments
 \end_layout
 
 \begin_layout Standard
-Acknowledgments
+We thank Charles Thorn for helpful discussion and comments on this work.
+ This research was supported in part by the Department of Energy under Grand
+ No.
+ DE-SC0010296.
 \end_layout
 
 \begin_layout Standard
