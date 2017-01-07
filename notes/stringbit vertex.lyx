@@ -4869,7 +4869,7 @@ reference "fig:E_compare"
 \end_inset
 
  case.
- The solid lines are exact numerical resultsand the dashed lines are 
+ The solid lines are exact numerical results and the dashed lines are 
 \begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
 \end_inset
 
@@ -5394,7 +5394,7 @@ reference "fig:SubEvsMs2"
 \begin_inset Formula $\xi$
 \end_inset
 
-, the asympotic behavior remains.
+, the asymptotic behavior remains.
 \end_layout
 
 \begin_layout Standard
@@ -5544,7 +5544,7 @@ reference "fig:EvS"
 \begin_inset Formula $\xi=1$
 \end_inset
 
- is the flatest one.
+ is the flattest one.
  
 \begin_inset Formula $\xi=0$
 \end_inset
@@ -5773,7 +5773,7 @@ reference "eq:ham_H1"
 \begin_inset Formula $\xi=1$
 \end_inset
 
-, this term is cancelled exactly by 
+, this term is canceled exactly by 
 \begin_inset Formula $\xi\Delta H$
 \end_inset
 
@@ -5876,7 +5876,7 @@ key "Chen:2016hkz"
 \begin_inset Formula $\Delta E_{G}$
 \end_inset
 
- are cancelled out due to the fermionic nature of string bits.
+ are canceled out due to the fermionic nature of string bits.
  The results uphold the idea of formulating string theory by string bit
  models.
  
