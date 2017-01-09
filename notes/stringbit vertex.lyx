@@ -2483,8 +2483,8 @@ C^{\left(K\right)}=UC^{\left(L\right)}R,\quad S^{\left(K\right)}=US^{\left(L\rig
 U=\begin{pmatrix}u_{1}^{\left(K\right)}\\
  & \ddots\\
  &  & u_{M-1}^{\left(K\right)}
-\end{pmatrix},\quad R=\begin{pmatrix}0 & -\mathbf{I}_{L} & 0\\
--\mathbf{I}_{K} & 0 & 0\\
+\end{pmatrix},\quad R=\begin{pmatrix}0 & -\mathbf{I}_{L-1} & 0\\
+-\mathbf{I}_{K-1} & 0 & 0\\
 0 & 0 & 1
 \end{pmatrix}
 \]
@@ -2492,15 +2492,15 @@ U=\begin{pmatrix}u_{1}^{\left(K\right)}\\
 \end_inset
 
  with 
-\begin_inset Formula $u_{k}=\left(1-e^{2\pi imK/M}\right)/1-e^{2\pi imL/M}$
+\begin_inset Formula $u_{m}^{\left(K\right)}=\left(1-e^{2\pi imK/M}\right)/1-e^{2\pi imL/M}$
 \end_inset
 
  and 
-\begin_inset Formula $\mathbf{I}_{L}$
+\begin_inset Formula $\mathbf{I}_{L=1}$
 \end_inset
 
  the identity matrix of 
-\begin_inset Formula $L\times L$
+\begin_inset Formula $\left(L-1\right)\times\left(L-1\right)$
 \end_inset
 
  dimension.
@@ -5597,7 +5597,7 @@ reference "fig:EvS"
 \begin_inset Formula $s$
 \end_inset
 
- stems from the fact that each ground states has 
+ stems from the fact that each ground state has 
 \begin_inset Formula $2^{s}$
 \end_inset
 
