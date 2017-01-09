@@ -6343,33 +6343,45 @@ First, we express
 \begin_inset Formula $h_{kl}$
 \end_inset
 
-, 
+ and rearranging, we obtain
 \begin_inset Formula 
-\begin{eqnarray*}
-h_{kl} & = & -2+\frac{4}{M}\sum_{n,m=0}^{M-1}\alpha_{n}\beta_{m}\exp\left(2\pi ik\frac{m+n}{M}\right)\\
- &  & -\frac{2}{M}\sum_{n,m=0}^{M-1}\left(\alpha_{n}\beta_{m}+\alpha_{m}\beta_{n}+i\alpha_{n}\alpha_{m}+i\beta_{n}\beta_{m}\right)\exp\left(2\pi i\frac{kn+lm}{M}\right)\\
- & = & -2+\frac{4}{M}\sum_{n,m=1}^{M-1}\alpha_{n}\beta_{m}\exp\left(2\pi ik\frac{m+n}{M}\right)\\
- &  & -\frac{2}{M}\sum_{n,m=1}^{M-1}\left(\alpha_{n}\beta_{m}+\alpha_{m}\beta_{n}+i\alpha_{n}\alpha_{m}+i\beta_{n}\beta_{m}\right)\exp\left(2\pi i\frac{kn+lm}{M}\right)\\
- &  & +\frac{2}{M}\sum_{n=1}^{M-1}\left(\alpha_{n}\beta_{0}+\alpha_{0}\beta_{n}-i\alpha_{n}\alpha_{0}-i\beta_{n}\beta_{0}\right)\left[\exp\left(2\pi i\frac{kn}{M}\right)-\exp\left(2\pi i\frac{ln}{M}\right)\right]\\
- & \equiv & h_{kl}^{\left(1\right)}+h_{kl}^{\left(0\right)},
-\end{eqnarray*}
+\[
+h_{kl}=h_{kl}^{\left(1\right)}+h_{kl}^{\left(0\right)}
+\]
 
 \end_inset
 
- where in last step we have define the terms involving zero modes as 
-\begin_inset Formula $h_{kl}^{\left(0\right)}$
+where 
+\begin_inset Formula 
+\begin{multline*}
+h_{kl}^{\left(1\right)}=-2+\frac{4}{M}\sum_{n,m=1}^{M-1}\alpha_{n}\beta_{m}\exp\left(2\pi ik\frac{m+n}{M}\right)\\
+-\frac{2}{M}\sum_{n,m=1}^{M-1}\left(\alpha_{n}\beta_{m}+\alpha_{m}\beta_{n}+i\alpha_{n}\alpha_{m}+i\beta_{n}\beta_{m}\right)\exp\left(2\pi i\frac{kn+lm}{M}\right),
+\end{multline*}
+
 \end_inset
 
- and the rest as 
-\begin_inset Formula $h_{kl}^{\left(1\right)}$
+
+\begin_inset Formula 
+\[
+h_{kl}^{\left(0\right)}=\frac{2}{M}\sum_{n=1}^{M-1}\left(\alpha_{n}\beta_{0}+\alpha_{0}\beta_{n}-i\alpha_{n}\alpha_{0}-i\beta_{n}\beta_{0}\right)\left[\exp\left(2\pi i\frac{kn}{M}\right)-\exp\left(2\pi i\frac{ln}{M}\right)\right].
+\]
+
 \end_inset
 
-.
- 
+
 \end_layout
 
 \begin_layout Standard
-Using 
+We then express 
+\begin_inset Formula $\alpha_{m}$
+\end_inset
+
+ and 
+\begin_inset Formula $\beta_{m}$
+\end_inset
+
+ in terms of raising and lowering operators.
+ Using 
 \begin_inset Formula 
 \[
 \alpha_{k}=c_{k}F_{M-k}^{\dagger}+s_{k}F_{k},\quad\beta_{k}=-s_{k}F_{M-k}^{\dagger}+c_{k}F_{k},\quad k=1,\cdots,M-1,
@@ -6379,45 +6391,55 @@ Using
 
 we have 
 \begin_inset Formula 
-\[
-\alpha_{n}\alpha_{m}=c_{n}c_{m}F_{M-n}^{\dagger}F_{M-m}^{\dagger}+s_{n}s_{m}F_{n}F_{m}+c_{n}s_{m}F_{M-n}^{\dagger}F_{m}-c_{m}s_{n}F_{M-m}^{\dagger}F_{n}+c_{n}s_{n}\delta_{m+n,M}
-\]
+\begin{equation}
+\alpha_{n}\alpha_{m}=c_{n}c_{m}F_{M-n}^{\dagger}F_{M-m}^{\dagger}+s_{n}s_{m}F_{n}F_{m}+c_{n}s_{m}F_{M-n}^{\dagger}F_{m}-c_{m}s_{n}F_{M-m}^{\dagger}F_{n}+c_{n}s_{n}\delta_{m+n,M},\label{eq:hkl_aa}
+\end{equation}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-\alpha_{n}\beta_{m}=-c_{n}s_{m}F_{M-n}^{\dagger}F_{M-m}^{\dagger}+c_{m}s_{n}F_{n}F_{m}+c_{n}c_{m}F_{M-n}^{\dagger}F_{m}+s_{n}s_{m}F_{M-m}^{\dagger}F_{n}+s_{n}^{2}\delta_{m+n,M}
-\]
+\begin{equation}
+\alpha_{n}\beta_{m}=-c_{n}s_{m}F_{M-n}^{\dagger}F_{M-m}^{\dagger}+c_{m}s_{n}F_{n}F_{m}+c_{n}c_{m}F_{M-n}^{\dagger}F_{m}+s_{n}s_{m}F_{M-m}^{\dagger}F_{n}+s_{n}^{2}\delta_{m+n,M},\label{eq:hkl_ab}
+\end{equation}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-\beta_{n}\beta_{m}=s_{n}s_{m}F_{M-n}^{\dagger}F_{M-m}^{\dagger}+c_{n}c_{m}F_{n}F_{m}-c_{m}s_{n}F_{M-n}^{\dagger}F_{m}+c_{n}s_{m}F_{M-m}^{\dagger}F_{n}+c_{n}s_{n}\delta_{m+n,M}.
-\]
+\begin{equation}
+\beta_{n}\beta_{m}=s_{n}s_{m}F_{M-n}^{\dagger}F_{M-m}^{\dagger}+c_{n}c_{m}F_{n}F_{m}-c_{m}s_{n}F_{M-n}^{\dagger}F_{m}+c_{n}s_{m}F_{M-m}^{\dagger}F_{n}+c_{n}s_{n}\delta_{m+n,M}.\label{eq:hkl_bb}
+\end{equation}
 
 \end_inset
 
- Now
-\begin_inset Formula 
-\begin{align*}
-h_{kl}^{\left(1\right)}= & -2+\frac{4}{M}\sum_{n,m=1}^{M-1}\alpha_{n}\beta_{m}\exp\left(2\pi ik\frac{m+n}{M}\right)\\
- & -\frac{2}{M}\sum_{n,m=1}^{M-1}\left(\alpha_{n}\beta_{m}+\alpha_{m}\beta_{n}+i\alpha_{n}\alpha_{m}+i\beta_{n}\beta_{m}\right)\exp\left(2\pi i\frac{kn+lm}{M}\right)\\
-= & -2+\frac{4}{M}\sum_{n,m=1}^{M-1}\exp\left(2\pi ik\frac{m+n}{M}\right)\\
- & \times\left(-c_{n}s_{m}F_{M-n}^{\dagger}F_{M-m}^{\dagger}+c_{m}s_{n}F_{n}F_{m}+c_{n}c_{m}F_{M-n}^{\dagger}F_{m}+s_{n}s_{m}F_{M-m}^{\dagger}F_{n}\right)\\
- & -\frac{2}{M}\sum_{n,m=1}^{M-1}\exp\left(2\pi i\frac{kn+lm}{M}\right)\left(-c_{n}s_{m}+c_{m}s_{n}+ic_{n}c_{m}+is_{n}s_{m}\right)F_{M-n}^{\dagger}F_{M-m}^{\dagger}\\
- & -\frac{2}{M}\sum_{n,m=1}^{M-1}\exp\left(2\pi i\frac{kn+lm}{M}\right)\left(c_{m}s_{n}-c_{n}s_{m}+is_{m}s_{n}+ic_{n}c_{m}\right)F_{n}F_{m}\\
- & -\frac{2}{M}\sum_{n,m=1}^{M-1}\left[\exp\left(2\pi i\frac{kn+lm}{M}\right)+\exp\left(2\pi i\frac{km+ln}{M}\right)\right]\left(c_{n}c_{m}+s_{n}s_{m}\right)F_{M-n}^{\dagger}F_{m}\\
- & -\frac{2}{M}\sum_{n,m=1}^{M-1}\left[\exp\left(2\pi i\frac{kn+lm}{M}\right)-\exp\left(2\pi i\frac{km+ln}{M}\right)\right]\left(ic_{n}s_{m}-ic_{m}s_{n}\right)F_{M-n}^{\dagger}F_{m}\\
- & +\frac{4}{M}\sum_{n=1}^{M-1}s_{n}^{2}-\frac{2}{M}\sum_{n=1}^{M-1}\exp\left(2n\pi i\frac{k-l}{M}\right)\left(2s_{n}^{2}+2ic_{n}s_{n}\right).
-\end{align*}
+Applying Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:hkl_aa"
 
 \end_inset
 
-After combining like terms and antisymmetrize 
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:hkl_ab"
+
+\end_inset
+
+, and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:hkl_bb"
+
+\end_inset
+
+ to 
+\begin_inset Formula $h_{kl}^{\left(1\right)}$
+\end_inset
+
+, then comining like terms and antisymmetrize 
 \begin_inset Formula $F^{\dagger}F^{\dagger}$
 \end_inset
 
@@ -6435,9 +6457,9 @@ h_{kl}^{\left(1\right)}=\frac{2}{M}\sum_{n,m=1}^{M-1}\left(A_{nm}^{\dagger}F_{n}
 
  where 
 \begin_inset Formula 
-\[
-A_{nm}=\exp\left(2\pi ik\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi+\exp\left(2\pi i\frac{\left(k+l\right)\left(m+n\right)}{2M}\right)\sin\frac{\left(l-k-1/2\right)\left(m-n\right)\pi}{M}.
-\]
+\begin{equation}
+A_{nm}=\exp\left(2\pi ik\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi+\exp\left(2\pi i\frac{\left(k+l\right)\left(m+n\right)}{2M}\right)\sin\frac{\left(l-k-1/2\right)\left(m-n\right)\pi}{M}.\label{eq:hkl_Anm}
+\end{equation}
 
 \end_inset
 
@@ -6445,7 +6467,7 @@ A_{nm}=\exp\left(2\pi ik\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi+\exp\left(2\pi
 \end_layout
 
 \begin_layout Standard
-Applying 
+Similarly, applying 
 \begin_inset Formula 
 \[
 \alpha_{n}\beta_{0}=\exp\left(-\frac{i\pi}{4}\right)c_{n}F_{M-n}^{\dagger}F_{0}+s_{n}F_{n}F_{0}
@@ -6481,7 +6503,7 @@ Applying
 \begin_inset Formula $h_{kl}^{\left(0\right)}$
 \end_inset
 
-, we have
+ yields
 \end_layout
 
 \begin_layout Standard
@@ -6501,7 +6523,15 @@ X_{n}=i\left[\exp\left(2\pi i\frac{ln}{M}\right)-\exp\left(2\pi i\frac{kn}{M}\ri
 
 \end_inset
 
- Now we see that 
+ Now from Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:hkl_Anm"
+
+\end_inset
+
+, we see that 
 \begin_inset Formula 
 \begin{eqnarray*}
 A_{n0} & = & -\exp\left(2\pi ik\frac{n}{M}\right)\sin\frac{n\pi}{2M}-\exp\left(2\pi i\frac{\left(k+l\right)n}{2M}\right)\sin\frac{\left(l-k-1/2\right)n\pi}{M}\\
@@ -6517,7 +6547,11 @@ Hence, to add
 \begin_inset Formula $h_{kl}^{\left(0\right)}$
 \end_inset
 
- terms, we can simply change the 
+ terms to 
+\begin_inset Formula $h_{kl}^{\left(1\right)}$
+\end_inset
+
+, we can simply change the 
 \begin_inset Formula $m,n$
 \end_inset
 
@@ -6544,7 +6578,7 @@ h_{kl}=\frac{2}{M}\sum_{n,m=0}^{M-1}\left(A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{
  where 
 \begin_inset Formula 
 \[
-\gamma=-\cot\frac{\pi}{2M}+\cot\frac{2\left(k-l\right)+1}{2M}\pi+M\xi
+\gamma=-\cot\frac{\pi}{2M}+\cot\frac{2\left(k-l\right)+1}{2M}\pi+M\xi.
 \]
 
 \end_inset
@@ -6581,14 +6615,10 @@ In this appendix we will derive the formula
 \end_inset
 
  and
-\begin_inset Formula 
-\[
-\Omega\equiv C^{-1}\bar{A}\left(C^{-1}\right)^{T},
-\]
-
+\begin_inset Formula $\Omega=C^{-1}\bar{A}\left(C^{-1}\right)^{T}$
 \end_inset
 
- and relations among 
+, and relations among 
 \begin_inset Formula $F_{n}^{\dagger}$
 \end_inset
 
@@ -6603,20 +6633,16 @@ In this appendix we will derive the formula
  are given by 
 \begin_inset Formula 
 \[
-F_{m}=\sum_{n=0}^{M-1}\left(f_{n}C_{mn}+f_{n}^{\dagger}S_{mn}\right),\quad0\leq m\leq M-1
+F_{m}=\sum_{n=0}^{M-1}\left(f_{n}C_{mn}+f_{n}^{\dagger}S_{mn}\right),\quad0\leq m\leq M-1.
 \]
 
 \end_inset
 
- with
-\begin_inset Formula 
-\[
-C_{mn}D_{nl}+S_{ml}=0.
-\]
-
+ with 
+\begin_inset Formula $C_{mn}D_{nl}+S_{ml}=0$
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Standard
@@ -6729,7 +6755,7 @@ and in the last step the property that
 
 \end_inset
 
- It follows the higher order commutation all vanish.
+ It follows that the higher order commutations all vanish.
  We therefore have
 \begin_inset Formula 
 \begin{align*}
@@ -6760,12 +6786,19 @@ C^{*}+S^{*}D=C^{*}-C^{*}D^{*}D=C^{*}\left(I-D^{*}D\right)=C^{*}\left(I+DD^{\dagg
  we have 
 \begin_inset Formula 
 \[
-F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\ket{G}=-\tr\left(S^{*}C^{-1}\bar{A}\right)\ket{G}+f_{k}^{\dagger}\left[C^{-1}\bar{A}\left(C^{-1}\right)^{T}\right]_{kl}f_{l}^{\dagger}\ket{G}
+F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\ket{G}=-\tr\left(S^{*}C^{-1}\bar{A}\right)\ket{G}+f_{k}^{\dagger}\left[C^{-1}\bar{A}\left(C^{-1}\right)^{T}\right]_{kl}f_{l}^{\dagger}\ket{G},
 \]
 
 \end_inset
 
+ which implies 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:app_AFF_1"
 
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
