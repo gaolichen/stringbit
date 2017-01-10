@@ -5933,25 +5933,12 @@ The (anti)communication relations among string bit creation and annihilation
 \begin_inset Formula 
 \begin{multline}
 \left[\left(\phi_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta},\left(\bar{\phi}_{b_{1}\cdots b_{m}}\right)_{\gamma}^{\delta}\right]_{\pm}\equiv\left(\phi_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\left(\bar{\phi}_{b_{1}\cdots b_{m}}\right)_{\gamma}^{\delta}-\left(-1\right)^{mn}\left(\bar{\phi}_{b_{1}\cdots b_{m}}\right)_{\gamma}^{\delta}\left(\phi_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\\
-=\delta_{mn}\delta_{\alpha}^{\delta}\delta_{\gamma}^{\beta}\sum_{P}\left(-1\right)^{P}\delta_{a_{1}b_{P_{1}}}\cdots\delta_{a_{n}b_{P_{n}}}.\label{eq:App-H-commutation}
+=\delta_{mn}\delta_{\alpha}^{\delta}\delta_{\gamma}^{\beta}\sum_{P}\left(-1\right)^{P}\delta_{a_{1}b_{P_{1}}}\cdots\delta_{a_{n}b_{P_{n}}},\label{eq:App-H-commutation}
 \end{multline}
 
 \end_inset
 
- The creation operator 
-\begin_inset Formula $\bar{\phi}$
-\end_inset
-
- creates a boson if 
-\begin_inset Formula $n$
-\end_inset
-
- is even and fermion if 
-\begin_inset Formula $n$
-\end_inset
-
- is odd.
- The summation go through all permutations of 
+ where the sum runs over all permutations of 
 \begin_inset Formula $1,2,\dots,n$
 \end_inset
 
