@@ -122,32 +122,22 @@ We provide a formalism to calculate the cubic interaction vertices of stable
 \begin_inset Formula $s$
 \end_inset
 
- spin degree of freedom but no space to move.
+ spin degrees of freedom but no space to move.
  With the vertices, we obtain a formula for one-loop self energy, i.e., the
  
 \begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
 \end_inset
 
  correction to the energy spectrum.
- We calculate analytically the leading order correction to the ground energy
- of the system with bit number 
-\begin_inset Formula $M=3$
-\end_inset
-
- and 
-\begin_inset Formula $s=1,\,2$
-\end_inset
-
-.
- We confirm numerically that, when 
+ A rough analysis shows that, when 
 \begin_inset Formula $M$
 \end_inset
 
- is large, the ground energy correction 
+ is large, the self energy 
 \begin_inset Formula $\Delta E_{G}$
 \end_inset
 
- scales as 
+ should scale as 
 \begin_inset Formula $M^{5-s/4}$
 \end_inset
 
@@ -164,23 +154,43 @@ We provide a formalism to calculate the cubic interaction vertices of stable
 \end_inset
 
 .
- Particularly, in the critical Grassmann dimension 
+ Particularly, in the case of protostring, where the Grassmann dimension
+ 
 \begin_inset Formula $s=24$
 \end_inset
 
-, the Poincare invariant relation in lightcone coordinates 
+, we have 
+\begin_inset Formula $\Delta E_{G}\sim1/M$
+\end_inset
+
+, which resembles the Lorentz invariant relation of 
+\begin_inset Formula $1+1$
+\end_inset
+
+ dimension 
 \begin_inset Formula $P^{-}\sim1/P^{+}$
 \end_inset
 
- is produced under the identification 
-\begin_inset Formula $P^{-}\sim E$
+.
+ We calculate analytically the one-loop self energy for the ground states
+ with bit number 
+\begin_inset Formula $M=3$
 \end_inset
 
-, 
-\begin_inset Formula $P^{+}\sim M$
+ and 
+\begin_inset Formula $s=1,\,2$
 \end_inset
 
 .
+ We then numerically confirm that the large 
+\begin_inset Formula $M$
+\end_inset
+
+ behavior holds for 
+\begin_inset Formula $s\leq4$
+\end_inset
+
+ cases.
 \end_layout
 
 \begin_layout Standard
@@ -430,7 +440,7 @@ The
 \begin_inset Formula $1/N$
 \end_inset
 
- perturbation of the later model was studied in 
+ perturbation of the latter model was studied in 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2015wli"
@@ -442,11 +452,8 @@ key "Thorn:2015wli"
  In this paper, we will perform detailed study on them.
  The calculation of the vertices and one-loop self energy will be done by
  finding the vacuum expectation values of ladder operators.
- We will confirm that, in large 
-\begin_inset Formula $M$
-\end_inset
-
- limit, the one-loop self energy scales like 
+ Based on the formula we obtain, a rough estimation will show that, the
+ one-loop self energy scales like 
 \begin_inset Formula $M^{5-s/4}$
 \end_inset
 
@@ -460,6 +467,48 @@ key "Thorn:2015wli"
 
  for odd 
 \begin_inset Formula $s$
+\end_inset
+
+ when 
+\begin_inset Formula $s\leq4$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $s=24$
+\end_inset
+
+, we have the interesting protostring model 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
+\end_inset
+
+, in which the Lorentz invariant relation of 
+\begin_inset Formula $1+1$
+\end_inset
+
+ dimension, 
+\begin_inset Formula $P^{-}\sim1/P^{+}$
+\end_inset
+
+, is produced.
+ We will analytically calculate the one-loop self energy for the cases of
+ 
+\begin_inset Formula $M=3$
+\end_inset
+
+ and 
+\begin_inset Formula $s=1,2$
+\end_inset
+
+, then numerically confirm the large 
+\begin_inset Formula $M$
+\end_inset
+
+ behavior for 
+\begin_inset Formula $s\leq4$
 \end_inset
 
 .
@@ -3780,7 +3829,7 @@ reference "eq:energy_per_largeM"
 \end_inset
 
 .
- Combing above together, 
+ Combining above together, 
 \begin_inset Formula $\Delta E_{G}$
 \end_inset
 
@@ -3809,11 +3858,15 @@ reference "eq:energy_per_largeM"
 \begin_inset Formula $\Delta E_{G}\sim1/M\sim1/P^{+}$
 \end_inset
 
-, which is the expected Poincaré invariant dispersion relation 
-\begin_inset Formula $P^{-}=\left(\mathbf{P}^{2}+\mu^{2}\right)/P^{+}$
+, which is the expected Lorentz invariant dispersion relation 
+\begin_inset Formula $P^{-}\sim1/P^{+}$
 \end_inset
 
-.
+ in 
+\begin_inset Formula $1+1$
+\end_inset
+
+ dimension.
  
 \end_layout
 
