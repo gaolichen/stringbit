@@ -3752,7 +3752,21 @@ We conclude this subsection by considering the large
 \begin_inset Formula $M$
 \end_inset
 
- behavior of the ground energy correction.
+ behavior of the ground energy correction
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+The large 
+\begin_inset Formula $M$
+\end_inset
+
+ discussion is based on the discussion with Charles Thorn.
+\end_layout
+
+\end_inset
+
+.
  The product in 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -3760,7 +3774,7 @@ reference "eq:energy_pert_DeltaE"
 
 \end_inset
 
- depends only the ration of 
+ depends only the ration 
 \begin_inset Formula $L/M$
 \end_inset
 
@@ -3809,7 +3823,7 @@ reference "eq:energy_per_largeM"
 \begin_inset Formula $\mathcal{O}\left(M\right)$
 \end_inset
 
- only when both smaller chains are in ground states.
+ when both smaller chains are in ground states.
  This is possible only when 
 \begin_inset Formula $s$
 \end_inset
@@ -3824,7 +3838,7 @@ reference "eq:energy_per_largeM"
 \begin_inset Formula $L$
 \end_inset
 
- produces another 
+ produces another factor of 
 \begin_inset Formula $M$
 \end_inset
 
@@ -3850,7 +3864,7 @@ reference "eq:energy_per_largeM"
 \end_inset
 
 .
- Particularly, in the critical Grassmann dimension 
+ Particularly, when 
 \begin_inset Formula $s=24$
 \end_inset
 
@@ -3858,7 +3872,7 @@ reference "eq:energy_per_largeM"
 \begin_inset Formula $\Delta E_{G}\sim1/M\sim1/P^{+}$
 \end_inset
 
-, which is the expected Lorentz invariant dispersion relation 
+, which resembles the Lorentz invariant dispersion relation 
 \begin_inset Formula $P^{-}\sim1/P^{+}$
 \end_inset
 
@@ -3867,7 +3881,18 @@ reference "eq:energy_per_largeM"
 \end_inset
 
  dimension.
- 
+ The model in the 
+\begin_inset Formula $s=24$
+\end_inset
+
+ case is called protostring by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
@@ -5891,19 +5916,19 @@ When the bit number
 \end_inset
 
 .
- In the case of 
+ In the 
 \begin_inset Formula $s=24$
 \end_inset
 
-, it leads to 
+ case, it leads to 
 \begin_inset Formula $\Delta E_{G}\sim1/M\sim1/P^{+}$
 \end_inset
 
-, which resembles the Poincaré invariant dispersion relation 
-\begin_inset Formula $P^{-}=\left(\mathbf{P}^{2}+\mu^{2}\right)/P^{+}$
+, which resembles the Poincaré invariant dispersion relation in 
+\begin_inset Formula $1+1$
 \end_inset
 
-.
+ dimension.
  The large 
 \begin_inset Formula $M$
 \end_inset
@@ -5933,6 +5958,95 @@ key "Chen:2016hkz"
  The results uphold the idea of formulating string theory by string bit
  models.
  
+\end_layout
+
+\begin_layout Standard
+When 
+\begin_inset Formula $M$
+\end_inset
+
+ is large, the 
+\begin_inset Formula $M$
+\end_inset
+
+ independent part of 
+\begin_inset Formula $\Delta E_{G}$
+\end_inset
+
+, which we call 
+\begin_inset Formula $\Delta\hat{E}_{G}$
+\end_inset
+
+, is a exponential function of 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ This is related to the fact that each energy eigenstate of the model has
+ at least 
+\begin_inset Formula $2^{s}$
+\end_inset
+
+ degeneracies.
+ The base of the exponentation is a quadratic function of 
+\begin_inset Formula $\xi$
+\end_inset
+
+ and has a minimum value when 
+\begin_inset Formula $\xi$
+\end_inset
+
+ is equal to or very close to 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ This might be related to the fact that 
+\begin_inset Formula $\xi=1$
+\end_inset
+
+ is the minimum value that the scalar potential of even 
+\begin_inset Formula $s$
+\end_inset
+
+ cases are bounded below.
+ 
+\end_layout
+
+\begin_layout Standard
+The future research of this work can be done in several ways.
+ One can improve the numerical computation to study higher 
+\begin_inset Formula $M$
+\end_inset
+
+ or 
+\begin_inset Formula $s$
+\end_inset
+
+ cases.
+ One can also find analytically, at large 
+\begin_inset Formula $M$
+\end_inset
+
+ behavior, how the 
+\begin_inset Formula $M$
+\end_inset
+
+ independent part of 
+\begin_inset Formula $\Delta E_{G}$
+\end_inset
+
+ depends on 
+\begin_inset Formula $s$
+\end_inset
+
+ and 
+\begin_inset Formula $\xi$
+\end_inset
+
+.
+ Another possible future research is to find the Feynman rules of this model
+ with the interaction vertices.
 \end_layout
 
 \begin_layout Section
