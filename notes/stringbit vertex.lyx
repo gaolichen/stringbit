@@ -534,7 +534,7 @@ reference "sec:Hamiltonian"
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:Three-Chain-overlap"
+reference "sub:Three-Chain-overlap"
 
 \end_inset
 
@@ -587,31 +587,103 @@ name "sec:Hamiltonian"
 
 \end_inset
 
-Hamiltonian
+Stable String Bit Model
 \end_layout
 
 \begin_layout Standard
-To perform 
+The purpose of this section is to review some results of stable string bit
+ model obtained by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
+\end_inset
+
+ and introduce useful notations.
+ These results are necessary for setting up 
 \begin_inset Formula $1/N$
 \end_inset
 
- perturbation, we first need to find the energy spectrum at 
+ expansion of the model.
+ Meanwhile some modifications that are specific to this paper are incorporated.
+ To be clear, the major modifications are as follows.
+ In subsection 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Hamiltonian"
+
+\end_inset
+
+, we add an 
+\begin_inset Formula $\mathcal{O}\left(1/N\right)$
+\end_inset
+
+ term 
+\begin_inset Formula $\xi\Delta H$
+\end_inset
+
+ to the Hamiltonian of the model.
+ In subsection 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Diagonalizing-Hamiltonian"
+
+\end_inset
+
+, the diagonalization of the Hamiltonian at 
 \begin_inset Formula $N=\infty$
 \end_inset
 
- as zeroth order results.
- In this section, we first introduce the Hamiltonian of the model and then
- solve for the energy eigenstates at 
-\begin_inset Formula $N=\infty$
+ is done via Fourier transforms of a series of Grassmann variables 
+\begin_inset Formula $\theta_{k}$
+\end_inset
+
+ rather than via 
+\begin_inset Formula $S_{k}=\theta_{k}+d/d\theta_{k}$
+\end_inset
+
+ as 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
+\end_inset
+
+ did.
+ In subsection 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Three-Chain-overlap"
+
+\end_inset
+
+, we introduce some mathematical relationships among the relevant matrices,
+ as 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:overlap_matrix_symmetry"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:overlap_matrix_symmetry2"
+
 \end_inset
 
 .
- Finally, we build the conjugates to the energy eigenstates, which will
- be used later for 
-\begin_inset Formula $1/N$
+ 
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Hamiltonian"
+
 \end_inset
 
- expansion.
+Hamiltonian
 \end_layout
 
 \begin_layout Standard
@@ -684,7 +756,7 @@ key "Green:1980zg,Green:1983hw"
 \begin_inset Formula $s>1$
 \end_inset
 
-, it is generalized to 
+, the Hamiltonian is generalized to 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2014hia,Thorn:2015wli"
@@ -806,7 +878,11 @@ key "Chen:2016hkz,Sun:2014dga"
 
 \end_inset
 
-Similarly, 
+In analogy with 
+\begin_inset Formula $H^{s=1}$
+\end_inset
+
+, 
 \begin_inset Formula $\Delta H^{s=1}$
 \end_inset
 
@@ -1128,15 +1204,12 @@ Diagonalizing Hamiltonian at
 \end_layout
 
 \begin_layout Standard
-In this subsection, let us solve for the energy spectrum of the model at
- 
+Now let us solve for the energy spectrum of the model at 
 \begin_inset Formula $N=\infty$
 \end_inset
 
 .
- We will find the general expression of single trace energy eigenvalues
- and eigenstates.
- The single trace energy eigenstate is determined by the eigenfunction 
+ A single trace energy eigenstate is determined by an eigenfunction 
 \begin_inset Formula $\psi_{r}$
 \end_inset
 
@@ -1148,14 +1221,19 @@ h\psi_{r}\left(\theta_{1},\dots,\theta_{M}\right)=E_{r}\psi_{r}\left(\theta_{1},
 
 \end_inset
 
-The eigenvalue problem 
+To solve the eigenvalue problem 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "eq:ham_eigenequation"
 
 \end_inset
 
- has been solved exactly
+, we need to find the lowering and raising eigenoperators of 
+\begin_inset Formula $h$
+\end_inset
+
+.
+ This has been done by 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2015wli"
@@ -1163,7 +1241,13 @@ key "Thorn:2015wli"
 \end_inset
 
 .
- From 
+ Here, we repeat the procedure with different sets of intermediate variables,
+ which will be clear shortly.
+ 
+\end_layout
+
+\begin_layout Standard
+From 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:ham_h_kl"
@@ -1189,7 +1273,14 @@ reference "eq:ham_h_kl"
 \end_layout
 
 \begin_layout Standard
-We introduce Fourier transformations
+We introduce Fourier transformations 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chen:2016hkz,Sun:2014dga"
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{eqnarray}
 \alpha_{n} & = & \frac{1}{\sqrt{M}}\sum_{k=1}^{M}\theta_{k}e^{-2\pi ikn/M},\quad\beta_{n}=\frac{1}{\sqrt{M}}\sum_{k=1}^{M}\frac{d}{d\theta_{k}}e^{-2\pi ikn/M},\label{eq:ham_alpha_beta}\\
@@ -1210,7 +1301,37 @@ which satisfy
 
 \end_inset
 
- The Hermiticity of Hamiltonian implies that 
+In 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
+\end_inset
+
+, instead of 
+\begin_inset Formula $\theta_{k}$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{d}{d\theta_{k}}$
+\end_inset
+
+, the diagonalization was done via the Grassmann variables 
+\begin_inset Formula $S_{k}=\theta_{k}+\frac{d}{d\theta_{k}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{S}_{k}=i\left(\theta_{k}+\frac{d}{d\theta_{k}}\right)$
+\end_inset
+
+ and their Fourier transforms.
+ But such different choices should not effect the eigenoperators and the
+ energy spectrum.
+ 
+\end_layout
+
+\begin_layout Standard
+The Hermiticity of Hamiltonian implies that 
 \begin_inset Formula $\theta_{k}^{\dagger}=\frac{d}{d\theta_{k}},\,\frac{d}{d\theta_{k}}^{\dagger}=\theta_{k},$
 \end_inset
 
@@ -1368,7 +1489,14 @@ ed by the zero mode
 \end_inset
 
  as well.
- By inspection, we find that the ground eigenfunction can be 
+ The ground eigenfunction can be 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chen:2016hkz"
+
+\end_inset
+
+ 
 \begin_inset Formula 
 \begin{equation}
 \psi_{G}=\prod_{k=1}^{\left\lfloor \left(M-1\right)/2\right\rfloor }\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right),\label{eq:ham_ground_eigenfunction}
@@ -1516,7 +1644,7 @@ The cyclic constraint becomes
 \sum_{a=1}^{s}\sum_{k=1}^{M-1}k\lambda_{a,k}=\begin{cases}
 nM & \quad\text{for even }s\left(M-1\right)\\
 \left(n+\frac{1}{2}\right)M & \quad\text{for odd }s\left(M-1\right)
-\end{cases}.
+\end{cases}.\label{eq:ham_cyclic_constraint_s}
 \end{equation}
 
 \end_inset
@@ -1527,15 +1655,512 @@ Since the zero modes do not change the energy, the ground energy eigenstate
 \end_inset
 
  degeneracies.
+ The constraint 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_cyclic_constraint_s"
+
+\end_inset
+
+ has profound impact on the energy spectrum of the model.
+ When 
+\begin_inset Formula $s$
+\end_inset
+
+ is odd, it implies that the ground state corresponding to 
+\begin_inset Formula $\psi_{G}$
+\end_inset
+
+ is physical only when 
+\begin_inset Formula $M$
+\end_inset
+
+ is odd, and that the lowest single trace state for even 
+\begin_inset Formula $M$
+\end_inset
+
+ is the one corresponding to 
+\begin_inset Formula $F_{M/2}^{\dagger\left(a\right)}\psi_{G}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
-Conjugate Eigenfunctions
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Three-Chain-overlap"
+
+\end_inset
+
+Three Chains Overlap
 \end_layout
 
 \begin_layout Standard
-We have obtained the energy eigenfunctions of 
+We have constructed the energy eigenfunctions for 
 \begin_inset Formula $N=\infty$
+\end_inset
+
+.
+ To obtain the 
+\begin_inset Formula $1/N$
+\end_inset
+
+ expansion results, we also need to calculate the overlap among three chains:
+ one larger chain of 
+\begin_inset Formula $M$
+\end_inset
+
+ bits and two smaller chain of 
+\begin_inset Formula $K$
+\end_inset
+
+ bits and 
+\begin_inset Formula $L=M-K$
+\end_inset
+
+ bits.
+ The calculation can be done by establishing the relation among the eigenoperato
+rs of larger chain and two smaller chains.
+ Here, we recap the results of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let us only consider the 
+\begin_inset Formula $s=1$
+\end_inset
+
+ case.
+ Let 
+\begin_inset Formula $F_{m}^{\left(1\right)}$
+\end_inset
+
+ and 
+\begin_inset Formula $F_{n}^{\left(2\right)}$
+\end_inset
+
+ be lowering operators of 
+\begin_inset Formula $L$
+\end_inset
+
+-bit and 
+\begin_inset Formula $K$
+\end_inset
+
+-bit chains.
+ Define a set of operators 
+\begin_inset Formula 
+\begin{eqnarray}
+f_{0} & = & F_{0}=F_{0}^{\left(1\right)}\sqrt{\frac{L}{M}}+F_{0}^{\left(2\right)}\sqrt{\frac{K}{M}},\label{eq:overlap_f0}\\
+f_{n} & = & F_{n}^{\left(1\right)},\quad1\leq n\leq L-1,\\
+f_{n+L} & = & F_{n}^{\left(2\right)},\quad1\leq n\leq K-1,\\
+f_{M-1} & = & e^{-i\pi/4}\left(F_{0}^{\left(1\right)}\sqrt{\frac{K}{M}}-F_{0}^{\left(2\right)}\sqrt{\frac{L}{M}}\right),\label{eq:overlap_fm1}
+\end{eqnarray}
+
+\end_inset
+
+ which satisfy 
+\begin_inset Formula 
+\[
+\left\{ f_{n},f_{m}\right\} =\left\{ f_{n}^{\dagger},f_{m}^{\dagger}\right\} =0,\quad\left\{ f_{n},f_{m}^{\dagger}\right\} =\delta_{nm}.
+\]
+
+\end_inset
+
+We then express the larger chain operators in terms of 
+\begin_inset Formula $f$
+\end_inset
+
+ and 
+\begin_inset Formula $f^{\dagger}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+F_{m}=\sum_{n=0}^{M-1}\left(f_{n}C_{mn}+f_{n}^{\dagger}S_{mn}\right),\quad0\leq m\leq M-1.
+\]
+
+\end_inset
+
+The anticommutation relation among 
+\begin_inset Formula $F_{m}$
+\end_inset
+
+ and 
+\begin_inset Formula $F_{m}^{\dagger}$
+\end_inset
+
+ requires 
+\begin_inset Formula 
+\begin{equation}
+CS^{T}+SC^{T}=0,\quad CC^{\dagger}+SS^{\dagger}=I.\label{eq:overlap_CS_relation}
+\end{equation}
+
+\end_inset
+
+The matrix elements of 
+\begin_inset Formula $C$
+\end_inset
+
+ and 
+\begin_inset Formula $S$
+\end_inset
+
+ are given by
+\begin_inset Formula 
+\[
+C_{0n}=C_{n0}=\delta_{0,n},\quad S_{0,n}=S_{n,0}=0,\quad0\leq n<M
+\]
+
+\end_inset
+
+ and
+\begin_inset Formula 
+\begin{align}
+C_{mn} & =-\frac{1}{\sqrt{ML}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi i\left(n/L-m/M\right)}}\cos\left(\frac{n\pi}{2L}-\frac{m\pi}{2M}\right),\quad1\leq n<L\label{eq:overlap_C_mn1}\\
+C_{m,L+n-1} & =\frac{1}{\sqrt{MK}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi i\left(n/K-m/M\right)}}\cos\left(\frac{n\pi}{2K}-\frac{m\pi}{2M}\right),\quad1\leq n<K\\
+C_{m,M-1} & =-\frac{1}{\sqrt{LK}}\frac{1-e^{-2\pi imL/M}}{1-e^{2i\pi m/M}}\cos\left(\frac{m\pi}{2M}-\frac{\pi}{4}\right),\\
+S_{mn} & =-\frac{1}{\sqrt{ML}}\frac{1-e^{-2\pi imL/M}}{1-e^{2\pi i\left(n/L+m/M\right)}}\cos\left(\frac{n\pi}{2L}+\frac{m\pi}{2M}\right),\quad1\leq n<L\\
+S_{m,L+n-1} & =\frac{1}{\sqrt{MK}}\frac{1-e^{-2\pi imL/M}}{1-e^{2\pi i\left(n/K+m/M\right)}}\cos\left(\frac{n\pi}{2K}+\frac{m\pi}{2M}\right),\quad1\leq n<K\\
+S_{m,M-1} & =-\frac{1}{\sqrt{LK}}\frac{1-e^{-2\pi imL/M}}{1-e^{2\pi im/M}}\cos\left(\frac{m\pi}{2M}+\frac{\pi}{4}\right),\label{eq:overlap_S_mM1}
+\end{align}
+
+\end_inset
+
+where 
+\begin_inset Formula $1\leq m\leq M-1$
+\end_inset
+
+ in Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_C_mn1"
+
+\end_inset
+
+-
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_S_mM1"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+We then express the ground eigenfunction of large chain as
+\begin_inset Formula 
+\begin{equation}
+\psi_{G}=\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\psi_{G}^{\left(1\right)}\psi_{G}^{\left(2\right)}\left[\det\left(I+DD^{\dagger}\right)\right]^{-1/4}.\label{eq:overlap_psi_M}
+\end{equation}
+
+\end_inset
+
+The constraints 
+\begin_inset Formula $F_{m}\psi_{G}=0$
+\end_inset
+
+ imply 
+\begin_inset Formula 
+\begin{equation}
+C_{mn}D_{nl}+S_{ml}=0.\label{eq:overlap_CMS}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the above construction, while the matrices 
+\begin_inset Formula $C$
+\end_inset
+
+, 
+\begin_inset Formula $S$
+\end_inset
+
+, and 
+\begin_inset Formula $D$
+\end_inset
+
+ are of dimension 
+\begin_inset Formula $M\times M$
+\end_inset
+
+, the first rows and columns of the matrices are trivial.
+ In fact, these matrices are in the form 
+\begin_inset Formula 
+\[
+C=\begin{pmatrix}1\end{pmatrix}\oplus C^{\prime},\quad S=\begin{pmatrix}0\end{pmatrix}\oplus S^{\prime},\quad D=\begin{pmatrix}0\end{pmatrix}\oplus D^{\prime},
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $C^{\prime}$
+\end_inset
+
+, 
+\begin_inset Formula $S^{\prime}$
+\end_inset
+
+, 
+\begin_inset Formula $D^{\prime}$
+\end_inset
+
+ are nontrivial matrices of dimension 
+\begin_inset Formula $\left(M-1\right)\times\left(M-1\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+With 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_CS_relation"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_CMS"
+
+\end_inset
+
+, we can simplify 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_psi_M"
+
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+\det\left(I+DD^{\dagger}\right)=\frac{\det\left[C\left(I+DD^{\dagger}\right)C^{\dagger}\right]}{\det\left[CC^{\dagger}\right]}=\frac{\det\left[CC^{\dagger}+SS^{\dagger}\right]}{\det\left(CC^{\dagger}\right)}=\left|\det C\right|^{-2},
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{equation}
+\psi_{G}=\left|\det C\right|^{1/2}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\psi_{G}^{\left(1\right)}\psi_{G}^{\left(2\right)}.\label{eq:overlap_psi_M1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let us conclude this subsection by some mathematical properties of the matrices,
+ which might be helpful for future study.
+ When 
+\begin_inset Formula $M$
+\end_inset
+
+ is large, we approximate the determinate of 
+\begin_inset Formula $C$
+\end_inset
+
+ as
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\det CC^{\dagger}\sim\frac{0.9290}{\left(KLM\right)^{1/6}}\left(\frac{L}{M}\right)^{\left(M/K-L/M\right)/3-2/3}\left(\frac{K}{M}\right)^{\left(M/L-K/M\right)/3-2/3}.\label{eq:overlap_detC}
+\end{equation}
+
+\end_inset
+
+We define
+\begin_inset Formula 
+\[
+\hat{n}=\begin{cases}
+L-n, & \quad1\leq n<L\\
+M-n-1+L, & \quad L\leq n<M-1\\
+M-1, & \quad n=M-1
+\end{cases}.
+\]
+
+\end_inset
+
+Then for 
+\begin_inset Formula $1\leq n\leq M-1$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{equation}
+S_{mn}=C_{-m,n}^{*},\quad C_{mn}=C_{M-m,\hat{n}}^{*},\quad S_{mn}=-S_{M-m,\hat{n}}^{*},\quad D_{mn}=-D_{\hat{m}\hat{n}}^{*}.\label{eq:overlap_matrix_symmetry}
+\end{equation}
+
+\end_inset
+
+ The first three equalities of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_matrix_symmetry"
+
+\end_inset
+
+ can be directly verified by Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_C_mn1"
+
+\end_inset
+
+-
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_S_mM1"
+
+\end_inset
+
+.
+ The last equality can be shown by applying the second and third ones to
+ Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_CMS"
+
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $C^{\left(K\right)}$
+\end_inset
+
+ be the 
+\begin_inset Formula $C$
+\end_inset
+
+ matrix when 
+\begin_inset Formula $L$
+\end_inset
+
+ is replaced by 
+\begin_inset Formula $K=M-L$
+\end_inset
+
+, and similarly for 
+\begin_inset Formula $S^{\left(K\right)}$
+\end_inset
+
+ and 
+\begin_inset Formula $D^{\left(K\right)}$
+\end_inset
+
+.
+ We then have 
+\begin_inset Formula 
+\begin{equation}
+C^{\left(K\right)}=UC^{\left(L\right)}R,\quad S^{\left(K\right)}=US^{\left(L\right)}R,\quad D^{\left(K\right)}=R^{T}D^{\left(L\right)}R\label{eq:overlap_matrix_symmetry2}
+\end{equation}
+
+\end_inset
+
+ where
+\begin_inset Formula 
+\[
+U=\begin{pmatrix}u_{1}^{\left(K\right)}\\
+ & \ddots\\
+ &  & u_{M-1}^{\left(K\right)}
+\end{pmatrix},\quad R=\begin{pmatrix}0 & -\mathbf{I}_{L-1} & 0\\
+-\mathbf{I}_{K-1} & 0 & 0\\
+0 & 0 & 1
+\end{pmatrix}
+\]
+
+\end_inset
+
+ with 
+\begin_inset Formula $u_{m}^{\left(K\right)}=\left(1-e^{2\pi imK/M}\right)/1-e^{2\pi imL/M}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{I}_{L-1}$
+\end_inset
+
+ the identity matrix of 
+\begin_inset Formula $\left(L-1\right)\times\left(L-1\right)$
+\end_inset
+
+ dimension.
+ The first and second equalities of Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_matrix_symmetry2"
+
+\end_inset
+
+ can be verified directly by Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_C_mn1"
+
+\end_inset
+
+-
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_S_mM1"
+
+\end_inset
+
+.
+ The last equality can be shown by applying first two to Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_CMS"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Conjugate Eigenfunction
+\end_layout
+
+\begin_layout Standard
+We have built energy eigenfunctions of the model at 
+\begin_inset Formula $N=\infty$
+\end_inset
+
+ in subsection 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Diagonalizing-Hamiltonian"
+
 \end_inset
 
 .
@@ -1543,13 +2168,50 @@ We have obtained the energy eigenfunctions of
 \begin_inset Formula $1/N$
 \end_inset
 
- expansion results, we also need functions conjugate to these energy eigenfuncti
-ons.
- The conjugate eigenfunctions, denoted as 
+ expansion results, we also need to find a function 
 \begin_inset Formula $\bar{\psi}_{r}$
 \end_inset
 
-, should satisfy the normalization condition 
+ that conjugates to an arbitary energy eigenfunctions 
+\begin_inset Formula $\psi_{r}$
+\end_inset
+
+.
+ For convenience, we call 
+\begin_inset Formula $\bar{\psi}_{r}$
+\end_inset
+
+ a conjugate eigenfunction.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
+\end_inset
+
+ introduced conjugate eigenfunctions but did not provide a way to construct
+ them.
+ In this section, we will construct conjugate eigenfunctions systematically.
+ 
+\end_layout
+
+\begin_layout Standard
+A conjugate eigenfunction 
+\begin_inset Formula $\bar{\psi}_{r}$
+\end_inset
+
+ is a function of 
+\begin_inset Formula $\theta_{i}$
+\end_inset
+
+ that satisfies the normalization condition 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
+\end_inset
+
+ 
 \begin_inset Formula 
 \begin{equation}
 \int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\,\bar{\psi}_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\psi_{s}\left(\theta_{1},\cdots,\theta_{M}\right)=\delta_{rs},\label{eq:ham_normalization}
@@ -1590,7 +2252,26 @@ reference "eq:ham_cyclicconstrtaint"
 \begin_inset Formula $\tilde{\delta}$
 \end_inset
 
- on it may produce an extra sign prefactor.
+ on it may produce an extra sign factor
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Such a sign factor was ignored by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
+\end_inset
+
+.
+ It may lead to incorrect results if one performs detailed calculation for
+ observables.
+\end_layout
+
+\end_inset
+
+.
  For example, if 
 \begin_inset Formula $\lambda$
 \end_inset
@@ -2051,338 +2732,18 @@ reference "eq:ham_completeness"
 \end_layout
 
 \begin_layout Standard
-For arbitrary 
-\begin_inset Formula $s$
-\end_inset
-
-, the conjugate to the ground eigenfunction 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:ham_ground_state_s"
-
-\end_inset
-
- is 
-\begin_inset Formula 
-\begin{equation}
-\bar{\psi}_{G}=\left(-1\right)^{s\left(s-1\right)M\left(M-1\right)/4}\prod_{i=0}^{s-1}\bar{\psi}_{G}^{\left(s-i\right)},
-\end{equation}
-
-\end_inset
-
- where the sign factor comes from the rearrangement of the measure 
-\begin_inset Formula $d^{s}\theta_{1}\cdots d^{s}\theta_{M}$
-\end_inset
-
- to 
-\begin_inset Formula $\prod_{i=1}^{s}d\theta_{1}^{\left(i\right)}\cdots d\theta_{M}^{\left(i\right)}$
-\end_inset
-
-.
- The conjugate function to the general eigenfunction 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:ham_general_eigenfunction_s"
-
-\end_inset
-
- is
-\begin_inset Formula 
-\begin{equation}
-\bar{\psi}=\prod_{i=0}^{s-1}\prod_{k=1}^{M}\left(\tilde{F}_{M-k}^{\left(s-i\right)}\right)^{\lambda_{M-k,s-i}}\bar{\psi}_{G},\quad\quad\lambda_{k}=0,\,1.
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:Three-Chain-overlap"
-
-\end_inset
-
-Three Chains Overlap
-\end_layout
-
-\begin_layout Standard
-We have constructed the energy eigenfunctions and their conjugates for 
-\begin_inset Formula $N=\infty$
-\end_inset
-
-.
- To obtain the 
-\begin_inset Formula $1/N$
-\end_inset
-
- expansion results, we also need to calculate the overlap among three chains:
- one larger chain of 
-\begin_inset Formula $M$
-\end_inset
-
- bits and two smaller chain of 
-\begin_inset Formula $K$
-\end_inset
-
- bits and 
-\begin_inset Formula $L=M-K$
-\end_inset
-
- bits.
- The calculation can be done by establishing the relation among the eigenoperato
-rs of larger chain and two smaller chains.
- The work has been done in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Thorn:2015wli"
-
-\end_inset
-
-.
- Here, we recap the results and make a slight change on it.
- 
-\end_layout
-
-\begin_layout Standard
-Let us only consider the 
-\begin_inset Formula $s=1$
-\end_inset
-
- case.
- Let 
-\begin_inset Formula $F_{m}^{\left(1\right)}$
-\end_inset
-
- and 
-\begin_inset Formula $F_{n}^{\left(2\right)}$
-\end_inset
-
- be lowering operators of 
-\begin_inset Formula $L$
-\end_inset
-
--bit and 
-\begin_inset Formula $K$
-\end_inset
-
--bit chains.
- Define a set of operators 
-\begin_inset Formula 
-\begin{eqnarray}
-f_{0} & = & F_{0}=F_{0}^{\left(1\right)}\sqrt{\frac{L}{M}}+F_{0}^{\left(2\right)}\sqrt{\frac{K}{M}},\label{eq:overlap_f0}\\
-f_{n} & = & F_{n}^{\left(1\right)},\quad1\leq n\leq L-1,\\
-f_{n+L} & = & F_{n}^{\left(2\right)},\quad1\leq n\leq K-1,\\
-f_{M-1} & = & e^{-i\pi/4}\left(F_{0}^{\left(1\right)}\sqrt{\frac{K}{M}}-F_{0}^{\left(2\right)}\sqrt{\frac{L}{M}}\right),\label{eq:overlap_fm1}
-\end{eqnarray}
-
-\end_inset
-
- which satisfy 
-\begin_inset Formula 
-\[
-\left\{ f_{n},f_{m}\right\} =\left\{ f_{n}^{\dagger},f_{m}^{\dagger}\right\} =0,\quad\left\{ f_{n},f_{m}^{\dagger}\right\} =\delta_{nm}.
-\]
-
-\end_inset
-
-We then express the larger chain operators in terms of 
-\begin_inset Formula $f$
-\end_inset
-
- and 
-\begin_inset Formula $f^{\dagger}$
-\end_inset
-
-: 
-\begin_inset Formula 
-\[
-F_{m}=\sum_{n=0}^{M-1}\left(f_{n}C_{mn}+f_{n}^{\dagger}S_{mn}\right),\quad0\leq m\leq M-1.
-\]
-
-\end_inset
-
-The anticommutation relation among 
-\begin_inset Formula $F_{m}$
-\end_inset
-
- and 
-\begin_inset Formula $F_{m}^{\dagger}$
-\end_inset
-
- requires 
-\begin_inset Formula 
-\begin{equation}
-CS^{T}+SC^{T}=0,\quad CC^{\dagger}+SS^{\dagger}=I.\label{eq:overlap_CS_relation}
-\end{equation}
-
-\end_inset
-
-The matrix elements of 
-\begin_inset Formula $C$
-\end_inset
-
- and 
-\begin_inset Formula $S$
-\end_inset
-
- are given by
-\begin_inset Formula 
-\[
-C_{0n}=C_{n0}=\delta_{0,n},\quad S_{0,n}=S_{n,0}=0,\quad0\leq n<M
-\]
-
-\end_inset
-
- and
-\begin_inset Formula 
-\begin{align}
-C_{mn} & =-\frac{1}{\sqrt{ML}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi i\left(n/L-m/M\right)}}\cos\left(\frac{n\pi}{2L}-\frac{m\pi}{2M}\right),\quad1\leq n<L\label{eq:overlap_C_mn1}\\
-C_{m,L+n-1} & =\frac{1}{\sqrt{MK}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi i\left(n/K-m/M\right)}}\cos\left(\frac{n\pi}{2K}-\frac{m\pi}{2M}\right),\quad1\leq n<K\\
-C_{m,M-1} & =-\frac{1}{\sqrt{LK}}\frac{1-e^{-2\pi imL/M}}{1-e^{2i\pi m/M}}\cos\left(\frac{m\pi}{2M}-\frac{\pi}{4}\right),\\
-S_{mn} & =-\frac{1}{\sqrt{ML}}\frac{1-e^{-2\pi imL/M}}{1-e^{2\pi i\left(n/L+m/M\right)}}\cos\left(\frac{n\pi}{2L}+\frac{m\pi}{2M}\right),\quad1\leq n<L\\
-S_{m,L+n-1} & =\frac{1}{\sqrt{MK}}\frac{1-e^{-2\pi imL/M}}{1-e^{2\pi i\left(n/K+m/M\right)}}\cos\left(\frac{n\pi}{2K}+\frac{m\pi}{2M}\right),\quad1\leq n<K\\
-S_{m,M-1} & =-\frac{1}{\sqrt{LK}}\frac{1-e^{-2\pi imL/M}}{1-e^{2\pi im/M}}\cos\left(\frac{m\pi}{2M}+\frac{\pi}{4}\right),\label{eq:overlap_S_mM1}
-\end{align}
-
-\end_inset
-
-where 
-\begin_inset Formula $1\leq m\leq M-1$
-\end_inset
-
- in Eqs.
- 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:overlap_C_mn1"
-
-\end_inset
-
--
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:overlap_S_mM1"
-
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-We then express the ground eigenfunction of large chain as
-\begin_inset Formula 
-\begin{equation}
-\psi_{G}=\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\psi_{G}^{\left(1\right)}\psi_{G}^{\left(2\right)}\left[\det\left(I+DD^{\dagger}\right)\right]^{-1/4}.\label{eq:overlap_psi_M}
-\end{equation}
-
-\end_inset
-
-The constraints 
-\begin_inset Formula $F_{m}\psi_{G}=0$
-\end_inset
-
- imply 
-\begin_inset Formula 
-\begin{equation}
-C_{mn}D_{nl}+S_{ml}=0.\label{eq:overlap_CMS}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-In the above construction, while the matrices 
-\begin_inset Formula $C$
-\end_inset
-
-, 
-\begin_inset Formula $S$
-\end_inset
-
-, and 
-\begin_inset Formula $D$
-\end_inset
-
- are of dimension 
-\begin_inset Formula $M\times M$
-\end_inset
-
-, the first rows and columns of the matrices are trivial.
- In fact, these matrices are in the form 
-\begin_inset Formula 
-\[
-C=\begin{pmatrix}1\end{pmatrix}\oplus C^{\prime},\quad S=\begin{pmatrix}0\end{pmatrix}\oplus S^{\prime},\quad D=\begin{pmatrix}0\end{pmatrix}\oplus D^{\prime},
-\]
-
-\end_inset
-
- where 
-\begin_inset Formula $C^{\prime}$
-\end_inset
-
-, 
-\begin_inset Formula $S^{\prime}$
-\end_inset
-
-, 
-\begin_inset Formula $D^{\prime}$
-\end_inset
-
- are nontrivial matrices of dimension 
-\begin_inset Formula $\left(M-1\right)\times\left(M-1\right)$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-With 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:overlap_CS_relation"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:overlap_CMS"
-
-\end_inset
-
-, we can simplify 
+By analogy with 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:overlap_psi_M"
 
 \end_inset
 
-: 
-\begin_inset Formula 
-\[
-\det\left(I+DD^{\dagger}\right)=\frac{\det\left[C\left(I+DD^{\dagger}\right)C^{\dagger}\right]}{\det\left[CC^{\dagger}\right]}=\frac{\det\left[CC^{\dagger}+SS^{\dagger}\right]}{\det\left(CC^{\dagger}\right)}=\left|\det C\right|^{-2},
-\]
-
-\end_inset
-
- 
+, the overlap of conjugate eigenfunction among larger chain and two smaller
+ chains is given by
 \begin_inset Formula 
 \begin{equation}
-\psi_{G}=\left|\det C\right|^{1/2}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\psi_{G}^{\left(1\right)}\psi_{G}^{\left(2\right)}.\label{eq:overlap_psi_M1}
-\end{equation}
-
-\end_inset
-
-The corresponding conjugate function is
-\begin_inset Formula 
-\begin{equation}
-\bar{\psi}_{G}=\left|\det C\right|^{1/2}\exp\left(\frac{1}{2}\sum_{kl}\tilde{f}_{k}D_{kl}^{\dagger}\tilde{f}_{l}\right)\bar{\psi}_{0}^{\left(2\right)}\bar{\psi}_{0}^{\left(1\right)},\label{eq:overlap_psibar_M}
+\bar{\psi}_{G}=\left|\det C\right|^{1/2}\exp\left(\frac{1}{2}\sum_{kl}\tilde{f}_{k}D_{kl}^{\dagger}\tilde{f}_{l}\right)\bar{\psi}_{G}^{\left(2\right)}\bar{\psi}_{G}^{\left(1\right)},\label{eq:overlap_psibar_M}
 \end{equation}
 
 \end_inset
@@ -2407,185 +2768,61 @@ The corresponding conjugate function is
 \begin_inset Formula $M$
 \end_inset
 
- is odd.
+ is odd with all the notations defined as subsection 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Three-Chain-overlap"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-Let us conclude this section by some mathematical properties of the matrices,
- which might be helpful for future study.
- When 
-\begin_inset Formula $M$
+For arbitrary 
+\begin_inset Formula $s$
 \end_inset
 
- is large, we approximate the determinate of 
-\begin_inset Formula $C$
-\end_inset
-
- as
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Thorn:2015wli"
+, the ground conjugate eigenfunction 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_ground_state_s"
 
 \end_inset
 
-
+ is 
 \begin_inset Formula 
 \begin{equation}
-\det CC^{\dagger}\sim\frac{0.9290}{\left(KLM\right)^{1/6}}\left(\frac{L}{M}\right)^{\left(M/K-L/M\right)/3-2/3}\left(\frac{K}{M}\right)^{\left(M/L-K/M\right)/3-2/3}.\label{eq:overlap_detC}
+\bar{\psi}_{G}=\left(-1\right)^{s\left(s-1\right)M\left(M-1\right)/4}\prod_{i=0}^{s-1}\bar{\psi}_{G}^{\left(s-i\right)},
 \end{equation}
 
 \end_inset
 
-We define
-\begin_inset Formula 
-\[
-\hat{n}=\begin{cases}
-L-n, & \quad1\leq n<L\\
-M-n-1+L, & \quad L\leq n<M-1\\
-M-1, & \quad n=M-1
-\end{cases}.
-\]
+ where the sign factor comes from the rearrangement of the measure 
+\begin_inset Formula $d^{s}\theta_{1}\cdots d^{s}\theta_{M}$
+\end_inset
+
+ to 
+\begin_inset Formula $\prod_{i=1}^{s}d\theta_{1}^{\left(i\right)}\cdots d\theta_{M}^{\left(i\right)}$
+\end_inset
+
+.
+ The conjugate to the general eigenfunction 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_general_eigenfunction_s"
 
 \end_inset
 
-Then for 
-\begin_inset Formula $1\leq n\leq M-1$
-\end_inset
-
-, we have
+ is
 \begin_inset Formula 
 \begin{equation}
-S_{mn}=C_{-m,n}^{*},\quad C_{mn}=C_{M-m,\hat{n}}^{*},\quad S_{mn}=-S_{M-m,\hat{n}}^{*},\quad D_{mn}=-D_{\hat{m}\hat{n}}^{*}.\label{eq:overlap_matrix_symmetry}
+\bar{\psi}=\prod_{i=0}^{s-1}\prod_{k=1}^{M}\left(\tilde{F}_{M-k}^{\left(s-i\right)}\right)^{\lambda_{M-k,s-i}}\bar{\psi}_{G},\quad\quad\lambda_{k}=0,\,1.
 \end{equation}
 
 \end_inset
 
- The first three equalities of 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:overlap_matrix_symmetry"
 
-\end_inset
-
- can be directly verified by Eqs.
- 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:overlap_C_mn1"
-
-\end_inset
-
--
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:overlap_S_mM1"
-
-\end_inset
-
-.
- The last equality can be shown by applying the second and third ones to
- Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:overlap_CMS"
-
-\end_inset
-
-.
- Let 
-\begin_inset Formula $C^{\left(K\right)}$
-\end_inset
-
- be the 
-\begin_inset Formula $C$
-\end_inset
-
- matrix when 
-\begin_inset Formula $L$
-\end_inset
-
- is replaced by 
-\begin_inset Formula $K=M-L$
-\end_inset
-
-, and similarly for 
-\begin_inset Formula $S^{\left(K\right)}$
-\end_inset
-
- and 
-\begin_inset Formula $D^{\left(K\right)}$
-\end_inset
-
-.
- We then have 
-\begin_inset Formula 
-\begin{equation}
-C^{\left(K\right)}=UC^{\left(L\right)}R,\quad S^{\left(K\right)}=US^{\left(L\right)}R,\quad D^{\left(K\right)}=R^{T}D^{\left(L\right)}R\label{eq:overlap_matrix_symmetry2}
-\end{equation}
-
-\end_inset
-
- where
-\begin_inset Formula 
-\[
-U=\begin{pmatrix}u_{1}^{\left(K\right)}\\
- & \ddots\\
- &  & u_{M-1}^{\left(K\right)}
-\end{pmatrix},\quad R=\begin{pmatrix}0 & -\mathbf{I}_{L-1} & 0\\
--\mathbf{I}_{K-1} & 0 & 0\\
-0 & 0 & 1
-\end{pmatrix}
-\]
-
-\end_inset
-
- with 
-\begin_inset Formula $u_{m}^{\left(K\right)}=\left(1-e^{2\pi imK/M}\right)/1-e^{2\pi imL/M}$
-\end_inset
-
- and 
-\begin_inset Formula $\mathbf{I}_{L=1}$
-\end_inset
-
- the identity matrix of 
-\begin_inset Formula $\left(L-1\right)\times\left(L-1\right)$
-\end_inset
-
- dimension.
- The first and second equalities of Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:overlap_matrix_symmetry2"
-
-\end_inset
-
- can be verified directly by Eqs.
- 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:overlap_C_mn1"
-
-\end_inset
-
--
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:overlap_S_mM1"
-
-\end_inset
-
-.
- The last equality can be shown by applying first two to Eq.
- 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:overlap_CMS"
-
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Section
@@ -2645,7 +2882,7 @@ HT_{r}\ket{0}=E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{l=k
 
 \end_inset
 
- where in the last step we shifted the summation indices as 
+ where in the last step we shifted the indices as 
 \begin_inset Formula $l\to L+k+1$
 \end_inset
 
@@ -2705,12 +2942,98 @@ where
  is defined as 
 \begin_inset Formula 
 \begin{equation}
-V_{qpr}^{\left(K,L\right)}=\left(-\right)^{s\left(Kg_{p}+Lg_{q}\right)}\sum_{k=1}^{M}\int d\theta\,\bar{h}_{k,k+L+1}\bar{\psi}_{q}\left(\theta_{k+L+1}\cdots\theta_{k}\right)\bar{\psi}_{p}\left(\theta_{k+1}\cdots\theta_{k+L}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\label{eq:pert_Vstr}
+V_{qpr}^{\left(K,L\right)}=\left(-\right)^{s\left(Kg_{p}+Lg_{q}\right)}\sum_{k=1}^{M}\int d\theta\,\bar{h}_{k,k+L+1}\bar{\psi}_{q}\left(\theta_{k+L+1}\cdots\theta_{k}\right)\bar{\psi}_{p}\left(\theta_{k+1}\cdots\theta_{k+L}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right).\label{eq:pert_Vstr}
 \end{equation}
 
 \end_inset
 
-Note that all the 
+
+\end_layout
+
+\begin_layout Standard
+The action of 
+\begin_inset Formula $H$
+\end_inset
+
+ on double trace produces both fusion and fission terms: 
+\begin_inset Formula 
+\begin{multline*}
+HT_{p}T_{q}\ket{0}=\left(E_{p}+E_{q}\right)T_{p}T_{q}\ket{0}\\
++\frac{1}{N}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\left(-\right)^{sK\left(g_{p}-sL\right)}\bar{h}_{lk}T\left(\theta_{l+1}\cdots\theta_{l}\eta_{k}\cdots\eta_{k-1}\right)\psi_{p}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{q}\left(\eta_{1}\cdots\eta_{K}\right)\ket{0}\\
++\frac{1}{N}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\left(-\right)^{sK\left(g_{p}-sL\right)}\bar{h}_{kl}T\left(\theta_{l}\cdots\theta_{l-1}\eta_{k+1}\cdots\eta_{k}\right)\psi_{p}\left(\theta\right)\psi_{q}\left(\eta\right)\ket{0}+\frac{1}{N}\text{Fission Terms}.
+\end{multline*}
+
+\end_inset
+
+ Similarly, we can express the results as
+\begin_inset Formula 
+\[
+HT_{p}T_{q}\ket{0}=\left(E_{p}+E_{q}\right)T_{p}T_{q}\ket{0}+\frac{1}{N}\sum_{r}T_{r}\ket{0}\left(W_{rpq}^{\left(1\right)}+W_{rpq}^{\left(2\right)}\right)+\cdots
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula 
+\[
+W_{rpq}^{\left(1\right)}=\left(-\right)^{sK\left(g_{p}-L\right)}\sum_{k=1}^{K}\sum_{l=1}^{L}\int d\theta d\eta\,\bar{h}_{lk}\bar{\psi}_{r}\left(\theta_{l+1}\cdots\theta_{l}\eta_{k}\cdots\eta_{k-1}\right)\psi_{p}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{q}\left(\eta_{1}\cdots\eta_{K}\right),
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+W_{rpq}^{\left(2\right)}=\left(-\right)^{sK\left(g_{p}-L\right)}\sum_{k=1}^{K}\sum_{l=1}^{L}\int d\theta d\eta\,\bar{h}_{kl}\bar{\psi}_{r}\left(\theta_{l}\cdots\theta_{l-1}\eta_{k+1}\cdots\eta_{k}\right)\psi_{p}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{q}\left(\eta_{1}\cdots\eta_{K}\right).
+\]
+
+\end_inset
+
+We note that the above derivation of 
+\begin_inset Formula $V$
+\end_inset
+
+ and 
+\begin_inset Formula $W$
+\end_inset
+
+ simply follows the one of 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
+\end_inset
+
+.
+ But the sign factors of 
+\begin_inset Formula $V$
+\end_inset
+
+ and 
+\begin_inset Formula $W$
+\end_inset
+
+ were not handled correctly in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Now we can simplify 
+\begin_inset Formula $V$
+\end_inset
+
+ and 
+\begin_inset Formula $W$
+\end_inset
+
+ a little bit.
+ It can be shown as follows that all the 
 \begin_inset Formula $M$
 \end_inset
 
@@ -2722,7 +3045,6 @@ reference "eq:pert_Vstr"
 \end_inset
 
  are the same.
- It can be shown as follows.
  For the integral with index 
 \begin_inset Formula $k$
 \end_inset
@@ -2777,44 +3099,6 @@ V_{qpr}^{\left(K,L\right)}=\left(-\right)^{s\left(Kg_{p}+Lg_{q}\right)}M\int d\t
 \end_layout
 
 \begin_layout Standard
-The action of 
-\begin_inset Formula $H$
-\end_inset
-
- on double trace produces both fusion and fission terms: 
-\begin_inset Formula 
-\begin{multline*}
-HT_{p}T_{q}\ket{0}=\left(E_{p}+E_{q}\right)T_{p}T_{q}\ket{0}\\
-+\frac{1}{N}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\left(-\right)^{sK\left(g_{p}-sL\right)}\bar{h}_{lk}T\left(\theta_{l+1}\cdots\theta_{l}\eta_{k}\cdots\eta_{k-1}\right)\psi_{p}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{q}\left(\eta_{1}\cdots\eta_{K}\right)\ket{0}\\
-+\frac{1}{N}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\left(-\right)^{sK\left(g_{p}-sL\right)}\bar{h}_{kl}T\left(\theta_{l}\cdots\theta_{l-1}\eta_{k+1}\cdots\eta_{k}\right)\psi_{p}\left(\theta\right)\psi_{q}\left(\eta\right)\ket{0}+\frac{1}{N}\text{Fission Terms}.
-\end{multline*}
-
-\end_inset
-
- Similarly, we can express the results as
-\begin_inset Formula 
-\[
-HT_{p}T_{q}\ket{0}=\left(E_{p}+E_{q}\right)T_{p}T_{q}\ket{0}+\frac{1}{N}\sum_{r}T_{r}\ket{0}\left(W_{rpq}^{\left(1\right)}+W_{rpq}^{\left(2\right)}\right)+\cdots
-\]
-
-\end_inset
-
- where 
-\begin_inset Formula 
-\[
-W_{rpq}^{\left(1\right)}=\left(-\right)^{sK\left(g_{p}-L\right)}\sum_{k=1}^{K}\sum_{l=1}^{L}\int d\theta d\eta\,\bar{h}_{lk}\bar{\psi}_{r}\left(\theta_{l+1}\cdots\theta_{l}\eta_{k}\cdots\eta_{k-1}\right)\psi_{p}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{q}\left(\eta_{1}\cdots\eta_{K}\right),
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-W_{rpq}^{\left(2\right)}=\left(-\right)^{sK\left(g_{p}-L\right)}\sum_{k=1}^{K}\sum_{l=1}^{L}\int d\theta d\eta\,\bar{h}_{kl}\bar{\psi}_{r}\left(\theta_{l}\cdots\theta_{l-1}\eta_{k+1}\cdots\eta_{k}\right)\psi_{p}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{q}\left(\eta_{1}\cdots\eta_{K}\right).
-\]
-
-\end_inset
-
 Likewise, 
 \begin_inset Formula $W^{\left(1\right)}$
 \end_inset
@@ -2881,7 +3165,7 @@ The expression of
 \begin_inset Formula $V_{qpr}^{\left(K,L\right)}$
 \end_inset
 
- shows that when a large chain splits into two smaller chains of 
+ shows that, when a large chain splits into two smaller chains of 
 \begin_inset Formula $K$
 \end_inset
 
@@ -2917,7 +3201,7 @@ The expression of
 \end_layout
 
 \begin_layout Standard
-Let us continue to simplify the vertices 
+Let us apply the results of previous sections to the expressions of 
 \begin_inset Formula $V$
 \end_inset
 
@@ -2925,7 +3209,7 @@ Let us continue to simplify the vertices
 \begin_inset Formula $W$
 \end_inset
 
- with the results of previous sections.
+.
  We first consider the 
 \begin_inset Formula $s=1$
 \end_inset
@@ -2935,7 +3219,7 @@ Let us continue to simplify the vertices
 \begin_inset Formula $h^{\left(V\right)}\equiv h_{M,L+1}$
 \end_inset
 
- and 
+, 
 \begin_inset Formula $h^{\left(W\right)}\equiv h_{L,L+1}+h_{M,1}$
 \end_inset
 
@@ -2956,12 +3240,7 @@ and similarly for
 \end_inset
 
 .
- We also use .
- 
-\end_layout
-
-\begin_layout Standard
-Now 
+ Now 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:pert_Vstr_2"
