@@ -163,7 +163,7 @@ We provide a formalism to calculate the cubic interaction vertices of stable
 \begin_inset Formula $\Delta E_{G}\sim1/M$
 \end_inset
 
-, which resembles the Lorentz invariant relation of 
+, which resembles the Poincaré invariant relation of 
 \begin_inset Formula $1+1$
 \end_inset
 
@@ -172,7 +172,7 @@ We provide a formalism to calculate the cubic interaction vertices of stable
 \end_inset
 
 .
- We calculate analytically the one-loop self energy for the ground states
+ We calculate analytically the one-loop correction for the ground energies
  with bit number 
 \begin_inset Formula $M=3$
 \end_inset
@@ -485,7 +485,7 @@ key "Thorn:2015wli"
 
 \end_inset
 
-, in which the Lorentz invariant relation of 
+, in which the Poincaré invariant relation of 
 \begin_inset Formula $1+1$
 \end_inset
 
@@ -520,25 +520,38 @@ The rest of this paper is organized as follows.
  In Sec 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:Hamiltonian"
+reference "sec:Review"
 
 \end_inset
 
-, we give the Hamiltonian of the model, solve for the energy eigenstates
- in large 
-\begin_inset Formula $N$
+, we review some results of stable string bit model obtained by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
 \end_inset
 
- limit, and build conjugates to the energy eigenstates.
+.
+ Specifically, we introduce the Hamiltonian of the model, solve for energy
+ spectrum of the model at 
+\begin_inset Formula $N=\infty$
+\end_inset
+
+, and summarize the three chains overlap calculation.
  In Sec.
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:Three-Chain-overlap"
+reference "sec:Conjugate-Eigenfunction"
 
 \end_inset
 
-, we summarize the three chains overlap calculation.
+, we provide a systematic approach to build conjugate eigenfunctions, which
+ will be used in the calculation of 
+\begin_inset Formula $1/N$
+\end_inset
+
+ expansion.
  In Sec.
  
 \begin_inset CommandInset ref
@@ -561,12 +574,7 @@ reference "sec:EnergyCorrection"
 \end_inset
 
 , we use the cubic interaction vertices to find the one-loop self energy.
- The analytic calculation for 
-\begin_inset Formula $M=3$
-\end_inset
-
- case is given as an example.
- We analyze the results of numerical computation for one-loop self energy
+ The results of numerical computation for one-loop self energy are analyzed
  in Sec.
  
 \begin_inset CommandInset ref
@@ -576,14 +584,14 @@ reference "sec:Numerical-Results"
 \end_inset
 
 .
- The main text is closed with a conclusion section.
+ The main text is closed with a summary and conclusion section.
  Finally, several appendices are included for technical details.
 \end_layout
 
 \begin_layout Section
 \begin_inset CommandInset label
 LatexCommand label
-name "sec:Hamiltonian"
+name "sec:Review"
 
 \end_inset
 
@@ -610,7 +618,7 @@ key "Thorn:2015wli"
  In subsection 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:Hamiltonian"
+reference "sub:Hamiltonian"
 
 \end_inset
 
@@ -657,23 +665,21 @@ reference "sub:Three-Chain-overlap"
 
 \end_inset
 
-, we introduce some mathematical relationships among the relevant matrices,
- as 
+, we introduce some mathematical relationships, such as 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand eqref
 reference "eq:overlap_matrix_symmetry"
 
 \end_inset
 
  and 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand eqref
 reference "eq:overlap_matrix_symmetry2"
 
 \end_inset
 
-.
- 
+, among the relevant matrices.
 \end_layout
 
 \begin_layout Subsection
@@ -704,7 +710,7 @@ The Hamiltonian to be studied in this paper consists of
 \begin_inset Formula $s=1$
 \end_inset
 
- string bit model
+ string bit model 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Sun:2014dga,Chen:2016hkz"
@@ -2148,6 +2154,12 @@ reference "eq:overlap_CMS"
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Conjugate-Eigenfunction"
+
+\end_inset
+
 Conjugate Eigenfunction
 \end_layout
 
@@ -3404,15 +3416,30 @@ W_{rpq}^{\left(L,K\right)} & = & KL\left|\det C\right|^{s/2}\prod_{a=1}^{s}\left
 
 -th spin index.
  For convenience, we have introduced the notations 
-\begin_inset Formula $\mathbb{F}_{qp}^{a}\equiv\mathbb{F}_{q}^{a}\mathbb{F}_{p}^{a}$
+\begin_inset Formula 
+\begin{eqnarray}
+\mathbb{F}_{qp}^{a} & \equiv & \mathbb{F}_{q}^{a}\mathbb{F}_{p}^{a},\\
+\left\langle \mathbb{F}_{1}^{a},\mathbb{F}_{2}^{a\dagger}\right\rangle _{V,W} & \equiv & \left\langle \mathbb{F}_{1}^{a}h^{\left(V,W;a\right)}\mathbb{F}_{2}^{a\dagger}\exp\left(\frac{1}{2}f_{k}^{a\dagger}D_{kl}f_{l}^{a\dagger}\right)\right\rangle ,\label{eq:exp_F1F1_vev}
+\end{eqnarray}
+
 \end_inset
 
- and 
-\begin_inset Formula $\left\langle \mathbb{F}_{1}^{a},\mathbb{F}_{2}^{a\dagger}\right\rangle _{V,W}\equiv\left\langle \mathbb{F}_{1}^{a}h^{\left(V,W;a\right)}\mathbb{F}_{2}^{a\dagger}\exp\left(\frac{1}{2}f_{k}^{a\dagger}D_{kl}f_{l}^{a\dagger}\right)\right\rangle $
+If 
+\begin_inset Formula $\mathbb{F}_{2}^{a\dagger}$
+\end_inset
+
+ is empty, we will simply denote 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:exp_F1F1_vev"
+
+\end_inset
+
+ as 
+\begin_inset Formula $\left\langle \mathbb{F}_{1}^{a}\right\rangle _{V,W}$
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Standard
@@ -3577,7 +3604,7 @@ C_{pq}=\frac{1}{E_{r}-E_{p}-E_{q}}\frac{1}{N}V_{qpr}+\mathcal{O}\left(N^{-2}\rig
 \begin_inset Formula $\Delta E_{r}$
 \end_inset
 
- is leading order correction to 
+ is the leading order correction to 
 \begin_inset Formula $E_{r}$
 \end_inset
 
@@ -4014,7 +4041,11 @@ We conclude this section by considering the large
 \begin_inset Formula $M$
 \end_inset
 
- behavior of the ground energy correction
+ behavior of 
+\begin_inset Formula $\Delta E_{G}$
+\end_inset
+
+
 \begin_inset Foot
 status open
 
@@ -4134,7 +4165,7 @@ reference "eq:energy_per_largeM"
 \begin_inset Formula $\Delta E_{G}\sim1/M\sim1/P^{+}$
 \end_inset
 
-, which resembles the Lorentz invariant dispersion relation 
+, which resembles the Poincaré invariant dispersion relation 
 \begin_inset Formula $P^{-}\sim1/P^{+}$
 \end_inset
 
@@ -4143,7 +4174,7 @@ reference "eq:energy_per_largeM"
 \end_inset
 
  dimension.
- The model in the 
+ The 
 \begin_inset Formula $s=24$
 \end_inset
 
@@ -5188,18 +5219,14 @@ name "sec:Conclusion"
 
 \end_inset
 
-Conclusion
+Summary and Conclusion
 \end_layout
 
 \begin_layout Standard
-We have presented a formalism to calculate the three string interaction
- vertex for stable string bit model and its application in the 
-\begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
-\end_inset
-
- correction to the energy spectrum of the model.
+We have presented a formalism to calculate the cubic interaction vertices
+ for stable string bit model and its application in one-loop self energy.
  The calculation of both are transferred to the calculation of vacuum expectatio
-n value of eigenoperators.
+n values of eigenoperators.
  
 \end_layout
 
@@ -5208,7 +5235,7 @@ When the bit number
 \begin_inset Formula $M$
 \end_inset
 
- is large, the ground energy correction 
+ is large, the one-loop self energy of the ground state 
 \begin_inset Formula $\Delta E_{G}$
 \end_inset
 
@@ -5229,19 +5256,20 @@ When the bit number
 \end_inset
 
 .
- In the 
+ When 
 \begin_inset Formula $s=24$
 \end_inset
 
- case, it leads to 
-\begin_inset Formula $\Delta E_{G}\sim1/M\sim1/P^{+}$
-\end_inset
-
-, which resembles the Poincaré invariant dispersion relation in 
+, the model is call protostring model and leads to the Poincaré invariant
+ relation in 
 \begin_inset Formula $1+1$
 \end_inset
 
- dimension.
+ dimension 
+\begin_inset Formula $\Delta E_{G}\sim1/P^{+}$
+\end_inset
+
+.
  The large 
 \begin_inset Formula $M$
 \end_inset
@@ -5250,7 +5278,7 @@ When the bit number
 \begin_inset Formula $\Delta E_{G}$
 \end_inset
 
- is only determined by the contribution of the smaller chains ground states.
+ is determined by the contribution of the smaller chains ground states.
  Notwithstanding that the number of excited states grows exponentially with
  respect to 
 \begin_inset Formula $M$
@@ -5263,7 +5291,7 @@ key "Chen:2016hkz"
 
 \end_inset
 
-, excited states contributions to 
+, the excited states contributions to 
 \begin_inset Formula $\Delta E_{G}$
 \end_inset
 
@@ -5290,17 +5318,16 @@ When
 \begin_inset Formula $\Delta\hat{E}_{G}$
 \end_inset
 
-, is a exponential function of 
+, is an exponential function of 
 \begin_inset Formula $s$
 \end_inset
 
 .
- This is related to the fact that each energy eigenstate of the model has
- at least 
+ This stems from the fact that each energy eigenstate has 
 \begin_inset Formula $2^{s}$
 \end_inset
 
- degeneracies.
+ degeneracies due to supersymmetry.
  The base of the exponentation is a quadratic function of 
 \begin_inset Formula $\xi$
 \end_inset
@@ -5318,7 +5345,7 @@ When
 \begin_inset Formula $\xi=1$
 \end_inset
 
- is the minimum value that the scalar potential of even 
+ is the minimum value that the scalar potentials of even 
 \begin_inset Formula $s$
 \end_inset
 
@@ -5358,8 +5385,8 @@ The future research of this work can be done in several ways.
 \end_inset
 
 .
- Another possible future research is to find the Feynman rules of this model
- with the interaction vertices.
+ Another possible direction is to study higher loop corrections and find
+ the Feynman rules of this model.
 \end_layout
 
 \begin_layout Section
