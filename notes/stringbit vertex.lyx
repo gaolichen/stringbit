@@ -133,7 +133,7 @@ We provide a formalism to calculate the cubic interaction vertices of stable
 \begin_inset Formula $M$
 \end_inset
 
- is large, the self energy 
+ is large, the one-loop self energy 
 \begin_inset Formula $\Delta E_{G}$
 \end_inset
 
@@ -469,10 +469,6 @@ key "Thorn:2015wli"
 \begin_inset Formula $s$
 \end_inset
 
- when 
-\begin_inset Formula $s\leq4$
-\end_inset
-
 .
  When 
 \begin_inset Formula $s=24$
@@ -485,15 +481,15 @@ key "Thorn:2015wli"
 
 \end_inset
 
-, in which the Poincaré invariant relation of 
+, which leads to the Poincaré invariant relation of 
 \begin_inset Formula $1+1$
 \end_inset
 
- dimension, 
+ dimension 
 \begin_inset Formula $P^{-}\sim1/P^{+}$
 \end_inset
 
-, is produced.
+.
  We will analytically calculate the one-loop self energy for the cases of
  
 \begin_inset Formula $M=3$
@@ -512,7 +508,19 @@ key "Thorn:2015wli"
 \end_inset
 
 .
- 
+ We will also numerically verify that, the 
+\begin_inset Formula $M$
+\end_inset
+
+ independent factor one-loop correction in large 
+\begin_inset Formula $M$
+\end_inset
+
+ limit increases exponentially with respect to 
+\begin_inset Formula $s$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -564,7 +572,7 @@ reference "sec:interaction-vertex"
 \begin_inset Formula $1/N$
 \end_inset
 
- perturbation of the model.
+ perturbation.
  In Sec.
  
 \begin_inset CommandInset ref
@@ -573,7 +581,7 @@ reference "sec:EnergyCorrection"
 
 \end_inset
 
-, we use the cubic interaction vertices to find the one-loop self energy.
+, we use the cubic interaction vertices to find one-loop self energy.
  The results of numerical computation for one-loop self energy are analyzed
  in Sec.
  
@@ -679,7 +687,7 @@ reference "eq:overlap_matrix_symmetry2"
 
 \end_inset
 
-, among the relevant matrices.
+, among the matrices discussed in that subsection.
 \end_layout
 
 \begin_layout Subsection
@@ -884,7 +892,7 @@ key "Chen:2016hkz,Sun:2014dga"
 
 \end_inset
 
-In analogy with 
+By analogy with 
 \begin_inset Formula $H^{s=1}$
 \end_inset
 
@@ -1229,7 +1237,7 @@ h\psi_{r}\left(\theta_{1},\dots,\theta_{M}\right)=E_{r}\psi_{r}\left(\theta_{1},
 
 To solve the eigenvalue problem 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand eqref
 reference "eq:ham_eigenequation"
 
 \end_inset
@@ -1247,9 +1255,7 @@ key "Thorn:2015wli"
 \end_inset
 
 .
- Here, we repeat the procedure with different sets of intermediate variables,
- which will be clear shortly.
- 
+ Here, we repeat the procedure with different sets of intermediate variables.
 \end_layout
 
 \begin_layout Standard
@@ -1326,13 +1332,13 @@ key "Thorn:2015wli"
 \begin_inset Formula $S_{k}=\theta_{k}+\frac{d}{d\theta_{k}}$
 \end_inset
 
- and 
+, 
 \begin_inset Formula $\tilde{S}_{k}=i\left(\theta_{k}+\frac{d}{d\theta_{k}}\right)$
 \end_inset
 
- and their Fourier transforms.
- But such different choices should not effect the eigenoperators and the
- energy spectrum.
+, and their Fourier transforms.
+ Such different choices should not effect the eigenoperators and the energy
+ spectrum.
  
 \end_layout
 
@@ -1465,8 +1471,8 @@ The phase factors are chosen so that the expression of
 \end_inset
 
  in terms of eigenoperators will have a simple form.
- A direct calculation shows the eigenoperators satisfy the following anticommuta
-tion relations
+ A direct calculation shows that the eigenoperators satisfy the following
+ anticommutation relations
 \begin_inset Formula 
 \begin{equation}
 \left\{ F_{k},F_{l}\right\} =\left\{ F_{k}^{\dagger},F_{l}^{\dagger}\right\} =0,\quad\left\{ F_{k},F_{l}^{\dagger}\right\} =\delta_{kl},\quad0\leq k,l\leq M-1.\label{eq:ham_F_anticommutation}
@@ -1486,7 +1492,7 @@ To obtain the energy spectrum, we need to find the ground energy
 \begin_inset Formula $\psi_{G}$
 \end_inset
 
-, which is annihilated by all lowering operators.
+, which is annihilated by all the lowering operators.
  Since the zero mode do not change energy eigenvalue, there are degeneracies
  in ground state.
  To eliminate the ambiguity, we require the ground eigenfunction to be annihilat
@@ -1673,7 +1679,12 @@ reference "eq:ham_cyclic_constraint_s"
 \begin_inset Formula $s$
 \end_inset
 
- is odd, it implies that the ground state corresponding to 
+ is even, all the ground states are physical.
+ But when 
+\begin_inset Formula $s$
+\end_inset
+
+ is odd, the ground state corresponding to 
 \begin_inset Formula $\psi_{G}$
 \end_inset
 
@@ -1986,7 +1997,7 @@ Let us conclude this subsection by some mathematical properties of the matrices,
 \begin_inset Formula $C$
 \end_inset
 
- as
+ as 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2015wli"
@@ -2184,7 +2195,7 @@ reference "sub:Diagonalizing-Hamiltonian"
 \begin_inset Formula $\bar{\psi}_{r}$
 \end_inset
 
- that conjugates to an arbitary energy eigenfunctions 
+ that conjugates to an energy eigenfunction 
 \begin_inset Formula $\psi_{r}$
 \end_inset
 
@@ -2288,7 +2299,7 @@ key "Thorn:2015wli"
 \begin_inset Formula $\lambda$
 \end_inset
 
- is the Grassmann coefficients of grading 
+ is a Grassmann coefficient of grading 
 \begin_inset Formula $\g\left(\lambda\right)$
 \end_inset
 
@@ -2523,11 +2534,19 @@ reference "eq:ham_alpha_prod"
 \end_inset
 
 Note that in the remainder of this paper, all the products defined by the
- '
+ 
+\begin_inset Quotes els
+\end_inset
+
+
 \begin_inset Formula $\prod$
 \end_inset
 
-' symbol are ordered by the index that the product runs over, as the first
+
+\begin_inset Quotes ers
+\end_inset
+
+ symbol are ordered by the index that the products run over, as the first
  equality of 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -2780,7 +2799,7 @@ reference "eq:overlap_psi_M"
 \begin_inset Formula $M$
 \end_inset
 
- is odd with all the notations defined as subsection 
+ is odd and all the notations follow the ones of subsection 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:Three-Chain-overlap"
@@ -3539,15 +3558,16 @@ One application of the interaction vertices is to calculate the one-loop
 \end_inset
 
  correction to energy spectrum.
- In this section, we will follow the formalism of 
+ In this section, we will first express the one-loop self energy in terms
+ of cubic interaction vertices 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2015wli"
 
 \end_inset
 
- to express the one-loop self energy in terms of cubic interaction vertices.
- We then apply the results of previous section and obtain a formula for
+.
+ We then apply the results of previous sections and obtain a formula for
  analytic and numerical computation.
 \end_layout
 
@@ -3564,11 +3584,11 @@ For a finite
 
 \end_inset
 
- where the 
+ where the coefficients 
 \begin_inset Formula $C_{pq}$
 \end_inset
 
- coefficients are c-numbers of order 
+ are c-numbers of order 
 \begin_inset Formula $1/N$
 \end_inset
 
@@ -3762,7 +3782,7 @@ Note that the sum over
 \end_inset
 
  independently.
- Finally, we have the formula for one-loop self energy as
+ Finally, we have the formula for one-loop self energy
 \begin_inset Formula 
 \begin{equation}
 \Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{p,q}}^{\prime}\frac{KLM\left|\det C\right|^{s}}{E_{r}-E_{p}-E_{q}}\prod_{a=1}^{s}\left(\sum_{\lambda_{a,i}}\left\langle \mathbb{F}_{qp}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{qp}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{V}\right).\label{eq:energy_pert_DeltaE}
@@ -3988,7 +4008,7 @@ reference "eq:energy_pert_DeltaE"
 
 \end_inset
 
- to calculate the self energies for 
+ to calculate the one-loop self energies for 
 \begin_inset Formula $M=3,\, s=1$
 \end_inset
 
@@ -4216,13 +4236,15 @@ key "Chen:2015GitHub"
 \end_layout
 
 \begin_layout Standard
-We have derived a formula for the 
-\begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
+We have derived a formula for the one-loop correction to the ground energy.
+ As Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:app_example"
+
 \end_inset
 
- correction to the ground energy.
- As the previous section shows, however, the calculation is tedious even
- for the simplest case.
+ shows, however, the calculation is tedious even for the simplest case.
  We therefore turn to numerical computation.
  As the complexity of the calculation grows dramatically, the highest 
 \begin_inset Formula $M$
@@ -5284,18 +5306,15 @@ When the bit number
 \begin_inset Formula $M$
 \end_inset
 
-
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Chen:2016hkz"
 
 \end_inset
 
-, the excited states contributions to 
-\begin_inset Formula $\Delta E_{G}$
-\end_inset
-
- are canceled out due to the fermionic nature of string bits.
+, the excited states contributions are canceled out due to the fermionic
+ nature of string bits.
  The results uphold the idea of formulating string theory by string bit
  models.
  
@@ -5328,15 +5347,23 @@ When
 \end_inset
 
  degeneracies due to supersymmetry.
- The base of the exponentation is a quadratic function of 
+ The change of 
+\begin_inset Formula $\Delta\hat{E}_{G}$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $s$
+\end_inset
+
+ is slowest when 
+\begin_inset Formula $\xi=1$
+\end_inset
+
+ or 
 \begin_inset Formula $\xi$
 \end_inset
 
- and has a minimum value when 
-\begin_inset Formula $\xi$
-\end_inset
-
- is equal to or very close to 
+ is very close to 
 \begin_inset Formula $1$
 \end_inset
 
@@ -5386,7 +5413,7 @@ The future research of this work can be done in several ways.
 
 .
  Another possible direction is to study higher loop corrections and find
- the Feynman rules of this model.
+ the Feynman rules of the model.
 \end_layout
 
 \begin_layout Section
