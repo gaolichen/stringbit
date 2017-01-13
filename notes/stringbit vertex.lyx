@@ -3588,7 +3588,7 @@ C_{pq}^{2} & = & \frac{1}{E-E_{p}-E_{q}}\frac{1}{N}V_{qpr}C_{r}^{1}+\mathcal{O}\
 \end_inset
 
  It follows that the leading order correction 
-\begin_inset Formula $\Delta E\equiv E-E_{r}$
+\begin_inset Formula $\Delta E_{r}\equiv E-E_{r}$
 \end_inset
 
  is determined by the eigenvalues of the matrix
