@@ -440,7 +440,8 @@ The
 \begin_inset Formula $1/N$
 \end_inset
 
- perturbation of the latter model was studied in 
+ perturbation of the latter model was studied in ref.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2015wli"
@@ -525,7 +526,7 @@ key "Thorn:2015wli"
 
 \begin_layout Standard
 The rest of this paper is organized as follows.
- In Sec 
+ In section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Review"
@@ -546,8 +547,7 @@ key "Thorn:2015wli"
 \end_inset
 
 , and summarize the three chains overlap calculation.
- In Sec.
- 
+ In section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Conjugate-Eigenfunction"
@@ -560,8 +560,7 @@ reference "sec:Conjugate-Eigenfunction"
 \end_inset
 
  expansion.
- In Sec.
- 
+ In section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:interaction-vertex"
@@ -573,8 +572,7 @@ reference "sec:interaction-vertex"
 \end_inset
 
  perturbation.
- In Sec.
- 
+ In section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:EnergyCorrection"
@@ -583,8 +581,7 @@ reference "sec:EnergyCorrection"
 
 , we use the cubic interaction vertices to find one-loop self energy.
  The results of numerical computation for one-loop self energy are analyzed
- in Sec.
- 
+ in section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Numerical-Results"
@@ -608,7 +605,8 @@ Stable String Bit Model
 
 \begin_layout Standard
 The purpose of this section is to review some results of stable string bit
- model obtained by 
+ model obtained by ref.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2015wli"
@@ -658,7 +656,8 @@ reference "sub:Diagonalizing-Hamiltonian"
 \begin_inset Formula $S_{k}=\theta_{k}+d/d\theta_{k}$
 \end_inset
 
- as 
+ as ref.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2015wli"
@@ -673,7 +672,8 @@ reference "sub:Three-Chain-overlap"
 
 \end_inset
 
-, we introduce some mathematical relationships, such as 
+, we introduce some mathematical relationships, such as eqs.
+ 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:overlap_matrix_symmetry"
@@ -868,7 +868,8 @@ We now add
 \end_inset
 
  terms to the Hamiltonian.
- As 
+ As refs.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Chen:2016hkz,Sun:2014dga"
@@ -1009,7 +1010,7 @@ The actions of each
 \begin_inset Formula $H_{i}$
 \end_inset
 
- on single and double trace states are shown in Appendix 
+ on single and double trace states are shown in appendix 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:app_hamiltonian"
@@ -1235,7 +1236,8 @@ h\psi_{r}\left(\theta_{1},\dots,\theta_{M}\right)=E_{r}\psi_{r}\left(\theta_{1},
 
 \end_inset
 
-To solve the eigenvalue problem 
+To solve the eigenvalue problem eq.
+ 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:dia_eigenequation"
@@ -1247,7 +1249,8 @@ reference "eq:dia_eigenequation"
 \end_inset
 
 .
- This has been done by 
+ This has been done by ref.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2015wli"
@@ -1313,7 +1316,8 @@ which satisfy
 
 \end_inset
 
-In 
+In ref.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2015wli"
@@ -1739,7 +1743,8 @@ We have constructed the energy eigenfunctions for
  bits.
  The calculation can be done by establishing the relation among the eigenoperato
 rs of larger chain and two smaller chains.
- Here, we recap the results of 
+ Here, we recap the results of ref.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2015wli"
@@ -2205,6 +2210,7 @@ reference "sub:Diagonalizing-Hamiltonian"
 \end_inset
 
  a conjugate eigenfunction.
+ Ref.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2280,7 +2286,8 @@ reference "eq:ham_cyclicconstrtaint"
 status open
 
 \begin_layout Plain Layout
-Such a sign factor was ignored by 
+Such a sign factor was ignored by ref.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2015wli"
@@ -3028,7 +3035,8 @@ We note that the above derivation of
 \begin_inset Formula $W$
 \end_inset
 
- simply follows the one of 
+ simply follows the one of ref.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2015wli"
@@ -3044,7 +3052,8 @@ key "Thorn:2015wli"
 \begin_inset Formula $W$
 \end_inset
 
- were not handled correctly in 
+ were not handled correctly in ref.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2015wli"
@@ -3467,7 +3476,7 @@ To calculate the vacuum expectation values, we need to express
 \end_inset
 
  in terms of eigenoperators.
- The calculation in Appendix 
+ The calculation in appendix 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:App_h_kl"
@@ -3994,7 +4003,7 @@ Combining above together, we can calculate the one-loop self energy to the
  ground state.
  As the complete formula is very complicated, we do not bother writing it
  here.
- In Appendix 
+ In appendix 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:app_example"
@@ -4198,7 +4207,8 @@ reference "eq:olp_largeM"
 \begin_inset Formula $s=24$
 \end_inset
 
- case is called protostring model by 
+ case is called protostring model by ref.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2015wli"
@@ -4220,7 +4230,8 @@ Numerical Results
 status open
 
 \begin_layout Plain Layout
-The source code for the numerical computation can be found in 
+The source code for the numerical computation can be found in ref.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Chen:2015GitHub"
@@ -4237,7 +4248,7 @@ key "Chen:2015GitHub"
 
 \begin_layout Standard
 We have derived a formula for the one-loop correction to the ground energy.
- As Appendix 
+ As appendix 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:app_example"
@@ -4285,7 +4296,8 @@ reference "sec:app_example"
 
 \begin_layout Standard
 We first compare the perturbation results with the exact numerical results,
- which are obtained by the method of 
+ which are obtained by the method of ref.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Chen:2016hkz"
@@ -4293,8 +4305,7 @@ key "Chen:2016hkz"
 \end_inset
 
 .
- Fig.
- 
+ Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:E_compare"
@@ -4406,7 +4417,7 @@ Ground energy as function of
 \end_inset
 
  case.
- The solid lines plot the exact numerical results by the method of Ref.
+ The solid lines plot the exact numerical results by the method of ref.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -4538,8 +4549,7 @@ The plots of
 \begin_inset Formula $i=L/M$
 \end_inset
 
- are shown in Fig.
- 
+ are shown in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:SubEvsMxi0"
@@ -4766,7 +4776,7 @@ The fact that, in the case of odd
 \begin_inset Formula $K$
 \end_inset
 
- is irrelevant for interaction
+ is irrelevant for interaction 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Giles:1977mpa"
@@ -4817,8 +4827,7 @@ We next consider the effect of
 \end_inset
 
  behavior.
- Fig.
- 
+ Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:SubEvsMs2"
@@ -4921,8 +4930,7 @@ We next study the dependence of
 \end_inset
 
 .
- Fig.
- 
+ Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:EvS"
@@ -5150,7 +5158,7 @@ Based on our further numerical computation, when
 status open
 
 \begin_layout Plain Layout
-Actually, as far as the regime 
+As far as the regime 
 \begin_inset Formula $1\leq s\leq10$
 \end_inset
 
@@ -5493,7 +5501,8 @@ H_{S}=H_{1}+H_{2}+H_{3}+H_{4}+H_{5}+s\xi\Delta H,
 \begin_inset Formula $H_{i}$
 \end_inset
 
- are terms introduced by 
+ are terms introduced by refs.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2014hia,Thorn:2015wli"
@@ -5726,7 +5735,8 @@ H^{\prime}=\frac{1}{N}\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\left(\tr\bar{\p
 \begin_inset Formula $s=1$
 \end_inset
 
- case has been given in 
+ case has been given in ref.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Chen:2016hkz"
@@ -6463,7 +6473,7 @@ f_{0}=F_{0},\quad f_{1}=F_{1}^{\left(2\right)},\quad f_{2}=e^{-i\pi/4}\left(\sqr
 \begin_inset Formula $2$
 \end_inset
 
--bit chains are in Table 
+-bit chains are in table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Energy-eigenstates-1"
@@ -6861,7 +6871,7 @@ For
 \end_inset
 
  case.
- But as Table 
+ But as table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Energy-eigenstates-2"
