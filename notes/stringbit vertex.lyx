@@ -1039,7 +1039,7 @@ HT\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right)\ke
 
 \end_inset
 
-Note that in Eqs.
+Note that in eqs.
  
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -1083,7 +1083,7 @@ While
 \end_inset
 
  is defined as follows.
- It follows from Eq.
+ It follows from eq.
  
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -1856,7 +1856,7 @@ where
 \begin_inset Formula $1\leq m\leq M-1$
 \end_inset
 
- in Eqs.
+ in eqs.
  
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -2043,7 +2043,7 @@ reference "eq:overlap_matrix_symmetry"
 
 \end_inset
 
- can be directly verified by Eqs.
+ can be directly verified by eqs.
  
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -2060,7 +2060,7 @@ reference "eq:overlap_S_mM1"
 
 .
  The last equality can be shown by applying the second and third ones to
- Eq.
+ eq.
  
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -2129,7 +2129,7 @@ U=\begin{pmatrix}u_{1}^{\left(K\right)}\\
 \end_inset
 
  dimension.
- The first and second equalities of Eq.
+ The first and second equalities of eq.
  
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -2137,7 +2137,7 @@ reference "eq:overlap_matrix_symmetry2"
 
 \end_inset
 
- can be verified directly by Eqs.
+ can be verified directly by eqs.
  
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -2153,7 +2153,7 @@ reference "eq:overlap_S_mM1"
 \end_inset
 
 .
- The last equality can be shown by applying first two to Eq.
+ The last equality can be shown by applying first two to eq.
  
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -3693,7 +3693,7 @@ reference "eq:olp_deltaE0"
 \end_inset
 
  indicates sum over states without zero modes.
- From Eqs.
+ From eqs.
  
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -3799,7 +3799,7 @@ Ground Energy Correction
 
 \begin_layout Standard
 In principle, we can now calculate one-loop self energy for any single trace
- energy state with Eq.
+ energy state with eq.
  
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -3852,7 +3852,7 @@ We need to calculate the vacuum expectation value
 \begin_inset Formula $F^{\dagger}$
 \end_inset
 
- as Eq.
+ as eq.
  
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -3886,7 +3886,7 @@ The action of
 \begin_inset Formula $A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}$
 \end_inset
 
- term of RHS can be calculated using Eq.
+ term of RHS can be calculated using eq.
  
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -5934,7 +5934,7 @@ we have
 
 \end_inset
 
-Applying Eqs.
+Applying eqs.
  
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -6044,7 +6044,7 @@ X_{n}=i\left[\exp\left(2\pi i\frac{ln}{M}\right)-\exp\left(2\pi i\frac{kn}{M}\ri
 
 \end_inset
 
- Now from Eq.
+ Now from eq.
  
 \begin_inset CommandInset ref
 LatexCommand eqref
