@@ -885,10 +885,10 @@ key "Chen:2016hkz,Sun:2014dga"
 
  terms
 \begin_inset Formula 
-\begin{eqnarray}
-\Delta H^{s=1} & = & \frac{2}{N}\tr\left[\bar{a}\bar{b}ba+\bar{b}\bar{a}ab+\bar{a}^{2}a^{2}+\bar{b}^{2}b^{2}-\tilde{M}^{s=1}\right],\\
-\tilde{M}^{s=1} & = & \tr\left(\bar{a}a+\bar{b}b\right)-\frac{1}{N}\left(\tr\bar{a}\tr a+\tr\bar{b}\tr b\right).
-\end{eqnarray}
+\begin{align}
+\Delta H^{s=1} & =\frac{2}{N}\tr\left[\bar{a}\bar{b}ba+\bar{b}\bar{a}ab+\bar{a}^{2}a^{2}+\bar{b}^{2}b^{2}-\tilde{M}^{s=1}\right],\\
+\tilde{M}^{s=1} & =\tr\left(\bar{a}a+\bar{b}b\right)-\frac{1}{N}\left(\tr\bar{a}\tr a+\tr\bar{b}\tr b\right).
+\end{align}
 
 \end_inset
 
@@ -906,10 +906,10 @@ By analogy with
 
  case as 
 \begin_inset Formula 
-\begin{eqnarray}
-\Delta H & = & \frac{2}{N}\left(\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\bar{\phi}_{b_{1}\cdots b_{k}}\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\phi_{b_{1}\cdots b_{k}}-\tilde{M}\right),\\
-\tilde{M} & = & \sum_{n=0}^{s}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}-\frac{1}{N}\sum_{n=0}^{s}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\tr\phi_{a_{1}\cdots a_{n}}.
-\end{eqnarray}
+\begin{align}
+\Delta H & =\frac{2}{N}\left(\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\bar{\phi}_{b_{1}\cdots b_{k}}\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\phi_{b_{1}\cdots b_{k}}-\tilde{M}\right),\\
+\tilde{M} & =\sum_{n=0}^{s}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}-\frac{1}{N}\sum_{n=0}^{s}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\tr\phi_{a_{1}\cdots a_{n}}.
+\end{align}
 
 \end_inset
 
@@ -1294,11 +1294,11 @@ key "Chen:2016hkz,Sun:2014dga"
 
 
 \begin_inset Formula 
-\begin{eqnarray}
-\alpha_{n} & = & \frac{1}{\sqrt{M}}\sum_{k=1}^{M}\theta_{k}e^{-2\pi ikn/M},\quad\beta_{n}=\frac{1}{\sqrt{M}}\sum_{k=1}^{M}\frac{d}{d\theta_{k}}e^{-2\pi ikn/M},\label{eq:dia_alpha_beta}\\
-\theta_{k} & = & \frac{1}{\sqrt{M}}\sum_{n=0}^{M-1}\alpha_{n}e^{2\pi ikn/M},\quad\frac{d}{d\theta_{k}}=\frac{1}{\sqrt{M}}\sum_{n=0}^{M-1}\beta_{n}e^{2\pi ikn/M},\label{eq:dia_theta_dtheta}\\
-n & = & 0,\dots M-1,\quad k=1,\dots M.\nonumber 
-\end{eqnarray}
+\begin{align}
+\alpha_{n} & =\frac{1}{\sqrt{M}}\sum_{k=1}^{M}\theta_{k}e^{-2\pi ikn/M},\quad\beta_{n}=\frac{1}{\sqrt{M}}\sum_{k=1}^{M}\frac{d}{d\theta_{k}}e^{-2\pi ikn/M},\label{eq:dia_alpha_beta}\\
+\theta_{k} & =\frac{1}{\sqrt{M}}\sum_{n=0}^{M-1}\alpha_{n}e^{2\pi ikn/M},\quad\frac{d}{d\theta_{k}}=\frac{1}{\sqrt{M}}\sum_{n=0}^{M-1}\beta_{n}e^{2\pi ikn/M},\label{eq:dia_theta_dtheta}\\
+n & =0,\dots M-1,\quad k=1,\dots M.\nonumber 
+\end{align}
 
 \end_inset
 
@@ -1774,12 +1774,12 @@ Let us only consider the
 -bit chains.
  Define a set of operators 
 \begin_inset Formula 
-\begin{eqnarray}
-f_{0} & = & F_{0}=F_{0}^{\left(1\right)}\sqrt{\frac{L}{M}}+F_{0}^{\left(2\right)}\sqrt{\frac{K}{M}},\label{eq:overlap_f0}\\
-f_{n} & = & F_{n}^{\left(1\right)},\quad1\leq n\leq L-1,\\
-f_{n+L} & = & F_{n}^{\left(2\right)},\quad1\leq n\leq K-1,\\
-f_{M-1} & = & e^{-i\pi/4}\left(F_{0}^{\left(1\right)}\sqrt{\frac{K}{M}}-F_{0}^{\left(2\right)}\sqrt{\frac{L}{M}}\right),\label{eq:overlap_fm1}
-\end{eqnarray}
+\begin{align}
+f_{0} & =F_{0}=F_{0}^{\left(1\right)}\sqrt{\frac{L}{M}}+F_{0}^{\left(2\right)}\sqrt{\frac{K}{M}},\label{eq:overlap_f0}\\
+f_{n} & =F_{n}^{\left(1\right)},\quad1\leq n\leq L-1,\\
+f_{n+L} & =F_{n}^{\left(2\right)},\quad1\leq n\leq K-1,\\
+f_{M-1} & =e^{-i\pi/4}\left(F_{0}^{\left(1\right)}\sqrt{\frac{K}{M}}-F_{0}^{\left(2\right)}\sqrt{\frac{L}{M}}\right),\label{eq:overlap_fm1}
+\end{align}
 
 \end_inset
 
@@ -2498,12 +2498,12 @@ reference "eq:conj_normalization"
 
 , 
 \begin_inset Formula 
-\begin{eqnarray*}
-\int d^{M}\theta\,\bar{\psi}_{G}\psi_{G} & = & \left(-i\right)^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\,\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\left(c_{i}-s_{i}\alpha_{M-i}\alpha_{i}\right)\\
- & = & \left(-i\right)^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\,\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(s_{i}^{2}+c_{i}^{2}\right)\alpha_{M-i}\alpha_{i}\\
- & = & \left(-i\right)^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\,\prod_{i=1}^{M}\alpha_{M-i}\\
- & = & 1,
-\end{eqnarray*}
+\begin{align*}
+\int d^{M}\theta\,\bar{\psi}_{G}\psi_{G} & =\left(-i\right)^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\,\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\left(c_{i}-s_{i}\alpha_{M-i}\alpha_{i}\right)\\
+ & =\left(-i\right)^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\,\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(s_{i}^{2}+c_{i}^{2}\right)\alpha_{M-i}\alpha_{i}\\
+ & =\left(-i\right)^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\,\prod_{i=1}^{M}\alpha_{M-i}\\
+ & =1,
+\end{align*}
 
 \end_inset
 
@@ -2705,11 +2705,11 @@ reference "eq:dia_general_eigenfunction"
 
  is normalized:
 \begin_inset Formula 
-\begin{eqnarray*}
-\int d^{M}\theta\,\bar{\psi}\psi & = & \int d^{M}\theta\,\prod_{k=1}^{M}\left(\tilde{F}_{M-k}\right)^{\lambda_{M-k}}\bar{\psi}_{G}\prod_{l=0}^{M-1}\left(F_{l}^{\dagger}\right)^{\lambda_{l}}\psi_{G}\\
- & = & \int d^{M}\theta\,\bar{\psi}_{G}\prod_{k=1}^{M}\left(F_{M-k}\right)^{\lambda_{M-k}}\prod_{l=0}^{M-1}\left(F_{k}^{\dagger}\right)^{\lambda_{k}}\psi_{G}\\
- & = & \int d^{M}\theta\,\bar{\psi}_{G}\psi_{G}
-\end{eqnarray*}
+\begin{align*}
+\int d^{M}\theta\,\bar{\psi}\psi & =\int d^{M}\theta\,\prod_{k=1}^{M}\left(\tilde{F}_{M-k}\right)^{\lambda_{M-k}}\bar{\psi}_{G}\prod_{l=0}^{M-1}\left(F_{l}^{\dagger}\right)^{\lambda_{l}}\psi_{G}\\
+ & =\int d^{M}\theta\,\bar{\psi}_{G}\prod_{k=1}^{M}\left(F_{M-k}\right)^{\lambda_{M-k}}\prod_{l=0}^{M-1}\left(F_{k}^{\dagger}\right)^{\lambda_{k}}\psi_{G}\\
+ & =\int d^{M}\theta\,\bar{\psi}_{G}\psi_{G}
+\end{align*}
 
 \end_inset
 
@@ -3418,10 +3418,10 @@ Note that
 
  as
 \begin_inset Formula 
-\begin{eqnarray}
-V_{qpr}^{\left(K,L\right)} & = & M\left|\det C\right|^{s/2}\prod_{a=1}^{s}\left\langle \mathbb{F}_{qp}^{a},\mathbb{F}_{r}^{a\dagger}\right\rangle _{V},\label{eq:cub_Vtsr}\\
-W_{rpq}^{\left(L,K\right)} & = & KL\left|\det C\right|^{s/2}\prod_{a=1}^{s}\left\langle \mathbb{F}_{qp}^{a},\mathbb{F}_{r}^{a\dagger}\right\rangle _{W}^{\dagger},\label{eq:cub_Wrst-1}
-\end{eqnarray}
+\begin{align}
+V_{qpr}^{\left(K,L\right)} & =M\left|\det C\right|^{s/2}\prod_{a=1}^{s}\left\langle \mathbb{F}_{qp}^{a},\mathbb{F}_{r}^{a\dagger}\right\rangle _{V},\label{eq:cub_Vtsr}\\
+W_{rpq}^{\left(L,K\right)} & =KL\left|\det C\right|^{s/2}\prod_{a=1}^{s}\left\langle \mathbb{F}_{qp}^{a},\mathbb{F}_{r}^{a\dagger}\right\rangle _{W}^{\dagger},\label{eq:cub_Wrst-1}
+\end{align}
 
 \end_inset
 
@@ -3436,10 +3436,10 @@ W_{rpq}^{\left(L,K\right)} & = & KL\left|\det C\right|^{s/2}\prod_{a=1}^{s}\left
 -th spin index.
  For convenience, we have introduced the notations 
 \begin_inset Formula 
-\begin{eqnarray}
-\mathbb{F}_{qp}^{a} & \equiv & \mathbb{F}_{q}^{a}\mathbb{F}_{p}^{a},\\
-\left\langle \mathbb{F}_{1}^{a},\mathbb{F}_{2}^{a\dagger}\right\rangle _{V,W} & \equiv & \left\langle \mathbb{F}_{1}^{a}h^{\left(V,W;a\right)}\mathbb{F}_{2}^{a\dagger}\exp\left(\frac{1}{2}f_{k}^{a\dagger}D_{kl}f_{l}^{a\dagger}\right)\right\rangle ,\label{eq:cub_F1F1_vev}
-\end{eqnarray}
+\begin{align}
+\mathbb{F}_{qp}^{a} & \equiv\mathbb{F}_{q}^{a}\mathbb{F}_{p}^{a},\\
+\left\langle \mathbb{F}_{1}^{a},\mathbb{F}_{2}^{a\dagger}\right\rangle _{V,W} & \equiv\left\langle \mathbb{F}_{1}^{a}h^{\left(V,W;a\right)}\mathbb{F}_{2}^{a\dagger}\exp\left(\frac{1}{2}f_{k}^{a\dagger}D_{kl}f_{l}^{a\dagger}\right)\right\rangle ,\label{eq:cub_F1F1_vev}
+\end{align}
 
 \end_inset
 
@@ -5851,12 +5851,12 @@ First, we express
 
  It then follows 
 \begin_inset Formula 
-\begin{eqnarray*}
-\theta_{k}\frac{d}{d\theta_{k}} & = & \frac{1}{M}\sum_{n,m=0}^{M-1}\alpha_{n}\beta_{m}\exp\left(2\pi ik\frac{m+n}{M}\right)\\
-\theta_{k}\frac{d}{d\theta_{l}}+\theta_{l}\frac{d}{d\theta_{k}} & = & \frac{1}{M}\sum_{n,m=0}^{M-1}\left(\alpha_{n}\beta_{m}+\alpha_{m}\beta_{n}\right)\left[\exp\left(2\pi i\frac{kn+lm}{M}\right)\right]\\
-\theta_{k}\theta_{l} & = & \frac{1}{M}\sum_{n,m=0}^{M-1}\alpha_{n}\alpha_{m}\exp\left(2\pi i\frac{kn+lm}{M}\right)\\
-\frac{d}{d\theta_{k}}\frac{d}{d\theta_{l}} & = & \frac{1}{M}\sum_{n,m=0}^{M-1}\beta_{n}\beta_{m}\exp\left(2\pi i\frac{kn+lm}{M}\right).
-\end{eqnarray*}
+\begin{align*}
+\theta_{k}\frac{d}{d\theta_{k}} & =\frac{1}{M}\sum_{n,m=0}^{M-1}\alpha_{n}\beta_{m}\exp\left(2\pi ik\frac{m+n}{M}\right)\\
+\theta_{k}\frac{d}{d\theta_{l}}+\theta_{l}\frac{d}{d\theta_{k}} & =\frac{1}{M}\sum_{n,m=0}^{M-1}\left(\alpha_{n}\beta_{m}+\alpha_{m}\beta_{n}\right)\left[\exp\left(2\pi i\frac{kn+lm}{M}\right)\right]\\
+\theta_{k}\theta_{l} & =\frac{1}{M}\sum_{n,m=0}^{M-1}\alpha_{n}\alpha_{m}\exp\left(2\pi i\frac{kn+lm}{M}\right)\\
+\frac{d}{d\theta_{k}}\frac{d}{d\theta_{l}} & =\frac{1}{M}\sum_{n,m=0}^{M-1}\beta_{n}\beta_{m}\exp\left(2\pi i\frac{kn+lm}{M}\right).
+\end{align*}
 
 \end_inset
 
@@ -6029,10 +6029,10 @@ Similarly, applying
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{eqnarray*}
-h_{kl}^{\left(0\right)} & = & \frac{2}{M}\sum_{n=1}^{M-1}\left(\alpha_{n}\beta_{0}+\alpha_{0}\beta_{n}-i\alpha_{n}\alpha_{0}-i\beta_{n}\beta_{0}\right)\left[\exp\left(2\pi i\frac{kn}{M}\right)-\exp\left(2\pi i\frac{ln}{M}\right)\right]\\
- & = & \frac{2}{M}\sum_{n=1}^{M-1}X_{n}^{\dagger}\left(F_{0}^{\dagger}F_{n}^{\dagger}-F_{n}^{\dagger}F_{0}\right)+\mathrm{h.c.},
-\end{eqnarray*}
+\begin{align*}
+h_{kl}^{\left(0\right)} & =\frac{2}{M}\sum_{n=1}^{M-1}\left(\alpha_{n}\beta_{0}+\alpha_{0}\beta_{n}-i\alpha_{n}\alpha_{0}-i\beta_{n}\beta_{0}\right)\left[\exp\left(2\pi i\frac{kn}{M}\right)-\exp\left(2\pi i\frac{ln}{M}\right)\right]\\
+ & =\frac{2}{M}\sum_{n=1}^{M-1}X_{n}^{\dagger}\left(F_{0}^{\dagger}F_{n}^{\dagger}-F_{n}^{\dagger}F_{0}\right)+\mathrm{h.c.},
+\end{align*}
 
 \end_inset
 
@@ -6054,13 +6054,13 @@ reference "eq:App_hkl_Anm"
 
 , we see that 
 \begin_inset Formula 
-\begin{eqnarray*}
-A_{n0} & = & -\exp\left(2\pi ik\frac{n}{M}\right)\sin\frac{n\pi}{2M}-\exp\left(2\pi i\frac{\left(k+l\right)n}{2M}\right)\sin\frac{\left(l-k-1/2\right)n\pi}{M}\\
- & = & -\exp\left(2\pi ik\frac{n}{M}\right)\sin\frac{n\pi}{2M}-\frac{1}{2i}\exp\left(2\pi i\frac{\left(l-1/2\right)n}{M}\right)+\frac{1}{2i}\exp\left(2\pi i\frac{\left(k+1/2\right)n}{M}\right)\\
- & = & \exp\left(2\pi ik\frac{n}{M}\right)\left(-\sin\frac{n\pi}{2M}+\frac{1}{2i}\exp\left(\frac{in\pi}{2M}\right)\right)-\frac{1}{2i}\exp\left(2\pi i\frac{ln}{M}\right)\exp\left(-\frac{in\pi}{2M}\right)\\
- & = & -\frac{i}{2}\exp\left(2\pi ik\frac{n}{M}\right)\exp\left(-\frac{in\pi}{2M}\right)+\frac{i}{2}\exp\left(2\pi i\frac{ln}{M}\right)\exp\left(-\frac{in\pi}{2M}\right)\\
- & = & \frac{1}{2}X_{n}.
-\end{eqnarray*}
+\begin{align*}
+A_{n0} & =-\exp\left(2\pi ik\frac{n}{M}\right)\sin\frac{n\pi}{2M}-\exp\left(2\pi i\frac{\left(k+l\right)n}{2M}\right)\sin\frac{\left(l-k-1/2\right)n\pi}{M}\\
+ & =-\exp\left(2\pi ik\frac{n}{M}\right)\sin\frac{n\pi}{2M}-\frac{1}{2i}\exp\left(2\pi i\frac{\left(l-1/2\right)n}{M}\right)+\frac{1}{2i}\exp\left(2\pi i\frac{\left(k+1/2\right)n}{M}\right)\\
+ & =\exp\left(2\pi ik\frac{n}{M}\right)\left(-\sin\frac{n\pi}{2M}+\frac{1}{2i}\exp\left(\frac{in\pi}{2M}\right)\right)-\frac{1}{2i}\exp\left(2\pi i\frac{ln}{M}\right)\exp\left(-\frac{in\pi}{2M}\right)\\
+ & =-\frac{i}{2}\exp\left(2\pi ik\frac{n}{M}\right)\exp\left(-\frac{in\pi}{2M}\right)+\frac{i}{2}\exp\left(2\pi i\frac{ln}{M}\right)\exp\left(-\frac{in\pi}{2M}\right)\\
+ & =\frac{1}{2}X_{n}.
+\end{align*}
 
 \end_inset
 
@@ -6246,15 +6246,15 @@ and in the last step the property that
  is antisymmetric.
  We then have 
 \begin_inset Formula 
-\begin{eqnarray*}
-\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger},F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\right] & = & F_{n}^{\dagger}\bar{A}_{nm}\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger},F_{m}^{\dagger}\right]+\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger},F_{n}^{\dagger}\right]\bar{A}_{nm}F_{m}^{\dagger}\\
- & = & -F_{n}^{\dagger}\bar{A}_{nm}S_{ml}^{*}D_{lk}f_{k}^{\dagger}-S_{nl}^{*}D_{lk}f_{k}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\\
- & = & \bar{A}_{nm}S_{ml}^{*}D_{lk}\left(f_{k}^{\dagger}F_{n}^{\dagger}-\left\{ F_{n}^{\dagger},f_{k}^{\dagger}\right\} \right)-S_{nl}^{*}D_{lk}f_{k}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\\
- & = & \bar{A}_{nm}S_{ml}^{*}D_{lk}\left(f_{k}^{\dagger}F_{n}^{\dagger}-S_{nk}^{*}\right)-S_{nl}^{*}D_{lk}f_{k}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\\
- & = & \bar{A}_{nm}S_{ml}^{*}D_{lk}f_{k}^{\dagger}F_{n}^{\dagger}-S_{nl}^{*}D_{lk}f_{k}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}-\bar{A}_{nm}S_{ml}^{*}D_{lk}S_{nk}^{*}\\
- & = & f_{k}^{\dagger}D_{kl}\left(S^{\dagger}\right)_{lm}\bar{A}_{mn}F_{n}^{\dagger}+f_{k}^{\dagger}D_{kl}\left(S^{\dagger}\right)_{ln}\bar{A}_{nm}F_{m}^{\dagger}-\bar{A}_{nm}S_{ml}^{*}D_{lk}\left(S^{\dagger}\right)_{kn}\\
- & = & 2f_{k}^{\dagger}\left(DS^{\dagger}\bar{A}\right)_{km}F_{m}^{\dagger}-\tr\left(\bar{A}S^{*}DS^{\dagger}\right).
-\end{eqnarray*}
+\begin{align*}
+\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger},F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\right] & =F_{n}^{\dagger}\bar{A}_{nm}\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger},F_{m}^{\dagger}\right]+\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger},F_{n}^{\dagger}\right]\bar{A}_{nm}F_{m}^{\dagger}\\
+ & =-F_{n}^{\dagger}\bar{A}_{nm}S_{ml}^{*}D_{lk}f_{k}^{\dagger}-S_{nl}^{*}D_{lk}f_{k}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\\
+ & =\bar{A}_{nm}S_{ml}^{*}D_{lk}\left(f_{k}^{\dagger}F_{n}^{\dagger}-\left\{ F_{n}^{\dagger},f_{k}^{\dagger}\right\} \right)-S_{nl}^{*}D_{lk}f_{k}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\\
+ & =\bar{A}_{nm}S_{ml}^{*}D_{lk}\left(f_{k}^{\dagger}F_{n}^{\dagger}-S_{nk}^{*}\right)-S_{nl}^{*}D_{lk}f_{k}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\\
+ & =\bar{A}_{nm}S_{ml}^{*}D_{lk}f_{k}^{\dagger}F_{n}^{\dagger}-S_{nl}^{*}D_{lk}f_{k}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}-\bar{A}_{nm}S_{ml}^{*}D_{lk}S_{nk}^{*}\\
+ & =f_{k}^{\dagger}D_{kl}\left(S^{\dagger}\right)_{lm}\bar{A}_{mn}F_{n}^{\dagger}+f_{k}^{\dagger}D_{kl}\left(S^{\dagger}\right)_{ln}\bar{A}_{nm}F_{m}^{\dagger}-\bar{A}_{nm}S_{ml}^{*}D_{lk}\left(S^{\dagger}\right)_{kn}\\
+ & =2f_{k}^{\dagger}\left(DS^{\dagger}\bar{A}\right)_{km}F_{m}^{\dagger}-\tr\left(\bar{A}S^{*}DS^{\dagger}\right).
+\end{align*}
 
 \end_inset
 
@@ -6268,11 +6268,11 @@ and in the last step the property that
 
  For the third term
 \begin_inset Formula 
-\begin{eqnarray*}
-\left[X,\left[X,\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\right]\right] & = & \left[X,2f_{k}^{\dagger}\left(DS^{\dagger}\bar{A}\right)_{km}F_{m}^{\dagger}\right]-\zero{\left[X,\tr\left(\bar{A}S^{*}DS^{\dagger}\right)\right]}\\
- & = & 2f_{i}^{\dagger}\left(DS^{\dagger}\bar{A}\right)_{im}\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger},F_{m}^{\dagger}\right]\\
- & = & -2f_{k}^{\dagger}\left(DS^{\dagger}\bar{A}S^{*}D\right)_{kl}f_{l}^{\dagger}.
-\end{eqnarray*}
+\begin{align*}
+\left[X,\left[X,\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\right]\right] & =\left[X,2f_{k}^{\dagger}\left(DS^{\dagger}\bar{A}\right)_{km}F_{m}^{\dagger}\right]-\zero{\left[X,\tr\left(\bar{A}S^{*}DS^{\dagger}\right)\right]}\\
+ & =2f_{i}^{\dagger}\left(DS^{\dagger}\bar{A}\right)_{im}\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger},F_{m}^{\dagger}\right]\\
+ & =-2f_{k}^{\dagger}\left(DS^{\dagger}\bar{A}S^{*}D\right)_{kl}f_{l}^{\dagger}.
+\end{align*}
 
 \end_inset
 
@@ -6280,18 +6280,18 @@ and in the last step the property that
  We therefore have
 \begin_inset Formula 
 \begin{align*}
-F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\ket{G}= & \exp\left(X\right)\left(\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}-\left[X,\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\right]+\frac{1}{2}\left[X,\left[X,\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\right]\right]\right)\ket{0}\\
-= & \left[f_{k}^{\dagger}\left(C^{\dagger}\bar{A}C^{*}\right)_{kl}f_{l}^{\dagger}+\tr\left(\bar{A}C^{*}S^{\dagger}\right)\right]\ket{G}\\
- & -\left[2f_{k}^{\dagger}\left(DS^{\dagger}\bar{A}C^{*}\right)_{kl}f_{l}^{\dagger}-\tr\left(\bar{A}S^{*}DS^{\dagger}\right)\right]\ket{G}\\
- & -f_{k}^{\dagger}\left(DS^{\dagger}\bar{A}S^{*}D\right)_{kl}f_{l}^{\dagger}\ket{G}\\
-= & \tr\left[\bar{A}\left(C^{*}+S^{*}D\right)S^{\dagger}\right]\ket{G}\\
- & +f_{k}^{\dagger}\left(C^{\dagger}\bar{A}C^{*}-2DS^{\dagger}\bar{A}C^{*}-DS^{\dagger}\bar{A}S^{*}D\right)_{kl}f_{l}^{\dagger}\ket{G}\\
-= & \tr\left[\bar{A}\left(C^{*}+S^{*}D\right)S^{\dagger}\right]\ket{G}\\
- & +f_{k}^{\dagger}\left(C^{\dagger}\bar{A}C^{*}-DS^{\dagger}\bar{A}C^{*}+C^{\dagger}\bar{A}S^{*}D-DS^{\dagger}\bar{A}S^{*}D\right)_{kl}f_{l}^{\dagger}\ket{G}\\
-= & \tr\left[\bar{A}\left(C^{*}+S^{*}D\right)S^{\dagger}\right]\ket{G}\\
- & +f_{k}^{\dagger}\left[C^{\dagger}\bar{A}\left(C^{*}+S^{*}D\right)-DS^{\dagger}\bar{A}\left(S^{*}D+C^{*}\right)\right]_{kl}f_{l}^{\dagger}\ket{G}\\
-= & \tr\left[\bar{A}\left(C^{*}+S^{*}D\right)S^{\dagger}\right]\ket{G}\\
- & +f_{k}^{\dagger}\left[\left(C^{*}+S^{*}D\right)^{T}\bar{A}\left(C^{*}+S^{*}D\right)\right]_{kl}f_{l}^{\dagger}\ket{G}.
+F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\ket{G} & =\exp\left(X\right)\left(\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}-\left[X,\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\right]+\frac{1}{2}\left[X,\left[X,\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\right]\right]\right)\ket{0}\\
+ & =\left[f_{k}^{\dagger}\left(C^{\dagger}\bar{A}C^{*}\right)_{kl}f_{l}^{\dagger}+\tr\left(\bar{A}C^{*}S^{\dagger}\right)\right]\ket{G}\\
+ & =-\left[2f_{k}^{\dagger}\left(DS^{\dagger}\bar{A}C^{*}\right)_{kl}f_{l}^{\dagger}-\tr\left(\bar{A}S^{*}DS^{\dagger}\right)\right]\ket{G}\\
+ & \hspace{1em}-f_{k}^{\dagger}\left(DS^{\dagger}\bar{A}S^{*}D\right)_{kl}f_{l}^{\dagger}\ket{G}\\
+ & =\tr\left[\bar{A}\left(C^{*}+S^{*}D\right)S^{\dagger}\right]\ket{G}\\
+ & \hspace{1em}+f_{k}^{\dagger}\left(C^{\dagger}\bar{A}C^{*}-2DS^{\dagger}\bar{A}C^{*}-DS^{\dagger}\bar{A}S^{*}D\right)_{kl}f_{l}^{\dagger}\ket{G}\\
+ & =\tr\left[\bar{A}\left(C^{*}+S^{*}D\right)S^{\dagger}\right]\ket{G}\\
+ & \hspace{1em}+f_{k}^{\dagger}\left(C^{\dagger}\bar{A}C^{*}-DS^{\dagger}\bar{A}C^{*}+C^{\dagger}\bar{A}S^{*}D-DS^{\dagger}\bar{A}S^{*}D\right)_{kl}f_{l}^{\dagger}\ket{G}\\
+ & =\tr\left[\bar{A}\left(C^{*}+S^{*}D\right)S^{\dagger}\right]\ket{G}\\
+ & \hspace{1em}+f_{k}^{\dagger}\left[C^{\dagger}\bar{A}\left(C^{*}+S^{*}D\right)-DS^{\dagger}\bar{A}\left(S^{*}D+C^{*}\right)\right]_{kl}f_{l}^{\dagger}\ket{G}\\
+ & =\tr\left[\bar{A}\left(C^{*}+S^{*}D\right)S^{\dagger}\right]\ket{G}\\
+ & \hspace{1em}+f_{k}^{\dagger}\left[\left(C^{*}+S^{*}D\right)^{T}\bar{A}\left(C^{*}+S^{*}D\right)\right]_{kl}f_{l}^{\dagger}\ket{G}.
 \end{align*}
 
 \end_inset
