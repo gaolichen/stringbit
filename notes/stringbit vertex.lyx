@@ -786,9 +786,24 @@ H=\sum_{i=1}^{5}H_{i},\label{eq:ham_H_2}
 \end_inset
 
  where
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\backslash
+label{eq:ham_subh}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{equation}
-H_{1}=\frac{2}{N}\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{s-2n}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}},\label{eq:ham_H1}
+H_{1}=\frac{2}{N}\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{s-2n}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}},\label{eq:ham_subh:1}
 \end{equation}
 
 \end_inset
@@ -796,7 +811,7 @@ H_{1}=\frac{2}{N}\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{s-2n}{n!k!}\tr\bar{\phi}_{a_{
 
 \begin_inset Formula 
 \begin{equation}
-H_{2}=\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{bb_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{ba_{1}\cdots a_{n}},
+H_{2}=\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{bb_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{ba_{1}\cdots a_{n}},\label{eq:ham_subh:2}
 \end{equation}
 
 \end_inset
@@ -804,7 +819,7 @@ H_{2}=\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!
 
 \begin_inset Formula 
 \begin{equation}
-H_{3}=\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{ba_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{bb_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}},
+H_{3}=\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{ba_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{bb_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}},\label{eq:ham_subh:3}
 \end{equation}
 
 \end_inset
@@ -812,7 +827,7 @@ H_{3}=\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!
 
 \begin_inset Formula 
 \begin{equation}
-H_{4}=\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{bb_{1}\cdots b_{k}}\phi_{ba_{1}\cdots a_{n}},
+H_{4}=\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{bb_{1}\cdots b_{k}}\phi_{ba_{1}\cdots a_{n}},\label{eq:ham_subh:4}
 \end{equation}
 
 \end_inset
@@ -820,8 +835,21 @@ H_{4}=\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k
 
 \begin_inset Formula 
 \begin{equation}
-H_{5}=-\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{ba_{1}\cdots a_{n}}\bar{\phi}_{bb_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}}.
+H_{5}=-\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{ba_{1}\cdots a_{n}}\bar{\phi}_{bb_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}}.\label{eq:ham_subh:5}
 \end{equation}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
 
 \end_inset
 
@@ -829,6 +857,7 @@ One can check that for
 \begin_inset Formula $s=1$
 \end_inset
 
+ eq.
  
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -836,7 +865,8 @@ reference "eq:ham_H_2"
 
 \end_inset
 
- is reduced to 
+ is reduced to eq.
+ 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:ham_Hs_1"
@@ -1288,7 +1318,7 @@ reference "eq:ham_h_kl"
 \end_layout
 
 \begin_layout Standard
-We introduce Fourier transformations 
+We introduce Fourier transforms 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Chen:2016hkz,Sun:2014dga"
@@ -1296,12 +1326,40 @@ key "Chen:2016hkz,Sun:2014dga"
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\backslash
+label{dia_fourier}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{align}
-\alpha_{n} & =\frac{1}{\sqrt{M}}\sum_{k=1}^{M}\theta_{k}e^{-2\pi ikn/M},\quad\beta_{n}=\frac{1}{\sqrt{M}}\sum_{k=1}^{M}\frac{d}{d\theta_{k}}e^{-2\pi ikn/M},\label{eq:dia_alpha_beta}\\
-\theta_{k} & =\frac{1}{\sqrt{M}}\sum_{n=0}^{M-1}\alpha_{n}e^{2\pi ikn/M},\quad\frac{d}{d\theta_{k}}=\frac{1}{\sqrt{M}}\sum_{n=0}^{M-1}\beta_{n}e^{2\pi ikn/M},\label{eq:dia_theta_dtheta}\\
+\alpha_{n} & =\frac{1}{\sqrt{M}}\sum_{k=1}^{M}\theta_{k}e^{-2\pi ikn/M},\quad\beta_{n}=\frac{1}{\sqrt{M}}\sum_{k=1}^{M}\frac{d}{d\theta_{k}}e^{-2\pi ikn/M},\label{eq:dia_fourier:1}\\
+\theta_{k} & =\frac{1}{\sqrt{M}}\sum_{n=0}^{M-1}\alpha_{n}e^{2\pi ikn/M},\quad\frac{d}{d\theta_{k}}=\frac{1}{\sqrt{M}}\sum_{n=0}^{M-1}\beta_{n}e^{2\pi ikn/M},\label{eq:dia_fourier:2}\\
 n & =0,\dots M-1,\quad k=1,\dots M.\nonumber 
 \end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
 
 \end_inset
 
@@ -1777,14 +1835,42 @@ Let us only consider the
 \end_inset
 
 -bit chains.
- Define a set of operators 
+ Define a set of operators
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\backslash
+label{overlap_f}
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Formula 
 \begin{align}
-f_{0} & =F_{0}=F_{0}^{\left(1\right)}\sqrt{\frac{L}{M}}+F_{0}^{\left(2\right)}\sqrt{\frac{K}{M}},\label{eq:overlap_f0}\\
-f_{n} & =F_{n}^{\left(1\right)},\quad1\leq n\leq L-1,\\
-f_{n+L} & =F_{n}^{\left(2\right)},\quad1\leq n\leq K-1,\\
-f_{M-1} & =e^{-i\pi/4}\left(F_{0}^{\left(1\right)}\sqrt{\frac{K}{M}}-F_{0}^{\left(2\right)}\sqrt{\frac{L}{M}}\right),\label{eq:overlap_fm1}
+f_{0} & =F_{0}=F_{0}^{\left(1\right)}\sqrt{\frac{L}{M}}+F_{0}^{\left(2\right)}\sqrt{\frac{K}{M}},\label{eq:overlap_f:1}\\
+f_{n} & =F_{n}^{\left(1\right)},\quad1\leq n\leq L-1,\label{eq:overlap_f:2}\\
+f_{n+L} & =F_{n}^{\left(2\right)},\quad1\leq n\leq K-1,\label{eq:overlap_f:3}\\
+f_{M-1} & =e^{-i\pi/4}\left(F_{0}^{\left(1\right)}\sqrt{\frac{K}{M}}-F_{0}^{\left(2\right)}\sqrt{\frac{L}{M}}\right),\label{eq:overlap_f:4}
 \end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
 
 \end_inset
 
@@ -1845,15 +1931,43 @@ C_{0n}=C_{n0}=\delta_{0,n},\quad S_{0,n}=S_{n,0}=0,\quad0\leq n<M
 \end_inset
 
  and
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\backslash
+label{eq:overlap_CS}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \begin{align}
-C_{mn} & =-\frac{1}{\sqrt{ML}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi i\left(n/L-m/M\right)}}\cos\left(\frac{n\pi}{2L}-\frac{m\pi}{2M}\right),\quad1\leq n<L\label{eq:overlap_C_mn1}\\
-C_{m,L+n-1} & =\frac{1}{\sqrt{MK}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi i\left(n/K-m/M\right)}}\cos\left(\frac{n\pi}{2K}-\frac{m\pi}{2M}\right),\quad1\leq n<K\\
-C_{m,M-1} & =-\frac{1}{\sqrt{LK}}\frac{1-e^{-2\pi imL/M}}{1-e^{2i\pi m/M}}\cos\left(\frac{m\pi}{2M}-\frac{\pi}{4}\right),\\
-S_{mn} & =-\frac{1}{\sqrt{ML}}\frac{1-e^{-2\pi imL/M}}{1-e^{2\pi i\left(n/L+m/M\right)}}\cos\left(\frac{n\pi}{2L}+\frac{m\pi}{2M}\right),\quad1\leq n<L\\
-S_{m,L+n-1} & =\frac{1}{\sqrt{MK}}\frac{1-e^{-2\pi imL/M}}{1-e^{2\pi i\left(n/K+m/M\right)}}\cos\left(\frac{n\pi}{2K}+\frac{m\pi}{2M}\right),\quad1\leq n<K\\
-S_{m,M-1} & =-\frac{1}{\sqrt{LK}}\frac{1-e^{-2\pi imL/M}}{1-e^{2\pi im/M}}\cos\left(\frac{m\pi}{2M}+\frac{\pi}{4}\right),\label{eq:overlap_S_mM1}
+C_{mn} & =-\frac{1}{\sqrt{ML}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi i\left(n/L-m/M\right)}}\cos\left(\frac{n\pi}{2L}-\frac{m\pi}{2M}\right),\quad1\leq n<L\label{eq:overlap_CS:1}\\
+C_{m,L+n-1} & =\frac{1}{\sqrt{MK}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi i\left(n/K-m/M\right)}}\cos\left(\frac{n\pi}{2K}-\frac{m\pi}{2M}\right),\quad1\leq n<K\label{eq:overlap_CS:2}\\
+C_{m,M-1} & =-\frac{1}{\sqrt{LK}}\frac{1-e^{-2\pi imL/M}}{1-e^{2i\pi m/M}}\cos\left(\frac{m\pi}{2M}-\frac{\pi}{4}\right),\label{eq:overlap_CS:3}\\
+S_{mn} & =-\frac{1}{\sqrt{ML}}\frac{1-e^{-2\pi imL/M}}{1-e^{2\pi i\left(n/L+m/M\right)}}\cos\left(\frac{n\pi}{2L}+\frac{m\pi}{2M}\right),\quad1\leq n<L\label{eq:overlap_CS:4}\\
+S_{m,L+n-1} & =\frac{1}{\sqrt{MK}}\frac{1-e^{-2\pi imL/M}}{1-e^{2\pi i\left(n/K+m/M\right)}}\cos\left(\frac{n\pi}{2K}+\frac{m\pi}{2M}\right),\quad1\leq n<K\label{eq:overlap_CS:5}\\
+S_{m,M-1} & =-\frac{1}{\sqrt{LK}}\frac{1-e^{-2\pi imL/M}}{1-e^{2\pi im/M}}\cos\left(\frac{m\pi}{2M}+\frac{\pi}{4}\right),\label{eq:overlap_CS:6}
 \end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
 
 \end_inset
 
@@ -1865,19 +1979,11 @@ where
  
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:overlap_C_mn1"
-
-\end_inset
-
--
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:overlap_S_mM1"
+reference "eq:overlap_CS"
 
 \end_inset
 
 .
- 
 \end_layout
 
 \begin_layout Standard
@@ -2052,14 +2158,14 @@ reference "eq:overlap_matrix_symmetry"
  
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:overlap_C_mn1"
+reference "eq:overlap_CS:1"
 
 \end_inset
 
 -
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:overlap_S_mM1"
+reference "eq:overlap_CS:6"
 
 \end_inset
 
@@ -2146,14 +2252,14 @@ reference "eq:overlap_matrix_symmetry2"
  
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:overlap_C_mn1"
+reference "eq:overlap_CS:1"
 
 \end_inset
 
 -
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:overlap_S_mM1"
+reference "eq:overlap_CS:6"
 
 \end_inset
 
@@ -3706,14 +3812,14 @@ reference "eq:olp_deltaE0"
  
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:overlap_f0"
+reference "eq:overlap_f:1"
 
 \end_inset
 
  and 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:overlap_fm1"
+reference "eq:overlap_f:4"
 
 \end_inset
 
@@ -5201,7 +5307,7 @@ As far as the regime
  part shown as 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:ham_H1"
+reference "eq:ham_subh:1"
 
 \end_inset
 
@@ -5787,8 +5893,7 @@ G_{\alpha}^{\beta}\ket{\text{any color singlet}}=0.
 \begin_inset Formula $H^{\prime}$
 \end_inset
 
- lead to the same action on any color singlets.
-  
+ lead to the same action on any color singlet.
 \end_layout
 
 \begin_layout Section
@@ -5920,10 +6025,25 @@ We then express
 
 \end_inset
 
-we have 
+we have
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\backslash
+label{eq:App_hkl_ab}
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Formula 
 \begin{equation}
-\alpha_{n}\alpha_{m}=c_{n}c_{m}F_{M-n}^{\dagger}F_{M-m}^{\dagger}+s_{n}s_{m}F_{n}F_{m}+c_{n}s_{m}F_{M-n}^{\dagger}F_{m}-c_{m}s_{n}F_{M-m}^{\dagger}F_{n}+c_{n}s_{n}\delta_{m+n,M},\label{eq:App_hkl_aa}
+\alpha_{n}\alpha_{m}=c_{n}c_{m}F_{M-n}^{\dagger}F_{M-m}^{\dagger}+s_{n}s_{m}F_{n}F_{m}+c_{n}s_{m}F_{M-n}^{\dagger}F_{m}-c_{m}s_{n}F_{M-m}^{\dagger}F_{n}+c_{n}s_{n}\delta_{m+n,M},\label{eq:App_hkl_ab:1}
 \end{equation}
 
 \end_inset
@@ -5931,7 +6051,7 @@ we have
 
 \begin_inset Formula 
 \begin{equation}
-\alpha_{n}\beta_{m}=-c_{n}s_{m}F_{M-n}^{\dagger}F_{M-m}^{\dagger}+c_{m}s_{n}F_{n}F_{m}+c_{n}c_{m}F_{M-n}^{\dagger}F_{m}+s_{n}s_{m}F_{M-m}^{\dagger}F_{n}+s_{n}^{2}\delta_{m+n,M},\label{eq:App_hkl_ab}
+\alpha_{n}\beta_{m}=-c_{n}s_{m}F_{M-n}^{\dagger}F_{M-m}^{\dagger}+c_{m}s_{n}F_{n}F_{m}+c_{n}c_{m}F_{M-n}^{\dagger}F_{m}+s_{n}s_{m}F_{M-m}^{\dagger}F_{n}+s_{n}^{2}\delta_{m+n,M},\label{eq:App_hkl_ab:2}
 \end{equation}
 
 \end_inset
@@ -5939,8 +6059,21 @@ we have
 
 \begin_inset Formula 
 \begin{equation}
-\beta_{n}\beta_{m}=s_{n}s_{m}F_{M-n}^{\dagger}F_{M-m}^{\dagger}+c_{n}c_{m}F_{n}F_{m}-c_{m}s_{n}F_{M-n}^{\dagger}F_{m}+c_{n}s_{m}F_{M-m}^{\dagger}F_{n}+c_{n}s_{n}\delta_{m+n,M}.\label{eq:App_hkl_bb}
+\beta_{n}\beta_{m}=s_{n}s_{m}F_{M-n}^{\dagger}F_{M-m}^{\dagger}+c_{n}c_{m}F_{n}F_{m}-c_{m}s_{n}F_{M-n}^{\dagger}F_{m}+c_{n}s_{m}F_{M-m}^{\dagger}F_{n}+c_{n}s_{n}\delta_{m+n,M}.\label{eq:App_hkl_ab:3}
 \end{equation}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
 
 \end_inset
 
@@ -5948,21 +6081,7 @@ Applying eqs.
  
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:App_hkl_aa"
-
-\end_inset
-
-, 
-\begin_inset CommandInset ref
-LatexCommand eqref
 reference "eq:App_hkl_ab"
-
-\end_inset
-
-, and 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:App_hkl_bb"
 
 \end_inset
 
