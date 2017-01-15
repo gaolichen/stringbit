@@ -127,7 +127,7 @@ status open
 
 \backslash
 abstract{We provide a formalism to calculate the cubic interaction vertices
- of stable string bit models, in which string bits have $s$ spin degrees
+ of the stable string bit model, in which string bits have $s$ spin degrees
  of freedom but no space to move.
  With the vertices, we obtain a formula for one-loop self energy, i.e., the
  $
@@ -166,8 +166,8 @@ leq4$ cases.}
 \end_layout
 
 \begin_layout Title
-Cubic Interaction Vertices and One-loop Self Energy in Stable String Bit
- Model
+Cubic Interaction Vertices and One-loop Self Energy of the Stable String
+ Bit Model
 \end_layout
 
 \begin_layout Standard
@@ -209,7 +209,7 @@ key "Thorn:1991fv"
 \end_layout
 
 \begin_layout Standard
-The string bit models provide implementations of 't Hooft's idea of holography
+The string bit model is an implementation of 't Hooft's idea of holography
 \begin_inset CommandInset citation
 LatexCommand cite
 key "'tHooft:1987,'tHooft:1990eb,'tHooft:1993gx"
@@ -239,7 +239,7 @@ key "'tHooft:1987,'tHooft:1990eb,'tHooft:1993gx"
 \end_inset
 
 .
- In string bit models, the 
+ In string bit model, the 
 \begin_inset Formula $x^{-}$
 \end_inset
 
