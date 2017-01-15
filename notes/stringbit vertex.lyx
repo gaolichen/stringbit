@@ -5235,7 +5235,11 @@ name "fig:EvS"
 \end_inset
 
  cases.
- Note that in (a) the 
+ Note that for 
+\begin_inset Formula $M=6$
+\end_inset
+
+ the 
 \begin_inset Formula $\xi=0$
 \end_inset
 
