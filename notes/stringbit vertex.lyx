@@ -3578,7 +3578,7 @@ reference "sec:App_h_kl"
  gives 
 \begin_inset Formula 
 \begin{eqnarray}
-h_{kl} & = & \frac{2}{M}\sum_{n,m=0}^{M-1}\left(A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}+A_{nm}F_{n}F_{m}+2A_{-n,m}F_{n}^{\dagger}F_{m}\right)+\frac{2}{M}\gamma,\label{eq:cub_h_kl}
+h_{kl} & = & \frac{2}{M}\sum_{n,m=0}^{M-1}\left(A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}+A_{nm}F_{n}F_{m}+2A_{-n,m}F_{n}^{\dagger}F_{m}\right)+\frac{2}{M}\mu,\label{eq:cub_h_kl}
 \end{eqnarray}
 
 \end_inset
@@ -3594,7 +3594,7 @@ A_{nm}=\exp\left(2\pi ik\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi+\exp\left(2\pi
 
 \begin_inset Formula 
 \[
-\gamma=-\cot\frac{\pi}{2M}+\cot\frac{2\left(k-l\right)+1}{2M}\pi+M\xi.
+\mu=-\cot\frac{\pi}{2M}+\cot\frac{2\left(k-l\right)+1}{2M}\pi+M\xi.
 \]
 
 \end_inset
@@ -3614,7 +3614,7 @@ A_{nm}^{\left(V\right)}=\sin\frac{m-n}{2M}\pi+\exp\left(2\pi i\frac{\left(L+1\ri
 
 \begin_inset Formula 
 \begin{equation}
-\gamma^{\left(V\right)}=-\cot\frac{\pi}{2M}-\cot\frac{2L+1}{2M}\pi+M\xi,\label{eq:cub_gammaV}
+\mu^{\left(V\right)}=-\cot\frac{\pi}{2M}-\cot\frac{2L+1}{2M}\pi+M\xi,\label{eq:cub_gammaV}
 \end{equation}
 
 \end_inset
@@ -3634,7 +3634,7 @@ A_{nm}^{\left(W\right)}=\left[1+\exp\left(\pi i\frac{n+m}{M}\right)\right]\left[
 
 \begin_inset Formula 
 \begin{equation}
-\gamma^{\left(W\right)}=-4\cot\frac{\pi}{2M}+2M\xi.\label{eq:cub_gammaW}
+\mu^{\left(W\right)}=-4\cot\frac{\pi}{2M}+2M\xi.\label{eq:cub_gammaW}
 \end{equation}
 
 \end_inset
@@ -3978,7 +3978,7 @@ reference "eq:cub_h_kl"
  It then implies 
 \begin_inset Formula 
 \[
-\left\langle \cdots h\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle =\frac{2}{M}\left\langle \cdots\left(A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}+\gamma\right)\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle .
+\left\langle \cdots h\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle =\frac{2}{M}\left\langle \cdots\left(A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}+\mu\right)\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle .
 \]
 
 \end_inset
@@ -3998,7 +3998,7 @@ reference "eq:App_AFF_1"
 , from which it follows
 \begin_inset Formula 
 \begin{multline}
-\left\langle \cdots h\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle =\frac{2}{M}\left[\gamma-\tr\left(S^{*}C^{-1}A^{\dagger}\right)\right]\left\langle \cdots\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+\left\langle \cdots h\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle =\frac{2}{M}\left[\mu-\tr\left(S^{*}C^{-1}A^{\dagger}\right)\right]\left\langle \cdots\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \\
 +\frac{2}{M}\left[C^{-1}A^{\dagger}\left(C^{-1}\right)^{T}\right]_{mn}\left\langle \cdots f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle .\label{eq:olp_hexp}
 \end{multline}
 
@@ -4007,8 +4007,8 @@ reference "eq:App_AFF_1"
 So we have 
 \begin_inset Formula 
 \begin{multline}
-\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}\right\rangle _{V}=\frac{2}{M}\gamma^{\prime\left(V\right)}\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \\
-+\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle ,\label{eq:olp_vev_v}
+\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}\right\rangle _{V}=\frac{2}{M}\mu^{\prime\left(V\right)}\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \\
++\frac{2}{M}B_{mn}^{\left(V\right)}\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle ,\label{eq:olp_vev_v}
 \end{multline}
 
 \end_inset
@@ -4016,7 +4016,7 @@ So we have
  where 
 \begin_inset Formula 
 \[
-\gamma^{\prime\left(V\right)}=\gamma^{\left(V\right)}-\tr\left(S^{*}C^{-1}A^{\left(V\right)\dagger}\right),\quad\Omega^{\left(V\right)}=C^{-1}A^{\left(V\right)\dagger}\left(C^{-1}\right)^{T},
+\mu^{\prime\left(V\right)}=\mu^{\left(V\right)}-\tr\left(S^{*}C^{-1}A^{\left(V\right)\dagger}\right),\quad B^{\left(V\right)}=C^{-1}A^{\left(V\right)\dagger}\left(C^{-1}\right)^{T},
 \]
 
 \end_inset
@@ -6199,7 +6199,7 @@ reference "eq:App_hkl1"
  Finally, adding back the constant terms, we have 
 \begin_inset Formula 
 \[
-h_{kl}=\frac{2}{M}\sum_{n,m=0}^{M-1}\left(A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}+A_{nm}F_{n}F_{m}+2A_{-n,m}F_{n}^{\dagger}F_{m}\right)+\frac{2}{M}\gamma
+h_{kl}=\frac{2}{M}\sum_{n,m=0}^{M-1}\left(A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}+A_{nm}F_{n}F_{m}+2A_{-n,m}F_{n}^{\dagger}F_{m}\right)+\frac{2}{M}\mu
 \]
 
 \end_inset
@@ -6207,7 +6207,7 @@ h_{kl}=\frac{2}{M}\sum_{n,m=0}^{M-1}\left(A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{
  where 
 \begin_inset Formula 
 \[
-\gamma=-\cot\frac{\pi}{2M}+\cot\frac{2\left(k-l\right)+1}{2M}\pi+M\xi.
+\mu=-\cot\frac{\pi}{2M}+\cot\frac{2\left(k-l\right)+1}{2M}\pi+M\xi.
 \]
 
 \end_inset
@@ -6538,15 +6538,15 @@ A^{\left(V\right)} & = & \begin{pmatrix}0 & i\frac{\sqrt{3}}{2} & \frac{\sqrt{3}
 -\frac{i\sqrt{3}}{2} & 0 & 0\\
 -\frac{\sqrt{3}}{2} & 0 & 0
 \end{pmatrix}\\
-\Omega^{\left(V\right)} & = & \begin{pmatrix}0 & \sqrt{\frac{3}{2}}e^{3i\pi/4} & \sqrt{\frac{3}{2}}\left(2-\sqrt{3}\right)e^{3i\pi/4}\\
+B^{\left(V\right)} & = & \begin{pmatrix}0 & \sqrt{\frac{3}{2}}e^{3i\pi/4} & \sqrt{\frac{3}{2}}\left(2-\sqrt{3}\right)e^{3i\pi/4}\\
 \sqrt{\frac{3}{2}}e^{-i\pi/4} & 0 & 6i\left(2-\sqrt{3}\right)\\
 \sqrt{\frac{3}{2}}\left(2-\sqrt{3}\right)e^{-i\pi/4} & -6i\left(2-\sqrt{3}\right) & 0
 \end{pmatrix},\\
-\Omega^{\left(W\right)} & = & \begin{pmatrix}0 & \sqrt{\frac{3}{2}}e^{3i\pi/4} & \sqrt{\frac{3}{2}}\left(2-\sqrt{3}\right)e^{3i\pi/4}\\
+B^{\left(W\right)} & = & \begin{pmatrix}0 & \sqrt{\frac{3}{2}}e^{3i\pi/4} & \sqrt{\frac{3}{2}}\left(2-\sqrt{3}\right)e^{3i\pi/4}\\
 \sqrt{\frac{3}{2}}e^{-i\pi/4} & 0 & 0\\
 \sqrt{\frac{3}{2}}\left(2-\sqrt{3}\right)e^{-i\pi/4} & 0 & 0
 \end{pmatrix},\\
-\gamma^{\prime\left(V\right)} & = & -2\left(3-\sqrt{3}\right)+3\xi,\quad\gamma^{\prime\left(W\right)}=-4\sqrt{3}+6\xi.
+\mu^{\prime\left(V\right)} & = & -2\left(3-\sqrt{3}\right)+3\xi,\quad\mu^{\prime\left(W\right)}=-4\sqrt{3}+6\xi.
 \end{eqnarray*}
 
 \end_inset
@@ -6826,9 +6826,9 @@ So we need to calculate
 : 
 \begin_inset Formula 
 \begin{align*}
-\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V} & =\frac{2}{M}\gamma^{\prime\left(V\right)}\zero{\left\langle f_{1}f_{0}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle }+\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle f_{1}f_{0}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \\
- & =\frac{4}{M}\Omega_{0n}^{\left(V\right)}\left\langle f_{1}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \\
- & =\frac{4}{M}\Omega_{01}^{\left(V\right)}=2\sqrt{\frac{2}{3}}e^{3i\pi/4},
+\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V} & =\frac{2}{M}\mu^{\prime\left(V\right)}\zero{\left\langle f_{1}f_{0}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle }+\frac{2}{M}B_{mn}^{\left(V\right)}\left\langle f_{1}f_{0}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+ & =\frac{4}{M}B_{0n}^{\left(V\right)}\left\langle f_{1}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+ & =\frac{4}{M}B_{01}^{\left(V\right)}=2\sqrt{\frac{2}{3}}e^{3i\pi/4},
 \end{align*}
 
 \end_inset
@@ -6836,8 +6836,8 @@ So we need to calculate
 
 \begin_inset Formula 
 \begin{align*}
-\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{V} & =\frac{2}{M}\gamma^{\prime\left(V\right)}\left\langle f_{1}f_{2}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle f_{1}f_{2}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \\
- & =-\frac{2}{M}\gamma^{\prime\left(V\right)}D_{12}-\frac{4}{M}\Omega_{12}^{\left(V\right)}=-4i\left(1-\frac{1}{\sqrt{3}}+\xi-\frac{\sqrt{3}}{2}\xi\right).
+\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{V} & =\frac{2}{M}\mu^{\prime\left(V\right)}\left\langle f_{1}f_{2}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}B_{mn}^{\left(V\right)}\left\langle f_{1}f_{2}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+ & =-\frac{2}{M}\mu^{\prime\left(V\right)}D_{12}-\frac{4}{M}B_{12}^{\left(V\right)}=-4i\left(1-\frac{1}{\sqrt{3}}+\xi-\frac{\sqrt{3}}{2}\xi\right).
 \end{align*}
 
 \end_inset
@@ -6845,8 +6845,8 @@ So we need to calculate
  Likewise
 \begin_inset Formula 
 \begin{align*}
-\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W} & =\frac{4}{M}\Omega_{01}^{\left(W\right)}=2\sqrt{\frac{2}{3}}e^{3i\pi/4},\\
-\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{W} & =-\frac{2}{M}\gamma^{\prime\left(W\right)}D_{12}-\frac{4}{M}\Omega_{12}^{\left(W\right)}=-8i\left(1-\frac{2}{\sqrt{3}}+\xi-\frac{\sqrt{3}}{2}\xi\right).
+\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W} & =\frac{4}{M}B_{01}^{\left(W\right)}=2\sqrt{\frac{2}{3}}e^{3i\pi/4},\\
+\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{W} & =-\frac{2}{M}\mu^{\prime\left(W\right)}D_{12}-\frac{4}{M}B_{12}^{\left(W\right)}=-8i\left(1-\frac{2}{\sqrt{3}}+\xi-\frac{\sqrt{3}}{2}\xi\right).
 \end{align*}
 
 \end_inset
@@ -6923,7 +6923,7 @@ A^{\left(V\right)}=0,\quad A^{\left(W\right)}=\begin{pmatrix}0 & \frac{1}{2}\lef
 
 \begin_inset Formula 
 \[
-\Omega^{\left(V\right)}=0,\quad\Omega^{\left(W\right)}=\left(\begin{array}{ccc}
+B^{\left(V\right)}=0,\quad B^{\left(W\right)}=\left(\begin{array}{ccc}
 0 & \sqrt{\frac{3}{2}}e^{3i\pi/4} & \left(\sqrt{6}-\frac{3}{\sqrt{2}}\right)e^{-i\pi/4}\\
 \sqrt{\frac{3}{2}}e^{-i\pi/4} & 0 & 0\\
 \left(\sqrt{6}-\frac{3}{\sqrt{2}}\right)e^{3i\pi/4} & 0 & 0
@@ -6935,7 +6935,7 @@ A^{\left(V\right)}=0,\quad A^{\left(W\right)}=\begin{pmatrix}0 & \frac{1}{2}\lef
 
 \begin_inset Formula 
 \[
-\gamma^{\prime\left(V\right)}=3\xi,\quad\gamma^{\prime\left(W\right)}=-4\sqrt{3}+6\xi.
+\mu^{\prime\left(V\right)}=3\xi,\quad\mu^{\prime\left(W\right)}=-4\sqrt{3}+6\xi.
 \]
 
 \end_inset
@@ -7303,8 +7303,8 @@ For
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-\left\langle 1\right\rangle _{V} & =\frac{2}{M}\gamma^{\prime\left(V\right)}\left\langle \exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}^{\left(V\right)}\zero{\left\langle f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle }\\
- & =\frac{2}{M}\gamma^{\prime\left(V\right)}=\frac{4}{\sqrt{3}}-4+2\xi,
+\left\langle 1\right\rangle _{V} & =\frac{2}{M}\mu^{\prime\left(V\right)}\left\langle \exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}B_{mn}^{\left(V\right)}\zero{\left\langle f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle }\\
+ & =\frac{2}{M}\mu^{\prime\left(V\right)}=\frac{4}{\sqrt{3}}-4+2\xi,
 \end{align*}
 
 \end_inset
@@ -7312,8 +7312,8 @@ For
 
 \begin_inset Formula 
 \begin{align*}
-\left\langle f_{2}f_{0}\right\rangle _{V} & =\frac{2}{M}\gamma^{\prime\left(V\right)}\zero{\left\langle f_{2}f_{0}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle }+\frac{2}{M}\Omega_{mn}^{\left(V\right)}\left\langle f_{2}f_{0}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \\
- & =\frac{4}{M}\Omega_{02}^{\left(V\right)}=2\sqrt{2}\left(\frac{2}{\sqrt{3}}-1\right)e^{3i\pi/4},
+\left\langle f_{2}f_{0}\right\rangle _{V} & =\frac{2}{M}\mu^{\prime\left(V\right)}\zero{\left\langle f_{2}f_{0}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle }+\frac{2}{M}B_{mn}^{\left(V\right)}\left\langle f_{2}f_{0}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+ & =\frac{4}{M}B_{02}^{\left(V\right)}=2\sqrt{2}\left(\frac{2}{\sqrt{3}}-1\right)e^{3i\pi/4},
 \end{align*}
 
 \end_inset
@@ -7321,7 +7321,7 @@ For
  Likewise
 \begin_inset Formula 
 \[
-\left\langle 1\right\rangle _{W}=\frac{2}{M}\gamma^{\prime\left(W\right)}=-\frac{8}{\sqrt{3}}+4\xi,\quad\left\langle f_{2}f_{0}\right\rangle _{W}=\frac{4}{M}\Omega_{02}^{\left(W\right)}=2\sqrt{2}\left(\frac{2}{\sqrt{3}}-1\right)e^{3i\pi/4}.
+\left\langle 1\right\rangle _{W}=\frac{2}{M}\gamma^{\prime\left(W\right)}=-\frac{8}{\sqrt{3}}+4\xi,\quad\left\langle f_{2}f_{0}\right\rangle _{W}=\frac{4}{M}B_{02}^{\left(W\right)}=2\sqrt{2}\left(\frac{2}{\sqrt{3}}-1\right)e^{3i\pi/4}.
 \]
 
 \end_inset
