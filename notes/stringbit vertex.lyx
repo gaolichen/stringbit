@@ -5947,7 +5947,14 @@ We now will temporary drop the last two constant terms and add them back
 \end_layout
 
 \begin_layout Standard
-First, we express 
+Using 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:dia_fourier:2"
+
+\end_inset
+
+, we express 
 \begin_inset Formula $\theta_{k}$
 \end_inset
 
@@ -5963,15 +5970,7 @@ First, we express
 \begin_inset Formula $\beta_{n}$
 \end_inset
 
-: 
-\begin_inset Formula 
-\[
-\theta_{k}=\frac{1}{\sqrt{M}}\sum_{n=0}^{M-1}\alpha_{n}e^{2\pi ikn/M},\quad\frac{d}{d\theta_{k}}=\frac{1}{\sqrt{M}}\sum_{n=0}^{M-1}\beta_{n}e^{2\pi ikn/M}.
-\]
-
-\end_inset
-
- It then follows 
+:
 \begin_inset Formula 
 \begin{align*}
 \theta_{k}\frac{d}{d\theta_{k}} & =\frac{1}{M}\sum_{n,m=0}^{M-1}\alpha_{n}\beta_{m}\exp\left(2\pi ik\frac{m+n}{M}\right)\\
@@ -6096,7 +6095,7 @@ reference "eq:App_hkl_ab"
 \begin_inset Formula $h_{kl}^{\left(1\right)}$
 \end_inset
 
-, then comining like terms and antisymmetrize 
+, then combining like terms and antisymmetrize 
 \begin_inset Formula $F^{\dagger}F^{\dagger}$
 \end_inset
 
