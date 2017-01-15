@@ -346,11 +346,10 @@ key "Bergman:1995wh"
 
 , and they satisfy the graded bracket relations 
 \begin_inset Formula 
-\begin{multline}
-\left[\phi_{a_{1}\cdots a_{n}}\left(\mathbf{x}\right)_{\alpha}^{\beta},\bar{\phi}_{b_{1}\cdots b_{m}}\left(\mathbf{y}\right)_{\gamma}^{\delta}\right]_{\pm}\\
-\equiv\phi_{a_{1}\cdots a_{n}}\left(\mathbf{x}\right)_{\alpha}^{\beta}\bar{\phi}_{b_{1}\cdots b_{m}}\left(\mathbf{y}\right)_{\gamma}^{\delta}-\left(-\right)^{mn}\bar{\phi}_{b_{1}\cdots b_{m}}\left(\mathbf{y}\right)_{\gamma}^{\delta}\phi_{a_{1}\cdots a_{n}}\left(\mathbf{x}\right)_{\alpha}^{\beta}\\
-=\delta_{mn}\delta_{\alpha}^{\delta}\delta_{\gamma}^{\beta}\delta\left(\mathbf{x}-\mathbf{y}\right)\sum_{P}\left(-\right)^{P}\delta_{a_{1}b_{P_{1}}}\cdots\delta_{a_{n}b_{P_{n}}}.\label{eq:intro-phi-phib-relation}
-\end{multline}
+\begin{align}
+\left[\phi_{a_{1}\cdots a_{n}}\left(\mathbf{x}\right)_{\alpha}^{\beta},\bar{\phi}_{b_{1}\cdots b_{m}}\left(\mathbf{y}\right)_{\gamma}^{\delta}\right]_{\pm} & \equiv\phi_{a_{1}\cdots a_{n}}\left(\mathbf{x}\right)_{\alpha}^{\beta}\bar{\phi}_{b_{1}\cdots b_{m}}\left(\mathbf{y}\right)_{\gamma}^{\delta}-\left(-\right)^{mn}\bar{\phi}_{b_{1}\cdots b_{m}}\left(\mathbf{y}\right)_{\gamma}^{\delta}\phi_{a_{1}\cdots a_{n}}\left(\mathbf{x}\right)_{\alpha}^{\beta}\nonumber \\
+ & =\delta_{mn}\delta_{\alpha}^{\delta}\delta_{\gamma}^{\beta}\delta\left(\mathbf{x}-\mathbf{y}\right)\sum_{P}\left(-\right)^{P}\delta_{a_{1}b_{P_{1}}}\cdots\delta_{a_{n}b_{P_{n}}}.\label{eq:intro-phi-phib-relation}
+\end{align}
 
 \end_inset
 
@@ -1415,12 +1414,11 @@ The Hermiticity of Hamiltonian implies that
 \begin_inset Formula $\beta_{n}$
 \end_inset
 
- 
+ as 
 \begin_inset Formula 
-\begin{multline}
-h=2\sum_{n=1}^{M-1}\Big[\left(\alpha_{n}\alpha_{M-n}+\beta_{n}\beta_{M-n}\right)\sin\frac{2n\pi}{M}+\\
-+2\left(1-\cos\frac{2n\pi}{M}\right)\left(\alpha_{n}\beta_{M-n}+\alpha_{M-n}\beta_{n}\right)\Big]-2M.\label{eq:dia_h_ab}
-\end{multline}
+\begin{equation}
+h=2\sum_{n=1}^{M-1}\left[\left(\alpha_{n}\alpha_{M-n}+\beta_{n}\beta_{M-n}\right)\sin\frac{2n\pi}{M}+2\left(1-\cos\frac{2n\pi}{M}\right)\left(\alpha_{n}\beta_{M-n}+\alpha_{M-n}\beta_{n}\right)\right]-2M,\label{eq:dia_h_ab}
+\end{equation}
 
 \end_inset
 
@@ -1518,7 +1516,15 @@ The phase factors are chosen so that the expression of
 \begin_inset Formula $h_{kl}$
 \end_inset
 
- in terms of eigenoperators will have a simple form.
+ in terms of eigenoperators will have a simple form, see eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:cub_h_kl"
+
+\end_inset
+
+.
  A direct calculation shows that the eigenoperators satisfy the following
  anticommutation relations
 \begin_inset Formula 
@@ -1592,9 +1598,9 @@ Acting
 
  on the ground eigenfunction, we obtain the ground energy
 \begin_inset Formula 
-\[
-E_{G}=-4\sum_{k=1}^{M-1}\sin\frac{k\pi}{M}=-4\cot\frac{\pi}{2M}=-\frac{8M}{\pi}+\frac{2\pi}{3M}+\mathcal{O}\left(M^{-3}\right).
-\]
+\begin{equation}
+E_{G}=-4\sum_{k=1}^{M-1}\sin\frac{k\pi}{M}=-4\cot\frac{\pi}{2M}=-\frac{8M}{\pi}+\frac{2\pi}{3M}+\mathcal{O}\left(M^{-3}\right).\label{eq:diag_ground_energy}
+\end{equation}
 
 \end_inset
 
@@ -2417,14 +2423,13 @@ key "Thorn:2015wli"
 
  is 
 \begin_inset Formula 
-\begin{multline}
-\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\,\lambda f\left(\theta\right)\tilde{\delta}\left(\theta-\eta\right)=\\
-\left(-\right)^{sM\g\left(\lambda\right)}\lambda\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, f\left(\theta\right)\tilde{\delta}\left(\theta-\eta\right)=\left(-\right)^{sM\g\left(\lambda\right)}\lambda f\left(\eta\right),\label{eq:conj_delta_sign_fatctor}
-\end{multline}
+\[
+\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\,\lambda f\left(\theta\right)\tilde{\delta}\left(\theta-\eta\right)=\left(-\right)^{sM\g\left(\lambda\right)}\lambda\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, f\left(\theta\right)\tilde{\delta}\left(\theta-\eta\right)=\left(-\right)^{sM\g\left(\lambda\right)}\lambda f\left(\eta\right)
+\]
 
 \end_inset
 
- where the sign factor comes from the exchange of the measure and 
+ where the sign factor comes from the commutation of the measure and 
 \begin_inset Formula $\lambda$
 \end_inset
 
@@ -2645,8 +2650,8 @@ Note that in the remainder of this paper, all the products defined by the
 \begin_inset Quotes ers
 \end_inset
 
- symbol are ordered by the index that the products run over, as the first
- equality of 
+ symbol are ordered by the index that the products run over, as eq.
+ 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:conj_alpha_prod"
@@ -3247,7 +3252,7 @@ Likewise,
 \begin_inset Formula $l\to l+1$
 \end_inset
 
- so that we simply change the summations to 
+ so we simply change the summations to 
 \begin_inset Formula $K\times L$
 \end_inset
 
@@ -3433,17 +3438,16 @@ reference "eq:overlap_psi_M1"
  and arrive at 
 \begin_inset Formula 
 \[
-V_{qpr}^{\left(K,L\right)}=\left(-\right)^{K\left(g_{p}-L\right)}M\left|\det C\right|^{\frac{1}{2}}\left\langle \mathbb{F}_{q}\mathbb{F}_{p}h^{\left(V\right)}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle ,
+V_{qpr}^{\left(K,L\right)}=\left(-\right)^{K\left(g_{p}-L\right)}M\left|\det C\right|^{\frac{1}{2}}\left\langle \mathbb{F}_{q}\mathbb{F}_{p}h^{\left(V\right)}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle ,
 \]
 
 \end_inset
 
- where
+ where 
 \begin_inset Formula 
-\begin{multline}
-\left\langle \mathbb{F}_{q}\mathbb{F}_{p}h^{\left(V\right)}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \\
-\equiv\int d\theta\,\bar{\psi}_{G}^{\left(K\right)}\bar{\psi}_{G}^{\left(L\right)}\mathbb{F}_{q}\mathbb{F}_{p}h^{\left(V\right)}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\psi_{G}^{\left(L\right)}\psi_{G}^{\left(K\right)}.\label{eq:cub_vev}
-\end{multline}
+\begin{equation}
+\left\langle \mathbb{F}_{q}\mathbb{F}_{p}h^{\left(V\right)}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \equiv\int d\theta\,\bar{\psi}_{G}^{\left(K\right)}\bar{\psi}_{G}^{\left(L\right)}\mathbb{F}_{q}\mathbb{F}_{p}h^{\left(V\right)}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\psi_{G}^{\left(L\right)}\psi_{G}^{\left(K\right)}.\label{eq:cub_vev}
+\end{equation}
 
 \end_inset
 
@@ -3472,10 +3476,10 @@ reference "eq:cub_vev"
 
  and find 
 \begin_inset Formula 
-\begin{multline*}
-W_{rpq}^{\left(L,K\right)}=\left(-\right)^{K\left(g_{p}-L\right)}KL\left|\det C\right|^{\frac{1}{2}}\left\langle \exp\left(\frac{1}{2}\sum_{kl}f_{k}D_{kl}^{\dagger}f_{l}\right)\mathbb{F}_{r}h^{\left(W\right)}\mathbb{F}_{p}^{\dagger}\mathbb{F}_{q}^{\dagger}\right\rangle \\
-=\left(-\right)^{K\left(g_{p}-L\right)}KL\left|\det C\right|^{\frac{1}{2}}\left\langle \mathbb{F}_{q}\mathbb{F}_{p}h^{\left(W\right)}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle ^{\dagger}.
-\end{multline*}
+\begin{align*}
+W_{rpq}^{\left(L,K\right)} & =\left(-\right)^{K\left(g_{p}-L\right)}KL\left|\det C\right|^{\frac{1}{2}}\left\langle \exp\left(\frac{1}{2}f_{k}D_{kl}^{\dagger}f_{l}\right)\mathbb{F}_{r}h^{\left(W\right)}\mathbb{F}_{p}^{\dagger}\mathbb{F}_{q}^{\dagger}\right\rangle \\
+ & =\left(-\right)^{K\left(g_{p}-L\right)}KL\left|\det C\right|^{\frac{1}{2}}\left\langle \mathbb{F}_{q}\mathbb{F}_{p}h^{\left(W\right)}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle ^{\dagger}.
+\end{align*}
 
 \end_inset
 
@@ -3539,7 +3543,7 @@ W_{rpq}^{\left(L,K\right)} & =KL\left|\det C\right|^{s/2}\prod_{a=1}^{s}\left\la
 \begin_inset Formula 
 \begin{align}
 \mathbb{F}_{qp}^{a} & \equiv\mathbb{F}_{q}^{a}\mathbb{F}_{p}^{a},\\
-\left\langle \mathbb{F}_{1}^{a},\mathbb{F}_{2}^{a\dagger}\right\rangle _{V,W} & \equiv\left\langle \mathbb{F}_{1}^{a}h^{\left(V,W;a\right)}\mathbb{F}_{2}^{a\dagger}\exp\left(\frac{1}{2}f_{k}^{a\dagger}D_{kl}f_{l}^{a\dagger}\right)\right\rangle ,\label{eq:cub_F1F1_vev}
+\left\langle \mathbb{F}_{1}^{a},\mathbb{F}_{2}^{a\dagger}\right\rangle _{V,W} & \equiv\left\langle \mathbb{F}_{1}^{a}h^{\left(V,W;a\right)}\mathbb{F}_{2}^{a\dagger}\exp\left(\frac{1}{2}f_{k}^{a\dagger}D_{kl}f_{l}^{a\dagger}\right)\right\rangle ,\label{eq:cub_F1F2_vev}
 \end{align}
 
 \end_inset
@@ -3551,7 +3555,7 @@ If
  is empty, we will simply denote 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:cub_F1F1_vev"
+reference "eq:cub_F1F2_vev"
 
 \end_inset
 
@@ -3564,78 +3568,78 @@ reference "eq:cub_F1F1_vev"
 
 \begin_layout Standard
 To calculate the vacuum expectation values, we need to express 
-\begin_inset Formula $h_{kl}$
+\begin_inset Formula $h^{\left(V\right)}$
+\end_inset
+
+ and 
+\begin_inset Formula $h^{\left(W\right)}$
 \end_inset
 
  in terms of eigenoperators.
- The calculation in appendix 
+ From eqs.
+ 
 \begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:App_h_kl"
+LatexCommand eqref
+reference "eq:App_hkl_h"
 
 \end_inset
 
- gives 
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:App_hkl_Anm"
+
+\end_inset
+
+, and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:App_hkl_mu"
+
+\end_inset
+
+, we have 
 \begin_inset Formula 
 \begin{eqnarray}
-h_{kl} & = & \frac{2}{M}\sum_{n,m=0}^{M-1}\left(A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}+A_{nm}F_{n}F_{m}+2A_{-n,m}F_{n}^{\dagger}F_{m}\right)+\frac{2}{M}\mu,\label{eq:cub_h_kl}
+h^{\left(V,W\right)} & = & \frac{2}{M}\sum_{n,m=0}^{M-1}\left(A_{nm}^{\left(V,W\right)\dagger}F_{n}^{\dagger}F_{m}^{\dagger}+A_{nm}^{\left(V,W\right)}F_{n}F_{m}+2A_{-n,m}^{\left(V,W\right)}F_{n}^{\dagger}F_{m}\right)+\frac{2}{M}\mu^{\left(V,W\right)},\label{eq:cub_h_kl}
 \end{eqnarray}
 
 \end_inset
 
- where 
+ where
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Formula 
-\[
-A_{nm}=\exp\left(2\pi ik\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi+\exp\left(2\pi i\frac{\left(k+l\right)\left(m+n\right)}{2M}\right)\sin\frac{\left(l-k-1/2\right)\left(m-n\right)\pi}{M},
-\]
+\begin{align}
+A_{nm}^{\left(V\right)} & =\sin\frac{m-n}{2M}\pi+\exp\left(2\pi i\frac{\left(L+1\right)\left(m+n\right)}{2M}\right)\sin\frac{\left(L+1/2\right)\left(m-n\right)\pi}{M}\\
+\mu^{\left(V\right)} & =-\cot\frac{\pi}{2M}-\cot\frac{2L+1}{2M}\pi+M\xi,\\
+A_{nm}^{\left(W\right)} & =\left[1+\exp\left(\pi i\frac{n+m}{M}\right)\right]\left[1+\exp\left(2\pi iL\frac{m+n}{M}\right)\right]\sin\frac{m-n}{2M}\pi,\\
+\mu^{\left(W\right)} & =-4\cot\frac{\pi}{2M}+2M\xi.
+\end{align}
 
 \end_inset
 
 
-\begin_inset Formula 
-\[
-\mu=-\cot\frac{\pi}{2M}+\cot\frac{2\left(k-l\right)+1}{2M}\pi+M\xi.
-\]
+\begin_inset ERT
+status open
 
-\end_inset
-
-For 
-\begin_inset Formula $h^{\left(V\right)}=h_{M,L+1}$
-\end_inset
-
-, these coefficients become
-\begin_inset Formula 
-\begin{equation}
-A_{nm}^{\left(V\right)}=\sin\frac{m-n}{2M}\pi+\exp\left(2\pi i\frac{\left(L+1\right)\left(m+n\right)}{2M}\right)\sin\frac{\left(L+1/2\right)\left(m-n\right)\pi}{M},\label{eq:cub_AV}
-\end{equation}
-
-\end_inset
+\begin_layout Plain Layout
 
 
-\begin_inset Formula 
-\begin{equation}
-\mu^{\left(V\right)}=-\cot\frac{\pi}{2M}-\cot\frac{2L+1}{2M}\pi+M\xi,\label{eq:cub_gammaV}
-\end{equation}
-
-\end_inset
-
- and for 
-\begin_inset Formula $h^{\left(W\right)}=h_{L,L+1}+h_{M,1}$
-\end_inset
-
-,
-\begin_inset Formula 
-\begin{equation}
-A_{nm}^{\left(W\right)}=\left[1+\exp\left(\pi i\frac{n+m}{M}\right)\right]\left[1+\exp\left(2\pi iL\frac{m+n}{M}\right)\right]\sin\frac{m-n}{2M}\pi\label{eq:cub_Aw}
-\end{equation}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{equation}
-\mu^{\left(W\right)}=-4\cot\frac{\pi}{2M}+2M\xi.\label{eq:cub_gammaW}
-\end{equation}
+\backslash
+end{subequations}
+\end_layout
 
 \end_inset
 
@@ -3707,17 +3711,10 @@ key "Thorn:2015wli"
 
 
 \begin_inset Formula 
-\begin{equation}
-C_{pq}=\frac{1}{E_{r}-E_{p}-E_{q}}\frac{1}{N}V_{qpr}+\mathcal{O}\left(N^{-2}\right),
-\end{equation}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{equation}
-\Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}\sum_{M_{p}=L,M_{q}=K}W_{rpq}^{\left(L,K\right)}\frac{1}{E_{r}-E_{p}-E_{q}}V_{qpr}^{\left(K,L\right)},\label{eq:olp_deltaE0}
-\end{equation}
+\begin{align}
+C_{pq} & =\frac{1}{E_{r}-E_{p}-E_{q}}\frac{1}{N}V_{qpr}+\mathcal{O}\left(N^{-2}\right),\\
+\Delta E_{r} & =\frac{1}{N^{2}}\sum_{L=1}^{M-1}\sum_{M_{p}=L,M_{q}=K}W_{rpq}^{\left(L,K\right)}\frac{1}{E_{r}-E_{p}-E_{q}}V_{qpr}^{\left(K,L\right)},\label{eq:olp_deltaE0}
+\end{align}
 
 \end_inset
 
@@ -3856,9 +3853,9 @@ F_{0}^{\left(L\right)}=f_{0}\sqrt{\frac{L}{M}}+f_{M-1}\sqrt{\frac{K}{M}}e^{i\pi/
 
 , which leads to 
 \begin_inset Formula 
-\begin{equation}
-\Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{M_{q}=K,M_{p}=L}}^{\prime}\frac{KLM\left|\det C\right|}{E_{r}-E_{p}-E_{q}}\sum_{\lambda_{i}=0,1}\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}},\mathbb{F}_{r}\right\rangle _{V}.\label{eq:olp_DeltaE_s1}
-\end{equation}
+\[
+\Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{M_{q}=K,M_{p}=L}}^{\prime}\frac{KLM\left|\det C\right|}{E_{r}-E_{p}-E_{q}}\sum_{\lambda_{i}=0,1}\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}},\mathbb{F}_{r}\right\rangle _{V}.
+\]
 
 \end_inset
 
@@ -3868,9 +3865,9 @@ For arbitrary
 
 , the result is 
 \begin_inset Formula 
-\begin{equation}
+\[
 \Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{p,q}}^{\prime}\frac{KLM\left|\det C\right|^{s}}{E_{r}-E_{p}-E_{q}}\sum_{\lambda_{i,j}}\prod_{a=1}^{s}\left\langle \mathbb{F}_{qp}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{qp}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{V}.
-\end{equation}
+\]
 
 \end_inset
 
@@ -3987,7 +3984,7 @@ The action of
 \begin_inset Formula $A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}$
 \end_inset
 
- term of RHS can be calculated using eq.
+ term can be calculated using eq.
  
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -3997,19 +3994,27 @@ reference "eq:App_AFF_1"
 
 , from which it follows
 \begin_inset Formula 
-\begin{multline}
-\left\langle \cdots h\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle =\frac{2}{M}\left[\mu-\tr\left(S^{*}C^{-1}A^{\dagger}\right)\right]\left\langle \cdots\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \\
-+\frac{2}{M}\left[C^{-1}A^{\dagger}\left(C^{-1}\right)^{T}\right]_{mn}\left\langle \cdots f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle .\label{eq:olp_hexp}
-\end{multline}
+\begin{align}
+\left\langle \cdots h\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle  & =\frac{2}{M}\left[\mu-\tr\left(S^{*}C^{-1}A^{\dagger}\right)\right]\left\langle \cdots\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \nonumber \\
+ & \hspace{1em}+\frac{2}{M}\left[C^{-1}A^{\dagger}\left(C^{-1}\right)^{T}\right]_{mn}\left\langle \cdots f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle .\label{eq:olp_hexp}
+\end{align}
 
 \end_inset
 
-So we have 
+So from eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:cub_F1F2_vev"
+
+\end_inset
+
+ we have 
 \begin_inset Formula 
-\begin{multline}
-\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}\right\rangle _{V}=\frac{2}{M}\mu^{\prime\left(V\right)}\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \\
-+\frac{2}{M}B_{mn}^{\left(V\right)}\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle ,\label{eq:olp_vev_v}
-\end{multline}
+\begin{align}
+\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}\right\rangle _{V} & =\frac{2}{M}\mu^{\prime\left(V\right)}\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \nonumber \\
+ & \hspace{1em}+\frac{2}{M}B_{mn}^{\left(V\right)}\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle ,\label{eq:olp_vev_v}
+\end{align}
 
 \end_inset
 
@@ -4062,7 +4067,7 @@ reference "eq:olp_vev_v"
 \begin_inset Formula ${\sum}^{\prime}$
 \end_inset
 
- indicates summing over permutations satisfying 
+ indicates sum over permutations satisfying 
 \begin_inset Formula 
 \begin{align*}
 P\left(1\right) & <P\left(2\right),\quad P\left(3\right)<P\left(4\right),\cdots,P\left(2n-1\right)<P\left(2n\right),\\
@@ -4102,7 +4107,7 @@ reference "sec:app_example"
 
 \end_inset
 
-, we demostrate how to use formula 
+, we show examples of using formula 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:olp_DeltaE"
@@ -4228,8 +4233,24 @@ reference "eq:olp_largeM"
 \begin_inset Formula $M^{-s/4}$
 \end_inset
 
+ by eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_detC"
+
+\end_inset
+
 .
- Among all the states of smaller chains, the factor 
+ Among all the states of smaller chains, by eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:diag_ground_energy"
+
+\end_inset
+
+, the factor 
 \begin_inset Formula $1/\left(E_{r}-E_{p}-E_{q}\right)$
 \end_inset
 
@@ -4247,7 +4268,14 @@ reference "eq:olp_largeM"
 \begin_inset Formula $1/\left(E_{r}-E_{p}-E_{q}\right)$
 \end_inset
 
- is of order one.
+ is of order one because of the cyclic constraint 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:dia_cyclic_constraint_s"
+
+\end_inset
+
+.
  Finally, the sum over 
 \begin_inset Formula $L$
 \end_inset
@@ -4295,7 +4323,7 @@ reference "eq:olp_largeM"
 \end_inset
 
  dimension.
- The 
+ The special 
 \begin_inset Formula $s=24$
 \end_inset
 
@@ -5558,10 +5586,10 @@ The Hamiltonian and its action on color singlets
 The (anti)communication relations among string bit creation and annihilation
  operators is
 \begin_inset Formula 
-\begin{multline}
-\left[\left(\phi_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta},\left(\bar{\phi}_{b_{1}\cdots b_{m}}\right)_{\gamma}^{\delta}\right]_{\pm}\equiv\left(\phi_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\left(\bar{\phi}_{b_{1}\cdots b_{m}}\right)_{\gamma}^{\delta}-\left(-1\right)^{mn}\left(\bar{\phi}_{b_{1}\cdots b_{m}}\right)_{\gamma}^{\delta}\left(\phi_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\\
-=\delta_{mn}\delta_{\alpha}^{\delta}\delta_{\gamma}^{\beta}\sum_{P}\left(-1\right)^{P}\delta_{a_{1}b_{P_{1}}}\cdots\delta_{a_{n}b_{P_{n}}},\label{eq:App-H-commutation}
-\end{multline}
+\begin{align}
+\left[\left(\phi_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta},\left(\bar{\phi}_{b_{1}\cdots b_{m}}\right)_{\gamma}^{\delta}\right]_{\pm} & \equiv\left(\phi_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\left(\bar{\phi}_{b_{1}\cdots b_{m}}\right)_{\gamma}^{\delta}-\left(-1\right)^{mn}\left(\bar{\phi}_{b_{1}\cdots b_{m}}\right)_{\gamma}^{\delta}\left(\phi_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\nonumber \\
+ & =\delta_{mn}\delta_{\alpha}^{\delta}\delta_{\gamma}^{\beta}\sum_{P}\left(-1\right)^{P}\delta_{a_{1}b_{P_{1}}}\cdots\delta_{a_{n}b_{P_{n}}},\label{eq:App-H-commutation}
+\end{align}
 
 \end_inset
 
@@ -5693,46 +5721,46 @@ key "Thorn:2015wli"
 
 
 \begin_inset Formula 
-\begin{multline*}
-H_{1}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}=2\sum_{k=1}^{M}\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
-+\frac{2}{N}\sum_{k=1}^{M}\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)\sum_{l\neq k,k+1}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0},
-\end{multline*}
+\begin{align*}
+H_{1}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0} & =2\sum_{k=1}^{M}\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
+ & \hspace{1em}+\frac{2}{N}\sum_{k=1}^{M}\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)\sum_{l\neq k,k+1}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0},
+\end{align*}
 
 \end_inset
 
  
 \begin_inset Formula 
-\begin{multline*}
-H_{2}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}=2\sum_{k=1}^{M}\theta_{k}^{a}\frac{d}{d\theta_{k+1}^{a}}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
-+\frac{2}{N}\sum_{k=1}^{M}\sum_{l\neq k,k+1}\theta_{k}^{a}\frac{d}{d\theta_{l}^{a}}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0},
-\end{multline*}
+\begin{align*}
+H_{2}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0} & =2\sum_{k=1}^{M}\theta_{k}^{a}\frac{d}{d\theta_{k+1}^{a}}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
+ & \hspace{1em}+\frac{2}{N}\sum_{k=1}^{M}\sum_{l\neq k,k+1}\theta_{k}^{a}\frac{d}{d\theta_{l}^{a}}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0},
+\end{align*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\begin{multline*}
-H_{3}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}=2\sum_{k=1}^{M}\theta_{k+1}^{a}\frac{d}{d\theta_{k}^{a}}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
-+\frac{2}{N}\sum_{k=1}^{M}\sum_{l\neq k,k+1}\theta_{l}^{a}\frac{d}{d\theta_{k}^{a}}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0},
-\end{multline*}
+\begin{align*}
+H_{3}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0} & =2\sum_{k=1}^{M}\theta_{k+1}^{a}\frac{d}{d\theta_{k}^{a}}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
+ & \hspace{1em}+\frac{2}{N}\sum_{k=1}^{M}\sum_{l\neq k,k+1}\theta_{l}^{a}\frac{d}{d\theta_{k}^{a}}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0},
+\end{align*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\begin{multline*}
-H_{4}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}=-2i\sum_{k=1}^{M}\theta_{k}^{a}\theta_{k+1}^{a}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
--\frac{2i}{N}\sum_{k=1}^{M}\sum_{l\neq k,k+1}\theta_{k}^{a}\theta_{l}^{a}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0},
-\end{multline*}
+\begin{align*}
+H_{4}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0} & =-2i\sum_{k=1}^{M}\theta_{k}^{a}\theta_{k+1}^{a}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
+ & \hspace{1em}-\frac{2i}{N}\sum_{k=1}^{M}\sum_{l\neq k,k+1}\theta_{k}^{a}\theta_{l}^{a}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0},
+\end{align*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\begin{multline*}
-H_{5}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}=-2i\sum_{k=1}^{M}\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{k+1}^{a}}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
--\frac{2i}{N}\sum_{k=1}^{M}\sum_{l\neq k,k+1}\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{l}^{a}}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0}.
-\end{multline*}
+\begin{align*}
+H_{5}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0} & =-2i\sum_{k=1}^{M}\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{k+1}^{a}}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0}\\
+ & \hspace{1em}-\frac{2i}{N}\sum_{k=1}^{M}\sum_{l\neq k,k+1}\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{l}^{a}}T\left(\theta_{1},\cdots,\theta_{k}\right)T\left(\theta_{k+1},\cdots,\theta_{l-1}\right)\ket{0}.
+\end{align*}
 
 \end_inset
 
@@ -5761,19 +5789,19 @@ key "Thorn:2015wli"
 
  
 \begin_inset Formula 
-\begin{multline*}
-H_{1}T\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right)\ket{0}_{\mathrm{Fussion}}=\frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)T\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\ket{0}\\
-+\frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\left(s-2\eta_{l}^{a}\frac{d}{d\eta_{l}^{a}}\right)T\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\ket{0},
-\end{multline*}
+\begin{align*}
+H_{1}T\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right)\ket{0}_{\mathrm{Fussion}} & =\frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)T\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\ket{0}\\
+ & \hspace{1em}+\frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\left(s-2\eta_{l}^{a}\frac{d}{d\eta_{l}^{a}}\right)T\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\ket{0},
+\end{align*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\begin{multline*}
-H_{2}T\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right)\ket{0}_{\mathrm{Fussion}}=\frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\theta_{k}^{a}\frac{d}{d\eta_{l}}T\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\ket{0}\\
-+\frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\eta_{l}^{a}\frac{d}{d\theta_{k}^{a}}T\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\ket{0}.
-\end{multline*}
+\begin{align*}
+H_{2}T\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right)\ket{0}_{\mathrm{Fussion}} & =\frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\theta_{k}^{a}\frac{d}{d\eta_{l}}T\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\ket{0}\\
+ & \hspace{1em}+\frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\eta_{l}^{a}\frac{d}{d\theta_{k}^{a}}T\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\ket{0}.
+\end{align*}
 
 \end_inset
 
@@ -5783,10 +5811,10 @@ H_{2}T\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right
 
  on double trace states is
 \begin_inset Formula 
-\begin{multline*}
-\Delta HT\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right)\ket{0}_{\mathrm{Fussion}}=\frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}T\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\ket{0}\\
-+\frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}T\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\ket{0}.
-\end{multline*}
+\begin{align*}
+\Delta HT\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right)\ket{0}_{\mathrm{Fussion}} & =\frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}T\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\ket{0}\\
+ & \hspace{1em}+\frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}T\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\ket{0}.
+\end{align*}
 
 \end_inset
 
@@ -5794,7 +5822,7 @@ H_{2}T\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right
 \end_layout
 
 \begin_layout Standard
-It is noteworthy the action of 
+It is noteworthy that the action of 
 \begin_inset Formula $\Delta H$
 \end_inset
 
@@ -5968,10 +5996,10 @@ h_{kl}=h_{kl}^{\left(1\right)}+h_{kl}^{\left(0\right)}
 
 where 
 \begin_inset Formula 
-\begin{multline*}
-h_{kl}^{\left(1\right)}=-2+\frac{4}{M}\sum_{n,m=1}^{M-1}\alpha_{n}\beta_{m}\exp\left(2\pi ik\frac{m+n}{M}\right)\\
--\frac{2}{M}\sum_{n,m=1}^{M-1}\left(\alpha_{n}\beta_{m}+\alpha_{m}\beta_{n}+i\alpha_{n}\alpha_{m}+i\beta_{n}\beta_{m}\right)\exp\left(2\pi i\frac{kn+lm}{M}\right),
-\end{multline*}
+\begin{align*}
+h_{kl}^{\left(1\right)} & =-2+\frac{4}{M}\sum_{n,m=1}^{M-1}\alpha_{n}\beta_{m}\exp\left(2\pi ik\frac{m+n}{M}\right)\\
+ & \hspace{1em}-\frac{2}{M}\sum_{n,m=1}^{M-1}\left(\alpha_{n}\beta_{m}+\alpha_{m}\beta_{n}+i\alpha_{n}\alpha_{m}+i\beta_{n}\beta_{m}\right)\exp\left(2\pi i\frac{kn+lm}{M}\right),
+\end{align*}
 
 \end_inset
 
@@ -6198,17 +6226,28 @@ reference "eq:App_hkl1"
 .
  Finally, adding back the constant terms, we have 
 \begin_inset Formula 
-\[
-h_{kl}=\frac{2}{M}\sum_{n,m=0}^{M-1}\left(A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}+A_{nm}F_{n}F_{m}+2A_{-n,m}F_{n}^{\dagger}F_{m}\right)+\frac{2}{M}\mu
-\]
+\begin{equation}
+h_{kl}=\frac{2}{M}\sum_{n,m=0}^{M-1}\left(A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}+A_{nm}F_{n}F_{m}+2A_{-n,m}F_{n}^{\dagger}F_{m}\right)+\frac{2}{M}\mu\label{eq:App_hkl_h}
+\end{equation}
 
 \end_inset
 
  where 
+\begin_inset Formula $A_{mn}$
+\end_inset
+
+ is given by 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:App_hkl_Anm"
+
+\end_inset
+
+ and 
 \begin_inset Formula 
-\[
-\mu=-\cot\frac{\pi}{2M}+\cot\frac{2\left(k-l\right)+1}{2M}\pi+M\xi.
-\]
+\begin{equation}
+\mu=-\cot\frac{\pi}{2M}+\cot\frac{2\left(k-l\right)+1}{2M}\pi+M\xi.\label{eq:App_hkl_mu}
+\end{equation}
 
 \end_inset
 
@@ -6355,7 +6394,7 @@ and in the last step the property that
  We then have 
 \begin_inset Formula 
 \begin{align*}
-\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger},F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\right] & =F_{n}^{\dagger}\bar{A}_{nm}\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger},F_{m}^{\dagger}\right]+\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger},F_{n}^{\dagger}\right]\bar{A}_{nm}F_{m}^{\dagger}\\
+\left[\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger},F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\right] & =F_{n}^{\dagger}\bar{A}_{nm}\left[\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger},F_{m}^{\dagger}\right]+\left[\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger},F_{n}^{\dagger}\right]\bar{A}_{nm}F_{m}^{\dagger}\\
  & =-F_{n}^{\dagger}\bar{A}_{nm}S_{ml}^{*}D_{lk}f_{k}^{\dagger}-S_{nl}^{*}D_{lk}f_{k}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\\
  & =\bar{A}_{nm}S_{ml}^{*}D_{lk}\left(f_{k}^{\dagger}F_{n}^{\dagger}-\left\{ F_{n}^{\dagger},f_{k}^{\dagger}\right\} \right)-S_{nl}^{*}D_{lk}f_{k}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\\
  & =\bar{A}_{nm}S_{ml}^{*}D_{lk}\left(f_{k}^{\dagger}F_{n}^{\dagger}-S_{nk}^{*}\right)-S_{nl}^{*}D_{lk}f_{k}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\\
