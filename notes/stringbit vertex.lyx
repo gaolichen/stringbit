@@ -5670,7 +5670,7 @@ H_{5}=-\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!
 \begin_inset Formula $\Delta H$
 \end_inset
 
- is the new term introduced
+ is a new term introduced
 \begin_inset Formula 
 \begin{align*}
 \Delta H & =\frac{2}{N}\left(\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\bar{\phi}_{b_{1}\cdots b_{k}}\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\phi_{b_{1}\cdots b_{k}}-\tilde{M}\right),\\
@@ -5716,7 +5716,7 @@ reference "eq:App-H-commutation"
 \begin_inset Formula $H_{i}$
 \end_inset
 
- on single trace states
+ on single trace states 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2015wli"
