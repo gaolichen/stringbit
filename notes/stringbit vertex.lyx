@@ -2720,18 +2720,51 @@ Now let us consider the
 \begin_inset Formula $\psi_{G}$
 \end_inset
 
- is 
-\begin_inset Formula 
-\[
-\bar{\psi}_{G}=\begin{cases}
-\left(-i\right)^{\left\lfloor M/2\right\rfloor }\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right) & \text{for odd }M\\
-\left(-i\right)^{M/2+1}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\alpha_{0}\alpha_{M/2} & \text{for even }M
-\end{cases}.
-\]
+ is
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\backslash
+label{eq:conj_psibarG}
+\end_layout
 
 \end_inset
 
-We can check that 
+
+\begin_inset Formula 
+\begin{align}
+\bar{\psi}_{G} & =\left(-i\right)^{\left\lfloor M/2\right\rfloor }\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\quad\text{for odd }M\label{eq:conj_psibarG:1}\\
+\bar{\psi}_{G} & =\left(-i\right)^{M/2+1}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\alpha_{0}\alpha_{M/2}\quad\text{for even }M\label{eq:conj_psibarG:2}
+\end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+ In appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:App_normal_psibar"
+
+\end_inset
+
+, we verify that 
 \begin_inset Formula $\bar{\psi}_{G}$
 \end_inset
 
@@ -2743,173 +2776,6 @@ reference "eq:conj_normalization"
 \end_inset
 
 .
- For odd 
-\begin_inset Formula $M$
-\end_inset
-
-, 
-\begin_inset Formula 
-\begin{align*}
-\int d^{M}\theta\,\bar{\psi}_{G}\psi_{G} & =\left(-i\right)^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\,\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\left(c_{i}-s_{i}\alpha_{M-i}\alpha_{i}\right)\\
- & =\left(-i\right)^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\,\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(s_{i}^{2}+c_{i}^{2}\right)\alpha_{M-i}\alpha_{i}\\
- & =\left(-i\right)^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\,\prod_{i=1}^{M}\alpha_{M-i}\\
- & =1,
-\end{align*}
-
-\end_inset
-
- where in the last step we used
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-We do not prove the formula 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:conj_alpha_prod"
-
-\end_inset
-
- here.
- But we have verified it by Mathematica program.
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{equation}
-\int d^{M}\theta\,\prod_{i=1}^{M}\alpha_{M-i}\equiv\int d^{M}\theta\,\alpha_{M-1}\alpha_{M-2}\cdots\alpha_{0}=i^{\left\lfloor \left(M-1\right)/2\right\rfloor }.\label{eq:conj_alpha_prod}
-\end{equation}
-
-\end_inset
-
-Note that in the remainder of this paper, all the products defined by the
- 
-\begin_inset Quotes els
-\end_inset
-
-
-\begin_inset Formula $\prod$
-\end_inset
-
-
-\begin_inset Quotes ers
-\end_inset
-
- symbol are ordered by the index that the products run over, as eq.
- 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:conj_alpha_prod"
-
-\end_inset
-
- shows.
- Similarly, we can show 
-\begin_inset Formula $\int d^{M}\theta\,\bar{\psi}_{G}\psi_{G}=1$
-\end_inset
-
- for even 
-\begin_inset Formula $M$
-\end_inset
-
-.
- To show
-\begin_inset Formula $\int d^{M}\theta\,\bar{\psi}_{G}\psi_{r}=0$
-\end_inset
-
- for 
-\begin_inset Formula $r\neq G$
-\end_inset
-
-, it suffices to show that 
-\begin_inset Formula $\int d^{M}\theta\,\bar{\psi}_{G}F_{k}^{\dagger}\psi^{\prime}$
-\end_inset
-
- vanishes for all 
-\begin_inset Formula $0\leq k\leq M-1$
-\end_inset
-
- and any eigenfunction 
-\begin_inset Formula $\psi^{\prime}$
-\end_inset
-
-.
- If 
-\begin_inset Formula $k=0$
-\end_inset
-
-, it clearly vanishes because both 
-\begin_inset Formula $F_{0}^{\dagger}$
-\end_inset
-
- and 
-\begin_inset Formula $\bar{\psi}_{G}$
-\end_inset
-
- contain 
-\begin_inset Formula $\alpha_{0}$
-\end_inset
-
-.
- If 
-\begin_inset Formula $0<k<M/2$
-\end_inset
-
-, 
-\begin_inset Formula 
-\begin{equation}
-\int d^{M}\theta\,\bar{\psi}_{G}F_{k}^{\dagger}\psi^{\prime}=\int d^{M}\theta\,\left(\tilde{F}_{k}^{\dagger\pm}\bar{\psi}_{G}\right)\psi^{\prime}.\label{eq:conj_psibar_norm1}
-\end{equation}
-
-\end_inset
-
-RHS of 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:conj_psibar_norm1"
-
-\end_inset
-
- vanishes because of 
-\begin_inset Formula 
-\begin{equation}
-\tilde{F}_{k}^{\dagger\pm}\bar{\psi}_{G}=0,\label{eq:conj_Ftilde_psibar}
-\end{equation}
-
-\end_inset
-
-which can be verified by checking that 
-\begin_inset Formula 
-\[
-\tilde{F}_{k}^{\dagger\pm}\left(-s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)=\tilde{F}_{M-k}^{\dagger\pm}\left(-s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)=0,
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\left[\tilde{F}_{k}^{\dagger\pm},-s_{l}+c_{l}\alpha_{M-l}\alpha_{l}\right]=0,\quad k\neq l,\, k\neq M-l.
-\]
-
-\end_inset
-
-Similarly, we can show that 
-\begin_inset Formula $\tilde{F}_{k}^{\dagger\pm}\bar{\psi}_{G}=0$
-\end_inset
-
- for 
-\begin_inset Formula $M/2\leq k\leq M-1$
-\end_inset
-
-.
- Therefore, the normalization condition 
-\begin_inset Formula $\int d^{M}\theta\,\bar{\psi}_{G}\psi_{r}=\delta_{Gr}$
-\end_inset
-
- is proved.
  The function conjugate to the general eigenfunction 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -2928,7 +2794,7 @@ reference "eq:dia_general_eigenfunction"
 : 
 \begin_inset Formula 
 \begin{equation}
-\bar{\psi}=\prod_{k=1}^{M}\left(\tilde{F}_{M-k}\right)^{\lambda_{M-k}}\bar{\psi}_{G},\quad\lambda_{k}=0,\,1,\label{eq:conj_psibar_general}
+\bar{\psi}=\prod_{k=1}^{M}\left(\tilde{F}_{M-k}\right)^{\lambda_{M-k}}\bar{\psi}_{G}\equiv\left(\tilde{F}_{M-1}\right)^{\lambda_{M-1}}\cdots\tilde{F}_{1}^{\lambda_{1}}\tilde{F}_{0}^{\lambda_{0}}\bar{\psi}_{G},\quad\lambda_{k}=0,\,1,\label{eq:conj_psibar_general}
 \end{equation}
 
 \end_inset
@@ -2954,6 +2820,28 @@ reference "eq:dia_general_eigenfunction"
 \end_inset
 
 .
+ In the remainder of this paper, all the products defined by the 
+\begin_inset Quotes els
+\end_inset
+
+
+\begin_inset Formula $\prod$
+\end_inset
+
+
+\begin_inset Quotes ers
+\end_inset
+
+ symbol are arranged in ascending order with respect to the index that the
+ products run over, as eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:conj_psibar_general"
+
+\end_inset
+
+ shows.
  It is easy to see that 
 \begin_inset Formula $\bar{\psi}$
 \end_inset
@@ -3650,7 +3538,7 @@ The ground eigenfunctions
  
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:conj_Ftilde_psibar"
+reference "eq:App_psiG_Ftilde_psibar"
 
 \end_inset
 
@@ -6147,6 +6035,202 @@ G_{\alpha}^{\beta}\ket{\text{any color singlet}}=0.
 \end_inset
 
  lead to the same action on any color singlet.
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:App_normal_psibar"
+
+\end_inset
+
+Verifying the normalization condition for 
+\begin_inset Formula $\bar{\psi}_{G}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this appendix we show that the conjugate eigenfunction of 
+\begin_inset Formula $s=1$
+\end_inset
+
+, defined as eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:conj_psibarG"
+
+\end_inset
+
+, satisfies the normalization condition 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:conj_normalization"
+
+\end_inset
+
+.
+ We first show that 
+\begin_inset Formula $\int d^{M}\theta\,\bar{\psi}_{G}\psi_{G}=1$
+\end_inset
+
+.
+ For odd 
+\begin_inset Formula $M$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{align*}
+\int d^{M}\theta\,\bar{\psi}_{G}\psi_{G} & =\left(-i\right)^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\,\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\left(c_{i}-s_{i}\alpha_{M-i}\alpha_{i}\right)\\
+ & =\left(-i\right)^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\,\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(s_{i}^{2}+c_{i}^{2}\right)\alpha_{M-i}\alpha_{i}\\
+ & =\left(-i\right)^{\left\lfloor M/2\right\rfloor }\int d^{M}\theta\,\prod_{i=1}^{M}\alpha_{M-i}\\
+ & =1,
+\end{align*}
+
+\end_inset
+
+ where in the last step we used
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+We do not prove the formula 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:App_psiG_alpha_prod"
+
+\end_inset
+
+ here.
+ But we have verified it by Mathematica program.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\int d^{M}\theta\,\prod_{i=1}^{M}\alpha_{M-i}\equiv\int d^{M}\theta\,\alpha_{M-1}\alpha_{M-2}\cdots\alpha_{0}=i^{\left\lfloor \left(M-1\right)/2\right\rfloor }.\label{eq:App_psiG_alpha_prod}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Similarly, we can show 
+\begin_inset Formula $\int d^{M}\theta\,\bar{\psi}_{G}\psi_{G}=1$
+\end_inset
+
+ for even 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+To show
+\begin_inset Formula $\int d^{M}\theta\,\bar{\psi}_{G}\psi_{r}=0$
+\end_inset
+
+ for 
+\begin_inset Formula $r\neq G$
+\end_inset
+
+, it suffices to show that 
+\begin_inset Formula $\int d^{M}\theta\,\bar{\psi}_{G}F_{k}^{\dagger}\psi^{\prime}$
+\end_inset
+
+ vanishes for all 
+\begin_inset Formula $0\leq k\leq M-1$
+\end_inset
+
+ and any eigenfunction 
+\begin_inset Formula $\psi^{\prime}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $k=0$
+\end_inset
+
+, it clearly vanishes because both 
+\begin_inset Formula $F_{0}^{\dagger}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{\psi}_{G}$
+\end_inset
+
+ contain the Grassmann odd operator 
+\begin_inset Formula $\alpha_{0}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $0<k<M/2$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{equation}
+\int d^{M}\theta\,\bar{\psi}_{G}F_{k}^{\dagger}\psi^{\prime}=\int d^{M}\theta\,\left(\tilde{F}_{k}^{\dagger\pm}\bar{\psi}_{G}\right)\psi^{\prime}.\label{eq:App_psiG_norm1}
+\end{equation}
+
+\end_inset
+
+RHS of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:App_psiG_norm1"
+
+\end_inset
+
+ vanishes because of 
+\begin_inset Formula 
+\begin{equation}
+\tilde{F}_{k}^{\dagger\pm}\bar{\psi}_{G}=0,\label{eq:App_psiG_Ftilde_psibar}
+\end{equation}
+
+\end_inset
+
+which can be verified by checking that 
+\begin_inset Formula 
+\[
+\tilde{F}_{k}^{\dagger\pm}\left(-s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)=\tilde{F}_{M-k}^{\dagger\pm}\left(-s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)=0,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[\tilde{F}_{k}^{\dagger\pm},-s_{l}+c_{l}\alpha_{M-l}\alpha_{l}\right]=0,\quad k\neq l,\, k\neq M-l.
+\]
+
+\end_inset
+
+Similarly, we can show that 
+\begin_inset Formula $\tilde{F}_{k}^{\dagger\pm}\bar{\psi}_{G}=0$
+\end_inset
+
+ for 
+\begin_inset Formula $M/2\leq k\leq M-1$
+\end_inset
+
+.
+ Therefore, the normalization condition 
+\begin_inset Formula $\int d^{M}\theta\,\bar{\psi}_{G}\psi_{r}=\delta_{Gr}$
+\end_inset
+
+ is proved.
+ 
 \end_layout
 
 \begin_layout Section
