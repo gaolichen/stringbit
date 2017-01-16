@@ -443,8 +443,8 @@ key "Thorn:2015wli"
 \end_inset
 
 , where the cubic interaction vertices and their application to one-loop
- self energy was discussed.
- In this paper, we will perform detailed study on them.
+ self energy were discussed.
+ In this paper, we will perform a detailed study of them.
  The calculation of the vertices and one-loop self energy will be done by
  finding the vacuum expectation values of ladder operators.
  Based on the formula we obtain, a rough estimation will show that, the
@@ -503,7 +503,7 @@ key "Thorn:2015wli"
 \end_inset
 
 .
- We will also numerically verify that, the 
+ We will also numerically verify that the 
 \begin_inset Formula $M$
 \end_inset
 
@@ -642,23 +642,7 @@ reference "sub:Diagonalizing-Hamiltonian"
 \begin_inset Formula $N=\infty$
 \end_inset
 
- is done via Fourier transforms of a series of Grassmann variables 
-\begin_inset Formula $\theta_{k}$
-\end_inset
-
- rather than via 
-\begin_inset Formula $S_{k}=\theta_{k}+d/d\theta_{k}$
-\end_inset
-
- as ref.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Thorn:2015wli"
-
-\end_inset
-
- did.
+ is done via different intermediate variables.
  In subsection 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1409,7 +1393,7 @@ key "Thorn:2015wli"
 \end_inset
 
 , and their Fourier transforms.
- Such different choices should not effect the eigenoperators and the energy
+ Such different choices should not affect the eigenoperators and the energy
  spectrum.
  
 \end_layout
@@ -2496,7 +2480,7 @@ reference "eq:ham_cyclicconstrtaint"
 status open
 
 \begin_layout Plain Layout
-Such a sign factor was ignored by ref.
+Such a sign factor was overlooked by ref.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -3170,15 +3154,8 @@ key "Thorn:2015wli"
 \end_inset
 
 .
- But the sign factors of 
-\begin_inset Formula $V$
-\end_inset
-
- and 
-\begin_inset Formula $W$
-\end_inset
-
- were not handled correctly in ref.
+ We have corrected sign errors in eqs.
+ (21) and (27) of ref.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -4425,7 +4402,7 @@ reference "eq:dia_cyclic_constraint_s"
 \begin_inset Formula $s=24$
 \end_inset
 
- case is called protostring model by ref.
+ case is called protostring model in ref.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -5527,7 +5504,7 @@ When the bit number
 \begin_inset Formula $s=24$
 \end_inset
 
-, the model is call protostring model and leads to the Poincaré invariant
+, the model is called the protostring model and leads to the Poincaré invariant
  relation in 
 \begin_inset Formula $1+1$
 \end_inset
@@ -5560,7 +5537,7 @@ key "Chen:2016hkz"
 
 , the excited states contributions are canceled out due to the fermionic
  nature of string bits.
- The results uphold the idea of formulating string theory by string bit
+ These results support the idea of formulating string theory by string bit
  models.
  
 \end_layout
