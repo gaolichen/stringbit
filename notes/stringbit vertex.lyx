@@ -210,6 +210,7 @@ key "Thorn:1991fv"
 
 \begin_layout Standard
 The string bit model is an implementation of 't Hooft's idea of holography
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "'tHooft:1987,'tHooft:1990eb,'tHooft:1993gx"
@@ -249,11 +250,19 @@ key "'tHooft:1987,'tHooft:1990eb,'tHooft:1993gx"
 a priori
 \shape default
 .
- String bits enjoy the dynamic of Galilean symmetry, under which the '
+ String bits enjoy the dynamic of Galilean symmetry, under which the 
+\begin_inset Quotes els
+\end_inset
+
+
 \begin_inset Formula $+$
 \end_inset
 
-' component momentum 
+
+\begin_inset Quotes ers
+\end_inset
+
+ component momentum 
 \begin_inset Formula $P^{+}=\left(P^{0}+P^{1}\right)/\sqrt{2}$
 \end_inset
 
@@ -287,7 +296,7 @@ a priori
 \end_layout
 
 \begin_layout Standard
-In the formulation of type II-B superstring as a string bit model
+In the formulation of type II-B superstring as a string bit model 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Bergman:1995wh"
@@ -498,7 +507,7 @@ key "Thorn:2015wli"
 \begin_inset Formula $M$
 \end_inset
 
- independent factor one-loop correction in large 
+ independent factor of the one-loop correction in large 
 \begin_inset Formula $M$
 \end_inset
 
@@ -1003,10 +1012,26 @@ T\left(\theta_{1},\cdots,\theta_{K}\right)T\left(\eta_{1},\cdots,\eta_{L}\right)
 \end_inset
 
  is the vacuum state.
- Let us define 
+ The action of each 
+\begin_inset Formula $H_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Delta H$
+\end_inset
+
+ on trace states is given in appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:app_hamiltonian"
+
+\end_inset
+
+.
+ To summarize the results, let us define 
 \begin_inset Formula 
 \begin{align}
-\bar{h}_{kl} & =2\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)+2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}+2\theta_{l}^{a}\frac{d}{d\theta_{k}^{a}}-2i\theta_{k}^{a}\theta_{l}^{a}-2i\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{l}^{a}}+2s\xi-2s\delta_{k,l},\label{eq:ham_h_klbar}\\
+\bar{h}_{kl} & =2\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)+2\theta_{k}^{a}\frac{d}{d\theta_{l}^{a}}+2\theta_{l}^{a}\frac{d}{d\theta_{k}^{a}}-2i\theta_{k}^{a}\theta_{l}^{a}-2i\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{l}^{a}}+2s\xi-2s\delta_{k,l},\label{eq:ham_h_klbar}\\
 \bar{h} & =\sum_{k=1}^{M}\left(\bar{h}_{k,k+1}-2s\xi\right).
 \end{align}
 
@@ -1473,33 +1498,49 @@ We then normalize the coefficients of
 \begin_inset Formula $k\geq1$
 \end_inset
 
-:
+,
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\backslash
+label{eq:dia_F}
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Formula 
 \begin{equation}
-F_{k}=s_{k}\alpha_{k}+c_{k}\beta_{k},\quad\bar{F}_{k}=c_{k}\alpha_{k}-s_{k}\beta_{k},\quad k=1,\cdots,M-1,\label{eq:dia_F_Fbar}
+F_{k}=s_{k}\alpha_{k}+c_{k}\beta_{k},\quad\bar{F}_{k}=c_{k}\alpha_{k}-s_{k}\beta_{k},\quad k=1,\cdots,M-1,\label{eq:dia_F:1}
 \end{equation}
 
 \end_inset
 
-where
-\begin_inset Formula 
-\begin{equation}
-c_{k}=\cos\left(\frac{\pi}{4}-\frac{k\pi}{2M}\right),\quad s_{k}=\sin\left(\frac{\pi}{4}-\frac{k\pi}{2M}\right).
-\end{equation}
-
+where 
+\begin_inset Formula $c_{k}=\cos\left(\frac{\pi}{4}-\frac{k\pi}{2M}\right)$
 \end_inset
 
-It follows from 
+ and 
+\begin_inset Formula $s_{k}=\sin\left(\frac{\pi}{4}-\frac{k\pi}{2M}\right)$
+\end_inset
+
+.
+ It follows from 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:dia_F_Fbar"
+reference "eq:dia_F:1"
 
 \end_inset
 
  that 
 \begin_inset Formula 
 \begin{equation}
-F_{k}^{\dagger}=\bar{F}_{M-k}=c_{k}\alpha_{M-k}+s_{k}\beta_{M-k},\quad1\leq k\leq M-1,\label{eq:dia_Fdagger}
+F_{k}^{\dagger}=\bar{F}_{M-k}=c_{k}\alpha_{M-k}+s_{k}\beta_{M-k},\quad1\leq k\leq M-1,\label{eq:dia_F:2}
 \end{equation}
 
 \end_inset
@@ -1507,8 +1548,21 @@ F_{k}^{\dagger}=\bar{F}_{M-k}=c_{k}\alpha_{M-k}+s_{k}\beta_{M-k},\quad1\leq k\le
 The zero modes need special treatment: 
 \begin_inset Formula 
 \begin{equation}
-F_{0}=F_{M}=e^{i\pi/4}\beta_{0},\quad F_{0}^{\dagger}=\bar{F}_{0}=\bar{F}_{M}=e^{-i\pi/4}\alpha_{0}.\label{eq:dia_F0}
+F_{0}=F_{M}=e^{i\pi/4}\beta_{0},\quad F_{0}^{\dagger}=\bar{F}_{0}=\bar{F}_{M}=e^{-i\pi/4}\alpha_{0}.\label{eq:dia_F:3}
 \end{equation}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
 
 \end_inset
 
@@ -1645,7 +1699,15 @@ reference "eq:ham_cyclicconstrtaint"
 \end_inset
 
 .
- It then follows that the modes 
+ It then follows from eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_cyclicconstrtaint"
+
+\end_inset
+
+ that the modes 
 \begin_inset Formula $k_{i}$
 \end_inset
 
@@ -1721,6 +1783,22 @@ Since the zero modes do not change the energy, the ground energy eigenstate
 \end_inset
 
  degeneracies.
+ This is the consequence of 
+\begin_inset Formula $H$
+\end_inset
+
+ commuting with supersymmetry operators 
+\begin_inset Formula $Q^{a}$
+\end_inset
+
+, as defined in appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:app_hamiltonian"
+
+\end_inset
+
+.
  The constraint 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -1733,20 +1811,24 @@ reference "eq:dia_cyclic_constraint_s"
 \begin_inset Formula $s$
 \end_inset
 
- is even, all the ground states are physical.
+ is even, all the ground states are allowed by 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:dia_cyclic_constraint_s"
+
+\end_inset
+
+ and hence physical.
  But when 
 \begin_inset Formula $s$
 \end_inset
 
- is odd, the ground state corresponding to 
-\begin_inset Formula $\psi_{G}$
-\end_inset
-
- is physical only when 
+ is odd, the ground state is allowed only when 
 \begin_inset Formula $M$
 \end_inset
 
- is odd, and that the lowest single trace state for even 
+ is odd.
+ It then follows that the lowest single trace state for even 
 \begin_inset Formula $M$
 \end_inset
 
@@ -1845,7 +1927,7 @@ label{overlap_f}
  
 \begin_inset Formula 
 \begin{align}
-f_{0} & =F_{0}=F_{0}^{\left(1\right)}\sqrt{\frac{L}{M}}+F_{0}^{\left(2\right)}\sqrt{\frac{K}{M}},\label{eq:overlap_f:1}\\
+f_{0} & =F_{0}^{\left(1\right)}\sqrt{\frac{L}{M}}+F_{0}^{\left(2\right)}\sqrt{\frac{K}{M}},\label{eq:overlap_f:1}\\
 f_{n} & =F_{n}^{\left(1\right)},\quad1\leq n\leq L-1,\label{eq:overlap_f:2}\\
 f_{n+L} & =F_{n}^{\left(2\right)},\quad1\leq n\leq K-1,\label{eq:overlap_f:3}\\
 f_{M-1} & =e^{-i\pi/4}\left(F_{0}^{\left(1\right)}\sqrt{\frac{K}{M}}-F_{0}^{\left(2\right)}\sqrt{\frac{L}{M}}\right),\label{eq:overlap_f:4}
@@ -1866,15 +1948,32 @@ end{subequations}
 
 \end_inset
 
- which satisfy 
-\begin_inset Formula 
-\[
-\left\{ f_{n},f_{m}\right\} =\left\{ f_{n}^{\dagger},f_{m}^{\dagger}\right\} =0,\quad\left\{ f_{n},f_{m}^{\dagger}\right\} =\delta_{nm}.
-\]
+ which satisfy the anticommutation relationship 
+\begin_inset Formula $\left\{ f_{n},f_{m}\right\} =\left\{ f_{n}^{\dagger},f_{m}^{\dagger}\right\} =0$
+\end_inset
+
+ and 
+\begin_inset Formula $\left\{ f_{n},f_{m}^{\dagger}\right\} =\delta_{nm}$
+\end_inset
+
+.
+ Note that 
+\begin_inset Formula $f_{0}$
+\end_inset
+
+ equals 
+\begin_inset Formula $F_{0}$
+\end_inset
+
+ of the large chain 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
 
 \end_inset
 
-We then express the larger chain operators in terms of 
+.
+ We then express the larger chain operators in terms of 
 \begin_inset Formula $f$
 \end_inset
 
@@ -1882,7 +1981,7 @@ We then express the larger chain operators in terms of
 \begin_inset Formula $f^{\dagger}$
 \end_inset
 
-: 
+ as 
 \begin_inset Formula 
 \[
 F_{m}=\sum_{n=0}^{M-1}\left(f_{n}C_{mn}+f_{n}^{\dagger}S_{mn}\right),\quad0\leq m\leq M-1.
@@ -1922,7 +2021,14 @@ C_{0n}=C_{n0}=\delta_{0,n},\quad S_{0,n}=S_{n,0}=0,\quad0\leq n<M
 
 \end_inset
 
- and
+ and 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -1982,12 +2088,21 @@ reference "eq:overlap_CS"
 We then express the ground eigenfunction of large chain as
 \begin_inset Formula 
 \begin{equation}
-\psi_{G}=\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\psi_{G}^{\left(1\right)}\psi_{G}^{\left(2\right)}\left[\det\left(I+DD^{\dagger}\right)\right]^{-1/4}.\label{eq:overlap_psi_M}
+\psi_{G}=\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\psi_{G}^{\left(1\right)}\psi_{G}^{\left(2\right)}\left[\det\left(I+DD^{\dagger}\right)\right]^{-1/4},\label{eq:overlap_psi_M}
 \end{equation}
 
 \end_inset
 
-The constraints 
+ where 
+\begin_inset Formula $\psi_{G}^{\left(1\right)}$
+\end_inset
+
+ and 
+\begin_inset Formula $\psi_{G}^{\left(2\right)}$
+\end_inset
+
+ are ground eigenfunction for two smaller chains.
+ The constraints 
 \begin_inset Formula $F_{m}\psi_{G}=0$
 \end_inset
 
@@ -2150,14 +2265,7 @@ reference "eq:overlap_matrix_symmetry"
  
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:overlap_CS:1"
-
-\end_inset
-
--
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:overlap_CS:6"
+reference "eq:overlap_CS"
 
 \end_inset
 
@@ -2172,28 +2280,49 @@ reference "eq:overlap_CMS"
 \end_inset
 
 .
+ Next we consider the case when 
+\begin_inset Formula $K$
+\end_inset
+
+ and 
+\begin_inset Formula $L$
+\end_inset
+
+ are swapped.
  Let 
+\begin_inset Formula $C^{\left(L\right)}$
+\end_inset
+
+ and 
+\begin_inset Formula $S^{\left(L\right)}$
+\end_inset
+
+ be the matrices defined as eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_CS"
+
+\end_inset
+
+, and 
 \begin_inset Formula $C^{\left(K\right)}$
 \end_inset
 
- be the 
-\begin_inset Formula $C$
+ and 
+\begin_inset Formula $S^{\left(K\right)}$
 \end_inset
 
- matrix when 
+ be the matrices when 
 \begin_inset Formula $L$
 \end_inset
 
  is replaced by 
-\begin_inset Formula $K=M-L$
+\begin_inset Formula $K$
 \end_inset
 
-, and similarly for 
-\begin_inset Formula $S^{\left(K\right)}$
-\end_inset
-
- and 
-\begin_inset Formula $D^{\left(K\right)}$
+, and similarly for matrix 
+\begin_inset Formula $D$
 \end_inset
 
 .
@@ -2244,19 +2373,12 @@ reference "eq:overlap_matrix_symmetry2"
  
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:overlap_CS:1"
-
-\end_inset
-
--
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:overlap_CS:6"
+reference "eq:overlap_CS"
 
 \end_inset
 
 .
- The last equality can be shown by applying first two to eq.
+ The last equality can be shown by applying the first two to eq.
  
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -2358,8 +2480,8 @@ Here,
 \begin_inset Formula $\tilde{\delta}\left(\theta-\eta\right)$
 \end_inset
 
- behaves like the Dirac Delta function when it is applied to a c-number-coeffici
-ent polynomial of 
+ behaves like the Dirac Delta function when applied to a c-number-coefficient
+ polynomial of 
 \begin_inset Formula $\theta$
 \end_inset
 
@@ -2470,7 +2592,16 @@ reference "eq:conj_at"
 \begin_inset Formula $T_{r}$
 \end_inset
 
-, from which it follows that 
+ by eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_trace_energystate"
+
+\end_inset
+
+.
+ It implies that 
 \begin_inset Formula $X_{r}$
 \end_inset
 
@@ -2507,40 +2638,56 @@ To construct
 \begin_inset Formula $F_{k}$
 \end_inset
 
- under integration by parts.
- For Grassmann even function 
-\begin_inset Formula $\psi\left(\theta\right)$
-\end_inset
-
-, we define 
-\begin_inset Formula $\tilde{F}_{k}^{+}$
-\end_inset
-
- as 
+ under integration by parts: 
 \begin_inset Formula 
 \begin{equation}
-\int d^{M}\theta\,\left[\tilde{F}_{k}^{+}\psi\left(\theta\right)\right]\chi\left(\theta\right)=\int d^{M}\theta\,\psi\left(\theta\right)\left[F_{k}\chi\left(\theta\right)\right],\label{eq:conj_Ftilde1}
+\int d^{M}\theta\,\psi\left(\theta\right)\left[F_{k}\chi\left(\theta\right)\right]=\int d^{M}\theta\,\left[\tilde{F}_{k}^{\pm}\psi\left(\theta\right)\right]\chi\left(\theta\right),\label{eq:conj_Ftilde1}
 \end{equation}
 
 \end_inset
 
-and for Grassmann odd function 
+where the 
+\begin_inset Quotes els
+\end_inset
+
+
+\begin_inset Formula $+$
+\end_inset
+
+
+\begin_inset Quotes ers
+\end_inset
+
+ superscript is chosen for Grassmann even 
 \begin_inset Formula $\psi\left(\theta\right)$
 \end_inset
 
-, we define 
-\begin_inset Formula $\tilde{F}^{-}$
+ and 
+\begin_inset Quotes els
 \end_inset
 
- as 
-\begin_inset Formula 
-\begin{equation}
-\int d^{M}\theta\,\left[\tilde{F}_{k}^{-}\psi\left(\theta\right)\right]\chi\left(\theta\right)=\int d^{M}\theta\,\psi\left(\theta\right)\left[F_{k}\chi\left(\theta\right)\right].\label{eq:conj_Ftilde2}
-\end{equation}
+
+\begin_inset Formula $-$
+\end_inset
+
+
+\begin_inset Quotes ers
+\end_inset
+
+ is chosen for Grassmann odd 
+\begin_inset Formula $\psi\left(\theta\right)$
+\end_inset
+
+.
+ It then follows from eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:dia_F"
 
 \end_inset
 
-It follows that 
+ that 
 \begin_inset Formula 
 \begin{equation}
 \tilde{F}_{0}^{\pm}=\mp e^{i\pi/4}\beta_{0},\quad\tilde{F}_{k}^{\pm}=\pm\left(s_{k}\alpha_{k}-c_{k}\beta_{k}\right),\quad1\leq k\leq M-1,
@@ -2564,7 +2711,7 @@ In the remainder of this paper, we may suppress the superscript
 \end_layout
 
 \begin_layout Standard
-Now let us consider the the 
+Now let us consider the 
 \begin_inset Formula $s=1$
 \end_inset
 
@@ -2726,10 +2873,14 @@ reference "eq:conj_psibar_norm1"
 \end_inset
 
  vanishes because of 
-\begin_inset Formula $\tilde{F}_{k}^{\dagger\pm}\bar{\psi}_{G}=0$
+\begin_inset Formula 
+\begin{equation}
+\tilde{F}_{k}^{\dagger\pm}\bar{\psi}_{G}=0,\label{eq:conj_Ftilde_psibar}
+\end{equation}
+
 \end_inset
 
-, which can be verified by checking that 
+which can be verified by checking that 
 \begin_inset Formula 
 \[
 \tilde{F}_{k}^{\dagger\pm}\left(-s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)=\tilde{F}_{M-k}^{\dagger\pm}\left(-s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)=0,
@@ -2817,7 +2968,7 @@ reference "eq:dia_general_eigenfunction"
 
 \end_inset
 
-If a eigenfunction 
+If an eigenfunction 
 \begin_inset Formula $\psi^{\prime}$
 \end_inset
 
@@ -2850,12 +3001,12 @@ If a eigenfunction
 \begin_inset Formula $\bar{\psi}$
 \end_inset
 
- is orthogonal to the eigenfunctions with different 
+ is orthogonal to all the eigenfunctions with different 
 \begin_inset Formula $\left\{ \lambda_{i}\right\} $
 \end_inset
 
 .
- Finally, note that the completeness relation 
+ Finally, we note that the completeness relation 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:conj_completeness"
@@ -2918,7 +3069,7 @@ For arbitrary
 \begin_inset Formula $s$
 \end_inset
 
-, the ground conjugate eigenfunction 
+, the conjugate of the ground eigenfunction 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:dia_ground_state_s"
@@ -2942,7 +3093,7 @@ reference "eq:dia_ground_state_s"
 \end_inset
 
 .
- The conjugate to the general eigenfunction 
+ The conjugate of the general eigenfunction 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:dia_general_eigenfunction_s"
@@ -2952,7 +3103,7 @@ reference "eq:dia_general_eigenfunction_s"
  is
 \begin_inset Formula 
 \begin{equation}
-\bar{\psi}=\prod_{i=0}^{s-1}\prod_{k=1}^{M}\left(\tilde{F}_{M-k}^{\left(s-i\right)}\right)^{\lambda_{M-k,s-i}}\bar{\psi}_{G},\quad\quad\lambda_{k}=0,\,1.
+\bar{\psi}=\prod_{i=0}^{s-1}\prod_{k=1}^{M}\left(\tilde{F}_{M-k}^{\left(s-i\right)}\right)^{\lambda_{M-k,s-i}}\bar{\psi}_{G},\quad\quad\lambda_{k,i}=0,\,1.
 \end{equation}
 
 \end_inset
@@ -2982,8 +3133,8 @@ key "Thorn:2015wli"
 \begin_inset Formula $1/N$
 \end_inset
 
- perturbation and then, using the results of previous sections, we derive
- a formula to calculate the vertices.
+ perturbation and then, using the results of previous sections, derive a
+ formula to calculate the vertices.
  
 \end_layout
 
@@ -3220,11 +3371,15 @@ reference "eq:ham_cyclicconstrtaint"
 \begin_inset Formula $k$
 \end_inset
 
-, we can therefore fix 
+, we can therefore choose 
 \begin_inset Formula $k=M$
 \end_inset
 
- for each integral to give 
+ for all the 
+\begin_inset Formula $M$
+\end_inset
+
+ integrals to give 
 \begin_inset Formula 
 \begin{equation}
 V_{qpr}^{\left(K,L\right)}=\left(-\right)^{s\left(Kg_{p}+Lg_{q}\right)}M\int d\theta\,\bar{\psi}_{q}\left(\theta_{L+1}\cdots\theta_{M}\right)\bar{\psi}_{p}\left(\theta_{1}\cdots\theta_{L}\right)h_{M,L+1}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right).\label{eq:cub_Vstr_2}
@@ -3252,7 +3407,15 @@ Likewise,
 \begin_inset Formula $l\to l+1$
 \end_inset
 
- so we simply change the summations to 
+ so we simply replace the sums over 
+\begin_inset Formula $k$
+\end_inset
+
+ and 
+\begin_inset Formula $l$
+\end_inset
+
+ with the factor 
 \begin_inset Formula $K\times L$
 \end_inset
 
@@ -3314,8 +3477,7 @@ The expression of
 \begin_inset Formula $M$
 \end_inset
 
- ways to to choose the break points, and each way contributes equally to
- 
+ ways to choose the break points, and each way contributes equally to 
 \begin_inset Formula $V_{qpr}^{\left(K,L\right)}$
 \end_inset
 
@@ -3352,7 +3514,7 @@ Let us apply the results of previous sections to the expressions of
 \end_inset
 
  case.
- For convenience, we introduce the notations 
+ For convenience, we introduce notations as 
 \begin_inset Formula $h^{\left(V\right)}\equiv h_{M,L+1}$
 \end_inset
 
@@ -3393,12 +3555,28 @@ V_{qpr}^{\left(K,L\right)} & =\left(-\right)^{Kg_{p}+Lg_{q}}M\int d\theta\,\tild
 
 \end_inset
 
- where the change of the sign factor is due to 
+ where in the last tep we first changed the integrand to 
+\begin_inset Formula $\bar{\psi}_{G}^{\left(K\right)}\mathbb{F}_{q}\bar{\psi}_{G}^{\left(L\right)}\mathbb{F}_{p}h^{\left(V\right)}\mathbb{F}_{r}^{\dagger}\psi_{G}^{\left(M\right)}$
+\end_inset
+
+ using eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:conj_Ftilde1"
+
+\end_inset
+
+, then commuted 
 \begin_inset Formula $\mathbb{F}_{q}$
 \end_inset
 
- passing through 
+ with 
 \begin_inset Formula $\bar{\psi}_{G}^{\left(L\right)}$
+\end_inset
+
+, which produces the sign factor 
+\begin_inset Formula $\left(-\right)^{L\left(g_{q}-K\right)}$
 \end_inset
 
 .
@@ -3451,7 +3629,7 @@ V_{qpr}^{\left(K,L\right)}=\left(-\right)^{K\left(g_{p}-L\right)}M\left|\det C\r
 
 \end_inset
 
-The ground eigenfunction, 
+The ground eigenfunctions 
 \begin_inset Formula $\psi_{G}^{\left(L\right)}$
 \end_inset
 
@@ -3459,9 +3637,26 @@ The ground eigenfunction,
 \begin_inset Formula $\psi_{G}^{\left(K\right)}$
 \end_inset
 
-, and their conjugates are annihilated by any lowering eigenoperators of
- smaller chains.
- So we can consider them as vacuum states so that LHS of 
+ are annihilated by any lowering eigenoperators of the smaller chains.
+ Their conjugates 
+\begin_inset Formula $\bar{\psi}_{G}^{\left(L\right)}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{\psi}_{G}^{\left(K\right)}$
+\end_inset
+
+ can be annihilated by any raising eigenoperators of the smaller chains,
+ as eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:conj_Ftilde_psibar"
+
+\end_inset
+
+ shows.
+ Therefore, LHS of 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:cub_vev"
@@ -3500,16 +3695,15 @@ Note that
 \end_inset
 
 .
- We shall see that the physical observables, like the energy correction
- to the zeroth order ground energy, only depend on products like 
+ We shall see that physical observables, like one-loop self energy, only
+ depend on products like 
 \begin_inset Formula $W_{rpq}V_{qpr}$
 \end_inset
 
 .
- It implies that the sign factors are unphysical and will be canceled out
- in the calculation of physical observables.
- So we can simply drop out the sign factor.
- For arbitrary 
+ It implies that the sign factors are unphysical and can be dropped in the
+ calculation of physical observables.
+ So for arbitrary 
 \begin_inset Formula $s$
 \end_inset
 
@@ -3530,7 +3724,7 @@ W_{rpq}^{\left(L,K\right)} & =KL\left|\det C\right|^{s/2}\prod_{a=1}^{s}\left\la
 
 \end_inset
 
- where all the superscript 
+ where the superscript 
 \begin_inset Formula $a$
 \end_inset
 
@@ -3563,7 +3757,7 @@ reference "eq:cub_F1F2_vev"
 \begin_inset Formula $\left\langle \mathbb{F}_{1}^{a}\right\rangle _{V,W}$
 \end_inset
 
-.
+ in the remainder of this paper.
 \end_layout
 
 \begin_layout Standard
@@ -3781,7 +3975,7 @@ reference "eq:olp_deltaE0"
  and write the sum over zero modes explicitly: 
 \begin_inset Formula 
 \[
-\Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{p,q}}^{\prime}\frac{KLM\left|\det C\right|}{E_{r}-E_{p}-E_{q}}\sum_{\lambda,\xi=0,1}\left\langle \mathbb{F}_{qp}F_{0,L}^{\lambda}F_{0,K}^{\xi},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{qp}F_{0,L}^{\lambda}F_{0,K}^{\xi},\mathbb{F}_{r}\right\rangle _{V},
+\Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{p,q}}^{\prime}\frac{KLM\left|\det C\right|}{E_{r}-E_{p}-E_{q}}\sum_{\lambda,\xi=0,1}\left\langle \mathbb{F}_{qp}F_{0,L}^{\lambda}F_{0,K}^{\xi},\mathbb{F}_{r}^{\dagger}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{qp}F_{0,L}^{\lambda}F_{0,K}^{\xi},\mathbb{F}_{r}^{\dagger}\right\rangle _{V},
 \]
 
 \end_inset
@@ -3829,8 +4023,8 @@ F_{0}^{\left(L\right)}=f_{0}\sqrt{\frac{L}{M}}+f_{M-1}\sqrt{\frac{K}{M}}e^{i\pi/
  and
 \begin_inset Formula 
 \begin{multline*}
-\left\langle \mathbb{F}_{qp}F_{0}^{\left(L\right)},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{qp}F_{0}^{\left(L\right)},\mathbb{F}_{r}\right\rangle _{V}+\left\langle \mathbb{F}_{qp}F_{0}^{\left(K\right)},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{qp}F_{0}^{\left(K\right)},\mathbb{F}_{r}\right\rangle _{V}\\
-=\left\langle \mathbb{F}_{qp}f_{0},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{qp}f_{0},\mathbb{F}_{r}\right\rangle _{V}+\left\langle \mathbb{F}_{qp}f_{M-1},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{qp}f_{M-1},\mathbb{F}_{r}\right\rangle _{V}.
+\left\langle \mathbb{F}_{qp}F_{0}^{\left(L\right)},\mathbb{F}_{r}^{\dagger}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{qp}F_{0}^{\left(L\right)},\mathbb{F}_{r}^{\dagger}\right\rangle _{V}+\left\langle \mathbb{F}_{qp}F_{0}^{\left(K\right)},\mathbb{F}_{r}^{\dagger}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{qp}F_{0}^{\left(K\right)},\mathbb{F}_{r}^{\dagger}\right\rangle _{V}\\
+=\left\langle \mathbb{F}_{qp}f_{0},\mathbb{F}_{r}^{\dagger}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{qp}f_{0},\mathbb{F}_{r}^{\dagger}\right\rangle _{V}+\left\langle \mathbb{F}_{qp}f_{M-1},\mathbb{F}_{r}^{\dagger}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{qp}f_{M-1},\mathbb{F}_{r}^{\dagger}\right\rangle _{V}.
 \end{multline*}
 
 \end_inset
@@ -3854,7 +4048,7 @@ F_{0}^{\left(L\right)}=f_{0}\sqrt{\frac{L}{M}}+f_{M-1}\sqrt{\frac{K}{M}}e^{i\pi/
 , which leads to 
 \begin_inset Formula 
 \[
-\Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{M_{q}=K,M_{p}=L}}^{\prime}\frac{KLM\left|\det C\right|}{E_{r}-E_{p}-E_{q}}\sum_{\lambda_{i}=0,1}\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}},\mathbb{F}_{r}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}},\mathbb{F}_{r}\right\rangle _{V}.
+\Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{p,q}}^{\prime}\frac{KLM\left|\det C\right|}{E_{r}-E_{p}-E_{q}}\sum_{\lambda_{i}=0,1}\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}},\mathbb{F}_{r}^{\dagger}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}},\mathbb{F}_{r}^{\dagger}\right\rangle _{V}.
 \]
 
 \end_inset
@@ -3866,7 +4060,7 @@ For arbitrary
 , the result is 
 \begin_inset Formula 
 \[
-\Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{p,q}}^{\prime}\frac{KLM\left|\det C\right|^{s}}{E_{r}-E_{p}-E_{q}}\sum_{\lambda_{i,j}}\prod_{a=1}^{s}\left\langle \mathbb{F}_{qp}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{qp}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{V}.
+\Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{p,q}}^{\prime}\frac{KLM\left|\det C\right|^{s}}{E_{r}-E_{p}-E_{q}}\sum_{\lambda_{i,j}}\prod_{a=1}^{s}\left\langle \mathbb{F}_{qp}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a\dagger}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{qp}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a\dagger}\right\rangle _{V}.
 \]
 
 \end_inset
@@ -3880,10 +4074,18 @@ Note that the sum over
 \end_inset
 
  independently.
- Finally, we have the formula for one-loop self energy
+ So we can move the sum over 
+\begin_inset Formula $\lambda_{i,j}$
+\end_inset
+
+ inside the the product over 
+\begin_inset Formula $a$
+\end_inset
+
+ to give
 \begin_inset Formula 
 \begin{equation}
-\Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{p,q}}^{\prime}\frac{KLM\left|\det C\right|^{s}}{E_{r}-E_{p}-E_{q}}\prod_{a=1}^{s}\left(\sum_{\lambda_{a,i}}\left\langle \mathbb{F}_{qp}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{qp}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a}\right\rangle _{V}\right).\label{eq:olp_DeltaE}
+\Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{p,q}}^{\prime}\frac{KLM\left|\det C\right|^{s}}{E_{r}-E_{p}-E_{q}}\prod_{a=1}^{s}\left(\sum_{\lambda_{a,i}}\left\langle \mathbb{F}_{qp}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a\dagger}\right\rangle _{W}^{*}\left\langle \mathbb{F}_{qp}^{a}f_{0}^{\lambda_{a,0}}f_{M-1}^{\lambda_{a,M-1}},\mathbb{F}_{r}^{a\dagger}\right\rangle _{V}\right).\label{eq:olp_DeltaE}
 \end{equation}
 
 \end_inset
@@ -3920,7 +4122,7 @@ reference "eq:olp_DeltaE"
 \begin_inset Formula $s=1$
 \end_inset
 
- case since the 
+ case since 
 \begin_inset Formula $s>1$
 \end_inset
 
@@ -3963,16 +4165,15 @@ reference "eq:cub_h_kl"
 \begin_inset Formula $F_{m}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\psi_{G}^{\left(L\right)}\psi_{G}^{\left(K\right)}=F_{m}\psi_{G}^{\left(M\right)}=0$
 \end_inset
 
-, only 
+, only the 
 \begin_inset Formula $F^{\dagger}F^{\dagger}$
 \end_inset
 
- and constant terms of 
+ and the constant terms of 
 \begin_inset Formula $h$
 \end_inset
 
- survive.
- It then implies 
+ make nonzero contribution, from which it follows 
 \begin_inset Formula 
 \[
 \left\langle \cdots h\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle =\frac{2}{M}\left\langle \cdots\left(A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}+\mu\right)\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle .
