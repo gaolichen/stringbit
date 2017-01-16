@@ -1860,11 +1860,11 @@ We have constructed the energy eigenfunctions for
 \end_inset
 
  expansion results, we also need to calculate the overlap among three chains:
- one larger chain of 
+ one large chain of 
 \begin_inset Formula $M$
 \end_inset
 
- bits and two smaller chain of 
+ bits and two small chain of 
 \begin_inset Formula $K$
 \end_inset
 
@@ -1874,7 +1874,7 @@ We have constructed the energy eigenfunctions for
 
  bits.
  The calculation can be done by establishing the relation among the eigenoperato
-rs of larger chain and two smaller chains.
+rs of large chain and two small chains.
  Here, we recap the results of ref.
  
 \begin_inset CommandInset citation
@@ -1973,7 +1973,7 @@ key "Thorn:2015wli"
 \end_inset
 
 .
- We then express the larger chain operators in terms of 
+ We then express the large chain operators in terms of 
 \begin_inset Formula $f$
 \end_inset
 
@@ -2101,7 +2101,7 @@ We then express the ground eigenfunction of large chain as
 \begin_inset Formula $\psi_{G}^{\left(2\right)}$
 \end_inset
 
- are ground eigenfunction for two smaller chains.
+ are ground eigenfunction for two small chains.
  The constraints 
 \begin_inset Formula $F_{m}\psi_{G}=0$
 \end_inset
@@ -3025,7 +3025,7 @@ reference "eq:overlap_psi_M"
 
 \end_inset
 
-, the overlap of conjugate eigenfunction among larger chain and two smaller
+, the overlap of conjugate eigenfunction among large chain and two small
  chains is given by
 \begin_inset Formula 
 \begin{equation}
@@ -3208,7 +3208,7 @@ where
 \begin_inset Formula $T_{q}$
 \end_inset
 
- are single trace energy state of smaller chains of 
+ are single trace energy state of small chains of 
 \begin_inset Formula $L$
 \end_inset
 
@@ -3465,7 +3465,7 @@ The expression of
 \begin_inset Formula $V_{qpr}^{\left(K,L\right)}$
 \end_inset
 
- shows that, when a large chain splits into two smaller chains of 
+ shows that, when a large chain splits into two small chains of 
 \begin_inset Formula $K$
 \end_inset
 
@@ -3486,8 +3486,7 @@ The expression of
 \begin_inset Formula $W_{rpq}^{\left(L,K\right)}$
 \end_inset
 
- shows that, when two smaller chains join into a large chain, there are
- 
+ shows that, when two small chains join into a large chain, there are 
 \begin_inset Formula $K\times L$
 \end_inset
 
@@ -3637,7 +3636,7 @@ The ground eigenfunctions
 \begin_inset Formula $\psi_{G}^{\left(K\right)}$
 \end_inset
 
- are annihilated by any lowering eigenoperators of the smaller chains.
+ are annihilated by any lowering eigenoperators of the small chains.
  Their conjugates 
 \begin_inset Formula $\bar{\psi}_{G}^{\left(L\right)}$
 \end_inset
@@ -3646,8 +3645,8 @@ The ground eigenfunctions
 \begin_inset Formula $\bar{\psi}_{G}^{\left(K\right)}$
 \end_inset
 
- can be annihilated by any raising eigenoperators of the smaller chains,
- as eq.
+ can be annihilated by any raising eigenoperators of the small chains, as
+ eq.
  
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -4297,7 +4296,7 @@ reference "eq:olp_vev_v"
 \end_layout
 
 \begin_layout Standard
-Combining above together, we can calculate the one-loop self energy to the
+Combining above together, we can calculate the one-loop self energy of the
  ground state.
  As the complete formula is very complicated, we do not bother writing it
  here.
@@ -4403,7 +4402,11 @@ reference "eq:olp_DeltaE"
 \end_inset
 
 .
- So we have 
+ So when 
+\begin_inset Formula $M$
+\end_inset
+
+ is large we have 
 \begin_inset Formula 
 \begin{equation}
 \Delta E_{G}\sim\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{p,q}}^{\prime}\frac{KLM\left|\det C\right|^{s}}{E_{r}-E_{p}-E_{q}}.\label{eq:olp_largeM}
@@ -4443,7 +4446,7 @@ reference "eq:overlap_detC"
 \end_inset
 
 .
- Among all the states of smaller chains, by eq.
+ Among all the states of small chains, by eq.
  
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -4459,21 +4462,44 @@ reference "eq:diag_ground_energy"
 \begin_inset Formula $\mathcal{O}\left(M\right)$
 \end_inset
 
- when both smaller chains are in ground states.
+ when both small chains are in ground states.
  This is possible only when 
 \begin_inset Formula $s$
 \end_inset
 
  is even.
- For all the other cases, 
-\begin_inset Formula $1/\left(E_{r}-E_{p}-E_{q}\right)$
+ When 
+\begin_inset Formula $s$
 \end_inset
 
- is of order one because of the cyclic constraint 
+ is odd, 
+\begin_inset Formula $M$
+\end_inset
+
+ has to be odd so that ground states are allowed.
+ Then either 
+\begin_inset Formula $L$
+\end_inset
+
+ or 
+\begin_inset Formula $K$
+\end_inset
+
+ has to be even, which implies ground states of one small chain are forbidden
+ by the cyclic constraint 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:dia_cyclic_constraint_s"
 
+\end_inset
+
+.
+ Therefore, 
+\begin_inset Formula $1/\left(E_{r}-E_{p}-E_{q}\right)$
+\end_inset
+
+ is of order one for odd 
+\begin_inset Formula $s$
 \end_inset
 
 .
@@ -4559,7 +4585,7 @@ key "Chen:2015GitHub"
 
 \end_inset
 
-
+.
 \end_layout
 
 \end_inset
@@ -4596,11 +4622,7 @@ reference "sec:app_example"
 
  increases.
  Since only the ground energy is considered, we will simply write the ground
- energy 
-\begin_inset Formula $E_{G}$
-\end_inset
-
- as 
+ energy as 
 \begin_inset Formula $E$
 \end_inset
 
@@ -4608,7 +4630,7 @@ reference "sec:app_example"
 \begin_inset Formula $\Delta E$
 \end_inset
 
-, and also, omit the 
+, and also, suppress the 
 \begin_inset Formula $1/N^{2}$
 \end_inset
 
@@ -4645,7 +4667,7 @@ reference "fig:E_compare"
 \begin_inset Formula $5$
 \end_inset
 
- in 
+ in the 
 \begin_inset Formula $s=1$
 \end_inset
 
@@ -4765,7 +4787,7 @@ key "Chen:2016hkz"
 \end_layout
 
 \begin_layout Standard
-We then want to verify the large 
+We then verify the large 
 \begin_inset Formula $M$
 \end_inset
 
@@ -4792,6 +4814,10 @@ inner structure
 
 , that is the contribution of each 
 \begin_inset Formula $L$
+\end_inset
+
+ to 
+\begin_inset Formula $\Delta E$
 \end_inset
 
 , denoted by 
@@ -4894,8 +4920,7 @@ reference "fig:SubEvsMxi0"
 \begin_inset Formula $M$
 \end_inset
 
-.
- The curves above the horizontal axis consist of odd 
+: the curves above the horizontal axis consist of odd 
 \begin_inset Formula $L$
 \end_inset
 
@@ -4921,7 +4946,7 @@ reference "fig:SubEvsMxi0"
 \begin_inset Formula $M$
 \end_inset
 
- increase, which is consistent with the expected asymptotic behavior.
+ increases, which is consistent with the expected asymptotic behavior.
  It is therefore fair to conclude that the large 
 \begin_inset Formula $M$
 \end_inset
@@ -5054,16 +5079,24 @@ The fact that, in the case of odd
 \end_inset
 
 -bit chain is the one that 
-\begin_inset Formula $h_{kl}$
+\begin_inset Formula $h^{\left(V\right)}=h_{M,L+1}$
 \end_inset
 
- acts on.
+ acts on, see eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:cub_Vstr_2"
+
+\end_inset
+
+.
  It means that the 
 \begin_inset Formula $K$
 \end_inset
 
--bit chain is evolved from the large chain under the action of 
-\begin_inset Formula $h_{kl}$
+-bit chain is evolved from part of the large chain under the action of 
+\begin_inset Formula $h^{\left(V\right)}$
 \end_inset
 
 .
@@ -5105,8 +5138,8 @@ key "Giles:1977mpa"
 \end_inset
 
 .
- It then follows that it is more difficult to evolve the large chain into
- a smaller chain with even 
+ It then follows that it is more difficult to evolve the string bits of
+ large chain into a small chain with even 
 \begin_inset Formula $K$
 \end_inset
 
@@ -5155,7 +5188,15 @@ reference "fig:SubEvsMs2"
 
 \end_inset
 
- shows the results of 
+ shows the plots of 
+\begin_inset Formula $\Delta\hat{E}_{i}$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $i=L/M$
+\end_inset
+
+ for 
 \begin_inset Formula $\xi=1$
 \end_inset
 
@@ -5243,7 +5284,7 @@ name "fig:SubEvsMs2"
 
 \begin_layout Standard
 We next study the dependence of 
-\begin_inset Formula $\Delta\hat{E}$
+\begin_inset Formula $\Delta\hat{E}=\sum_{i}\Delta\hat{E}_{i}$
 \end_inset
 
  on 
@@ -5266,7 +5307,7 @@ reference "fig:EvS"
 \begin_inset Formula $s$
 \end_inset
 
- for chains for 
+ for chains of 
 \begin_inset Formula $M=5$
 \end_inset
 
@@ -5336,11 +5377,11 @@ reference "fig:EvS"
 \begin_inset Formula $M=5$
 \end_inset
 
- case, the over trend of the curves are the same as 
+ case, the overall trend of the curves are the same as 
 \begin_inset Formula $M=6$
 \end_inset
 
-, except for slight oscillations between even and odd 
+ except for slight oscillations between even and odd 
 \begin_inset Formula $s$
 \end_inset
 
@@ -5353,7 +5394,7 @@ reference "fig:EvS"
 \begin_inset Formula $\xi=3$
 \end_inset
 
-, it becomes very negligible.
+, it becomes negligible.
  Actually, if only even 
 \begin_inset Formula $s$
 \end_inset
@@ -5514,11 +5555,11 @@ As far as the regime
 \end_inset
 
 .
- This might be related to a special feature of 
+ This might be related to a special feature of the 
 \begin_inset Formula $\xi=1$
 \end_inset
 
-.
+ case.
  Recall that the Hamiltonian has an 
 \begin_inset Formula $H_{1}$
 \end_inset
@@ -5531,7 +5572,7 @@ reference "eq:ham_subh:1"
 \end_inset
 
 .
- This part can produce a term like 
+ This part produces a term like 
 \begin_inset Formula $-s\tr\bar{\phi}_{12\cdots s}\bar{\phi}_{12\cdots s}\phi_{12\cdots s}\phi_{12\cdots s}$
 \end_inset
 
@@ -5633,7 +5674,7 @@ When the bit number
 \begin_inset Formula $\Delta E_{G}$
 \end_inset
 
- is determined by the contribution of the smaller chains ground states.
+ is determined by the ground states contribution of the small chains.
  Notwithstanding that the number of excited states grows exponentially with
  respect to 
 \begin_inset Formula $M$
@@ -5675,11 +5716,11 @@ When
 \end_inset
 
 .
- This stems from the fact that each energy eigenstate has 
+ This is an consequence of supersymmetry, which give rise to 
 \begin_inset Formula $2^{s}$
 \end_inset
 
- degeneracies due to supersymmetry.
+ degeneracies of ground states.
  The change of 
 \begin_inset Formula $\Delta\hat{E}_{G}$
 \end_inset
@@ -7219,7 +7260,7 @@ reference "tab:Energy-eigenstates-2"
 
 \end_inset
 
- shows, the energy eigenstates of smaller chains are different.
+ shows, the energy eigenstates of small chains are different.
  The energy correction now is given by 
 \begin_inset Formula 
 \begin{multline*}
