@@ -1791,10 +1791,11 @@ Since the zero modes do not change the energy, the ground energy eigenstate
 \begin_inset Formula $Q^{a}$
 \end_inset
 
-, as defined in appendix 
+, as defined in eq.
+ 
 \begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:app_hamiltonian"
+LatexCommand eqref
+reference "eq:App_ham_Q"
 
 \end_inset
 
@@ -2416,20 +2417,9 @@ reference "sub:Diagonalizing-Hamiltonian"
 \begin_inset Formula $1/N$
 \end_inset
 
- expansion results, we also need to find a function 
-\begin_inset Formula $\bar{\psi}_{r}$
-\end_inset
-
- that conjugates to an energy eigenfunction 
-\begin_inset Formula $\psi_{r}$
-\end_inset
-
-.
- For convenience, we call 
-\begin_inset Formula $\bar{\psi}_{r}$
-\end_inset
-
- a conjugate eigenfunction.
+ expansion results, we also need to find functions that conjugate to the
+ energy eigenfunctions.
+ For convenience, we call these functions conjugate eigenfunctions.
  Ref.
  
 \begin_inset CommandInset citation
@@ -4089,18 +4079,11 @@ reference "eq:App_AFF_1"
 
 \end_inset
 
-So from eq.
- 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:cub_F1F2_vev"
-
-\end_inset
-
- we have 
+So we have 
 \begin_inset Formula 
 \begin{align}
-\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}\right\rangle _{V} & =\frac{2}{M}\mu^{\prime\left(V\right)}\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \nonumber \\
+\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}\right\rangle _{V} & =\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}h^{\left(V\right)}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \nonumber \\
+ & =\frac{2}{M}\mu^{\prime\left(V\right)}\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \nonumber \\
  & \hspace{1em}+\frac{2}{M}B_{mn}^{\left(V\right)}\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle ,\label{eq:olp_vev_v}
 \end{align}
 
@@ -4565,7 +4548,7 @@ reference "fig:E_compare"
 \end_inset
 
  perturbation results.
- We see that the two types of results match very well when 
+ We see that the two types of results match very well for 
 \begin_inset Formula $N$
 \end_inset
 
@@ -4583,7 +4566,7 @@ reference "fig:E_compare"
 \end_inset
 
  are above the exact results.
- It implies the 
+ It implies that the 
 \begin_inset Formula $\mathcal{O}\left(1/N^{4}\right)$
 \end_inset
 
@@ -5815,17 +5798,17 @@ H_{5}=-\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!
 
  commutes with the supersymmetry operators 
 \begin_inset Formula 
-\[
-Q^{a}=\sum_{n=0}^{s-1}\frac{\left(-1\right)^{n}}{n!}\tr\left[e^{i\pi/4}\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{aa_{1}\cdots a_{n}}+e^{-i\pi/4}\bar{\phi}_{aa_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\right],
-\]
+\begin{equation}
+Q^{a}=\sum_{n=0}^{s-1}\frac{\left(-1\right)^{n}}{n!}\tr\left[e^{i\pi/4}\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{aa_{1}\cdots a_{n}}+e^{-i\pi/4}\bar{\phi}_{aa_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\right],\label{eq:App_ham_Q}
+\end{equation}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
+\begin{equation}
 \left\{ Q^{a},Q^{b}\right\} =2M\delta_{ab},
-\]
+\end{equation}
 
 \end_inset
 
