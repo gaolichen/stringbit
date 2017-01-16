@@ -4568,7 +4568,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename plots/EvM-compare.pdf
+	filename EvM-compare.pdf
 	width 50text%
 	groupId halfcolumn
 
@@ -4576,7 +4576,7 @@ status open
 
 
 \begin_inset Graphics
-	filename plots/EvM-compare2.pdf
+	filename EvM-compare2.pdf
 	width 50text%
 	groupId halfcolumn
 
@@ -4811,7 +4811,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename plots/SubEvM-s1xi0.pdf
+	filename SubEvM-s1xi0.pdf
 	width 50text%
 	groupId halfcolumn
 
@@ -4819,7 +4819,7 @@ status open
 
 
 \begin_inset Graphics
-	filename plots/SubEvM-s2xi0.pdf
+	filename SubEvM-s2xi0.pdf
 	width 50text%
 	groupId halfcolumn
 
@@ -4831,7 +4831,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename plots/SubEvM-s3xi0.pdf
+	filename SubEvM-s3xi0.pdf
 	width 50text%
 	groupId halfcolumn
 
@@ -4839,7 +4839,7 @@ status open
 
 
 \begin_inset Graphics
-	filename plots/SubEvM-s4xi0.pdf
+	filename SubEvM-s4xi0.pdf
 	width 50text%
 	groupId halfcolumn
 
@@ -5074,7 +5074,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename plots/SubEvM-s2xi1.pdf
+	filename SubEvM-s2xi1.pdf
 	width 50text%
 	groupId halfcolumn
 
@@ -5082,7 +5082,7 @@ status open
 
 
 \begin_inset Graphics
-	filename plots/SubEvM-s2xi2.pdf
+	filename SubEvM-s2xi2.pdf
 	width 50text%
 	groupId halfcolumn
 
@@ -5281,7 +5281,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename plots/EvS-M6.pdf
+	filename EvS-M6.pdf
 	width 50text%
 	groupId halfcolumn
 
@@ -5289,7 +5289,7 @@ status open
 
 
 \begin_inset Graphics
-	filename plots/EvS-M5.pdf
+	filename EvS-M5.pdf
 	width 50text%
 	groupId halfcolumn
 
