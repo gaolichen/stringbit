@@ -6090,7 +6090,7 @@ H^{\prime}=\frac{1}{N}\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\left(\tr\bar{\p
 
  indicates normal ordering.
  Let us sketch the proof here.
- The similar proof for 
+ The similar proof for the 
 \begin_inset Formula $s=1$
 \end_inset
 
@@ -6188,7 +6188,7 @@ h_{kl}=-2\left(1-2\theta_{k}\frac{d}{d\theta_{k}}\right)-2\theta_{k}\frac{d}{d\t
 
 \end_inset
 
-We now will temporary drop the last two constant terms and add them back
+We now temporary drop the last two constant terms and will add them back
  in the end of the calculation.
 \end_layout
 
@@ -6240,6 +6240,14 @@ h_{kl}=h_{kl}^{\left(1\right)}+h_{kl}^{\left(0\right)}
 \end_inset
 
 where 
+\begin_inset Formula $h_{kl}^{\left(0\right)}$
+\end_inset
+
+ are the terms with zero modes and 
+\begin_inset Formula $h_{kl}^{\left(1\right)}$
+\end_inset
+
+ are the terms without, 
 \begin_inset Formula 
 \begin{align*}
 h_{kl}^{\left(1\right)} & =-2+\frac{4}{M}\sum_{n,m=1}^{M-1}\alpha_{n}\beta_{m}\exp\left(2\pi ik\frac{m+n}{M}\right)\\
@@ -6260,7 +6268,12 @@ h_{kl}^{\left(0\right)}=\frac{2}{M}\sum_{n=1}^{M-1}\left(\alpha_{n}\beta_{0}+\al
 \end_layout
 
 \begin_layout Standard
-We then express 
+Let us first consider 
+\begin_inset Formula $h_{kl}^{\left(1\right)}$
+\end_inset
+
+.
+ We express nonzero modes 
 \begin_inset Formula $\alpha_{m}$
 \end_inset
 
@@ -6329,7 +6342,7 @@ end{subequations}
 
 \end_inset
 
-Applying eqs.
+We then apply eqs.
  
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -6341,7 +6354,7 @@ reference "eq:App_hkl_ab"
 \begin_inset Formula $h_{kl}^{\left(1\right)}$
 \end_inset
 
-, then combining like terms and antisymmetrize 
+, collect like terms, and antisymmetrize 
 \begin_inset Formula $F^{\dagger}F^{\dagger}$
 \end_inset
 
@@ -6349,7 +6362,7 @@ reference "eq:App_hkl_ab"
 \begin_inset Formula $FF$
 \end_inset
 
- terms, we obtain 
+ terms to give 
 \begin_inset Formula 
 \begin{equation}
 h_{kl}^{\left(1\right)}=\frac{2}{M}\sum_{n,m=1}^{M-1}\left(A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}+A_{nm}F_{n}F_{m}+2A_{-n,m}F_{n}^{\dagger}F_{m}\right)-\frac{2}{M}\cot\frac{\pi}{2M}+\frac{2}{M}\cot\frac{2\left(k-l\right)+1}{2M}\pi,\label{eq:App_hkl1}
@@ -6518,7 +6531,7 @@ In this appendix we will derive the formula
 \begin_inset Formula 
 \begin{multline}
 \left\langle \cdots\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle =\\
--\frac{2}{M}\tr\left(S^{*}C^{-1}\bar{A}\right)\left\langle \cdots\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}\Omega_{mn}\left\langle \cdots f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \label{eq:App_AFF_1}
+-\frac{2}{M}\tr\left(S^{*}C^{-1}\bar{A}\right)\left\langle \cdots\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}B_{mn}\left\langle \cdots f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \label{eq:App_AFF_1}
 \end{multline}
 
 \end_inset
@@ -6527,8 +6540,8 @@ In this appendix we will derive the formula
 \begin_inset Formula $\bar{A}\equiv A^{\dagger}$
 \end_inset
 
- and
-\begin_inset Formula $\Omega=C^{-1}\bar{A}\left(C^{-1}\right)^{T}$
+ and 
+\begin_inset Formula $B=C^{-1}\bar{A}\left(C^{-1}\right)^{T}$
 \end_inset
 
 , and relations among 
@@ -6545,9 +6558,9 @@ In this appendix we will derive the formula
 
  are given by 
 \begin_inset Formula 
-\[
-F_{m}=\sum_{n=0}^{M-1}\left(f_{n}C_{mn}+f_{n}^{\dagger}S_{mn}\right),\quad0\leq m\leq M-1.
-\]
+\begin{equation}
+F_{m}=\sum_{n=0}^{M-1}\left(f_{n}C_{mn}+f_{n}^{\dagger}S_{mn}\right),\quad0\leq m\leq M-1.\label{eq:App_AFF_Ffrelation}
+\end{equation}
 
 \end_inset
 
@@ -6559,9 +6572,7 @@ F_{m}=\sum_{n=0}^{M-1}\left(f_{n}C_{mn}+f_{n}^{\dagger}S_{mn}\right),\quad0\leq 
 \end_layout
 
 \begin_layout Standard
-In the following calculation, we will suppress summation symbol and use
- repeating indices to indicate summation.
- Let 
+Let 
 \begin_inset Formula $X=\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}$
 \end_inset
 
@@ -6583,14 +6594,37 @@ In the following calculation, we will suppress summation symbol and use
 \color none
 
 \begin_inset Formula 
-\[
-F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\ket{G}=\exp\left(X\right)\left(\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}-\left[X,\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\right]+\frac{1}{2}\left[X,\left[X,\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\right]\right]+\cdots\right)\ket{0}.
-\]
+\begin{equation}
+F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\ket{G}=\exp\left(X\right)\left(\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}-\left[X,\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\right]+\frac{1}{2}\left[X,\left[X,\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\right]\right]+\cdots\right)\ket{0}.\label{eq:App_AFF_res1}
+\end{equation}
 
 \end_inset
 
-Now let us calculate each term in the parenthesis of RHS.
+Now let us calculate each term in the parenthesis of RHS of eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:App_AFF_res1"
+
+\end_inset
+
+.
  For the first term
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\backslash
+label{eq:App_AFF_subres}
+\end_layout
+
+\end_inset
+
+
 \family default
 \series default
 \shape default
@@ -6604,15 +6638,47 @@ Now let us calculate each term in the parenthesis of RHS.
 \color inherit
 
 \begin_inset Formula 
-\begin{align*}
-\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\ket{0} & =\left(\bar{A}_{nm}f_{i}^{\dagger}f_{j}^{\dagger}C_{ni}^{*}C_{mj}^{*}+\bar{A}_{nm}f_{i}S_{ni}^{*}f_{j}^{\dagger}C_{mj}^{*}\right)\ket{0}\\
- & =\left(\bar{A}_{nm}f_{i}^{\dagger}f_{j}^{\dagger}C_{ni}^{*}C_{mj}^{*}+\bar{A}_{nm}S_{ni}^{*}C_{mj}^{*}\left\{ f_{i},f_{j}^{\dagger}\right\} \right)\ket{0}\\
- & =\left[f_{i}^{\dagger}\left(C^{\dagger}\bar{A}C^{*}\right)_{ij}f_{j}^{\dagger}+\tr\left(\bar{A}C^{*}S^{\dagger}\right)\right]\ket{0}
-\end{align*}
+\begin{align}
+\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\ket{0} & =\left(\bar{A}_{nm}f_{i}^{\dagger}f_{j}^{\dagger}C_{ni}^{*}C_{mj}^{*}+\bar{A}_{nm}f_{i}S_{ni}^{*}f_{j}^{\dagger}C_{mj}^{*}\right)\ket{0}\nonumber \\
+ & =\left(\bar{A}_{nm}f_{i}^{\dagger}f_{j}^{\dagger}C_{ni}^{*}C_{mj}^{*}+\bar{A}_{nm}S_{ni}^{*}C_{mj}^{*}\left\{ f_{i},f_{j}^{\dagger}\right\} \right)\ket{0}\nonumber \\
+ & =\left[f_{i}^{\dagger}\left(C^{\dagger}\bar{A}C^{*}\right)_{ij}f_{j}^{\dagger}+\tr\left(\bar{A}C^{*}S^{\dagger}\right)\right]\ket{0}\label{eq:App_AFF_subres:1}
+\end{align}
 
 \end_inset
 
-For the second term, we first find 
+For the second term of RHS of 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:App_AFF_res1"
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+, we first find 
 \begin_inset Formula 
 \begin{align*}
 \left[\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger},F_{m}^{\dagger}\right] & =\frac{1}{2}D_{kl}\left[f_{k}^{\dagger}f_{l}^{\dagger},F_{m}^{\dagger}\right]\\
@@ -6632,7 +6698,7 @@ For the second term, we first find
 \end_inset
 
 and in the last step the property that 
-\begin_inset Formula $M_{kl}$
+\begin_inset Formula $D_{kl}$
 \end_inset
 
  is antisymmetric.
@@ -6652,30 +6718,89 @@ and in the last step the property that
 
  It then follows 
 \begin_inset Formula 
-\[
-\left[X,F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\right]\ket{0}=\left[2f_{k}^{\dagger}\left(DS^{\dagger}\bar{A}C^{*}\right)_{kl}f_{l}^{\dagger}-\tr\left(\bar{A}S^{*}DS^{\dagger}\right)\right]\ket{0}.
-\]
+\begin{equation}
+\left[X,F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\right]\ket{0}=\left[2f_{k}^{\dagger}\left(DS^{\dagger}\bar{A}C^{*}\right)_{kl}f_{l}^{\dagger}-\tr\left(\bar{A}S^{*}DS^{\dagger}\right)\right]\ket{0}.\label{eq:App_AFF_subres:2}
+\end{equation}
 
 \end_inset
 
- For the third term
+ For the third term RHS of 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:App_AFF_res1"
+
+\end_inset
+
+,
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
 \begin_inset Formula 
-\begin{align*}
-\left[X,\left[X,\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\right]\right] & =\left[X,2f_{k}^{\dagger}\left(DS^{\dagger}\bar{A}\right)_{km}F_{m}^{\dagger}\right]-\zero{\left[X,\tr\left(\bar{A}S^{*}DS^{\dagger}\right)\right]}\\
- & =2f_{i}^{\dagger}\left(DS^{\dagger}\bar{A}\right)_{im}\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger},F_{m}^{\dagger}\right]\\
- & =-2f_{k}^{\dagger}\left(DS^{\dagger}\bar{A}S^{*}D\right)_{kl}f_{l}^{\dagger}.
-\end{align*}
+\begin{align}
+\left[X,\left[X,\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\right]\right] & =\left[X,2f_{k}^{\dagger}\left(DS^{\dagger}\bar{A}\right)_{km}F_{m}^{\dagger}\right]-\zero{\left[X,\tr\left(\bar{A}S^{*}DS^{\dagger}\right)\right]}\nonumber \\
+ & =2f_{i}^{\dagger}\left(DS^{\dagger}\bar{A}\right)_{im}\left[\frac{1}{2}\sum_{k,l}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger},F_{m}^{\dagger}\right]\nonumber \\
+ & =-2f_{k}^{\dagger}\left(DS^{\dagger}\bar{A}S^{*}D\right)_{kl}f_{l}^{\dagger}.\label{eq:App_AFF_subres:3}
+\end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
 
 \end_inset
 
  It follows that the higher order commutations all vanish.
- We therefore have
+ Substituting eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:App_AFF_subres"
+
+\end_inset
+
+ into eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:App_AFF_res1"
+
+\end_inset
+
+, we have
 \begin_inset Formula 
 \begin{align*}
-F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\ket{G} & =\exp\left(X\right)\left(\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}-\left[X,\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\right]+\frac{1}{2}\left[X,\left[X,\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\right]\right]\right)\ket{0}\\
- & =\left[f_{k}^{\dagger}\left(C^{\dagger}\bar{A}C^{*}\right)_{kl}f_{l}^{\dagger}+\tr\left(\bar{A}C^{*}S^{\dagger}\right)\right]\ket{G}\\
- & =-\left[2f_{k}^{\dagger}\left(DS^{\dagger}\bar{A}C^{*}\right)_{kl}f_{l}^{\dagger}-\tr\left(\bar{A}S^{*}DS^{\dagger}\right)\right]\ket{G}\\
- & \hspace{1em}-f_{k}^{\dagger}\left(DS^{\dagger}\bar{A}S^{*}D\right)_{kl}f_{l}^{\dagger}\ket{G}\\
+F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\ket{G} & =\left[f_{k}^{\dagger}\left(C^{\dagger}\bar{A}C^{*}\right)_{kl}f_{l}^{\dagger}+\tr\left(\bar{A}C^{*}S^{\dagger}\right)\right]\ket{G}\\
+ & \hspace{1em}-\left[2f_{k}^{\dagger}\left(DS^{\dagger}\bar{A}C^{*}\right)_{kl}f_{l}^{\dagger}-\tr\left(\bar{A}S^{*}DS^{\dagger}\right)\right]\ket{G}-f_{k}^{\dagger}\left(DS^{\dagger}\bar{A}S^{*}D\right)_{kl}f_{l}^{\dagger}\ket{G}\\
  & =\tr\left[\bar{A}\left(C^{*}+S^{*}D\right)S^{\dagger}\right]\ket{G}\\
  & \hspace{1em}+f_{k}^{\dagger}\left(C^{\dagger}\bar{A}C^{*}-2DS^{\dagger}\bar{A}C^{*}-DS^{\dagger}\bar{A}S^{*}D\right)_{kl}f_{l}^{\dagger}\ket{G}\\
  & =\tr\left[\bar{A}\left(C^{*}+S^{*}D\right)S^{\dagger}\right]\ket{G}\\
@@ -6683,12 +6808,29 @@ F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\ket{G} & =\exp\left(X\right)\left(\ba
  & =\tr\left[\bar{A}\left(C^{*}+S^{*}D\right)S^{\dagger}\right]\ket{G}\\
  & \hspace{1em}+f_{k}^{\dagger}\left[C^{\dagger}\bar{A}\left(C^{*}+S^{*}D\right)-DS^{\dagger}\bar{A}\left(S^{*}D+C^{*}\right)\right]_{kl}f_{l}^{\dagger}\ket{G}\\
  & =\tr\left[\bar{A}\left(C^{*}+S^{*}D\right)S^{\dagger}\right]\ket{G}\\
- & \hspace{1em}+f_{k}^{\dagger}\left[\left(C^{*}+S^{*}D\right)^{T}\bar{A}\left(C^{*}+S^{*}D\right)\right]_{kl}f_{l}^{\dagger}\ket{G}.
+ & \hspace{1em}+f_{k}^{\dagger}\left[\left(C^{*}+S^{*}D\right)^{T}\bar{A}\left(C^{*}+S^{*}D\right)\right]_{kl}f_{l}^{\dagger}\ket{G},
 \end{align*}
 
 \end_inset
 
- Since 
+ where in the third equality we antisymmetrized 
+\begin_inset Formula $2DS^{\dagger}\bar{A}C^{*}$
+\end_inset
+
+ term to be 
+\begin_inset Formula $DS^{\dagger}\bar{A}C^{*}-\left(DS^{\dagger}\bar{A}C^{*}\right)^{T}$
+\end_inset
+
+ and then used the fact that 
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $D$
+\end_inset
+
+ are antisymmetric matrices.
+ Now 
 \begin_inset Formula 
 \[
 C^{*}+S^{*}D=C^{*}-C^{*}D^{*}D=C^{*}\left(I-D^{*}D\right)=C^{*}\left(I+DD^{\dagger}\right)^{T}=C^{*}\left(C^{-1}C^{-1\dagger}\right)^{T}=\left(C^{-1}\right)^{T},
@@ -6696,7 +6838,27 @@ C^{*}+S^{*}D=C^{*}-C^{*}D^{*}D=C^{*}\left(I-D^{*}D\right)=C^{*}\left(I+DD^{\dagg
 
 \end_inset
 
- we have 
+ where in the second to last equality 
+\begin_inset Formula $I+DD^{\dagger}=C^{-1}C^{-1\dagger}$
+\end_inset
+
+ follows from eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_CS_relation"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_CMS"
+
+\end_inset
+
+.
+ We therefore have 
 \begin_inset Formula 
 \[
 F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\ket{G}=-\tr\left(S^{*}C^{-1}\bar{A}\right)\ket{G}+f_{k}^{\dagger}\left[C^{-1}\bar{A}\left(C^{-1}\right)^{T}\right]_{kl}f_{l}^{\dagger}\ket{G},
@@ -6729,8 +6891,15 @@ Examples of
 \end_layout
 
 \begin_layout Standard
-In this appendix, let us calculate the one-loop self energy for the ground
- state of 
+In this appendix, as a demo of using 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:olp_DeltaE"
+
+\end_inset
+
+ to calculate one-loop self energy, let us consider the one-loop self energy
+ for the ground state of 
 \begin_inset Formula $M=3,\, s=1$
 \end_inset
 
@@ -6805,11 +6974,11 @@ e^{-i\frac{5\pi}{6}} & e^{-i\frac{\pi}{3}}
 \end_inset
 
 , 
-\begin_inset Formula $\Omega$
+\begin_inset Formula $B$
 \end_inset
 
 , and constant 
-\begin_inset Formula $\gamma^{\prime}$
+\begin_inset Formula $\mu^{\prime}$
 \end_inset
 
  are 
@@ -6855,7 +7024,7 @@ f_{0}=F_{0},\quad f_{1}=F_{1}^{\left(2\right)},\quad f_{2}=e^{-i\pi/4}\left(\sqr
 \begin_inset Formula $2$
 \end_inset
 
--bit chains are in table 
+-bit chains are shown in table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Energy-eigenstates-1"
@@ -7073,7 +7242,7 @@ name "tab:Energy-eigenstates-1"
 \begin_inset Formula $s=1$
 \end_inset
 
- which do not contain zero modes.
+ that do not contain zero modes.
 \end_layout
 
 \end_inset
@@ -7135,7 +7304,7 @@ So we need to calculate
 
 \end_inset
 
-Substituting above results and ground energy 
+Substituting above results and 
 \begin_inset Formula $E_{G}=-4\sqrt{3}$
 \end_inset
 
@@ -7232,7 +7401,7 @@ With above results, we find the
 \begin_inset Formula $\Delta E_{G}^{\prime\prime}=\frac{\left(2\sqrt{3}-3\xi\right)\xi}{3\sqrt{3}+5}\frac{1}{N^{2}}$
 \end_inset
 
- and the final result of energy correction is
+ and the final result of the energy correction is
 \begin_inset Formula 
 \[
 \Delta E_{G}=\Delta E_{G}^{\prime}+\Delta E_{G}^{\prime\prime}=-3\left(3\sqrt{3}-5\right)\xi^{2}+2\left(12-7\sqrt{3}\right)\xi-\frac{3}{2}\left(3\sqrt{3}-5\right).
@@ -7263,14 +7432,14 @@ reference "tab:Energy-eigenstates-2"
  shows, the energy eigenstates of small chains are different.
  The energy correction now is given by 
 \begin_inset Formula 
-\begin{multline*}
-\Delta E_{G}=\frac{1}{N^{2}}\sum_{L=1}^{2}\frac{KLM\left|\det C\right|^{2}}{E_{G}-E_{G}^{\left(2\right)}-0}\left(\left\langle 1\right\rangle _{W}^{*}\left\langle 1\right\rangle _{V}+\left\langle f_{2}f_{0}\right\rangle _{W}^{*}\left\langle f_{2}f_{0}\right\rangle _{V}\right)^{2}\\
-+\frac{1}{N^{2}}\sum_{L=1}^{2}\frac{KLM\left|\det C\right|^{2}}{E_{G}-E_{1}^{\left(2\right)}-0}\left(\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V}+\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{V}\right)^{2}.
-\end{multline*}
+\begin{align}
+\Delta E_{G} & =\frac{1}{N^{2}}\sum_{L=1}^{2}\frac{KLM\left|\det C\right|^{2}}{E_{G}-E_{G}^{\left(2\right)}-0}\left(\left\langle 1\right\rangle _{W}^{*}\left\langle 1\right\rangle _{V}+\left\langle f_{2}f_{0}\right\rangle _{W}^{*}\left\langle f_{2}f_{0}\right\rangle _{V}\right)^{2}\nonumber \\
+ & \hspace{1em}+\frac{1}{N^{2}}\sum_{L=1}^{2}\frac{KLM\left|\det C\right|^{2}}{E_{G}-E_{1}^{\left(2\right)}-0}\left(\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V}+\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{V}\right)^{2}.\label{eq:App_ex_DeltaEs2}
+\end{align}
 
 \end_inset
 
- We have calculated the 
+Since we have calculated the 
 \begin_inset Formula $\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V,W}$
 \end_inset
 
@@ -7282,8 +7451,7 @@ reference "tab:Energy-eigenstates-2"
 \begin_inset Formula $s=1$
 \end_inset
 
- case.
- We only need to find 
+ case, we only need to find 
 \begin_inset Formula $\left\langle 1\right\rangle _{V,W}$
 \end_inset
 
@@ -7622,10 +7790,11 @@ For
 
 \end_inset
 
-Applying formula 
+Substituting above into eq.
+ 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:olp_DeltaE"
+reference "eq:App_ex_DeltaEs2"
 
 \end_inset
 
