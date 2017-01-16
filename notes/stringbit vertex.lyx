@@ -3555,7 +3555,7 @@ V_{qpr}^{\left(K,L\right)} & =\left(-\right)^{Kg_{p}+Lg_{q}}M\int d\theta\,\tild
 
 \end_inset
 
- where in the last tep we first changed the integrand to 
+ where in the last step we first changed the integrand to 
 \begin_inset Formula $\bar{\psi}_{G}^{\left(K\right)}\mathbb{F}_{q}\bar{\psi}_{G}^{\left(L\right)}\mathbb{F}_{p}h^{\left(V\right)}\mathbb{F}_{r}^{\dagger}\psi_{G}^{\left(M\right)}$
 \end_inset
 
