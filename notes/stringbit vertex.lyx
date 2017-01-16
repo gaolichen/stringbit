@@ -129,7 +129,7 @@ status open
 abstract{We provide a formalism to calculate the cubic interaction vertices
  of the stable string bit model, in which string bits have $s$ spin degrees
  of freedom but no space to move.
- With the vertices, we obtain a formula for one-loop self energy, i.e., the
+ With the vertices, we obtain a formula for one-loop self-energy, i.e., the
  $
 \backslash
 mathcal{O}
@@ -137,7 +137,7 @@ mathcal{O}
 left(1/N^{2}
 \backslash
 right)$ correction to the energy spectrum.
- A rough analysis shows that, when $M$ is large, the one-loop self energy
+ A rough analysis shows that, when $M$ is large, the one-loop self-energy
  $
 \backslash
 Delta E_{G}$ should scale as $M^{5-s/4}$ for even $s$ and $M^{4-s/4}$ for
