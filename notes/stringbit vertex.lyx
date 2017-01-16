@@ -166,7 +166,7 @@ leq4$ cases.}
 \end_layout
 
 \begin_layout Title
-Cubic Interaction Vertices and One-loop Self Energy in the Stable String
+Cubic Interaction Vertices and One-loop Self-energy in the Stable String
  Bit Model
 \end_layout
 
@@ -443,12 +443,12 @@ key "Thorn:2015wli"
 \end_inset
 
 , where the cubic interaction vertices and their application to one-loop
- self energy were discussed.
+ self-energy were discussed.
  In this paper, we will perform a detailed study of them.
- The calculation of the vertices and one-loop self energy will be done by
+ The calculation of the vertices and one-loop self-energy will be done by
  finding the vacuum expectation values of ladder operators.
  Based on the formula we obtain, a rough estimation will show that, the
- one-loop self energy scales like 
+ one-loop self-energy scales like 
 \begin_inset Formula $M^{5-s/4}$
 \end_inset
 
@@ -485,7 +485,7 @@ key "Thorn:2015wli"
 \end_inset
 
 .
- We will analytically calculate the one-loop self energy for the cases of
+ We will analytically calculate the one-loop self-energy for the cases of
  
 \begin_inset Formula $M=3$
 \end_inset
@@ -573,8 +573,8 @@ reference "sec:EnergyCorrection"
 
 \end_inset
 
-, we use the cubic interaction vertices to find one-loop self energy.
- The results of numerical computation for one-loop self energy are analyzed
+, we use the cubic interaction vertices to find one-loop self-energy.
+ The results of numerical computation for one-loop self-energy are analyzed
  in section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3549,7 +3549,7 @@ Note that
 \end_inset
 
 .
- We shall see that physical observables, like one-loop self energy, only
+ We shall see that physical observables, like one-loop self-energy, only
  depend on products like 
 \begin_inset Formula $W_{rpq}V_{qpr}$
 \end_inset
@@ -3701,17 +3701,17 @@ name "sec:EnergyCorrection"
 
 \end_inset
 
-One-loop Self Energy
+One-loop Self-energy
 \end_layout
 
 \begin_layout Standard
 One application of the interaction vertices is to calculate the one-loop
- self energy, i.e., the 
+ self-energy, i.e., the 
 \begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
 \end_inset
 
  correction to energy spectrum.
- In this section, we will first express the one-loop self energy in terms
+ In this section, we will first express the one-loop self-energy in terms
  of cubic interaction vertices 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -3952,7 +3952,7 @@ Ground Energy Correction
 \end_layout
 
 \begin_layout Standard
-In principle, we can now calculate one-loop self energy for any single trace
+In principle, we can now calculate one-loop self-energy for any single trace
  energy state with eq.
  
 \begin_inset CommandInset ref
@@ -4144,7 +4144,7 @@ reference "eq:olp_vev_v"
 \end_layout
 
 \begin_layout Standard
-Combining above together, we can calculate the one-loop self energy of the
+Combining above together, we can calculate the one-loop self-energy of the
  ground state.
  As the complete formula is very complicated, we do not bother writing it
  here.
@@ -5468,7 +5468,7 @@ Summary and Conclusion
 
 \begin_layout Standard
 We have presented a formalism to calculate the cubic interaction vertices
- for stable string bit model and its application in one-loop self energy.
+ for stable string bit model and its application in one-loop self-energy.
  The calculation of both are transferred to the calculation of vacuum expectatio
 n values of eigenoperators.
  
@@ -5479,7 +5479,7 @@ When the bit number
 \begin_inset Formula $M$
 \end_inset
 
- is large, the one-loop self energy of the ground state 
+ is large, the one-loop self-energy of the ground state 
 \begin_inset Formula $\Delta E_{G}$
 \end_inset
 
@@ -6942,7 +6942,7 @@ reference "eq:olp_DeltaE"
 
 \end_inset
 
- to calculate one-loop self energy, let us consider the one-loop self energy
+ to calculate one-loop self-energy, let us consider the one-loop self-energy
  for the ground state of 
 \begin_inset Formula $M=3,\, s=1$
 \end_inset
