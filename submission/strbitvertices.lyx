@@ -147,8 +147,9 @@ Delta E_{G}$ should scale as $M^{5-s/4}$ for even $s$ and $M^{4-s/4}$ for
 \backslash
 Delta E_{G}
 \backslash
-sim1/M$, which resembles the Poincar invariant relation of $1+1$ dimension
- $P^{-}
+sim1/M$, which resembles the Poincar
+\backslash
+'e invariant relation of $1+1$ dimension $P^{-}
 \backslash
 sim1/P^{+}$.
  We calculate analytically the one-loop correction for the ground energies
