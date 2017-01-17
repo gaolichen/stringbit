@@ -137,8 +137,8 @@ mathcal{O}
 left(1/N^{2}
 \backslash
 right)$ correction to the energy spectrum.
- A rough analysis shows that, when $M$ is large, the one-loop self-energy
- $
+ A rough analysis shows that, when the bit number $M$ is large, the ground
+ state one-loop self-energy $
 \backslash
 Delta E_{G}$ should scale as $M^{5-s/4}$ for even $s$ and $M^{4-s/4}$ for
  odd $s$.
@@ -153,7 +153,7 @@ sim1/M$, which resembles the Poincar
 \backslash
 sim1/P^{+}$.
  We calculate analytically the one-loop correction for the ground energies
- with bit number $M=3$ and $s=1,
+ with $M=3$ and $s=1,
 \backslash
 ,2$.
  We then numerically confirm that the large $M$ behavior holds for $s
