@@ -6,6 +6,21 @@
 \begin_preamble
 \setbeamercolor{background canvas}{bg=}
 \setbeamertemplate{background}{\includegraphics[width=1.0\paperwidth,height=1.0\paperheight]{Vintage.png}}
+
+\usepackage{cancel}
+\newcommand{\zero}[1] {\cancelto{0}{#1}}
+\newcommand{\tr}{\mathrm{Tr}\,}
+\newcommand{\ba}{\bar{a}}
+\newcommand{\bb}{\bar{b}}
+\newcommand{\normord}[1]{{:}\!\mathrel{#1}\!{:}}
+\newcommand{\ket}[1]{\left|#1\right\rangle}
+\newcommand{\bra}[1]{\left\langle #1\right|}
+\newcommand{\ketp}[1]{\left|#1\right\} }
+\newcommand{\brap}[1]{\left\{ #1\right|}
+\newcommand{\dprod}[2]{\left\langle #1|#2\right\rangle}
+\newcommand{\dprodp}[2]{\left\{ #1|#2\right\} }
+\newcommand{\mat}[1]{\mathbf{#1}}
+\newcommand{\g}{\mathrm{g}}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -128,7 +143,424 @@ Solution in large
 \end_layout
 
 \begin_layout BeginFrame
+Review: superstring bit operator
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<1->
+\end_layout
+
+\end_inset
+
+String bit creation operator: 
+\begin_inset Formula 
+\[
+\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta},\quad a_{i}=1,\cdots,s,\quad n=0,\cdots,s,\quad\alpha,\beta=1,\cdots,N
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ are totally antisymmetric, 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, 
+\begin_inset Formula $\beta$
+\end_inset
+
+ color indices of 
+\begin_inset Formula $U\left(N\right)$
+\end_inset
+
+ group, s maximum number of spin indices.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<1->
+\end_layout
+
+\end_inset
+
+Graded bracket relations 
+\begin_inset Formula 
+\[
+\left[\left(\phi_{a_{1}\cdots a_{n}}\right){}_{\alpha}^{\beta},\left(\bar{\phi}_{b_{1}\cdots b_{m}}\right){}_{\gamma}^{\delta}\right]_{\pm}=\delta_{mn}\delta_{\alpha}^{\delta}\delta_{\gamma}^{\beta}\sum_{P}\left(-\right)^{P}\delta_{a_{1}b_{P_{1}}}\cdots\delta_{a_{n}b_{P_{n}}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout ExampleBlock
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<2->
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\color blue
+Example of 
+\begin_inset Formula $s=1$
+\end_inset
+
+ 
+\color inherit
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\bar{a}\equiv\bar{\phi},\quad\bar{b}\equiv\bar{\phi}_{1},\quad\left[a_{\alpha}^{\beta},\bar{a}_{\gamma}^{\delta}\right]=\delta_{\alpha}^{\delta}\delta_{\gamma}^{\beta},\quad\left\{ b_{\alpha}^{\beta},\bar{b}_{\gamma}^{\delta}\right\} =\delta_{\alpha}^{\delta}\delta_{\gamma}^{\beta}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<3->
+\end_layout
+
+\end_inset
+
+In Fock space, a closed string has the form 
+\begin_inset Formula $\tr\bar{\phi}\bar{\phi}\cdots\bar{\phi}\ket{0}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Review: Super bit operators and Trace states space
+\end_layout
+
+\begin_layout Itemize
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Super bit creation operator
+\begin_inset Formula 
+\[
+\psi\left(\theta\right)=\sum_{k=0}^{s}\frac{1}{k!}\bar{\phi}_{c_{1}\cdots c_{k}}\theta^{c_{1}}\cdots\theta^{c_{k}}
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $\theta^{a}$
+\end_inset
+
+ are 
+\begin_inset Formula $s$
+\end_inset
+
+ Grassmann coordinates
+\end_layout
+
+\begin_layout Itemize
+Trace operator
+\begin_inset Formula 
+\[
+T\left(\theta_{1},\cdots,\theta_{k}\right)=\tr\psi\left(\theta_{1}\right)\psi\left(\theta_{2}\right)\cdots\psi\left(\theta_{k}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Trace states: 
+\begin_inset Formula $T\left(\theta_{1},\cdots,\theta_{K}\right)T\left(\eta_{1},\cdots,\eta_{L}\right)\cdots\ket{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Review: Hamiltonian
+\end_layout
+
+\begin_layout Itemize
+In terms of 
+\begin_inset Formula $\theta^{a}$
+\end_inset
+
+, the Hamiltonian 
+\begin_inset Formula $H$
+\end_inset
+
+ can be written as 
+\begin_inset Formula 
+\[
+h=\sum_{k=1}^{M}h_{k,k+1}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+h_{kl}=-2\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)-2\theta_{k}^{a}\frac{d}{d\theta_{l}^{a}}-2\theta_{l}^{a}\frac{d}{d\theta_{k}^{a}}-2i\theta_{k}^{a}\theta_{l}^{a}-2i\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{l}^{a}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $M$
+\end_inset
+
+-bit Single trace energy eigen states states
+\begin_inset Formula 
+\[
+T_{r}\ket{0}=\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta_{1},\cdots,\theta_{M}\right)\psi_{r}\left(\theta_{1},\dots,\theta_{M}\right)\ket{0}
+\]
+
+\end_inset
+
+where the wave function 
+\begin_inset Formula $\psi_{r}$
+\end_inset
+
+ fillfulls 
+\begin_inset Formula $h\psi_{r}=E_{r}\psi_{r}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Review: 
+\begin_inset Formula $N=\infty$
+\end_inset
+
+ results
+\end_layout
+
+\begin_layout Itemize
+Eigenoperators
+\begin_inset Formula 
+\[
+\alpha_{n}=\frac{1}{\sqrt{M}}\sum_{k=1}^{M}\theta_{k}e^{-2\pi ikn/M},\quad\beta_{n}=\frac{1}{\sqrt{M}}\sum_{k=1}^{M}\frac{d}{d\theta_{k}}e^{-2\pi ikn/M},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+F_{k}=\sin\left(\frac{\pi}{4}-\frac{k\pi}{2M}\right)\alpha_{k}+\cos\left(\frac{\pi}{4}-\frac{k\pi}{2M}\right)\beta_{k}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left\{ F_{k},F_{l}\right\} =\left\{ F_{k}^{\dagger},F_{l}^{\dagger}\right\} =0,\quad\left\{ F_{k},F_{l}^{\dagger}\right\} =\delta_{kl}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Energy spectrum
+\begin_inset Formula 
+\[
+\psi=F_{1}^{\dagger\lambda_{1}}F_{2}^{\dagger\lambda_{2}}\cdots F_{M-1}^{\dagger\lambda_{M-1}}\psi_{G},\quad\lambda_{k}=0,\,1
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+E_{\{\lambda_{a,k}\}}=-4\cot\frac{\pi}{2M}+8\sum_{k=1}^{M-1}\lambda_{k}\sin\frac{k\pi}{M},\quad\lambda_{k}=0,\,1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Hamiltonian
+\end_layout
+
+\begin_layout Itemize
+For 
+\begin_inset Formula $s=1$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{2}{N}\tr\left[\left(\bar{a}^{2}-i\bar{b}^{2}\right)a^{2}-\left(\bar{b}^{2}-i\bar{a}^{2}\right)b^{2}+\left(\bar{a}\bar{b}+\bar{b}\bar{a}\right)ba+\left(\bar{a}\bar{b}-\bar{b}\bar{a}\right)ab\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Conserve bit number
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Hamiltonian
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $H=\sum_{i=1}^{5}H_{i}$
+\end_inset
+
+ where
+\begin_inset Formula 
+\[
+H_{1}=\frac{2}{N}\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{s-2n}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+H_{2}=\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{bb_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{ba_{1}\cdots a_{n}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+H_{3}=\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{ba_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{bb_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+H_{4}=\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{bb_{1}\cdots b_{k}}\phi_{ba_{1}\cdots a_{n}},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+H_{5}=-\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{ba_{1}\cdots a_{n}}\bar{\phi}_{bb_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
 Cubic Interaction Vertices
+\end_layout
+
+\begin_layout Itemize
+Vertix
+\begin_inset Formula 
+\[
+HT_{r}\ket{0}=E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{L=1}^{M-1}\sum_{p,q}T_{p}T_{q}\ket{0}V_{qpr}^{\left(K,L\right)}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout EndFrame
