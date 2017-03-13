@@ -111,6 +111,26 @@ Mar 14, 2017
 Outline
 \end_layout
 
+\begin_layout Itemize
+Introduction
+\end_layout
+
+\begin_layout Itemize
+Review
+\end_layout
+
+\begin_layout Itemize
+Cubic Interaction Vertices
+\end_layout
+
+\begin_layout Itemize
+One-loop self-energy
+\end_layout
+
+\begin_layout Itemize
+Numerical Results
+\end_layout
+
 \begin_layout EndFrame
 
 \end_layout
@@ -145,7 +165,7 @@ A string bit is described coordinates
 \begin_inset Formula $m$
 \end_inset
 
- is mass of each stringbit and 
+ is mass of each string bit and 
 \begin_inset Formula $M$
 \end_inset
 
@@ -162,7 +182,7 @@ A string bit is described coordinates
 \begin_inset Formula $P^{+}$
 \end_inset
 
- behaves as continuous variable and its conjugate can be interpreted as
+ behaves as a continuous variable and its conjugate can be interpreted as
  the missing coordinates, and Lotentz invariance is regained.
  
 \end_layout
@@ -301,7 +321,7 @@ where
  
 \begin_inset Formula 
 \[
-\left[\left(\phi_{a_{1}\cdots a_{n}}\right){}_{\alpha}^{\beta},\left(\bar{\phi}_{b_{1}\cdots b_{m}}\right){}_{\gamma}^{\delta}\right]_{\pm}=\delta_{mn}\delta_{\alpha}^{\delta}\delta_{\gamma}^{\beta}\sum_{P}\left(-\right)^{P}\delta_{a_{1}b_{P_{1}}}\cdots\delta_{a_{n}b_{P_{n}}}.
+\left[\left(\phi_{a_{1}\cdots a_{n}}\right){}_{\alpha}^{\beta},\left(\bar{\phi}_{b_{1}\cdots b_{m}}\right){}_{\gamma}^{\delta}\right]_{\pm}=\delta_{mn}\delta_{\alpha}^{\delta}\delta_{\gamma}^{\beta}\sum_{P\in S_{n}}\left(-\right)^{P}\delta_{a_{1}b_{P_{1}}}\cdots\delta_{a_{n}b_{P_{n}}}.
 \]
 
 \end_inset
@@ -393,7 +413,7 @@ status open
 
 \end_inset
 
-Bit operator 
+Bit number operator 
 \begin_inset Formula $M=\sum_{n}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}$
 \end_inset
 
@@ -533,7 +553,7 @@ T\left(\theta_{1},\cdots,\theta_{k}\right)=\tr\psi\left(\theta_{1}\right)\psi\le
 \end_layout
 
 \begin_layout Itemize
-The trace state space is spaned by 
+The trace state space is spanned by 
 \begin_inset Formula 
 \[
 T\left(\theta_{1},\cdots,\theta_{K}\right)T\left(\eta_{1},\cdots,\eta_{L}\right)\cdots\ket{0}
@@ -824,7 +844,7 @@ Let
 \begin_inset Formula 
 \begin{align*}
 C_{pq} & =\frac{1}{E_{r}-E_{p}-E_{q}}\frac{1}{N}V_{qpr}+\mathcal{O}\left(N^{-2}\right),\\
-\Delta E_{r} & =\frac{1}{N^{2}}\sum_{L=1}^{M-1}\sum_{M_{p}=L,M_{q}=K}W_{rpq}^{\left(L,K\right)}\frac{1}{E_{r}-E_{p}-E_{q}}V_{qpr}^{\left(K,L\right)},
+\Delta E_{r} & =\frac{1}{N^{2}}\sum_{L=1}^{M-1}\sum_{p,q}W_{rpq}^{\left(L,K\right)}\frac{1}{E_{r}-E_{p}-E_{q}}V_{qpr}^{\left(K,L\right)},
 \end{align*}
 
 \end_inset
@@ -853,19 +873,101 @@ Large
 \begin_inset Formula $\Delta E_{G}\sim\frac{1}{N^{2}}M^{5-s/4}$
 \end_inset
 
-.
- When 
+ for even 
+\begin_inset Formula $s$
+\end_inset
+
+ and 
+\begin_inset Formula $\Delta E_{G}\sim\frac{1}{N^{2}}M^{4-s/4}$
+\end_inset
+
+ for odd 
+\begin_inset Formula $s$
+\end_inset
+
+ .
+ 
+\end_layout
+
+\begin_layout Itemize
+Protostring: when 
 \begin_inset Formula $s=24$
 \end_inset
 
 , 
-\begin_inset Formula $\Delta E_{G}\sim\frac{1}{N^{2}}M^{-1}$
+\begin_inset Formula $\Delta E_{G}\sim\frac{1}{N^{2}}M^{-1}\sim1/P^{+}$
+\end_inset
+
+, which resembles Poincare invariant dispersion relation 
+\begin_inset Formula $P^{-}\sim1/P^{+}$
 \end_inset
 
 .
  
 \end_layout
 
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+One-loop Self-energy
+\end_layout
+
+\begin_layout Itemize
+For 
+\begin_inset Formula $M=3$
+\end_inset
+
+, 
+\begin_inset Formula $s=1$
+\end_inset
+
+, 
+\begin_inset Formula $\Delta E_{G}=-\frac{1}{N^{2}}\frac{3}{2}\left(3\sqrt{3}-5\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+For 
+\begin_inset Formula $M=3$
+\end_inset
+
+, 
+\begin_inset Formula $s=2$
+\end_inset
+
+, 
+\begin_inset Formula $\Delta E_{G}=-\frac{1}{N^{2}}33\sqrt{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Difficulty for analytic calculation
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Too many Intermediate states: increase exponentially as 
+\begin_inset Formula $M$
+\end_inset
+
+ increase.
+\end_layout
+
+\begin_layout Itemize
+Difficult to find matrix 
+\begin_inset Formula $D$
+\end_inset
+
+ analytically.
+\end_layout
+
+\end_deeper
 \begin_layout EndFrame
 
 \end_layout
@@ -891,6 +993,20 @@ Numerical Results
 
 \begin_layout BeginFrame
 Numerial Results
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Delta E=\sum_{L=1}^{M-1}\Delta E_{i},\quad i=\frac{L}{M},\quad\Delta\hat{E}_{i}=\begin{cases}
+\Delta E_{i}M^{-4+s/4} & \quad\text{for even }s\\
+\Delta E_{i}M^{-3+s/4} & \quad\text{for odd }s
+\end{cases}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -937,6 +1053,10 @@ Numerial Results
 Conclusion
 \end_layout
 
+\begin_layout Itemize
+dd
+\end_layout
+
 \begin_layout EndFrame
 
 \end_layout
@@ -951,6 +1071,70 @@ Conclusion
 \size huge
 \color blue
 Thank you!
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Action of 
+\begin_inset Formula $H$
+\end_inset
+
+ on trace states
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+HT\left(\theta_{1}\cdots\theta_{M}\right)\ket{0}=\bar{h}T\left(\theta\right)\ket{0}+\frac{1}{N}\sum_{k=1}^{M}\sum_{l\neq k+1}\bar{h}_{kl}T\left(\theta_{l}\cdots\theta_{k}\right)T\left(\theta_{k+1}\cdots\theta_{l-1}\right)\ket{0},
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+HT\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right)\ket{0}=\left(\bar{h}_{\theta}+\bar{h}_{\eta}\right)T\left(\theta\right)T\left(\eta\right)\\
++\frac{1}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{kl}T\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\ket{0}\\
++\frac{1}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{lk}T\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\ket{0}+\cdots,
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\bar{h}=\sum_{k=1}^{M}\bar{h}_{k,k+1},\;\bar{h}_{kl}=2\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)+2\theta_{k}^{a}\frac{d}{d\theta_{l}^{a}}+2\theta_{l}^{a}\frac{d}{d\theta_{k}^{a}}-2i\theta_{k}^{a}\theta_{l}^{a}-2i\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{l}^{a}},
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout EndFrame
