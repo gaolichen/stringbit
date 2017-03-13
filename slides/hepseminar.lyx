@@ -7,6 +7,7 @@
 \setbeamercolor{background canvas}{bg=}
 \setbeamertemplate{background}{\includegraphics[width=1.0\paperwidth,height=1.0\paperheight]{Vintage.png}}
 
+\usepackage{graphicx} 
 \usepackage{cancel}
 \newcommand{\zero}[1] {\cancelto{0}{#1}}
 \newcommand{\tr}{\mathrm{Tr}\,}
@@ -122,7 +123,6 @@ Introduction
 A string is a chain comprised of pointlike entities called string bits.
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
 A string bit is described coordinates 
 \begin_inset Formula $\mathbf{x}=\left(x^{2},\cdots,x^{D-1}\right)$
@@ -137,10 +137,7 @@ A string bit is described coordinates
 \end_inset
 
  is missing.
-\end_layout
-
-\begin_layout Itemize
-Under Galilean symmetry 
+ Under Galilean symmetry 
 \begin_inset Formula $P^{+}=mM$
 \end_inset
 
@@ -153,10 +150,7 @@ Under Galilean symmetry
 \end_inset
 
  is the number of bits.
-\end_layout
-
-\begin_layout Itemize
-When 
+ When 
 \begin_inset Formula $M$
 \end_inset
 
@@ -170,25 +164,87 @@ When
 
  behaves as continuous variable and its conjugate can be interpreted as
  the missing coordinates, and Lotentz invariance is regained.
+ 
 \end_layout
 
-\end_deeper
 \begin_layout Itemize
 Cubic interaction vertices and one-loop self-energy
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="40pt">
+<column alignment="center" valignment="middle" width="22col%">
+<column alignment="right" valignment="middle" width="50pt">
+<column alignment="center" valignment="middle" width="21col%">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $V_{pqr}=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 \begin_inset Graphics
-	filename Closed_String_Light_Cone_Vertex.png
-	width 50col%
+	filename VertexVs.png
+	width 20col%
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Itemize
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W_{rpq}=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename VertexWs.png
+	width 20col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
 \begin_inset Graphics
 	filename one_loop.png
 	width 50col%
@@ -198,7 +254,6 @@ Cubic interaction vertices and one-loop self-energy
 
 \end_layout
 
-\end_deeper
 \begin_layout EndFrame
 
 \end_layout
@@ -244,20 +299,6 @@ where
 
  group, s maximum number of spin indices.
  
-\end_layout
-
-\begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<1->
-\end_layout
-
-\end_inset
-
-Graded bracket relations 
 \begin_inset Formula 
 \[
 \left[\left(\phi_{a_{1}\cdots a_{n}}\right){}_{\alpha}^{\beta},\left(\bar{\phi}_{b_{1}\cdots b_{m}}\right){}_{\gamma}^{\delta}\right]_{\pm}=\delta_{mn}\delta_{\alpha}^{\delta}\delta_{\gamma}^{\beta}\sum_{P}\left(-\right)^{P}\delta_{a_{1}b_{P_{1}}}\cdots\delta_{a_{n}b_{P_{n}}}.
@@ -333,7 +374,7 @@ status open
 
 \end_inset
 
-A closed string has the form 
+A closed string is represented by 
 \begin_inset Formula $\tr\bar{\phi}\bar{\phi}\cdots\bar{\phi}\ket{0}$
 \end_inset
 
@@ -341,12 +382,122 @@ A closed string has the form
  
 \end_layout
 
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<3->
+\end_layout
+
+\end_inset
+
+Bit operator 
+\begin_inset Formula $M=\sum_{n}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}$
+\end_inset
+
+
+\end_layout
+
 \begin_layout EndFrame
 
 \end_layout
 
 \begin_layout BeginFrame
-Review: Superstring bit operator
+Review: Hamiltonian
+\end_layout
+
+\begin_layout Itemize
+For 
+\begin_inset Formula $s=1$
+\end_inset
+
+, 
+\begin_inset Formula $H=$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{2}{N}\tr\left[\left(\bar{a}^{2}-i\bar{b}^{2}\right)a^{2}-\left(\bar{b}^{2}-i\bar{a}^{2}\right)b^{2}+\left(\bar{a}\bar{b}+\bar{b}\bar{a}\right)ba+\left(\bar{a}\bar{b}-\bar{b}\bar{a}\right)ab\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+For arbitary 
+\begin_inset Formula $s$
+\end_inset
+
+, 
+\begin_inset Formula $H=\sum_{i=1}^{5}H_{i}$
+\end_inset
+
+, where
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+H_{1} & =\frac{2}{N}\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{s-2n}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}},\\
+H_{2} & =\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{bb_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{ba_{1}\cdots a_{n}},\\
+H_{3} & =\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{ba_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{bb_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}},\\
+H_{4} & =\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{bb_{1}\cdots b_{k}}\phi_{ba_{1}\cdots a_{n}},\\
+H_{5} & =-\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{ba_{1}\cdots a_{n}}\bar{\phi}_{bb_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}}.
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Review: 
+\begin_inset Formula $N=\infty$
+\end_inset
+
+ results
 \end_layout
 
 \begin_layout Itemize
@@ -362,54 +513,58 @@ Review: Superstring bit operator
 \uwave off
 \noun off
 \color none
-Introduce s Grassmann coordinates 
-\begin_inset Formula $\theta^{a}$
-\end_inset
-
- and super bit creation operator 
-\begin_inset Formula $\psi\left(\theta\right)=\sum_{k=0}^{s}\frac{1}{k!}\bar{\phi}_{c_{1}\cdots c_{k}}\theta^{c_{1}}\cdots\theta^{c_{k}}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Trace operator 
-\begin_inset Formula $T\left(\theta_{1},\cdots,\theta_{k}\right)=\tr\psi\left(\theta_{1}\right)\psi\left(\theta_{2}\right)\cdots\psi\left(\theta_{k}\right)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Trace states space: 
-\begin_inset Formula $T\left(\theta_{1},\cdots,\theta_{K}\right)T\left(\eta_{1},\cdots,\eta_{L}\right)\cdots\ket{0}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout EndFrame
-
-\end_layout
-
-\begin_layout BeginFrame
-Review: Hamiltonian
-\end_layout
-
-\begin_layout Itemize
-In terms of 
-\begin_inset Formula $\theta^{a}$
-\end_inset
-
-, the Hamiltonian 
-\begin_inset Formula $H$
-\end_inset
-
- can be written as 
+Define trace operator 
 \begin_inset Formula 
 \[
-h=\sum_{k=1}^{M}h_{k,k+1}
+T\left(\theta_{1},\cdots,\theta_{k}\right)=\tr\psi\left(\theta_{1}\right)\psi\left(\theta_{2}\right)\cdots\psi\left(\theta_{k}\right)
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $\psi\left(\theta_{k}\right)=\sum_{i=0}^{s}\frac{1}{i!}\bar{\phi}_{c_{1}\cdots c_{i}}\theta_{k}^{c_{1}}\cdots\theta_{k}^{c_{i}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\theta_{k}^{1},\cdots\theta_{k}^{s}$
+\end_inset
+
+ are s Grassmann variables.
+\end_layout
+
+\begin_layout Itemize
+The trace state space is spaned by 
+\begin_inset Formula 
+\[
+T\left(\theta_{1},\cdots,\theta_{K}\right)T\left(\eta_{1},\cdots,\eta_{L}\right)\cdots\ket{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+A 
+\begin_inset Formula $M$
+\end_inset
+
+-bit single trace energy eigenstate can be written as
+\begin_inset Formula 
+\[
+T_{r}\ket{0}=\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta_{1},\cdots,\theta_{M}\right)\psi_{r}\left(\theta_{1},\dots,\theta_{M}\right)\ket{0},
+\]
+
+\end_inset
+
+ where wave function 
+\begin_inset Formula $\psi_{r}$
+\end_inset
+
+ satisfies
+\begin_inset Formula 
+\[
+h\psi_{r}=E_{r}\psi_{r},\quad h=\sum_{k=1}^{M}h_{k,k+1}
 \]
 
 \end_inset
@@ -423,30 +578,6 @@ h_{kl}=-2\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)-2\theta_{k}^{a}
 \end_inset
 
 
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $M$
-\end_inset
-
--bit Single trace energy eigen states states
-\begin_inset Formula 
-\[
-T_{r}\ket{0}=\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta_{1},\cdots,\theta_{M}\right)\psi_{r}\left(\theta_{1},\dots,\theta_{M}\right)\ket{0}
-\]
-
-\end_inset
-
-where the wave function 
-\begin_inset Formula $\psi_{r}$
-\end_inset
-
- fillfulls 
-\begin_inset Formula $h\psi_{r}=E_{r}\psi_{r}$
-\end_inset
-
-.
- 
 \end_layout
 
 \begin_layout EndFrame
@@ -493,7 +624,7 @@ F_{k}=\sin\left(\frac{\pi}{4}-\frac{k\pi}{2M}\right)\alpha_{k}+\cos\left(\frac{\
 Energy spectrum
 \begin_inset Formula 
 \[
-\psi=F_{1}^{\dagger\lambda_{1}}F_{2}^{\dagger\lambda_{2}}\cdots F_{M-1}^{\dagger\lambda_{M-1}}\psi_{G},\quad\lambda_{k}=0,\,1
+\psi_{\{\lambda_{a,k}\}}=F_{1}^{\dagger\lambda_{1}}F_{2}^{\dagger\lambda_{2}}\cdots F_{M-1}^{\dagger\lambda_{M-1}}\psi_{G},\quad\lambda_{k}=0,\,1
 \]
 
 \end_inset
@@ -507,84 +638,9 @@ E_{\{\lambda_{a,k}\}}=-4\cot\frac{\pi}{2M}+8\sum_{k=1}^{M-1}\lambda_{k}\sin\frac
 \end_inset
 
 
-\end_layout
-
-\begin_layout EndFrame
-
-\end_layout
-
-\begin_layout BeginFrame
-Hamiltonian
-\end_layout
-
-\begin_layout Itemize
-For 
-\begin_inset Formula $s=1$
-\end_inset
-
-
 \begin_inset Formula 
 \[
-\frac{2}{N}\tr\left[\left(\bar{a}^{2}-i\bar{b}^{2}\right)a^{2}-\left(\bar{b}^{2}-i\bar{a}^{2}\right)b^{2}+\left(\bar{a}\bar{b}+\bar{b}\bar{a}\right)ba+\left(\bar{a}\bar{b}-\bar{b}\bar{a}\right)ab\right]
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Conserve bit number
-\end_layout
-
-\begin_layout EndFrame
-
-\end_layout
-
-\begin_layout BeginFrame
-Hamiltonian
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $H=\sum_{i=1}^{5}H_{i}$
-\end_inset
-
- where
-\begin_inset Formula 
-\[
-H_{1}=\frac{2}{N}\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{s-2n}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}},
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-H_{2}=\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{bb_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{ba_{1}\cdots a_{n}},
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-H_{3}=\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{ba_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{bb_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}},
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-H_{4}=\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{bb_{1}\cdots b_{k}}\phi_{ba_{1}\cdots a_{n}},
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-H_{5}=-\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{ba_{1}\cdots a_{n}}\bar{\phi}_{bb_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}}.
+E_{G}=-4\cot\frac{\pi}{2M}=-\frac{8M}{\pi}+\frac{2\pi}{3M}+\mathcal{O}\left(M^{-3}\right)
 \]
 
 \end_inset
@@ -612,7 +668,7 @@ Vertex
 :
 \begin_inset Formula 
 \[
-hT_{r}\ket{0}=E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{L=1}^{M-1}\sum_{p,q}T_{p}T_{q}\ket{0}V_{qpr}^{\left(K,L\right)}+\mathcal{O}\left(\frac{1}{N^{2}}\right)
+HT_{r}\ket{0}=E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{L=1}^{M-1}\sum_{p,q}T_{p}T_{q}\ket{0}V_{qpr}^{\left(K,L\right)}+\mathcal{O}\left(\frac{1}{N^{2}}\right)
 \]
 
 \end_inset
@@ -620,13 +676,190 @@ hT_{r}\ket{0}=E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{L=1}^{M-1}\sum_{p,q}T_{p}T_{q}\
 
 \begin_inset Formula 
 \[
-hT_{p}T_{q}\ket{0}=\left(E_{p}+E_{q}\right)T_{p}T_{q}\ket{0}+\frac{1}{N}\sum_{r}T_{r}\ket{0}W_{rpq}^{\left(L,K\right)}+\mathcal{O}\left(\frac{1}{N^{2}}\right)
+HT_{p}T_{q}\ket{0}=\left(E_{p}+E_{q}\right)T_{p}T_{q}\ket{0}+\frac{1}{N}\sum_{r}T_{r}\ket{0}W_{rpq}^{\left(L,K\right)}+\mathcal{O}\left(\frac{1}{N^{2}}\right)
 \]
 
 \end_inset
 
  where 
 \begin_inset Formula $K+L=M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+For 
+\begin_inset Formula $\psi_{r}=F_{1}^{\dagger\lambda_{1}}\cdots F_{M-1}^{\dagger\lambda_{M-1}}\psi_{G}^{\left(M\right)}\equiv\mathbb{F}_{r}^{\dagger}\psi_{G}^{\left(M\right)}$
+\end_inset
+
+, 
+\begin_inset Formula $\psi_{q}=\mathbb{F}_{q}^{\dagger}\psi_{G}^{\left(K\right)}$
+\end_inset
+
+, 
+\begin_inset Formula $\psi_{q}=\mathbb{F}_{q}^{\dagger}\psi_{G}^{\left(L\right)}$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+V_{qpr}^{\left(K,L\right)}=M\left|\det C\right|^{\frac{1}{2}}\left\langle \mathbb{F}_{q}\mathbb{F}_{p}h^{\left(V\right)}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle 
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+W_{rpq}^{\left(L,K\right)}=KL\left|\det C\right|^{\frac{1}{2}}\left\langle \mathbb{F}_{q}\mathbb{F}_{p}h^{\left(W\right)}\mathbb{F}_{r}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle ^{\dagger}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Cubic Interaction Vertices (cont)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f_{0}=F_{0}^{\left(L\right)}\sqrt{\frac{L}{M}}+F_{0}^{\left(K\right)}\sqrt{\frac{K}{M}},\quad f_{M-1}=e^{-i\pi/4}\left(F_{0}^{\left(L\right)}\sqrt{\frac{K}{M}}-F_{0}^{\left(K\right)}\sqrt{\frac{L}{M}}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f_{1},\cdots,f_{M-2}=F_{1}^{\left(L\right)},\cdots,F_{L-1}^{\left(L\right)},F_{1}^{\left(K\right)},\,\cdots,\, F_{K-1}^{\left(K\right)}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+F_{m}=\sum_{n=0}^{M-1}\left(f_{n}C_{mn}+f_{n}^{\dagger}S_{mn}\right),\quad0\leq m\leq M-1,
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+C_{mn} & =-\frac{1}{\sqrt{ML}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi i\left(n/L-m/M\right)}}\cos\left(\frac{n\pi}{2L}-\frac{m\pi}{2M}\right),\quad1\leq n<L\\
+C_{m,L+n-1} & =\frac{1}{\sqrt{MK}}\frac{1-e^{-2\pi imL/M}}{1-e^{-2\pi i\left(n/K-m/M\right)}}\cos\left(\frac{n\pi}{2K}-\frac{m\pi}{2M}\right),\quad1\leq n<K\\
+C_{m,M-1} & =-\frac{1}{\sqrt{LK}}\frac{1-e^{-2\pi imL/M}}{1-e^{2i\pi m/M}}\cos\left(\frac{m\pi}{2M}-\frac{\pi}{4}\right),
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+C_{mn}D_{nl}+S_{ml}=0,\quad S_{mn}=C_{m,-n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Cubic Interaction Vertices (cont)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h^{\left(V,W\right)}=\frac{2}{M}\left(A_{nm}^{\left(V,W\right)\dagger}F_{n}^{\dagger}F_{m}^{\dagger}+A_{nm}^{\left(V,W\right)}F_{n}F_{m}+2A_{-n,m}^{\left(V,W\right)}F_{n}^{\dagger}F_{m}\right)+\frac{2}{M}\mu^{\left(V,W\right)}
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{align*}
+A_{nm}^{\left(V\right)} & =\sin\frac{m-n}{2M}\pi+\exp\left(2\pi i\frac{\left(L+1\right)\left(m+n\right)}{2M}\right)\sin\frac{\left(L+1/2\right)\left(m-n\right)\pi}{M}\\
+\mu^{\left(V\right)} & =-\cot\frac{\pi}{2M}-\cot\frac{2L+1}{2M}\pi,\\
+A_{nm}^{\left(W\right)} & =\left[1+\exp\left(\pi i\frac{n+m}{M}\right)\right]\left[1+\exp\left(2\pi iL\frac{m+n}{M}\right)\right]\sin\frac{m-n}{2M}\pi,\\
+\mu^{\left(W\right)} & =-4\cot\frac{\pi}{2M}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+One-loop Self-energy
+\end_layout
+
+\begin_layout Itemize
+Let 
+\begin_inset Formula $\ket{E}=T_{r}\ket{0}+T_{p}T_{q}\ket{0}C_{pq}+\cdots$
+\end_inset
+
+, 
+\begin_inset Formula $E=E_{r}+\Delta E_{r}$
+\end_inset
+
+, by time independent perturbation theory, we find
+\begin_inset Formula 
+\begin{align*}
+C_{pq} & =\frac{1}{E_{r}-E_{p}-E_{q}}\frac{1}{N}V_{qpr}+\mathcal{O}\left(N^{-2}\right),\\
+\Delta E_{r} & =\frac{1}{N^{2}}\sum_{L=1}^{M-1}\sum_{M_{p}=L,M_{q}=K}W_{rpq}^{\left(L,K\right)}\frac{1}{E_{r}-E_{p}-E_{q}}V_{qpr}^{\left(K,L\right)},
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+For ground energy
+\begin_inset Formula 
+\[
+\Delta E_{G}\sim\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{p,q}}^{\prime}\frac{KLM\left|\det C\right|^{s}}{E_{G}-E_{p}-E_{q}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Large 
+\begin_inset Formula $M$
+\end_inset
+
+ behavior:
+\begin_inset Formula $\Delta E_{G}\sim\frac{1}{N^{2}}M^{5-s/4}$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $s=24$
+\end_inset
+
+, 
+\begin_inset Formula $\Delta E_{G}\sim\frac{1}{N^{2}}M^{-1}$
 \end_inset
 
 .
@@ -638,7 +871,18 @@ hT_{p}T_{q}\ket{0}=\left(E_{p}+E_{q}\right)T_{p}T_{q}\ket{0}+\frac{1}{N}\sum_{r}
 \end_layout
 
 \begin_layout BeginFrame
-One-loop Self-energy
+Numerical Results
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename EvM-compare.pdf
+	width 80col%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout EndFrame
@@ -646,7 +890,43 @@ One-loop Self-energy
 \end_layout
 
 \begin_layout BeginFrame
-Numerical Results
+Numerial Results
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename SubEvM-s1xi0.pdf
+	width 40col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename SubEvM-s2xi0.pdf
+	width 40col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename SubEvM-s3xi0.pdf
+	width 40col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename SubEvM-s4xi0.pdf
+	width 40col%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout EndFrame
