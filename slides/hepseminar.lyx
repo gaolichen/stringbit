@@ -87,7 +87,8 @@ Cubic Interaction Vertices and One-loop Self-energy in the Stable String
 status open
 
 \begin_layout Plain Layout
-Based on the paper arXiv:1701.04806v1
+Based on the paper Gaoli Chen.
+ arXiv:1701.04806v1
 \end_layout
 
 \end_inset
@@ -129,6 +130,10 @@ One-loop self-energy
 
 \begin_layout Itemize
 Numerical Results
+\end_layout
+
+\begin_layout Itemize
+Conlusion
 \end_layout
 
 \begin_layout EndFrame
@@ -433,18 +438,40 @@ For
 \begin_inset Formula $s=1$
 \end_inset
 
-, 
-\begin_inset Formula $H=$
-\end_inset
-
 
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \[
-\frac{2}{N}\tr\left[\left(\bar{a}^{2}-i\bar{b}^{2}\right)a^{2}-\left(\bar{b}^{2}-i\bar{a}^{2}\right)b^{2}+\left(\bar{a}\bar{b}+\bar{b}\bar{a}\right)ba+\left(\bar{a}\bar{b}-\bar{b}\bar{a}\right)ab\right]
+H=\frac{2}{N}\tr\left[\left(\bar{a}^{2}-i\bar{b}^{2}\right)a^{2}-\left(\bar{b}^{2}-i\bar{a}^{2}\right)b^{2}+\left(\bar{a}\bar{b}+\bar{b}\bar{a}\right)ba+\left(\bar{a}\bar{b}-\bar{b}\bar{a}\right)ab\right]
 \]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
 
 \end_inset
 
@@ -737,7 +764,15 @@ W_{rpq}^{\left(L,K\right)}=KL\left|\det C\right|^{\frac{1}{2}}\left\langle \math
 
 \end_inset
 
+ where 
+\begin_inset Formula $\left\langle \mathcal{O}\right\rangle \equiv\bra{0}\mathcal{O}\ket{0}$
+\end_inset
 
+ with 
+\begin_inset Formula $F_{i}^{\left(K\right)}\ket{0}=F_{i}^{\left(L\right)}\ket{0}=0$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout EndFrame
@@ -802,6 +837,19 @@ Cubic Interaction Vertices (cont)
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \[
 h^{\left(V,W\right)}=\frac{2}{M}\left(A_{nm}^{\left(V,W\right)\dagger}F_{n}^{\dagger}F_{m}^{\dagger}+A_{nm}^{\left(V,W\right)}F_{n}F_{m}+2A_{-n,m}^{\left(V,W\right)}F_{n}^{\dagger}F_{m}\right)+\frac{2}{M}\mu^{\left(V,W\right)}
@@ -817,6 +865,19 @@ A_{nm}^{\left(V\right)} & =\sin\frac{m-n}{2M}\pi+\exp\left(2\pi i\frac{\left(L+1
 A_{nm}^{\left(W\right)} & =\left[1+\exp\left(\pi i\frac{n+m}{M}\right)\right]\left[1+\exp\left(2\pi iL\frac{m+n}{M}\right)\right]\sin\frac{m-n}{2M}\pi,\\
 \mu^{\left(W\right)} & =-4\cot\frac{\pi}{2M}.
 \end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
 
 \end_inset
 
@@ -898,11 +959,15 @@ Protostring: when
 \begin_inset Formula $\Delta E_{G}\sim\frac{1}{N^{2}}M^{-1}\sim1/P^{+}$
 \end_inset
 
-, which resembles Poincare invariant dispersion relation 
-\begin_inset Formula $P^{-}\sim1/P^{+}$
+, which resembles Poincaré invariant dispersion relation 
+\begin_inset Formula $P^{-}=\left(\mu^{2}+\vec{P}^{2}\right)/P^{+}$
 \end_inset
 
-.
+ in 
+\begin_inset Formula $1+1$
+\end_inset
+
+ dimension.
  
 \end_layout
 
@@ -1054,7 +1119,42 @@ Conclusion
 \end_layout
 
 \begin_layout Itemize
-dd
+A formulism to calculate the cubic interaction vertices of the stable string
+ bit model is provided.
+\end_layout
+
+\begin_layout Itemize
+The calculation of the interaction vertices is transffered to the calculation
+ of vacuum expectation value of operators.
+\end_layout
+
+\begin_layout Itemize
+The one-loop self-energy and its large 
+\begin_inset Formula $M$
+\end_inset
+
+ behavior is calculated.
+\end_layout
+
+\begin_layout Itemize
+When 
+\begin_inset Formula $s=24$
+\end_inset
+
+, Poincaré invariant dispersion relation is regained.
+\end_layout
+
+\begin_layout Itemize
+For even 
+\begin_inset Formula $s$
+\end_inset
+
+, a string is more likely to split equally into two small strings.
+ For odd 
+\begin_inset Formula $s$
+\end_inset
+
+, it is more like to split into one short string and one long string.
 \end_layout
 
 \begin_layout EndFrame
