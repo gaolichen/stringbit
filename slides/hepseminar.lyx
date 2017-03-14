@@ -693,7 +693,15 @@ Review:
 \end_layout
 
 \begin_layout Itemize
+For each bit 
+\begin_inset Formula $i$
+\end_inset
 
+, introduce s Grassmann variables 
+\begin_inset Formula $\theta_{i}^{a}$
+\end_inset
+
+, and 
 \family roman
 \series medium
 \shape up
@@ -705,31 +713,83 @@ Review:
 \uwave off
 \noun off
 \color none
-Define trace operator 
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \[
-T\left(\theta_{1},\cdots,\theta_{k}\right)=\tr\psi\left(\theta_{1}\right)\psi\left(\theta_{2}\right)\cdots\psi\left(\theta_{k}\right)
+\psi\left(\theta_{i}\right)=\sum_{k=0}^{s}\frac{1}{k!}\bar{\phi}_{c_{1}\cdots c_{k}}\theta_{i}^{c_{1}}\cdots\theta_{i}^{c_{k}}
 \]
 
 \end_inset
 
- where 
-\begin_inset Formula $\psi\left(\theta_{k}\right)=\sum_{i=0}^{s}\frac{1}{i!}\bar{\phi}_{c_{1}\cdots c_{i}}\theta_{k}^{c_{1}}\cdots\theta_{k}^{c_{i}}$
+
+\begin_inset Formula 
+\[
+T\left(\theta_{1},\cdots,\theta_{M}\right)=\tr\psi\left(\theta_{1}\right)\psi\left(\theta_{2}\right)\cdots\psi\left(\theta_{M}\right)
+\]
+
 \end_inset
 
- and 
-\begin_inset Formula $\theta_{k}^{1},\cdots\theta_{k}^{s}$
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
 \end_inset
 
- are s Grassmann variables.
+
 \end_layout
 
 \begin_layout Itemize
 The trace state space is spanned by 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \[
 T\left(\theta_{1},\cdots,\theta_{K}\right)T\left(\eta_{1},\cdots,\eta_{L}\right)\cdots\ket{0}
 \]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
 
 \end_inset
 
@@ -742,10 +802,36 @@ A
 \end_inset
 
 -bit single trace energy eigenstate can be written as
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \[
 T_{r}\ket{0}=\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta_{1},\cdots,\theta_{M}\right)\psi_{r}\left(\theta_{1},\dots,\theta_{M}\right)\ket{0},
 \]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
 
 \end_inset
 
@@ -754,6 +840,19 @@ T_{r}\ket{0}=\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta_{1},\cdo
 \end_inset
 
  satisfies
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \[
 h\psi_{r}=E_{r}\psi_{r},\quad h=\sum_{k=1}^{M}h_{k,k+1}
@@ -766,6 +865,19 @@ h\psi_{r}=E_{r}\psi_{r},\quad h=\sum_{k=1}^{M}h_{k,k+1}
 \[
 h_{kl}=-2\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)-2\theta_{k}^{a}\frac{d}{d\theta_{l}^{a}}-2\theta_{l}^{a}\frac{d}{d\theta_{k}^{a}}-2i\theta_{k}^{a}\theta_{l}^{a}-2i\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{l}^{a}}
 \]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
 
 \end_inset
 
