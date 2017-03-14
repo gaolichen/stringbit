@@ -11,4 +11,8 @@ In this paper, my goal is to calculate two things. One the cubic interaction ver
 Before introducing my work, we need to first talk about some details of the model. so it's necessary to give a brief review on the model. 
 First question, what is string bit, how to represent it. 
 
-A string bit is presented by a string bit creation operator. 
+A string bit is presented by a string bit creation operator phi bar. it has spin indice, a1 to an, these indice are totally antisymmetric. value of each index ai is 1 to s, when number n is even, it's bosonic, when n is odd it's fermionic. the maximum value of the little n is also s. So value s can be considered as the Grassmann demension of the string bit. it also has color indices alpha and beta, the value of the color indices can be 1 to N. the operator is an ajoint representation of U(N) group. It's hermitian conjugate is the annilation operator denoted as phi. 
+
+We then impose the graded bracked relation to the operators. When both of phi and phibar are fermions, we choose the minums, the bracket is an anticommutation, for other others, this is commutation. for example, when s =1 , there is only one bosonic creation operator and one fermionic creation operator, we call them a bar and b bar. 
+
+

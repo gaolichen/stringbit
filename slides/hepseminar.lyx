@@ -299,6 +299,19 @@ status open
 \end_inset
 
 String bit creation operator: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula 
 \[
 \left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta},\quad a_{i}=1,\cdots,s,\quad n=0,\cdots,s,\quad\alpha,\beta=1,\cdots,N
@@ -306,7 +319,20 @@ String bit creation operator:
 
 \end_inset
 
-where 
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+ where 
 \begin_inset Formula $a_{i}$
 \end_inset
 
@@ -323,6 +349,18 @@ where
 \end_inset
 
  group, s maximum number of spin indices.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
  
 \begin_inset Formula 
 \[
@@ -332,10 +370,22 @@ where
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
 \end_layout
 
-\begin_deeper
-\begin_layout ExampleBlock
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
 \begin_inset ERT
 status open
 
@@ -346,32 +396,19 @@ status open
 
 \end_inset
 
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-
-\color blue
-Example of 
+For 
 \begin_inset Formula $s=1$
 \end_inset
 
- 
-\color inherit
 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-}
+
+\backslash
+small
 \end_layout
 
 \end_inset
@@ -385,9 +422,21 @@ status open
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
 \end_layout
 
-\end_deeper
+\end_inset
+
+
+\end_layout
+
 \begin_layout Itemize
 \begin_inset ERT
 status open
@@ -400,11 +449,37 @@ status open
 \end_inset
 
 A closed string is represented by 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Formula $\tr\bar{\phi}\bar{\phi}\cdots\bar{\phi}\ket{0}$
 \end_inset
 
 .
  
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -419,7 +494,77 @@ status open
 \end_inset
 
 Bit number operator 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula $M=\sum_{n}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<3->
+\end_layout
+
+\end_inset
+
+Supersymmetry operator: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $Q^{a}=\sum_{n=0}^{s-1}\frac{\left(-1\right)^{n}}{n!}\tr\left[e^{i\pi/4}\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{aa_{1}\cdots a_{n}}+e^{-i\pi/4}\bar{\phi}_{aa_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\right]$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
 \end_inset
 
 
