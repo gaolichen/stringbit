@@ -1,0 +1,14 @@
+The idea of string bit was proposed by C. Thorn in 1991, and in the mid of 90s, Bergman and Thorn built the string bit model. In the model they formulate the Type IIB superstring theory with the idea of string bit. 
+
+In the stringbit model, a string is a chain comprised of pointlike entities called string bits. So a string is no longer a conitnuous object but a discretized object. The coordinates of a string bit is described by lightcone coordinates, which has transver components defined as x2 to x D-1, and + coordinate which is defined as x0 + x1. However, the - which is x0-x1 is missing. So there is no lorentz invariance for a string bit. The symmetry of a string bit is Galilean symmetry.
+
+But the intresting thing is that, When bit number M is very large, the + component of total moment of the string, which is identified as the total mass of the string, behaves like a continuous variable, then its conjugate can be interpreted as the missing coordinate, then in critical dimension, the lorentz invariance is regained. and the string theory emerges.
+
+In this paper, my goal is to calculate two things. One the cubic interaction vertices. there are two types of vertices, the first we call it V, which is the amplitude of the process that a large string is split into two small strings. the other vertex is W, which the amplitude for two strings joinning into one large string.
+
+ Then, with these vertices, we can calculate the one-loop self-energy of a string. The one-loop self energy in qft is like the left diagram, in string theory, is like the right diagram. The one loop self-energy is the correction to the energy spectrum of the string. 
+
+Before introducing my work, we need to first talk about some details of the model. so it's necessary to give a brief review on the model. 
+First question, what is string bit, how to represent it. 
+
+A string bit is presented by a string bit creation operator. 
