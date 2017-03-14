@@ -359,7 +359,7 @@ key "Bergman:1995wh"
 \begin_inset Formula 
 \begin{align}
 \left[\phi_{a_{1}\cdots a_{n}}\left(\mathbf{x}\right)_{\alpha}^{\beta},\bar{\phi}_{b_{1}\cdots b_{m}}\left(\mathbf{y}\right)_{\gamma}^{\delta}\right]_{\pm} & \equiv\phi_{a_{1}\cdots a_{n}}\left(\mathbf{x}\right)_{\alpha}^{\beta}\bar{\phi}_{b_{1}\cdots b_{m}}\left(\mathbf{y}\right)_{\gamma}^{\delta}-\left(-\right)^{mn}\bar{\phi}_{b_{1}\cdots b_{m}}\left(\mathbf{y}\right)_{\gamma}^{\delta}\phi_{a_{1}\cdots a_{n}}\left(\mathbf{x}\right)_{\alpha}^{\beta}\nonumber \\
- & =\delta_{mn}\delta_{\alpha}^{\delta}\delta_{\gamma}^{\beta}\delta\left(\mathbf{x}-\mathbf{y}\right)\sum_{P}\left(-\right)^{P}\delta_{a_{1}b_{P_{1}}}\cdots\delta_{a_{n}b_{P_{n}}}.\label{eq:intro-phi-phib-relation}
+ & =\delta_{mn}\delta_{\alpha}^{\delta}\delta_{\gamma}^{\beta}\delta\left(\mathbf{x}-\mathbf{y}\right)\sum_{P\in S_{n}}\left(-\right)^{P}\delta_{a_{1}b_{P_{1}}}\cdots\delta_{a_{n}b_{P_{n}}}.\label{eq:intro-phi-phib-relation}
 \end{align}
 
 \end_inset
@@ -4259,7 +4259,7 @@ reference "eq:olp_DeltaE"
  is large we have 
 \begin_inset Formula 
 \begin{equation}
-\Delta E_{G}\sim\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{p,q}}^{\prime}\frac{KLM\left|\det C\right|^{s}}{E_{r}-E_{p}-E_{q}}.\label{eq:olp_largeM}
+\Delta E_{G}\sim\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{p,q}}^{\prime}\frac{KLM\left|\det C\right|^{s}}{E_{G}-E_{p}-E_{q}}.\label{eq:olp_largeM}
 \end{equation}
 
 \end_inset
@@ -4305,7 +4305,7 @@ reference "eq:diag_ground_energy"
 \end_inset
 
 , the factor 
-\begin_inset Formula $1/\left(E_{r}-E_{p}-E_{q}\right)$
+\begin_inset Formula $1/\left(E_{G}-E_{p}-E_{q}\right)$
 \end_inset
 
  scales as 
@@ -4345,7 +4345,7 @@ reference "eq:dia_cyclic_constraint_s"
 
 .
  Therefore, 
-\begin_inset Formula $1/\left(E_{r}-E_{p}-E_{q}\right)$
+\begin_inset Formula $1/\left(E_{G}-E_{p}-E_{q}\right)$
 \end_inset
 
  is of order one for odd 
@@ -4375,7 +4375,7 @@ reference "eq:dia_cyclic_constraint_s"
 \end_inset
 
  and 
-\begin_inset Formula $M^{4-s/24}$
+\begin_inset Formula $M^{4-s/4}$
 \end_inset
 
  for odd 
