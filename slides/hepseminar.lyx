@@ -117,7 +117,7 @@ Introduction
 \end_layout
 
 \begin_layout Itemize
-Review
+Review on the string bit model
 \end_layout
 
 \begin_layout Itemize
@@ -149,7 +149,7 @@ A string is a chain comprised of pointlike entities called string bits.
 \end_layout
 
 \begin_layout Itemize
-A string bit is described coordinates 
+A string bit has transverse coordinates 
 \begin_inset Formula $\mathbf{x}=\left(x^{2},\cdots,x^{D-1}\right)$
 \end_inset
 
@@ -158,7 +158,7 @@ A string bit is described coordinates
 \end_inset
 
 , but 
-\begin_inset Formula $x^{-}=\left(x^{0}+x^{1}\right)/\sqrt{2}$
+\begin_inset Formula $x^{-}=\left(x^{0}-x^{1}\right)/\sqrt{2}$
 \end_inset
 
  is missing.
@@ -188,7 +188,7 @@ A string bit is described coordinates
 \end_inset
 
  behaves as a continuous variable and its conjugate can be interpreted as
- the missing coordinates, and Lotentz invariance is regained.
+ the missing coordinate, and Lotentz invariance is regained.
  
 \end_layout
 
