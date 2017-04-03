@@ -1450,6 +1450,16 @@ A_{nm}^{\left(V\right)} & =\left[\exp\left(2\pi iL\frac{m+n}{M}\right)+1\right]\
 
 
 \begin_inset Formula 
+\begin{align*}
+\gamma^{\left(V\right)} & =-\cot\frac{\pi}{2M}+\frac{1}{2}\left(\cot\frac{2L-1}{2M}\pi-\cot\frac{2L+1}{2M}\pi\right)\\
+ & =-\cot\frac{\pi}{2M}+\frac{1}{2}\frac{\cos\frac{2L-1}{2M}\pi\sin\frac{2L+1}{2M}\pi-\sin\frac{2L-1}{2M}\pi\cos\frac{2L+1}{2M}\pi}{\sin\frac{2L-1}{2M}\pi\sin\frac{2L+1}{2M}\pi}\\
+ & =-\cot\frac{\pi}{2M}+\frac{1}{2}\frac{\sin\frac{\pi}{M}}{\cos\frac{\pi}{M}-\cos\frac{2L}{M}\pi}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
 \[
 h_{M,L+1}^{\left(0\right)}=\frac{2}{M}\sum_{n=1}^{M-1}\left[1-\exp\left(-2\pi i\frac{\left(L+1\right)n}{M}\right)\right]\Big[\left(s_{n}+ic_{n}\right)F_{0}^{\dagger}F_{n}^{\dagger}+\left(c_{n}-is_{n}\right)F_{n}^{\dagger}F_{0}\Big]+\mathrm{h.c.}
 \]
