@@ -123,112 +123,6 @@ void TestAllStates()
 	}
 }
 
-void TestEnergyCorrection(int maxM = 17)
-{
-	EnergyCalculator calc;
-	Stopwatch watch;
-	DT expected[8] = {-0.2942, 1.5161, 8.8474, 24.8336, 52.487, 94.7313, 154.4182, 234.55};
-	for (int i = 3; i <= maxM; i += 2)
-	{
-		//watch.Start();
-		DT res = calc.EnergyCorrection(i);
-		//cout << "M= " << i << ", totalStates = " << calc.TotalStates() << ", calculateTime=" << calc.CalculateTime();
-		//cout << ", totalTime=" << watch.Stop() << ", E=" << res << endl;
-
-		// TODO: the error looks a little too big. May require investigate later.
-		if (i <= 17 && abs(res - expected[(i-3)/2])/abs(res) > 1e-2)
-		{
-			cout << "Returned : " << res << ". But expected energy correction is " << expected[(i-3)/2] << endl;
-			cout << "!!!!!!!!!!!TestEnergyCorrection failed!!!!!!!!" << endl;
-			return;
-		}
-	}
-
-	cout << "TestEnergyCorrection passed!" << endl;
-}
-
-void RunEnergyCorrection(int s, DT xi, int minM, int maxM, bool outputE)
-{
-	EnergyCalculator calc(s, xi);
-	vector<DT> totalE;
-	for (int M = minM; M <= maxM; M++)
-	{
-		if ((s * (M - 1)) % 2 == 1) continue;
-		Stopwatch watch;
-		watch.Start();
-		DT res = calc.EnergyCorrection(M, true);
-		cout << "M=" << M << " s=" << s << " E=" << res;
-		cout << " time=" << watch.Stop() << " seconds" << endl;
-		totalE.push_back(res);
-	}
-
-	if (outputE)
-	{
-		string file = "Es=" + ToString(s) + "xi=" + ToString(xi) + ".txt";
-		ofstream os(file.c_str());
-		os << "M\tE" << endl;
-		for (int i = 0; i < totalE.size(); i++)
-		{
-			if (s % 2 == 0)
-			{
-				os << i + minM << "\t" << totalE[i] << endl;
-			}
-			else
-			{
-				os << i * 2 + minM << "\t" << totalE[i] << endl;
-			}
-		}
-	}
-}
-
-void RunEnergyCorrectionForS(int M, DT xi, int smin, int smax, bool outputE)
-{
-	vector<DT> totalE;
-	vector<int> vs;
-	for (int s = smin; s <= smax; s++)
-	{
-		if (((M-1) * s) % 2 == 1) continue;
-
-		Stopwatch watch;
-		watch.Start();
-		EnergyCalculator calc(s, xi);
-		DT res = calc.EnergyCorrection(M, true);
-		cout << "M=" << M << " s=" << s << " E=" << res;
-		cout << " time=" << watch.Stop() << " seconds" << endl;
-		totalE.push_back(res);
-		vs.push_back(s);
-	}
-
-	if (outputE)
-	{
-		string file = "Exi=" + ToString(xi) + "M=" + ToString(M) + ".txt";
-		ofstream os(file.c_str());
-		os << "s\tE" << endl;
-		for (int i = 0; i < vs.size(); i++)
-		{
-			os << vs[i] << "\t" << totalE[i] << endl;
-		}
-	}
-}
-
-void RunEnergyCorrectionForS(bool outputE = false)
-{
-	int M, smin, smax;
-	DT xi;
-	cout << "intput the values of M, xi, mins, maxs: " << endl;
-	cin >> M >> xi >> smin >> smax;
-	RunEnergyCorrectionForS(M, xi, smin, smax, outputE);
-}
-
-void RunEnergyCorrection(bool outputE = false)
-{
-	int s, minM, maxM;
-	DT xi;
-	cout << "input the values of s, xi, minM, maxM: " << endl;
-	cin >> s >> xi >> minM >> maxM;
-	RunEnergyCorrection(s, xi, minM, maxM, outputE);
-}
-
 void TestMatrices(int M, int L)
 {
 	StringBitMatrices sbm;
@@ -582,6 +476,112 @@ void TestModesGenerator()
 		}
 		cout << endl;
 	}
+}
+
+void TestEnergyCorrection(int maxM = 17)
+{
+	EnergyCalculator calc;
+	Stopwatch watch;
+	DT expected[8] = {-0.2942, 1.5161, 8.8474, 24.8336, 52.487, 94.7313, 154.4182, 234.55};
+	for (int i = 3; i <= maxM; i += 2)
+	{
+		//watch.Start();
+		DT res = calc.EnergyCorrection(i);
+		//cout << "M= " << i << ", totalStates = " << calc.TotalStates() << ", calculateTime=" << calc.CalculateTime();
+		//cout << ", totalTime=" << watch.Stop() << ", E=" << res << endl;
+
+		// TODO: the error looks a little too big. May require investigate later.
+		if (i <= 17 && abs(res - expected[(i-3)/2])/abs(res) > 1e-2)
+		{
+			cout << "Returned : " << res << ". But expected energy correction is " << expected[(i-3)/2] << endl;
+			cout << "!!!!!!!!!!!TestEnergyCorrection failed!!!!!!!!" << endl;
+			return;
+		}
+	}
+
+	cout << "TestEnergyCorrection passed!" << endl;
+}
+
+void RunEnergyCorrection(int s, DT xi, int minM, int maxM, bool outputE)
+{
+	EnergyCalculator calc(s, xi);
+	vector<DT> totalE;
+	for (int M = minM; M <= maxM; M++)
+	{
+		if ((s * (M - 1)) % 2 == 1) continue;
+		Stopwatch watch;
+		watch.Start();
+		DT res = calc.EnergyCorrection(M, true);
+		cout << "M=" << M << " s=" << s << " E=" << res;
+		cout << " time=" << watch.Stop() << " seconds" << endl;
+		totalE.push_back(res);
+	}
+
+	if (outputE)
+	{
+		string file = "Es=" + ToString(s) + "xi=" + ToString(xi) + ".txt";
+		ofstream os(file.c_str());
+		os << "M\tE" << endl;
+		for (int i = 0; i < totalE.size(); i++)
+		{
+			if (s % 2 == 0)
+			{
+				os << i + minM << "\t" << totalE[i] << endl;
+			}
+			else
+			{
+				os << i * 2 + minM << "\t" << totalE[i] << endl;
+			}
+		}
+	}
+}
+
+void RunEnergyCorrectionForS(int M, DT xi, int smin, int smax, bool outputE)
+{
+	vector<DT> totalE;
+	vector<int> vs;
+	for (int s = smin; s <= smax; s++)
+	{
+		if (((M-1) * s) % 2 == 1) continue;
+
+		Stopwatch watch;
+		watch.Start();
+		EnergyCalculator calc(s, xi);
+		DT res = calc.EnergyCorrection(M, true);
+		cout << "M=" << M << " s=" << s << " E=" << res;
+		cout << " time=" << watch.Stop() << " seconds" << endl;
+		totalE.push_back(res);
+		vs.push_back(s);
+	}
+
+	if (outputE)
+	{
+		string file = "Exi=" + ToString(xi) + "M=" + ToString(M) + ".txt";
+		ofstream os(file.c_str());
+		os << "s\tE" << endl;
+		for (int i = 0; i < vs.size(); i++)
+		{
+			os << vs[i] << "\t" << totalE[i] << endl;
+		}
+	}
+}
+
+void RunEnergyCorrectionForS(bool outputE = false)
+{
+	int M, smin, smax;
+	DT xi;
+	cout << "intput the values of M, xi, mins, maxs: " << endl;
+	cin >> M >> xi >> smin >> smax;
+	RunEnergyCorrectionForS(M, xi, smin, smax, outputE);
+}
+
+void RunEnergyCorrection(bool outputE = false)
+{
+	int s, minM, maxM;
+	DT xi;
+	cout << "input the values of s, xi, minM, maxM: " << endl;
+	cin >> s >> xi >> minM >> maxM;
+	RunEnergyCorrection(s, xi, minM, maxM, outputE);
 }
 
 int main(int argc, char *argv[])
