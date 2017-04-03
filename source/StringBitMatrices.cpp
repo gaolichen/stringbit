@@ -170,7 +170,10 @@ MatrixSB StringBitMatrices::MatrixA(int k, int l, int M)
 
 MatrixSB StringBitMatrices::MatrixAV(int M, int L)
 {
-        MatrixSB ret(M, M);
+#ifdef SYMMETRIC_A
+		return (MatrixA(M, L + 1, M) + MatrixA(L, 1, M)) * .5;   
+#else
+	    MatrixSB ret(M, M);
         for (int n = 0; n < M; n++)
         {
                 for (int m = 0; m < M; m++)
@@ -180,7 +183,8 @@ MatrixSB StringBitMatrices::MatrixAV(int M, int L)
                 }
         }
 
-        return ret;
+		return ret; 
+#endif
 }
 
 MatrixSB StringBitMatrices::MatrixAW(int M, int L)
@@ -213,7 +217,11 @@ MatrixSB StringBitMatrices::OmegaW(int M, int L)
 CDT StringBitMatrices::GammaPV(int M, int L, DT xi)
 {
         CDT tr = (MatrixS(M, L).conjugate() * MatrixC(M, L).inverse() * MatrixAV(M, L).adjoint()).trace();
+#ifdef SYMMETRIC_A
+		return -1/tan(PI / (2 * M)) + (1 / tan((2 * L - 1) * PI / (2 * M)) - 1 / tan((2 * L + 1) * PI / (2 * M))) * 0.5 + M * xi - tr;
+#else
         return -1/tan(PI / (2 * M)) - 1 / tan((2 * L + 1) * PI / (2 * M)) + M * xi - tr;
+#endif
 }
 
 CDT StringBitMatrices::GammaPW(int M, int L, DT xi)

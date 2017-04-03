@@ -8,6 +8,8 @@
 #include "BitUtility.h"
 #include <Eigen/Dense>
 
+//#define SYMMETRIC_A
+
 using namespace std;
 
 #define esp 1e-10

@@ -81,7 +81,11 @@ void TestMatrixA()
 		MatrixSB zero = MatrixSB::Zero(M, M);
 		for (int L = 1; L < M; L++)
 		{
+#ifdef SYMMETRIC_A
+			MatrixSB z = (sbm.MatrixA(M, L + 1, M) + sbm.MatrixA(L, 1, M)) * 0.5 - sbm.MatrixAV(M, L);
+#else
 			MatrixSB z = sbm.MatrixA(M, L + 1, M) - sbm.MatrixAV(M, L);
+#endif
 			ChopInplace(z);
 
 			if (z != zero)
