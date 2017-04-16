@@ -1038,23 +1038,36 @@ h_{kl}^{\left(1\right)}=\frac{2}{M}\sum_{n,m=1}^{M-1}\left(\bar{A}_{nm}F_{n}^{\d
 
 
 \begin_inset Formula 
-\begin{eqnarray*}
-A_{nm} & = & \exp\left(2\pi ik\frac{m+n}{M}\right)c_{m}s_{n}-\frac{i}{2}\exp\left(2\pi i\frac{kn+lm}{M}\right)\exp\left(i\frac{n-m}{2M}\pi\right)\\
- &  & -\left[\exp\left(2\pi ik\frac{m+n}{M}\right)c_{n}s_{m}-\frac{i}{2}\exp\left(2\pi i\frac{km+ln}{M}\right)\exp\left(i\frac{m-n}{2M}\pi\right)\right]\\
- & = & \exp\left(2\pi ik\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi+\exp\left(2\pi i\frac{\left(k+l\right)\left(m+n\right)}{2M}\right)\sin\frac{\left(l-k-1/2\right)\left(m-n\right)\pi}{M}
-\end{eqnarray*}
+\begin{align*}
+A_{nm} & =\exp\left(2\pi ik\frac{m+n}{M}\right)c_{m}s_{n}-\frac{i}{2}\exp\left(2\pi i\frac{kn+lm}{M}\right)\exp\left(i\frac{n-m}{2M}\pi\right)\\
+ & -\left[\exp\left(2\pi ik\frac{m+n}{M}\right)c_{n}s_{m}-\frac{i}{2}\exp\left(2\pi i\frac{km+ln}{M}\right)\exp\left(i\frac{m-n}{2M}\pi\right)\right]\\
+ & =\exp\left(2\pi ik\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi+\exp\left(2\pi i\frac{\left(k+l\right)\left(m+n\right)}{2M}\right)\sin\frac{\left(l-k-1/2\right)\left(m-n\right)\pi}{M}
+\end{align*}
 
 \end_inset
 
 
 \begin_inset Formula 
-\begin{eqnarray*}
-B_{nm} & = & \left[2\exp\left(2\pi ik\frac{m-n}{M}\right)-\exp\left(2\pi i\frac{km-ln}{M}\right)-\exp\left(2\pi i\frac{lm-kn}{M}\right)\right]\sin\frac{\left(n+m\right)\pi}{2M}\\
- &  & -i\left[\exp\left(2\pi i\frac{lm-kn}{M}\right)-\exp\left(2\pi i\frac{km-ln}{M}\right)\right]\cos\frac{\left(n+m\right)\pi}{2M}\\
- & = & 2\exp\left(2\pi ik\frac{m-n}{M}\right)\sin\frac{\left(n+m\right)\pi}{2M}+i\exp\left(2\pi i\frac{km-ln}{M}+i\frac{n+m}{2M}\pi\right)\\
- &  & -i\exp\left(2\pi i\frac{lm-kn}{M}-i\frac{n+m}{2M}\pi\right)\\
- & = & 2\exp\left(2\pi ik\frac{m-n}{M}\right)\sin\frac{\left(n+m\right)\pi}{2M}+2\exp\left(2\pi i\frac{k+l}{2}\frac{m-n}{M}\right)\sin\frac{\left(l-k-1/2\right)\left(m+n\right)}{M}\pi
-\end{eqnarray*}
+\begin{align*}
+A_{nm} & =\exp\left(2\pi ik\frac{m+n}{M}\right)c_{m}s_{n}-\frac{i}{2}\exp\left(2\pi i\frac{kn+lm}{M}\right)\exp\left(i\frac{n-m}{2M}\pi\right)\\
+ & -\left[\exp\left(2\pi ik\frac{m+n}{M}\right)c_{n}s_{m}-\frac{i}{2}\exp\left(2\pi i\frac{km+ln}{M}\right)\exp\left(i\frac{m-n}{2M}\pi\right)\right]\\
+ & =\exp\left(2\pi ik\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi-\frac{i}{2}\left[\exp\left(2\pi i\frac{kn+lm}{M}\right)\exp\left(i\frac{n-m}{2M}\pi\right)-m\leftrightarrow n\right]\\
+ & =\frac{i}{2}\exp\left(2\pi ik\frac{m+n}{M}\right)\exp i\frac{n-m}{2M}\pi-\frac{i}{2}\exp\left(2\pi i\frac{km+ln}{M}\right)\exp\left(i\frac{m-n}{2M}\pi\right)-\left(m\leftrightarrow n\right)\\
+ & =\frac{i}{2}\left[\exp\left(2\pi ik\frac{m+n}{M}\right)-\exp\left(2\pi i\frac{km+ln}{M}\right)\right]\exp i\frac{n-m}{2M}\pi-\left(m\leftrightarrow n\right)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+B_{nm} & =\left[2\exp\left(2\pi ik\frac{m-n}{M}\right)-\exp\left(2\pi i\frac{km-ln}{M}\right)-\exp\left(2\pi i\frac{lm-kn}{M}\right)\right]\sin\frac{\left(n+m\right)\pi}{2M}\\
+ & -i\left[\exp\left(2\pi i\frac{lm-kn}{M}\right)-\exp\left(2\pi i\frac{km-ln}{M}\right)\right]\cos\frac{\left(n+m\right)\pi}{2M}\\
+ & =2\exp\left(2\pi ik\frac{m-n}{M}\right)\sin\frac{\left(n+m\right)\pi}{2M}+i\exp\left(2\pi i\frac{km-ln}{M}\right)\exp\left(i\frac{n+m}{2M}\pi\right)\\
+ & -i\exp\left(2\pi i\frac{lm-kn}{M}\right)\exp\left(-i\frac{n+m}{2M}\pi\right)\\
+ & =i\exp\left(2\pi ik\frac{m-n}{M}\right)\left[\exp-\frac{i\left(n+m\right)\pi}{2M}-\exp\frac{i\left(n+m\right)\pi}{2M}\right]\\
+ & =2\exp\left(2\pi ik\frac{m-n}{M}\right)\sin\frac{\left(n+m\right)\pi}{2M}+2\exp\left(2\pi i\frac{k+l}{2}\frac{m-n}{M}\right)\sin\frac{\left(l-k-1/2\right)\left(m+n\right)}{M}\pi
+\end{align*}
 
 \end_inset
 
