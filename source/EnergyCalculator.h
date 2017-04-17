@@ -9,6 +9,8 @@
 #include "StringBitMatrices.h"
 #include <Eigen/Dense>
 
+//#define USE_CACHE
+
 using namespace std;
 
 class VevCalculator
@@ -21,7 +23,9 @@ private:
 	CDT gammaW;
 	int M;
 	map<int, CDT> cache;
+#if USE_CACHE
 	map<int, CDT> cacheAll;
+#endif
 	CDT DoCalculate(int ops);
 public:
 	VevCalculator(MatrixSB &matM_, MatrixSB &omegaV_, MatrixSB &omegaW_, CDT gammaV_, CDT gammaW_)

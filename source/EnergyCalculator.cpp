@@ -8,7 +8,6 @@ using namespace std;
 CDT VevCalculator::DoCalculate(int ops)
 {
 	if (ops == 0) return 1.0;
-
 	map<int,CDT>::iterator it = cache.find(ops);
 	if (it != cache.end())
 	{
@@ -65,9 +64,10 @@ CDT VevCalculator::VevW(int ops)
 
 CDT VevCalculator::VevAll(int ops)
 {
+#if USE_CACHE
 	map<int, CDT>::iterator it = cacheAll.find(ops);
 	if (it != cacheAll.end()) return it->second;
-
+#endif
 	CDT delta;
         if (BitCount(ops) % 2 == 0)
         {
@@ -83,7 +83,9 @@ CDT VevCalculator::VevAll(int ops)
 
 	// the result of each VevW or VevV need to multiple a 2/M, hence here we need 4/M^2.
 	delta *= 4.0/(M * M);
+#if USE_CACHE
 	cacheAll[ops] = delta; 
+#endif
        return delta;
 }
 
@@ -202,6 +204,7 @@ DT EnergyCalculator::EnergyCorrection(int M, int L)
 		vector<vector<i64> >& modes = generator.Generate();
 		vector<DT>& allEnergies = generator.AllEnergies();
 		//cout << "allEnergies: " << allEnergies << endl;
+		int totalSubstates = 0;
 		for (int i = 0; i < modes.size(); i++)
 		{
 			CDT delta = 1.0;
@@ -213,8 +216,12 @@ DT EnergyCalculator::EnergyCorrection(int M, int L)
 			}
 
 			ret += delta * (SymmetryFactor(modes[i], s) /(E0 - allEnergies[i]));
+			totalSubstates += SymmetryFactor(modes[i], s);
 			//cout << "ret = " << ret << endl;
 		}
+		
+		//cout << "(M,L,s)=(" << M << ", " << L << ", " << s << "), different energies=" << allEnergies.size();
+		//cout << ", total substates=" << totalSubstates << endl;
 	}
 
 	ret = Chop(ret);
@@ -233,9 +240,23 @@ DT EnergyCalculator::EnergyCorrection(int M, bool outputCorrections)
 	DT ret = 0.0;
 	normalizedE.clear();
 	vector<DT> delta(M - 1);
-	for (int L = 1; L <= M - 1; L++)
+	for (int i = 0; i < M - 1; i++)
 	{
+		// we want to calculate from L=M/2 to M-1, so that the ones require less time run first.
+		int L = (i + M / 2) % (M-1) + 1;
+		cout << "Calculating M=" << M << " L=" << L << ", time=" << calculateTime << "s." << endl;  
+#ifdef SYMMETRIC_A
+		if (L + L >= M)
+		{
+			delta[L - 1] = EnergyCorrection(M, L);
+		}
+		else
+		{
+			delta[L - 1] = delta[M - L - 1];
+		}
+#else
 		delta[L - 1] = EnergyCorrection(M, L);
+#endif
 		ret += delta[L - 1];
 	}
 

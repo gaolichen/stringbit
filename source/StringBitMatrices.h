@@ -8,7 +8,7 @@
 #include "BitUtility.h"
 #include <Eigen/Dense>
 
-//#define SYMMETRIC_A
+#define SYMMETRIC_A
 
 using namespace std;
 
