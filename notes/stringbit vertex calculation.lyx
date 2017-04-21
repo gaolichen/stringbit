@@ -1041,19 +1041,7 @@ h_{kl}^{\left(1\right)}=\frac{2}{M}\sum_{n,m=1}^{M-1}\left(\bar{A}_{nm}F_{n}^{\d
 \begin{align*}
 A_{nm} & =\exp\left(2\pi ik\frac{m+n}{M}\right)c_{m}s_{n}-\frac{i}{2}\exp\left(2\pi i\frac{kn+lm}{M}\right)\exp\left(i\frac{n-m}{2M}\pi\right)\\
  & -\left[\exp\left(2\pi ik\frac{m+n}{M}\right)c_{n}s_{m}-\frac{i}{2}\exp\left(2\pi i\frac{km+ln}{M}\right)\exp\left(i\frac{m-n}{2M}\pi\right)\right]\\
- & =\exp\left(2\pi ik\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi+\exp\left(2\pi i\frac{\left(k+l\right)\left(m+n\right)}{2M}\right)\sin\frac{\left(l-k-1/2\right)\left(m-n\right)\pi}{M}
-\end{align*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{align*}
-A_{nm} & =\exp\left(2\pi ik\frac{m+n}{M}\right)c_{m}s_{n}-\frac{i}{2}\exp\left(2\pi i\frac{kn+lm}{M}\right)\exp\left(i\frac{n-m}{2M}\pi\right)\\
- & -\left[\exp\left(2\pi ik\frac{m+n}{M}\right)c_{n}s_{m}-\frac{i}{2}\exp\left(2\pi i\frac{km+ln}{M}\right)\exp\left(i\frac{m-n}{2M}\pi\right)\right]\\
- & =\exp\left(2\pi ik\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi-\frac{i}{2}\left[\exp\left(2\pi i\frac{kn+lm}{M}\right)\exp\left(i\frac{n-m}{2M}\pi\right)-m\leftrightarrow n\right]\\
- & =\frac{i}{2}\exp\left(2\pi ik\frac{m+n}{M}\right)\exp i\frac{n-m}{2M}\pi-\frac{i}{2}\exp\left(2\pi i\frac{km+ln}{M}\right)\exp\left(i\frac{m-n}{2M}\pi\right)-\left(m\leftrightarrow n\right)\\
- & =\frac{i}{2}\left[\exp\left(2\pi ik\frac{m+n}{M}\right)-\exp\left(2\pi i\frac{km+ln}{M}\right)\right]\exp i\frac{n-m}{2M}\pi-\left(m\leftrightarrow n\right)
+ & =\exp\left(2\pi ik\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi+\frac{i}{2}\left[\exp\left(2\pi i\frac{km+ln}{M}\right)\exp\left(\pi i\frac{m-n}{2M}\right)-m\leftrightarrow n\right]
 \end{align*}
 
 \end_inset
@@ -1065,8 +1053,7 @@ B_{nm} & =\left[2\exp\left(2\pi ik\frac{m-n}{M}\right)-\exp\left(2\pi i\frac{km-
  & -i\left[\exp\left(2\pi i\frac{lm-kn}{M}\right)-\exp\left(2\pi i\frac{km-ln}{M}\right)\right]\cos\frac{\left(n+m\right)\pi}{2M}\\
  & =2\exp\left(2\pi ik\frac{m-n}{M}\right)\sin\frac{\left(n+m\right)\pi}{2M}+i\exp\left(2\pi i\frac{km-ln}{M}\right)\exp\left(i\frac{n+m}{2M}\pi\right)\\
  & -i\exp\left(2\pi i\frac{lm-kn}{M}\right)\exp\left(-i\frac{n+m}{2M}\pi\right)\\
- & =i\exp\left(2\pi ik\frac{m-n}{M}\right)\left[\exp-\frac{i\left(n+m\right)\pi}{2M}-\exp\frac{i\left(n+m\right)\pi}{2M}\right]\\
- & =2\exp\left(2\pi ik\frac{m-n}{M}\right)\sin\frac{\left(n+m\right)\pi}{2M}+2\exp\left(2\pi i\frac{k+l}{2}\frac{m-n}{M}\right)\sin\frac{\left(l-k-1/2\right)\left(m+n\right)}{M}\pi
+ & =2A_{-n,m}
 \end{align*}
 
 \end_inset
@@ -1174,9 +1161,8 @@ h_{kl} & = & \frac{2}{M}\sum_{n,m=1}^{M-1}\left(\bar{A}_{nm}F_{n}^{\dagger}F_{m}
  we see that 
 \begin_inset Formula 
 \begin{eqnarray*}
-A_{n0} & = & -\exp\left(2\pi ik\frac{n}{M}\right)\sin\frac{n\pi}{2M}-\exp\left(2\pi i\frac{\left(k+l\right)n}{2M}\right)\sin\frac{\left(l-k-1/2\right)n\pi}{M}\\
- & = & -\exp\left(2\pi ik\frac{n}{M}\right)\sin\frac{n\pi}{2M}-\frac{1}{2i}\exp\left(2\pi i\frac{\left(l-1/2\right)n}{M}\right)+\frac{1}{2i}\exp\left(2\pi i\frac{\left(k+1/2\right)n}{M}\right)\\
- & = & \exp\left(2\pi ik\frac{n}{M}\right)\left(-\sin\frac{n\pi}{2M}+\frac{1}{2i}\exp\left(\frac{in\pi}{2M}\right)\right)-\frac{1}{2i}\exp\left(2\pi i\frac{ln}{M}\right)\exp\left(-\frac{in\pi}{2M}\right)\\
+A_{n0} & = & -\exp\left(2\pi i\frac{kn}{M}\right)\sin\frac{n\pi}{2M}+\frac{i}{2}\left[\exp\left(2\pi i\frac{ln}{M}\right)\exp\left(-i\frac{n\pi}{2M}\right)-\exp\left(2\pi i\frac{kn}{M}\right)\exp\left(i\frac{n\pi}{2M}\right)\right]\\
+ & = & \exp\left(2\pi i\frac{kn}{M}\right)\left(-\sin\frac{n\pi}{2M}+\frac{1}{2i}\exp\left(\frac{in\pi}{2M}\right)\right)-\frac{1}{2i}\exp\left(2\pi i\frac{ln}{M}\right)\exp\left(-\frac{in\pi}{2M}\right)\\
  & = & -\frac{i}{2}\exp\left(2\pi ik\frac{n}{M}\right)\exp\left(-\frac{in\pi}{2M}\right)+\frac{i}{2}\exp\left(2\pi i\frac{ln}{M}\right)\exp\left(-\frac{in\pi}{2M}\right)\\
  & = & \frac{1}{2}X_{n}
 \end{eqnarray*}
@@ -1307,6 +1293,14 @@ and normalized as
 
 \end_inset
 
+
+\begin_inset Formula 
+\[
+g_{r}\equiv\mathrm{G}\left(T_{r}\right)=\mathrm{G}\left(\bar{\psi}_{r}\right)=,\quad\mathrm{G}\left(\psi_{r}\right)=g_{r}-SM
+\]
+
+\end_inset
+
 We also assume all the eigenfunction 
 \begin_inset Formula $\psi_{r}$
 \end_inset
@@ -1384,11 +1378,11 @@ Without loss of generality, we can symmetrize or antisymmetrize
 \begin_inset Formula 
 \begin{align*}
 \tilde{V}_{tsr}^{\left(K,L\right)} & =\frac{1}{2}\left(V_{tsr}^{\left(K,L\right)}+\left(-\right)^{g_{t}g_{s}}V_{str}^{\left(L,K\right)}\right)\\
- & =\frac{1}{2}\left(-\right)^{s\left(LT_{t}+KT_{s}\right)}M\int d\theta\,\bar{\psi}_{t}\left(\theta_{L+1}\cdots\theta_{M}\right)\bar{\psi}_{s}\left(\theta_{1}\cdots\theta_{L}\right)h_{M,L+1}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
- & +\frac{1}{2}\left(-\right)^{s\left(LT_{t}+KT_{s}\right)}\left(-\right)^{g_{t}g_{s}}M\int d\theta\,\bar{\psi}_{s}\left(\theta_{K+1}\cdots\theta_{M}\right)\bar{\psi}_{t}\left(\theta_{1}\cdots\theta_{K}\right)h_{M,K+1}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
- & =\frac{1}{2}\left(-\right)^{s\left(LT_{t}+KT_{s}\right)}M\int d\theta\,\bar{\psi}_{t}\left(\theta_{L+1}\cdots\theta_{M}\right)\bar{\psi}_{s}\left(\theta_{1}\cdots\theta_{L}\right)h_{M,L+1}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
- & +\frac{1}{2}\left(-\right)^{s\left(LT_{t}+KT_{s}\right)}\left(-\right)^{g_{t}g_{s}}M\int d\theta\,\bar{\psi}_{s}\left(\theta_{1}\cdots\theta_{L}\right)\bar{\psi}_{t}\left(\theta_{L+1}\cdots\theta_{M}\right)h_{L,1}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
- & =\left(-\right)^{s\left(LT_{t}+KT_{s}\right)}M\int d\theta\,\bar{\psi}_{t}\left(\theta_{L+1}\cdots\theta_{M}\right)\bar{\psi}_{s}\left(\theta_{1}\cdots\theta_{L}\right)\frac{h_{M,L+1}+h_{L,1}}{2}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right).
+ & =\frac{1}{2}\left(-\right)^{s\left(Lg_{r}+Kg_{s}\right)}M\int d\theta\,\bar{\psi}_{t}\left(\theta_{L+1}\cdots\theta_{M}\right)\bar{\psi}_{s}\left(\theta_{1}\cdots\theta_{L}\right)h_{M,L+1}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & +\frac{1}{2}\left(-\right)^{s\left(Lg_{t}+Kg_{s}\right)}\left(-\right)^{g_{t}g_{s}}M\int d\theta\,\bar{\psi}_{s}\left(\theta_{K+1}\cdots\theta_{M}\right)\bar{\psi}_{t}\left(\theta_{1}\cdots\theta_{K}\right)h_{M,K+1}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & =\frac{1}{2}\left(-\right)^{s\left(Lg_{t}+Kg_{s}\right)}M\int d\theta\,\bar{\psi}_{t}\left(\theta_{L+1}\cdots\theta_{M}\right)\bar{\psi}_{s}\left(\theta_{1}\cdots\theta_{L}\right)h_{M,L+1}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & +\frac{1}{2}\left(-\right)^{s\left(Lg_{s}+Kg_{s}\right)}\left(-\right)^{g_{t}g_{s}}M\int d\theta\,\bar{\psi}_{s}\left(\theta_{1}\cdots\theta_{L}\right)\bar{\psi}_{t}\left(\theta_{L+1}\cdots\theta_{M}\right)h_{L,1}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & =\left(-\right)^{s\left(Lg_{t}+Kg_{s}\right)}M\int d\theta\,\bar{\psi}_{t}\left(\theta_{L+1}\cdots\theta_{M}\right)\bar{\psi}_{s}\left(\theta_{1}\cdots\theta_{L}\right)\frac{h_{M,L+1}+h_{L,1}}{2}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right).
 \end{align*}
 
 \end_inset
@@ -1407,9 +1401,9 @@ When
 
 ,
 \begin_inset Formula 
-\begin{eqnarray*}
-A_{nm} & = & \sin\frac{m-n}{2M}\pi+\exp\left(\pi i\frac{\left(L+1\right)\left(m+n\right)}{M}\right)\sin\frac{\left(L+1/2\right)\left(m-n\right)\pi}{M}
-\end{eqnarray*}
+\begin{align*}
+A_{nm} & =\sin\frac{m-n}{2M}\pi+\frac{i}{2}\left[\exp\left(2\pi i\frac{\left(L+1\right)n}{M}\right)\exp\left(\pi i\frac{m-n}{2M}\right)-m\leftrightarrow n\right]
+\end{align*}
 
 \end_inset
 
@@ -1435,9 +1429,9 @@ When
 
 ,
 \begin_inset Formula 
-\[
-A_{nm}=\exp\left(2\pi iL\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi-\exp\left(\pi i\frac{\left(L+1\right)\left(m+n\right)}{M}\right)\sin\frac{\left(L-1/2\right)\left(m-n\right)\pi}{M}
-\]
+\begin{align*}
+A_{nm} & =\exp\left(2\pi iL\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi+\frac{i}{2}\left[\exp\left(2\pi i\frac{Lm+n}{M}\right)\exp\left(\pi i\frac{m-n}{2M}\right)-m\leftrightarrow n\right]
+\end{align*}
 
 \end_inset
 
@@ -1456,7 +1450,15 @@ A_{nm}=\exp\left(2\pi iL\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi-\exp\left(\pi 
 , we have
 \begin_inset Formula 
 \begin{align*}
-A_{nm}^{\left(V\right)} & =\left[\exp\left(2\pi iL\frac{m+n}{M}\right)+1\right]\sin\frac{m-n}{2M}\pi\\
+A_{nm}^{\left(V\right)} & =\frac{1}{2}\left[\exp\left(2\pi iL\frac{m+n}{M}\right)+1\right]\sin\frac{m-n}{2M}\pi\\
+ & +\frac{i}{4}\left[\exp\left(2\pi i\frac{Ln}{M}\right)+\exp\left(2\pi i\frac{Lm}{M}\right)\right]\exp\left(\pi i\frac{m+n}{2M}\right)\left[\exp\left(i\frac{\pi n}{M}\right)-\exp\left(i\frac{\pi m}{M}\right)\right]\\
+ & =\frac{1}{2}\left[\exp\left(2\pi iL\frac{m+n}{M}\right)+1\right]\sin\frac{m-n}{2M}\pi\\
+ & +\frac{1}{2}\left[\exp\left(2\pi i\frac{Ln}{M}\right)+\exp\left(2\pi i\frac{Lm}{M}\right)\right]\exp\left(\pi i\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi\\
+ & =\frac{1}{2}\left[\exp\left(2\pi iL\frac{m+n}{M}\right)+1\right]\sin\frac{m-n}{2M}\pi-\frac{1}{2}\left[\exp\left(2\pi i\frac{Ln}{M}\right)+\exp\left(2\pi i\frac{Lm}{M}\right)\right]\sin\frac{m-n}{2M}\pi\\
+ & +\frac{1}{2}\left[\exp\left(2\pi i\frac{Ln}{M}\right)+\exp\left(2\pi i\frac{Lm}{M}\right)\right]\sin\frac{m-n}{2M}\pi\\
+ & +\frac{1}{2}\left[\exp\left(2\pi i\frac{Ln}{M}\right)+\exp\left(2\pi i\frac{Lm}{M}\right)\right]\exp\left(\pi i\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi\\
+ & =\frac{1}{2}\left[1-\exp\left(2\pi i\frac{Ln}{M}\right)\right]\left[1-\exp\left(2\pi i\frac{Lm}{M}\right)\right]\sin\frac{m-n}{2M}\pi\\
+ & +\frac{1}{2}\left[\exp\left(2\pi i\frac{Ln}{M}\right)+\exp\left(2\pi i\frac{Lm}{M}\right)\right]\left[1+\exp\left(\pi i\frac{m+n}{M}\right)\right]\sin\frac{m-n}{2M}\pi
 \end{align*}
 
 \end_inset
@@ -1465,8 +1467,7 @@ A_{nm}^{\left(V\right)} & =\left[\exp\left(2\pi iL\frac{m+n}{M}\right)+1\right]\
 \begin_inset Formula 
 \begin{align*}
 \gamma^{\left(V\right)} & =-\cot\frac{\pi}{2M}+\frac{1}{2}\left(\cot\frac{2L-1}{2M}\pi-\cot\frac{2L+1}{2M}\pi\right)\\
- & =-\cot\frac{\pi}{2M}+\frac{1}{2}\frac{\cos\frac{2L-1}{2M}\pi\sin\frac{2L+1}{2M}\pi-\sin\frac{2L-1}{2M}\pi\cos\frac{2L+1}{2M}\pi}{\sin\frac{2L-1}{2M}\pi\sin\frac{2L+1}{2M}\pi}\\
- & =-\cot\frac{\pi}{2M}+\frac{1}{2}\frac{\sin\frac{\pi}{M}}{\cos\frac{\pi}{M}-\cos\frac{2L}{M}\pi}
+ & =-\cot\frac{\pi}{2M}-\frac{1}{2}\left(\cot\frac{2K+1}{2M}\pi+\cot\frac{2L+1}{2M}\pi\right)
 \end{align*}
 
 \end_inset
@@ -1538,7 +1539,34 @@ W_{rst}^{\left(L,K\right)} & =\frac{1}{2}\left(W_{rst}^{\left(L,K\right)}+\left(
  & =\frac{1}{2}\left(-\right)^{sK\psi_{s}}KL\int d^{M}\theta\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)\left(h_{L,L+1}+h_{M,1}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{t}\left(\theta_{L+1}\cdots\theta_{M}\right)\\
  & +\frac{1}{2}\left(-\right)^{sL\psi_{t}}\left(-\right)^{g_{s}g_{t}}KL\int d^{M}\theta\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)\left(h_{K,K+1}+h_{M,1}\right)\psi_{t}\left(\theta_{1}\cdots\theta_{K}\right)\psi_{s}\left(\theta_{K+1}\cdots\theta_{M}\right)\\
  & =\frac{1}{2}\left(-\right)^{sK\psi_{s}}KL\int d^{M}\theta\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)\left(h_{L,L+1}+h_{M,1}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{t}\left(\theta_{L+1}\cdots\theta_{M}\right)\\
- & +\frac{1}{2}\left(-\right)^{sL\psi_{t}}\left(-\right)^{g_{s}g_{t}}KL\int d^{M}\theta\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)\left(h_{M,1}+h_{L,L+1}\right)\psi_{t}\left(\theta_{L+1}\cdots\theta_{M}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{L}\right)
+ & +\frac{1}{2}\left(-\right)^{sL\psi_{t}}\left(-\right)^{g_{s}g_{t}}KL\int d^{M}\theta\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)\left(h_{M,1}+h_{L,L+1}\right)\psi_{t}\left(\theta_{L+1}\cdots\theta_{M}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{L}\right)\\
+ & =\frac{1}{2}\left(-\right)^{sK\psi_{s}}KL\int d^{M}\theta\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)\left(h_{L,L+1}+h_{M,1}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{t}\left(\theta_{L+1}\cdots\theta_{M}\right)\\
+ & +\frac{1}{2}\left(-\right)^{sL\psi_{t}}\left(-\right)^{g_{s}g_{t}}\left(-\right)^{\psi_{s}\psi_{t}}KL\int d^{M}\theta\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)\left(h_{M,1}+h_{L,L+1}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{t}\left(\theta_{L+1}\cdots\theta_{M}\right)\\
+ & =\frac{1}{2}\left(-\right)^{sK\psi_{s}}KL\int d^{M}\theta\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)\left(h_{L,L+1}+h_{M,1}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{t}\left(\theta_{L+1}\cdots\theta_{M}\right)\\
+ & +\frac{1}{2}\left(-\right)^{sL\left(g_{t}-sL\right)}\left(-\right)^{sKL-sKg_{s}-sLg_{t}}KL\int d^{M}\theta\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)\left(h_{M,1}+h_{L,L+1}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{t}\left(\theta_{L+1}\cdots\theta_{M}\right)\\
+ & =\frac{1}{2}\left(-\right)^{sK\psi_{s}}KL\int d^{M}\theta\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)\left(h_{L,L+1}+h_{M,1}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{t}\left(\theta_{L+1}\cdots\theta_{M}\right)\\
+ & +\frac{1}{2}\left(-\right)^{sL}\left(-\right)^{sKL-sKg_{s}}KL\int d^{M}\theta\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)\left(h_{M,1}+h_{L,L+1}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{t}\left(\theta_{L+1}\cdots\theta_{M}\right)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\left(-\right)^{g_{s}g_{t}}W_{srt}^{\left(K,L\right)} & =\left(-\right)^{sL\psi_{t}}\left(-\right)^{g_{s}g_{t}}KL\int d^{M}\theta\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)\left(h_{K,K+1}+h_{M,1}\right)\psi_{t}\left(\theta_{1}\cdots\theta_{K}\right)\psi_{s}\left(\theta_{K+1}\cdots\theta_{M}\right)\\
+ & =\left(-\right)^{sL\psi_{t}}\left(-\right)^{g_{s}g_{t}}KL\int d^{M}\theta\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)\left(h_{M,1}+h_{L,L+1}\right)\psi_{t}\left(\theta_{L+1}\cdots\theta_{M}\right)\psi_{s}\left(\theta_{1}\cdots\theta_{L}\right)
+\end{align*}
+
+\end_inset
+
+ For the sign factor
+\begin_inset Formula 
+\begin{align*}
+\mathrm{sign} & =\left(-\right)^{sL\psi_{t}}\left(-\right)^{g_{s}g_{t}}\left(-\right)^{\psi_{s}\psi_{t}}\\
+ & =\left(-\right)^{sL\left(sK-g_{t}\right)}\left(-\right)^{g_{s}g_{t}}\left(-\right)^{\left(sL-g_{s}\right)\left(sK-g_{t}\right)}\\
+ & =\left(-\right)^{sLK+sLg_{t}}\left(-\right)^{g_{s}g_{t}}\left(-\right)^{sKL-sLg_{t}-sKg_{s}+g_{s}g_{t}}\\
+ & =\left(-\right)^{-sKg_{s}}\\
+ & =\left(-\right)^{sK\left(sL-g_{s}\right)}\left(-\right)^{sKL}
 \end{align*}
 
 \end_inset
@@ -1637,32 +1665,8 @@ X_{n}=\left[1-\exp\left(-2\pi i\frac{n}{M}\right)\right]\left(s_{n}+ic_{n}\right
 
 ,
 \begin_inset Formula 
-\begin{eqnarray*}
-\bar{A}_{nm} & = & \left[1+\exp\left(-\pi i\frac{n+m}{M}\right)\right]\left[1+\exp\left(-2\pi iL\frac{m+n}{M}\right)\right]\sin\frac{n-m}{2M}\pi
-\end{eqnarray*}
-
-\end_inset
-
-
-\begin_inset Formula 
 \[
 A_{nm}=\left[1+\exp\left(\pi i\frac{n+m}{M}\right)\right]\left[1+\exp\left(2\pi iL\frac{m+n}{M}\right)\right]\sin\frac{m-n}{2M}\pi
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-B_{nm}=2\left[1+\exp\left(\pi i\frac{m-n}{M}\right)\right]\left[1+\exp\left(2\pi iL\frac{m-n}{M}\right)\right]\sin\frac{n+m}{2M}\pi
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-X_{n}=\left[1-\exp\left(-2\pi i\frac{n}{M}\right)\right]\left[1+\exp\left(-2\pi i\frac{Ln}{M}\right)\right]\left(s_{n}+ic_{n}\right)
 \]
 
 \end_inset
