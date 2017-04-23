@@ -130,12 +130,16 @@ void TestAllStates()
 void TestMatrices(int M, int L)
 {
 	StringBitMatrices sbm;
+	MatrixSB matAV = sbm.MatrixAV(M, L);
+	MatrixSB matAW = sbm.MatrixAW(M, L);
 	MatrixSB omegaV = sbm.MatrixBV(M, L);
 	MatrixSB omegaW = sbm.MatrixBW(M, L);
 	MatrixSB matM = sbm.MatrixM(M, L);
 	ChopInplace(omegaV);
 	ChopInplace(omegaW);
 	ChopInplace(matM);
+	ChopInplace(matAV);
+	ChopInplace(matAW);
 	CDT gammaV = sbm.MuPV(M, L);
 	CDT gammaW = sbm.MuPW(M, L);
 	gammaV = Chop(gammaV);
@@ -143,10 +147,20 @@ void TestMatrices(int M, int L)
 
 	cout << "M=" << M << ", L=" << L << endl;
 	cout << "Matrix M:" << endl << matM << endl;
-	cout << "OmegaV:" << endl << omegaV << endl;
-	cout << "OmegaW: " << endl << omegaW << endl;
-	cout << "gammaV=" << gammaV << endl;
-	cout << "gammaW=" << gammaW << endl;
+	cout << "AV: " << endl << matAV << endl;
+	cout << "AW: " << endl << matAW << endl;
+	cout << "BV:" << endl << omegaV << endl;
+	cout << "BW: " << endl << omegaW << endl;
+	cout << "MuV=" << gammaV << endl;
+	cout << "MuW=" << gammaW << endl;
+}
+
+void ShowMatrices()
+{
+	int M, L;
+	cout << "Input the values of M and L:" << endl;
+	cin >> M >> L;
+	TestMatrices(M, L);
 }
 
 void TestOperatorVev()
@@ -617,6 +631,11 @@ int main(int argc, char *argv[])
 	if (s == "-s")
 	{
 		RunEnergyCorrectionForS(true);
+	}
+
+	if (s == "-a")
+	{
+		ShowMatrices();
 	}
 
 	return 0;
