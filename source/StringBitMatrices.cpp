@@ -170,21 +170,24 @@ MatrixSB StringBitMatrices::MatrixA(int k, int l, int M)
 
 MatrixSB StringBitMatrices::MatrixAV(int M, int L)
 {
-#ifdef SYMMETRIC_A
-		return (MatrixA(M, L + 1, M) + MatrixA(L, 1, M)) * .5;   
-#else
-	    MatrixSB ret(M, M);
+	MatrixSB ret(M, M);
         for (int n = 0; n < M; n++)
         {
                 for (int m = 0; m < M; m++)
                 {
+#ifdef SYMMETRIC_A
+			//return (MatrixA(M, L + 1, M) + MatrixA(L, 1, M)) * .5;
+			ret(n, m) = (1.0 + ByPolar(2 * PI * L * (m + n) / M)
+				+ ByPolar(PI * (m + n + 2 * L * n) / M) 
+				+ ByPolar(PI * (m + n + 2 * L * m) / M)) * 0.5 * sin((m-n) * PI / (2*M));
+#else
                         ret(n, m) = sin((m - n) * PI / (2 * M))
                                 + ByPolar(2 * PI * (L + 1) * (m + n) / (2 * M)) * sin((L + 0.5) * (m - n) * PI / M);
+#endif
                 }
         }
 
-		return ret; 
-#endif
+	return ret;
 }
 
 MatrixSB StringBitMatrices::MatrixAW(int M, int L)

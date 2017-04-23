@@ -244,7 +244,11 @@ DT EnergyCalculator::EnergyCorrection(int M, bool outputCorrections)
 	{
 		// we want to calculate from L=M/2 to M-1, so that the ones require less time run first.
 		int L = (i + M / 2) % (M-1) + 1;
-		cout << "Calculating M=" << M << " L=" << L << ", time=" << calculateTime << "s." << endl;  
+		if (outputCorrections)
+		{
+			cout << "Calculating M=" << M << " L=" << L << ", time=" << calculateTime << "s." << endl;  
+		}
+
 #ifdef SYMMETRIC_A
 		if (L + L >= M)
 		{
@@ -252,6 +256,7 @@ DT EnergyCalculator::EnergyCorrection(int M, bool outputCorrections)
 		}
 		else
 		{
+			//delta[L - 1] = EnergyCorrection(M, L);
 			delta[L - 1] = delta[M - L - 1];
 		}
 #else
