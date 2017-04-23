@@ -1915,8 +1915,8 @@ label{overlap_f}
 \begin_inset Formula 
 \begin{align}
 f_{0} & =F_{0}^{\left(1\right)}\sqrt{\frac{L}{M}}+F_{0}^{\left(2\right)}\sqrt{\frac{K}{M}},\label{eq:overlap_f:1}\\
-f_{n} & =F_{n}^{\left(1\right)},\quad1\leq n\leq L-1,\label{eq:overlap_f:2}\\
-f_{n+L} & =F_{n}^{\left(2\right)},\quad1\leq n\leq K-1,\label{eq:overlap_f:3}\\
+f_{n} & =F_{l}^{\left(1\right)},\quad1\leq n\leq L-1,\label{eq:overlap_f:2}\\
+f_{n+L} & =F_{k}^{\left(2\right)},\quad1\leq n\leq K-1,\label{eq:overlap_f:3}\\
 f_{M-1} & =e^{-i\pi/4}\left(F_{0}^{\left(1\right)}\sqrt{\frac{K}{M}}-F_{0}^{\left(2\right)}\sqrt{\frac{L}{M}}\right),\label{eq:overlap_f:4}
 \end{align}
 
@@ -2893,7 +2893,7 @@ reference "eq:overlap_psi_M"
  chains is given by
 \begin_inset Formula 
 \begin{equation}
-\bar{\psi}_{G}=\left|\det C\right|^{1/2}\exp\left(\frac{1}{2}\sum_{kl}\tilde{f}_{k}D_{kl}^{\dagger}\tilde{f}_{l}\right)\bar{\psi}_{G}^{\left(2\right)}\bar{\psi}_{G}^{\left(1\right)},\label{eq:conj_psibar_M}
+\bar{\psi}_{G}=\left|\det C\right|^{1/2}\exp\left(\frac{1}{2}\sum_{ij}\tilde{f}_{i}D_{ij}^{\dagger}\tilde{f}_{j}\right)\bar{\psi}_{G}^{\left(2\right)}\bar{\psi}_{G}^{\left(1\right)},\label{eq:conj_psibar_M}
 \end{equation}
 
 \end_inset
@@ -2967,7 +2967,7 @@ reference "eq:dia_general_eigenfunction_s"
  is
 \begin_inset Formula 
 \begin{equation}
-\bar{\psi}=\prod_{i=0}^{s-1}\prod_{k=1}^{M}\left(\tilde{F}_{M-k}^{\left(s-i\right)}\right)^{\lambda_{M-k,s-i}}\bar{\psi}_{G},\quad\quad\lambda_{k,i}=0,\,1.
+\bar{\psi}=\prod_{i=0}^{s-1}\prod_{j=1}^{M}\left(\tilde{F}_{M-j}^{\left(s-i\right)}\right)^{\lambda_{M-j,s-i}}\bar{\psi}_{G},\quad\quad\lambda_{j,i}=0,\,1.
 \end{equation}
 
 \end_inset
@@ -3059,7 +3059,7 @@ reference "eq:conj_completeness_1"
 , we arrive at 
 \begin_inset Formula 
 \[
-HT_{r}\ket{0}=E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{L=1}^{M-1}\sum_{p,q}T_{p}T_{q}\ket{0}V_{qpr}^{\left(K,L\right)}.
+HT_{r}\ket{0}=E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{L=1}^{M-1}\sum_{p,q}T_{p}T_{q}\ket{0}V_{qpr}.
 \]
 
 \end_inset
@@ -3073,11 +3073,11 @@ where
 \end_inset
 
  are single trace energy state of small chains of 
-\begin_inset Formula $L$
+\begin_inset Formula $K$
 \end_inset
 
  bits and 
-\begin_inset Formula $K$
+\begin_inset Formula $L$
 \end_inset
 
  bits with 
@@ -3086,13 +3086,13 @@ where
 
 .
  The vertex 
-\begin_inset Formula $V_{qpr}^{\left(K,L\right)}$
+\begin_inset Formula $V_{qpr}^{\left(L,K\right)}$
 \end_inset
 
  is defined as 
 \begin_inset Formula 
 \begin{equation}
-V_{qpr}^{\left(K,L\right)}=\left(-\right)^{s\left(Kg_{p}+Lg_{q}\right)}\sum_{k=1}^{M}\int d\theta\,\bar{h}_{k,k+L+1}\bar{\psi}_{q}\left(\theta_{k+L+1}\cdots\theta_{k}\right)\bar{\psi}_{p}\left(\theta_{k+1}\cdots\theta_{k+L}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right).\label{eq:cub_Vstr}
+V_{qpr}^{\left(L,K\right)}=\left(-\right)^{s\left(Kg_{q}+Lg_{p}\right)}\sum_{k=1}^{M}\int d\theta\,\bar{h}_{k,k+L+1}\bar{\psi}_{q}\left(\theta_{k+L+1}\cdots\theta_{k}\right)\bar{\psi}_{p}\left(\theta_{k+1}\cdots\theta_{k+L}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right).\label{eq:cub_Vstr}
 \end{equation}
 
 \end_inset
@@ -4766,19 +4766,16 @@ reference "fig:SubEvsMxi0"
 \begin_inset Formula $M$
 \end_inset
 
- are allowed and there are two curves for each 
-\begin_inset Formula $M$
-\end_inset
-
-: the curves above the horizontal axis consist of odd 
+ are allowed and each has two curves, one for odd 
 \begin_inset Formula $L$
 \end_inset
 
- points and the ones below consist of even 
+ points and the other one for even 
 \begin_inset Formula $L$
 \end_inset
 
  points.
+ We will explain this shortly.
  For 
 \begin_inset Formula $s=2,\,3,\,4$
 \end_inset
@@ -4899,126 +4896,60 @@ The fact that, in the case of odd
 \begin_inset Formula $s$
 \end_inset
 
- and odd 
+, there are two cureves for each 
 \begin_inset Formula $M$
 \end_inset
 
-, 
-\begin_inset Formula $\Delta E$
-\end_inset
-
- is positive for odd 
-\begin_inset Formula $L$
-\end_inset
-
- and negative for even 
-\begin_inset Formula $L$
-\end_inset
-
  can be understood as follows.
- The large chain is split into two small chains of 
-\begin_inset Formula $L$
+ The large chain, which has odd bit number, is split into one even bit and
+ one odd bit chains.
+ The difference occurs when one small chain is much smaller than the other.
+ Let us take an example of the cases 
+\begin_inset Formula $L=1$
 \end_inset
 
  and 
-\begin_inset Formula $K=M-L$
+\begin_inset Formula $L=2$
 \end_inset
 
- bits, where 
-\begin_inset Formula $K$
-\end_inset
-
--bit chain is the one that 
-\begin_inset Formula $h^{\left(V\right)}=h_{M,L+1}$
-\end_inset
-
- acts on, see eq.
+.
+ In the former case, the larger chain is even and in the latter case the
+ smaller chain is even.
+ The lowest energy states of the two cases are almost the same, both are
  
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:cub_Vstr_2"
-
+\begin_inset Formula $-4\cot\frac{\pi}{2L}-4\cos\frac{\pi}{2\left(M-L\right)}+8$
 \end_inset
 
 .
- It means that the 
-\begin_inset Formula $K$
+ But in the 
+\begin_inset Formula $L=1$
 \end_inset
 
--bit chain is evolved from part of the large chain under the action of 
-\begin_inset Formula $h^{\left(V\right)}$
-\end_inset
-
-.
- When 
-\begin_inset Formula $K$
-\end_inset
-
- is even, the lowest state of 
-\begin_inset Formula $K$
-\end_inset
-
--bit chain is 
-\begin_inset Formula $F_{K/2}^{\dagger}\psi_{G}^{\left(K\right)}$
-\end_inset
-
-, which has energy 
-\begin_inset Formula $-8K/\pi+8+2\pi/3K$
+ case, there are many other energy states differ from the lowest energy
+ by 
+\begin_inset Formula $\mathcal{O}\left(1/M\right)$
 \end_inset
 
 .
- While for odd 
-\begin_inset Formula $K$
+ For 
+\begin_inset Formula $s=1$
 \end_inset
 
-, the lowest state is the ground state, which has energy 
-\begin_inset Formula $-8K/\pi+2\pi/3K$
-\end_inset
-
-.
- The term linear in 
-\begin_inset Formula $K$
-\end_inset
-
- is irrelevant for interaction 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Giles:1977mpa"
-
+, the number of such states equals the partition number of 
+\begin_inset Formula $M/2$
 \end_inset
 
 .
- It then follows that it is more difficult to evolve the string bits of
- large chain into a small chain with even 
-\begin_inset Formula $K$
+ For 
+\begin_inset Formula $L=2$
 \end_inset
 
- than odd 
-\begin_inset Formula $K$
+ case, the next lowest energy differs from the lowest energy by 
+\begin_inset Formula $\mathcal{O}\left(1\right)$
 \end_inset
 
 .
- Therefore, a point of even 
-\begin_inset Formula $K$
-\end_inset
-
- (odd 
-\begin_inset Formula $L$
-\end_inset
-
-) corresponds to a higher 
-\begin_inset Formula $\Delta E_{i}$
-\end_inset
-
- than a point of odd 
-\begin_inset Formula $K$
-\end_inset
-
- (even 
-\begin_inset Formula $L$
-\end_inset
-
-).
+ 
 \end_layout
 
 \begin_layout Standard
@@ -6419,7 +6350,7 @@ h_{kl}^{\left(1\right)}=\frac{2}{M}\sum_{n,m=1}^{M-1}\left(A_{nm}^{\dagger}F_{n}
  where 
 \begin_inset Formula 
 \begin{equation}
-A_{nm}=\exp\left(2\pi ik\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi+\exp\left(2\pi i\frac{\left(k+l\right)\left(m+n\right)}{2M}\right)\sin\frac{\left(l-k-1/2\right)\left(m-n\right)\pi}{M}.\label{eq:App_hkl_Anm}
+A_{nm}=\exp\left(2\pi ik\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi+\frac{i}{2}\left[\exp\left(2\pi i\frac{km+ln}{M}\right)\exp\left(\pi i\frac{m-n}{2M}\right)-m\leftrightarrow n\right].\label{eq:App_hkl_Anm}
 \end{equation}
 
 \end_inset
@@ -6495,10 +6426,8 @@ reference "eq:App_hkl_Anm"
 , we see that 
 \begin_inset Formula 
 \begin{align*}
-A_{n0} & =-\exp\left(2\pi ik\frac{n}{M}\right)\sin\frac{n\pi}{2M}-\exp\left(2\pi i\frac{\left(k+l\right)n}{2M}\right)\sin\frac{\left(l-k-1/2\right)n\pi}{M}\\
- & =-\exp\left(2\pi ik\frac{n}{M}\right)\sin\frac{n\pi}{2M}-\frac{1}{2i}\exp\left(2\pi i\frac{\left(l-1/2\right)n}{M}\right)+\frac{1}{2i}\exp\left(2\pi i\frac{\left(k+1/2\right)n}{M}\right)\\
- & =\exp\left(2\pi ik\frac{n}{M}\right)\left(-\sin\frac{n\pi}{2M}+\frac{1}{2i}\exp\left(\frac{in\pi}{2M}\right)\right)-\frac{1}{2i}\exp\left(2\pi i\frac{ln}{M}\right)\exp\left(-\frac{in\pi}{2M}\right)\\
- & =-\frac{i}{2}\exp\left(2\pi ik\frac{n}{M}\right)\exp\left(-\frac{in\pi}{2M}\right)+\frac{i}{2}\exp\left(2\pi i\frac{ln}{M}\right)\exp\left(-\frac{in\pi}{2M}\right)\\
+A_{n0} & =-\exp\left(2\pi i\frac{kn}{M}\right)\sin\frac{n\pi}{2M}+\frac{i}{2}\left[\exp\left(2\pi i\frac{ln}{M}\right)\exp\left(-\frac{n\pi i}{2M}\right)-\exp\left(2\pi i\frac{kn}{M}\right)\exp\left(\frac{n\pi i}{2M}\right)\right]\\
+ & =-\frac{i}{2}\exp\left(2\pi i\frac{kn}{M}\right)\exp\left(-\frac{in\pi}{2M}\right)+\frac{i}{2}\exp\left(2\pi i\frac{ln}{M}\right)\exp\left(-\frac{in\pi}{2M}\right)\\
  & =\frac{1}{2}X_{n}.
 \end{align*}
 
