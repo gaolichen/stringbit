@@ -162,11 +162,11 @@ DT EnergyCalculator::EnergyCorrection(int M, int L)
 	MatrixSB matM = sbm.MatrixM(M, L);
 	DT detC = abs(sbm.MatrixC(M, L).determinant());
 	//cout << "detC=" << detC << endl;
-	MatrixSB omegaV = sbm.OmegaV(M, L);
-	MatrixSB omegaW = sbm.OmegaW(M, L);
-	CDT gmV = sbm.GammaPV(M, L, xi);
-	CDT gmW = sbm.GammaPW(M, L, xi);
-	VevCalculator calc(matM, omegaV, omegaW, gmV, gmW);
+	MatrixSB matBV = sbm.MatrixBV(M, L);
+	MatrixSB matBW = sbm.MatrixBW(M, L);
+	CDT muV = sbm.MuPV(M, L, xi);
+	CDT muW = sbm.MuPW(M, L, xi);
+	VevCalculator calc(matM, matBV, matBW, muV, muW);
 
 	watch.Start();
 

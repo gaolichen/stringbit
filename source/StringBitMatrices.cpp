@@ -202,19 +202,19 @@ MatrixSB StringBitMatrices::MatrixAW(int M, int L)
         return ret;
 }
 
-MatrixSB StringBitMatrices::OmegaV(int M, int L)
+MatrixSB StringBitMatrices::MatrixBV(int M, int L)
 {
         MatrixSB invc = MatrixC(M, L).inverse();
         return invc * MatrixAV(M, L).adjoint() * invc.transpose();
 }
 
-MatrixSB StringBitMatrices::OmegaW(int M, int L)
+MatrixSB StringBitMatrices::MatrixBW(int M, int L)
 {
         MatrixSB invc = MatrixC(M, L).inverse();
         return invc * MatrixAW(M, L).adjoint() * invc.transpose();
 }
 
-CDT StringBitMatrices::GammaPV(int M, int L, DT xi)
+CDT StringBitMatrices::MuPV(int M, int L, DT xi)
 {
         CDT tr = (MatrixS(M, L).conjugate() * MatrixC(M, L).inverse() * MatrixAV(M, L).adjoint()).trace();
 #ifdef SYMMETRIC_A
@@ -224,7 +224,7 @@ CDT StringBitMatrices::GammaPV(int M, int L, DT xi)
 #endif
 }
 
-CDT StringBitMatrices::GammaPW(int M, int L, DT xi)
+CDT StringBitMatrices::MuPW(int M, int L, DT xi)
 {
         CDT tr = (MatrixS(M, L).conjugate() * MatrixC(M, L).inverse() * MatrixAW(M, L).adjoint()).trace();
         return -4/tan(PI / (2 * M)) + 2 * M * xi - tr;

@@ -114,7 +114,7 @@ void TestStringBitMatrices()
 	int M = 7;
 	for (int i = 1; i < M; i++)
 	{
-		cout << "M=" << M << " L=" << i << " GammaPV=" << sbm.GammaPV(M, i) << " GammaPW=" << sbm.GammaPW(M, i) << endl;
+		cout << "M=" << M << " L=" << i << " MuPV=" << sbm.MuPV(M, i) << " MuPW=" << sbm.MuPW(M, i) << endl;
 	}
 }
 
@@ -130,14 +130,14 @@ void TestAllStates()
 void TestMatrices(int M, int L)
 {
 	StringBitMatrices sbm;
-	MatrixSB omegaV = sbm.OmegaV(M, L);
-	MatrixSB omegaW = sbm.OmegaW(M, L);
+	MatrixSB omegaV = sbm.MatrixBV(M, L);
+	MatrixSB omegaW = sbm.MatrixBW(M, L);
 	MatrixSB matM = sbm.MatrixM(M, L);
 	ChopInplace(omegaV);
 	ChopInplace(omegaW);
 	ChopInplace(matM);
-	CDT gammaV = sbm.GammaPV(M, L);
-	CDT gammaW = sbm.GammaPW(M, L);
+	CDT gammaV = sbm.MuPV(M, L);
+	CDT gammaW = sbm.MuPW(M, L);
 	gammaV = Chop(gammaV);
 	gammaW = Chop(gammaW);
 
@@ -156,14 +156,14 @@ void TestOperatorVev()
 
 	StringBitMatrices sbm;
 
-	MatrixSB omegaV = sbm.OmegaV(M, L);
-	MatrixSB omegaW = sbm.OmegaW(M, L);
+	MatrixSB omegaV = sbm.MatrixBV(M, L);
+	MatrixSB omegaW = sbm.MatrixBW(M, L);
 	MatrixSB matM = sbm.MatrixM(M, L);
 	ChopInplace(omegaV);
 	ChopInplace(omegaW);
 	ChopInplace(matM);
-	CDT gammaV = sbm.GammaPV(M, L);
-	CDT gammaW = sbm.GammaPW(M, L);
+	CDT gammaV = sbm.MuPV(M, L);
+	CDT gammaW = sbm.MuPW(M, L);
 	gammaV = Chop(gammaV);
 	gammaW = Chop(gammaW);
 
