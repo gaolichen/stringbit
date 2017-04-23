@@ -64,7 +64,7 @@ CDT VevCalculator::VevW(int ops)
 
 CDT VevCalculator::VevAll(int ops)
 {
-#if USE_CACHE
+#ifdef USE_CACHE
 	map<int, CDT>::iterator it = cacheAll.find(ops);
 	if (it != cacheAll.end()) return it->second;
 #endif
@@ -83,7 +83,7 @@ CDT VevCalculator::VevAll(int ops)
 
 	// the result of each VevW or VevV need to multiple a 2/M, hence here we need 4/M^2.
 	delta *= 4.0/(M * M);
-#if USE_CACHE
+#ifdef USE_CACHE
 	cacheAll[ops] = delta; 
 #endif
        return delta;

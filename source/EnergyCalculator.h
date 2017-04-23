@@ -9,7 +9,7 @@
 #include "StringBitMatrices.h"
 #include <Eigen/Dense>
 
-//#define USE_CACHE
+#define USE_CACHE
 
 using namespace std;
 
@@ -23,7 +23,7 @@ private:
 	CDT gammaW;
 	int M;
 	map<int, CDT> cache;
-#if USE_CACHE
+#ifdef USE_CACHE
 	map<int, CDT> cacheAll;
 #endif
 	CDT DoCalculate(int ops);
