@@ -7,9 +7,14 @@ TPI = (2*I)*Pi
 MatrixA2[k_, l_, M_] := Table[ElementA[k, l, M, n, m], {n, 0, M - 1}, 
      {m, 0, M - 1}]
  
-MatrixAV2[M_, L_] := Table[Sin[(m - n)*(Pi/(2*M))] + 
-      Exp[TPI*(L + 1)*((m + n)/(2*M))]*Sin[(L + 1/2)*(m - n)*(Pi/M)], 
-     {n, 0, M - 1}, {m, 0, M - 1}]
+MatrixAV2[M_, L_, opts:OptionsPattern[]] := If[OptionValue[SymmetricA], 
+     Table[(Sin[(m - n)*(Pi/(2*M))]/2)*(1 + Exp[TPI*L*((m + n)/M)] + 
+        Exp[Pi*I*((2*L*n + m + n)/M)] + Exp[Pi*I*((2*L*m + m + n)/M)]), 
+      {n, 0, M - 1}, {m, 0, M - 1}], Table[Sin[(m - n)*(Pi/(2*M))] + 
+       Exp[TPI*(L + 1)*((m + n)/(2*M))]*Sin[(L + 1/2)*(m - n)*(Pi/M)], 
+      {n, 0, M - 1}, {m, 0, M - 1}]]
+ 
+Options[MatrixAV2] = {SymmetricA -> False}
  
 MatrixAW2[M_, L_] := Table[(1 + Exp[I*Pi*((n + m)/M)])*
       (1 + Exp[2*I*Pi*L*((m + n)/M)])*Sin[(m - n)*(Pi/(2*M))], {n, 0, M - 1}, 
@@ -17,8 +22,11 @@ MatrixAW2[M_, L_] := Table[(1 + Exp[I*Pi*((n + m)/M)])*
  
 OmegaV2[M_, L_, opts:OptionsPattern[]] := 
     InverseCT2[M, L, FilterRules[{opts}, Options[InverseCT2]]] . 
-     ConjugateTranspose[MatrixAV2[M, L]] . 
-     Transpose[InverseCT2[M, L, FilterRules[{opts}, Options[InverseCT2]]]]
+     ConjugateTranspose[MatrixAV2[M, L, FilterRules[{opts}, 
+        Options[MatrixAV2]]]] . Transpose[InverseCT2[M, L, 
+       FilterRules[{opts}, Options[InverseCT2]]]]
+ 
+Options[OmegaV2] = {SymmetricA -> False, Numeric -> False}
  
 InverseCT2[M_, L_, opts:OptionsPattern[]] := 
     Module[{MC}, MC = MatrixCT2[M, L, FilterRules[{opts}, 
@@ -55,8 +63,7 @@ DotV2T[M_, L_, K_, m_, n_] := If[IntegerQ[n/K - m/M],
      Sqrt[K/M]*Exp[(-TPI)*n*(L/K)], (1/Sqrt[M*K])*((1 - Exp[(-TPI)*m*(L/M)])/
        (1 - Exp[(-TPI)*(n/K - m/M)]))]
  
-CmMT[M_, L_, K_, m_] := DotWT[M, L, K, m]*Cos[m*(Pi/(2*M)) - Pi/4]*
-     Exp[(-I)*(Pi/4)]
+CmMT[M_, L_, K_, m_] := DotWT[M, L, K, m]*Cos[m*(Pi/(2*M)) - Pi/4]
  
 DotWT[M_, L_, K_, m_] := If[m == 0, 0, (-Sqrt[L*K]^(-1))*
       ((1 - Exp[(-TPI)*m*(L/M)])/(1 - Exp[TPI*(m/M)]))]
@@ -66,16 +73,21 @@ OmegaW2[M_, L_, opts:OptionsPattern[]] :=
      ConjugateTranspose[MatrixAW2[M, L]] . 
      Transpose[InverseCT2[M, L, FilterRules[{opts}, Options[InverseCT2]]]]
  
-GammaPV2[M_, L_, opts:OptionsPattern[]] := -Cot[Pi/(2*M)] - 
-     Cot[(2*L + 1)*(Pi/2/M)] - GammaV2[M, L, FilterRules[{opts}, 
-       Options[GammaV2]]]
+GammaPV2[M_, L_, opts:OptionsPattern[]] := If[OptionValue[SymmetricA], 
+     -Cot[Pi/(2*M)] + (Cot[(2*L - 1)*(Pi/2/M)] - Cot[(2*L + 1)*(Pi/2/M)])/2 - 
+      GammaV2[M, L, FilterRules[{opts}, Options[GammaV2]]], 
+     -Cot[Pi/(2*M)] - Cot[(2*L + 1)*(Pi/2/M)] - GammaV2[M, L, 
+       FilterRules[{opts}, Options[GammaV2]]]]
+ 
+Options[GammaPV2] = {Numeric -> False, SymmetricA -> False}
  
 GammaV2[M_, L_, opts:OptionsPattern[]] := 
     Tr[Conjugate[MatrixST2[M, L, FilterRules[{opts}, Options[MatrixST2]]]] . 
       InverseCT2[M, L, FilterRules[{opts}, Options[MatrixST2]]] . 
-      ConjugateTranspose[MatrixAV2[M, L]]]
+      ConjugateTranspose[MatrixAV2[M, L, FilterRules[{opts}, 
+         Options[MatrixAV2]]]]]
  
-Options[GammaV2] = {Numeric -> False}
+Options[GammaV2] = {Numeric -> False, SymmetricA -> False}
  
 MatrixST2[M_, L_, opts:OptionsPattern[]] := If[OptionValue[Numeric], 
      Return[N[Table[ElementST[M, L, M - L, n, m], {n, 0, M - 1}, 
@@ -98,8 +110,7 @@ Smn1T[M_, L_, K_, m_, n_] := DotV1T[M, L, K, m, L - n]*
 Smn2T[M_, L_, K_, m_, n_] := DotV2T[M, L, K, m, K - n]*
      Cos[Pi*(n/(2*K)) + Pi*(m/(2*M))]
  
-SmMT[M_, L_, K_, m_] := DotWT[M, L, K, m]*Cos[m*(Pi/(2*M)) + Pi/4]*
-     Exp[I*(Pi/4)]
+SmMT[M_, L_, K_, m_] := DotWT[M, L, K, m]*Cos[m*(Pi/(2*M)) + Pi/4]
  
 GammaPW2[M_, L_, opts:OptionsPattern[]] := -4*Cot[Pi/(2*M)] - 
      GammaW2[M, L, FilterRules[{opts}, Options[GammaW2]]]
