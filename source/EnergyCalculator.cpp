@@ -243,7 +243,7 @@ DT EnergyCalculator::EnergyCorrection(int M, bool outputCorrections)
 	for (int i = 0; i < M - 1; i++)
 	{
 		// we want to calculate from L=M/2 to M-1, so that the ones require less time run first.
-		int L = (i + M / 2) % (M-1) + 1;
+		int L = (i + (M - 1) / 2) % (M-1) + 1;
 		if (outputCorrections)
 		{
 			cout << "Calculating M=" << M << " L=" << L << ", time=" << calculateTime << "s." << endl;  
