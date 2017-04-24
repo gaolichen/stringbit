@@ -4192,7 +4192,7 @@ reference "eq:olp_DeltaE"
 , we have 
 \begin_inset Formula 
 \[
-\Delta E_{G}=\frac{1}{N^{2}}\left(-66\sqrt{3}\xi^{4}+360\xi^{3}-242\sqrt{3}\xi^{2}+228\xi-33\sqrt{3}\right).
+\Delta E_{G}=\frac{1}{N^{2}}\left(-66\sqrt{3}\xi^{4}+360\xi^{3}-230\sqrt{3}\xi^{2}+180\xi-\frac{33\sqrt{3}}{2}\right).
 \]
 
 \end_inset
@@ -6959,22 +6959,22 @@ e^{-i\frac{5\pi}{6}} & e^{-i\frac{\pi}{3}}
  are 
 \begin_inset Formula 
 \begin{eqnarray*}
-A^{\left(V\right)} & = & \begin{pmatrix}0 & i\frac{\sqrt{3}}{2} & \frac{\sqrt{3}}{2}\\
--i\frac{\sqrt{3}}{2} & 0 & \frac{3}{2}\\
--\frac{\sqrt{3}}{2} & -\frac{3}{2} & 0
+A^{\left(V\right)} & = & \begin{pmatrix}0 & i\frac{\sqrt{3}}{4} & \frac{\sqrt{3}}{4}\\
+-i\frac{\sqrt{3}}{4} & 0 & \frac{3}{4}\\
+-\frac{\sqrt{3}}{4} & -\frac{3}{4} & 0
 \end{pmatrix},\quad A^{\left(W\right)}=\begin{pmatrix}0 & \frac{i\sqrt{3}}{2} & \frac{\sqrt{3}}{2}\\
 -\frac{i\sqrt{3}}{2} & 0 & 0\\
 -\frac{\sqrt{3}}{2} & 0 & 0
 \end{pmatrix}\\
-B^{\left(V\right)} & = & \begin{pmatrix}0 & \sqrt{\frac{3}{2}}e^{3i\pi/4} & \sqrt{\frac{3}{2}}\left(2-\sqrt{3}\right)e^{3i\pi/4}\\
-\sqrt{\frac{3}{2}}e^{-i\pi/4} & 0 & 6i\left(2-\sqrt{3}\right)\\
-\sqrt{\frac{3}{2}}\left(2-\sqrt{3}\right)e^{-i\pi/4} & -6i\left(2-\sqrt{3}\right) & 0
+B^{\left(V\right)} & = & \begin{pmatrix}0 & \frac{1}{2}\sqrt{\frac{3}{2}}e^{3i\pi/4} & \sqrt{\frac{3}{2}}\left(1-\frac{\sqrt{3}}{2}\right)e^{3i\pi/4}\\
+\frac{1}{2}\sqrt{\frac{3}{2}}e^{-i\pi/4} & 0 & 3i\left(2-\sqrt{3}\right)\\
+\sqrt{\frac{3}{2}}\left(1-\frac{\sqrt{3}}{2}\right)e^{-i\pi/4} & -3i\left(2-\sqrt{3}\right) & 0
 \end{pmatrix},\\
 B^{\left(W\right)} & = & \begin{pmatrix}0 & \sqrt{\frac{3}{2}}e^{3i\pi/4} & \sqrt{\frac{3}{2}}\left(2-\sqrt{3}\right)e^{3i\pi/4}\\
 \sqrt{\frac{3}{2}}e^{-i\pi/4} & 0 & 0\\
 \sqrt{\frac{3}{2}}\left(2-\sqrt{3}\right)e^{-i\pi/4} & 0 & 0
 \end{pmatrix},\\
-\mu^{\prime\left(V\right)} & = & -2\left(3-\sqrt{3}\right)+3\xi,\quad\mu^{\prime\left(W\right)}=-4\sqrt{3}+6\xi.
+\mu^{\prime\left(V\right)} & = & -3+\sqrt{3}+3\xi,\quad\mu^{\prime\left(W\right)}=-4\sqrt{3}+6\xi.
 \end{eqnarray*}
 
 \end_inset
@@ -7238,7 +7238,7 @@ The contribution of
  to the energy correction is 
 \begin_inset Formula 
 \begin{equation}
-\Delta E_{G}^{\prime}=\frac{1}{N^{2}}\frac{KLM\left|\det C\right|}{E_{G}-E_{G}^{\left(1\right)}-E_{1}^{\left(2\right)}}\left(\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V}+\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{V}\right).\label{eq:App_ex_deltaEp}
+\Delta E_{G}^{L=1}=\frac{1}{N^{2}}\frac{KLM\left|\det C\right|}{E_{G}-E_{G}^{\left(1\right)}-E_{1}^{\left(2\right)}}\left(\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V}+\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{V}\right).\label{eq:App_ex_deltaEp}
 \end{equation}
 
 \end_inset
@@ -7256,7 +7256,7 @@ So we need to calculate
 \begin{align*}
 \left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V} & =\frac{2}{M}\mu^{\prime\left(V\right)}\zero{\left\langle f_{1}f_{0}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle }+\frac{2}{M}B_{mn}^{\left(V\right)}\left\langle f_{1}f_{0}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \\
  & =\frac{4}{M}B_{0n}^{\left(V\right)}\left\langle f_{1}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \\
- & =\frac{4}{M}B_{01}^{\left(V\right)}=2\sqrt{\frac{2}{3}}e^{3i\pi/4},
+ & =\frac{4}{M}B_{01}^{\left(V\right)}=\sqrt{\frac{2}{3}}e^{3i\pi/4},
 \end{align*}
 
 \end_inset
@@ -7265,7 +7265,7 @@ So we need to calculate
 \begin_inset Formula 
 \begin{align*}
 \left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{V} & =\frac{2}{M}\mu^{\prime\left(V\right)}\left\langle f_{1}f_{2}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}B_{mn}^{\left(V\right)}\left\langle f_{1}f_{2}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \\
- & =-\frac{2}{M}\mu^{\prime\left(V\right)}D_{12}-\frac{4}{M}B_{12}^{\left(V\right)}=-4i\left(1-\frac{1}{\sqrt{3}}+\xi-\frac{\sqrt{3}}{2}\xi\right).
+ & =-\frac{2}{M}\mu^{\prime\left(V\right)}D_{12}-\frac{4}{M}B_{12}^{\left(V\right)}=-2i\left(1-\frac{1}{\sqrt{3}}+2\xi-\sqrt{3}\xi\right).
 \end{align*}
 
 \end_inset
@@ -7291,7 +7291,7 @@ reference "eq:App_ex_deltaEp"
 \end_inset
 
  yields 
-\begin_inset Formula $\Delta E_{G}^{\prime}=-\frac{3}{2}\left(3\sqrt{3}-5\right)\left(1+\xi\right)^{2}\frac{1}{N^{2}}$
+\begin_inset Formula $\Delta E_{G}^{L=1}=-\frac{3}{2}\left(3\sqrt{3}-5\right)\xi^{2}+\left(12-7\sqrt{3}\right)\xi-\frac{3}{4}\left(3\sqrt{3}-5\right)$
 \end_inset
 
 .
@@ -7299,87 +7299,18 @@ reference "eq:App_ex_deltaEp"
 \end_layout
 
 \begin_layout Standard
-For 
+The result of 
 \begin_inset Formula $L=2$
 \end_inset
 
-, the energy eigenstate are the same as 
+ is the same as the one of 
 \begin_inset Formula $L=1$
 \end_inset
 
-, so the energy correction is still given by 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:App_ex_deltaEp"
-
-\end_inset
-
-.
- Now the matrices and constants are 
+, hence we have 
 \begin_inset Formula 
 \[
-C=\begin{pmatrix}1\end{pmatrix}\oplus\frac{1+\sqrt{3}}{4}\begin{pmatrix}i & -1\\
--i & -1
-\end{pmatrix},\quad\left|\det C\right|=\frac{2+\sqrt{3}}{4},
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-S=\begin{pmatrix}0\end{pmatrix}\oplus\frac{\sqrt{3}-1}{4}\begin{pmatrix}i & -1\\
-i & 1
-\end{pmatrix},\quad D=\begin{pmatrix}0\end{pmatrix}\oplus\left(2-\sqrt{3}\right)\begin{pmatrix}0 & -i\\
-i & 0
-\end{pmatrix},
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-A^{\left(V\right)}=0,\quad A^{\left(W\right)}=\begin{pmatrix}0 & \frac{1}{2}\left(1-(-1)^{2/3}\right) & \frac{1}{4}\left(3i-\sqrt{3}\right)\\
-\frac{1}{2}\left(-1+(-1)^{2/3}\right) & 0 & 0\\
-\frac{1}{4}\left(-3i+\sqrt{3}\right) & 0 & 0
-\end{pmatrix},
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-B^{\left(V\right)}=0,\quad B^{\left(W\right)}=\left(\begin{array}{ccc}
-0 & \sqrt{\frac{3}{2}}e^{3i\pi/4} & \left(\sqrt{6}-\frac{3}{\sqrt{2}}\right)e^{-i\pi/4}\\
-\sqrt{\frac{3}{2}}e^{-i\pi/4} & 0 & 0\\
-\left(\sqrt{6}-\frac{3}{\sqrt{2}}\right)e^{3i\pi/4} & 0 & 0
-\end{array}\right),
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\mu^{\prime\left(V\right)}=3\xi,\quad\mu^{\prime\left(W\right)}=-4\sqrt{3}+6\xi.
-\]
-
-\end_inset
-
-With above results, we find the 
-\begin_inset Formula $L=2$
-\end_inset
-
- contribution is 
-\begin_inset Formula $\Delta E_{G}^{\prime\prime}=\frac{\left(2\sqrt{3}-3\xi\right)\xi}{3\sqrt{3}+5}\frac{1}{N^{2}}$
-\end_inset
-
- and the final result of the energy correction is
-\begin_inset Formula 
-\[
-\Delta E_{G}=\Delta E_{G}^{\prime}+\Delta E_{G}^{\prime\prime}=-3\left(3\sqrt{3}-5\right)\xi^{2}+2\left(12-7\sqrt{3}\right)\xi-\frac{3}{2}\left(3\sqrt{3}-5\right).
+\Delta E_{G}=2\Delta E_{G}^{L=1}=-3\left(3\sqrt{3}-5\right)\xi^{2}+2\left(12-7\sqrt{3}\right)\xi-\frac{3}{2}\left(3\sqrt{3}-5\right).
 \]
 
 \end_inset
@@ -7731,7 +7662,7 @@ For
 \begin_inset Formula 
 \begin{align*}
 \left\langle 1\right\rangle _{V} & =\frac{2}{M}\mu^{\prime\left(V\right)}\left\langle \exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}B_{mn}^{\left(V\right)}\zero{\left\langle f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle }\\
- & =\frac{2}{M}\mu^{\prime\left(V\right)}=\frac{4}{\sqrt{3}}-4+2\xi,
+ & =\frac{2}{M}\mu^{\prime\left(V\right)}=\frac{2}{\sqrt{3}}-2+2\xi,
 \end{align*}
 
 \end_inset
@@ -7740,7 +7671,7 @@ For
 \begin_inset Formula 
 \begin{align*}
 \left\langle f_{2}f_{0}\right\rangle _{V} & =\frac{2}{M}\mu^{\prime\left(V\right)}\zero{\left\langle f_{2}f_{0}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle }+\frac{2}{M}B_{mn}^{\left(V\right)}\left\langle f_{2}f_{0}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \\
- & =\frac{4}{M}B_{02}^{\left(V\right)}=2\sqrt{2}\left(\frac{2}{\sqrt{3}}-1\right)e^{3i\pi/4},
+ & =\frac{4}{M}B_{02}^{\left(V\right)}=\sqrt{2}\left(\frac{2}{\sqrt{3}}-1\right)e^{3i\pi/4},
 \end{align*}
 
 \end_inset
@@ -7753,19 +7684,7 @@ For
 
 \end_inset
 
- For 
-\begin_inset Formula $L=2$
-\end_inset
-
-, 
-\begin_inset Formula 
-\[
-\left\langle 1\right\rangle _{V}=2\xi,\quad\left\langle f_{2}f_{0}\right\rangle _{V}=0,\quad\left\langle 1\right\rangle _{W}=-\frac{8}{\sqrt{3}}+4\xi,\quad\left\langle f_{2}f_{0}\right\rangle _{W}=2\sqrt{2}\left(\frac{2}{\sqrt{3}}-1\right)e^{-i\pi/4}
-\]
-
-\end_inset
-
-Substituting above into eq.
+ Substituting above into eq.
  
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -7776,7 +7695,7 @@ reference "eq:App_ex_DeltaEs2"
 , we obtain 
 \begin_inset Formula 
 \[
-\Delta E_{G}=\frac{1}{N^{2}}\left(-66\sqrt{3}\xi^{4}+360\xi^{3}-242\sqrt{3}\xi^{2}+228\xi-33\sqrt{3}\right).
+\Delta E_{G}=2\Delta E_{G}^{L=1}=\frac{1}{N^{2}}\left(-66\sqrt{3}\xi^{4}+360\xi^{3}-230\sqrt{3}\xi^{2}+180\xi-\frac{33\sqrt{3}}{2}\right).
 \]
 
 \end_inset
