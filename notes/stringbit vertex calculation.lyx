@@ -1383,18 +1383,14 @@ V_{qpr}=\frac{1}{2}\left(V_{qpr}+\left(-\right)^{g_{p}g_{q}}V_{pqr}\right)
 \end_layout
 
 \begin_layout Standard
-When 
-\begin_inset Formula $k=M$
+For 
+\begin_inset Formula $h_{M,K+1}$
 \end_inset
 
-, 
-\begin_inset Formula $l=L+1$
-\end_inset
 
-,
 \begin_inset Formula 
 \begin{align*}
-A_{nm} & =\sin\frac{m-n}{2M}\pi+\frac{i}{2}\left[\exp\left(2\pi i\frac{\left(L+1\right)n}{M}\right)\exp\left(\pi i\frac{m-n}{2M}\right)-m\leftrightarrow n\right]
+A_{nm} & =\sin\frac{m-n}{2M}\pi+\frac{i}{2}\left[\exp\left(2\pi i\frac{\left(K+1\right)n}{M}\right)\exp\left(\pi i\frac{m-n}{2M}\right)-m\leftrightarrow n\right]
 \end{align*}
 
 \end_inset
@@ -1402,7 +1398,7 @@ A_{nm} & =\sin\frac{m-n}{2M}\pi+\frac{i}{2}\left[\exp\left(2\pi i\frac{\left(L+1
 
 \begin_inset Formula 
 \[
-\gamma=-\cot\frac{\pi}{2M}-\cot\frac{2L+1}{2M}\pi
+\gamma=-\cot\frac{\pi}{2M}-\cot\frac{2K+1}{2M}\pi
 \]
 
 \end_inset
@@ -1411,18 +1407,14 @@ A_{nm} & =\sin\frac{m-n}{2M}\pi+\frac{i}{2}\left[\exp\left(2\pi i\frac{\left(L+1
 \end_layout
 
 \begin_layout Standard
-When 
-\begin_inset Formula $k=L$
+For 
+\begin_inset Formula $h_{K1}$
 \end_inset
 
-, 
-\begin_inset Formula $l=1$
-\end_inset
 
-,
 \begin_inset Formula 
 \begin{align*}
-A_{nm} & =\exp\left(2\pi iL\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi+\frac{i}{2}\left[\exp\left(2\pi i\frac{Lm+n}{M}\right)\exp\left(\pi i\frac{m-n}{2M}\right)-m\leftrightarrow n\right]
+A_{nm} & =\exp\left(2\pi iK\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi+\frac{i}{2}\left[\exp\left(2\pi i\frac{Km+n}{M}\right)\exp\left(\pi i\frac{m-n}{2M}\right)-m\leftrightarrow n\right]
 \end{align*}
 
 \end_inset
@@ -1430,36 +1422,27 @@ A_{nm} & =\exp\left(2\pi iL\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi+\frac{i}{2}
 
 \begin_inset Formula 
 \[
-\gamma=-\cot\frac{\pi}{2M}+\cot\frac{2L-1}{2M}\pi
+\gamma=-\cot\frac{\pi}{2M}+\cot\frac{2K-1}{2M}\pi
 \]
 
 \end_inset
 
  There for 
-\begin_inset Formula $h^{\left(V\right)}=\frac{h_{M,L+1}+h_{L,1}}{2}$
+\begin_inset Formula $h^{\left(V\right)}=\frac{h_{M,K+1}+h_{K,1}}{2}$
 \end_inset
 
 , we have
 \begin_inset Formula 
 \begin{align*}
-A_{nm}^{\left(V\right)} & =\frac{1}{2}\left[\exp\left(2\pi iL\frac{m+n}{M}\right)+1\right]\sin\frac{m-n}{2M}\pi\\
- & +\frac{i}{4}\left[\exp\left(2\pi i\frac{Ln}{M}\right)+\exp\left(2\pi i\frac{Lm}{M}\right)\right]\exp\left(\pi i\frac{m+n}{2M}\right)\left[\exp\left(i\frac{\pi n}{M}\right)-\exp\left(i\frac{\pi m}{M}\right)\right]\\
- & =\frac{1}{2}\left[\exp\left(2\pi iL\frac{m+n}{M}\right)+1\right]\sin\frac{m-n}{2M}\pi\\
- & +\frac{1}{2}\left[\exp\left(2\pi i\frac{Ln}{M}\right)+\exp\left(2\pi i\frac{Lm}{M}\right)\right]\exp\left(\pi i\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi\\
- & =\frac{1}{2}\left[\exp\left(2\pi iL\frac{m+n}{M}\right)+1\right]\sin\frac{m-n}{2M}\pi-\frac{1}{2}\left[\exp\left(2\pi i\frac{Ln}{M}\right)+\exp\left(2\pi i\frac{Lm}{M}\right)\right]\sin\frac{m-n}{2M}\pi\\
- & +\frac{1}{2}\left[\exp\left(2\pi i\frac{Ln}{M}\right)+\exp\left(2\pi i\frac{Lm}{M}\right)\right]\sin\frac{m-n}{2M}\pi\\
- & +\frac{1}{2}\left[\exp\left(2\pi i\frac{Ln}{M}\right)+\exp\left(2\pi i\frac{Lm}{M}\right)\right]\exp\left(\pi i\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi\\
- & =\frac{1}{2}\left[1-\exp\left(2\pi i\frac{Ln}{M}\right)\right]\left[1-\exp\left(2\pi i\frac{Lm}{M}\right)\right]\sin\frac{m-n}{2M}\pi\\
- & +\frac{1}{2}\left[\exp\left(2\pi i\frac{Ln}{M}\right)+\exp\left(2\pi i\frac{Lm}{M}\right)\right]\left[1+\exp\left(\pi i\frac{m+n}{M}\right)\right]\sin\frac{m-n}{2M}\pi
-\end{align*}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{align*}
-\gamma^{\left(V\right)} & =-\cot\frac{\pi}{2M}+\frac{1}{2}\left(\cot\frac{2L-1}{2M}\pi-\cot\frac{2L+1}{2M}\pi\right)\\
- & =-\cot\frac{\pi}{2M}-\frac{1}{2}\left(\cot\frac{2K+1}{2M}\pi+\cot\frac{2L+1}{2M}\pi\right)
+A_{nm}^{\left(V\right)} & =\frac{1}{2}\left[\exp\left(2\pi iK\frac{m+n}{M}\right)+1\right]\sin\frac{m-n}{2M}\pi\\
+ & +\frac{i}{4}\left[\exp\left(2\pi i\frac{Kn}{M}\right)+\exp\left(2\pi i\frac{Km}{M}\right)\right]\exp\left(\pi i\frac{m+n}{2M}\right)\left[\exp\left(i\frac{\pi n}{M}\right)-\exp\left(i\frac{\pi m}{M}\right)\right]\\
+ & =\frac{1}{2}\left[\exp\left(2\pi iK\frac{m+n}{M}\right)+1\right]\sin\frac{m-n}{2M}\pi\\
+ & +\frac{1}{2}\left[\exp\left(2\pi i\frac{Kn}{M}\right)+\exp\left(2\pi i\frac{Km}{M}\right)\right]\exp\left(\pi i\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi\\
+ & =\frac{1}{2}\left[\exp\left(2\pi iK\frac{m+n}{M}\right)+1\right]\sin\frac{m-n}{2M}\pi-\frac{1}{2}\left[\exp\left(2\pi i\frac{Kn}{M}\right)+\exp\left(2\pi i\frac{Km}{M}\right)\right]\sin\frac{m-n}{2M}\pi\\
+ & +\frac{1}{2}\left[\exp\left(2\pi i\frac{Kn}{M}\right)+\exp\left(2\pi i\frac{Km}{M}\right)\right]\sin\frac{m-n}{2M}\pi\\
+ & +\frac{1}{2}\left[\exp\left(2\pi i\frac{Kn}{M}\right)+\exp\left(2\pi i\frac{Km}{M}\right)\right]\exp\left(\pi i\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi\\
+ & =\frac{1}{2}\left[1-\exp\left(2\pi i\frac{Kn}{M}\right)\right]\left[1-\exp\left(2\pi i\frac{Km}{M}\right)\right]\sin\frac{m-n}{2M}\pi\\
+ & +\frac{1}{2}\left[\exp\left(2\pi i\frac{Kn}{M}\right)+\exp\left(2\pi i\frac{Km}{M}\right)\right]\left[1+\exp\left(\pi i\frac{m+n}{M}\right)\right]\sin\frac{m-n}{2M}\pi
 \end{align*}
 
 \end_inset
@@ -1467,7 +1450,7 @@ A_{nm}^{\left(V\right)} & =\frac{1}{2}\left[\exp\left(2\pi iL\frac{m+n}{M}\right
 
 \begin_inset Formula 
 \[
-h_{M,L+1}^{\left(0\right)}=\frac{2}{M}\sum_{n=1}^{M-1}\left[1-\exp\left(-2\pi i\frac{\left(L+1\right)n}{M}\right)\right]\Big[\left(s_{n}+ic_{n}\right)F_{0}^{\dagger}F_{n}^{\dagger}+\left(c_{n}-is_{n}\right)F_{n}^{\dagger}F_{0}\Big]+\mathrm{h.c.}
+\gamma^{\left(V\right)}=-\cot\frac{\pi}{2M}+\frac{1}{2}\left(\cot\frac{2K-1}{2M}\pi-\cot\frac{2K+1}{2M}\pi\right)
 \]
 
 \end_inset
@@ -1479,7 +1462,7 @@ h_{M,L+1}^{\left(0\right)}=\frac{2}{M}\sum_{n=1}^{M-1}\left[1-\exp\left(-2\pi i\
 \begin_inset Formula 
 \begin{align*}
 HT_{p}T_{q}\ket{0} & =H\int d\theta\, T\left(\theta\right)\psi_{p}\left(\theta\right)\int d\eta\, T\left(\eta\right)\psi_{q}\left(\eta\right)\ket{0}\\
- & =H\int d\theta d\eta\, T\left(\theta\right)\psi_{p}\left(\theta\right)T\left(\eta\right)\psi_{q}\left(\eta\right)\ket{0}\\
+ & =\left(-\right)^{sL\left(g_{p}-sK\right)}H\int d\theta d\eta\, T\left(\theta\right)\psi_{p}\left(\theta\right)T\left(\eta\right)\psi_{q}\left(\eta\right)\ket{0}\\
  & =\left(E_{p}+E_{q}\right)T_{p}T_{q}\ket{0}\\
  & +\left(-\right)^{sL\left(g_{p}-sK\right)}\frac{1}{N}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{kl}T\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\psi_{p}\left(\theta\right)\psi_{q}\left(\eta\right)\ket{0}\\
  & +\left(-\right)^{sL\left(g_{p}-sK\right)}\frac{1}{N}\int d\theta d\eta\,\sum_{k=1}^{K}\sum_{l=1}^{L}\bar{h}_{lk}T\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\psi_{p}\left(\theta\right)\psi_{q}\left(\eta\right)\ket{0}+\cdots\\
@@ -1541,7 +1524,6 @@ W_{rpq} & =\frac{1}{2}\left(W_{rpq}+\left(-\right)^{g_{p}g_{q}}W_{rqp}\right)
 \begin_inset Formula 
 \begin{alignat*}{1}
 \left(-\right)^{g_{p}g_{q}}W_{rqp} & =\left(-\right)^{sK\left(g_{q}-sL\right)}\left(-\right)^{g_{p}g_{q}}KL\int d^{M}\theta\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)\left(h_{L,L+1}+h_{M,1}\right)\psi_{q}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{p}\left(\theta_{L+1}\cdots\theta_{M}\right)\\
- & =\\
  & =\left(-\right)^{sK\left(g_{q}-sL\right)}\left(-\right)^{g_{p}g_{q}}KL\int d^{M}\theta\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)\left(h_{M,1}+h_{K,K+1}\right)\psi_{q}\left(\theta_{K+1}\cdots\theta_{M}\right)\psi_{p}\left(\theta_{1}\cdots\theta_{K}\right)\\
  & =\left(-\right)^{sK\left(g_{q}-sL\right)}\left(-\right)^{g_{p}g_{q}}\left(-\right)^{\left(sK-g_{p}\right)\left(sL-g_{q}\right)}KL\int d^{M}\theta\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)\left(h_{M,1}+h_{K,K+1}\right)\psi_{p}\left(\theta_{1}\cdots\theta_{K}\right)\psi_{q}\left(\theta_{K+1}\cdots\theta_{M}\right)
 \end{alignat*}
@@ -1576,37 +1558,21 @@ W_{rpq}=\left(-\right)^{sL\left(g_{p}-sK\right)}KL\int d^{M}\theta\,\,\bar{\psi}
 \end_inset
 
 For 
-\begin_inset Formula $h_{L,L+1}$
+\begin_inset Formula $h_{K,K+1}$
 \end_inset
 
-, 
+,
 \begin_inset Formula 
 \[
-\bar{A}_{nm}=\exp\left(-2\pi iL\frac{m+n}{M}\right)\sin\frac{n-m}{2M}\pi+\exp\left(-2\pi i\frac{\left(2L+1\right)\left(m+n\right)}{2M}\right)\sin\frac{\left(n-m\right)\pi}{2M}
+\exp\left(2\pi iK\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi+\frac{i}{2}\left[\exp\left(2\pi i\frac{Km+(K+1)n}{M}\right)\exp\left(\pi i\frac{m-n}{2M}\right)-m\leftrightarrow n\right]
 \]
 
 \end_inset
 
-
+ 
 \begin_inset Formula 
 \[
-A_{nm}=\exp\left(2\pi iL\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi+\exp\left(2\pi i\frac{\left(2L+1\right)\left(m+n\right)}{2M}\right)\sin\frac{\left(m-n\right)\pi}{2M}
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-B_{nm}=2\exp\left(2\pi iL\frac{m-n}{M}\right)\sin\frac{\left(n+m\right)\pi}{2M}+2\exp\left(2\pi i\frac{2L+1}{2}\frac{m-n}{M}\right)\sin\frac{\left(m+n\right)}{2M}\pi
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-X_{n}=\left[\exp\left(-2\pi i\frac{Ln}{M}\right)-\exp\left(-2\pi i\frac{\left(L+1\right)n}{M}\right)\right]\left(s_{n}+ic_{n}\right)
+A_{nm}=\exp\left(2\pi iK\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi+\exp\left(2\pi i\frac{\left(2K+1\right)\left(m+n\right)}{2M}\right)\sin\frac{\left(m-n\right)\pi}{2M}
 \]
 
 \end_inset
@@ -1626,31 +1592,7 @@ For
 ,
 \begin_inset Formula 
 \[
-\bar{A}_{nm}=\sin\frac{n-m}{2M}\pi+\exp\left(-2\pi i\frac{m+n}{2M}\right)\sin\frac{\left(n-m\right)\pi}{2M}
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
 A_{nm}=\sin\frac{m-n}{2M}\pi+\exp\left(2\pi i\frac{m+n}{2M}\right)\sin\frac{\left(m-n\right)\pi}{2M}
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-B_{nm}=2\sin\frac{\left(n+m\right)\pi}{2M}+2\exp\left(2\pi i\frac{m-n}{2M}\right)\sin\frac{\left(m+n\right)}{2M}\pi
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-X_{n}=\left[1-\exp\left(-2\pi i\frac{n}{M}\right)\right]\left(s_{n}+ic_{n}\right)
 \]
 
 \end_inset
@@ -1664,13 +1606,13 @@ X_{n}=\left[1-\exp\left(-2\pi i\frac{n}{M}\right)\right]\left(s_{n}+ic_{n}\right
 \end_inset
 
  For 
-\begin_inset Formula $h_{L,L+1}+h_{M,1}$
+\begin_inset Formula $h_{K,K+1}+h_{M,1}$
 \end_inset
 
 ,
 \begin_inset Formula 
 \[
-A_{nm}=\left[1+\exp\left(\pi i\frac{n+m}{M}\right)\right]\left[1+\exp\left(2\pi iL\frac{m+n}{M}\right)\right]\sin\frac{m-n}{2M}\pi
+A_{nm}=\left[1+\exp\left(\pi i\frac{n+m}{M}\right)\right]\left[1+\exp\left(2\pi iK\frac{m+n}{M}\right)\right]\sin\frac{m-n}{2M}\pi
 \]
 
 \end_inset
@@ -1725,8 +1667,8 @@ For finite
  Collect like terms to give 
 \begin_inset Formula 
 \begin{eqnarray}
-\left(E_{r}-E\right)C_{r}^{1}+\frac{1}{N}W_{rpq}^{\left(L,K\right)}C_{pq}^{2} & = & 0,\label{eq:eec_eq1}\\
-\left(E_{p}+E_{q}-E\right)C_{st}^{2}+\frac{1}{N}V_{qpr}^{\left(K,L\right)}C_{r}^{1}+C^{3}\mathrm{Terms} & = & 0.\label{eq:eec_eq2}
+\left(E_{r}-E\right)C_{r}^{1}+\frac{1}{N}W_{rpq}C_{pq}^{2} & = & 0,\label{eq:eec_eq1}\\
+\left(E_{p}+E_{q}-E\right)C_{st}^{2}+\frac{1}{N}V_{qpr}C_{r}^{1}+C^{3}\mathrm{Terms} & = & 0.\label{eq:eec_eq2}
 \end{eqnarray}
 
 \end_inset
@@ -1753,7 +1695,7 @@ reference "eq:eec_eq1"
 \begin_inset Formula 
 \begin{eqnarray*}
 C_{pq}^{2} & = & \frac{1}{E-E_{p}-E_{q}}\frac{1}{N}V_{qpr}C_{r}^{1}+\mathcal{O}\left(N^{-2}\right),\\
-\left(E-E_{r}\right)C_{r}^{1} & = & \frac{1}{N^{2}}W_{rpq}^{\left(L,K\right)}\frac{1}{E-E_{p}-E_{q}}V_{qpt}^{\left(K,L\right)}C_{t}^{1}+\mathcal{O}\left(N^{-3}\right).
+\left(E-E_{r}\right)C_{r}^{1} & = & \frac{1}{N^{2}}W_{rpq}\frac{1}{E-E_{p}-E_{q}}V_{qpt}C_{t}^{1}+\mathcal{O}\left(N^{-3}\right).
 \end{eqnarray*}
 
 \end_inset
@@ -1765,7 +1707,7 @@ C_{pq}^{2} & = & \frac{1}{E-E_{p}-E_{q}}\frac{1}{N}V_{qpr}C_{r}^{1}+\mathcal{O}\
  is determined by the eigenvalues of the matrix
 \begin_inset Formula 
 \begin{equation}
-\Delta_{rt}=\frac{1}{N^{2}}W_{rpq}^{\left(L,K\right)}\frac{1}{E_{r}-E_{p}-E_{q}}V_{qpt}^{\left(K,L\right)}.
+\Delta_{rt}=\frac{1}{N^{2}}W_{rpq}\frac{1}{E_{r}-E_{p}-E_{q}}V_{qpt}.
 \end{equation}
 
 \end_inset
@@ -1781,7 +1723,7 @@ C_{pq}^{2} & = & \frac{1}{E-E_{p}-E_{q}}\frac{1}{N}V_{qpr}C_{r}^{1}+\mathcal{O}\
 ,
 \begin_inset Formula 
 \begin{equation}
-\Delta E_{r}=\frac{1}{N^{2}}\sum_{L=1}^{M-1}\sum_{M_{p}=L,M_{q}=K}W_{rpq}^{\left(L,K\right)}\frac{1}{E_{r}-E_{p}-E_{q}}V_{qpr}^{\left(K,L\right)},\label{eq:eec_deltaE0}
+\Delta E_{r}=\frac{1}{N^{2}}\sum_{K=1}^{M-1}W_{rpq}\frac{1}{E_{r}-E_{p}-E_{q}}V_{qpr},\label{eq:eec_deltaE0}
 \end{equation}
 
 \end_inset
