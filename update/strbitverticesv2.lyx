@@ -2997,9 +2997,146 @@ key "Thorn:2015wli"
 \begin_inset Formula $1/N$
 \end_inset
 
- perturbation and then, using the results of previous sections, derive a
- formula to calculate the vertices.
+ perturbation.
+ The interaction vertices are defined as
+\begin_inset Formula 
+\begin{align*}
+HT_{r}\ket{0} & =E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{K=1}^{M-1}\sum_{p,q}T_{p}T_{q}\ket{0}V_{qpr}\\
+HT_{p}T_{q}\ket{0} & =\left(E_{p}+E_{q}\right)T_{p}T_{q}\ket{0}+\frac{1}{N}\sum_{r}T_{r}\ket{0}W_{rpq}+\cdots,
+\end{align*}
+
+\end_inset
+
+ where 
+\begin_inset Formula $T_{p}\ket{0}$
+\end_inset
+
+, 
+\begin_inset Formula $T_{q}\ket{0}$
+\end_inset
+
+, 
+\begin_inset Formula $T_{r}\ket{0}$
+\end_inset
+
+ are energy eigenstates of strings with 
+\begin_inset Formula $K$
+\end_inset
+
+, 
+\begin_inset Formula $L$
+\end_inset
+
+, and 
+\begin_inset Formula $M=K+L$
+\end_inset
+
+ bits respectively.
+ Thus, 
+\begin_inset Formula $V_{qpr}$
+\end_inset
+
+ represents the amplitude of breaking one large string into two small strings
+ and 
+\begin_inset Formula $W_{rpq}$
+\end_inset
+
+ represents the amplitude of joining two small strings into one large string.
+ Using the conjugation eigenfunction obtained in the previous section, we
+ then find the vertices can be calculated with 
+\begin_inset Formula 
+\begin{align}
+V_{qpr} & =M\left|\det C\right|^{s/2}\prod_{a=1}^{s}\left\langle \mathbb{F}_{qp}^{a},\mathbb{F}_{r}^{a\dagger}\right\rangle _{V},\label{eq:cub_Vtsr}\\
+W_{rpq} & =\begin{cases}
+0 & \text{if }sKL\text{ is odd}\\
+KL\left|\det C\right|^{s/2}\prod_{a=1}^{s}\left\langle \mathbb{F}_{qp}^{a},\mathbb{F}_{r}^{a\dagger}\right\rangle _{W}^{\dagger} & \text{if }sKL\text{ is even}
+\end{cases}.\label{eq:cub_Wrst-1}
+\end{align}
+
+\end_inset
+
+Several notations are used in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:cub_Vtsr"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:cub_Wrst-1"
+
+\end_inset
+
+ for convenience.
  
+\begin_inset Formula $\mathbb{F}_{qp}^{a}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbb{F}_{r}^{a}$
+\end_inset
+
+ and are strings of lowering operators for 
+\begin_inset Formula $a$
+\end_inset
+
+-th spin component: 
+\begin_inset Formula 
+\begin{align*}
+\psi_{r} & =\left(F_{i_{1}}^{1}F_{i_{2}}^{1}\cdots\right)^{\dagger}\left(F_{j_{1}}^{2}F_{j_{2}}^{2}\cdots\right)^{\dagger}\cdots\psi_{G}\equiv\mathbb{F}_{r}^{1\dagger}\mathbb{F}_{r}^{2\dagger}\cdots\psi_{G},\\
+\mathbb{F}_{qp}^{a} & \equiv\mathbb{F}_{q}^{a}\mathbb{F}_{p}^{a}.
+\end{align*}
+
+\end_inset
+
+The notation 
+\begin_inset Formula $\left\langle \cdot,\cdot\right\rangle _{V,W}$
+\end_inset
+
+ are defined as 
+\begin_inset Formula 
+\[
+\left\langle \mathbb{F}_{1}^{a},\mathbb{F}_{2}^{a\dagger}\right\rangle _{V,W}\equiv\left\langle \mathbb{F}_{1}^{a}h_{\left(V,W\right)}^{a}\mathbb{F}_{2}^{a\dagger}\exp\left(\frac{1}{2}f_{k}^{a\dagger}D_{kl}f_{l}^{a\dagger}\right)\right\rangle ,
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\left\langle \cdot\right\rangle $
+\end_inset
+
+ is the vacuum expectation value of operators with the vacuums being the
+ states annhilated by lowering operators of 
+\begin_inset Formula $L$
+\end_inset
+
+-bit and 
+\begin_inset Formula $K$
+\end_inset
+
+-bit systems.
+ 
+\begin_inset Formula $h_{V}^{a}=\frac{1}{2}\left(h_{K,1}+L_{M,K+1}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $h_{W}^{a}=h_{K,K+1}+h_{M,1}$
+\end_inset
+
+ with 
+\begin_inset Formula $h_{kl}$
+\end_inset
+
+ given by 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_h_kl"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -3026,8 +3163,8 @@ reference "eq:ham_Haction_single_trace"
 , we have 
 \begin_inset Formula 
 \begin{multline*}
-HT_{r}\ket{0}=E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{l=k+2}^{M+k}\bar{h}_{kl}T\left(\theta_{l}\cdots\theta_{k}\right)T\left(\theta_{k+1}\cdots\theta_{l-1}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
-=E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{k=1}^{M}\sum_{L=1}^{M-1}\bar{h}_{k,k+L+1}T\left(\theta_{k+L+1}\cdots\theta_{k}\right)T\left(\theta_{k+1}\cdots\theta_{k+L}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right),
+HT_{r}\ket{0}=E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{i=1}^{M}\sum_{j=i+2}^{M+i}\bar{h}_{ij}T\left(\theta_{j}\cdots\theta_{i}\right)T\left(\theta_{i+1}\cdots\theta_{j-1}\right)\ket{0}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+=E_{r}T_{r}\ket{0}+\frac{1}{N}\int d\theta\,\sum_{i=1}^{M}\sum_{K=1}^{M-1}\bar{h}_{i,i+K+1}T\left(\theta_{i+K+1}\cdots\theta_{i}\right)T\left(\theta_{i+1}\cdots\theta_{i+K}\right)\ket{0}\psi_{r},
 \end{multline*}
 
 \end_inset
@@ -3059,7 +3196,7 @@ reference "eq:conj_completeness_1"
 , we arrive at 
 \begin_inset Formula 
 \[
-HT_{r}\ket{0}=E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{L=1}^{M-1}\sum_{p,q}T_{p}T_{q}\ket{0}V_{qpr}.
+HT_{r}\ket{0}=E_{r}T_{r}\ket{0}+\frac{1}{N}\sum_{K=1}^{M-1}\sum_{p,q}T_{p}T_{q}\ket{0}V_{qpr}.
 \]
 
 \end_inset
@@ -3086,13 +3223,13 @@ where
 
 .
  The vertex 
-\begin_inset Formula $V_{qpr}^{\left(L,K\right)}$
+\begin_inset Formula $V_{qpr}$
 \end_inset
 
  is defined as 
 \begin_inset Formula 
 \begin{equation}
-V_{qpr}^{\left(L,K\right)}=\left(-\right)^{s\left(Kg_{q}+Lg_{p}\right)}\sum_{k=1}^{M}\int d\theta\,\bar{h}_{k,k+L+1}\bar{\psi}_{q}\left(\theta_{k+L+1}\cdots\theta_{k}\right)\bar{\psi}_{p}\left(\theta_{k+1}\cdots\theta_{k+L}\right)\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right).\label{eq:cub_Vstr}
+V_{qpr}=\left(-\right)^{s\left(KT_{q}+LT_{p}\right)}\sum_{i=1}^{M}\int d\theta\,\bar{h}_{i,i+K+1}\bar{\psi}_{q}\left(\theta_{i+K+1}\cdots\theta_{i}\right)\bar{\psi}_{p}\left(\theta_{i+1}\cdots\theta_{i+K}\right)\psi_{r}.\label{eq:cub_Vstr}
 \end{equation}
 
 \end_inset
@@ -3571,16 +3708,7 @@ Note that
 \begin_inset Formula $W$
 \end_inset
 
- as
-\begin_inset Formula 
-\begin{align}
-V_{qpr}^{\left(K,L\right)} & =M\left|\det C\right|^{s/2}\prod_{a=1}^{s}\left\langle \mathbb{F}_{qp}^{a},\mathbb{F}_{r}^{a\dagger}\right\rangle _{V},\label{eq:cub_Vtsr}\\
-W_{rpq}^{\left(L,K\right)} & =KL\left|\det C\right|^{s/2}\prod_{a=1}^{s}\left\langle \mathbb{F}_{qp}^{a},\mathbb{F}_{r}^{a\dagger}\right\rangle _{W}^{\dagger},\label{eq:cub_Wrst-1}
-\end{align}
-
-\end_inset
-
- where the superscript 
+ as where the superscript 
 \begin_inset Formula $a$
 \end_inset
 
