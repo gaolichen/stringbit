@@ -1363,10 +1363,10 @@ V_{qpr}=\frac{1}{2}\left(V_{qpr}+\left(-\right)^{g_{p}g_{q}}V_{pqr}\right)
 
 \begin_inset Formula 
 \begin{align*}
-\left(-\right)^{g_{p}g_{q}}V_{pqr} & =\left(-\right)^{g_{p}g_{q}}\left(-\right)^{s\left(KT_{q}+LT_{p}\right)}M\int d\theta\,\bar{\psi}_{p}\left(\theta_{L+1}\cdots\theta_{M}\right)\bar{\psi}_{q}\left(\theta_{1}\cdots\theta_{L}\right)h_{M,L+1}\psi_{r}\\
- & =\left(-\right)^{g_{p}g_{q}}\left(-\right)^{s\left(KT_{q}+LT_{p}\right)}M\int d\theta\,\bar{\psi}_{p}\left(\theta_{1}\cdots\theta_{K}\right)\bar{\psi}_{q}\left(\theta_{K+1}\cdots\theta_{M}\right)h_{K,1}\psi_{r}\\
- & =\left(-\right)^{g_{p}g_{q}}\left(-\right)^{s\left(KT_{q}+LT_{p}\right)}\left(-\right)^{g_{p}g_{q}}M\int d\theta\,\bar{\psi}_{q}\left(\theta_{K+1}\cdots\theta_{M}\right)\bar{\psi}_{p}\left(\theta_{1}\cdots\theta_{K}\right)h_{K,1}\psi_{r}\\
- & =\left(-\right)^{s\left(KT_{q}+LT_{p}\right)}M\int d\theta\,\bar{\psi}_{q}\left(\theta_{K+1}\cdots\theta_{M}\right)\bar{\psi}_{p}\left(\theta_{1}\cdots\theta_{K}\right)h_{K,1}\psi_{r}
+\left(-\right)^{g_{p}g_{q}}V_{pqr} & =\left(-\right)^{g_{p}g_{q}}\left(-\right)^{s\left(Kg_{q}+Lg_{p}\right)}M\int d\theta\,\bar{\psi}_{p}\left(\theta_{L+1}\cdots\theta_{M}\right)\bar{\psi}_{q}\left(\theta_{1}\cdots\theta_{L}\right)h_{M,L+1}\psi_{r}\\
+ & =\left(-\right)^{g_{p}g_{q}}\left(-\right)^{s\left(Kg_{q}+Lg_{p}\right)}M\int d\theta\,\bar{\psi}_{p}\left(\theta_{1}\cdots\theta_{K}\right)\bar{\psi}_{q}\left(\theta_{K+1}\cdots\theta_{M}\right)h_{K,1}\psi_{r}\\
+ & =\left(-\right)^{g_{p}g_{q}}\left(-\right)^{s\left(Kg_{q}+Lg_{p}\right)}\left(-\right)^{g_{p}g_{q}}M\int d\theta\,\bar{\psi}_{q}\left(\theta_{K+1}\cdots\theta_{M}\right)\bar{\psi}_{p}\left(\theta_{1}\cdots\theta_{K}\right)h_{K,1}\psi_{r}\\
+ & =\left(-\right)^{s\left(Kg_{q}+Lg_{p}\right)}M\int d\theta\,\bar{\psi}_{q}\left(\theta_{K+1}\cdots\theta_{M}\right)\bar{\psi}_{p}\left(\theta_{1}\cdots\theta_{K}\right)h_{K,1}\psi_{r}
 \end{align*}
 
 \end_inset
@@ -1374,7 +1374,7 @@ V_{qpr}=\frac{1}{2}\left(V_{qpr}+\left(-\right)^{g_{p}g_{q}}V_{pqr}\right)
 
 \begin_inset Formula 
 \[
-\tilde{V}_{qpr}=\left(-\right)^{s\left(KT_{q}+LT_{p}\right)}M\int d\theta\,\bar{\psi}_{q}\left(\theta_{K+1}\cdots\theta_{M}\right)\bar{\psi}_{p}\left(\theta_{1}\cdots\theta_{K}\right)\frac{h_{K,1}+L_{M,K+1}}{2}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)
+\tilde{V}_{qpr}=\left(-\right)^{s\left(Kg_{q}+Lg_{p}\right)}M\int d\theta\,\bar{\psi}_{q}\left(\theta_{K+1}\cdots\theta_{M}\right)\bar{\psi}_{p}\left(\theta_{1}\cdots\theta_{K}\right)\frac{h_{K,1}+L_{M,K+1}}{2}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)
 \]
 
 \end_inset
@@ -1470,8 +1470,8 @@ HT_{p}T_{q}\ket{0} & =H\int d\theta\, T\left(\theta\right)\psi_{p}\left(\theta\r
  & +\frac{1}{N}\left(-\right)^{sL\left(g_{p}-sK\right)}\int d\theta d\eta\,\sum_{k,l}\bar{h}_{kl}\sum_{r}\left(-\right)^{sMg_{r}}T_{r}\bar{\psi}_{r}\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\psi_{p}\left(\theta\right)\psi_{q}\left(\eta\right)\ket{0}\\
  & +\frac{1}{N}\left(-\right)^{sL\left(g_{p}-sK\right)}\int d\theta d\eta\,\sum_{k,l}\bar{h}_{lk}\sum_{r}\left(-\right)^{sMg_{r}}T_{r}\bar{\psi}_{r}\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\psi_{p}\left(\theta\right)\psi_{q}\left(\eta\right)\ket{0}+\cdots\\
  & =\left(E_{p}+E_{q}\right)T_{p}T_{q}\ket{0}\\
- & +\frac{1}{N}\left(-\right)^{sL\left(g_{p}-sK\right)}\sum_{r}T_{r}\int d\theta d\eta\,\sum_{k,l}\bar{h}_{kl}\bar{\psi}_{r}\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\psi_{p}\left(\theta\right)\psi_{q}\left(\eta\right)\ket{0}\\
- & +\frac{1}{N}\left(-\right)^{sL\left(g_{p}-sK\right)}\sum_{r}T_{r}\int d\theta d\eta\,\sum_{k,l}\bar{h}_{lk}\bar{\psi}_{r}\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\psi_{p}\left(\theta\right)\psi_{q}\left(\eta\right)\ket{0}+\cdots\\
+ & +\frac{1}{N}\sum_{r}T_{r}\int d\theta d\eta\,\sum_{k,l}\left(-\right)^{sL\left(g_{p}-sK\right)}\bar{h}_{kl}\bar{\psi}_{r}\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\psi_{p}\left(\theta\right)\psi_{q}\left(\eta\right)\ket{0}\\
+ & +\frac{1}{N}\sum_{r}T_{r}\int d\theta d\eta\,\sum_{k,l}\left(-\right)^{sL\left(g_{p}-sK\right)}\bar{h}_{lk}\bar{\psi}_{r}\left(\theta_{k}\cdots\theta_{k-1}\eta_{l+1}\cdots\eta_{l}\right)\psi_{p}\left(\theta\right)\psi_{q}\left(\eta\right)\ket{0}+\cdots\\
  & \equiv\left(E_{p}+T_{q}\right)T_{p}T_{q}\ket{0}+\frac{1}{N}\sum_{r}T_{r}\ket{0}\left(W_{rpq}^{\left(1\right)}+W_{rqp}^{\left(2\right)}\right)
 \end{align*}
 
@@ -1622,6 +1622,40 @@ A_{nm}=\left[1+\exp\left(\pi i\frac{n+m}{M}\right)\right]\left[1+\exp\left(2\pi 
 \[
 \gamma=-4\cot\frac{\pi}{2M}
 \]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+V_{qpr} & =\left(-\right)^{s\left(Kg_{q}+Lg_{p}\right)}M\int d\theta\,\left(\tilde{F}_{\left\{ q\right\} }\bar{\psi}_{G}^{\left(L\right)}\right)\left(\tilde{F}_{\left\{ p\right\} }\bar{\psi}_{G}^{\left(K\right)}\right)h_{V}F_{\left\{ r\right\} }^{\dagger}\psi_{G}^{\left(M\right)}\\
+ & =\left(-\right)^{s\left(Kg_{q}+Lg_{p}\right)+sK\left(g_{q}-sL\right)}M\int d\theta\,\bar{\psi}_{G}^{\left(L\right)}\bar{\psi}_{G}^{\left(K\right)}F_{\left\{ q\right\} }F_{\left\{ p\right\} }h_{V}F_{\left\{ r\right\} }^{\dagger}\psi_{G}^{\left(M\right)}\\
+ & =\left(-\right)^{sL\left(g_{p}-K\right)}M\int d\theta\,\bar{\psi}_{G}^{\left(L\right)}\bar{\psi}_{G}^{\left(K\right)}F_{\left\{ q\right\} }F_{\left\{ p\right\} }h_{V}F_{\left\{ r\right\} }^{\dagger}\psi_{G}^{\left(M\right)}
+\end{align*}
+
+\end_inset
+
+Since
+\begin_inset Formula 
+\[
+\psi_{G}^{\left(M\right)}=\left|\det C\right|^{1/2}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\psi_{G}^{\left(K\right)}\psi_{G}^{\left(L\right)}
+\]
+
+\end_inset
+
+ we have, for 
+\begin_inset Formula $s=1$
+\end_inset
+
+,
+\begin_inset Formula 
+\begin{align*}
+V_{qpr}^{s=1} & =\left(-\right)^{L\left(g_{p}-K\right)}M\left|\det C\right|^{1/2}\int d\theta\,\bar{\psi}_{G}^{\left(L\right)}\bar{\psi}_{G}^{\left(K\right)}F_{\left\{ q\right\} }F_{\left\{ p\right\} }h_{V}F_{\left\{ r\right\} }^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\psi_{G}^{\left(K\right)}\psi_{G}^{\left(L\right)}\\
+ & =\left(-\right)^{L\left(g_{p}-K\right)}M\left|\det C\right|^{1/2}\left\langle F_{\left\{ q\right\} }F_{\left\{ p\right\} }h_{V}F_{\left\{ r\right\} }^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle _{\left(K,L\right)}
+\end{align*}
 
 \end_inset
 
