@@ -1979,9 +1979,9 @@ key "Thorn:2015wli"
 
  as 
 \begin_inset Formula 
-\[
-F_{m}=\sum_{n=0}^{M-1}\left(f_{n}C_{mn}+f_{n}^{\dagger}S_{mn}\right),\quad0\leq m\leq M-1.
-\]
+\begin{equation}
+F_{m}=\sum_{n=0}^{M-1}\left(f_{n}C_{mn}+f_{n}^{\dagger}S_{mn}\right),\quad0\leq m\leq M-1.\label{eq:overlap_Ff_relation}
+\end{equation}
 
 \end_inset
 
@@ -4194,15 +4194,24 @@ reference "eq:olp_DeltaE"
 \end_inset
 
  is the ground state, i.e., 
-\begin_inset Formula $\mathbb{F}_{r}$
+\begin_inset Formula $F_{\left\{ r\right\} }=1$
 \end_inset
 
- is empty.
+.
+ For convenience, we simply denote 
+\begin_inset Formula $\left\langle O,1\right\rangle _{V,W}$
+\end_inset
+
+ as 
+\begin_inset Formula $\left\langle O\right\rangle _{V,W}$
+\end_inset
+
+.
  We only consider the 
 \begin_inset Formula $s=1$
 \end_inset
 
- case since 
+ case here, since 
 \begin_inset Formula $s>1$
 \end_inset
 
@@ -4220,19 +4229,27 @@ We need to calculate the vacuum expectation value
 \end_inset
 
 .
- We have written 
+ In terms of eigenoperators, 
 \begin_inset Formula $h_{kl}$
 \end_inset
 
- in the form of 
-\begin_inset Formula $F$
+ contains quadratic terms of the form 
+\begin_inset Formula $A_{nm}^{\dagger}F_{m}^{\dagger}F_{n}^{\dagger}$
 \end_inset
 
- and 
-\begin_inset Formula $F^{\dagger}$
+, 
+\begin_inset Formula $A_{-n,m}F_{m}^{\dagger}F_{n}$
 \end_inset
 
- as eq.
+, and 
+\begin_inset Formula $A_{nm}F_{n}F_{m}$
+\end_inset
+
+ and a constant term 
+\begin_inset Formula $\mu$
+\end_inset
+
+, as eq.
  
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -4240,20 +4257,16 @@ reference "eq:cub_h_kl"
 
 \end_inset
 
-.
+ shows.
  Since 
-\begin_inset Formula $F_{m}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\psi_{G}^{\left(L\right)}\psi_{G}^{\left(K\right)}=F_{m}\psi_{G}^{\left(M\right)}=0$
+\begin_inset Formula $F_{m}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\psi_{G}^{\left(K\right)}\psi_{G}^{\left(L\right)}=F_{m}\psi_{G}^{\left(M\right)}=0$
 \end_inset
 
 , only the 
 \begin_inset Formula $F^{\dagger}F^{\dagger}$
 \end_inset
 
- and the constant terms of 
-\begin_inset Formula $h$
-\end_inset
-
- make nonzero contribution, from which it follows 
+ and the constant terms make nonzero contribution: 
 \begin_inset Formula 
 \[
 \left\langle \cdots h\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle =\frac{2}{M}\left\langle \cdots\left(A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}+\mu\right)\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle .
@@ -4261,11 +4274,43 @@ reference "eq:cub_h_kl"
 
 \end_inset
 
-The action of 
+To calculate the result of 
 \begin_inset Formula $A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}$
 \end_inset
 
- term can be calculated using eq.
+ term, we need to express 
+\begin_inset Formula $F_{m}$
+\end_inset
+
+ in terms of linear combination of 
+\begin_inset Formula $f_{k}$
+\end_inset
+
+ and 
+\begin_inset Formula $f_{k}^{\dagger}$
+\end_inset
+
+, as 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_Ff_relation"
+
+\end_inset
+
+ shows, and commute 
+\begin_inset Formula $f_{k}$
+\end_inset
+
+ through the exponential.
+ This is done in the Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:app_AFF"
+
+\end_inset
+
+.
+ Using eq.
  
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -4273,39 +4318,23 @@ reference "eq:App_AFF_1"
 
 \end_inset
 
-, from which it follows
+, we have
 \begin_inset Formula 
-\begin{align}
-\left\langle \cdots h\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle  & =\frac{2}{M}\left[\mu-\tr\left(S^{*}C^{-1}A^{\dagger}\right)\right]\left\langle \cdots\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \nonumber \\
- & \hspace{1em}+\frac{2}{M}\left[C^{-1}A^{\dagger}\left(C^{-1}\right)^{T}\right]_{mn}\left\langle \cdots f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle .\label{eq:olp_hexp}
-\end{align}
-
-\end_inset
-
-So we have 
-\begin_inset Formula 
-\begin{align}
-\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}\right\rangle _{V} & =\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}h^{\left(V\right)}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \nonumber \\
- & =\frac{2}{M}\mu^{\prime\left(V\right)}\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \nonumber \\
- & \hspace{1em}+\frac{2}{M}B_{mn}^{\left(V\right)}\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle ,\label{eq:olp_vev_v}
-\end{align}
+\begin{equation}
+\left\langle F_{\left\{ qp\right\} }Z_{i}\right\rangle _{V,W}=\frac{2}{M}\left(\mu_{V,W}^{\prime}+B_{mn}^{\left(V,W\right)}\frac{\partial}{\partial D_{mn}}\right)\left\langle F_{\left\{ qp\right\} }Z_{i}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle ,\label{eq:olp_vev_v}
+\end{equation}
 
 \end_inset
 
  where 
 \begin_inset Formula 
 \[
-\mu^{\prime\left(V\right)}=\mu^{\left(V\right)}-\tr\left(S^{*}C^{-1}A^{\left(V\right)\dagger}\right),\quad B^{\left(V\right)}=C^{-1}A^{\left(V\right)\dagger}\left(C^{-1}\right)^{T},
+\mu_{V,W}^{\prime}=\mu_{V,W}-\tr\left(S^{*}C^{-1}A_{V,W}^{\dagger}\right),\quad B_{V,W}=C^{-1}A_{V,W}^{\dagger}\left(C^{-1}\right)^{T}.
 \]
 
 \end_inset
 
- and similarly for 
-\begin_inset Formula $\left\langle \mathbb{F}_{qp}f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}}\right\rangle _{W}$
-\end_inset
-
-.
- Finally, we need to calculate the vacuum expectation values on RHS of 
+Finally, we need to calculate the vacuum expectation values on RHS of 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:olp_vev_v"
@@ -4313,7 +4342,7 @@ reference "eq:olp_vev_v"
 \end_inset
 
 .
- The first term can be calculated using
+ It can be calculated using
 \begin_inset Formula 
 \[
 \left\langle f_{i_{1}}f_{i_{2}}\cdots f_{i_{2n-1}}f_{i_{2n}}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle =\left(-\right)^{n}{\sum_{P\in S_{2n}}}^{\prime}\left(-\right)^{P}D_{i_{P(1)}i_{P(2)}}D_{i_{P(3)}i_{P(4)}}\cdots D_{i_{P(2n-1)}i_{P(2n)}},
@@ -4347,22 +4376,6 @@ reference "eq:olp_vev_v"
 P\left(1\right) & <P\left(2\right),\quad P\left(3\right)<P\left(4\right),\cdots,P\left(2n-1\right)<P\left(2n\right),\\
 P\left(1\right) & <P\left(3\right)<P\left(5\right)<\cdots<P\left(2n-1\right).
 \end{align*}
-
-\end_inset
-
-The second term on RHS of 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:olp_vev_v"
-
-\end_inset
-
- can be calculated using 
-\begin_inset Formula 
-\begin{multline*}
-\left\langle f_{i_{1}}f_{i_{2}}\cdots f_{i_{2j-1}}f_{i_{2j}}f_{n}^{\dagger}f_{m}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle =\\
-\sum_{p<q}\left(-\right)^{q-p-1}\left(\delta_{i_{p}m}\delta_{i_{q}n}-\delta_{i_{p}n}\delta_{i_{q}m}\right)\left\langle f_{i_{1}}f_{i_{2}}\cdots f_{i_{p-1}}f_{i_{p+1}}\cdots f_{i_{q-1}}f_{i_{q+1}}\cdots f_{i_{2j}}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle .
-\end{multline*}
 
 \end_inset
 
@@ -4421,7 +4434,7 @@ reference "eq:olp_DeltaE"
 
 \end_inset
 
- In general, 
+In general, 
 \begin_inset Formula $\Delta E_{G}$
 \end_inset
 
@@ -4434,6 +4447,14 @@ reference "eq:olp_DeltaE"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Subsubsection*
+Large 
+\begin_inset Formula $M$
+\end_inset
+
+ behavior
 \end_layout
 
 \begin_layout Standard
@@ -4468,7 +4489,7 @@ reference "eq:olp_DeltaE"
 \end_inset
 
  only depends on the ration 
-\begin_inset Formula $L/M$
+\begin_inset Formula $K/M$
 \end_inset
 
 , therefore, can be considered as 
@@ -4483,7 +4504,7 @@ reference "eq:olp_DeltaE"
  is large we have 
 \begin_inset Formula 
 \begin{equation}
-\Delta E_{G}\sim\frac{1}{N^{2}}\sum_{L=1}^{M-1}{\sum_{p,q}}^{\prime}\frac{KLM\left|\det C\right|^{s}}{E_{G}-E_{p}-E_{q}}.\label{eq:olp_largeM}
+\Delta E_{G}\sim\frac{1}{N^{2}}\sum_{K=1}^{M-1}{\sum_{p,q}}^{\prime}\frac{KLM\left|\det C\right|^{s}}{E_{G}-E_{p}-E_{q}}.\label{eq:olp_largeM}
 \end{equation}
 
 \end_inset
@@ -4682,7 +4703,7 @@ reference "sec:app_example"
 \begin_inset Formula $M$
 \end_inset
 
- for which we performed numerical computation is 29 for 
+ for which we performed numerical computation is 27 for 
 \begin_inset Formula $s=1$
 \end_inset
 
@@ -4887,7 +4908,7 @@ inner structure
 \end_inset
 
 , that is the contribution of each 
-\begin_inset Formula $L$
+\begin_inset Formula $K$
 \end_inset
 
  to 
@@ -4901,7 +4922,7 @@ inner structure
  and defined as 
 \begin_inset Formula 
 \[
-\Delta E=\sum_{L=1}^{M-1}\Delta E_{i},\quad i=\frac{L}{M}.
+\Delta E=\sum_{K=1}^{M-1}\Delta E_{i},\quad i=\frac{K}{M}.
 \]
 
 \end_inset
@@ -4954,7 +4975,7 @@ We expect that, for fixed
 \end_inset
 
  only depends on the ratio 
-\begin_inset Formula $L/M$
+\begin_inset Formula $K/M$
 \end_inset
 
 .
@@ -4967,7 +4988,7 @@ The plots of
 \end_inset
 
  as a function of 
-\begin_inset Formula $i=L/M$
+\begin_inset Formula $i=K/M$
 \end_inset
 
  are shown in figure 
@@ -4991,11 +5012,11 @@ reference "fig:SubEvsMxi0"
 \end_inset
 
  are allowed and each has two curves, one for odd 
-\begin_inset Formula $L$
+\begin_inset Formula $K$
 \end_inset
 
  points and the other one for even 
-\begin_inset Formula $L$
+\begin_inset Formula $K$
 \end_inset
 
  points.
@@ -5086,7 +5107,7 @@ name "fig:SubEvsMxi0"
 \end_inset
 
  as a function of 
-\begin_inset Formula $i=L/M$
+\begin_inset Formula $i=K/M$
 \end_inset
 
 .
@@ -5095,11 +5116,11 @@ name "fig:SubEvsMxi0"
 \end_inset
 
  cases, the curves above horizontal axis are for odd 
-\begin_inset Formula $L$
+\begin_inset Formula $K$
 \end_inset
 
  points and the curves below are for even 
-\begin_inset Formula $L$
+\begin_inset Formula $K$
 \end_inset
 
  points.
@@ -5125,55 +5146,112 @@ The fact that, in the case of odd
 \end_inset
 
  can be understood as follows.
- The large chain, which has odd bit number, is split into one even bit and
- one odd bit chains.
- The difference occurs when one small chain is much smaller than the other.
- Let us take an example of the cases 
-\begin_inset Formula $L=1$
-\end_inset
-
- and 
-\begin_inset Formula $L=2$
-\end_inset
-
-.
- In the former case, the larger chain is even and in the latter case the
- smaller chain is even.
- The lowest energy states of the two cases are almost the same, both are
- 
-\begin_inset Formula $-4\cot\frac{\pi}{2L}-4\cos\frac{\pi}{2\left(M-L\right)}+8$
-\end_inset
-
-.
- But in the 
-\begin_inset Formula $L=1$
-\end_inset
-
- case, there are many other energy states differ from the lowest energy
- by 
-\begin_inset Formula $\mathcal{O}\left(1/M\right)$
-\end_inset
-
-.
- For 
+ Let us consider the 
 \begin_inset Formula $s=1$
 \end_inset
 
-, the number of such states equals the partition number of 
-\begin_inset Formula $M/2$
+ case and take examples of 
+\begin_inset Formula $K=1$
+\end_inset
+
+ and 
+\begin_inset Formula $K=2$
 \end_inset
 
 .
+ Assuming 
+\begin_inset Formula $M$
+\end_inset
+
+ is large enough, we have the other small chains with bit number 
+\begin_inset Formula $L\gg K$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $M$
+\end_inset
+
+ is odd, 
+\begin_inset Formula $L$
+\end_inset
+
+ is even in the former case and odd in the latter case.
+ Now we compare these two cases in the low energy regime, in which the gap
+ among energy levels are at most of order 
+\begin_inset Formula $1/M$
+\end_inset
+
+.
+ The lowest energy states of both cases are very close and equal to 
+\begin_inset Formula $-4\cot\frac{\pi}{2L}-4\cos\frac{\pi}{2K}+8$
+\end_inset
+
+ according to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:dia_general_energy_s"
+
+\end_inset
+
+ and the cyclic constraint 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:dia_cyclic_constraint_s"
+
+\end_inset
+
+.
+ But the numbers of states in the low energy regime are different.
+ Because of the cyclic constraint, only even bits chains have excited states
+ within a energy gap of order 
+\begin_inset Formula $1/M$
+\end_inset
+
+ above the lowest energy.
  For 
-\begin_inset Formula $L=2$
+\begin_inset Formula $K=1$
 \end_inset
 
- case, the next lowest energy differs from the lowest energy by 
-\begin_inset Formula $\mathcal{O}\left(1\right)$
+, the number of states in the low energy regime roughly equals 
+\begin_inset Formula $P\left(L/2\right)$
+\end_inset
+
+, the partition number of 
+\begin_inset Formula $L/2$
+\end_inset
+
+; for 
+\begin_inset Formula $K=2$
+\end_inset
+
+, it equals 
+\begin_inset Formula $P\left(2/2\right)=1$
 \end_inset
 
 .
- 
+ It implies the low energy regime of 
+\begin_inset Formula $K=1$
+\end_inset
+
+ is much denser than the one of 
+\begin_inset Formula $K=2$
+\end_inset
+
+.
+ Therefore, for large enough 
+\begin_inset Formula $M$
+\end_inset
+
+, the 
+\begin_inset Formula $K=1$
+\end_inset
+
+ case has much lower average energy than the 
+\begin_inset Formula $K=2$
+\end_inset
+
+ case.
 \end_layout
 
 \begin_layout Standard
@@ -5181,11 +5259,7 @@ We next consider the effect of
 \begin_inset Formula $\xi$
 \end_inset
 
- parameter in the large 
-\begin_inset Formula $M$
-\end_inset
-
- behavior.
+ parameter.
  Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -5198,28 +5272,119 @@ reference "fig:SubEvsMs2"
 \end_inset
 
  with respect to 
-\begin_inset Formula $i=L/M$
+\begin_inset Formula $i=K/M$
 \end_inset
 
  for 
-\begin_inset Formula $\xi=1$
-\end_inset
-
- and 
-\begin_inset Formula $\xi=2$
-\end_inset
-
- in the 
 \begin_inset Formula $s=2$
 \end_inset
 
- case.
- In spite of the fact that the shape of the curves are changed for different
- values of 
+ cases with different values of 
 \begin_inset Formula $\xi$
 \end_inset
 
-, the asymptotic behavior remains.
+.
+ From the plots, when 
+\begin_inset Formula $\xi=0.5$
+\end_inset
+
+ and 
+\begin_inset Formula $\xi=1.5$
+\end_inset
+
+ cases show nice asymptotic behavior.
+ Curve of different 
+\begin_inset Formula $M$
+\end_inset
+
+ do not intersect.
+ But when 
+\begin_inset Formula $\xi$
+\end_inset
+
+ is close to 
+\begin_inset Formula $1$
+\end_inset
+
+, curves intersect each other.
+ When 
+\begin_inset Formula $\xi<1$
+\end_inset
+
+, the curve moves downward as 
+\begin_inset Formula $M$
+\end_inset
+
+ increases.
+ It implies the system is not stable as 
+\begin_inset Formula $M$
+\end_inset
+
+ increase 
+\begin_inset Formula $\Delta E_{G}$
+\end_inset
+
+ would go to negative infinity.
+ When 
+\begin_inset Formula $\xi>1$
+\end_inset
+
+, the curve moves upward as 
+\begin_inset Formula $M$
+\end_inset
+
+ increase.
+ It implies the system is bounded from below.
+ This is related to a special feature of the 
+\begin_inset Formula $\xi=1$
+\end_inset
+
+ case.
+ Recall that the Hamiltonian has an 
+\begin_inset Formula $H_{1}$
+\end_inset
+
+ part shown as 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_subh:1"
+
+\end_inset
+
+.
+ This part produces a term like 
+\begin_inset Formula $-s\tr\bar{\phi}_{12\cdots s}\bar{\phi}_{12\cdots s}\phi_{12\cdots s}\phi_{12\cdots s}$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $s$
+\end_inset
+
+ is even, 
+\begin_inset Formula $\phi_{12\cdots s}$
+\end_inset
+
+ is a scalar and this term behaves like a scalar potential with negative
+ coefficient, which can lead to dangerous instability.
+ But when 
+\begin_inset Formula $\xi=1$
+\end_inset
+
+, this term is canceled exactly by 
+\begin_inset Formula $\xi\Delta H$
+\end_inset
+
+.
+ That being said, for even 
+\begin_inset Formula $s$
+\end_inset
+
+, 
+\begin_inset Formula $\xi=1$
+\end_inset
+
+ is the minimal value for the potential to be bounded below.
 \end_layout
 
 \begin_layout Standard
@@ -5227,6 +5392,26 @@ reference "fig:SubEvsMs2"
 wide false
 sideways false
 status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename SubEvM-s2xi05.pdf
+	width 50text%
+	groupId halfcolumn
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename SubEvM-s2xi09.pdf
+	width 50text%
+	groupId halfcolumn
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 \align center
@@ -5239,7 +5424,7 @@ status open
 
 
 \begin_inset Graphics
-	filename SubEvM-s2xi2.pdf
+	filename SubEvM-s2xi15.pdf
 	width 50text%
 	groupId halfcolumn
 
@@ -5263,18 +5448,14 @@ name "fig:SubEvsMs2"
 \end_inset
 
  as a function of 
-\begin_inset Formula $i=L/M$
+\begin_inset Formula $i=K/M$
 \end_inset
 
  for the cases of 
-\begin_inset Formula $s=2,\,\xi=1$
+\begin_inset Formula $s=2$
 \end_inset
 
- and 
-\begin_inset Formula $s=2,\,\xi=2$
-\end_inset
-
-
+.
 \end_layout
 
 \end_inset
@@ -5505,112 +5686,6 @@ name "fig:EvS"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-Based on our further numerical computation, when 
-\begin_inset Formula $s$
-\end_inset
-
- is large, the lowest slope of 
-\begin_inset Formula $\ln\left|\Delta\hat{E}\right|$
-\end_inset
-
- with respect to 
-\begin_inset Formula $s$
-\end_inset
-
- occurs when 
-\begin_inset Formula $\xi$
-\end_inset
-
- is equal to or very close to 1
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-As far as the regime 
-\begin_inset Formula $1\leq s\leq10$
-\end_inset
-
- is concerned, the lowest slope is achieved when 
-\begin_inset Formula $\xi\approx1.04$
-\end_inset
-
-.
- However, the results of 
-\begin_inset Formula $\xi=1$
-\end_inset
-
- and 
-\begin_inset Formula $\xi=1.04$
-\end_inset
-
- cases are very close and we cannot exclude the possibility that 
-\begin_inset Formula $\xi=1$
-\end_inset
-
- eventually achieve a lower slope when 
-\begin_inset Formula $s$
-\end_inset
-
- is large enough.
-\end_layout
-
-\end_inset
-
-.
- This might be related to a special feature of the 
-\begin_inset Formula $\xi=1$
-\end_inset
-
- case.
- Recall that the Hamiltonian has an 
-\begin_inset Formula $H_{1}$
-\end_inset
-
- part shown as 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:ham_subh:1"
-
-\end_inset
-
-.
- This part produces a term like 
-\begin_inset Formula $-s\tr\bar{\phi}_{12\cdots s}\bar{\phi}_{12\cdots s}\phi_{12\cdots s}\phi_{12\cdots s}$
-\end_inset
-
-.
- When 
-\begin_inset Formula $s$
-\end_inset
-
- is even, 
-\begin_inset Formula $\phi_{12\cdots s}$
-\end_inset
-
- is a scalar and this term behaves like a scalar potential with negative
- coefficient, which can lead to dangerous instability.
- But when 
-\begin_inset Formula $\xi=1$
-\end_inset
-
-, this term is canceled exactly by 
-\begin_inset Formula $\xi\Delta H$
-\end_inset
-
-.
- That being said, for even 
-\begin_inset Formula $s$
-\end_inset
-
-, 
-\begin_inset Formula $\xi=1$
-\end_inset
-
- is the minimal value for the potential to be bounded below.
- 
 \end_layout
 
 \begin_layout Section
@@ -6728,10 +6803,9 @@ Calculation of
 \begin_layout Standard
 In this appendix we will derive the formula 
 \begin_inset Formula 
-\begin{multline}
-\left\langle \cdots\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle =\\
--\frac{2}{M}\tr\left(S^{*}C^{-1}\bar{A}\right)\left\langle \cdots\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle +\frac{2}{M}B_{mn}\left\langle \cdots f_{m}^{\dagger}f_{n}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \label{eq:App_AFF_1}
-\end{multline}
+\begin{equation}
+\left\langle \cdots\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle =-\frac{2}{M}\left[\tr\left(S^{*}C^{-1}\bar{A}\right)+B_{mn}\frac{\partial}{\partial D_{mn}}\right]\left\langle \cdots\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \label{eq:App_AFF_1}
+\end{equation}
 
 \end_inset
 
@@ -6889,14 +6963,10 @@ reference "eq:App_AFF_res1"
 \end_inset
 
  where in the second step we used the identity 
-\begin_inset Formula 
-\[
-\left[AB,C\right]=A\left\{ B,C\right\} -\left\{ A,C\right\} B,
-\]
-
+\begin_inset Formula $\left[AB,C\right]=A\left\{ B,C\right\} -\left\{ A,C\right\} B$
 \end_inset
 
-and in the last step the property that 
+ and in the last step the property that 
 \begin_inset Formula $D_{kl}$
 \end_inset
 
