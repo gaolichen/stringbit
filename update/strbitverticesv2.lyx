@@ -3854,7 +3854,98 @@ Comments on vertices
 \end_layout
 
 \begin_layout Standard
-The expression of 
+We stress some improvements of this section compared with ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
+\end_inset
+
+, where the vertices 
+\begin_inset Formula $V_{qpr}$
+\end_inset
+
+ and 
+\begin_inset Formula $W_{rpq}$
+\end_inset
+
+ are first introduced.
+ 
+\end_layout
+
+\begin_layout Standard
+Ref 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
+\end_inset
+
+ did not impose constraint 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:cub_Vertices_Sym"
+
+\end_inset
+
+ on the vertices and failed to track the correct sign factors of the vertices.
+ These two aspects are vital for the calculation.
+ If either of them is overlooked, we would not be able to obtain the stuning
+ result that 
+\begin_inset Formula $W_{rpq}=0$
+\end_inset
+
+ for odd 
+\begin_inset Formula $sKL$
+\end_inset
+
+.
+ The result implies that, in odd 
+\begin_inset Formula $s$
+\end_inset
+
+ cases, the joining of two strings with odd bits into one string is strictly
+ forbidden.
+ This is a stronger result than the known result that string of even bits
+ are unstable in the odd 
+\begin_inset Formula $s$
+\end_inset
+
+ cases.
+ Furthermore, without the constraint 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:cub_Vertices_Sym"
+
+\end_inset
+
+, it would lead to incorrect results when being directly used for calculation
+ of observables.
+ We note that, in the formula we will present shortly for one-loop self-energy
+ calculation, we must use the vertices that satisfying the constraint 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:cub_Vertices_Sym"
+
+\end_inset
+
+.
+ Otherwise, the results are incorrect for 
+\begin_inset Formula $s>1$
+\end_inset
+
+ cases.
+\end_layout
+
+\begin_layout Standard
+Another new result is the integer prefactors of the vertices.
+ their explainations are straightforward.
+ The prefactor 
+\begin_inset Formula $M$
+\end_inset
+
+ of 
 \begin_inset Formula $V_{qpr}$
 \end_inset
 
@@ -3875,7 +3966,11 @@ The expression of
 \end_inset
 
 .
- Likewise, the expression of 
+ Likewise, the prefactor 
+\begin_inset Formula $KL$
+\end_inset
+
+ of 
 \begin_inset Formula $W_{rpq}$
 \end_inset
 
@@ -3888,27 +3983,6 @@ The expression of
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-When 
-\begin_inset Formula $sKL$
-\end_inset
-
- is odd, 
-\begin_inset Formula $W_{rpq}$
-\end_inset
-
- is zero.
- It implies that, in odd 
-\begin_inset Formula $s$
-\end_inset
-
- cases, the joining of two strings with odd bit number into one string is
- strictly forbidden.
- It is stunning to obtain this interesting result simply by using the cyclic
- constraint and keeping track the sign of vertices.
- 
 \end_layout
 
 \begin_layout Section
