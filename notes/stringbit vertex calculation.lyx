@@ -4,6 +4,8 @@
 \begin_header
 \textclass article
 \begin_preamble
+\usepackage{cancel}
+\newcommand{\zero}[1] {\cancelto{0}{#1}}
 \newcommand{\tr}{\mathrm{Tr}\,}
 \newcommand{\ba}{\bar{a}}
 \newcommand{\bb}{\bar{b}}
@@ -1606,7 +1608,7 @@ A_{nm}=\sin\frac{m-n}{2M}\pi+\exp\left(2\pi i\frac{m+n}{2M}\right)\sin\frac{\lef
 \end_inset
 
  For 
-\begin_inset Formula $h_{K,K+1}+h_{M,1}$
+\begin_inset Formula $h_{W}=h_{K,K+1}+h_{M,1}$
 \end_inset
 
 ,
@@ -1622,6 +1624,21 @@ A_{nm}=\left[1+\exp\left(\pi i\frac{n+m}{M}\right)\right]\left[1+\exp\left(2\pi 
 \[
 \gamma=-4\cot\frac{\pi}{2M}
 \]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+2h_{V}-h_{W} & =\left[\exp\left(2\pi iK\frac{m+n}{M}\right)+1\right]\sin\frac{m-n}{2M}\pi\\
+ & +\left[\exp\left(2\pi i\frac{Kn}{M}\right)+\exp\left(2\pi i\frac{Km}{M}\right)\right]\exp\left(\pi i\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi\\
+ & -\left[1+\exp\left(\pi i\frac{n+m}{M}\right)\right]\left[1+\exp\left(2\pi iK\frac{m+n}{M}\right)\right]\sin\frac{m-n}{2M}\pi\\
+ & =\left[\cancel{\exp\left(2\pi iK\frac{m+n}{M}\right)}+\cancel{1}\right]\sin\frac{m-n}{2M}\pi\\
+ & +\left[\exp\left(2\pi i\frac{Kn}{M}\right)+\exp\left(2\pi i\frac{Km}{M}\right)\right]\exp\left(\pi i\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi\\
+ & -\left[\cancel{1}+\exp\pi i\frac{\left(2K+1\right)\left(m+n\right)}{M}+\exp\left(\pi i\frac{n+m}{M}\right)+\cancel{\exp\left(2\pi iK\frac{m+n}{M}\right)}\right]\sin\frac{m-n}{2M}\pi\\
+ & =\exp\left(\pi i\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi\left[\exp\left(2\pi i\frac{Kn}{M}\right)+\exp\left(2\pi i\frac{Km}{M}\right)-1-\exp2\pi i\frac{K\left(m+n\right)}{M}\right]\\
+ & =-\exp\left(\pi i\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi\left[1-\exp\left(2\pi i\frac{Kn}{M}\right)\right]\left[1-\exp\left(2\pi i\frac{Km}{M}\right)\right]
+\end{align*}
 
 \end_inset
 
@@ -1655,6 +1672,107 @@ Since
 \begin{align*}
 V_{qpr}^{s=1} & =\left(-\right)^{L\left(g_{p}-K\right)}M\left|\det C\right|^{1/2}\int d\theta\,\bar{\psi}_{G}^{\left(L\right)}\bar{\psi}_{G}^{\left(K\right)}F_{\left\{ q\right\} }F_{\left\{ p\right\} }h_{V}F_{\left\{ r\right\} }^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\psi_{G}^{\left(K\right)}\psi_{G}^{\left(L\right)}\\
  & =\left(-\right)^{L\left(g_{p}-K\right)}M\left|\det C\right|^{1/2}\left\langle F_{\left\{ q\right\} }F_{\left\{ p\right\} }h_{V}F_{\left\{ r\right\} }^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle _{\left(K,L\right)}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Relation of 
+\begin_inset Formula $V$
+\end_inset
+
+ and 
+\begin_inset Formula $W$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+WV & =\sum_{M_{p}=K,M_{q}=L}W_{rpq}V_{qpr}\\
+ & =\sum_{p,q}\left(-\right)^{sL\left(g_{p}-sK\right)}KL\int d^{M}\eta\,\bar{\psi}_{r}\left(\eta_{1}\cdots\eta_{M}\right)h_{W}^{\eta}\psi_{p}\left(\eta_{1}\cdots\eta_{K}\right)\psi_{q}\left(\eta_{K+1}\cdots\eta_{M}\right)\\
+ & \times\left(-\right)^{s\left(Kg_{q}+Lg_{p}\right)}M\int d\theta\,\bar{\psi}_{q}\left(\theta_{K+1}\cdots\theta_{M}\right)\bar{\psi}_{p}\left(\theta_{1}\cdots\theta_{K}\right)h_{V}^{\theta}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & =\sum_{p,q}\left(-\right)^{sK\left(L+g_{p}\right)}KLM\int d^{M}\theta\int d^{M}\eta\,\bar{\psi}_{r}\left(\eta_{1}\cdots\eta_{M}\right)h_{W}^{\eta}\psi_{p}\left(\eta_{1}\cdots\eta_{K}\right)\\
+ & \times\psi_{q}\left(\eta_{K+1}\cdots\eta_{M}\right)\bar{\psi}_{q}\left(\theta_{K+1}\cdots\theta_{M}\right)\bar{\psi}_{p}\left(\theta_{1}\cdots\theta_{K}\right)h_{V}^{\theta}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & =\sum_{p,q}\left(-\right)^{sK\left(L+g_{p}\right)}\left(-\right)^{\left(g_{p}-sK\right)sL}KLM\int d^{M}\theta\int d^{M}\eta\,\bar{\psi}_{r}\left(\eta_{1}\cdots\eta_{M}\right)h_{W}^{\eta}\\
+ & \times\psi_{q}\left(\eta_{K+1}\cdots\eta_{M}\right)\bar{\psi}_{q}\left(\theta_{K+1}\cdots\theta_{M}\right)\psi_{p}\left(\eta_{1}\cdots\eta_{K}\right)\bar{\psi}_{p}\left(\theta_{1}\cdots\theta_{K}\right)h_{V}^{\theta}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & =\sum_{p}\left(-\right)^{sMg_{p}}KLM\int d^{M}\theta\int d^{M}\eta\,\bar{\psi}_{r}\left(\eta_{1}\cdots\eta_{M}\right)h_{W}^{\eta}\tilde{\delta}\left(\eta-\theta\right)_{L}\\
+ & \times\psi_{p}\left(\eta_{1}\cdots\eta_{K}\right)\bar{\psi}_{p}\left(\theta_{1}\cdots\theta_{K}\right)h_{V}^{\theta}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & =\sum_{p}\left(-\right)^{sMg_{p}}KLM\int d^{M}\theta\int d^{M}\eta\,\bar{\psi}_{r}\left(\eta_{1}\cdots\eta_{M}\right)h_{W}^{\eta}\tilde{\delta}\left(\eta-\theta\right)_{L}\\
+ & \times\psi_{p}\left(\eta_{1}\cdots\eta_{K}\right)\bar{\psi}_{p}\left(\theta_{1}\cdots\theta_{K}\right)h_{V}^{\theta}\psi_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\\
+ & =
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consider 
+\begin_inset Formula $\psi_{r}$
+\end_inset
+
+ become 
+\begin_inset Formula $\psi_{r}^{\prime}=F_{0}^{\dagger}\psi_{r}$
+\end_inset
+
+, 
+\begin_inset Formula $\psi_{p}\to\psi_{p}^{\prime}=F_{0}^{\left(K\right)\dagger}\psi_{p}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{align*}
+V_{qp^{\prime}r^{\prime}}^{s=1} & =\left(-\right)^{L\left(g_{p}-K+1\right)}M\left|\det C\right|^{1/2}\left\langle F_{\left\{ qp\right\} }F_{0}^{\left(K\right)}h_{V}F_{0}^{\dagger}F_{\left\{ r\right\} }^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+ & =\left(-\right)^{L\left(g_{p}-K+1\right)}M\left|\det C\right|^{1/2}\left\langle F_{\left\{ qp\right\} }F_{0}^{\left(K\right)}\left[h_{V},F_{0}^{\dagger}\right]F_{\left\{ r\right\} }^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+ & +\left(-\right)^{L\left(g_{p}-K+1\right)}M\left|\det C\right|^{1/2}\left\langle F_{\left\{ qp\right\} }F_{0}^{\left(K\right)}F_{0}^{\dagger}h_{V}F_{\left\{ r\right\} }^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+ & =\left(-\right)^{L\left(g_{p}-K+1\right)}M\left|\det C\right|^{1/2}\left\langle F_{\left\{ qp\right\} }F_{0}^{\left(K\right)}\left[h_{V},F_{0}^{\dagger}\right]F_{\left\{ r\right\} }^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+ & +\left(-\right)^{L\left(g_{p}-K+1\right)}M\left|\det C\right|^{1/2}\left\langle F_{\left\{ qp\right\} }F_{0}^{\left(K\right)}F_{0}^{\dagger}h_{V}F_{\left\{ r\right\} }^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \\
+ & =\left(-\right)^{L\left(g_{p}-K+1\right)}M\left|\det C\right|^{1/2}\left\langle F_{\left\{ qp\right\} }F_{0}^{\left(K\right)}F_{0}^{\dagger}h_{V}F_{\left\{ r\right\} }^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle 
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sqrt{\frac{K}{M}}V_{q\tilde{p}\tilde{r}}+\sqrt{\frac{L}{M}}V_{\tilde{q}p\tilde{r}}=V_{qpr}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\left[h_{kl},F_{0}^{\dagger}\right] & =\frac{2}{M}A_{nm}\left[F_{n}F_{m},F_{0}^{\dagger}\right]+\frac{4}{M}A_{-n,m}\left[F_{n}^{\dagger}F_{m},F_{0}^{\dagger}\right]\\
+ & =\frac{2}{M}A_{nm}\left(F_{n}\left\{ F_{m},F_{0}^{\dagger}\right\} -\left\{ F_{n},F_{0}^{\dagger}\right\} F_{m}\right)\\
+ & +\frac{4}{M}A_{-n,m}F_{n}^{\dagger}\left\{ F_{m},F_{0}^{\dagger}\right\} \\
+ & =\frac{2}{M}\left(A_{n0}F_{n}-A_{0m}F_{m}\right)+\frac{4}{M}A_{-n,0}F_{n}^{\dagger}\\
+ & =\frac{4}{M}\left(A_{n0}F_{n}+A_{-n,0}F_{n}^{\dagger}\right)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\frac{1}{2}\left[\exp\left(2\pi iK\frac{m+n}{M}\right)+1\right]\sin\frac{m-n}{2M}\pi+\frac{1}{2}\left[\exp\left(2\pi i\frac{Kn}{M}\right)+\exp\left(2\pi i\frac{Km}{M}\right)\right]\exp\left(\pi i\frac{m+n}{M}\right)\sin\frac{m-n}{2M}\pi
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+A_{n0}^{\left(V\right)} & =\frac{1}{2}\left[\exp\left(2\pi iK\frac{n}{M}\right)+1\right]\sin\frac{-n}{2M}\pi+\frac{1}{2}\left[\exp\left(2\pi i\frac{Kn}{M}\right)+1\right]\exp\left(\pi i\frac{n}{M}\right)\sin\frac{-n}{2M}\pi\\
+ & =-\frac{1}{2}\left[\exp\left(2\pi i\frac{Kn}{M}\right)+1\right]\left[1+\exp\left(\frac{n\pi i}{M}\right)\right]\sin\frac{n\pi}{2M}\\
+ & =\frac{1}{2}A_{n0}^{\left(W\right)}
 \end{align*}
 
 \end_inset

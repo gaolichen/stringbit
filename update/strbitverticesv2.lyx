@@ -3070,7 +3070,7 @@ begin{subequations}
 \begin_inset Formula 
 \begin{align}
 \left\langle F_{\left\{ qp\right\} }^{a},F_{\left\{ r\right\} }^{a\dagger}\right\rangle _{V,W} & \equiv\left\langle F_{\left\{ qp\right\} }^{a}h_{\left(V,W\right)}^{a}F_{\left\{ r\right\} }^{a\dagger}\exp\left(\frac{1}{2}f_{k}^{a\dagger}D_{kl}f_{l}^{a\dagger}\right)\right\rangle ,\label{eq:cub_vac_VW}\\
-h_{V}^{a} & \equiv\frac{1}{2}\left(h_{K,1}+L_{M,K+1}\right),\quad h_{W}^{a}=h_{K,K+1}+h_{M,1}\label{eq:cub_hVW}
+h_{V}^{a} & \equiv\frac{1}{2}\left(h_{K,1}+h_{M,K+1}\right),\quad h_{W}^{a}=h_{K,K+1}+h_{M,1}\label{eq:cub_hVW}
 \end{align}
 
 \end_inset
@@ -3562,6 +3562,18 @@ reference "eq:conj_gradings"
 \end_inset
 
  otherwise.
+ By simply keeping track the sign factor and using the constraint 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:cub_Vertices_Sym"
+
+\end_inset
+
+, we obtained the stunning result 
+\begin_inset Formula $W_{rpq}=0$
+\end_inset
+
+.
  
 \end_layout
 
@@ -3876,6 +3888,26 @@ The expression of
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+When 
+\begin_inset Formula $sKL$
+\end_inset
+
+ is odd, 
+\begin_inset Formula $W_{rpq}$
+\end_inset
+
+ is zero.
+ It implies that, in odd 
+\begin_inset Formula $s$
+\end_inset
+
+ cases, the joining of two strings with odd bit number into one string is
+ strictly forbidden.
+ It is stunning to obtain this interesting result simply by using the cyclic
+ constraint and keeping track the sign of vertices.
  
 \end_layout
 
