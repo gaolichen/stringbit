@@ -193,7 +193,7 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-In string bit model 
+In the string bit model 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:1991fv"
@@ -446,7 +446,22 @@ key "Thorn:2015wli"
 
 , where the cubic interaction vertices and their application to one-loop
  self-energy were discussed.
- In this paper, we will perform a detailed study of them.
+ In this paper, we will make a few improvements on the interaction vertices.
+ We will correct a sign error of ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
+\end_inset
+
+ on the vertices and also impose an extra constraint on them.
+ With these two improvements, we will find that, when 
+\begin_inset Formula $s$
+\end_inset
+
+ is odd, the joining of two strings with odd bits into one string is strictly
+ forbidden.
  The calculation of the vertices and one-loop self-energy will be done by
  finding the vacuum expectation values of ladder operators.
  Based on the formula we obtain, a rough estimation will show that, the
@@ -487,8 +502,7 @@ key "Thorn:2015wli"
 \end_inset
 
 .
- We will analytically calculate the one-loop self-energy for the cases of
- 
+ We will obtain analytic results of the one-loop self-energy for 
 \begin_inset Formula $M=3$
 \end_inset
 
@@ -496,20 +510,34 @@ key "Thorn:2015wli"
 \begin_inset Formula $s=1,2$
 \end_inset
 
-, then numerically confirm the large 
+ cases.
+ The large 
 \begin_inset Formula $M$
 \end_inset
 
- behavior for 
+ behavior will be confirmed numerically for for 
 \begin_inset Formula $s\leq4$
 \end_inset
 
-.
- We will also numerically verify that the 
+ cases.
+ The numerical computation will also shows that, for even 
+\begin_inset Formula $s$
+\end_inset
+
+ cases, the Hamiltonian is bounded from below when 
+\begin_inset Formula $\xi>1$
+\end_inset
+
+, where 
+\begin_inset Formula $\xi$
+\end_inset
+
+ is a freeparameter of the Hamiltonian.
+ Finally, we will also numerically verify that the 
 \begin_inset Formula $M$
 \end_inset
 
- independent factor of the one-loop correction in large 
+ independent factor of the one-loop self-energy in large 
 \begin_inset Formula $M$
 \end_inset
 
@@ -615,8 +643,8 @@ key "Thorn:2015wli"
 \end_inset
 
  expansion of the model.
- Meanwhile some modifications that are specific to this paper are incorporated.
- To be clear, the major modifications are as follows.
+ Meanwhile some modifications specific to this paper are incorporated.
+ To be clear, the modifications are as follows.
  In subsection 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3940,7 +3968,7 @@ reference "eq:cub_Vertices_Sym"
 
 \begin_layout Standard
 Another new result is the integer prefactors of the vertices.
- their explainations are straightforward.
+ Their interpretations are straightforward.
  The prefactor 
 \begin_inset Formula $M$
 \end_inset
@@ -4555,7 +4583,7 @@ In general,
 .
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsection
 Large 
 \begin_inset Formula $M$
 \end_inset
@@ -4587,7 +4615,7 @@ The large
 \end_inset
 
 .
- The product in 
+ The vacuum expectation values in 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:olp_DeltaE"
@@ -4630,7 +4658,7 @@ reference "eq:olp_largeM"
 \begin_inset Formula $M^{3}$
 \end_inset
 
- and 
+, 
 \begin_inset Formula $\left|\det C\right|$
 \end_inset
 
@@ -4646,8 +4674,42 @@ reference "eq:overlap_detC"
 
 \end_inset
 
+, and the sum over 
+\begin_inset Formula $K$
+\end_inset
+
+ is equavilent to another factor of 
+\begin_inset Formula $M$
+\end_inset
+
 .
- Among all the states of small chains, by eq.
+ These three parts produce a scale as 
+\begin_inset Formula $M^{4-s/4}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+We then consider the scale of 
+\begin_inset Formula $1/\left(E_{G}-E_{p}-E_{q}\right)$
+\end_inset
+
+.
+ When both 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $q$
+\end_inset
+
+ are ground energy state, 
+\begin_inset Formula $E_{G}-E_{p}-E_{q}\sim\mathcal{O}\left(1/M\right)$
+\end_inset
+
+ by eq.
  
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -4655,20 +4717,33 @@ reference "eq:diag_ground_energy"
 
 \end_inset
 
-, the factor 
+.
+ If one of them are excited states, 
+\begin_inset Formula $E_{G}-E_{p}-E_{q}\sim\mathcal{O}\left(1\right)$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $s$
+\end_inset
+
+ is even, both 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $q$
+\end_inset
+
+ can be ground states, and hence, 
 \begin_inset Formula $1/\left(E_{G}-E_{p}-E_{q}\right)$
 \end_inset
 
  scales as 
-\begin_inset Formula $\mathcal{O}\left(M\right)$
+\begin_inset Formula $M$
 \end_inset
 
- when both small chains are in ground states.
- This is possible only when 
-\begin_inset Formula $s$
-\end_inset
-
- is even.
+.
  When 
 \begin_inset Formula $s$
 \end_inset
@@ -4677,17 +4752,14 @@ reference "eq:diag_ground_energy"
 \begin_inset Formula $M$
 \end_inset
 
- has to be odd so that ground states are allowed.
- Then either 
-\begin_inset Formula $L$
+ has to be odd in order to have the 
+\begin_inset Formula $M$
 \end_inset
 
- or 
-\begin_inset Formula $K$
-\end_inset
-
- has to be even, which implies ground states of one small chain are forbidden
- by the cyclic constraint 
+-bit ground state surviving and one of the small strings must have even
+ bit nubmer.
+ It implies the ground state of one small chain are forbidden by the cyclic
+ constraint 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:dia_cyclic_constraint_s"
@@ -4704,53 +4776,49 @@ reference "eq:dia_cyclic_constraint_s"
 \end_inset
 
 .
- Finally, the sum over 
-\begin_inset Formula $L$
+ 
+\end_layout
+
+\begin_layout Standard
+Combining above together, we have
+\begin_inset Formula 
+\[
+\Delta E_{G}\sim\begin{cases}
+M^{5-s/4} & \text{for even }s\\
+M^{4-s/4} & \text{for odd }s
+\end{cases}.
+\]
+
 \end_inset
 
- produces another factor of 
-\begin_inset Formula $M$
+In the lightcone coordinates, 
+\begin_inset Formula $P^{+}$
 \end_inset
 
-.
- Combining above together, 
-\begin_inset Formula $\Delta E_{G}$
-\end_inset
-
- scales 
-\begin_inset Formula $M^{5-s/4}$
-\end_inset
-
- for even 
-\begin_inset Formula $s$
+ is identified as 
+\begin_inset Formula $mM$
 \end_inset
 
  and 
-\begin_inset Formula $M^{4-s/4}$
+\begin_inset Formula $P^{-}$
 \end_inset
 
- for odd 
-\begin_inset Formula $s$
+ is identified as 
+\begin_inset Formula $E$
 \end_inset
 
 .
- Particularly, when 
-\begin_inset Formula $s=24$
-\end_inset
-
-, we have 
-\begin_inset Formula $\Delta E_{G}\sim1/M\sim1/P^{+}$
-\end_inset
-
-, which resembles the Poincaré invariant dispersion relation 
+ In order to produce the Poincaré invariant dispersion relation 
 \begin_inset Formula $P^{-}\sim1/P^{+}$
 \end_inset
 
- in 
-\begin_inset Formula $1+1$
+, we must have 
+\begin_inset Formula $s=24$
 \end_inset
 
- dimension.
+.
+ This is analogous to the case of standard string theory, where Lorentz
+ invariance is only obtained in the critical dimension.
  The special 
 \begin_inset Formula $s=24$
 \end_inset
@@ -7283,41 +7351,28 @@ reference "eq:olp_DeltaE"
 \end_inset
 
  cases.
- 
-\end_layout
-
-\begin_layout Standard
-We first consider the 
-\begin_inset Formula $s=1$
-\end_inset
-
- case.
  For 
 \begin_inset Formula $M=3$
 \end_inset
 
-, 
-\begin_inset Formula $L$
+, we only need to calculate 
+\begin_inset Formula $K=1$
 \end_inset
 
- can be 
-\begin_inset Formula $1$
-\end_inset
-
- or 
-\begin_inset Formula $2$
-\end_inset
-
-.
- When 
-\begin_inset Formula $L=1$
-\end_inset
-
-, 
+ case since the contribution of 
 \begin_inset Formula $K=2$
 \end_inset
 
-, the 
+ is the same as 
+\begin_inset Formula $K=1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The 
 \begin_inset Formula $C$
 \end_inset
 
@@ -7391,7 +7446,15 @@ f_{0}=F_{0},\quad f_{1}=F_{1}^{\left(2\right)},\quad f_{2}=e^{-i\pi/4}\left(\sqr
 
 \end_inset
 
- The eigenfunctions and their conjugates of 
+ 
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $s=1$
+\end_inset
+
+, the eigenfunctions and their conjugates of 
 \begin_inset Formula $1$
 \end_inset
 
@@ -7632,13 +7695,13 @@ name "tab:Energy-eigenstates-1"
 
 \begin_layout Standard
 The contribution of 
-\begin_inset Formula $L=1$
+\begin_inset Formula $K=1$
 \end_inset
 
  to the energy correction is 
 \begin_inset Formula 
 \begin{equation}
-\Delta E_{G}^{L=1}=\frac{1}{N^{2}}\frac{KLM\left|\det C\right|}{E_{G}-E_{G}^{\left(1\right)}-E_{1}^{\left(2\right)}}\left(\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V}+\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{V}\right).\label{eq:App_ex_deltaEp}
+\Delta E_{G}^{K=1}=\frac{1}{N^{2}}\frac{KLM\left|\det C\right|}{E_{G}-E_{G}^{\left(1\right)}-E_{1}^{\left(2\right)}}\left(\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V}+\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{V}\right).\label{eq:App_ex_deltaEp}
 \end{equation}
 
 \end_inset
@@ -7691,23 +7754,11 @@ reference "eq:App_ex_deltaEp"
 \end_inset
 
  yields 
-\begin_inset Formula $\Delta E_{G}^{L=1}=-\frac{3}{2}\left(3\sqrt{3}-5\right)\xi^{2}+\left(12-7\sqrt{3}\right)\xi-\frac{3}{4}\left(3\sqrt{3}-5\right)$
+\begin_inset Formula $\Delta E_{G}^{K=1}=-\frac{3}{2}\left(3\sqrt{3}-5\right)\xi^{2}+\left(12-7\sqrt{3}\right)\xi-\frac{3}{4}\left(3\sqrt{3}-5\right)$
 \end_inset
 
 .
- 
-\end_layout
-
-\begin_layout Standard
-The result of 
-\begin_inset Formula $L=2$
-\end_inset
-
- is the same as the one of 
-\begin_inset Formula $L=1$
-\end_inset
-
-, hence we have 
+ We then have 
 \begin_inset Formula 
 \[
 \Delta E_{G}=2\Delta E_{G}^{L=1}=-3\left(3\sqrt{3}-5\right)\xi^{2}+2\left(12-7\sqrt{3}\right)\xi-\frac{3}{2}\left(3\sqrt{3}-5\right).
@@ -7739,8 +7790,8 @@ reference "tab:Energy-eigenstates-2"
  The energy correction now is given by 
 \begin_inset Formula 
 \begin{align}
-\Delta E_{G} & =\frac{1}{N^{2}}\sum_{L=1}^{2}\frac{KLM\left|\det C\right|^{2}}{E_{G}-E_{G}^{\left(2\right)}-0}\left(\left\langle 1\right\rangle _{W}^{*}\left\langle 1\right\rangle _{V}+\left\langle f_{2}f_{0}\right\rangle _{W}^{*}\left\langle f_{2}f_{0}\right\rangle _{V}\right)^{2}\nonumber \\
- & \hspace{1em}+\frac{1}{N^{2}}\sum_{L=1}^{2}\frac{KLM\left|\det C\right|^{2}}{E_{G}-E_{1}^{\left(2\right)}-0}\left(\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V}+\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{V}\right)^{2}.\label{eq:App_ex_DeltaEs2}
+\Delta E_{G}^{K=1} & =\frac{1}{N^{2}}\frac{KLM\left|\det C\right|^{2}}{E_{G}-E_{G}^{\left(2\right)}-0}\left(\left\langle 1\right\rangle _{W}^{*}\left\langle 1\right\rangle _{V}+\left\langle f_{2}f_{0}\right\rangle _{W}^{*}\left\langle f_{2}f_{0}\right\rangle _{V}\right)^{2}\nonumber \\
+ & \hspace{1em}+\frac{1}{N^{2}}\frac{KLM\left|\det C\right|^{2}}{E_{G}-E_{1}^{\left(2\right)}-0}\left(\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V}+\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{W}^{*}\left\langle F_{1}^{\left(2\right)}f_{2}\right\rangle _{V}\right)^{2}.\label{eq:App_ex_DeltaEs2}
 \end{align}
 
 \end_inset
@@ -8052,7 +8103,7 @@ name "tab:Energy-eigenstates-2"
 
 \begin_layout Standard
 For 
-\begin_inset Formula $L=1$
+\begin_inset Formula $K=1$
 \end_inset
 
 ,
@@ -8095,7 +8146,7 @@ reference "eq:App_ex_DeltaEs2"
 , we obtain 
 \begin_inset Formula 
 \[
-\Delta E_{G}=2\Delta E_{G}^{L=1}=\frac{1}{N^{2}}\left(-66\sqrt{3}\xi^{4}+360\xi^{3}-230\sqrt{3}\xi^{2}+180\xi-\frac{33\sqrt{3}}{2}\right).
+\Delta E_{G}=2\Delta E_{G}^{K=1}=\frac{1}{N^{2}}\left(-66\sqrt{3}\xi^{4}+360\xi^{3}-230\sqrt{3}\xi^{2}+180\xi-\frac{33\sqrt{3}}{2}\right).
 \]
 
 \end_inset
