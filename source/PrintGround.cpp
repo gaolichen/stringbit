@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <cmath>
+#include <algorithm>
 #include "StateCollection.h"
 #include "TraceState.h"
 #include "NormCalculator.h"

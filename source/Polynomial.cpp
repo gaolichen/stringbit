@@ -1,6 +1,7 @@
 #pragma warning(disable:4018)
 #include <sstream>
 #include <cmath>
+#include <algorithm>
 #include "Polynomial.h"
 using namespace std;
 
