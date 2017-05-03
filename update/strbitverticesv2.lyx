@@ -446,8 +446,40 @@ key "Thorn:2015wli"
 
 , where the cubic interaction vertices and their application to one-loop
  self-energy were discussed.
- In this paper, we will make a few improvements on the interaction vertices.
- We will correct a sign error of ref.
+ The vertex 
+\begin_inset Formula $V_{qpr}$
+\end_inset
+
+ is the amplitude of spliting a large string 
+\begin_inset Formula $r$
+\end_inset
+
+ into two small strings 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $q$
+\end_inset
+
+, while the vertex 
+\begin_inset Formula $W_{rpq}$
+\end_inset
+
+ is the amplitude of combining 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $q$
+\end_inset
+
+ into 
+\begin_inset Formula $r$
+\end_inset
+
+.
+ In ref.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -455,17 +487,69 @@ key "Thorn:2015wli"
 
 \end_inset
 
- on the vertices and also impose an extra constraint on them.
- With these two improvements, we will find that, when 
+ several aspects of the vertices calculation were missing or need to be
+ corrected.
+ In this paper, we will make a few improvements on the calculation and also
+ perform more detailed study on one-loop self-energy.
+\end_layout
+
+\begin_layout Standard
+Ref 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
+\end_inset
+
+ did not provide a method to build conjugates of energy eigenfunctions,
+ which are necessary to calculate the vertices.
+ We will provide a formalism to build the conjugates of energy eigenfunctions
+ explicitly in this paper.
+ We also make two improvements in the calculation the vertex.
+ Ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
+\end_inset
+
+ overlooked some sign factors of the vertices and did not (anti-)symmetrize
+ the vertices over indices 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $q$
+\end_inset
+
+.
+ We will correct the sign factors and (anti-)symmetrization the vertices.
+ With these two improvements, we will show that, in the case of odd 
 \begin_inset Formula $s$
 \end_inset
 
- is odd, the joining of two strings with odd bits into one string is strictly
- forbidden.
- The calculation of the vertices and one-loop self-energy will be done by
- finding the vacuum expectation values of ladder operators.
- Based on the formula we obtain, a rough estimation will show that, the
- one-loop self-energy scales like 
+, the joining of two strings with odd bits into one string is strictly forbidden.
+ We then futher simplify the interaction vertices to find that vertices
+ can be calculated by finding the vacuum expectation values of ladder operators.
+ Without these works, the interaction vertices cannot be used for the calculatio
+n of observables.
+\end_layout
+
+\begin_layout Standard
+We perform detailed analytic and numerical computation on the one-loop self-ener
+gy of ground states.
+ We will obtain analytic results of the one-loop self-energy for 
+\begin_inset Formula $M=3$
+\end_inset
+
+ and 
+\begin_inset Formula $s=1,2$
+\end_inset
+
+ cases.
+ Based on the formula we obtain, a rough estimation shows that, the one-loop
+ self-energy of ground state scales as 
 \begin_inset Formula $M^{5-s/4}$
 \end_inset
 
@@ -482,45 +566,37 @@ key "Thorn:2015wli"
 \end_inset
 
 .
- When 
+ In the case of 
 \begin_inset Formula $s=24$
 \end_inset
 
-, we have the interesting protostring model 
+, the Poincaré invariant dispersion relation 
+\begin_inset Formula $P^{-}\sim1/P^{+}$
+\end_inset
+
+ in 
+\begin_inset Formula $1+1$
+\end_inset
+
+ dimension is produced and the protostring model 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2015wli"
 
 \end_inset
 
-, which leads to the Poincaré invariant relation of 
-\begin_inset Formula $1+1$
-\end_inset
-
- dimension 
-\begin_inset Formula $P^{-}\sim1/P^{+}$
-\end_inset
-
-.
- We will obtain analytic results of the one-loop self-energy for 
-\begin_inset Formula $M=3$
-\end_inset
-
- and 
-\begin_inset Formula $s=1,2$
-\end_inset
-
- cases.
- The large 
+ emerges.
+ We then confirm the large 
 \begin_inset Formula $M$
 \end_inset
 
- behavior will be confirmed numerically for for 
+ behavior numerically for for 
 \begin_inset Formula $s\leq4$
 \end_inset
 
  cases.
- The numerical computation will also shows that, for even 
+ We also extend the Hamiltonian The numerical computation will also shows
+ that, for even 
 \begin_inset Formula $s$
 \end_inset
 
