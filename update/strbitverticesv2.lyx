@@ -538,8 +538,13 @@ n of observables.
 
 \begin_layout Standard
 We perform detailed analytic and numerical computation on the one-loop self-ener
-gy of ground states.
- We will obtain analytic results of the one-loop self-energy for 
+gy.
+ We calculate analytically the one-loop self-energy of ground states, denoted
+ as 
+\begin_inset Formula $\Delta E_{G}$
+\end_inset
+
+, for 
 \begin_inset Formula $M=3$
 \end_inset
 
@@ -548,8 +553,11 @@ gy of ground states.
 \end_inset
 
  cases.
- Based on the formula we obtain, a rough estimation shows that, the one-loop
- self-energy of ground state scales as 
+ Our formula estimates that 
+\begin_inset Formula $\Delta E_{G}$
+\end_inset
+
+ scales as 
 \begin_inset Formula $M^{5-s/4}$
 \end_inset
 
@@ -586,42 +594,61 @@ key "Thorn:2015wli"
 \end_inset
 
  emerges.
- We then confirm the large 
+ The numerical computation confirms the large 
 \begin_inset Formula $M$
 \end_inset
 
- behavior numerically for for 
+ behavior of 
+\begin_inset Formula $\Delta E_{G}$
+\end_inset
+
+ for 
 \begin_inset Formula $s\leq4$
 \end_inset
 
- cases.
- We also extend the Hamiltonian The numerical computation will also shows
- that, for even 
+ cases and verifies that 
+\begin_inset Formula $\Delta E_{G}$
+\end_inset
+
+ increase exponentially with respect to 
 \begin_inset Formula $s$
 \end_inset
 
- cases, the Hamiltonian is bounded from below when 
+ when 
+\begin_inset Formula $M$
+\end_inset
+
+ is fixed.
+ We extend the Hamiltonian that used in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
+\end_inset
+
+ by adding an 
+\begin_inset Formula $\mathcal{O}\left(1/N\right)$
+\end_inset
+
+ terms 
+\begin_inset Formula $\xi\Delta H$
+\end_inset
+
+ and numerical shows that, for 
+\begin_inset Formula $s=2$
+\end_inset
+
+, the Hamiltonian is bounded from below when 
 \begin_inset Formula $\xi>1$
 \end_inset
 
-, where 
-\begin_inset Formula $\xi$
-\end_inset
-
- is a freeparameter of the Hamiltonian.
- Finally, we will also numerically verify that the 
-\begin_inset Formula $M$
-\end_inset
-
- independent factor of the one-loop self-energy in large 
-\begin_inset Formula $M$
-\end_inset
-
- limit increases exponentially with respect to 
+.
+ Our analysis shows that this is true for all the even 
 \begin_inset Formula $s$
 \end_inset
 
-.
+ cases.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -679,9 +706,8 @@ reference "sec:EnergyCorrection"
 
 \end_inset
 
-, we use the cubic interaction vertices to find one-loop self-energy.
- The results of numerical computation for one-loop self-energy are analyzed
- in section 
+, we use the cubic interaction vertices to calculate one-loop self-energies.
+ Numerical results for one-loop self-energy are analyzed in section 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Numerical-Results"
