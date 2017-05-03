@@ -490,8 +490,8 @@ key "Thorn:2015wli"
 
  several aspects of the vertices calculation were missing or need to be
  corrected.
- In this paper, we will make a few improvements on the calculation and also
- perform more detailed study on one-loop self-energy.
+ In this paper, we make improvements on the calculation and perform more
+ detailed study on one-loop self-energy.
 \end_layout
 
 \begin_layout Standard
@@ -506,7 +506,7 @@ key "Thorn:2015wli"
  which are necessary to calculate the vertices.
  We will provide a formalism to build the conjugates of energy eigenfunctions
  explicitly in this paper.
- We also make two improvements in the calculation the vertex.
+ We will also make two improvements in the calculation the vertex.
  Ref.
  
 \begin_inset CommandInset citation
@@ -525,23 +525,23 @@ key "Thorn:2015wli"
 \end_inset
 
 .
- We will correct the sign factors and (anti-)symmetrization the vertices.
+ We correct the sign factors and (anti-)symmetrization the vertices.
  With these two improvements, we will show that, in the case of odd 
 \begin_inset Formula $s$
 \end_inset
 
 , the joining of two strings with odd bits into one string is strictly forbidden.
- We then further simplify the interaction vertices to find that vertices
+ We will then further simplify the interaction vertices to find that vertices
  can be calculated by finding the vacuum expectation values of ladder operators.
  Without these works, the interaction vertices cannot be used for the calculatio
 n of observables.
 \end_layout
 
 \begin_layout Standard
-We perform detailed analytic and numerical computation on the one-loop self-ener
-gy.
- We calculate analytically the one-loop self-energy of ground states, denoted
- as 
+We will perform both analytic and numerical computation on one-loop self-energie
+s.
+ We will calculate analytically the one-loop self-energy of ground states,
+ denoted as 
 \begin_inset Formula $\Delta E_{G}$
 \end_inset
 
@@ -620,7 +620,7 @@ key "Thorn:2015wli"
 \end_inset
 
  is fixed.
- We extend the Hamiltonian that used in 
+ We will extend the Hamiltonian that used in 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2015wli"
@@ -635,7 +635,7 @@ key "Thorn:2015wli"
 \begin_inset Formula $\xi\Delta H$
 \end_inset
 
- and numerical shows that, for 
+ and numerically show that, for 
 \begin_inset Formula $s=2$
 \end_inset
 
@@ -644,7 +644,7 @@ key "Thorn:2015wli"
 \end_inset
 
 .
- Our analysis shows that this is true for all the even 
+ Our analysis will show that this is true for all the even 
 \begin_inset Formula $s$
 \end_inset
 
@@ -2596,9 +2596,25 @@ where the delta function
 \begin_inset Formula $\tilde{\delta}\left(\theta-\eta\right)$
 \end_inset
 
- is understood to be symmetrized under cyclic permutations.
- We will discussion the delta function in the end of this section.
- Here we stress that, once there are a complete set of 
+ is understood to be symmetrized under cyclic constraint like permutations.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+To be specific, it means that 
+\begin_inset Formula 
+\[
+\int d^{M}\theta\, f\left(\theta_{1},\cdots,\theta_{M}\right)\tilde{\delta}\left(\theta-\eta\right)=\frac{1}{M}\sum_{k=0}^{M}\left(-\right)^{ks\left(M-1\right)}f\left(\eta_{k+1},\cdots,\eta_{k+M}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ We stress that, once there are a complete set of 
 \begin_inset Formula $\bar{\psi}_{r}$
 \end_inset
 
@@ -2923,7 +2939,7 @@ reference "sub:Three-Chain-overlap"
 \end_layout
 
 \begin_layout Standard
-To conclude this section, let us discuss the grading of energy eigenstates
+Let us conclude this section by the discussing the grading of energy eigenstates
  and eigenfunctions.
  We define 
 \begin_inset Formula 
@@ -2946,6 +2962,14 @@ Now we can write the trace operator
 \begin_inset Formula $T\left(\theta\right)=\sum_{t}X_{t}\bar{\psi}_{t}\left(\theta\right)$
 \end_inset
 
+, where 
+\begin_inset Formula $X_{t}$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $\theta$
+\end_inset
+
 , then 
 \begin_inset Formula 
 \begin{align*}
@@ -2956,27 +2980,7 @@ T_{r} & =\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta\right)\psi_{
 
 \end_inset
 
- where the sign factor
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-Such a sign factor was overlooked by ref.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Thorn:2015wli"
-
-\end_inset
-
-.
- It may lead to incorrect results if one performs detailed calculation for
- observables.
-\end_layout
-
-\end_inset
-
- comes from the commutation of the measure and 
+ where the sign factor comes from the commutation of the measure and 
 \begin_inset Formula $X_{t}$
 \end_inset
 
@@ -2997,12 +3001,34 @@ key "Thorn:2015wli"
  and 
 \begin_inset Formula 
 \begin{equation}
-T\left(\theta\right)=\sum_{r}\left(-\right)^{sM\g\left(T_{r}\right)}T_{r}\bar{\psi}_{r}\left(\theta\right).\label{eq:conj_completeness_1}
+T\left(\theta\right)=\sum_{r}\left(-\right)^{sMg_{t}}T_{r}\bar{\psi}_{r}\left(\theta\right).\label{eq:conj_completeness_1}
 \end{equation}
 
 \end_inset
 
-Finally, it is easy to see that
+Finally, from eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:conj_completeness_1"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:conj_normalization"
+
+\end_inset
+
+, and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:dia_ground_state_s"
+
+\end_inset
+
+, it is easy to see that
 \begin_inset Formula 
 \begin{equation}
 \g\left(\bar{\psi}_{r}\right)=g_{r},\quad\g\left(\psi_{r}\right)=g_{r}-sM,\quad\g\left(\psi_{G}\right)=0,\quad\g\left(\bar{\psi}_{G}\right)=sM,\label{eq:conj_gradings}
@@ -3111,7 +3137,16 @@ end{subequations}
 \end_inset
 
  represents the amplitude of joining two small strings into one large string.
- Without loss of generality, we can impose the constraints 
+ Without loss of generality, we can (anti)symmetrize the vertices over indices
+ 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $q$
+\end_inset
+
+ as 
 \begin_inset Formula 
 \begin{equation}
 V_{pqr}=\left(-\right)^{g_{p}g_{q}}V_{qpr},\quad W_{rqp}=\left(-\right)^{g_{p}g_{q}}W_{rpq}.\label{eq:cub_Vertices_Sym}
@@ -3179,7 +3214,7 @@ reference "eq:cub_Vertices"
 \begin_inset Formula $a$
 \end_inset
 
- is involved.
+ are involved.
  The brackets 
 \begin_inset Formula $\left\langle \cdot,\cdot\right\rangle _{V,W}$
 \end_inset
@@ -3201,7 +3236,7 @@ begin{subequations}
 \begin_inset Formula 
 \begin{align}
 \left\langle F_{\left\{ qp\right\} }^{a},F_{\left\{ r\right\} }^{a\dagger}\right\rangle _{V,W} & \equiv\left\langle F_{\left\{ qp\right\} }^{a}h_{\left(V,W\right)}^{a}F_{\left\{ r\right\} }^{a\dagger}\exp\left(\frac{1}{2}f_{k}^{a\dagger}D_{kl}f_{l}^{a\dagger}\right)\right\rangle ,\label{eq:cub_vac_VW}\\
-h_{V}^{a} & \equiv\frac{1}{2}\left(h_{K,1}+h_{M,K+1}\right),\quad h_{W}^{a}=h_{K,K+1}+h_{M,1}\label{eq:cub_hVW}
+h_{V}^{a} & \equiv\frac{1}{2}\left(h_{K,1}^{a}+h_{M,K+1}^{a}\right),\quad h_{W}^{a}=h_{K,K+1}^{a}+h_{M,1}^{a}\label{eq:cub_hVW}
 \end{align}
 
 \end_inset
@@ -3347,8 +3382,8 @@ reference "eq:cub_Vertices_DefV"
 
 \end_inset
 
-The vertex is decorated with tilde because we have not yet apply the constraint
- 
+The vertex is decorated with tilde because we have not yet applied the constrain
+t 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:cub_Vertices_Sym"
@@ -3431,7 +3466,7 @@ key "Thorn:2015wli"
 \end_layout
 
 \begin_layout Standard
-Now we let us simplify 
+Now let us simplify 
 \begin_inset Formula $\tilde{V}$
 \end_inset
 
@@ -3469,12 +3504,8 @@ reference "eq:cub_Vstr"
 \begin_inset Formula $i$
 \end_inset
 
-, we can first rename all integration variables from 
-\begin_inset Formula $\theta_{j}$
-\end_inset
-
- to 
-\begin_inset Formula $\theta_{j+1}$
+, we can first rename all integration variables as 
+\begin_inset Formula $\theta_{j}\to\theta_{j+1}$
 \end_inset
 
  and then use the cyclic constraint 
@@ -3489,17 +3520,12 @@ reference "eq:ham_cyclicconstrtaint"
 \end_inset
 
  and the measure to their original form.
- The value of the integral does not change under both changes while the
- index 
-\begin_inset Formula $i$
+ The value of the integral is invariant under both changes but 
+\begin_inset Formula $\tilde{V}_{qpr}^{\left(i\right)}$
 \end_inset
 
- of the integrand is changed to 
-\begin_inset Formula $i+1$
-\end_inset
-
-, i.e., 
-\begin_inset Formula $\tilde{V}_{qpr}^{\left(i\right)}=\tilde{V}_{qpr}^{\left(i+1\right)}$
+ is changed to 
+\begin_inset Formula $\tilde{V}_{qpr}^{\left(i+1\right)}$
 \end_inset
 
 .
@@ -3527,7 +3553,7 @@ reference "eq:ham_cyclicconstrtaint"
 \end_layout
 
 \begin_layout Standard
-To find the vertex satisfy constraint 
+To find the vertex satisfy the constraint 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:cub_Vertices_Sym"
@@ -3539,7 +3565,7 @@ reference "eq:cub_Vertices_Sym"
 \end_inset
 
 , where 
-\begin_inset Formula $V_{pqr}$
+\begin_inset Formula $\tilde{V}_{pqr}$
 \end_inset
 
  can be obtained by exchanging 
@@ -3588,7 +3614,7 @@ We perform the similar calculation to the
 \end_inset
 
  vertex.
- Each integral of 
+ All the integral of 
 \begin_inset Formula $W^{\left(1\right)}$
 \end_inset
 
@@ -3596,12 +3622,12 @@ We perform the similar calculation to the
 \begin_inset Formula $W^{\left(2\right)}$
 \end_inset
 
- is invariant under the change 
-\begin_inset Formula $k\to k+1$
+ are independent of the indices 
+\begin_inset Formula $k$
 \end_inset
 
- or 
-\begin_inset Formula $l\to l+1$
+ and 
+\begin_inset Formula $l$
 \end_inset
 
 .
@@ -3627,7 +3653,7 @@ We perform the similar calculation to the
 \end_inset
 
  and fix the indices as 
-\begin_inset Formula $k=K,\, L=K+1$
+\begin_inset Formula $k=K,\, l=K+1$
 \end_inset
 
  for 
@@ -3664,7 +3690,7 @@ We then calculate
 \begin_inset Formula $\theta_{i}\to\theta_{i+K}$
 \end_inset
 
-, commuted 
+ and in the last equality commuted 
 \begin_inset Formula $\psi_{q}$
 \end_inset
 
@@ -3679,7 +3705,7 @@ reference "eq:conj_gradings"
 
 \end_inset
 
- in the last equality.
+.
  It then implies that 
 \begin_inset Formula $W_{rpq}=0$
 \end_inset
@@ -3693,23 +3719,10 @@ reference "eq:conj_gradings"
 \end_inset
 
  otherwise.
- By simply keeping track the sign factor and using the constraint 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:cub_Vertices_Sym"
-
-\end_inset
-
-, we obtained the stunning result 
-\begin_inset Formula $W_{rpq}=0$
-\end_inset
-
-.
- 
 \end_layout
 
 \begin_layout Standard
-Let use now get rid of the integral in the expression of 
+Let us now get rid of the integral in the expression of 
 \begin_inset Formula $V$
 \end_inset
 
@@ -3864,7 +3877,7 @@ Note that
 \end_inset
 
 .
- We shall see that physical observables, like one-loop self-energy, only
+ We shall see that physical observables, like one-loop self-energies, only
  depend on products like 
 \begin_inset Formula $W_{rpq}V_{qpr}$
 \end_inset
@@ -3948,6 +3961,8 @@ status open
 
 \backslash
 begin{subequations}
+\backslash
+label{eq:cub_Amu}
 \end_layout
 
 \end_inset
@@ -4020,9 +4035,9 @@ reference "eq:cub_Vertices_Sym"
 
 \end_inset
 
- on the vertices and failed to track the correct sign factors of the vertices.
- These two aspects are vital for the calculation.
- If either of them is overlooked, we would not be able to obtain the stuning
+ on the vertices and missed the sign factors of the vertices.
+ We stree that these two aspects are vital for the calculation.
+ If either of them is overlooked, we would not be able to obtain the interesting
  result that 
 \begin_inset Formula $W_{rpq}=0$
 \end_inset
@@ -4051,10 +4066,11 @@ reference "eq:cub_Vertices_Sym"
 
 \end_inset
 
-, it would lead to incorrect results when being directly used for calculation
- of observables.
- We note that, in the formula we will present shortly for one-loop self-energy
- calculation, we must use the vertices that satisfying the constraint 
+, it would lead to incorrect results when the vertices are directly used
+ for calculation of observables.
+ We note that, in the formula for one-loop self-energy calculation, which
+ will be presented shortly, we must use the vertices that satisfying the
+ constraint 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:cub_Vertices_Sym"
@@ -4062,15 +4078,19 @@ reference "eq:cub_Vertices_Sym"
 \end_inset
 
 .
- Otherwise, the results are incorrect for 
-\begin_inset Formula $s>1$
-\end_inset
-
- cases.
+ Otherwise, we cannot obtain correct results.
 \end_layout
 
 \begin_layout Standard
-Another new result is the integer prefactors of the vertices.
+Another interesting result is the integer prefactors of the vertices in
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:cub_Vertices"
+
+\end_inset
+
+.
  Their interpretations are straightforward.
  The prefactor 
 \begin_inset Formula $M$
@@ -4256,11 +4276,7 @@ reference "eq:olp_deltaE0"
 
 \end_inset
 
- where 
-\begin_inset Formula ${\sum_{p,q}}^{\prime}$
-\end_inset
-
- indicates sum over states without zero modes and we wrote 
+ where we wrote 
 \begin_inset Formula $F_{0}^{\left(K\right)}$
 \end_inset
 
@@ -4268,7 +4284,11 @@ reference "eq:olp_deltaE0"
 \begin_inset Formula $F_{0,K}$
 \end_inset
 
- for convenience.
+ for convenience and 
+\begin_inset Formula ${\sum_{p,q}}^{\prime}$
+\end_inset
+
+ indicates sum over states without zero modes.
  We can replace 
 \begin_inset Formula $F_{0}^{\left(K\right)}$
 \end_inset
@@ -4319,7 +4339,7 @@ reference "eq:overlap_f:4"
 \end_inset
 
 .
-  For the 
+  The 
 \begin_inset Formula $\lambda=1,\,\kappa=0$
 \end_inset
 
@@ -4335,7 +4355,8 @@ reference "eq:overlap_f:4"
 \begin_inset Formula $F_{0}^{\left(L\right)*}F^{\left(L\right)}$
 \end_inset
 
-, one can easily verify that 
+.
+ One can easily verify that 
 \begin_inset Formula $F_{0}^{\left(K\right)*}F_{0}^{\left(K\right)}+F_{0}^{\left(L\right)*}F_{0}^{\left(L\right)}=f_{0}^{*}f_{0}+f_{M-1}^{*}f_{M-1}$
 \end_inset
 
@@ -4357,7 +4378,7 @@ reference "eq:overlap_f:4"
 \end_inset
 
 .
- We now have 
+ We then have 
 \begin_inset Formula 
 \[
 \Delta E_{r}^{s=1}=\frac{1}{N^{2}}\sum_{K=1}^{M-1}{\sum_{p,q}}^{\prime}\frac{KLM\left|\det C\right|}{E_{r}-E_{p}-E_{q}}\sum_{\lambda_{i}=0,1}\left\langle F_{\left\{ qp\right\} }f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}},F_{\left\{ r\right\} }^{\dagger}\right\rangle _{W}^{*}\left\langle F_{\left\{ qp\right\} }f_{0}^{\lambda_{0}}f_{M-1}^{\lambda_{M-1}},F_{\left\{ r\right\} }^{\dagger}\right\rangle _{V}.
@@ -4425,7 +4446,7 @@ reference "eq:olp_DeltaE"
 \end_inset
 
 .
- But in general the calculation is very tedious.
+ But in general the calculation is tedious.
  Let us consider the simplest case that 
 \begin_inset Formula $\psi_{r}$
 \end_inset
@@ -4435,7 +4456,7 @@ reference "eq:olp_DeltaE"
 \end_inset
 
 .
- For convenience, we simply denote 
+ For convenience, we denote 
 \begin_inset Formula $\left\langle O,1\right\rangle _{V,W}$
 \end_inset
 
@@ -4566,12 +4587,28 @@ reference "eq:App_AFF_1"
  where 
 \begin_inset Formula 
 \[
-\mu_{V,W}^{\prime}=\mu_{V,W}-\tr\left(S^{*}C^{-1}A_{V,W}^{\dagger}\right),\quad B_{V,W}=C^{-1}A_{V,W}^{\dagger}\left(C^{-1}\right)^{T}.
+\mu_{V,W}^{\prime}=\mu_{V,W}-\tr\left(S^{*}C^{-1}A_{V,W}^{\dagger}\right),\quad B_{V,W}=C^{-1}A_{V,W}^{\dagger}\left(C^{-1}\right)^{T}
 \]
 
 \end_inset
 
-Finally, we need to calculate the vacuum expectation values on RHS of 
+ with 
+\begin_inset Formula $\mu_{V,W}$
+\end_inset
+
+ and 
+\begin_inset Formula $A_{V,W}$
+\end_inset
+
+ defined in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:cub_Amu"
+
+\end_inset
+
+.
+ Finally, we need to calculate the vacuum expectation values on RHS of 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:olp_vev_v"
@@ -4786,7 +4823,7 @@ reference "eq:overlap_detC"
 \end_inset
 
 .
- These three parts produce a scale as 
+ These three parts produce a factor scale as 
 \begin_inset Formula $M^{4-s/4}$
 \end_inset
 
@@ -4808,7 +4845,7 @@ We then consider the scale of
 \begin_inset Formula $q$
 \end_inset
 
- are ground energy state, 
+ are ground energy states, 
 \begin_inset Formula $E_{G}-E_{p}-E_{q}\sim\mathcal{O}\left(1/M\right)$
 \end_inset
 
@@ -4839,11 +4876,7 @@ reference "eq:diag_ground_energy"
 \end_inset
 
  can be ground states, and hence, 
-\begin_inset Formula $1/\left(E_{G}-E_{p}-E_{q}\right)$
-\end_inset
-
- scales as 
-\begin_inset Formula $M$
+\begin_inset Formula $1/\left(E_{G}-E_{p}-E_{q}\right)\sim\mathcal{O}\left(M\right)$
 \end_inset
 
 .
@@ -4855,14 +4888,13 @@ reference "eq:diag_ground_energy"
 \begin_inset Formula $M$
 \end_inset
 
- has to be odd in order to have the 
+ has to be odd in order to have the physical 
 \begin_inset Formula $M$
 \end_inset
 
--bit ground state surviving and one of the small strings must have even
- bit number.
- It implies the ground state of one small chain are forbidden by the cyclic
- constraint 
+-bit ground state and one of the small strings must have even bit number.
+ It implies that the ground state of one small chain is forbidden by the
+ cyclic constraint 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:dia_cyclic_constraint_s"
@@ -4871,10 +4903,10 @@ reference "eq:dia_cyclic_constraint_s"
 
 .
  Therefore, 
-\begin_inset Formula $1/\left(E_{G}-E_{p}-E_{q}\right)$
+\begin_inset Formula $1/\left(E_{G}-E_{p}-E_{q}\right)\sim\mathcal{O}\left(1\right)$
 \end_inset
 
- is of order one for odd 
+ for odd 
 \begin_inset Formula $s$
 \end_inset
 
@@ -4885,16 +4917,26 @@ reference "eq:dia_cyclic_constraint_s"
 \begin_layout Standard
 Combining above together, we have
 \begin_inset Formula 
-\[
+\begin{equation}
 \Delta E_{G}\sim\begin{cases}
 M^{5-s/4} & \text{for even }s\\
 M^{4-s/4} & \text{for odd }s
-\end{cases}.
-\]
+\end{cases}.\label{eq:largeM_DeltaE}
+\end{equation}
 
 \end_inset
 
-In the lightcone coordinates, 
+In analogy with the standard string theory, we can infer from eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:largeM_DeltaE"
+
+\end_inset
+
+ the critical Grassman dimension of the model, where Lorentz invariance
+ is obtained.
+ In the lightcone coordinates, 
 \begin_inset Formula $P^{+}$
 \end_inset
 
@@ -4911,22 +4953,25 @@ In the lightcone coordinates,
 \end_inset
 
 .
- In order to produce the Poincaré invariant dispersion relation 
+ So the Poincaré invariant dispersion relation 
 \begin_inset Formula $P^{-}\sim1/P^{+}$
 \end_inset
 
-, we must have 
+ implies 
+\begin_inset Formula $E\sim1/M$
+\end_inset
+
+.
+ Therefore the Lorentz invariance requires 
 \begin_inset Formula $s=24$
 \end_inset
 
 .
- This is analogous to the case of standard string theory, where Lorentz
- invariance is only obtained in the critical dimension.
- The special 
+ The special case of 
 \begin_inset Formula $s=24$
 \end_inset
 
- case is called protostring model in ref.
+ is called protostring model in ref.
  
 \begin_inset CommandInset citation
 LatexCommand cite
