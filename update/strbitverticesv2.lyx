@@ -130,6 +130,8 @@ status open
 abstract{We provide a formalism to calculate the cubic interaction vertices
  of the stable string bit model, in which string bits have $s$ spin degrees
  of freedom but no space to move.
+ We show that the joining of two strings with odd bits into one string is
+ strictly forbidden when $s$ is odd.
  With the vertices, we obtain a formula for one-loop self-energy, i.e., the
  $
 \backslash
@@ -141,8 +143,7 @@ right)$ correction to the energy spectrum.
  A rough analysis shows that, when the bit number $M$ is large, the ground
  state one-loop self-energy $
 \backslash
-Delta E_{G}$ should scale as $M^{5-s/4}$ for even $s$ and $M^{4-s/4}$ for
- odd $s$.
+Delta E_{G}$ scale as $M^{5-s/4}$ for even $s$ and $M^{4-s/4}$ for odd $s$.
  Particularly, in the case of protostring, where the Grassmann dimension
  $s=24$, we have $
 \backslash
@@ -5971,7 +5972,7 @@ name "sec:Conclusion"
 
 \end_inset
 
-Summary and Conclusion
+Conclusion
 \end_layout
 
 \begin_layout Standard
@@ -5979,6 +5980,28 @@ We have presented a formalism to calculate the cubic interaction vertices
  for stable string bit model and its application in one-loop self-energy.
  The calculation of both are transferred to the calculation of vacuum expectatio
 n values of eigenoperators.
+ Our formalism provides a method to study the string bit model both analytically
+ and numerically.
+ We performed analytic calculation in the case of 
+\begin_inset Formula $M=1$
+\end_inset
+
+ and 
+\begin_inset Formula $s=1,\,2$
+\end_inset
+
+.
+ Further effect is needed for analytic calculation in higher 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $s$
+\end_inset
+
+ cases.
+ One can also apply the formalism to other calculations, e.g., four strings
+ interaction.
  
 \end_layout
 
@@ -6047,66 +6070,6 @@ key "Chen:2016hkz"
  nature of string bits.
  These results support the idea of formulating string theory by string bit
  models.
- 
-\end_layout
-
-\begin_layout Standard
-When 
-\begin_inset Formula $M$
-\end_inset
-
- is large, the 
-\begin_inset Formula $M$
-\end_inset
-
- independent part of 
-\begin_inset Formula $\Delta E_{G}$
-\end_inset
-
-, which we call 
-\begin_inset Formula $\Delta\hat{E}_{G}$
-\end_inset
-
-, is an exponential function of 
-\begin_inset Formula $s$
-\end_inset
-
-.
- This is an consequence of supersymmetry, which give rise to 
-\begin_inset Formula $2^{s}$
-\end_inset
-
- degeneracies of ground states.
- The change of 
-\begin_inset Formula $\Delta\hat{E}_{G}$
-\end_inset
-
- with respect to 
-\begin_inset Formula $s$
-\end_inset
-
- is slowest when 
-\begin_inset Formula $\xi=1$
-\end_inset
-
- or 
-\begin_inset Formula $\xi$
-\end_inset
-
- is very close to 
-\begin_inset Formula $1$
-\end_inset
-
-.
- This might be related to the fact that 
-\begin_inset Formula $\xi=1$
-\end_inset
-
- is the minimum value that the scalar potentials of even 
-\begin_inset Formula $s$
-\end_inset
-
- cases are bounded below.
  
 \end_layout
 
