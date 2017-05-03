@@ -451,7 +451,7 @@ key "Thorn:2015wli"
 \begin_inset Formula $V_{qpr}$
 \end_inset
 
- is the amplitude of spliting a large string 
+ is the amplitude of splitting a large string 
 \begin_inset Formula $r$
 \end_inset
 
@@ -531,7 +531,7 @@ key "Thorn:2015wli"
 \end_inset
 
 , the joining of two strings with odd bits into one string is strictly forbidden.
- We then futher simplify the interaction vertices to find that vertices
+ We then further simplify the interaction vertices to find that vertices
  can be calculated by finding the vacuum expectation values of ladder operators.
  Without these works, the interaction vertices cannot be used for the calculatio
 n of observables.
@@ -2606,7 +2606,7 @@ where the delta function
 \begin_inset Formula $\psi_{r}$
 \end_inset
 
- fulfilling the normalzation codition, the completeness relation is satisified
+ fulfilling the normalization condition, the completeness relation is satisfied
  automatically.
  
 \end_layout
@@ -3260,7 +3260,7 @@ reference "eq:cub_vac_VW"
 
 \end_inset
 
- is the state annhilated by all lowering operators of 
+ is the state annihilated by all lowering operators of 
 \begin_inset Formula $L$
 \end_inset
 
@@ -3587,7 +3587,7 @@ We perform the similar calculation to the
 \begin_inset Formula $\tilde{W}$
 \end_inset
 
- vertix.
+ vertex.
  Each integral of 
 \begin_inset Formula $W^{\left(1\right)}$
 \end_inset
@@ -4781,7 +4781,7 @@ reference "eq:overlap_detC"
 \begin_inset Formula $K$
 \end_inset
 
- is equavilent to another factor of 
+ is equivalent to another factor of 
 \begin_inset Formula $M$
 \end_inset
 
@@ -4860,7 +4860,7 @@ reference "eq:diag_ground_energy"
 \end_inset
 
 -bit ground state surviving and one of the small strings must have even
- bit nubmer.
+ bit number.
  It implies the ground state of one small chain are forbidden by the cyclic
  constraint 
 \begin_inset CommandInset ref
@@ -5418,7 +5418,7 @@ The fact that, in the case of odd
 \begin_inset Formula $s$
 \end_inset
 
-, there are two cureves for each 
+, there are two curves for each 
 \begin_inset Formula $M$
 \end_inset
 
