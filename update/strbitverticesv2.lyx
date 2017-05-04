@@ -5505,7 +5505,7 @@ The fact that, in the case of odd
 \end_inset
 
 .
- The lowest energy states of both cases are very close and equal to 
+ The lowest energy states of both cases are equal to 
 \begin_inset Formula $-4\cot\frac{\pi}{2L}-4\cos\frac{\pi}{2K}+8$
 \end_inset
 
@@ -5574,6 +5574,25 @@ reference "eq:dia_cyclic_constraint_s"
 \end_inset
 
  case.
+ This reasoning applies to all small odd 
+\begin_inset Formula $K$
+\end_inset
+
+ and small even 
+\begin_inset Formula $K$
+\end_inset
+
+.
+ Hence, small odd 
+\begin_inset Formula $K$
+\end_inset
+
+ cases have lower contribution to small even 
+\begin_inset Formula $K$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -5606,7 +5625,7 @@ reference "fig:SubEvsMs2"
 \end_inset
 
 .
- From the plots, when 
+ From the plots, the 
 \begin_inset Formula $\xi=0.5$
 \end_inset
 
@@ -5614,8 +5633,7 @@ reference "fig:SubEvsMs2"
 \begin_inset Formula $\xi=1.5$
 \end_inset
 
- cases show nice asymptotic behavior.
- Curve of different 
+ cases show a nice asymptotic behavior and curves of different 
 \begin_inset Formula $M$
 \end_inset
 
@@ -5637,17 +5655,18 @@ reference "fig:SubEvsMs2"
 \begin_inset Formula $M$
 \end_inset
 
- increases.
- It implies the system is not stable as 
+ increases, which implies that 
+\begin_inset Formula $\Delta E$
+\end_inset
+
+ decrease as 
 \begin_inset Formula $M$
 \end_inset
 
- increase 
-\begin_inset Formula $\Delta E_{G}$
-\end_inset
-
- would go to negative infinity.
- When 
+ increases.
+ So the one-loop self-energy is not bounded from below and the system is
+ not stable.
+ In contrast, when 
 \begin_inset Formula $\xi>1$
 \end_inset
 
@@ -5655,8 +5674,7 @@ reference "fig:SubEvsMs2"
 \begin_inset Formula $M$
 \end_inset
 
- increase.
- It implies the system is bounded from below.
+ increase, which implies a stable system.
  This is related to a special feature of the 
 \begin_inset Formula $\xi=1$
 \end_inset
@@ -5929,6 +5947,12 @@ reference "fig:EvS"
 \end_inset
 
  degeneracies.
+ The fact that 
+\begin_inset Formula $\xi=1$
+\end_inset
+
+ case has lower slope than others is because of the reason we mentioned
+ last paragraph.
  
 \end_layout
 
