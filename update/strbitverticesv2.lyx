@@ -3036,7 +3036,7 @@ reference "eq:dia_ground_state_s"
 
 \end_inset
 
- where equalities are understood to be hold under module 2.
+ where equalities are understood to be hold under modulo 2.
  These results will be used in the next section.
 \end_layout
 
