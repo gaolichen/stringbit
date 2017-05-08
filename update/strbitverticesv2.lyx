@@ -3996,7 +3996,7 @@ end{subequations}
 \end_layout
 
 \begin_layout Subsection
-Comments on vertices
+Remark on vertices
 \end_layout
 
 \begin_layout Standard
@@ -4082,16 +4082,14 @@ reference "eq:cub_Vertices_Sym"
 \end_layout
 
 \begin_layout Standard
-Another interesting result is the integer prefactors of the vertices in
- 
+The form of vertices in 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:cub_Vertices"
 
 \end_inset
 
-.
- Their interpretations are straightforward.
+ can be interpreted as follows.
  The prefactor 
 \begin_inset Formula $M$
 \end_inset
@@ -4131,6 +4129,79 @@ reference "eq:cub_Vertices"
 
  ways to choose the joint points, and each way contributes equally to 
 \begin_inset Formula $W_{rpq}$
+\end_inset
+
+.
+ The operator 
+\begin_inset Formula $h_{V}^{a}=\frac{1}{2}\left(h_{K,1}^{a}+h_{M,K+1}^{a}\right)$
+\end_inset
+
+ reflects the fact that, to break one string of 
+\begin_inset Formula $M$
+\end_inset
+
+ bits into 
+\begin_inset Formula $K$
+\end_inset
+
+-bit and 
+\begin_inset Formula $L$
+\end_inset
+
+-bit strings, one need to connect the bit 
+\begin_inset Formula $1$
+\end_inset
+
+ to bit 
+\begin_inset Formula $K$
+\end_inset
+
+ and bit 
+\begin_inset Formula $K+1$
+\end_inset
+
+ to bit 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Similarly, the operator 
+\begin_inset Formula $h_{W}=h_{K,K+1}^{a}+h_{M,1}^{a}$
+\end_inset
+
+ reflects the fact that, to join back the above two small strings into one,
+ one need to connect bit 
+\begin_inset Formula $K$
+\end_inset
+
+ to the bit 
+\begin_inset Formula $\left(K+1\right)$
+\end_inset
+
+ and bit 
+\begin_inset Formula $M$
+\end_inset
+
+ to the bit 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ The difference of factor 
+\begin_inset Formula $2$
+\end_inset
+
+ between 
+\begin_inset Formula $h_{V}^{a}$
+\end_inset
+
+ and 
+\begin_inset Formula $h_{W}^{a}$
+\end_inset
+
+ is because that, when joining two strings, one can make a different big
+ string by inversing the labels of one string as 
+\begin_inset Formula $1+i\leftrightarrow K-i$
 \end_inset
 
 .
@@ -6132,6 +6203,14 @@ By a qualitative analysis, we obtained the large
 \end_inset
 
  and leads to the protostring model.
+ The reason that 
+\begin_inset Formula $24$
+\end_inset
+
+ is the critical dimension can be explained as follows.
+ Out of the 24 dimensions, 16 of them are paired to form 8 compactified
+ bosonic dimensions and the rest 8 remain as fermionic dimension.
+ Thus, it has the same degree of freedoms as the superstring model.
  The large 
 \begin_inset Formula $M$
 \end_inset
