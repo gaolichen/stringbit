@@ -1770,7 +1770,7 @@ Acting
  on the ground eigenfunction, we obtain the ground energy
 \begin_inset Formula 
 \begin{equation}
-E_{G}=-4\sum_{k=1}^{M-1}\sin\frac{k\pi}{M}=-4\cot\frac{\pi}{2M}=-\frac{8M}{\pi}+\frac{2\pi}{3M}+\mathcal{O}\left(M^{-3}\right).\label{eq:diag_ground_energy}
+E_{G}^{s=1}=-4\sum_{k=1}^{M-1}\sin\frac{k\pi}{M}=-4\cot\frac{\pi}{2M}=-\frac{8M}{\pi}+\frac{2\pi}{3M}+\mathcal{O}\left(M^{-3}\right).\label{eq:diag_ground_energy}
 \end{equation}
 
 \end_inset
