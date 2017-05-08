@@ -2604,7 +2604,7 @@ status open
 To be specific, it means that 
 \begin_inset Formula 
 \[
-\int d^{M}\theta\, f\left(\theta_{1},\cdots,\theta_{M}\right)\tilde{\delta}\left(\theta-\eta\right)=\frac{1}{M}\sum_{k=0}^{M}\left(-\right)^{ks\left(M-1\right)}f\left(\eta_{k+1},\cdots,\eta_{k+M}\right).
+\int d^{M}\theta\, f\left(\theta_{1},\cdots,\theta_{M}\right)\tilde{\delta}\left(\theta-\eta\right)=\frac{1}{M}\sum_{k=0}^{M-1}\left(-\right)^{ks\left(M-1\right)}f\left(\eta_{k+1},\cdots,\eta_{k+M}\right).
 \]
 
 \end_inset
