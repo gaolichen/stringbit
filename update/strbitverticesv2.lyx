@@ -507,7 +507,7 @@ The vertex
 \end_layout
 
 \begin_layout Itemize
-More detailed study of the cubic interaction vertices are performed.
+More detailed study of the cubic interaction vertices is performed.
  We provide a systematical way to build conjugates of energy eigenfunctions,
  which are absent in ref.
  
@@ -518,7 +518,7 @@ key "Thorn:2015wli"
 \end_inset
 
  but necessary for the vertices calculation.
- We correctly handle crucial sign factors of the vertices that are overlooked
+ We correctly handle the sign factors of the vertices that are overlooked
  by ref.
  
 \begin_inset CommandInset citation
@@ -565,12 +565,11 @@ reference "fig:Vertices"
 \end_layout
 
 \begin_layout Itemize
-We also improve the calculation of one-loop self-energy and study its large
- 
+The calculation of one-loop self-energy is improved and its large 
 \begin_inset Formula $M$
 \end_inset
 
- behavior for the ground states.
+ behavior for the ground states is analyzed.
  Ref.
  
 \begin_inset CommandInset citation
@@ -650,11 +649,18 @@ key "Thorn:2015wli"
 \end_layout
 
 \begin_layout Itemize
-We performed numerical study of 
 \begin_inset Formula $\Delta E_{G}$
 \end_inset
 
-.
+ is computed numerically for higher 
+\begin_inset Formula $M$
+\end_inset
+
+ and 
+\begin_inset Formula $s$
+\end_inset
+
+ cases.
  We confirm the large 
 \begin_inset Formula $M$
 \end_inset
@@ -875,83 +881,10 @@ Hamiltonian
 \end_layout
 
 \begin_layout Standard
-The Hamiltonian to be studied in this paper consists of 
-\begin_inset Formula $\mathcal{O}\left(1\right)$
-\end_inset
-
- terms and 
-\begin_inset Formula $\mathcal{O}\left(1/N\right)$
-\end_inset
-
- terms.
- The 
-\begin_inset Formula $\mathcal{O}\left(1\right)$
-\end_inset
-
- terms are the generalization of the Hamiltonian of 
-\begin_inset Formula $s=1$
-\end_inset
-
- string bit model 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Sun:2014dga,Chen:2016hkz"
-
-\end_inset
-
- 
+The superstring bit creation operator is 
 \begin_inset Formula 
 \begin{equation}
-H^{s=1}=\frac{2}{N}\tr\left[\left(\bar{a}^{2}-i\bar{b}^{2}\right)a^{2}-\left(\bar{b}^{2}-i\bar{a}^{2}\right)b^{2}+\left(\bar{a}\bar{b}+\bar{b}\bar{a}\right)ba+\left(\bar{a}\bar{b}-\bar{b}\bar{a}\right)ab\right],\label{eq:ham_Hs_1}
-\end{equation}
-
-\end_inset
-
- where 
-\begin_inset Formula $\bar{a}_{\alpha}^{\beta}$
-\end_inset
-
- 
-\begin_inset Formula $\left(\bar{b}_{\alpha}^{\beta}\right)$
-\end_inset
-
- is bosonic (fermionic) creation operator and 
-\begin_inset Formula $a_{\beta}^{\alpha}$
-\end_inset
-
- (
-\begin_inset Formula $b_{\beta}^{\alpha}$
-\end_inset
-
-) is the corresponding annihilation operator.
- 
-\begin_inset Formula $H^{s=1}$
-\end_inset
-
- produces the Green-Schwarz Hamiltonian 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Green:1980zg,Green:1983hw"
-
-\end_inset
-
- at 
-\begin_inset Formula $N=\infty$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-For 
-\begin_inset Formula $s>1$
-\end_inset
-
-, the superstring bit creation operator is 
-\begin_inset Formula 
-\begin{equation}
-\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta},\quad a_{i}=1,\cdots,s,\quad n=0,\cdots,s,\quad\alpha,\beta=1,\cdots,N.\label{eq:intro_creation_op}
+\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta},\quad a_{i}=1,\cdots,s,\quad n=0,\cdots,s,\quad\alpha,\beta=1,\cdots,N.\label{eq:ham_creation_op}
 \end{equation}
 
 \end_inset
@@ -990,33 +923,12 @@ For
 \end_inset
 
  is odd.
- The annihilation operator 
-\begin_inset Formula $\phi$
-\end_inset
-
- is the hermition conjugate of 
-\begin_inset Formula $\bar{\phi}$
-\end_inset
-
-, and they satisfy the graded bracket relations 
-\begin_inset Formula 
-\begin{align}
-\left[\phi_{a_{1}\cdots a_{n}}{}_{\alpha}^{\beta},\bar{\phi}_{b_{1}\cdots b_{m}}{}_{\gamma}^{\delta}\right]_{\pm} & \equiv\phi_{a_{1}\cdots a_{n}}{}_{\alpha}^{\beta}\bar{\phi}_{b_{1}\cdots b_{m}}{}_{\gamma}^{\delta}-\left(-\right)^{mn}\bar{\phi}_{b_{1}\cdots b_{m}}{}_{\gamma}^{\delta}\phi_{a_{1}\cdots a_{n}}{}_{\alpha}^{\beta}\nonumber \\
- & =\delta_{mn}\delta_{\alpha}^{\delta}\delta_{\gamma}^{\beta}\sum_{P\in S_{n}}\left(-\right)^{P}\delta_{a_{1}b_{P_{1}}}\cdots\delta_{a_{n}b_{P_{n}}}.\label{eq:intro-phi-phib-relation}
-\end{align}
-
-\end_inset
-
-In Fock space, a closed string is represented by a color singlet trace operator
- acting on vacuum state, that is of the form 
+ In Fock space, a closed string is represented by a color singlet trace
+ operator acting on vacuum state, that is of the form 
 \begin_inset Formula $\tr\bar{\phi}\cdots\bar{\phi}\ket{0}$
 \end_inset
 
-, where all the indices of 
-\begin_inset Formula $\bar{\phi}$
-\end_inset
-
- are suppressed.
+.
  The number of 
 \begin_inset Formula $\bar{\phi}$
 \end_inset
@@ -1025,8 +937,73 @@ In Fock space, a closed string is represented by a color singlet trace operator
 \begin_inset Formula $M=\sum_{n}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}$
 \end_inset
 
-, where repeated indices implies summation.
- Then the Hamiltonian is generalized to 
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The Hamiltonian to be studied in this paper consists of 
+\begin_inset Formula $\mathcal{O}\left(1\right)$
+\end_inset
+
+ terms and 
+\begin_inset Formula $\mathcal{O}\left(1/N\right)$
+\end_inset
+
+ terms.
+ The 
+\begin_inset Formula $\mathcal{O}\left(1\right)$
+\end_inset
+
+ terms are the generalization of the Hamiltonian of 
+\begin_inset Formula $s=1$
+\end_inset
+
+ string bit model 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Sun:2014dga,Chen:2016hkz"
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{equation}
+H^{s=1}=\frac{2}{N}\tr\left[\left(\bar{a}^{2}-i\bar{b}^{2}\right)a^{2}-\left(\bar{b}^{2}-i\bar{a}^{2}\right)b^{2}+\left(\bar{a}\bar{b}+\bar{b}\bar{a}\right)ba+\left(\bar{a}\bar{b}-\bar{b}\bar{a}\right)ab\right],\label{eq:ham_Hs_1}
+\end{equation}
+
+\end_inset
+
+ where 
+\begin_inset Formula $\bar{a}=\bar{\phi}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{b}=\bar{\phi}_{1}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $H^{s=1}$
+\end_inset
+
+ produces the Green-Schwarz Hamiltonian 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Green:1980zg,Green:1983hw"
+
+\end_inset
+
+ at 
+\begin_inset Formula $N=\infty$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Then the Hamiltonian is generalized to 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2014hia,Thorn:2015wli"
