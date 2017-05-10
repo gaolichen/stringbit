@@ -942,243 +942,11 @@ The superstring bit creation operator is
 \end_layout
 
 \begin_layout Standard
-The Hamiltonian to be studied in this paper consists of 
-\begin_inset Formula $\mathcal{O}\left(1\right)$
+The Hamiltonian 
+\begin_inset Formula $H$
 \end_inset
 
- terms and 
-\begin_inset Formula $\mathcal{O}\left(1/N\right)$
-\end_inset
-
- terms.
- The 
-\begin_inset Formula $\mathcal{O}\left(1\right)$
-\end_inset
-
- terms are the generalization of the Hamiltonian of 
-\begin_inset Formula $s=1$
-\end_inset
-
- string bit model 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Sun:2014dga,Chen:2016hkz"
-
-\end_inset
-
- 
-\begin_inset Formula 
-\begin{equation}
-H^{s=1}=\frac{2}{N}\tr\left[\left(\bar{a}^{2}-i\bar{b}^{2}\right)a^{2}-\left(\bar{b}^{2}-i\bar{a}^{2}\right)b^{2}+\left(\bar{a}\bar{b}+\bar{b}\bar{a}\right)ba+\left(\bar{a}\bar{b}-\bar{b}\bar{a}\right)ab\right],\label{eq:ham_Hs_1}
-\end{equation}
-
-\end_inset
-
- where 
-\begin_inset Formula $\bar{a}=\bar{\phi}$
-\end_inset
-
- and 
-\begin_inset Formula $\bar{b}=\bar{\phi}_{1}$
-\end_inset
-
-.
- 
-\begin_inset Formula $H^{s=1}$
-\end_inset
-
- produces the Green-Schwarz Hamiltonian 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Green:1980zg,Green:1983hw"
-
-\end_inset
-
- at 
-\begin_inset Formula $N=\infty$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-Then the Hamiltonian is generalized to 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Thorn:2014hia,Thorn:2015wli"
-
-\end_inset
-
- 
-\begin_inset Formula 
-\begin{equation}
-H=\sum_{i=1}^{5}H_{i},\label{eq:ham_H_2}
-\end{equation}
-
-\end_inset
-
- where
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{subequations}
-\backslash
-label{eq:ham_subh}
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{equation}
-H_{1}=\frac{2}{N}\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{s-2n}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}},\label{eq:ham_subh:1}
-\end{equation}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{equation}
-H_{2}=\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{bb_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{ba_{1}\cdots a_{n}},\label{eq:ham_subh:2}
-\end{equation}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{equation}
-H_{3}=\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{ba_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{bb_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}},\label{eq:ham_subh:3}
-\end{equation}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{equation}
-H_{4}=\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{bb_{1}\cdots b_{k}}\phi_{ba_{1}\cdots a_{n}},\label{eq:ham_subh:4}
-\end{equation}
-
-\end_inset
-
-
-\begin_inset Formula 
-\begin{equation}
-H_{5}=-\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{ba_{1}\cdots a_{n}}\bar{\phi}_{bb_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}}.\label{eq:ham_subh:5}
-\end{equation}
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{subequations}
-\end_layout
-
-\end_inset
-
-One can check that for 
-\begin_inset Formula $s=1$
-\end_inset
-
- eq.
- 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:ham_H_2"
-
-\end_inset
-
- is reduced to eq.
- 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:ham_Hs_1"
-
-\end_inset
-
- if one identify 
-\begin_inset Formula $\bar{\phi}$
-\end_inset
-
- as 
-\begin_inset Formula $\bar{a}$
-\end_inset
-
- and 
-\begin_inset Formula $\bar{\phi}_{1}$
-\end_inset
-
- as 
-\begin_inset Formula $\bar{b}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-We now add 
-\begin_inset Formula $\mathcal{O}\left(1/N\right)$
-\end_inset
-
- terms to the Hamiltonian.
- As refs.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Chen:2016hkz,Sun:2014dga"
-
-\end_inset
-
- shows, the 
-\begin_inset Formula $N=\infty$
-\end_inset
-
- behavior is not affected by the 
-\begin_inset Formula $\mathcal{O}\left(1/N\right)$
-\end_inset
-
- terms
-\begin_inset Formula 
-\begin{align}
-\Delta H^{s=1} & =\frac{2}{N}\tr\left[\bar{a}\bar{b}ba+\bar{b}\bar{a}ab+\bar{a}^{2}a^{2}+\bar{b}^{2}b^{2}-\tilde{M}^{s=1}\right],\\
-\tilde{M}^{s=1} & =\tr\left(\bar{a}a+\bar{b}b\right)-\frac{1}{N}\left(\tr\bar{a}\tr a+\tr\bar{b}\tr b\right).
-\end{align}
-
-\end_inset
-
-By analogy with 
-\begin_inset Formula $H^{s=1}$
-\end_inset
-
-, 
-\begin_inset Formula $\Delta H^{s=1}$
-\end_inset
-
- can be generalized to arbitrary 
-\begin_inset Formula $s$
-\end_inset
-
- case as 
-\begin_inset Formula 
-\begin{align}
-\Delta H & =\frac{2}{N}\left(\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\bar{\phi}_{b_{1}\cdots b_{k}}\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\phi_{b_{1}\cdots b_{k}}-\tilde{M}\right),\\
-\tilde{M} & =\sum_{n=0}^{s}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}-\frac{1}{N}\sum_{n=0}^{s}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\tr\phi_{a_{1}\cdots a_{n}}.
-\end{align}
-
-\end_inset
-
-Combining two parts together, we have the complete form of Hamiltonian to
- be studied in this paper 
+ to be studied in this paper reads 
 \begin_inset Formula 
 \begin{equation}
 H=\sum_{i=1}^{5}H_{i}+s\xi\Delta H,\label{eq:ham_H_3}
@@ -1186,12 +954,97 @@ H=\sum_{i=1}^{5}H_{i}+s\xi\Delta H,\label{eq:ham_H_3}
 
 \end_inset
 
- where 
-\begin_inset Formula $\xi$
+ where expressions of 
+\begin_inset Formula $H_{i}$
 \end_inset
 
- is a real constant.
+ and 
+\begin_inset Formula $\Delta H$
+\end_inset
+
+ are given in eqs.
  
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:App_ham_subh"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:App_ham_deltah"
+
+\end_inset
+
+.
+ The 
+\begin_inset Formula $H_{i}$
+\end_inset
+
+s make 
+\begin_inset Formula $\mathcal{O}\left(1\right)$
+\end_inset
+
+ contribution to 
+\begin_inset Formula $H$
+\end_inset
+
+ while 
+\begin_inset Formula $\Delta H$
+\end_inset
+
+ makes only 
+\begin_inset Formula $\mathcal{O}\left(1/N\right)$
+\end_inset
+
+ contribution and hence does not affect the large 
+\begin_inset Formula $N$
+\end_inset
+
+ limit.
+ We note that 
+\begin_inset Formula $H$
+\end_inset
+
+ is a generalization of the 
+\begin_inset Formula $s=1$
+\end_inset
+
+ Hamiltonian in refs.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Sun:2014dga,Chen:2016hkz"
+
+\end_inset
+
+.
+ The 
+\begin_inset Formula $H_{i}$
+\end_inset
+
+ parts have been proposed in refs.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2014hia,Thorn:2015wli"
+
+\end_inset
+
+; 
+\begin_inset Formula $\Delta H$
+\end_inset
+
+ is the new term added by this paper and its derivation is given in Appendix
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:app_hamiltonian"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -5880,7 +5733,7 @@ reference "fig:SubEvsMs2"
  part shown as 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:ham_subh:1"
+reference "eq:App_ham_subh:1"
 
 \end_inset
 
@@ -6435,81 +6288,291 @@ The (anti)communication relations among string bit creation and annihilation
 \end_layout
 
 \begin_layout Standard
-The Hamiltonian in the paper can be written as 
+The Hamiltonian of the model consists of 
+\begin_inset Formula $\mathcal{O}\left(1\right)$
+\end_inset
+
+ terms and 
+\begin_inset Formula $\mathcal{O}\left(1/N\right)$
+\end_inset
+
+ terms.
+ The 
+\begin_inset Formula $\mathcal{O}\left(1\right)$
+\end_inset
+
+ terms are the generalization of the Hamiltonian of 
+\begin_inset Formula $s=1$
+\end_inset
+
+ string bit model 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Sun:2014dga,Chen:2016hkz"
+
+\end_inset
+
+ 
 \begin_inset Formula 
-\[
-H_{S}=H_{1}+H_{2}+H_{3}+H_{4}+H_{5}+s\xi\Delta H,
-\]
+\begin{equation}
+H^{s=1}=\frac{2}{N}\tr\left[\left(\bar{a}^{2}-i\bar{b}^{2}\right)a^{2}-\left(\bar{b}^{2}-i\bar{a}^{2}\right)b^{2}+\left(\bar{a}\bar{b}+\bar{b}\bar{a}\right)ba+\left(\bar{a}\bar{b}-\bar{b}\bar{a}\right)ab\right],\label{eq:App_ham_Hs_1}
+\end{equation}
 
 \end_inset
 
  where 
-\begin_inset Formula $H_{i}$
+\begin_inset Formula $\bar{a}=\bar{\phi}$
 \end_inset
 
- are terms introduced by refs.
+ and 
+\begin_inset Formula $\bar{b}=\bar{\phi}_{1}$
+\end_inset
+
+.
  
+\begin_inset Formula $H^{s=1}$
+\end_inset
+
+ produces the Green-Schwarz Hamiltonian 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Green:1980zg,Green:1983hw"
+
+\end_inset
+
+ at 
+\begin_inset Formula $N=\infty$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $H^{s=1}$
+\end_inset
+
+ is generalized to 
+\begin_inset Formula $\sum_{i=1}^{5}H_{i}$
+\end_inset
+
+, where
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2014hia,Thorn:2015wli"
 
 \end_inset
 
+ 
+\begin_inset ERT
+status open
 
-\begin_inset Formula 
-\[
-H_{1}=\frac{2}{N}\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{s-2n}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}},
-\]
-
-\end_inset
+\begin_layout Plain Layout
 
 
-\begin_inset Formula 
-\[
-H_{2}=\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{bb_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{ba_{1}\cdots a_{n}},
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-H_{3}=\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{ba_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{bb_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}},
-\]
+\backslash
+begin{subequations}
+\backslash
+label{eq:App_ham_subh}
+\end_layout
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-H_{4}=\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{bb_{1}\cdots b_{k}}\phi_{ba_{1}\cdots a_{n}},
-\]
+\begin{equation}
+H_{1}=\frac{2}{N}\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{s-2n}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}},\label{eq:App_ham_subh:1}
+\end{equation}
 
 \end_inset
 
 
 \begin_inset Formula 
-\[
-H_{5}=-\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{ba_{1}\cdots a_{n}}\bar{\phi}_{bb_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}},
-\]
+\begin{equation}
+H_{2}=\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{bb_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{ba_{1}\cdots a_{n}},\label{eq:App_ham_subh:2}
+\end{equation}
 
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+H_{3}=\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{ba_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{bb_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}},\label{eq:App_ham_subh:3}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+H_{4}=\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{bb_{1}\cdots b_{k}}\phi_{ba_{1}\cdots a_{n}},\label{eq:App_ham_subh:4}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+H_{5}=-\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{ba_{1}\cdots a_{n}}\bar{\phi}_{bb_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}}.\label{eq:App_ham_subh:5}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+One can check that for 
+\begin_inset Formula $s=1$
+\end_inset
+
+ eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:App_ham_subh"
+
+\end_inset
+
+ is reduced to eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:App_ham_Hs_1"
+
+\end_inset
+
+ if one identify 
+\begin_inset Formula $\bar{\phi}$
+\end_inset
+
+ as 
+\begin_inset Formula $\bar{a}$
 \end_inset
 
  and 
-\begin_inset Formula $\Delta H$
+\begin_inset Formula $\bar{\phi}_{1}$
 \end_inset
 
- is a new term introduced
+ as 
+\begin_inset Formula $\bar{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We now add 
+\begin_inset Formula $\mathcal{O}\left(1/N\right)$
+\end_inset
+
+ terms to the Hamiltonian.
+ As refs.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chen:2016hkz,Sun:2014dga"
+
+\end_inset
+
+ shows, the 
+\begin_inset Formula $N=\infty$
+\end_inset
+
+ behavior is not affected by the 
+\begin_inset Formula $\mathcal{O}\left(1/N\right)$
+\end_inset
+
+ terms
 \begin_inset Formula 
-\begin{align*}
-\Delta H & =\frac{2}{N}\left(\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\bar{\phi}_{b_{1}\cdots b_{k}}\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\phi_{b_{1}\cdots b_{k}}-\tilde{M}\right),\\
-\tilde{M} & =\sum_{n=0}^{s}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}-\frac{1}{N}\sum_{n=0}^{s}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\tr\phi_{a_{1}\cdots a_{n}}.
-\end{align*}
+\begin{align}
+\Delta H^{s=1} & =\frac{2}{N}\tr\left[\bar{a}\bar{b}ba+\bar{b}\bar{a}ab+\bar{a}^{2}a^{2}+\bar{b}^{2}b^{2}-\tilde{M}^{s=1}\right],\\
+\tilde{M}^{s=1} & =\tr\left(\bar{a}a+\bar{b}b\right)-\frac{1}{N}\left(\tr\bar{a}\tr a+\tr\bar{b}\tr b\right).
+\end{align}
+
+\end_inset
+
+By analogy with 
+\begin_inset Formula $H^{s=1}$
+\end_inset
+
+, 
+\begin_inset Formula $\Delta H^{s=1}$
+\end_inset
+
+ can be generalized to arbitrary 
+\begin_inset Formula $s$
+\end_inset
+
+ case as 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{subequations}
+\backslash
+label{eq:App_ham_deltah}
+\end_layout
 
 \end_inset
 
  
-\begin_inset Formula $H_{S}$
+\begin_inset Formula 
+\begin{align}
+\Delta H & =\frac{2}{N}\left(\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\tr\bar{\phi}_{b_{1}\cdots b_{k}}\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}\phi_{b_{1}\cdots b_{k}}-\tilde{M}\right),\\
+\tilde{M} & =\sum_{n=0}^{s}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}-\frac{1}{N}\sum_{n=0}^{s}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\tr\phi_{a_{1}\cdots a_{n}}.
+\end{align}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\end_layout
+
+\end_inset
+
+Combining two parts together, we have the complete form of Hamiltonian for
+ arbitrary 
+\begin_inset Formula $s$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{equation}
+H=\sum_{i=1}^{5}H_{i}+s\xi\Delta H
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\xi$
+\end_inset
+
+ is a real constant.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $H$
 \end_inset
 
  commutes with the supersymmetry operators 
@@ -6654,16 +6717,25 @@ H_{2}T\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right
 
 \end_layout
 
-\begin_layout Standard
-It is noteworthy that the action of 
+\begin_layout Subsection
+Derivation of 
 \begin_inset Formula $\Delta H$
 \end_inset
 
- on color singlet is the same as a term 
+
+\end_layout
+
+\begin_layout Standard
+The expression of 
+\begin_inset Formula $\Delta H$
+\end_inset
+
+ is obtained constraint that its action on color singlet is the same as
+ the one of the operator 
 \begin_inset Formula $H^{\prime}$
 \end_inset
 
-, which is defined as
+ defined as
 \begin_inset Formula 
 \[
 H^{\prime}=\frac{1}{N}\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{1}{n!k!}\left(\tr\bar{\phi}_{a_{1}\cdots a_{n}}\normord{\phi_{b_{1}\cdots b_{k}}\bar{\phi}_{b_{1}\cdots b_{k}}}\phi_{a_{1}\cdots a_{n}}+\left(-\right)^{nk}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\normord{\phi_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}}\phi_{b_{1}\cdots b_{k}}\right),
