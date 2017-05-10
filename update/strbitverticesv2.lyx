@@ -299,141 +299,51 @@ a priori
 \end_layout
 
 \begin_layout Standard
-In the formulation of type II-B superstring as a string bit model 
+With 't Hooft's large 
+\begin_inset Formula $N$
+\end_inset
+
+ limit 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "'tHooft:1973jz"
+
+\end_inset
+
+, the type II-B superstring was formulated in ref.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Bergman:1995wh"
 
 \end_inset
 
-, the superstring bit creation operator has the form
-\begin_inset Formula 
-\begin{equation}
-\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta}\left(\mathbf{x}\right),\quad a_{i}=1,\cdots,s,\quad n=0,\cdots,s,\quad\alpha,\beta=1,\cdots,N,
-\end{equation}
-
-\end_inset
-
- where 
-\begin_inset Formula $a_{i}$
-\end_inset
-
- are totally antisymmetric spin indices, 
-\begin_inset Formula $\alpha$
-\end_inset
-
-, 
-\begin_inset Formula $\beta$
-\end_inset
-
- color indices of 
+ as a string bit model.
+ In the model, a superstring bit creation operator, which was an adjoint
+ representation of 
 \begin_inset Formula $U\left(N\right)$
 \end_inset
 
-, and 
-\begin_inset Formula $\mathbf{x}$
+ color group, has up to 
+\begin_inset Formula $s$
 \end_inset
 
- the transverse coordinates.
- 
-\begin_inset Formula $\bar{\phi}$
-\end_inset
-
- is bosonic when 
-\begin_inset Formula $n$
-\end_inset
-
- is even and fermionic when 
-\begin_inset Formula $n$
-\end_inset
-
- is odd.
- The annihilation operator 
-\begin_inset Formula $\phi$
-\end_inset
-
- is the hermition conjugate of 
-\begin_inset Formula $\bar{\phi}$
-\end_inset
-
-, and they satisfy the graded bracket relations 
-\begin_inset Formula 
-\begin{align}
-\left[\phi_{a_{1}\cdots a_{n}}\left(\mathbf{x}\right)_{\alpha}^{\beta},\bar{\phi}_{b_{1}\cdots b_{m}}\left(\mathbf{y}\right)_{\gamma}^{\delta}\right]_{\pm} & \equiv\phi_{a_{1}\cdots a_{n}}\left(\mathbf{x}\right)_{\alpha}^{\beta}\bar{\phi}_{b_{1}\cdots b_{m}}\left(\mathbf{y}\right)_{\gamma}^{\delta}-\left(-\right)^{mn}\bar{\phi}_{b_{1}\cdots b_{m}}\left(\mathbf{y}\right)_{\gamma}^{\delta}\phi_{a_{1}\cdots a_{n}}\left(\mathbf{x}\right)_{\alpha}^{\beta}\nonumber \\
- & =\delta_{mn}\delta_{\alpha}^{\delta}\delta_{\gamma}^{\beta}\delta\left(\mathbf{x}-\mathbf{y}\right)\sum_{P\in S_{n}}\left(-\right)^{P}\delta_{a_{1}b_{P_{1}}}\cdots\delta_{a_{n}b_{P_{n}}}.\label{eq:intro-phi-phib-relation}
-\end{align}
-
-\end_inset
-
-In Fock space, a closed string is represented by a color singlet trace operator
- acting on vacuum state, that is of the form 
-\begin_inset Formula $\tr\bar{\phi}\cdots\bar{\phi}\ket{0}$
-\end_inset
-
-, where all the indices of 
-\begin_inset Formula $\bar{\phi}$
-\end_inset
-
- are suppressed.
- The number of 
-\begin_inset Formula $\bar{\phi}$
-\end_inset
-
- in the trace operator is the eigenvalue of the bit number operator 
-\begin_inset Formula $M=\sum_{n}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}$
-\end_inset
-
-, where repeated indices implies summation.
-\end_layout
-
-\begin_layout Standard
-A more drastic form of holography was studied in recent papers 
+ spin indices and moves in transverse space.
+ A more drastic form of holography was studied in recent papers 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Sun:2014dga,Thorn:2014hia,Chen:2016hkz,Thorn:2015wli"
 
 \end_inset
 
-.
- In these papers, string bits have no transverse coordinate and hence no
- space to move.
- In such a model, however, new compactified bosonic coordinates can be generated
- from spin degrees of freedom of string bits.
+, where string bits have no transverse coordinate and hence no space to
+ move.
+ However, new compactified bosonic coordinates can be generated from spin
+ degrees of freedom of string bits.
  If suitable dynamics is chosen, these spin degrees of freedom are converted
  to one dimensional spin waves, which then act as compactified bosonic coordinat
 es.
- The superstring bit creation operator now is 
-\begin_inset Formula 
-\begin{equation}
-\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta},\quad a_{i}=1,\cdots,s,\quad n=0,\cdots,s,\quad\alpha,\beta=1,\cdots,N.\label{eq:intro_creation_op}
-\end{equation}
-
-\end_inset
-
-The annihilation and creation operators satisfy the same relation as 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:intro-phi-phib-relation"
-
-\end_inset
-
- without 
-\begin_inset Formula $\mathbf{x}$
-\end_inset
-
-, 
-\begin_inset Formula $\mathbf{y}$
-\end_inset
-
-, and 
-\begin_inset Formula $\delta\left(\mathbf{x}-\mathbf{y}\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-The 
+ The 
 \begin_inset Formula $1/N$
 \end_inset
 
@@ -447,7 +357,110 @@ key "Thorn:2015wli"
 
 , where the cubic interaction vertices and their application to one-loop
  self-energy were discussed.
- The vertex 
+\end_layout
+
+\begin_layout Standard
+The work of this paper, in spite of following the main idea of ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
+\end_inset
+
+, is crucial to make the model complete.
+ To be specific, we summarize the work as as follows.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="40pt">
+<column alignment="center" valignment="middle" width="22col%">
+<column alignment="right" valignment="middle" width="50pt">
+<column alignment="center" valignment="middle" width="21col%">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $V_{qpr}=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../slides/VertexVs.png
+	width 20col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W_{rpq}=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../slides/VertexWs.png
+	width 20col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Vertices"
+
+\end_inset
+
+The vertex 
 \begin_inset Formula $V_{qpr}$
 \end_inset
 
@@ -467,7 +480,7 @@ key "Thorn:2015wli"
 \begin_inset Formula $W_{rpq}$
 \end_inset
 
- is the amplitude of combining 
+ is the amplitude of joining 
 \begin_inset Formula $p$
 \end_inset
 
@@ -480,34 +493,23 @@ key "Thorn:2015wli"
 \end_inset
 
 .
- In ref.
  
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Thorn:2015wli"
-
-\end_inset
-
- several aspects of the vertices calculation were missing or need to be
- corrected.
- In this paper, we make improvements on the calculation and perform more
- detailed study on one-loop self-energy.
 \end_layout
 
-\begin_layout Standard
-Ref 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Thorn:2015wli"
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
- did not provide a method to build conjugates of energy eigenfunctions,
- which are necessary to calculate the vertices.
- We will provide a formalism to build the conjugates of energy eigenfunctions
- explicitly in this paper.
- We will also make two improvements in the calculation the vertex.
- Ref.
+
+\end_layout
+
+\begin_layout Itemize
+More detailed study of the cubic interaction vertices are performed.
+ We provide a systematical way to build conjugates of energy eigenfunctions,
+ which are absent in ref.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -515,8 +517,33 @@ key "Thorn:2015wli"
 
 \end_inset
 
- overlooked some sign factors of the vertices and did not (anti-)symmetrize
- the vertices over indices 
+ but necessary for the vertices calculation.
+ We correctly handle crucial sign factors of the vertices that are overlooked
+ by ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
+\end_inset
+
+.
+ In addition, we (anti)symmetrize the vertices, which are denoted as 
+\begin_inset Formula $V_{qpr}$
+\end_inset
+
+ and 
+\begin_inset Formula $W_{rpq}$
+\end_inset
+
+ and shown as Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Vertices"
+
+\end_inset
+
+, over the indices 
 \begin_inset Formula $p$
 \end_inset
 
@@ -525,36 +552,61 @@ key "Thorn:2015wli"
 \end_inset
 
 .
- We correct the sign factors and (anti-)symmetrization the vertices.
- With these two improvements, we will show that, in the case of odd 
+ The latter two improvements lead to a remarkable result that, in the case
+ of odd 
 \begin_inset Formula $s$
 \end_inset
 
 , the joining of two strings with odd bits into one string is strictly forbidden.
- We will then further simplify the interaction vertices to find that vertices
- can be calculated by finding the vacuum expectation values of ladder operators.
- Without these works, the interaction vertices cannot be used for the calculatio
-n of observables.
+ By further simplification, the interaction vertices can be calculated by
+ finding the vacuum expectation values of ladder operators.
+ Without the above work, the interaction vertices cannot be used for the
+ calculation of observables.
 \end_layout
 
-\begin_layout Standard
-We will perform both analytic and numerical computation on one-loop self-energie
-s.
- We will calculate analytically the one-loop self-energy of ground states,
- denoted as 
+\begin_layout Itemize
+We also improve the calculation of one-loop self-energy and study its large
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ behavior for the ground states.
+ Ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2015wli"
+
+\end_inset
+
+ applied the interaction vertices to one-loop self-energy calculation.
+ But without a calculable formula for vertices, it did not provide a concrete
+ way for the calculation.
+ In this work, we integrate all the ingredients that are needed and we provide
+ a formula to calculate the one-loop self-energy.
+ The one-loop self-energy of ground states, we call 
 \begin_inset Formula $\Delta E_{G}$
 \end_inset
 
-, for 
-\begin_inset Formula $M=3$
+, are further studied and its large 
+\begin_inset Formula $M$
+\end_inset
+
+ behavior is analyzed.
+ We calculate 
+\begin_inset Formula $\Delta E_{G}$
+\end_inset
+
+ analytically for 
+\begin_inset Formula $M=3,\, s=1$
 \end_inset
 
  and 
-\begin_inset Formula $s=1,2$
+\begin_inset Formula $M=3,\, s=2$
 \end_inset
 
  cases.
- Our formula estimates that 
+ A qualitative analysis shows that 
 \begin_inset Formula $\Delta E_{G}$
 \end_inset
 
@@ -575,19 +627,19 @@ s.
 \end_inset
 
 .
- In the case of 
+ Under the constraint of Lorentz invariance, the large 
+\begin_inset Formula $M$
+\end_inset
+
+ behavior of 
+\begin_inset Formula $\Delta E_{G}$
+\end_inset
+
+ then leads to the critical Grassman dimension 
 \begin_inset Formula $s=24$
 \end_inset
 
-, the Poincaré invariant dispersion relation 
-\begin_inset Formula $P^{-}\sim1/P^{+}$
-\end_inset
-
- in 
-\begin_inset Formula $1+1$
-\end_inset
-
- dimension is produced and the protostring model 
+, where the protostring model 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2015wli"
@@ -595,7 +647,15 @@ key "Thorn:2015wli"
 \end_inset
 
  emerges.
- The numerical computation confirms the large 
+\end_layout
+
+\begin_layout Itemize
+We performed numerical study of 
+\begin_inset Formula $\Delta E_{G}$
+\end_inset
+
+.
+ We confirm the large 
 \begin_inset Formula $M$
 \end_inset
 
@@ -607,7 +667,8 @@ key "Thorn:2015wli"
 \begin_inset Formula $s\leq4$
 \end_inset
 
- cases and verifies that 
+ cases.
+ We also verify that 
 \begin_inset Formula $\Delta E_{G}$
 \end_inset
 
@@ -620,14 +681,7 @@ key "Thorn:2015wli"
 \end_inset
 
  is fixed.
- We will extend the Hamiltonian that used in 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Thorn:2015wli"
-
-\end_inset
-
- by adding an 
+ We generalize the Hamiltonian of the model by adding an 
 \begin_inset Formula $\mathcal{O}\left(1/N\right)$
 \end_inset
 
@@ -639,16 +693,25 @@ key "Thorn:2015wli"
 \begin_inset Formula $s=2$
 \end_inset
 
-, the Hamiltonian is bounded from below when 
-\begin_inset Formula $\xi>1$
+ case, the Hamiltonian is bounded from below with respect the 
+\begin_inset Formula $M$
+\end_inset
+
+ only when 
+\begin_inset Formula $\xi\geq1$
 \end_inset
 
 .
- Our analysis will show that this is true for all the even 
+ Our analysis suggests that this is true for all the even 
 \begin_inset Formula $s$
 \end_inset
 
  cases.
+ The result shows that the 
+\begin_inset Formula $\xi\Delta H$
+\end_inset
+
+ generalization is necessary for building a physical string bit model.
  
 \end_layout
 
@@ -845,19 +908,19 @@ H^{s=1}=\frac{2}{N}\tr\left[\left(\bar{a}^{2}-i\bar{b}^{2}\right)a^{2}-\left(\ba
 \end_inset
 
  where 
-\begin_inset Formula $\bar{a}$
+\begin_inset Formula $\bar{a}_{\alpha}^{\beta}$
 \end_inset
 
  
-\begin_inset Formula $\left(\bar{b}\right)$
+\begin_inset Formula $\left(\bar{b}_{\alpha}^{\beta}\right)$
 \end_inset
 
  is bosonic (fermionic) creation operator and 
-\begin_inset Formula $a$
+\begin_inset Formula $a_{\beta}^{\alpha}$
 \end_inset
 
  (
-\begin_inset Formula $b$
+\begin_inset Formula $b_{\beta}^{\alpha}$
 \end_inset
 
 ) is the corresponding annihilation operator.
@@ -877,11 +940,93 @@ key "Green:1980zg,Green:1983hw"
 \end_inset
 
 .
- For 
+ 
+\end_layout
+
+\begin_layout Standard
+For 
 \begin_inset Formula $s>1$
 \end_inset
 
-, the Hamiltonian is generalized to 
+, the superstring bit creation operator is 
+\begin_inset Formula 
+\begin{equation}
+\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta},\quad a_{i}=1,\cdots,s,\quad n=0,\cdots,s,\quad\alpha,\beta=1,\cdots,N.\label{eq:intro_creation_op}
+\end{equation}
+
+\end_inset
+
+ where 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ are totally antisymmetric spin indices, 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, 
+\begin_inset Formula $\beta$
+\end_inset
+
+ color indices of 
+\begin_inset Formula $U\left(N\right)$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ the transverse coordinates.
+ 
+\begin_inset Formula $\bar{\phi}$
+\end_inset
+
+ is bosonic when 
+\begin_inset Formula $n$
+\end_inset
+
+ is even and fermionic when 
+\begin_inset Formula $n$
+\end_inset
+
+ is odd.
+ The annihilation operator 
+\begin_inset Formula $\phi$
+\end_inset
+
+ is the hermition conjugate of 
+\begin_inset Formula $\bar{\phi}$
+\end_inset
+
+, and they satisfy the graded bracket relations 
+\begin_inset Formula 
+\begin{align}
+\left[\phi_{a_{1}\cdots a_{n}}{}_{\alpha}^{\beta},\bar{\phi}_{b_{1}\cdots b_{m}}{}_{\gamma}^{\delta}\right]_{\pm} & \equiv\phi_{a_{1}\cdots a_{n}}{}_{\alpha}^{\beta}\bar{\phi}_{b_{1}\cdots b_{m}}{}_{\gamma}^{\delta}-\left(-\right)^{mn}\bar{\phi}_{b_{1}\cdots b_{m}}{}_{\gamma}^{\delta}\phi_{a_{1}\cdots a_{n}}{}_{\alpha}^{\beta}\nonumber \\
+ & =\delta_{mn}\delta_{\alpha}^{\delta}\delta_{\gamma}^{\beta}\sum_{P\in S_{n}}\left(-\right)^{P}\delta_{a_{1}b_{P_{1}}}\cdots\delta_{a_{n}b_{P_{n}}}.\label{eq:intro-phi-phib-relation}
+\end{align}
+
+\end_inset
+
+In Fock space, a closed string is represented by a color singlet trace operator
+ acting on vacuum state, that is of the form 
+\begin_inset Formula $\tr\bar{\phi}\cdots\bar{\phi}\ket{0}$
+\end_inset
+
+, where all the indices of 
+\begin_inset Formula $\bar{\phi}$
+\end_inset
+
+ are suppressed.
+ The number of 
+\begin_inset Formula $\bar{\phi}$
+\end_inset
+
+ in the trace operator is the eigenvalue of the bit number operator 
+\begin_inset Formula $M=\sum_{n}\frac{1}{n!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\phi_{a_{1}\cdots a_{n}}$
+\end_inset
+
+, where repeated indices implies summation.
+ Then the Hamiltonian is generalized to 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2014hia,Thorn:2015wli"
