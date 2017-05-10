@@ -813,29 +813,6 @@ reference "sub:Diagonalizing-Hamiltonian"
 \end_inset
 
  is done via different intermediate variables.
- In subsection 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sub:Three-Chain-overlap"
-
-\end_inset
-
-, we introduce some mathematical relationships, such as eqs.
- 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:overlap_matrix_symmetry"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:overlap_matrix_symmetry2"
-
-\end_inset
-
-, among the matrices discussed in that subsection.
 \end_layout
 
 \begin_layout Subsection
@@ -2329,16 +2306,6 @@ reference "sub:Diagonalizing-Hamiltonian"
  expansion results, we also need to find functions that conjugate to the
  energy eigenfunctions.
  For convenience, we call these functions conjugate eigenfunctions.
- Ref.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Thorn:2015wli"
-
-\end_inset
-
- introduced conjugate eigenfunctions but did not provide a way to construct
- them.
  In this section, we will construct conjugate eigenfunctions systematically.
  
 \end_layout
@@ -2722,7 +2689,7 @@ reference "sub:Three-Chain-overlap"
 \end_layout
 
 \begin_layout Standard
-Let us conclude this section by the discussing the grading of energy eigenstates
+Let us conclude this section by discussing the grading of energy eigenstates
  and eigenfunctions.
  We define 
 \begin_inset Formula 
@@ -3234,7 +3201,7 @@ key "Thorn:2015wli"
 
 \end_inset
 
- except for that we changed the notation slightly and put correct sign factors
+ except for that we changed the notation slightly and determined sign factors
  for the vertices, which are overlooked by ref.
  
 \begin_inset CommandInset citation
@@ -3245,7 +3212,7 @@ key "Thorn:2015wli"
 
  in eqs.
  (21) and (27).
- We shall see shortly that these sign factors are crucial for calculation.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -3820,7 +3787,7 @@ reference "eq:cub_Vertices_Sym"
 
  on the vertices and missed the sign factors of the vertices.
  We stree that these two aspects are vital for the calculation.
- If either of them is overlooked, we would not be able to obtain the interesting
+ If either of them is overlooked, we would not be able to obtain the suprising
  result that 
 \begin_inset Formula $W_{rpq}=0$
 \end_inset
@@ -4672,7 +4639,7 @@ reference "eq:overlap_detC"
 \begin_inset Formula $K$
 \end_inset
 
- is equivalent to another factor of 
+ gives another factor of 
 \begin_inset Formula $M$
 \end_inset
 
@@ -4686,7 +4653,11 @@ reference "eq:overlap_detC"
 \end_layout
 
 \begin_layout Standard
-We then consider the scale of 
+We then consider the large 
+\begin_inset Formula $M$
+\end_inset
+
+ behavior of 
 \begin_inset Formula $1/\left(E_{G}-E_{p}-E_{q}\right)$
 \end_inset
 
