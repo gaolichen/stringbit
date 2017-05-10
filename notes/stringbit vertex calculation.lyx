@@ -3348,6 +3348,170 @@ D_{K+m-1,M-1}^{\left(K\right)}=-D_{m,M-1}^{\left(L\right)}\quad1\leq m<L
 
 \end_layout
 
+\begin_layout Subsection
+Backup (text removed from the paper)
+\end_layout
+
+\begin_layout Standard
+We define
+\begin_inset Formula 
+\[
+\hat{n}=\begin{cases}
+L-n, & \quad1\leq n<L\\
+M-n-1+L, & \quad L\leq n<M-1\\
+M-1, & \quad n=M-1
+\end{cases}.
+\]
+
+\end_inset
+
+Then for 
+\begin_inset Formula $1\leq n\leq M-1$
+\end_inset
+
+, we have
+\begin_inset Formula 
+\begin{equation}
+S_{mn}=C_{-m,n}^{*},\quad C_{mn}=C_{M-m,\hat{n}}^{*},\quad S_{mn}=-S_{M-m,\hat{n}}^{*},\quad D_{mn}=-D_{\hat{m}\hat{n}}^{*}.\label{eq:overlap_matrix_symmetry}
+\end{equation}
+
+\end_inset
+
+ The first three equalities of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_matrix_symmetry"
+
+\end_inset
+
+ can be directly verified by eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_CS"
+
+\end_inset
+
+.
+ The last equality can be shown by applying the second and third ones to
+ eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_CMS"
+
+\end_inset
+
+.
+ Next we consider the case when 
+\begin_inset Formula $K$
+\end_inset
+
+ and 
+\begin_inset Formula $L$
+\end_inset
+
+ are swapped.
+ Let 
+\begin_inset Formula $C^{\left(L\right)}$
+\end_inset
+
+ and 
+\begin_inset Formula $S^{\left(L\right)}$
+\end_inset
+
+ be the matrices defined as eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_CS"
+
+\end_inset
+
+, and 
+\begin_inset Formula $C^{\left(K\right)}$
+\end_inset
+
+ and 
+\begin_inset Formula $S^{\left(K\right)}$
+\end_inset
+
+ be the matrices when 
+\begin_inset Formula $L$
+\end_inset
+
+ is replaced by 
+\begin_inset Formula $K$
+\end_inset
+
+, and similarly for matrix 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ We then have 
+\begin_inset Formula 
+\begin{equation}
+C^{\left(K\right)}=UC^{\left(L\right)}R,\quad S^{\left(K\right)}=US^{\left(L\right)}R,\quad D^{\left(K\right)}=R^{T}D^{\left(L\right)}R\label{eq:overlap_matrix_symmetry2}
+\end{equation}
+
+\end_inset
+
+ where
+\begin_inset Formula 
+\[
+U=\begin{pmatrix}u_{1}^{\left(K\right)}\\
+ & \ddots\\
+ &  & u_{M-1}^{\left(K\right)}
+\end{pmatrix},\quad R=\begin{pmatrix}0 & -\mathbf{I}_{L-1} & 0\\
+-\mathbf{I}_{K-1} & 0 & 0\\
+0 & 0 & 1
+\end{pmatrix}
+\]
+
+\end_inset
+
+ with 
+\begin_inset Formula $u_{m}^{\left(K\right)}=\left(1-e^{2\pi imK/M}\right)/1-e^{2\pi imL/M}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{I}_{L-1}$
+\end_inset
+
+ the identity matrix of 
+\begin_inset Formula $\left(L-1\right)\times\left(L-1\right)$
+\end_inset
+
+ dimension.
+ The first and second equalities of eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_matrix_symmetry2"
+
+\end_inset
+
+ can be verified directly by eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_CS"
+
+\end_inset
+
+.
+ The last equality can be shown by applying the first two to eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:overlap_CMS"
+
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Section
 Divergence of Bosonic String One-Loop Amplitudes
 \end_layout
