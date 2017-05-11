@@ -4042,7 +4042,25 @@ C_{pq} & =\frac{1}{E_{r}-E_{p}-E_{q}}\frac{1}{N}V_{qpr}+\mathcal{O}\left(N^{-2}\
 \end_inset
 
 .
- 
+ We should stress that the vertices in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:olp_deltaE0"
+
+\end_inset
+
+ should be the ones satisfy the constraint 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:cub_Vertices_Sym"
+
+\end_inset
+
+, otherwise it would lead to incorrect 
+\begin_inset Formula $\Delta E_{r}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
