@@ -3750,45 +3750,7 @@ Remark on vertices
 \end_layout
 
 \begin_layout Standard
-We stress some improvements of this section compared with ref.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Thorn:2015wli"
-
-\end_inset
-
-, where the vertices 
-\begin_inset Formula $V_{qpr}$
-\end_inset
-
- and 
-\begin_inset Formula $W_{rpq}$
-\end_inset
-
- are first introduced.
- 
-\end_layout
-
-\begin_layout Standard
-Ref 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Thorn:2015wli"
-
-\end_inset
-
- did not impose constraint 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:cub_Vertices_Sym"
-
-\end_inset
-
- on the vertices and missed the sign factors of the vertices.
- We stree that these two aspects are vital for the calculation.
- If either of them is overlooked, we would not be able to obtain the suprising
- result that 
+A suprising result we obtained in this section is that 
 \begin_inset Formula $W_{rpq}=0$
 \end_inset
 
@@ -3797,38 +3759,41 @@ reference "eq:cub_Vertices_Sym"
 \end_inset
 
 .
- The result implies that, in odd 
+ It implies that, in odd 
 \begin_inset Formula $s$
 \end_inset
 
  cases, the joining of two strings with odd bits into one string is strictly
  forbidden.
- This is a stronger result than the known result that string of even bits
- are unstable in the odd 
+ It stems from the cyclic constraint 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_cyclicconstrtaint"
+
+\end_inset
+
+ since it is the only condition we used in the derivation.
+ The result seems to be tightly related to another consequence of the cyclic
+ constraint in odd 
 \begin_inset Formula $s$
 \end_inset
 
- cases.
- Furthermore, without the constraint 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:cub_Vertices_Sym"
-
+ cases: the ground states of even bits strings are missing which leads to
+ the instability of these strings.
+ Indeed, if 
+\begin_inset Formula $W_{rpq}=0$
 \end_inset
 
-, it would lead to incorrect results when the vertices are directly used
- for calculation of observables.
- We note that, in the formula for one-loop self-energy calculation, which
- will be presented shortly, we must use the vertices that satisfying the
- constraint 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:cub_Vertices_Sym"
-
+ but 
+\begin_inset Formula $V_{qpr}\neq0$
 \end_inset
 
-.
- Otherwise, we cannot obtain correct results.
+, there is no equilibrium unless the string 
+\begin_inset Formula $r$
+\end_inset
+
+ is compeletely broken into small odd bits strings.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -3886,11 +3851,11 @@ reference "eq:cub_Vertices"
 \begin_inset Formula $h_{V}^{a}=\frac{1}{2}\left(h_{K,1}^{a}+h_{M,K+1}^{a}\right)$
 \end_inset
 
- reflects the fact that, to break one string of 
+ reflects the fact that, to break one 
 \begin_inset Formula $M$
 \end_inset
 
- bits into 
+-bit string into 
 \begin_inset Formula $K$
 \end_inset
 
@@ -3907,7 +3872,7 @@ reference "eq:cub_Vertices"
 \end_inset
 
  and bit 
-\begin_inset Formula $K+1$
+\begin_inset Formula $\left(K+1\right)$
 \end_inset
 
  to bit 
@@ -3949,12 +3914,12 @@ reference "eq:cub_Vertices"
 \begin_inset Formula $h_{W}^{a}$
 \end_inset
 
- is because that, when joining two strings, one can make a different big
- string by inversing the labels of one string as 
+ is because that, when joining two strings, one can inverse the labels of
+ the first small string as 
 \begin_inset Formula $1+i\leftrightarrow K-i$
 \end_inset
 
-.
+ to obtain a different large string.
 \end_layout
 
 \begin_layout Section
@@ -4042,7 +4007,7 @@ C_{pq} & =\frac{1}{E_{r}-E_{p}-E_{q}}\frac{1}{N}V_{qpr}+\mathcal{O}\left(N^{-2}\
 \end_inset
 
 .
- We should stress that the vertices in 
+ We stress that the vertices in 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:olp_deltaE0"
@@ -5890,15 +5855,6 @@ Conclusion
 \begin_layout Standard
 We have presented a formalism to calculate the cubic interaction vertices
  for the stable string bit model.
- The vertex 
-\begin_inset Formula $V_{qpr}$
-\end_inset
-
- is the amplitude of splitting one string into two and the vertex 
-\begin_inset Formula $W_{rpq}$
-\end_inset
-
- is the amplitude of joining two strings into one.
  We showed that, when the Grassmann dimension 
 \begin_inset Formula $s$
 \end_inset
