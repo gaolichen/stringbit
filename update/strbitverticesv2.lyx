@@ -5855,82 +5855,22 @@ Conclusion
 \begin_layout Standard
 We have presented a formalism to calculate the cubic interaction vertices
  for the stable string bit model.
- We showed that, when the Grassmann dimension 
-\begin_inset Formula $s$
-\end_inset
-
- is odd, the joining of two strings with odd bits into one is forbidden,
- i.e., 
-\begin_inset Formula $W_{rpq}=0$
-\end_inset
-
-.
- The result is related to the fact that even bits strings are unstable when
- 
-\begin_inset Formula $s$
-\end_inset
-
- is odd.
+ With the vertices, we calculated the one-loop self-energies of the model
+ in both analytical and numerical ways.
  
 \end_layout
 
 \begin_layout Standard
-Our formalism provides a method to study the model both analytically and
- numerically.
- We used the interaction vertices to calculate the one-loop self-energy
- of the model.
- We obtained analytic results in the 
-\begin_inset Formula $M=1,\, s=1$
-\end_inset
-
- and 
-\begin_inset Formula $M=2,\, s=2$
-\end_inset
-
- cases.
- Further effort is needed for analytic calculation in higher 
+From the large 
 \begin_inset Formula $M$
 \end_inset
 
- and 
-\begin_inset Formula $s$
-\end_inset
-
- cases.
- 
-\end_layout
-
-\begin_layout Standard
-By a qualitative analysis, we obtained the large 
-\begin_inset Formula $M$
-\end_inset
-
- behavior of the one-loop self-energy 
-\begin_inset Formula $\Delta E$
-\end_inset
-
-, which scales as 
-\begin_inset Formula $M^{5-s/4}$
-\end_inset
-
- for even 
-\begin_inset Formula $s$
-\end_inset
-
- and 
-\begin_inset Formula $M^{4-s/4}$
-\end_inset
-
- for odd 
-\begin_inset Formula $s$
-\end_inset
-
-.
- The Lorentz invariance requires 
+ behavior of one-loop self-energies, we found that the Lorentz invariance
+ requires the critical dimension of the model to be 
 \begin_inset Formula $s=24$
 \end_inset
 
- and leads to the protostring model.
+, which then leads to the protostring model.
  The reason that 
 \begin_inset Formula $24$
 \end_inset
@@ -5964,7 +5904,6 @@ key "Chen:2016hkz"
  nature of string bits.
  These results support the idea of formulating string theory by string bit
  models.
- 
 \end_layout
 
 \begin_layout Standard
