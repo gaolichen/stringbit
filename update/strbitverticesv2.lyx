@@ -405,7 +405,7 @@ status open
 \begin_inset Graphics
 	filename Vqpr.pdf
 	width 20col%
-	BoundingBox 220bp 280bp 430bp 440bp
+	BoundingBox 300bp 120bp 620bp 360bp
 	clip
 
 \end_inset
@@ -434,7 +434,7 @@ status open
 \begin_inset Graphics
 	filename Wrpq.pdf
 	width 20col%
-	BoundingBox 220bp 230bp 460bp 420bp
+	BoundingBox 235bp 100bp 555bp 340bp
 	clip
 
 \end_inset
