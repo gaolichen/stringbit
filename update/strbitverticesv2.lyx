@@ -5275,15 +5275,15 @@ name "fig:SubEvsMxi0"
 \end_layout
 
 \begin_layout Standard
-The fact that, in the case of odd 
-\begin_inset Formula $s$
-\end_inset
-
-, there are two curves for each 
+The fact that there are two curves for each 
 \begin_inset Formula $M$
 \end_inset
 
- can be understood as follows.
+ in odd 
+\begin_inset Formula $s$
+\end_inset
+
+ cases can be understood as follows.
  Let us consider the 
 \begin_inset Formula $s=1$
 \end_inset
@@ -5296,8 +5296,12 @@ The fact that, in the case of odd
 \begin_inset Formula $K=2$
 \end_inset
 
-.
- Assuming 
+, where the former has much lower contribution to 
+\begin_inset Formula $\Delta E$
+\end_inset
+
+ than latter according to the plots.
+ Assuming that 
 \begin_inset Formula $M$
 \end_inset
 
@@ -5314,14 +5318,22 @@ The fact that, in the case of odd
 \begin_inset Formula $L$
 \end_inset
 
- is even in the former case and odd in the latter case.
+ is even for 
+\begin_inset Formula $K=1$
+\end_inset
+
+ and odd for 
+\begin_inset Formula $K=2$
+\end_inset
+
+.
  Now we compare these two cases in the low energy regime, in which the gap
- among energy levels are at most of order 
+ between energy levels and the lowest energy are at most of order 
 \begin_inset Formula $1/M$
 \end_inset
 
 .
- The lowest energy states of both cases are equal to 
+ The lowest energy states are equal to 
 \begin_inset Formula $-4\cot\frac{\pi}{2L}-4\cos\frac{\pi}{2K}+8$
 \end_inset
 
@@ -5340,9 +5352,10 @@ reference "eq:dia_cyclic_constraint_s"
 \end_inset
 
 .
- But the numbers of states in the low energy regime are different.
+ Now consider the numbers of states in the low energy regime for these two
+ cases.
  Because of the cyclic constraint, only even bits chains have excited states
- within a energy gap of order 
+ with energy gaps of order 
 \begin_inset Formula $1/M$
 \end_inset
 
@@ -5368,7 +5381,7 @@ reference "eq:dia_cyclic_constraint_s"
 \end_inset
 
 .
- It implies the low energy regime of 
+ It implies that the low energy regime of 
 \begin_inset Formula $K=1$
 \end_inset
 
@@ -5390,20 +5403,20 @@ reference "eq:dia_cyclic_constraint_s"
 \end_inset
 
  case.
- This reasoning applies to all small odd 
+ This reasoning holds when 
 \begin_inset Formula $K$
 \end_inset
 
- and small even 
-\begin_inset Formula $K$
-\end_inset
-
-.
+ is small.
  Hence, small odd 
 \begin_inset Formula $K$
 \end_inset
 
- cases have lower contribution to small even 
+ cases have lower contribution to 
+\begin_inset Formula $\Delta E$
+\end_inset
+
+ than small even 
 \begin_inset Formula $K$
 \end_inset
 
@@ -5412,7 +5425,7 @@ reference "eq:dia_cyclic_constraint_s"
 \end_layout
 
 \begin_layout Standard
-We next consider the effect of 
+We next consider the effect of the 
 \begin_inset Formula $\xi$
 \end_inset
 
@@ -5436,7 +5449,7 @@ reference "fig:SubEvsMs2"
 \begin_inset Formula $s=2$
 \end_inset
 
- cases with different values of 
+ with different values of 
 \begin_inset Formula $\xi$
 \end_inset
 
@@ -5449,11 +5462,14 @@ reference "fig:SubEvsMs2"
 \begin_inset Formula $\xi=1.5$
 \end_inset
 
- cases show a nice asymptotic behavior and curves of different 
-\begin_inset Formula $M$
+ cases show a smooth asymptotic behavior as the cases in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:SubEvsMxi0"
+
 \end_inset
 
- do not intersect.
+.
  But when 
 \begin_inset Formula $\xi$
 \end_inset
@@ -5462,7 +5478,7 @@ reference "fig:SubEvsMs2"
 \begin_inset Formula $1$
 \end_inset
 
-, curves intersect each other.
+, curves are not smooth and intersect each other.
  When 
 \begin_inset Formula $\xi<1$
 \end_inset
@@ -5480,8 +5496,11 @@ reference "fig:SubEvsMs2"
 \end_inset
 
  increases.
- So the one-loop self-energy is not bounded from below and the system is
- not stable.
+ So 
+\begin_inset Formula $\Delta E$
+\end_inset
+
+ is not bounded from below and the system is not stable.
  In contrast, when 
 \begin_inset Formula $\xi>1$
 \end_inset
@@ -5522,13 +5541,13 @@ reference "eq:App_ham_subh:1"
 \end_inset
 
  is a scalar and this term behaves like a scalar potential with negative
- coefficient, which can lead to dangerous instability.
+ coefficient, which lead to dangerous instability.
  But when 
 \begin_inset Formula $\xi=1$
 \end_inset
 
 , this term is canceled exactly by 
-\begin_inset Formula $\xi\Delta H$
+\begin_inset Formula $s\xi\Delta H$
 \end_inset
 
 .
@@ -5540,7 +5559,17 @@ reference "eq:App_ham_subh:1"
 \begin_inset Formula $\xi=1$
 \end_inset
 
- is the minimal value for the potential to be bounded below.
+ is the minimal value for the potential to be bounded from below.
+ To build a physical string bit model for even 
+\begin_inset Formula $s$
+\end_inset
+
+, we should require 
+\begin_inset Formula $\xi\geq1$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -5658,11 +5687,11 @@ reference "fig:EvS"
 \end_inset
 
 .
- For the 
+ For 
 \begin_inset Formula $M=5$
 \end_inset
 
- case we sampled 
+ we sampled 
 \begin_inset Formula $s$
 \end_inset
 
@@ -5670,7 +5699,7 @@ reference "fig:EvS"
 \begin_inset Formula $10$
 \end_inset
 
-, while for 
+; for 
 \begin_inset Formula $M=6$
 \end_inset
 
@@ -5692,11 +5721,11 @@ reference "fig:EvS"
 \end_inset
 
 .
- For the 
+ For 
 \begin_inset Formula $M=6$
 \end_inset
 
- case, all the curves almost rise linearly.
+, all the curves almost rise linearly.
  Of all the four curves, 
 \begin_inset Formula $\xi=3$
 \end_inset
@@ -5719,7 +5748,7 @@ reference "fig:EvS"
 \begin_inset Formula $M=5$
 \end_inset
 
- case, the overall trend of the curves are the same as 
+ case, the overall trends of the curves are the same as 
 \begin_inset Formula $M=6$
 \end_inset
 
@@ -5732,11 +5761,11 @@ reference "fig:EvS"
 \begin_inset Formula $\xi=0,\,1$
 \end_inset
 
-, the oscillation is relatively noticeable, but for 
+, the oscillation is relatively noticeable, and for 
 \begin_inset Formula $\xi=3$
 \end_inset
 
-, it becomes negligible.
+, it is negligible.
  Actually, if only even 
 \begin_inset Formula $s$
 \end_inset
@@ -5767,9 +5796,15 @@ reference "fig:EvS"
 \begin_inset Formula $\xi=1$
 \end_inset
 
- case has lower slope than others is because of the reason we mentioned
- last paragraph.
- 
+ has lower slope than others is also related to that 
+\begin_inset Formula $\xi=1$
+\end_inset
+
+ is the boundary for 
+\begin_inset Formula $\Delta E$
+\end_inset
+
+ to be bounded from below.
 \end_layout
 
 \begin_layout Standard
