@@ -3679,11 +3679,11 @@ reference "eq:cub_Vertices"
 
 \begin_layout Standard
 To calculate the vacuum expectation values, we need to express 
-\begin_inset Formula $h^{\left(V\right)}$
+\begin_inset Formula $h_{V}$
 \end_inset
 
  and 
-\begin_inset Formula $h^{\left(W\right)}$
+\begin_inset Formula $h_{W}$
 \end_inset
 
  in terms of eigenoperators.
@@ -3761,7 +3761,7 @@ end{subequations}
 \end_layout
 
 \begin_layout Subsection
-Remark on vertices
+Remark on Vertices
 \end_layout
 
 \begin_layout Standard
@@ -4547,7 +4547,7 @@ Large
 \begin_inset Formula $M$
 \end_inset
 
- behavior
+ Behavior
 \end_layout
 
 \begin_layout Standard
@@ -4790,12 +4790,11 @@ reference "eq:largeM_DeltaE"
 \end_inset
 
 .
- The special case of 
+ The model in the special 
 \begin_inset Formula $s=24$
 \end_inset
 
- is called protostring model in ref.
- 
+ case is called protostring model
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2015wli"
