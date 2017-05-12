@@ -220,8 +220,8 @@ key "'tHooft:1987,'tHooft:1990eb,'tHooft:1993gx"
 \end_inset
 
 .
- In regular Lorentz invariant theory, spacetime can be described by lightcone
- coordinates with transverse dimensions 
+ In Lorentz invariant theory, spacetime can be described by lightcone coordinate
+s with transverse dimensions 
 \begin_inset Formula $\mathbf{x}=\left(x^{2},\cdots,x^{D-1}\right)$
 \end_inset
 
@@ -242,14 +242,14 @@ key "'tHooft:1987,'tHooft:1990eb,'tHooft:1993gx"
 \end_inset
 
 .
- In string bit model, the 
+ In the string bit model, the 
 \begin_inset Formula $x^{-}$
 \end_inset
 
  coordinate of string bits is missing, and hence, the Lorentz invariance
  is not 
 \shape italic
-a priori
+present a priori
 \shape default
 .
  String bits enjoy the dynamic of Galilean symmetry, under which the 
@@ -294,7 +294,7 @@ a priori
 \end_inset
 
  can be interpreted as the missing coordinate.
- The Lorentz invariance is therefore regained and string theory emerges.
+ The Lorentz invariance can be therefore regained and string theory emerges.
 \end_layout
 
 \begin_layout Standard
@@ -354,8 +354,8 @@ key "Thorn:2015wli"
 
 \end_inset
 
-, where the cubic interaction vertices and their application to one-loop
- self-energy were discussed.
+, where the cubic interaction vertices and their application to the calculation
+ of one-loop self-energy were discussed.
 \end_layout
 
 \begin_layout Standard
@@ -513,8 +513,8 @@ The vertex
 \end_layout
 
 \begin_layout Itemize
-More detailed study of the cubic interaction vertices is performed.
- We present a systematical way to build conjugates of energy eigenfunctions,
+A more detailed study of the cubic interaction vertices is performed.
+ We present a systematic way to build conjugates of energy eigenfunctions,
  determine the sign factors of the vertices, and (anti)symmetrize the vertices,
  which are denoted as 
 \begin_inset Formula $V_{qpr}$
@@ -545,21 +545,22 @@ reference "fig:Vertices"
 \begin_inset Formula $s$
 \end_inset
 
-, the joining of two strings with odd bits into one string is strictly forbidden.
+, the joining of two strings with odd bit number into one string is strictly
+ forbidden.
  We then show that the interaction vertices can be calculated by finding
  the vacuum expectation values of ladder operators.
- These are necessary for the use of interaction vertices in calculation
+ These are necessary for the use of interaction vertices in our calculation
  of observables.
 \end_layout
 
 \begin_layout Itemize
-The calculation of one-loop self-energy is improved and its large 
+The calculation of the one-loop self-energy is improved and its large 
 \begin_inset Formula $M$
 \end_inset
 
  behavior for the ground states is analyzed.
  We assemble the ingredients necessary to calculate the one-loop self-energy.
- The one-loop self-energy of ground states, 
+ The one-loop self-energies of ground states, 
 \begin_inset Formula $\Delta E_{G}$
 \end_inset
 
@@ -602,19 +603,15 @@ The calculation of one-loop self-energy is improved and its large
 \end_inset
 
 .
- Under the constraint of Lorentz invariance, the large 
-\begin_inset Formula $M$
+ The scaling behavior is consistent with Lorentz invariance in 
+\begin_inset Formula $1+1$
 \end_inset
 
- behavior of 
-\begin_inset Formula $\Delta E_{G}$
-\end_inset
-
- then leads to the critical Grassmann dimension 
+ dimension when 
 \begin_inset Formula $s=24$
 \end_inset
 
-, where the protostring model 
+, the critical Grassmann dimension, and the protostring model 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2015wli"
@@ -636,7 +633,7 @@ key "Thorn:2015wli"
 \begin_inset Formula $s$
 \end_inset
 
- cases.
+.
  We confirm the large 
 \begin_inset Formula $M$
 \end_inset
@@ -649,12 +646,12 @@ key "Thorn:2015wli"
 \begin_inset Formula $s\leq4$
 \end_inset
 
- cases.
+.
  We also verify that 
 \begin_inset Formula $\Delta E_{G}$
 \end_inset
 
- increase exponentially with respect to 
+ increases exponentially with respect to 
 \begin_inset Formula $s$
 \end_inset
 
@@ -663,19 +660,19 @@ key "Thorn:2015wli"
 \end_inset
 
  is fixed.
- We generalize the Hamiltonian of the model by adding an 
+ We generalize the Hamiltonian of the model by adding 
 \begin_inset Formula $\mathcal{O}\left(1/N\right)$
 \end_inset
 
  terms 
-\begin_inset Formula $\xi\Delta H$
+\begin_inset Formula $s\xi\Delta H$
 \end_inset
 
- and numerically show that, for 
+ and numerically show that, for the 
 \begin_inset Formula $s=2$
 \end_inset
 
- case, the Hamiltonian is bounded from below with respect the 
+ case, the Hamiltonian is bounded from below with respect to 
 \begin_inset Formula $M$
 \end_inset
 
@@ -690,7 +687,7 @@ key "Thorn:2015wli"
 
  cases.
  The result shows that the 
-\begin_inset Formula $\xi\Delta H$
+\begin_inset Formula $s\xi\Delta H$
 \end_inset
 
  generalization is necessary for building a physical string bit model.
@@ -706,7 +703,7 @@ reference "sec:Review"
 
 \end_inset
 
-, we review some results of stable string bit model obtained by 
+, we review some results of stable string bit models obtained by 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2015wli"
@@ -714,8 +711,8 @@ key "Thorn:2015wli"
 \end_inset
 
 .
- Specifically, we introduce the Hamiltonian of the model, solve for energy
- spectrum of the model at 
+ Specifically, we introduce the Hamiltonian of the model, solve for the
+ energy spectrum of the model at 
 \begin_inset Formula $N=\infty$
 \end_inset
 
@@ -728,7 +725,7 @@ reference "sec:Conjugate-Eigenfunction"
 \end_inset
 
 , we provide a systematic approach to build conjugate eigenfunctions, which
- will be used in the calculation of 
+ will be used in the calculation of the 
 \begin_inset Formula $1/N$
 \end_inset
 
@@ -753,7 +750,8 @@ reference "sec:EnergyCorrection"
 \end_inset
 
 , we use the cubic interaction vertices to calculate one-loop self-energies.
- Numerical results for one-loop self-energy are analyzed in section 
+ Numerical results for the one-loop self-energy are analyzed in section
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:Numerical-Results"
@@ -846,7 +844,7 @@ The superstring bit creation operator is
 \begin_inset Formula $a_{i}$
 \end_inset
 
- are totally antisymmetric spin indices, 
+ are totally antisymmetric spin indices and 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -858,11 +856,7 @@ The superstring bit creation operator is
 \begin_inset Formula $U\left(N\right)$
 \end_inset
 
-, and 
-\begin_inset Formula $\mathbf{x}$
-\end_inset
-
- the transverse coordinates.
+.
  
 \begin_inset Formula $\bar{\phi}$
 \end_inset
@@ -3415,7 +3409,7 @@ key "Thorn:2015wli"
 
 \end_inset
 
- except for that we changed the notation slightly and determined sign factors
+ except that we changed the notation slightly and determined sign factors
  for the vertices, which are overlooked by ref.
  
 \begin_inset CommandInset citation
@@ -3977,8 +3971,8 @@ A surprising result we obtained in this section is that
 \begin_inset Formula $s$
 \end_inset
 
- cases, the joining of two strings with odd bits into one string is strictly
- forbidden.
+ cases, the joining of two strings with odd bit number into one string is
+ strictly forbidden.
  It stems from the cyclic constraint 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -3992,8 +3986,8 @@ reference "eq:ham_cyclicconstrtaint"
 \begin_inset Formula $s$
 \end_inset
 
- cases: the ground states of even bits strings are missing which leads to
- the instability of these strings.
+ cases: the ground states of strings with even bit number are missing which
+ leads to the instability of these strings.
  Indeed, if 
 \begin_inset Formula $W_{rpq}=0$
 \end_inset
@@ -4006,7 +4000,7 @@ reference "eq:ham_cyclicconstrtaint"
 \begin_inset Formula $r$
 \end_inset
 
- is completely broken into small odd bits strings.
+ is completely broken into strings with odd bit number.
  
 \end_layout
 
@@ -4957,7 +4951,11 @@ reference "eq:largeM_DeltaE"
 \end_inset
 
  the critical Grassmann dimension of the model, where Lorentz invariance
- is regained.
+ in 
+\begin_inset Formula $1+1$
+\end_inset
+
+ dimension is regained.
  In the lightcone coordinates, 
 \begin_inset Formula $P^{+}$
 \end_inset
@@ -5559,8 +5557,8 @@ reference "eq:dia_cyclic_constraint_s"
 .
  Now consider the numbers of states in the low energy regime for these two
  cases.
- Because of the cyclic constraint, only even bits chains have excited states
- with energy gaps of order 
+ Because of the cyclic constraint, only chains with even bit number have
+ excited states with energy gaps of order 
 \begin_inset Formula $1/M$
 \end_inset
 
@@ -6119,11 +6117,11 @@ From the large
 \end_inset
 
 , which then leads to the protostring model.
- The reason that 
-\begin_inset Formula $24$
+ One interesting interpretation of 
+\begin_inset Formula $s=24$
 \end_inset
 
- is the critical dimension can be explained as follows.
+ is as follows.
  Out of the 24 dimensions, 16 of them are paired to form 8 compactified
  bosonic dimensions and the rest 8 remain as fermionic dimension.
  Thus, it has the same degree of freedoms as the superstring model.
