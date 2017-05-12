@@ -29,3 +29,6 @@
 
 # lyx
 *.lyx~
+
+# build
+build
