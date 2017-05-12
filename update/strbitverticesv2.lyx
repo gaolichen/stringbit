@@ -374,7 +374,7 @@ key "Thorn:2015wli"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -403,8 +403,10 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename ../slides/VertexVs.png
+	filename Vqpr.pdf
 	width 20col%
+	BoundingBox 220bp 280bp 430bp 440bp
+	clip
 
 \end_inset
 
@@ -430,8 +432,10 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename ../slides/VertexWs.png
+	filename Wrpq.pdf
 	width 20col%
+	BoundingBox 220bp 230bp 460bp 420bp
+	clip
 
 \end_inset
 
@@ -496,6 +500,10 @@ The vertex
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 
