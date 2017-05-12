@@ -540,7 +540,7 @@ reference "fig:Vertices"
 \end_inset
 
 .
- These improvements lead to a suprising result that, in the case of odd
+ These improvements lead to a surprising result that, in the case of odd
  
 \begin_inset Formula $s$
 \end_inset
@@ -610,7 +610,7 @@ The calculation of one-loop self-energy is improved and its large
 \begin_inset Formula $\Delta E_{G}$
 \end_inset
 
- then leads to the critical Grassman dimension 
+ then leads to the critical Grassmann dimension 
 \begin_inset Formula $s=24$
 \end_inset
 
@@ -2354,7 +2354,14 @@ where the delta function
 \begin_inset Formula $\tilde{\delta}\left(\theta-\eta\right)$
 \end_inset
 
- is understood to be symmetrized under cyclic constraint like permutations.
+ is understood to be symmetrized under cyclic constraint like 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_cyclicconstrtaint"
+
+\end_inset
+
+.
 \begin_inset Foot
 status open
 
@@ -3758,7 +3765,7 @@ Remark on vertices
 \end_layout
 
 \begin_layout Standard
-A suprising result we obtained in this section is that 
+A surprising result we obtained in this section is that 
 \begin_inset Formula $W_{rpq}=0$
 \end_inset
 
@@ -3800,7 +3807,7 @@ reference "eq:ham_cyclicconstrtaint"
 \begin_inset Formula $r$
 \end_inset
 
- is compeletely broken into small odd bits strings.
+ is completely broken into small odd bits strings.
  
 \end_layout
 
@@ -4750,7 +4757,7 @@ reference "eq:largeM_DeltaE"
 
 \end_inset
 
- the critical Grassman dimension of the model, where Lorentz invariance
+ the critical Grassmann dimension of the model, where Lorentz invariance
  is regained.
  In the lightcone coordinates, 
 \begin_inset Formula $P^{+}$
