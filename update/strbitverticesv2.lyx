@@ -130,8 +130,8 @@ status open
 abstract{We provide a formalism to calculate the cubic interaction vertices
  of the stable string bit model, in which string bits have $s$ spin degrees
  of freedom but no space to move.
- We show that the joining of two strings with odd bits into one string is
- strictly forbidden when $s$ is odd.
+ We show that the joining of two strings with odd bit number into one string
+ is strictly forbidden when $s$ is odd.
  With the vertices, we obtain a formula for one-loop self-energy, i.e., the
  $
 \backslash
@@ -775,7 +775,7 @@ Stable String Bit Model
 
 \begin_layout Standard
 The purpose of this section is to review some results of stable string bit
- model obtained by ref.
+ models obtained in ref.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -784,7 +784,7 @@ key "Thorn:2015wli"
 \end_inset
 
  and introduce useful notations.
- These results are necessary for setting up 
+ These results are necessary for setting up the 
 \begin_inset Formula $1/N$
 \end_inset
 
@@ -987,7 +987,7 @@ key "Thorn:2014hia,Thorn:2015wli"
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec:app_hamiltonian"
+reference "sub:DeltaH"
 
 \end_inset
 
@@ -6657,6 +6657,12 @@ H_{2}T\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:DeltaH"
+
+\end_inset
+
 Derivation for 
 \begin_inset Formula $\Delta H$
 \end_inset
@@ -6677,12 +6683,25 @@ It is not obvious of how to generalize
  We actually obtain the generalization from the relation 
 \begin_inset Formula 
 \[
-\tr G^{2}=N\left(\Delta H-H^{\prime}\right)
+\tr G^{2}=N\left(\Delta H-H^{\prime}\right),
 \]
 
 \end_inset
 
- where the color operator 
+ which has been proved in Appendix E of ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chen:2016hkz"
+
+\end_inset
+
+ for 
+\begin_inset Formula $s=1$
+\end_inset
+
+.
+ Here the color operator 
 \begin_inset Formula $G$
 \end_inset
 
@@ -6746,7 +6765,7 @@ One can verify that the action of
 \begin_inset Formula $G_{\alpha}^{\beta}$
 \end_inset
 
- on any color singlet vanishes:
+ on any color singlet vanishes: 
 \begin_inset Formula $G_{\alpha}^{\beta}\ket{\text{any color singlet}}=0$
 \end_inset
 
