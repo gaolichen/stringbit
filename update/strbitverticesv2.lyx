@@ -2787,8 +2787,8 @@ reference "eq:dia_ground_state_s"
 
 \end_inset
 
-, we obtain the gradings (under modulo 2) of functions and operators as
- table 
+, we obtain the gradings (modulo 2) of functions and operators as table
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:gradings"
@@ -2981,7 +2981,7 @@ name "tab:gradings"
 
 \end_inset
 
-Gradings of functions and operators under modulo 2
+Gradings of functions and operators modulo 2
 \end_layout
 
 \end_inset
