@@ -2981,7 +2981,7 @@ name "tab:gradings"
 
 \end_inset
 
-Gradings of functions and operators modulo 2
+Gradings of functions and operators.
 \end_layout
 
 \end_inset
@@ -6888,6 +6888,27 @@ reference "eq:App_ham_deltah"
 \end_inset
 
 .
+ One can verify that both 
+\begin_inset Formula $H^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Delta H$
+\end_inset
+
+ commute with the supersymmetric operators 
+\begin_inset Formula $Q^{a}$
+\end_inset
+
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:App_ham_Q"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Section
