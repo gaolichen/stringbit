@@ -1672,11 +1672,11 @@ key "Chen:2016hkz"
 \end_inset
 
 .
- To verify the requirement 
-\begin_inset Formula $F_{m}\psi_{G}=0$
+ To verify 
+\begin_inset Formula $F_{m}\psi_{G}^{s=1}=0$
 \end_inset
 
- one only need to check that
+, one only need to check that
 \begin_inset Formula 
 \begin{align}
 F_{k}\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right) & =F_{M-k}\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right)=0,\quad1\leq k\leq M-1,\\
@@ -1746,7 +1746,7 @@ begin{subequations}
 
 \begin_inset Formula 
 \begin{align}
-\psi_{r} & =\left(F_{r_{1,1}}^{\left(1\right)}F_{r_{1,2}}^{\left(1\right)}\cdots F_{r_{2,1}}^{\left(2\right)}F_{r_{2,2}}^{\left(2\right)}\cdots F_{r_{s,1}}^{\left(s\right)}F_{r_{s,2}}^{\left(s\right)}\cdots\right)^{\dagger}\psi_{G}^{\left(1\right)}\cdots\psi_{G}^{\left(s\right)}\equiv F_{\left\{ r\right\} }^{\dagger}\psi_{G},\label{eq:dia_general_eigenfunction_s}\\
+\psi_{r} & =\left(F_{r_{1,1}}^{\left(1\right)}F_{r_{1,2}}^{\left(1\right)}\cdots F_{r_{2,1}}^{\left(2\right)}F_{r_{2,2}}^{\left(2\right)}\cdots F_{r_{s,1}}^{\left(s\right)}F_{r_{s,2}}^{\left(s\right)}\cdots\right)^{\dagger}\psi_{G}\equiv F_{\left\{ r\right\} }^{\dagger}\psi_{G},\label{eq:dia_general_eigenfunction_s}\\
 E_{r} & =-4s\cot\frac{\pi}{2M}+8\sum_{a,i}\sin\frac{r_{a,k}\pi}{M},\label{eq:dia_general_energy_s}
 \end{align}
 
@@ -1794,15 +1794,15 @@ reference "eq:ham_cyclicconstrtaint"
 
 .
  Under the cyclic permutation 
-\begin_inset Formula $\theta_{k}^{\left(a\right)}\to\theta_{k+1}^{\left(a\right)}$
+\begin_inset Formula $\theta_{k}^{a}\to\theta_{k+1}^{a}$
 \end_inset
 
 , 
-\begin_inset Formula $F_{k}^{\left(a\right)\dagger}$
+\begin_inset Formula $F_{k}^{a\dagger}$
 \end_inset
 
  transforms as 
-\begin_inset Formula $F_{k}^{\left(a\right)\dagger}\to e^{-2ik\pi/M}F_{k}^{\left(a\right)\dagger}$
+\begin_inset Formula $F_{k}^{a\dagger}\to e^{-2ik\pi/M}F_{k}^{a\dagger}$
 \end_inset
 
 .
@@ -1817,7 +1817,7 @@ reference "eq:ham_cyclicconstrtaint"
  that the modes must satisfy
 \begin_inset Formula 
 \begin{equation}
-\sum_{a,i}r_{a,k}=\begin{cases}
+\sum_{a,k}r_{a,k}=\begin{cases}
 nM & \quad\text{for even }s\left(M-1\right)\\
 \left(n+\frac{1}{2}\right)M & \quad\text{for odd }s\left(M-1\right)
 \end{cases},\quad n=0,\,1,\,2,\cdots\label{eq:dia_cyclic_constraint_s}
@@ -1882,7 +1882,7 @@ reference "eq:dia_cyclic_constraint_s"
 \end_inset
 
  is the one corresponding to 
-\begin_inset Formula $F_{M/2}^{\dagger\left(a\right)}\psi_{G}$
+\begin_inset Formula $F_{M/2}^{a\dagger}\psi_{G}$
 \end_inset
 
 .
@@ -6663,7 +6663,7 @@ name "sub:DeltaH"
 
 \end_inset
 
-Derivation for 
+Derivation of 
 \begin_inset Formula $\Delta H$
 \end_inset
 
@@ -6992,10 +6992,6 @@ reference "eq:App_psiG_alpha_prod"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 Similarly, we can show 
 \begin_inset Formula $\int d^{M}\theta\,\bar{\psi}_{G}\psi_{G}=1$
 \end_inset
@@ -7067,14 +7063,10 @@ reference "eq:App_psiG_norm1"
 \end_inset
 
  vanishes because of 
-\begin_inset Formula 
-\begin{equation}
-\tilde{F}_{k}^{\dagger\pm}\bar{\psi}_{G}=0,\label{eq:App_psiG_Ftilde_psibar}
-\end{equation}
-
+\begin_inset Formula $\tilde{F}_{k}^{\dagger\pm}\bar{\psi}_{G}=0$
 \end_inset
 
-which can be verified by checking that 
+, which can be verified by checking that 
 \begin_inset Formula 
 \[
 \tilde{F}_{k}^{\dagger\pm}\left(-s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)=\tilde{F}_{M-k}^{\dagger\pm}\left(-s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)=0,
