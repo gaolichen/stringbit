@@ -3112,7 +3112,7 @@ V_{pqr}=\left(-\right)^{g_{p}g_{q}}V_{qpr},\quad W_{rqp}=\left(-\right)^{g_{p}g_
 
 \end_inset
 
-In this section, we shall find the vertices can be calculated with 
+In this section, we shall find that
 \begin_inset ERT
 status open
 
@@ -3168,7 +3168,7 @@ reference "eq:cub_Vertices"
 \begin_inset Formula $a$
 \end_inset
 
- indicates only operators of spin index 
+ indicates that only operators of spin index 
 \begin_inset Formula $a$
 \end_inset
 
@@ -3270,7 +3270,7 @@ reference "eq:cub_vac_VW"
 \end_layout
 
 \begin_layout Standard
-Let us derive the formula 
+Now let us derive the formula 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:cub_Vertices"
@@ -3366,7 +3366,7 @@ HT_{p}T_{q}\ket{0}=\left(E_{p}+E_{q}\right)T_{p}T_{q}\ket{0}\\
 
 \end_inset
 
-Comparing with 
+Comparing above with 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:cub_Vertices_DefW"
@@ -3409,8 +3409,8 @@ key "Thorn:2015wli"
 
 \end_inset
 
- except that we changed the notation slightly and determined sign factors
- for the vertices, which are overlooked by ref.
+ except that we changed the notation slightly and determined the sign factors
+ of the vertices, which are overlooked by ref.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -3462,7 +3462,7 @@ reference "eq:cub_Vstr"
 \begin_inset Formula $i$
 \end_inset
 
-, we can first rename all integration variables as 
+, we can rename all integration variables as 
 \begin_inset Formula $\theta_{j}\to\theta_{j+1}$
 \end_inset
 
@@ -3487,15 +3487,15 @@ reference "eq:ham_cyclicconstrtaint"
 \end_inset
 
 .
- It implies that all the 
+ It implies that 
 \begin_inset Formula $\tilde{V}_{qpr}^{\left(i\right)}$
 \end_inset
 
- are independent of 
+ is independent of 
 \begin_inset Formula $i$
 \end_inset
 
-, we can therefore choose 
+ and we can choose 
 \begin_inset Formula $i=M$
 \end_inset
 
@@ -3572,7 +3572,7 @@ We perform the similar calculation to the
 \end_inset
 
  vertex.
- All the integral of 
+ All the integrals of 
 \begin_inset Formula $W^{\left(1\right)}$
 \end_inset
 
@@ -3656,23 +3656,16 @@ We then calculate
 \begin_inset Formula $\psi_{p}$
 \end_inset
 
- and used table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:gradings"
-
-\end_inset
-
 .
  It then implies that 
 \begin_inset Formula $W_{rpq}=0$
 \end_inset
 
  if 
-\begin_inset Formula $sKL=0$
+\begin_inset Formula $sKL$
 \end_inset
 
-, and 
+ is odd, and 
 \begin_inset Formula $W_{rpq}=\tilde{W}_{rpq}$
 \end_inset
 
@@ -3771,7 +3764,7 @@ The ground eigenfunctions
  
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "eq:App_psiG_Ftilde_psibar"
+reference "eq:App_psiG_FtildeG"
 
 \end_inset
 
@@ -3986,7 +3979,7 @@ reference "eq:ham_cyclicconstrtaint"
 \begin_inset Formula $s$
 \end_inset
 
- cases: the ground states of strings with even bit number are missing which
+ cases: the ground states of strings with even bit number are missing, which
  leads to the instability of these strings.
  Indeed, if 
 \begin_inset Formula $W_{rpq}=0$
@@ -3996,11 +3989,11 @@ reference "eq:ham_cyclicconstrtaint"
 \begin_inset Formula $V_{qpr}\neq0$
 \end_inset
 
-, there is no equilibrium unless the string 
+, there is no equilibrium for the string 
 \begin_inset Formula $r$
 \end_inset
 
- is completely broken into strings with odd bit number.
+ unless it is completely broken into strings with odd bit number.
  
 \end_layout
 
@@ -4174,7 +4167,7 @@ For a finite
 \end_inset
 
  where the coefficients 
-\begin_inset Formula $C_{pq}$
+\begin_inset Formula $C_{pq}=\left(-\right)^{g_{p}g_{q}}C_{qp}$
 \end_inset
 
  are c-numbers of order 
@@ -4229,7 +4222,7 @@ reference "eq:cub_Vertices_Sym"
 
 \end_inset
 
-, otherwise it would lead to incorrect 
+, otherwise it would lead to an incorrect 
 \begin_inset Formula $\Delta E_{r}$
 \end_inset
 
@@ -4300,7 +4293,7 @@ reference "eq:olp_deltaE0"
 \begin_inset Formula ${\sum_{p,q}}^{\prime}$
 \end_inset
 
- indicates sum over states without zero modes.
+ indicates the sum over states without zero modes.
  We can replace 
 \begin_inset Formula $F_{0}^{\left(K\right)}$
 \end_inset
@@ -4351,7 +4344,8 @@ reference "eq:overlap_f:4"
 \end_inset
 
 .
-  The 
+ The phase is irrevelent.
+ The 
 \begin_inset Formula $\lambda=1,\,\kappa=0$
 \end_inset
 
@@ -4359,12 +4353,12 @@ reference "eq:overlap_f:4"
 \begin_inset Formula $\lambda=0,\,\kappa=1$
 \end_inset
 
- terms are of the form 
-\begin_inset Formula $F_{0}^{\left(K\right)*}F^{\left(K\right)}$
+ terms are quadratic forms of 
+\begin_inset Formula $F_{0}^{\left(K\right)}$
 \end_inset
 
  and 
-\begin_inset Formula $F_{0}^{\left(L\right)*}F^{\left(L\right)}$
+\begin_inset Formula $F_{0}^{\left(L\right)}$
 \end_inset
 
 .
@@ -4402,7 +4396,24 @@ For arbitrary
 \begin_inset Formula $s$
 \end_inset
 
-, the result is 
+, 
+\begin_inset Formula $\left|\det C\right|$
+\end_inset
+
+ is replaced by 
+\begin_inset Formula $ $
+\end_inset
+
+
+\begin_inset Formula $\left|\det C\right|^{s}$
+\end_inset
+
+ and each term inside the summation becomes a product over 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ So we have 
 \begin_inset Formula 
 \[
 \Delta E_{r}=\frac{1}{N^{2}}\sum_{K=1}^{M-1}{\sum_{p,q}}^{\prime}\frac{KLM\left|\det C\right|^{s}}{E_{r}-E_{p}-E_{q}}\sum_{\lambda_{i,j}=0,1}\prod_{a=1}^{s}\left\langle F_{\left\{ qp\right\} }^{a}f_{0,a}^{\lambda_{a,0}}f_{M-1,a}^{\lambda_{a,M-1}},F_{\left\{ r\right\} }^{a\dagger}\right\rangle _{W}^{*}\left\langle F_{\left\{ qp\right\} }^{a}f_{0,a}^{\lambda_{a,0}}f_{M-1,a}^{\lambda_{a,M-1}},F_{\left\{ r\right\} }^{a\dagger}\right\rangle _{V}.
@@ -4620,15 +4631,14 @@ reference "eq:cub_Amu"
 \end_inset
 
 .
- Finally, we need to calculate the vacuum expectation values on RHS of 
+ Finally, the vacuum expectation values on RHS of 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:olp_vev_v"
 
 \end_inset
 
-.
- It can be calculated using
+ can be calculated using
 \begin_inset Formula 
 \[
 \left\langle f_{i_{1}}f_{i_{2}}\cdots f_{i_{2n-1}}f_{i_{2n}}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle =\left(-\right)^{n}{\sum_{P\in S_{2n}}}^{\prime}\left(-\right)^{P}D_{i_{P(1)}i_{P(2)}}D_{i_{P(3)}i_{P(4)}}\cdots D_{i_{P(2n-1)}i_{P(2n)}},
@@ -4787,7 +4797,7 @@ reference "eq:olp_DeltaE"
 \begin_inset Formula $M$
 \end_inset
 
- is large we have 
+ is large 
 \begin_inset Formula 
 \begin{equation}
 \Delta E_{G}\sim\frac{1}{N^{2}}\sum_{K=1}^{M-1}{\sum_{p,q}}^{\prime}\frac{KLM\left|\det C\right|^{s}}{E_{G}-E_{p}-E_{q}}.\label{eq:olp_largeM}
@@ -4853,32 +4863,6 @@ We then consider the large
 \end_inset
 
 .
- When both 
-\begin_inset Formula $p$
-\end_inset
-
- and 
-\begin_inset Formula $q$
-\end_inset
-
- are ground energy states, 
-\begin_inset Formula $E_{G}-E_{p}-E_{q}\sim\mathcal{O}\left(1/M\right)$
-\end_inset
-
- by eq.
- 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:diag_ground_energy"
-
-\end_inset
-
-.
- If one of them are excited states, 
-\begin_inset Formula $E_{G}-E_{p}-E_{q}\sim\mathcal{O}\left(1\right)$
-\end_inset
-
-.
  When 
 \begin_inset Formula $s$
 \end_inset
@@ -4893,6 +4877,14 @@ reference "eq:diag_ground_energy"
 
  can be ground states, and hence, 
 \begin_inset Formula $1/\left(E_{G}-E_{p}-E_{q}\right)\sim\mathcal{O}\left(M\right)$
+\end_inset
+
+ by eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:diag_ground_energy"
+
 \end_inset
 
 .
@@ -7063,10 +7055,14 @@ reference "eq:App_psiG_norm1"
 \end_inset
 
  vanishes because of 
-\begin_inset Formula $\tilde{F}_{k}^{\dagger\pm}\bar{\psi}_{G}=0$
+\begin_inset Formula 
+\begin{equation}
+\tilde{F}_{k}^{\dagger\pm}\bar{\psi}_{G}=0,\label{eq:App_psiG_FtildeG}
+\end{equation}
+
 \end_inset
 
-, which can be verified by checking that 
+which can be verified by checking that 
 \begin_inset Formula 
 \[
 \tilde{F}_{k}^{\dagger\pm}\left(-s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)=\tilde{F}_{M-k}^{\dagger\pm}\left(-s_{k}+c_{k}\alpha_{M-k}\alpha_{k}\right)=0,
