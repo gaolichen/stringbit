@@ -3558,7 +3558,7 @@ reference "eq:cub_Vertices_DefV"
 , we arrive at 
 \begin_inset Formula 
 \begin{equation}
-\tilde{V}_{qpr}=\left(-\right)^{s\left(Kg_{q}+Lg_{p}\right)}\sum_{i=1}^{M}\int d\theta\,\bar{h}_{i,i+K+1}\bar{\psi}_{q}\left(\theta_{i+K+1}\cdots\theta_{i}\right)\bar{\psi}_{p}\left(\theta_{i+1}\cdots\theta_{i+K}\right)\psi_{r},\label{eq:cub_Vstr}
+\tilde{V}_{qpr}=\left(-\right)^{s\left(Kg_{q}+Lg_{p}\right)}\sum_{i=1}^{M}\int d\theta\,\bar{h}_{i,i+K+1}\bar{\psi}_{q}\left(\theta_{i+K+1}\cdots\theta_{i}\right)\bar{\psi}_{p}\left(\theta_{i+1}\cdots\theta_{i+K}\right)\psi_{r}.\label{eq:cub_Vstr}
 \end{equation}
 
 \end_inset
@@ -3572,6 +3572,15 @@ reference "eq:cub_Vertices_Sym"
 \end_inset
 
  to it.
+ Note that the sign factor is changed due to the reorder of 
+\begin_inset Formula $T_{p}$
+\end_inset
+
+ and 
+\begin_inset Formula $T_{q}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -3999,7 +4008,7 @@ reference "eq:cub_Vqpr_3"
 
 \end_inset
 
- can be interpreted as vacuum expectation value of the operator 
+ can be interpreted as a vacuum expectation value of the operator 
 \begin_inset Formula $F_{\left\{ q\right\} }F_{\left\{ p\right\} }h_{V}F_{\left\{ r\right\} }^{\dagger}\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)$
 \end_inset
 
@@ -8568,7 +8577,7 @@ even
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\psi_{1}^{\left(2\right)}=F_{1}^{\left(1,2\right)\dagger}F_{1}^{\left(2,2\right)\dagger}\psi_{G}^{\left(2\right)}$
+\begin_inset Formula $\psi_{1}^{\left(2\right)}=F_{1,a=1}^{\left(2\right)\dagger}F_{1,a=2}^{\left(2\right)\dagger}\psi_{G}^{\left(2\right)}$
 \end_inset
 
 
@@ -8580,7 +8589,7 @@ even
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\bar{\psi}_{1}^{\left(2\right)}=\tilde{F}_{1}^{\left(2,2\right)}\tilde{F}_{1}^{\left(1,2\right)}\bar{\psi}_{G}^{\left(2\right)}$
+\begin_inset Formula $\bar{\psi}_{1}^{\left(2\right)}=\tilde{F}_{1,a=2}^{\left(2\right)}\tilde{F}_{1,a=1}^{\left(2\right)}\bar{\psi}_{G}^{\left(2\right)}$
 \end_inset
 
 
@@ -8632,11 +8641,6 @@ name "tab:Energy-eigenstates-2"
 \end_inset
 
  that do not contain zero modes.
- The first index in the superscript of 
-\begin_inset Formula $F_{1}^{\left(1,2\right)}$
-\end_inset
-
- is the spin index and second indicates the length of the chain.
 \end_layout
 
 \end_inset
