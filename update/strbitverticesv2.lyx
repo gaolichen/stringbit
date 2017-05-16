@@ -3266,7 +3266,230 @@ reference "eq:cub_vac_VW"
 \end_inset
 
 .
+ In the following, we first mark remarks on the interaction vertices in
+ the subsection 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:remarks_on_vertices"
+
+\end_inset
+
+ and then give all the techenical details of the derivation of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:cub_Vertices"
+
+\end_inset
+
+ in subsection 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Derive_VW"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:remarks_on_vertices"
+
+\end_inset
+
+Remarks on Vertices
+\end_layout
+
+\begin_layout Standard
+A surprising result about the vertices is that 
+\begin_inset Formula $W_{rpq}=0$
+\end_inset
+
+ for odd 
+\begin_inset Formula $sKL$
+\end_inset
+
+.
+ It implies that, in odd 
+\begin_inset Formula $s$
+\end_inset
+
+ cases, the joining of two strings with odd bit number into one string is
+ strictly forbidden.
+ It stems from the cyclic constraint 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ham_cyclicconstrtaint"
+
+\end_inset
+
+ since it is the only condition we used in the derivation.
+ The result seems to be tightly related to another consequence of the cyclic
+ constraint in odd 
+\begin_inset Formula $s$
+\end_inset
+
+ cases: the ground states of strings with even bit number are missing, which
+ leads to the instability of these strings.
+ Indeed, if 
+\begin_inset Formula $W_{rpq}=0$
+\end_inset
+
+ but 
+\begin_inset Formula $V_{qpr}\neq0$
+\end_inset
+
+, there is no equilibrium for the string 
+\begin_inset Formula $r$
+\end_inset
+
+ unless it is completely broken into strings with odd bit number.
  
+\end_layout
+
+\begin_layout Standard
+The form of vertices in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:cub_Vertices"
+
+\end_inset
+
+ can be interpreted as follows.
+ The prefactor 
+\begin_inset Formula $M$
+\end_inset
+
+ of 
+\begin_inset Formula $V_{qpr}$
+\end_inset
+
+ shows that, when a large chain splits into two small chains of 
+\begin_inset Formula $K$
+\end_inset
+
+ and 
+\begin_inset Formula $L$
+\end_inset
+
+ bits, there are 
+\begin_inset Formula $M$
+\end_inset
+
+ ways to choose the break points, and each way contributes equally to 
+\begin_inset Formula $V_{qpr}$
+\end_inset
+
+.
+ Likewise, the prefactor 
+\begin_inset Formula $KL$
+\end_inset
+
+ of 
+\begin_inset Formula $W_{rpq}$
+\end_inset
+
+ shows that, when two small chains join into a large chain, there are 
+\begin_inset Formula $K\times L$
+\end_inset
+
+ ways to choose the joint points, and each way contributes equally to 
+\begin_inset Formula $W_{rpq}$
+\end_inset
+
+.
+ The operator 
+\begin_inset Formula $h_{V}^{a}=\frac{1}{2}\left(h_{K,1}^{a}+h_{M,K+1}^{a}\right)$
+\end_inset
+
+ reflects the fact that, to break one 
+\begin_inset Formula $M$
+\end_inset
+
+-bit string into 
+\begin_inset Formula $K$
+\end_inset
+
+-bit and 
+\begin_inset Formula $L$
+\end_inset
+
+-bit strings, one need to connect the bit 
+\begin_inset Formula $1$
+\end_inset
+
+ to bit 
+\begin_inset Formula $K$
+\end_inset
+
+ and bit 
+\begin_inset Formula $\left(K+1\right)$
+\end_inset
+
+ to bit 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Similarly, the operator 
+\begin_inset Formula $h_{W}=h_{K,K+1}^{a}+h_{M,1}^{a}$
+\end_inset
+
+ reflects the fact that, to join back the above two small strings into one,
+ one need to connect bit 
+\begin_inset Formula $K$
+\end_inset
+
+ to the bit 
+\begin_inset Formula $\left(K+1\right)$
+\end_inset
+
+ and bit 
+\begin_inset Formula $M$
+\end_inset
+
+ to the bit 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ The difference of factor 
+\begin_inset Formula $2$
+\end_inset
+
+ between 
+\begin_inset Formula $h_{V}^{a}$
+\end_inset
+
+ and 
+\begin_inset Formula $h_{W}^{a}$
+\end_inset
+
+ is because that, when joining two strings, one can inverse the labels of
+ the first small string as 
+\begin_inset Formula $1+i\leftrightarrow K-i$
+\end_inset
+
+ to obtain a different large string.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Derive_VW"
+
+\end_inset
+
+Derivation of 
+\begin_inset Formula $V_{qpr}$
+\end_inset
+
+ and 
+\begin_inset Formula $W_{rpq}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3848,7 +4071,7 @@ Note that
 \begin_inset Formula $W$
 \end_inset
 
- as product of vacuum expectation value over spin index 
+ as products of vacuum expectation values over spin index 
 \begin_inset Formula $a$
 \end_inset
 
@@ -3944,183 +4167,6 @@ end{subequations}
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsection
-Remark on Vertices
-\end_layout
-
-\begin_layout Standard
-A surprising result we obtained in this section is that 
-\begin_inset Formula $W_{rpq}=0$
-\end_inset
-
- for odd 
-\begin_inset Formula $sKL$
-\end_inset
-
-.
- It implies that, in odd 
-\begin_inset Formula $s$
-\end_inset
-
- cases, the joining of two strings with odd bit number into one string is
- strictly forbidden.
- It stems from the cyclic constraint 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:ham_cyclicconstrtaint"
-
-\end_inset
-
- since it is the only condition we used in the derivation.
- The result seems to be tightly related to another consequence of the cyclic
- constraint in odd 
-\begin_inset Formula $s$
-\end_inset
-
- cases: the ground states of strings with even bit number are missing, which
- leads to the instability of these strings.
- Indeed, if 
-\begin_inset Formula $W_{rpq}=0$
-\end_inset
-
- but 
-\begin_inset Formula $V_{qpr}\neq0$
-\end_inset
-
-, there is no equilibrium for the string 
-\begin_inset Formula $r$
-\end_inset
-
- unless it is completely broken into strings with odd bit number.
- 
-\end_layout
-
-\begin_layout Standard
-The form of vertices in 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:cub_Vertices"
-
-\end_inset
-
- can be interpreted as follows.
- The prefactor 
-\begin_inset Formula $M$
-\end_inset
-
- of 
-\begin_inset Formula $V_{qpr}$
-\end_inset
-
- shows that, when a large chain splits into two small chains of 
-\begin_inset Formula $K$
-\end_inset
-
- and 
-\begin_inset Formula $L$
-\end_inset
-
- bits, there are 
-\begin_inset Formula $M$
-\end_inset
-
- ways to choose the break points, and each way contributes equally to 
-\begin_inset Formula $V_{qpr}$
-\end_inset
-
-.
- Likewise, the prefactor 
-\begin_inset Formula $KL$
-\end_inset
-
- of 
-\begin_inset Formula $W_{rpq}$
-\end_inset
-
- shows that, when two small chains join into a large chain, there are 
-\begin_inset Formula $K\times L$
-\end_inset
-
- ways to choose the joint points, and each way contributes equally to 
-\begin_inset Formula $W_{rpq}$
-\end_inset
-
-.
- The operator 
-\begin_inset Formula $h_{V}^{a}=\frac{1}{2}\left(h_{K,1}^{a}+h_{M,K+1}^{a}\right)$
-\end_inset
-
- reflects the fact that, to break one 
-\begin_inset Formula $M$
-\end_inset
-
--bit string into 
-\begin_inset Formula $K$
-\end_inset
-
--bit and 
-\begin_inset Formula $L$
-\end_inset
-
--bit strings, one need to connect the bit 
-\begin_inset Formula $1$
-\end_inset
-
- to bit 
-\begin_inset Formula $K$
-\end_inset
-
- and bit 
-\begin_inset Formula $\left(K+1\right)$
-\end_inset
-
- to bit 
-\begin_inset Formula $M$
-\end_inset
-
-.
- Similarly, the operator 
-\begin_inset Formula $h_{W}=h_{K,K+1}^{a}+h_{M,1}^{a}$
-\end_inset
-
- reflects the fact that, to join back the above two small strings into one,
- one need to connect bit 
-\begin_inset Formula $K$
-\end_inset
-
- to the bit 
-\begin_inset Formula $\left(K+1\right)$
-\end_inset
-
- and bit 
-\begin_inset Formula $M$
-\end_inset
-
- to the bit 
-\begin_inset Formula $1$
-\end_inset
-
-.
- The difference of factor 
-\begin_inset Formula $2$
-\end_inset
-
- between 
-\begin_inset Formula $h_{V}^{a}$
-\end_inset
-
- and 
-\begin_inset Formula $h_{W}^{a}$
-\end_inset
-
- is because that, when joining two strings, one can inverse the labels of
- the first small string as 
-\begin_inset Formula $1+i\leftrightarrow K-i$
-\end_inset
-
- to obtain a different large string.
 \end_layout
 
 \begin_layout Section
