@@ -6174,7 +6174,14 @@ From the large
 \begin_inset Formula $s=24$
 \end_inset
 
- is as follows.
+ is as follows 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Thorn:2017private"
+
+\end_inset
+
+.
  Out of the 24 dimensions, 16 of them are paired to form 8 compactified
  bosonic dimensions and the rest 8 remain as fermionic dimension.
  Thus, it has the same degree of freedoms as the superstring model.
