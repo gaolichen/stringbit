@@ -5390,7 +5390,11 @@ reference "fig:SubEvsMxi0"
 \begin_inset Formula $M$
 \end_inset
 
- are allowed and each has two curves, one for odd 
+ are allowed and each 
+\begin_inset Formula $M$
+\end_inset
+
+ has two curves, one for odd 
 \begin_inset Formula $K$
 \end_inset
 
@@ -5398,8 +5402,7 @@ reference "fig:SubEvsMxi0"
 \begin_inset Formula $K$
 \end_inset
 
- points.
- We will explain this shortly.
+ points, for the reason will be clear shortly.
  For 
 \begin_inset Formula $s=2,\,3,\,4$
 \end_inset
@@ -5541,7 +5544,7 @@ The fact that there are two curves for each
 \begin_inset Formula $\Delta E$
 \end_inset
 
- than latter according to the plots.
+ than the latter according to the plots.
  Assuming that 
 \begin_inset Formula $M$
 \end_inset
@@ -5568,13 +5571,7 @@ The fact that there are two curves for each
 \end_inset
 
 .
- Now we compare these two cases in the low energy regime, in which the gap
- between energy levels and the lowest energy are at most of order 
-\begin_inset Formula $1/M$
-\end_inset
-
-.
- The lowest energy states are equal to 
+ The lowest energies of these two cases, which are equal to 
 \begin_inset Formula $-4\cot\frac{\pi}{2L}-4\cos\frac{\pi}{2K}+8$
 \end_inset
 
@@ -5592,9 +5589,18 @@ reference "eq:dia_cyclic_constraint_s"
 
 \end_inset
 
+, differs only by 
+\begin_inset Formula $\mathcal{O}\left(1\right)$
+\end_inset
+
 .
- Now consider the numbers of states in the low energy regime for these two
- cases.
+ Now we compare these two cases in the low energy regime, in which the gap
+ between energy levels and the lowest energies are at most of order 
+\begin_inset Formula $1/M$
+\end_inset
+
+.
+ Consider the numbers of states in the low energy regime.
  Because of the cyclic constraint, only chains with even bit number have
  excited states with energy gaps of order 
 \begin_inset Formula $1/M$
@@ -5782,7 +5788,7 @@ reference "eq:App_ham_subh:1"
 \end_inset
 
  is a scalar and this term behaves like a scalar potential with negative
- coefficient, which lead to dangerous instability.
+ coefficient, which lead to a dangerous instability.
  But when 
 \begin_inset Formula $\xi=1$
 \end_inset
