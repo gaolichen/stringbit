@@ -130,8 +130,6 @@ status open
 abstract{We provide a formalism to calculate the cubic interaction vertices
  of the stable string bit model, in which string bits have $s$ spin degrees
  of freedom but no space to move.
- We show that the joining of two strings with odd bit number into one string
- is strictly forbidden when $s$ is odd.
  With the vertices, we obtain a formula for one-loop self-energy, i.e., the
  $
 \backslash
@@ -540,13 +538,6 @@ reference "fig:Vertices"
 \end_inset
 
 .
- These improvements lead to a surprising result that, in the case of odd
- 
-\begin_inset Formula $s$
-\end_inset
-
-, the joining of two strings with odd bit number into one string is strictly
- forbidden.
  We then show that the interaction vertices can be calculated by finding
  the vacuum expectation values of ladder operators.
  These are necessary for the use of interaction vertices in our calculation
@@ -2495,7 +2486,7 @@ label{eq:conj_psibarG}
 \begin_inset Formula 
 \begin{align}
 \bar{\psi}_{G}^{s=1} & =\left(-i\right)^{\left\lfloor M/2\right\rfloor }\alpha_{0}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\quad\text{for odd }M\label{eq:conj_psibarG:1}\\
-\bar{\psi}_{G}^{s=1} & =\left(-i\right)^{M/2+1}\prod_{i=1}^{\left\lfloor M/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\alpha_{0}\alpha_{M/2}\quad\text{for even }M.\label{eq:conj_psibarG:2}
+\bar{\psi}_{G}^{s=1} & =\left(-i\right)^{M/2+1}\prod_{i=1}^{\left\lfloor \left(M-1\right)/2\right\rfloor }\left(-s_{i}+c_{i}\alpha_{M-i}\alpha_{i}\right)\alpha_{0}\alpha_{M/2}\quad\text{for even }M.\label{eq:conj_psibarG:2}
 \end{align}
 
 \end_inset
@@ -2760,7 +2751,7 @@ T_{r} & =\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta\right)\psi_{
  and 
 \begin_inset Formula 
 \begin{equation}
-T\left(\theta\right)=\sum_{r}\left(-\right)^{sMg_{t}}T_{r}\bar{\psi}_{r}\left(\theta\right).\label{eq:conj_completeness_1}
+T\left(\theta\right)=\sum_{r}\left(-\right)^{sMg_{r}}T_{r}\bar{\psi}_{r}\left(\theta\right).\label{eq:conj_completeness_1}
 \end{equation}
 
 \end_inset
@@ -3131,10 +3122,7 @@ label{eq:cub_Vertices}
 \begin_inset Formula 
 \begin{align}
 V_{qpr} & =M\left|\det C\right|^{s/2}\prod_{a=1}^{s}\left\langle F_{\left\{ qp\right\} }^{a},F_{\left\{ r\right\} }^{a\dagger}\right\rangle _{V},\label{eq:cub_VertexV}\\
-W_{rpq} & =\begin{cases}
-0 & \text{if }sKL\text{ is odd}\\
-KL\left|\det C\right|^{s/2}\prod_{a=1}^{s}\left\langle F_{\left\{ qp\right\} }^{a},F_{\left\{ r\right\} }^{a\dagger}\right\rangle _{W}^{\dagger} & \text{if }sKL\text{ is even}
-\end{cases}.\label{eq:cub_VertexW}
+W_{rpq} & =KL\left|\det C\right|^{s/2}\prod_{a=1}^{s}\left\langle F_{\left\{ qp\right\} }^{a},F_{\left\{ r\right\} }^{a\dagger}\right\rangle _{W}^{\dagger}.\label{eq:cub_VertexW}
 \end{align}
 
 \end_inset
@@ -3299,53 +3287,6 @@ name "sub:remarks_on_vertices"
 \end_inset
 
 Remarks on Vertices
-\end_layout
-
-\begin_layout Standard
-A surprising result about the vertices is that 
-\begin_inset Formula $W_{rpq}=0$
-\end_inset
-
- for odd 
-\begin_inset Formula $sKL$
-\end_inset
-
-.
- It implies that, in odd 
-\begin_inset Formula $s$
-\end_inset
-
- cases, the joining of two strings with odd bit number into one string is
- strictly forbidden.
- It stems from the cyclic constraint 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:ham_cyclicconstrtaint"
-
-\end_inset
-
- since it is the only condition we used in the derivation.
- The result seems to be tightly related to another consequence of the cyclic
- constraint in odd 
-\begin_inset Formula $s$
-\end_inset
-
- cases: the ground states of strings with even bit number are missing, which
- leads to the instability of these strings.
- Indeed, if 
-\begin_inset Formula $W_{rpq}=0$
-\end_inset
-
- but 
-\begin_inset Formula $V_{qpr}\neq0$
-\end_inset
-
-, there is no equilibrium for the string 
-\begin_inset Formula $r$
-\end_inset
-
- unless it is completely broken into strings with odd bit number.
- 
 \end_layout
 
 \begin_layout Standard
@@ -3766,11 +3707,11 @@ reference "eq:cub_Vertices_Sym"
 \begin_inset Formula $K\leftrightarrow L$
 \end_inset
 
-.
+:
 \begin_inset Formula 
 \begin{align*}
-\left(-\right)^{g_{p}g_{q}}\tilde{V}_{pqr} & =\left(-\right)^{g_{p}g_{q}}\left(-\right)^{s\left(Kg_{q}+Lg_{p}\right)}M\int d\theta\,\bar{\psi}_{p}\left(\theta_{L+1}\cdots\theta_{M}\right)\bar{\psi}_{q}\left(\theta_{1}\cdots\theta_{L}\right)h_{M,L+1}\psi_{r}\\
- & =\left(-\right)^{g_{p}g_{q}}\left(-\right)^{s\left(Kg_{q}+Lg_{p}\right)}M\int d\theta\,\bar{\psi}_{p}\left(\theta_{1}\cdots\theta_{K}\right)\bar{\psi}_{q}\left(\theta_{K+1}\cdots\theta_{M}\right)h_{K,1}\psi_{r}\\
+\left(-\right)^{g_{p}g_{q}}\tilde{V}_{pqr} & =\left(-\right)^{g_{p}g_{q}+s\left(Kg_{q}+Lg_{p}\right)}M\int d\theta\,\bar{\psi}_{p}\left(\theta_{L+1}\cdots\theta_{M}\right)\bar{\psi}_{q}\left(\theta_{1}\cdots\theta_{L}\right)h_{M,L+1}\psi_{r}\\
+ & =\left(-\right)^{g_{p}g_{q}+s\left(Kg_{q}+Lg_{p}\right)}M\int d\theta\,\bar{\psi}_{p}\left(\theta_{1}\cdots\theta_{K}\right)\bar{\psi}_{q}\left(\theta_{K+1}\cdots\theta_{M}\right)h_{K,1}\psi_{r}\\
  & =\left(-\right)^{s\left(Kg_{q}+Lg_{p}\right)}M\int d\theta\,\bar{\psi}_{q}\left(\theta_{K+1}\cdots\theta_{M}\right)\bar{\psi}_{p}\left(\theta_{1}\cdots\theta_{K}\right)h_{K,1}\psi_{r}.
 \end{align*}
 
@@ -3866,42 +3807,119 @@ We perform the similar calculation to the
 
 \end_inset
 
-We then calculate 
-\begin_inset Formula 
-\begin{align*}
-\left(-\right)^{g_{p}g_{q}}\tilde{W}_{rqp} & =\left(-\right)^{g_{p}g_{q}}\left(-\right)^{sK\left(g_{q}-sL\right)}KL\int d^{M}\theta\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)\left(h_{L,L+1}+h_{M,1}\right)\psi_{q}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{p}\left(\theta_{L+1}\cdots\theta_{M}\right)\\
- & =\left(-\right)^{g_{p}g_{q}}\left(-\right)^{sK\left(g_{q}-sL\right)}KL\int d^{M}\theta\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)\left(h_{M,1}+h_{K,K+1}\right)\psi_{q}\left(\theta_{K+1}\cdots\theta_{M}\right)\psi_{p}\left(\theta_{1}\cdots\theta_{K}\right)\\
- & =\left(-\right)^{sKL}\tilde{W}_{rpq},
-\end{align*}
-
-\end_inset
-
- where in the second equality we shifted the index as 
-\begin_inset Formula $\theta_{i}\to\theta_{i+K}$
-\end_inset
-
- and in the last equality commuted 
-\begin_inset Formula $\psi_{q}$
+Exchanging 
+\begin_inset Formula $p\leftrightarrow q$
 \end_inset
 
  and 
-\begin_inset Formula $\psi_{p}$
+\begin_inset Formula $K\leftrightarrow L$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\[
+\tilde{W}_{rqp}=\left(-\right)^{sK\left(g_{q}-sL\right)}KL\int d^{M}\theta\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)\left(h_{L,L+1}+h_{M,1}\right)\psi_{q}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{p}\left(\theta_{L+1}\cdots\theta_{M}\right)
+\]
+
+\end_inset
+
+Renaming integral variables as 
+\begin_inset Formula $\left\{ \theta_{1},\cdots,\theta_{L}\right\} \to\left\{ \theta_{K+1},\cdots,\theta_{M}\right\} $
+\end_inset
+
+, 
+\begin_inset Formula $\left\{ \theta_{L+1},\cdots,\theta_{M}\right\} \to\left\{ \theta_{1},\cdots,\theta_{K}\right\} $
+\end_inset
+
+ and then applying the property that 
+\begin_inset Formula $\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)$
+\end_inset
+
+ is invariant under the cyclic permutation 
+\begin_inset Formula $\theta_{k}\to\theta_{k+1}$
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+One can show that 
+\begin_inset Formula $\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)$
+\end_inset
+
+ is invariant under 
+\begin_inset Formula $\theta_{k}\to\theta_{k+1}$
+\end_inset
+
+ as follows.
+ From eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:conj_psibarG:1"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:conj_psibarG:2"
+
+\end_inset
+
+, we see that 
+\begin_inset Formula $\bar{\psi}_{G}^{s=1}\to\left(-\right)^{M-1}\bar{\psi}_{G}^{s=1}$
 \end_inset
 
 .
- It then implies that 
-\begin_inset Formula $W_{rpq}=0$
+ It then follows that 
+\begin_inset Formula $\bar{\psi}_{G}$
 \end_inset
 
- if 
-\begin_inset Formula $sKL$
+ transforms 
+\begin_inset Formula $\bar{\psi}_{G}\to\left(-\right)^{s\left(M-1\right)}\bar{\psi}_{G}$
 \end_inset
 
- is odd, and 
+.
+ From the cyclic constraint 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:dia_cyclic_constraint_s"
+
+\end_inset
+
+, we see that 
+\begin_inset Formula $\tilde{F}_{\left\{ r\right\} }$
+\end_inset
+
+ transforms in the same way as 
+\begin_inset Formula $\bar{\psi}_{G}$
+\end_inset
+
+.
+ Therefore 
+\begin_inset Formula $\bar{\psi}_{r}=\tilde{F}_{\left\{ r\right\} }\bar{\psi}_{G}$
+\end_inset
+
+ is invariant under 
+\begin_inset Formula $\theta_{k}\to\theta_{k+1}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+, we obtain that 
+\begin_inset Formula $\tilde{W}_{rqp}=\left(-\right)^{g_{p}g_{q}}\tilde{W}_{rpq}$
+\end_inset
+
+, which implies that 
 \begin_inset Formula $W_{rpq}=\tilde{W}_{rpq}$
 \end_inset
 
- otherwise.
+.
 \end_layout
 
 \begin_layout Standard
@@ -4031,7 +4049,7 @@ V_{qpr}^{s=1}=\left(-\right)^{L\left(g_{p}-K\right)}M\left|\det C\right|^{1/2}\l
 
 .
  We perform similar calculation for 
-\begin_inset Formula $W_{rst}^{\left(L,K\right)}$
+\begin_inset Formula $W_{rpq}$
 \end_inset
 
  and find 
