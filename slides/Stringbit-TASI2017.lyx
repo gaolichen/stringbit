@@ -1,0 +1,724 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\setbeamercolor{background canvas}{bg=}
+\setbeamertemplate{background}{\includegraphics[width=1.0\paperwidth,height=1.0\paperheight]{Vintage.png}}
+
+\usepackage{graphicx} 
+\usepackage{cancel}
+\newcommand{\zero}[1] {\cancelto{0}{#1}}
+\newcommand{\tr}{\mathrm{Tr}\,}
+\newcommand{\ba}{\bar{a}}
+\newcommand{\bb}{\bar{b}}
+\newcommand{\normord}[1]{{:}\!\mathrel{#1}\!{:}}
+\newcommand{\ket}[1]{\left|#1\right\rangle}
+\newcommand{\bra}[1]{\left\langle #1\right|}
+\newcommand{\ketp}[1]{\left|#1\right\} }
+\newcommand{\brap}[1]{\left\{ #1\right|}
+\newcommand{\dprod}[2]{\left\langle #1|#2\right\rangle}
+\newcommand{\dprodp}[2]{\left\{ #1|#2\right\} }
+\newcommand{\mat}[1]{\mathbf{#1}}
+\newcommand{\g}{\mathrm{g}}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine natbib_authoryear
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout TitleGraphic
+The Stringbit Model
+\end_layout
+
+\begin_layout Author
+Gaoli Chen
+\end_layout
+
+\begin_layout Institute
+University of Florida
+\end_layout
+
+\begin_layout Date
+June 21, 2017
+\end_layout
+
+\begin_layout BeginFrame
+Motivation
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+.5
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Microscopic physics underlying string theory.
+\end_layout
+
+\begin_layout Itemize
+Quantum gravity: emergence of space from string bits.
+\end_layout
+
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+.4
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset Graphics
+	filename beads2.jpg
+	width 90col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Introduction
+\end_layout
+
+\begin_layout Itemize
+Proposed by Thorn ccc
+\end_layout
+
+\begin_layout Itemize
+A string is a chain comprised of pointlike entities called string bits.
+\end_layout
+
+\begin_layout Itemize
+A string bit has transverse coordinates 
+\begin_inset Formula $\mathbf{x}=\left(x^{2},\cdots,x^{D-1}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $x^{+}=\left(x^{0}+x^{1}\right)/\sqrt{2}$
+\end_inset
+
+, but 
+\begin_inset Formula $x^{-}=\left(x^{0}-x^{1}\right)/\sqrt{2}$
+\end_inset
+
+ is missing.
+ Under Galilean symmetry 
+\begin_inset Formula $P^{+}=mM$
+\end_inset
+
+, where 
+\begin_inset Formula $m$
+\end_inset
+
+ is mass of each string bit and 
+\begin_inset Formula $M$
+\end_inset
+
+ is the number of bits.
+ When 
+\begin_inset Formula $M$
+\end_inset
+
+ is large and 
+\begin_inset Formula $P^{+}$
+\end_inset
+
+ fixed, 
+\begin_inset Formula $P^{+}$
+\end_inset
+
+ behaves as a continuous variable and its conjugate can be interpreted as
+ the missing coordinate, and Lotentz invariance is regained.
+ 
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Superstring bit operators
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<1->
+\end_layout
+
+\end_inset
+
+String bit creation operator: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(\bar{\phi}_{a_{1}\cdots a_{n}}\right)_{\alpha}^{\beta},\quad a_{i}=1,\cdots,s,\quad n=0,\cdots,s,\quad\alpha,\beta=1,\cdots,N
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+ where 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ are totally antisymmetric, 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, 
+\begin_inset Formula $\beta$
+\end_inset
+
+ color indices of 
+\begin_inset Formula $U\left(N\right)$
+\end_inset
+
+ group, s maximum number of spin indices.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\left[\left(\phi_{a_{1}\cdots a_{n}}\right){}_{\alpha}^{\beta},\left(\bar{\phi}_{b_{1}\cdots b_{m}}\right){}_{\gamma}^{\delta}\right]_{\pm}=\delta_{mn}\delta_{\alpha}^{\delta}\delta_{\gamma}^{\beta}\sum_{P\in S_{n}}\left(-\right)^{P}\delta_{a_{1}b_{P_{1}}}\cdots\delta_{a_{n}b_{P_{n}}}.
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<2->
+\end_layout
+
+\end_inset
+
+A closed string is represented by 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\tr\bar{\phi}\bar{\phi}\cdots\bar{\phi}\ket{0}$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Hamiltonian
+\end_layout
+
+\begin_layout Itemize
+For 
+\begin_inset Formula $s=1$
+\end_inset
+
+, 
+\begin_inset Formula $\bar{a}\equiv\bar{\phi},\quad\bar{b}\equiv\bar{\phi}_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+H=\frac{2}{N}\tr\left[\left(\bar{a}^{2}-i\bar{b}^{2}\right)a^{2}-\left(\bar{b}^{2}-i\bar{a}^{2}\right)b^{2}+\left(\bar{a}\bar{b}+\bar{b}\bar{a}\right)ba+\left(\bar{a}\bar{b}-\bar{b}\bar{a}\right)ab\right]
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+For arbitary 
+\begin_inset Formula $s$
+\end_inset
+
+, 
+\begin_inset Formula $H=\sum_{i=1}^{5}H_{i}$
+\end_inset
+
+, where
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+small
+\backslash
+begin{subequations}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+H_{1} & =\frac{2}{N}\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{s-2n}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}},\\
+H_{2} & =\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{bb_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{ba_{1}\cdots a_{n}},\\
+H_{3} & =\frac{2}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{ba_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{bb_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}},\\
+H_{4} & =\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}\phi_{bb_{1}\cdots b_{k}}\phi_{ba_{1}\cdots a_{n}},\\
+H_{5} & =-\frac{2i}{N}\sum_{n=0}^{s-1}\sum_{k=0}^{s-1}\frac{\left(-1\right)^{k}}{n!k!}\tr\bar{\phi}_{ba_{1}\cdots a_{n}}\bar{\phi}_{bb_{1}\cdots b_{k}}\phi_{b_{1}\cdots b_{k}}\phi_{a_{1}\cdots a_{n}}.
+\end{align*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{subequations}
+\backslash
+normalsize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+\begin_inset Formula $N=\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+At large 
+\begin_inset Formula $N$
+\end_inset
+
+ strings do not interact.
+\end_layout
+
+\begin_layout Itemize
+Energy spectrum
+\begin_inset Formula 
+\[
+E_{\{\lambda_{k}\}}=-4\cot\frac{\pi}{2M}+8\sum_{k=1}^{M-1}\lambda_{k}\sin\frac{k\pi}{M},\quad\lambda_{k}=0,\,1
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+E_{G}=-4\cot\frac{\pi}{2M}=-\frac{8M}{\pi}+\frac{2\pi}{3M}+\mathcal{O}\left(M^{-3}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+\begin_inset Formula $1/N$
+\end_inset
+
+ Expansion
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="40pt">
+<column alignment="center" valignment="middle" width="22col%">
+<column alignment="right" valignment="middle" width="50pt">
+<column alignment="center" valignment="middle" width="21col%">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $V_{pqr}=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename VertexVs.png
+	width 20col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $W_{rpq}=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename VertexWs.png
+	width 20col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename one_loop.png
+	width 50col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Some Results
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W_{rpq}=0$
+\end_inset
+
+ when 
+\begin_inset Formula $s$
+\end_inset
+
+, bit numbers of 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $q$
+\end_inset
+
+ are odd.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Thorn:2014hia"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Large 
+\begin_inset Formula $M$
+\end_inset
+
+ behavior of ground state self-energy:
+\begin_inset Formula 
+\[
+\Delta E_{G}\sim\frac{1}{N^{2}}M^{5-s/4},\quad\text{for even }s
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Delta E_{G}\sim\frac{1}{N^{2}}M^{4-s/4},\quad\text{for odd }s
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+when 
+\begin_inset Formula $s=24$
+\end_inset
+
+, 
+\begin_inset Formula $\Delta E_{G}\sim\frac{1}{N^{2}}M^{-1}\sim1/P^{+}$
+\end_inset
+
+, which resembles Poincaré invariant dispersion relation 
+\begin_inset Formula $P^{-}=\mu^{2}/P^{+}$
+\end_inset
+
+ in 
+\begin_inset Formula $1+1$
+\end_inset
+
+ dimension.
+ 
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size huge
+\color blue
+Thank you!
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "ref"
+options "plain"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
