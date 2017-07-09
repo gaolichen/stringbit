@@ -89,8 +89,8 @@ The statement that
 \end_inset
 
  is odd is incorrect.
- It was due to a mistake in the calculation of equation (4.9), which was
- an unnumbered equaion in the first submission.
+ It was due to a mistake in equation (4.9), which was an unnumbered equation
+ in the first submission.
  To correct the error, the author made the following changes.
 \end_layout
 
@@ -171,7 +171,7 @@ Correct the calculation error of equation (4.9).
 \end_inset
 
 .
- The techenical details is explained in the main text after the equation
+ The technical details are explained in the main text after the equation
  (4.9) and the footnote 3.
 \end_layout
 
