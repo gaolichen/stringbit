@@ -3823,7 +3823,7 @@ Exchanging
 
 \end_inset
 
-Renaming integral variables as 
+Renaming the integral variables as 
 \begin_inset Formula $\left\{ \theta_{1},\cdots,\theta_{L}\right\} \to\left\{ \theta_{K+1},\cdots,\theta_{M}\right\} $
 \end_inset
 
@@ -3848,7 +3848,7 @@ One can show that
 \begin_inset Formula $\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)$
 \end_inset
 
- is invariant under 
+ is invariant under the cyclic permutation 
 \begin_inset Formula $\theta_{k}\to\theta_{k+1}$
 \end_inset
 
@@ -3872,12 +3872,16 @@ reference "eq:conj_psibarG:2"
 \begin_inset Formula $\bar{\psi}_{G}^{s=1}\to\left(-\right)^{M-1}\bar{\psi}_{G}^{s=1}$
 \end_inset
 
+ as 
+\begin_inset Formula $\theta_{k}\to\theta_{k+1}$
+\end_inset
+
 .
  It then follows that 
 \begin_inset Formula $\bar{\psi}_{G}$
 \end_inset
 
- transforms 
+ transforms as 
 \begin_inset Formula $\bar{\psi}_{G}\to\left(-\right)^{s\left(M-1\right)}\bar{\psi}_{G}$
 \end_inset
 
@@ -3898,15 +3902,11 @@ reference "eq:dia_cyclic_constraint_s"
 \end_inset
 
 .
- Therefore 
+ Therefore, 
 \begin_inset Formula $\bar{\psi}_{r}=\tilde{F}_{\left\{ r\right\} }\bar{\psi}_{G}$
 \end_inset
 
- is invariant under 
-\begin_inset Formula $\theta_{k}\to\theta_{k+1}$
-\end_inset
-
-.
+ is invariant.
 \end_layout
 
 \end_inset
@@ -3916,7 +3916,7 @@ reference "eq:dia_cyclic_constraint_s"
 \end_inset
 
 , which implies that 
-\begin_inset Formula $W_{rpq}=\tilde{W}_{rpq}$
+\begin_inset Formula $W_{rpq}=\left(\tilde{W}_{rpq}+\left(-\right)^{g_{p}g_{q}}\tilde{W}_{rqp}\right)=\tilde{W}_{rpq}$
 \end_inset
 
 .
@@ -6974,7 +6974,7 @@ reference "eq:App_ham_deltah"
 \begin_inset Formula $\Delta H$
 \end_inset
 
- commute with the supersymmetric operators 
+ commute with the supersymmetry operators 
 \begin_inset Formula $Q^{a}$
 \end_inset
 
