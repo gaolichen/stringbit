@@ -3817,9 +3817,9 @@ Exchanging
 
 , we have 
 \begin_inset Formula 
-\[
+\begin{equation}
 \tilde{W}_{rqp}=\left(-\right)^{sK\left(g_{q}-sL\right)}KL\int d^{M}\theta\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)\left(h_{L,L+1}+h_{M,1}\right)\psi_{q}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{p}\left(\theta_{L+1}\cdots\theta_{M}\right)
-\]
+\end{equation}
 
 \end_inset
 

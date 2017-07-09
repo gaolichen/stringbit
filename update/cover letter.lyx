@@ -68,13 +68,120 @@ Gaoli Chen
 \end_layout
 
 \begin_layout Standard
-The authors would like to thank the referee for the valuable comments and
- suggestions regarding the submission DE12221.
- Particuarly, the referee think that we should provide physical interpretation
- on the following: in the cases of odd s, the cubic interactions strictly
- vanish for the joining two strings with the odd bit numbers into one string.
- After a careful verification, we found a mistake in our calculation which
- leads to the incorrect result.
+The author would like to thank the referee for the valuable remarks regarding
+ the submission DE12221.
+ The remarks motivated the author to reexamine the calculation of the vertex
+ 
+\begin_inset Formula $W_{rpq}$
+\end_inset
+
+ and corrected an error on it.
+ 
+\end_layout
+
+\begin_layout Standard
+The statement that 
+\begin_inset Formula $W_{rpq}$
+\end_inset
+
+ vanishes if 
+\begin_inset Formula $sKL$
+\end_inset
+
+ is odd is incorrect.
+ It was due to a mistake in the calculation of equation (4.9), which was
+ an unnumbered equaion in the first submission.
+ To correct the error, the author made the following changes.
+\end_layout
+
+\begin_layout Itemize
+Remove the relevant remarks about the statement from the paper: 1) The second
+ sentence of the abstract.
+ 2) The sentence 
+\begin_inset Quotes eld
+\end_inset
+
+These improvements lead to ...
+\begin_inset Quotes erd
+\end_inset
+
+ in the first bullet of the Introduction.
+ 3) The first paragraph of the subsection 
+\begin_inset Quotes eld
+\end_inset
+
+4.1 Remarks on Vertices
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Correct the calculation error of equation (4.9).
+ Previously, the result of the calculation was 
+\begin_inset Formula $\left(-\right)^{g_{p}g_{q}}\tilde{W}_{rqp}=\left(-\right)^{sKL}\tilde{W}_{rpq}$
+\end_inset
+
+, which implies that 
+\begin_inset Formula $W_{rpq}=\frac{1}{2}\left(\tilde{W}_{rpq}+\left(-\right)^{g_{p}g_{q}}\tilde{W}_{rqp}\right)=0$
+\end_inset
+
+ if 
+\begin_inset Formula $sKL=0$
+\end_inset
+
+.
+ In the second line of the equation, the author shifted the variables as
+ 
+\begin_inset Formula $\theta_{i}\to\theta_{i+K}$
+\end_inset
+
+ in the integrand and assumed that the integral does not change.
+ This is incorrect.
+ The integral is only invariant under the cyclic shift among the subset
+ 
+\begin_inset Formula $\left\{ \theta_{1},\cdots,\theta_{L}\right\} $
+\end_inset
+
+ or 
+\begin_inset Formula $\left\{ \theta_{L+1},\cdots,\theta_{M}\right\} $
+\end_inset
+
+ but not the entire set.
+ After the correction, the new result is 
+\begin_inset Formula $\tilde{W}_{rqp}=\left(-\right)^{g_{p}g_{q}}\tilde{W}_{rpq}$
+\end_inset
+
+, which implies that 
+\begin_inset Formula $\tilde{W}_{rqp}$
+\end_inset
+
+ is already (anti-)symmetrized over 
+\begin_inset Formula $p$
+\end_inset
+
+, 
+\begin_inset Formula $q$
+\end_inset
+
+ and 
+\begin_inset Formula $W_{rpq}=\tilde{W}_{rpq}$
+\end_inset
+
+.
+ The techenical details is explained in the main text after the equation
+ (4.9) and the footnote 3.
+\end_layout
+
+\begin_layout Standard
+The author would like to stress that, in addition to the second point mentioned
+ in the referee report, the paper provides a formalism to calculate the
+ interaction vertices via the calculation of the vacuum expectation values
+ of ladder operators.
+ This is important because it is necessary for the use of interaction vertex
+ in calculations of observables.
 \end_layout
 
 \end_body
