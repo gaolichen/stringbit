@@ -89,8 +89,8 @@ The statement that
 \end_inset
 
  is odd is incorrect.
- It was due to a mistake in equation (4.9), which was an unnumbered equation
- in the first submission.
+ It was due to a mistake in equation (4.9), which was previously an unnumbered
+ equation in the first submission.
  To correct the error, the author made the following changes.
 \end_layout
 
@@ -105,7 +105,7 @@ These improvements lead to ...
 \begin_inset Quotes erd
 \end_inset
 
- in the first bullet of the Introduction.
+ in the first bullet of the Introduction section.
  3) The first paragraph of the subsection 
 \begin_inset Quotes eld
 \end_inset
@@ -129,19 +129,22 @@ Correct the calculation error of equation (4.9).
 \end_inset
 
  if 
-\begin_inset Formula $sKL=0$
+\begin_inset Formula $sKL$
 \end_inset
 
-.
- In the second line of the equation, the author shifted the variables as
- 
+ is odd.
+ The mistake is that, in the second line of the equation, the author shifted
+ the 
+\begin_inset Formula $\theta$
+\end_inset
+
+ variables as 
 \begin_inset Formula $\theta_{i}\to\theta_{i+K}$
 \end_inset
 
- in the integrand and assumed that the integral does not change.
- This is incorrect.
- The integral is only invariant under the cyclic shift among the subset
- 
+ in the integrand and assumed that the integral would not change.
+ This is incorrect because that the integral is only invariant under the
+ cyclic shift among the subset 
 \begin_inset Formula $\left\{ \theta_{1},\cdots,\theta_{L}\right\} $
 \end_inset
 
@@ -149,7 +152,11 @@ Correct the calculation error of equation (4.9).
 \begin_inset Formula $\left\{ \theta_{L+1},\cdots,\theta_{M}\right\} $
 \end_inset
 
- but not the entire set.
+ but not the entire set 
+\begin_inset Formula $\left\{ \theta_{1},\cdots,\theta_{M}\right\} $
+\end_inset
+
+.
  After the correction, the new result is 
 \begin_inset Formula $\tilde{W}_{rqp}=\left(-\right)^{g_{p}g_{q}}\tilde{W}_{rpq}$
 \end_inset
@@ -176,10 +183,23 @@ Correct the calculation error of equation (4.9).
 \end_layout
 
 \begin_layout Standard
-The author would like to stress that, in addition to the second point mentioned
- in the referee report, the paper provides a formalism to calculate the
- interaction vertices via the calculation of the vacuum expectation values
- of ladder operators.
+The change does not affect other parts of the paper.
+ In section 5, derivation of one-loop self-energy did not use the wrong
+ result.
+ The numerical computations of section 6 are not affected either because
+ it only focus on the ground states of the even 
+\begin_inset Formula $sKL$
+\end_inset
+
+ cases.
+ 
+\end_layout
+
+\begin_layout Standard
+Finally, the author would like to stress that, in addition to the second
+ point mentioned in the referee report, the paper provides a formalism to
+ calculate the interaction vertices via the calculation of the vacuum expectatio
+n values of ladder operators.
  This is important because it is necessary for the use of interaction vertex
  in calculations of observables.
 \end_layout
