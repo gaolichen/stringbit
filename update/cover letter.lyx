@@ -115,6 +115,15 @@ These improvements lead to ...
 \end_layout
 
 \begin_layout Itemize
+Update the formula (4.3b).
+ Now the cases for even and odd 
+\begin_inset Formula $sKL$
+\end_inset
+
+ are the same.
+\end_layout
+
+\begin_layout Itemize
 Correct the calculation error of equation (4.9).
  Previously, the result of the calculation was 
 \begin_inset Formula $\left(-\right)^{g_{p}g_{q}}\tilde{W}_{rqp}=\left(-\right)^{sKL}\tilde{W}_{rpq}$

@@ -3818,7 +3818,7 @@ Exchanging
 , we have 
 \begin_inset Formula 
 \begin{equation}
-\tilde{W}_{rqp}=\left(-\right)^{sK\left(g_{q}-sL\right)}KL\int d^{M}\theta\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)\left(h_{L,L+1}+h_{M,1}\right)\psi_{q}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{p}\left(\theta_{L+1}\cdots\theta_{M}\right)
+\tilde{W}_{rqp}=\left(-\right)^{sK\left(g_{q}-sL\right)}KL\int d\theta\,\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)\left(h_{L,L+1}+h_{M,1}\right)\psi_{q}\left(\theta_{1}\cdots\theta_{L}\right)\psi_{p}\left(\theta_{L+1}\cdots\theta_{M}\right).
 \end{equation}
 
 \end_inset
@@ -3831,7 +3831,15 @@ Renaming the integral variables as
 \begin_inset Formula $\left\{ \theta_{L+1},\cdots,\theta_{M}\right\} \to\left\{ \theta_{1},\cdots,\theta_{K}\right\} $
 \end_inset
 
- and then applying the property that 
+, under which 
+\begin_inset Formula $h_{L,L+1}+h_{M,1}$
+\end_inset
+
+ becomes 
+\begin_inset Formula $h_{M,1}+h_{K,K+1}$
+\end_inset
+
+, and then applying the property that 
 \begin_inset Formula $\bar{\psi}_{r}\left(\theta_{1}\cdots\theta_{M}\right)$
 \end_inset
 
