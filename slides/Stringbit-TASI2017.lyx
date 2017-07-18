@@ -80,8 +80,18 @@
 
 \begin_body
 
-\begin_layout TitleGraphic
+\begin_layout Title
 The Stringbit Model
+\end_layout
+
+\begin_layout TitleGraphic
+\begin_inset Graphics
+	filename beads.jpg
+	width 60col%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Author
@@ -165,28 +175,33 @@ Introduction
 \end_layout
 
 \begin_layout Itemize
-Proposed by Thorn ccc
+Proposed by 
+\color blue
+[O.
+ Bergman, C.
+ Thorn, hep-th/9506125]
 \end_layout
 
 \begin_layout Itemize
 A string is a chain comprised of pointlike entities called string bits.
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
-A string bit has transverse coordinates 
+Lightcone coordinates: 
 \begin_inset Formula $\mathbf{x}=\left(x^{2},\cdots,x^{D-1}\right)$
 \end_inset
 
  and 
-\begin_inset Formula $x^{+}=\left(x^{0}+x^{1}\right)/\sqrt{2}$
+\begin_inset Formula $x^{+}$
 \end_inset
 
-, but 
-\begin_inset Formula $x^{-}=\left(x^{0}-x^{1}\right)/\sqrt{2}$
-\end_inset
+.
+ 
+\end_layout
 
- is missing.
- Under Galilean symmetry 
+\begin_layout Itemize
+Under Galilean symmetry 
 \begin_inset Formula $P^{+}=mM$
 \end_inset
 
@@ -199,23 +214,33 @@ A string bit has transverse coordinates
 \end_inset
 
  is the number of bits.
- When 
-\begin_inset Formula $M$
+ 
+\end_layout
+
+\begin_layout Itemize
+When 
+\begin_inset Formula $M\to\infty$
 \end_inset
 
- is large and 
-\begin_inset Formula $P^{+}$
-\end_inset
-
- fixed, 
+, 
 \begin_inset Formula $P^{+}$
 \end_inset
 
  behaves as a continuous variable and its conjugate can be interpreted as
- the missing coordinate, and Lotentz invariance is regained.
+ the missing coordinate 
+\begin_inset Formula $x^{-}$
+\end_inset
+
+.
  
 \end_layout
 
+\begin_layout Itemize
+Lotentz invariance is regained in critical dimension.
+ 
+\end_layout
+
+\end_deeper
 \begin_layout EndFrame
 
 \end_layout
@@ -225,16 +250,6 @@ Superstring bit operators
 \end_layout
 
 \begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<1->
-\end_layout
-
-\end_inset
-
 String bit creation operator: 
 \begin_inset ERT
 status open
@@ -320,20 +335,13 @@ normalsize
 \end_inset
 
 
+\color blue
+[C.
+ Thorn, 1407.8144]
 \end_layout
 
 \begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<2->
-\end_layout
-
-\end_inset
-
-A closed string is represented by 
+A closed string: 
 \begin_inset ERT
 status open
 
@@ -381,10 +389,14 @@ For
 \end_inset
 
 , 
-\begin_inset Formula $\bar{a}\equiv\bar{\phi},\quad\bar{b}\equiv\bar{\phi}_{1}$
+\begin_inset Formula $\bar{a}\equiv\bar{\phi},\,\bar{b}\equiv\bar{\phi}_{1}$
 \end_inset
 
-
+ 
+\color blue
+[S.
+ Sun and C.
+ Thorn, 1402.7362]
 \end_layout
 
 \begin_layout Standard
@@ -433,7 +445,10 @@ For arbitary
 \begin_inset Formula $H=\sum_{i=1}^{5}H_{i}$
 \end_inset
 
-, where
+, where 
+\color blue
+[C.
+ Thorn, 1407.8144]
 \end_layout
 
 \begin_layout Standard
@@ -475,45 +490,6 @@ end{subequations}
 \backslash
 normalsize
 \end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout EndFrame
-
-\end_layout
-
-\begin_layout BeginFrame
-\begin_inset Formula $N=\infty$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-At large 
-\begin_inset Formula $N$
-\end_inset
-
- strings do not interact.
-\end_layout
-
-\begin_layout Itemize
-Energy spectrum
-\begin_inset Formula 
-\[
-E_{\{\lambda_{k}\}}=-4\cot\frac{\pi}{2M}+8\sum_{k=1}^{M-1}\lambda_{k}\sin\frac{k\pi}{M},\quad\lambda_{k}=0,\,1
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-E_{G}=-4\cot\frac{\pi}{2M}=-\frac{8M}{\pi}+\frac{2\pi}{3M}+\mathcal{O}\left(M^{-3}\right)
-\]
 
 \end_inset
 
@@ -614,109 +590,20 @@ E_{G}=-4\cot\frac{\pi}{2M}=-\frac{8M}{\pi}+\frac{2\pi}{3M}+\mathcal{O}\left(M^{-
 
 \end_layout
 
-\begin_layout EndFrame
-
-\end_layout
-
-\begin_layout BeginFrame
-Some Results
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $W_{rpq}=0$
-\end_inset
-
- when 
-\begin_inset Formula $s$
-\end_inset
-
-, bit numbers of 
-\begin_inset Formula $p$
-\end_inset
-
- and 
-\begin_inset Formula $q$
-\end_inset
-
- are odd.
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Thorn:2014hia"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Large 
-\begin_inset Formula $M$
-\end_inset
-
- behavior of ground state self-energy:
-\begin_inset Formula 
-\[
-\Delta E_{G}\sim\frac{1}{N^{2}}M^{5-s/4},\quad\text{for even }s
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\Delta E_{G}\sim\frac{1}{N^{2}}M^{4-s/4},\quad\text{for odd }s
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-when 
-\begin_inset Formula $s=24$
-\end_inset
-
-, 
-\begin_inset Formula $\Delta E_{G}\sim\frac{1}{N^{2}}M^{-1}\sim1/P^{+}$
-\end_inset
-
-, which resembles Poincaré invariant dispersion relation 
-\begin_inset Formula $P^{-}=\mu^{2}/P^{+}$
-\end_inset
-
- in 
-\begin_inset Formula $1+1$
-\end_inset
-
- dimension.
- 
-\end_layout
-
-\begin_layout EndFrame
-
-\end_layout
-
 \begin_layout Standard
-\align center
+\align right
 
-\size huge
 \color blue
-Thank you!
+[C.
+ Thorn, 1512.08403];
+\color inherit
+ 
+\color blue
+[G.
+ Chen, 1701.04806]
 \end_layout
 
 \begin_layout EndFrame
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-bibfiles "ref"
-options "plain"
-
-\end_inset
-
 
 \end_layout
 
