@@ -3,7 +3,6 @@
 \documentclass[english]{article}
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
-\usepackage{array}
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{esint}
@@ -114,16 +113,12 @@ the work in the following way.
 
 \begin{figure}
 \begin{centering}
-\begin{tabular}{>{\centering}m{40pt}>{\centering}m{0.22\columnwidth}>{\raggedleft}m{50pt}>{\centering}m{0.21\columnwidth}}
-$V_{qpr}=$ & \includegraphics[bb=300bp 120bp 620bp 360bp,clip,width=0.2\columnwidth]{Vqpr} & $W_{rpq}=$ & \includegraphics[bb=235bp 100bp 555bp 340bp,clip,width=0.2\columnwidth]{Wrpq}\tabularnewline
-\end{tabular}
+\includegraphics[width=0.5\textwidth]{Vqpr}\includegraphics[width=0.5\textwidth]{Wrpq}
 \par\end{centering}
 
 \caption{\label{fig:Vertices}The vertex $V_{qpr}$ is the amplitude of splitting
 a large string $r$ into two small strings $p$ and $q$, while the
 vertex $W_{rpq}$ is the amplitude of joining $p$ and $q$ into $r$. }
-
-
 \end{figure}
 
 \begin{itemize}

@@ -376,74 +376,18 @@ status open
 
 \begin_layout Plain Layout
 \align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="1" columns="4">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="middle" width="40pt">
-<column alignment="center" valignment="middle" width="22col%">
-<column alignment="right" valignment="middle" width="50pt">
-<column alignment="center" valignment="middle" width="21col%">
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $V_{qpr}=$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 \begin_inset Graphics
 	filename Vqpr.pdf
-	width 20col%
-	BoundingBox 300bp 120bp 620bp 360bp
-	clip
+	width 50text%
+	groupId halfcolumn
 
 \end_inset
 
 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $W_{rpq}=$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 \begin_inset Graphics
 	filename Wrpq.pdf
-	width 20col%
-	BoundingBox 235bp 100bp 555bp 340bp
-	clip
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
+	width 50text%
+	groupId halfcolumn
 
 \end_inset
 
@@ -498,10 +442,6 @@ The vertex
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
