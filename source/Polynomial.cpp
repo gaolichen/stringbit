@@ -28,13 +28,13 @@ bool Polynomial::IsZero() const
 	return true;
 }
 
-inline int Polynomial::GetCoef(int order) const
+int Polynomial::GetCoef(int order) const
 {
 	if (order >= this->coef.size()) return 0;
 	return coef[order];
 }
 
-inline int Polynomial::MaxPow() const
+int Polynomial::MaxPow() const
 {
 	for (int i = this->coef.size() - 1; i >= 0; i--)
 	{

@@ -12,8 +12,8 @@ public:
 	Polynomial();
 
 	bool IsZero() const;
-	inline int MaxPow() const;
-	inline int GetCoef(int order) const;
+	int MaxPow() const;
+	int GetCoef(int order) const;
 	void IncreaseOrder(int pow);
 	void Increase(int order, int value);
 	Polynomial& operator+= (const Polynomial& poly);

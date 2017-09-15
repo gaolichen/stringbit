@@ -213,6 +213,34 @@ void GenerateNormMatlab(StateType type)
 	cout << "Time: " << watch.Stop() << " seconds." << endl;
 }
 
+void GenerateNormDataFile(int minBits, int maxBits, StateType type)
+{
+	Stopwatch watch;
+	watch.Start();
+	ScriptGenerator sc(scriptFolder, type);
+	int fNumber;
+	for (int i = minBits; i <= maxBits; i++)
+	{
+		cout << "Processing bits=" << i << "..." << endl;
+		if (type == Boson)
+		{
+			fNumber = 0;
+		}
+		else
+		{
+			fNumber = 1;
+		}
+
+		while (fNumber < i)
+		{
+			sc.OutputNormToDataFile(i, fNumber);
+			fNumber += 2;
+		}
+	}
+
+	cout << "Time: " << watch.Stop() << " seconds." << endl;
+}
+
 void GenerateAllHamDataFile()
 {
 	GenerateHamDataFile(Boson);
@@ -262,5 +290,6 @@ int main()
 	//GenerateAllHamMatlab();
 	//OutputStateStructure();
 	//GenerateAllHamDataFile();
+	//GenerateNormDataFile(8, 10, Boson);
 	return 0;
 }

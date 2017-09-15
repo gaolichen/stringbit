@@ -611,6 +611,65 @@ void ScriptGenerator::OutputNormToMatlab(int bits)
 	ofs << "end" << endl;
 }
 
+void ScriptGenerator::OutputNormToDataFile(int bits, int fNumber)
+{
+	StateCollection* sc = StateCollection::Inst();
+        BruteForceCalculator calc;
+        vector<int > stateIndex;
+	int tot = sc->StateNumber(bits);
+	
+	for (int i = 0; i < tot; i++)
+	{
+		TraceState state = sc->GetState(bits, i, type);
+		if (state.FermionNumber() == fNumber)
+		{
+			stateIndex.push_back(i);
+		}
+	}
+
+	if (stateIndex.size() == 0)
+	{
+		cout << "no states found for bits= " << bits << " fermion number=" << fNumber << endl;
+		return;
+	}
+
+	string name = "norm" + ToString(bits) + "_" + ToString(fNumber);
+	string file = CombinePath(rootFolder, name + ".dat");
+	//cout << "file =" << file << endl;
+	ofstream ofs(file.c_str());
+
+	ofs << stateIndex.size() << endl << endl;
+	
+	for (int i = 0; i < stateIndex.size(); i++)
+	{
+		TraceState state = GetState(bits, stateIndex[i]);
+		for (int j = i; j < stateIndex.size(); j++)
+		{
+			Polynomial poly = calc.Calculate(state, GetState(bits, stateIndex[j]));
+			if (poly.IsZero())
+			{
+				ofs << 0 << endl;
+			}
+			else
+			{
+				int maxPow = poly.MaxPow();
+				int lowestOrder = maxPow % 2;
+				if (lowestOrder == 0) { ofs << 2; }
+				else { ofs << 1; }
+
+				for (int k = lowestOrder; k <= maxPow; k += 2)
+				{
+					ofs << ' ' << poly.GetCoef(k);
+				}
+				ofs << endl;
+			}
+		}
+
+		ofs << endl;
+	}
+
+}
+
 void ScriptGenerator::OutputStateStructure(int maxBit)
 {	
 	StateCollection* sc = StateCollection::Inst();
