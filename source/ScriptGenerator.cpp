@@ -653,11 +653,11 @@ void ScriptGenerator::OutputNormToDataFile(int bits, int fNumber)
 			else
 			{
 				int maxPow = poly.MaxPow();
-				int lowestOrder = maxPow % 2;
-				if (lowestOrder == 0) { ofs << 2; }
+				int offset = (bits - maxPow) % 2;
+				if (offset == 0) { ofs << 2; }
 				else { ofs << 1; }
 
-				for (int k = lowestOrder; k <= maxPow; k += 2)
+				for (int k = bits - offset; k >=0; k -= 2)
 				{
 					ofs << ' ' << poly.GetCoef(k);
 				}
