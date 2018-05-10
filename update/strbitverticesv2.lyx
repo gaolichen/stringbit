@@ -1,7 +1,9 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
-\lyxformat 413
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass article
 \begin_preamble
 \pdfoutput=1
@@ -12,7 +14,6 @@
 \bibliographystyle{unsrt}
 
 \usepackage[subrefformat=parens,labelformat=parens]{subfig}
-\usepackage{cancel}
 \newcommand{\zero}[1] {\cancelto{0}{#1}}
 \newcommand{\tr}{\mathrm{Tr}\,}
 \newcommand{\ba}{\bar{a}}
@@ -33,16 +34,16 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
-
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -53,15 +54,24 @@
 \use_hyperref false
 \papersize default
 \use_geometry false
-\use_amsmath 1
-\use_esint 1
-\use_mhchem 1
-\use_mathdots 1
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 2
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
 \cite_engine basic
+\cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
+\justification true
 \use_refstyle 1
 \index Index
 \shortcut idx
@@ -148,9 +158,9 @@ Delta E_{G}
 \backslash
 sim1/M$, which resembles the Poincar
 \backslash
-'e invariant relation of $1+1$ dimension $P^{-}
+'e invariant relation $P^{-}
 \backslash
-sim1/P^{+}$.
+sim1/P^{+}$ in $(1+1)$ dimensions.
  We calculate analytically the one-loop correction for the ground energies
  with $M=3$ and $s=1,
 \backslash
@@ -166,8 +176,8 @@ leq4$ cases.}
 \end_layout
 
 \begin_layout Title
-Cubic Interaction Vertices and One-loop Self-energy in the Stable String
- Bit Model
+Cubic interaction vertices and one-loop self-energy in the stable string
+ bit model
 \end_layout
 
 \begin_layout Standard
@@ -251,18 +261,10 @@ present a priori
 \shape default
 .
  String bits enjoy the dynamic of Galilean symmetry, under which the 
-\begin_inset Quotes els
-\end_inset
-
-
 \begin_inset Formula $+$
 \end_inset
 
-
-\begin_inset Quotes ers
-\end_inset
-
- component momentum 
+-component momentum 
 \begin_inset Formula $P^{+}=\left(P^{0}+P^{1}\right)/\sqrt{2}$
 \end_inset
 
@@ -338,7 +340,7 @@ key "Sun:2014dga,Thorn:2014hia,Chen:2016hkz,Thorn:2015wli"
  However, new compactified bosonic coordinates can be generated from spin
  degrees of freedom of string bits.
  If suitable dynamics is chosen, these spin degrees of freedom are converted
- to one dimensional spin waves, which then act as compactified bosonic coordinat
+ to one-dimensional spin waves, which then act as compactified bosonic coordinat
 es.
  The 
 \begin_inset Formula $1/N$
@@ -353,7 +355,7 @@ key "Thorn:2015wli"
 \end_inset
 
 , where the cubic interaction vertices and their application to the calculation
- of one-loop self-energy were discussed.
+ of the one-loop self-energy were discussed.
 \end_layout
 
 \begin_layout Standard
@@ -395,7 +397,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -485,7 +487,7 @@ reference "fig:Vertices"
 \end_layout
 
 \begin_layout Itemize
-The calculation of the one-loop self-energy is improved and its large 
+The calculation of the one-loop self-energy is improved, and its large 
 \begin_inset Formula $M$
 \end_inset
 
@@ -495,7 +497,7 @@ The calculation of the one-loop self-energy is improved and its large
 \begin_inset Formula $\Delta E_{G}$
 \end_inset
 
-, are studied and their large 
+, are studied, and their large 
 \begin_inset Formula $M$
 \end_inset
 
@@ -504,12 +506,12 @@ The calculation of the one-loop self-energy is improved and its large
 \begin_inset Formula $\Delta E_{G}$
 \end_inset
 
- analytically for 
-\begin_inset Formula $M=3,\, s=1$
+ analytically for the 
+\begin_inset Formula $M=3,\,s=1$
 \end_inset
 
  and 
-\begin_inset Formula $M=3,\, s=2$
+\begin_inset Formula $M=3,\,s=2$
 \end_inset
 
  cases.
@@ -538,7 +540,7 @@ The calculation of the one-loop self-energy is improved and its large
 \begin_inset Formula $1+1$
 \end_inset
 
- dimension when 
+ dimensions when 
 \begin_inset Formula $s=24$
 \end_inset
 
@@ -691,7 +693,7 @@ reference "sec:Numerical-Results"
 
 .
  The main text is closed with a conclusion section.
- Finally, several appendices are included for technical details.
+ Finally, several Appendixes are included for technical details.
 \end_layout
 
 \begin_layout Section
@@ -701,7 +703,7 @@ name "sec:Review"
 
 \end_inset
 
-Stable String Bit Model
+Stable string bit model
 \end_layout
 
 \begin_layout Standard
@@ -722,10 +724,11 @@ key "Thorn:2015wli"
  expansion of the model.
  Meanwhile some modifications specific to this paper are incorporated.
  To be clear, the modifications are as follows.
- In subsection 
+ In Sec.
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:Hamiltonian"
+reference "subsec:Hamiltonian"
 
 \end_inset
 
@@ -738,10 +741,11 @@ reference "sub:Hamiltonian"
 \end_inset
 
  to the Hamiltonian of the model.
- In subsection 
+ In Sec.
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:Diagonalizing-Hamiltonian"
+reference "subsec:Diagonalizing-Hamiltonian"
 
 \end_inset
 
@@ -755,7 +759,7 @@ reference "sub:Diagonalizing-Hamiltonian"
 \begin_layout Subsection
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:Hamiltonian"
+name "subsec:Hamiltonian"
 
 \end_inset
 
@@ -802,7 +806,7 @@ The superstring bit creation operator is
 
  is odd.
  In Fock space, a closed string is represented by a color singlet trace
- operator acting on vacuum state, that is of the form 
+ operator acting on the vacuum state, that is of the form 
 \begin_inset Formula $\tr\bar{\phi}\cdots\bar{\phi}\ket{0}$
 \end_inset
 
@@ -860,7 +864,7 @@ reference "eq:App_ham_deltah"
 \begin_inset Formula $H_{i}$
 \end_inset
 
-s make 
+s make an 
 \begin_inset Formula $\mathcal{O}\left(1\right)$
 \end_inset
 
@@ -868,7 +872,7 @@ s make
 \begin_inset Formula $H$
 \end_inset
 
- while 
+, while 
 \begin_inset Formula $\Delta H$
 \end_inset
 
@@ -918,7 +922,7 @@ key "Thorn:2014hia,Thorn:2015wli"
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:DeltaH"
+reference "subsec:DeltaH"
 
 \end_inset
 
@@ -943,7 +947,7 @@ Let us now consider the action of
 \begin_inset Formula $a=1,\cdots,s$
 \end_inset
 
- and then define a super bit creation operator 
+ and then define a superbit creation operator 
 \begin_inset Formula 
 \[
 \psi\left(\theta\right)=\sum_{k=0}^{s}\frac{1}{k!}\bar{\phi}_{c_{1}\cdots c_{k}}\theta^{c_{1}}\cdots\theta^{c_{k}}.
@@ -990,7 +994,7 @@ T\left(\theta_{1},\cdots,\theta_{K}\right)T\left(\eta_{1},\cdots,\eta_{L}\right)
 \begin_inset Formula $\Delta H$
 \end_inset
 
- on trace states is given in appendix 
+ on trace states is given in Appendix 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:app_hamiltonian"
@@ -1020,7 +1024,7 @@ The actions of each
 \begin_inset Formula $H_{i}$
 \end_inset
 
- on single and double trace states are shown in appendix 
+ on single and double trace states are shown in Appendix 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:app_hamiltonian"
@@ -1058,7 +1062,7 @@ reference "eq:ham_Haction_double_trace"
 
 \end_inset
 
- the 
+, the 
 \begin_inset Formula $-2s\delta_{kl}$
 \end_inset
 
@@ -1078,7 +1082,7 @@ While
 \begin_inset Formula $\bar{h}_{kl}$
 \end_inset
 
- acts on the trace states, to solve for energy eigenstate, it is helpful
+ acts on the trace states, to solve for energy eigenstates, it is helpful
  to convert 
 \begin_inset Formula $\bar{h}_{kl}$
 \end_inset
@@ -1114,7 +1118,7 @@ reference "eq:ham_Haction_single_trace"
  Therefore, we can express a single trace energy state as 
 \begin_inset Formula 
 \begin{equation}
-T_{r}\ket{0}=\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta_{1},\cdots,\theta_{M}\right)\psi_{r}\left(\theta_{1},\dots,\theta_{M}\right)\ket{0},\label{eq:ham_trace_energystate}
+T_{r}\ket{0}=\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\,T\left(\theta_{1},\cdots,\theta_{M}\right)\psi_{r}\left(\theta_{1},\dots,\theta_{M}\right)\ket{0},\label{eq:ham_trace_energystate}
 \end{equation}
 
 \end_inset
@@ -1145,7 +1149,7 @@ T_{r}\ket{0}=\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta_{1},\cdo
 \end_inset
 
  without loss of generality.
- The sign factor follows from that the measure 
+ The sign factor follows from the fact that the measure 
 \begin_inset Formula $d^{s}\theta_{1}\cdots d^{s}\theta_{M}$
 \end_inset
 
@@ -1158,7 +1162,7 @@ T_{r}\ket{0}=\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta_{1},\cdo
 \end_inset
 
 .
- Now the action of 
+ Now, the action of 
 \begin_inset Formula $\bar{h}_{kl}$
 \end_inset
 
@@ -1169,7 +1173,7 @@ T_{r}\ket{0}=\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta_{1},\cdo
  is
 \begin_inset Formula 
 \begin{equation}
-\bar{h}_{kl}T_{r}\ket{0}=\int d\theta\,\bar{h}_{kl}T\left(\theta\right)\psi_{r}\left(\theta\right)\ket{0}=\int d\theta\, T\left(\theta\right)h_{kl}\psi_{r}\left(\theta\right)\ket{0}\label{eq:ham_intbyparts}
+\bar{h}_{kl}T_{r}\ket{0}=\int d\theta\,\bar{h}_{kl}T\left(\theta\right)\psi_{r}\left(\theta\right)\ket{0}=\int d\theta\,T\left(\theta\right)h_{kl}\psi_{r}\left(\theta\right)\ket{0}\label{eq:ham_intbyparts}
 \end{equation}
 
 \end_inset
@@ -1177,7 +1181,7 @@ T_{r}\ket{0}=\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta_{1},\cdo
  where we have performed an integration by parts in the last step and
 \begin_inset Formula 
 \begin{equation}
-h_{kl}=-2\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)-2\theta_{k}^{a}\frac{d}{d\theta_{l}^{a}}-2\theta_{l}^{a}\frac{d}{d\theta_{k}^{a}}-2i\theta_{k}^{a}\theta_{l}^{a}-2i\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{l}^{a}}+2s\xi+2s\delta_{k,l},\label{eq:ham_h_kl}
+h_{kl}=-2\left(s-2\theta_{k}^{a}\frac{d}{d\theta_{k}^{a}}\right)-2\theta_{k}^{a}\frac{d}{d\theta_{l}^{a}}-2\theta_{l}^{a}\frac{d}{d\theta_{k}^{a}}-2i\theta_{k}^{a}\theta_{l}^{a}-2i\frac{d}{d\theta_{k}^{a}}\frac{d}{d\theta_{l}^{a}}+2s\xi+2s\delta_{k,l}.\label{eq:ham_h_kl}
 \end{equation}
 
 \end_inset
@@ -1217,7 +1221,7 @@ h=\sum_{k=1}^{M}\left(h_{k,k+1}-2s\xi\right).\label{eq:ham_h}
 \begin_layout Subsection
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:Diagonalizing-Hamiltonian"
+name "subsec:Diagonalizing-Hamiltonian"
 
 \end_inset
 
@@ -1385,7 +1389,7 @@ key "Thorn:2015wli"
 \end_layout
 
 \begin_layout Standard
-The Hermiticity of Hamiltonian implies that 
+The Hermiticity of the Hamiltonian implies that 
 \begin_inset Formula $\theta_{k}^{\dagger}=\frac{d}{d\theta_{k}},\,\frac{d}{d\theta_{k}}^{\dagger}=\theta_{k},$
 \end_inset
 
@@ -1421,7 +1425,7 @@ and seek for eigenoperators of
 \begin_inset Formula $h$
 \end_inset
 
- 
+, 
 \begin_inset Formula 
 \begin{equation}
 F_{k}=r_{k}\alpha_{k}+\beta_{k},\quad\left[h,F_{k}\right]=\epsilon_{k}F_{k},\label{eq:dia_operator_eq}
@@ -1540,7 +1544,7 @@ The phase factors are chosen so that the expression of
 \begin_inset Formula $h_{kl}$
 \end_inset
 
- in terms of eigenoperators will have a simple form, see eq.
+ in terms of eigenoperators will have a simple form; see eq.
  
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -1571,7 +1575,7 @@ To obtain the energy spectrum, we need to find the ground energy
 \end_inset
 
 , which is annihilated by all the lowering operators.
- Since the zero mode do not change energy eigenvalue, there are degeneracies
+ Since the zero mode does not change energy eigenvalues, there are degeneracies
  in ground state.
  To eliminate the ambiguity, we require the ground eigenfunction to be annihilat
 ed by the zero mode 
@@ -1598,7 +1602,7 @@ key "Chen:2016hkz"
 \begin_inset Formula $\left\lfloor \left(M-1\right)/2\right\rfloor $
 \end_inset
 
- indicates integral part of 
+ indicates the integral part of 
 \begin_inset Formula $\left(M-1\right)/2$
 \end_inset
 
@@ -1607,11 +1611,11 @@ key "Chen:2016hkz"
 \begin_inset Formula $F_{m}\psi_{G}^{s=1}=0$
 \end_inset
 
-, one only need to check that
+, one only needs to check that
 \begin_inset Formula 
 \begin{align}
 F_{k}\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right) & =F_{M-k}\left(c_{k}-s_{k}\alpha_{M-k}\alpha_{k}\right)=0,\quad1\leq k\leq M-1,\\
-\left[F_{k},c_{l}-s_{l}\alpha_{M-l}\alpha_{l}\right] & =0,\quad k\neq l,\, k\neq M-l.
+\left[F_{k},c_{l}-s_{l}\alpha_{M-l}\alpha_{l}\right] & =0,\quad k\neq l,\,k\neq M-l.
 \end{align}
 
 \end_inset
@@ -1704,7 +1708,7 @@ end{subequations}
 \begin_inset Formula $0\leq r_{a,1}<r_{a,2}<\cdots\leq M-1$
 \end_inset
 
- as convention.
+ as a convention.
  To build a physical state, the modes 
 \begin_inset Formula $r_{a,i}$
 \end_inset
@@ -1786,7 +1790,7 @@ reference "eq:dia_cyclic_constraint_s"
 
 \end_inset
 
- has profound impact on the energy spectrum of the model.
+ has a profound impact on the energy spectrum of the model.
  When 
 \begin_inset Formula $s$
 \end_inset
@@ -1798,7 +1802,7 @@ reference "eq:dia_cyclic_constraint_s"
 
 \end_inset
 
- and hence physical.
+ and are hence physical.
  But when 
 \begin_inset Formula $s$
 \end_inset
@@ -1822,11 +1826,11 @@ reference "eq:dia_cyclic_constraint_s"
 \begin_layout Subsection
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:Three-Chain-overlap"
+name "subsec:Three-Chain-overlap"
 
 \end_inset
 
-Three Chains Overlap
+Three chains overlap
 \end_layout
 
 \begin_layout Standard
@@ -1844,7 +1848,7 @@ We have constructed the energy eigenfunctions for
 \begin_inset Formula $M$
 \end_inset
 
- bits and two small chain of 
+ bits and two small chains of 
 \begin_inset Formula $K$
 \end_inset
 
@@ -2089,7 +2093,7 @@ key "Thorn:2015wli"
 \end_layout
 
 \begin_layout Standard
-We then express the ground eigenfunction of large chain as
+We then express the ground eigenfunction of the large chain as
 \begin_inset Formula 
 \begin{equation}
 \psi_{G}^{\left(M\right)}=\exp\left(\frac{1}{2}\sum_{kl}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\psi_{G}^{\left(K\right)}\psi_{G}^{\left(L\right)}\left[\det\left(I+DD^{\dagger}\right)\right]^{-1/4},\label{eq:overlap_psi_M}
@@ -2156,7 +2160,7 @@ From the above construction, it is clear that the first rows and columns
 \begin_inset Formula $S^{\prime}$
 \end_inset
 
-, 
+, and 
 \begin_inset Formula $D^{\prime}$
 \end_inset
 
@@ -2216,7 +2220,7 @@ name "sec:Conjugate-Eigenfunction"
 
 \end_inset
 
-Conjugate Eigenfunction
+Conjugate eigenfunction
 \end_layout
 
 \begin_layout Standard
@@ -2224,10 +2228,11 @@ We have built energy eigenfunctions of the model at
 \begin_inset Formula $N=\infty$
 \end_inset
 
- in subsection 
+ in Sec.
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:Diagonalizing-Hamiltonian"
+reference "subsec:Diagonalizing-Hamiltonian"
 
 \end_inset
 
@@ -2262,7 +2267,7 @@ key "Thorn:2015wli"
  
 \begin_inset Formula 
 \begin{equation}
-\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\,\bar{\psi}_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\psi_{s}\left(\theta_{1},\cdots,\theta_{M}\right)=\delta_{rs},\label{eq:conj_normalization}
+\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\,\bar{\psi}_{r}\left(\theta_{1},\cdots,\theta_{M}\right)\psi_{s}\left(\theta_{1},\cdots,\theta_{M}\right)=\delta_{rs}\label{eq:conj_normalization}
 \end{equation}
 
 \end_inset
@@ -2294,7 +2299,7 @@ status open
 To be specific, it means that 
 \begin_inset Formula 
 \[
-\int d^{M}\theta\, f\left(\theta_{1},\cdots,\theta_{M}\right)\tilde{\delta}\left(\theta-\eta\right)=\frac{1}{M}\sum_{k=0}^{M-1}\left(-\right)^{ks\left(M-1\right)}f\left(\eta_{k+1},\cdots,\eta_{k+M}\right).
+\int d^{M}\theta\,f\left(\theta_{1},\cdots,\theta_{M}\right)\tilde{\delta}\left(\theta-\eta\right)=\frac{1}{M}\sum_{k=0}^{M-1}\left(-\right)^{ks\left(M-1\right)}f\left(\eta_{k+1},\cdots,\eta_{k+M}\right).
 \]
 
 \end_inset
@@ -2304,7 +2309,7 @@ To be specific, it means that
 
 \end_inset
 
- We stress that, once there are a complete set of 
+ We stress that, once there is a complete set of 
 \begin_inset Formula $\bar{\psi}_{r}$
 \end_inset
 
@@ -2330,7 +2335,7 @@ To construct
 \begin_inset Formula $F_{k}$
 \end_inset
 
- under integration by parts: 
+ under integration by parts, 
 \begin_inset Formula 
 \begin{equation}
 \int d^{M}\theta\,\psi\left(\theta\right)\left[F_{k}\chi\left(\theta\right)\right]=\int d^{M}\theta\,\left[\tilde{F}_{k}^{\pm}\psi\left(\theta\right)\right]\chi\left(\theta\right),\label{eq:conj_Ftilde1}
@@ -2339,15 +2344,7 @@ To construct
 \end_inset
 
 where the 
-\begin_inset Quotes els
-\end_inset
-
-
 \begin_inset Formula $+$
-\end_inset
-
-
-\begin_inset Quotes ers
 \end_inset
 
  superscript is chosen if 
@@ -2355,15 +2352,7 @@ where the
 \end_inset
 
  is Grassmann even and 
-\begin_inset Quotes els
-\end_inset
-
-
 \begin_inset Formula $-$
-\end_inset
-
-
-\begin_inset Quotes ers
 \end_inset
 
  is chosen otherwise.
@@ -2444,7 +2433,7 @@ end{subequations}
 
 \end_inset
 
- In appendix 
+ In Appendix 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:App_normal_psibar"
@@ -2525,7 +2514,7 @@ s pick
 \begin_inset Formula $\bar{\psi}_{G}$
 \end_inset
 
- Grassmann even and 
+ is Grassmann even and 
 \begin_inset Formula $\tilde{F}^{-}$
 \end_inset
 
@@ -2537,7 +2526,7 @@ reference "eq:conj_normalization"
 
 \end_inset
 
- can be easily verified: 
+ can be easily verified, 
 \begin_inset Formula 
 \begin{align*}
 \int d^{M}\theta\,\bar{\psi}_{r}\psi_{r} & =\int d^{M}\theta\,\tilde{F}_{\left\{ r\right\} }\bar{\psi}_{G}F_{\left\{ r\right\} }^{\dagger}\psi_{G}\\
@@ -2589,8 +2578,8 @@ reference "eq:overlap_psi_M"
 \begin_inset Formula $s=1$
 \end_inset
 
- case, the overlap of conjugate eigenfunction among large chain and two
- small chains is given by
+ case, the overlap of conjugate eigenfunctions among the large chain and
+ two small chains is given by
 \begin_inset Formula 
 \begin{equation}
 \bar{\psi}_{G}^{\left(M\right)}=\left|\det C\right|^{1/2}\exp\left(\frac{1}{2}\sum_{ij}\tilde{f}_{i}D_{ij}^{\dagger}\tilde{f}_{j}\right)\bar{\psi}_{G}^{\left(K\right)}\bar{\psi}_{G}^{\left(L\right)},\label{eq:conj_psibar_M}
@@ -2618,10 +2607,11 @@ reference "eq:overlap_psi_M"
 \begin_inset Formula $M$
 \end_inset
 
- is odd and all the notations follow the ones of subsection 
+ is odd and all the notations follow the ones of Sec.
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:Three-Chain-overlap"
+reference "subsec:Three-Chain-overlap"
 
 \end_inset
 
@@ -2639,11 +2629,11 @@ g_{r}\equiv\g\left(T_{r}\right)=\text{grading of }T_{r}.
 
 \end_inset
 
-Now we can write the trace operator 
+Now, we can write the trace operator 
 \begin_inset Formula $T\left(\theta\right)$
 \end_inset
 
- as linear combination of 
+ as a linear combination of 
 \begin_inset Formula $\bar{\psi}_{r}$
 \end_inset
 
@@ -2660,10 +2650,10 @@ Now we can write the trace operator
 \begin_inset Formula $\theta$
 \end_inset
 
-, then 
+; then 
 \begin_inset Formula 
 \begin{align*}
-T_{r} & =\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta\right)\psi_{r}\left(\theta\right)\\
+T_{r} & =\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\,T\left(\theta\right)\psi_{r}\left(\theta\right)\\
  & =\sum_{t}\left(-\right)^{sM\g\left(X_{t}\right)}X_{t}\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\,\bar{\psi}_{t}\left(\theta\right)\psi_{r}\left(\theta\right)\\
  & =\left(-\right)^{sM\g\left(X_{r}\right)}X_{r},
 \end{align*}
@@ -2684,7 +2674,7 @@ T_{r} & =\int d^{s}\theta_{1}\cdots d^{s}\theta_{M}\, T\left(\theta\right)\psi_{
 \end_inset
 
  only by a sign factor.
- So we have 
+ So, we have 
 \begin_inset Formula $\g\left(X_{r}\right)=\g\left(T_{r}\right)$
 \end_inset
 
@@ -2718,7 +2708,7 @@ reference "eq:dia_ground_state_s"
 
 \end_inset
 
-, we obtain the gradings (modulo 2) of functions and operators as table
+, we obtain the gradings (modulo 2) of functions and operators as Table
  
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2741,12 +2731,12 @@ status open
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="6">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -2903,7 +2893,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -2936,7 +2926,7 @@ name "sec:interaction-vertex"
 
 \end_inset
 
-Cubic Interaction Vertices
+Cubic interaction vertices
 \end_layout
 
 \begin_layout Standard
@@ -2964,7 +2954,7 @@ Let
 \begin_inset Formula $M=K+L$
 \end_inset
 
- bits respectively, then the interaction vertices 
+ bits respectively; then the interaction vertices 
 \begin_inset Formula $V_{qpr}$
 \end_inset
 
@@ -3162,11 +3152,11 @@ reference "eq:overlap_f"
 
 \end_inset
 
-, 
+ and 
 \begin_inset Formula $h_{kl}$
 \end_inset
 
- given by 
+ is given by 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:ham_h_kl"
@@ -3195,10 +3185,11 @@ reference "eq:cub_vac_VW"
 
 .
  In the following, we first mark remarks on the interaction vertices in
- the subsection 
+ the Sec.
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:remarks_on_vertices"
+reference "subsec:remarks_on_vertices"
 
 \end_inset
 
@@ -3209,10 +3200,11 @@ reference "eq:cub_Vertices"
 
 \end_inset
 
- in subsection 
+ in Sec.
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sub:Derive_VW"
+reference "subsec:Derive_VW"
 
 \end_inset
 
@@ -3222,11 +3214,11 @@ reference "sub:Derive_VW"
 \begin_layout Subsection
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:remarks_on_vertices"
+name "subsec:remarks_on_vertices"
 
 \end_inset
 
-Remarks on Vertices
+Remarks on vertices
 \end_layout
 
 \begin_layout Standard
@@ -3296,7 +3288,7 @@ reference "eq:cub_Vertices"
 \begin_inset Formula $L$
 \end_inset
 
--bit strings, one need to connect the bit 
+-bit strings, one needs to connect bit 
 \begin_inset Formula $1$
 \end_inset
 
@@ -3318,11 +3310,11 @@ reference "eq:cub_Vertices"
 \end_inset
 
  reflects the fact that, to join back the above two small strings into one,
- one need to connect bit 
+ one needs to connect bit 
 \begin_inset Formula $K$
 \end_inset
 
- to the bit 
+ to bit 
 \begin_inset Formula $\left(K+1\right)$
 \end_inset
 
@@ -3330,7 +3322,7 @@ reference "eq:cub_Vertices"
 \begin_inset Formula $M$
 \end_inset
 
- to the bit 
+ to bit 
 \begin_inset Formula $1$
 \end_inset
 
@@ -3358,7 +3350,7 @@ reference "eq:cub_Vertices"
 \begin_layout Subsection
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:Derive_VW"
+name "subsec:Derive_VW"
 
 \end_inset
 
@@ -3374,7 +3366,7 @@ Derivation of
 \end_layout
 
 \begin_layout Standard
-Now let us derive the formula 
+Now, let us derive the formula 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:cub_Vertices"
@@ -3444,8 +3436,8 @@ reference "eq:cub_Vertices_DefV"
 
 \end_inset
 
-The vertex is decorated with tilde because we have not yet applied the constrain
-t 
+The vertex is decorated with a tilde because we have not yet applied the
+ constraint 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:cub_Vertices_Sym"
@@ -3469,7 +3461,7 @@ The action of
 \begin_inset Formula $H$
 \end_inset
 
- on double trace produces both fusion and fission terms: 
+ on the double trace produces both fusion and fission terms: 
 \begin_inset Formula 
 \begin{multline*}
 HT_{p}T_{q}\ket{0}=\left(E_{p}+E_{q}\right)T_{p}T_{q}\ket{0}\\
@@ -3479,7 +3471,7 @@ HT_{p}T_{q}\ket{0}=\left(E_{p}+E_{q}\right)T_{p}T_{q}\ket{0}\\
 
 \end_inset
 
-Comparing above with 
+Comparing the above with 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:cub_Vertices_DefW"
@@ -3490,7 +3482,7 @@ reference "eq:cub_Vertices_DefW"
 \begin_inset Formula $\tilde{W}_{rpq}=W_{rpq}^{\left(1\right)}+W_{rpq}^{\left(2\right)}$
 \end_inset
 
- where 
+, where 
 \begin_inset Formula 
 \[
 W_{rpq}^{\left(1\right)}=\left(-\right)^{sL\left(g_{p}-sK\right)}\int d\theta d\eta\,\sum_{k,l}\bar{h}_{kl}\bar{\psi}_{r}\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\psi_{p}\left(\theta_{1}\cdots\theta_{K}\right)\psi_{q}\left(\eta_{1}\cdots\eta_{L}\right),
@@ -3537,7 +3529,7 @@ key "Thorn:2015wli"
 \end_layout
 
 \begin_layout Standard
-Now let us simplify 
+Now, let us simplify 
 \begin_inset Formula $\tilde{V}$
 \end_inset
 
@@ -3624,7 +3616,7 @@ reference "eq:ham_cyclicconstrtaint"
 \end_layout
 
 \begin_layout Standard
-To find the vertex satisfy the constraint 
+To find the vertex satisfying the constraint 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:cub_Vertices_Sym"
@@ -3680,7 +3672,7 @@ reference "eq:cub_hVW"
 \end_layout
 
 \begin_layout Standard
-We perform the similar calculation to the 
+We perform a similar calculation for the 
 \begin_inset Formula $\tilde{W}$
 \end_inset
 
@@ -3724,7 +3716,7 @@ We perform the similar calculation to the
 \end_inset
 
  and fix the indices as 
-\begin_inset Formula $k=K,\, l=K+1$
+\begin_inset Formula $k=K,\,l=K+1$
 \end_inset
 
  for 
@@ -3732,7 +3724,7 @@ We perform the similar calculation to the
 \end_inset
 
  and 
-\begin_inset Formula $k=1,\, l=M$
+\begin_inset Formula $k=1,\,l=M$
 \end_inset
 
  for 
@@ -3967,7 +3959,7 @@ reference "eq:App_psiG_FtildeG"
 \end_inset
 
  shows.
- Therefore, RHS of 
+ Therefore, the rhs of 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:cub_Vqpr_3"
@@ -3996,7 +3988,7 @@ V_{qpr}^{s=1}=\left(-\right)^{L\left(g_{p}-K\right)}M\left|\det C\right|^{1/2}\l
 \end_inset
 
 .
- We perform similar calculation for 
+ We perform a similar calculation for 
 \begin_inset Formula $W_{rpq}$
 \end_inset
 
@@ -4034,7 +4026,7 @@ Note that
 .
  It implies that the sign factors are unphysical and can be dropped in the
  calculation of physical observables.
- So for arbitrary 
+ So, for arbitrary 
 \begin_inset Formula $s$
 \end_inset
 
@@ -4151,7 +4143,7 @@ name "sec:EnergyCorrection"
 
 \end_inset
 
-One-loop Self-energy
+One-loop self-energy
 \end_layout
 
 \begin_layout Standard
@@ -4236,14 +4228,14 @@ reference "eq:olp_deltaE0"
 
 \end_inset
 
- should be the ones satisfy the constraint 
+ should be the ones satisfying the constraint 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:cub_Vertices_Sym"
 
 \end_inset
 
-, otherwise it would lead to an incorrect 
+; otherwise, it would lead to an incorrect 
 \begin_inset Formula $\Delta E_{r}$
 \end_inset
 
@@ -4294,7 +4286,7 @@ reference "eq:olp_deltaE0"
 
 \end_inset
 
- and write the sum over zero modes explicitly: 
+ and write the sum over zero modes explicitly,
 \begin_inset Formula 
 \[
 \Delta E_{r}^{s=1}=\frac{1}{N^{2}}\sum_{K=1}^{M-1}{\sum_{p,q}}^{\prime}\frac{KLM\left|\det C\right|}{E_{r}-E_{p}-E_{q}}\sum_{\lambda,\kappa=0,1}\left\langle F_{\left\{ qp\right\} }F_{0,K}^{\lambda}F_{0,L}^{\kappa},F_{\left\{ r\right\} }^{\dagger}\right\rangle _{W}^{*}\left\langle F_{\left\{ qp\right\} }F_{0,K}^{\lambda}F_{0,L}^{\kappa},F_{\left\{ r\right\} }^{\dagger}\right\rangle _{V}
@@ -4340,7 +4332,7 @@ reference "eq:olp_deltaE0"
 \begin_inset Formula $\kappa$
 \end_inset
 
- produce four terms.
+ produces four terms.
  For the term with 
 \begin_inset Formula $\lambda=\kappa=1$
 \end_inset
@@ -4365,7 +4357,7 @@ reference "eq:overlap_f:4"
 \end_inset
 
 .
- The phase is irrevelent.
+ The phase is irrelevant.
  The 
 \begin_inset Formula $\lambda=1,\,\kappa=0$
 \end_inset
@@ -4388,7 +4380,7 @@ reference "eq:overlap_f:4"
 \end_inset
 
 .
- So the sum over 
+ So, the sum over 
 \begin_inset Formula $F_{0}^{\left(K\right)}$
 \end_inset
 
@@ -4422,19 +4414,15 @@ For arbitrary
 \end_inset
 
  is replaced by 
-\begin_inset Formula $ $
-\end_inset
-
-
 \begin_inset Formula $\left|\det C\right|^{s}$
 \end_inset
 
- and each term inside the summation becomes a product over 
+, and each term inside the summation becomes a product over 
 \begin_inset Formula $a$
 \end_inset
 
 .
- So we have 
+ So, we have 
 \begin_inset Formula 
 \[
 \Delta E_{r}=\frac{1}{N^{2}}\sum_{K=1}^{M-1}{\sum_{p,q}}^{\prime}\frac{KLM\left|\det C\right|^{s}}{E_{r}-E_{p}-E_{q}}\sum_{\lambda_{i,j}=0,1}\prod_{a=1}^{s}\left\langle F_{\left\{ qp\right\} }^{a}f_{0,a}^{\lambda_{a,0}}f_{M-1,a}^{\lambda_{a,M-1}},F_{\left\{ r\right\} }^{a\dagger}\right\rangle _{W}^{*}\left\langle F_{\left\{ qp\right\} }^{a}f_{0,a}^{\lambda_{a,0}}f_{M-1,a}^{\lambda_{a,M-1}},F_{\left\{ r\right\} }^{a\dagger}\right\rangle _{V}.
@@ -4451,11 +4439,11 @@ Note that the sum over
 \end_inset
 
  independently.
- So we can move the sum over 
+ So, we can move the sum over 
 \begin_inset Formula $\lambda_{i,j}$
 \end_inset
 
- inside the the product over 
+ inside the product over 
 \begin_inset Formula $a$
 \end_inset
 
@@ -4468,7 +4456,7 @@ Note that the sum over
 \end_inset
 
  where 
-\begin_inset Formula $Z^{a}=\left(1,\, f_{0}^{a},\, f_{M-1}^{a},\, f_{0}^{a}f_{M-1}^{a}\right)$
+\begin_inset Formula $Z^{a}=\left(1,\,f_{0}^{a},\,f_{M-1}^{a},\,f_{0}^{a}f_{M-1}^{a}\right)$
 \end_inset
 
 .
@@ -4476,7 +4464,7 @@ Note that the sum over
 \end_layout
 
 \begin_layout Subsection
-Ground Energy Correction
+Ground energy correction
 \end_layout
 
 \begin_layout Standard
@@ -4490,7 +4478,7 @@ reference "eq:olp_DeltaE"
 \end_inset
 
 .
- But in general the calculation is tedious.
+ But in general, the calculation is tedious.
  Let us consider the simplest case that 
 \begin_inset Formula $\psi_{r}$
 \end_inset
@@ -4568,7 +4556,7 @@ reference "eq:cub_h_kl"
 \begin_inset Formula $F^{\dagger}F^{\dagger}$
 \end_inset
 
- and the constant terms make nonzero contribution: 
+ and the constant terms make a nonzero contribution: 
 \begin_inset Formula 
 \[
 \left\langle \cdots h\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle =\frac{2}{M}\left\langle \cdots\left(A_{nm}^{\dagger}F_{n}^{\dagger}F_{m}^{\dagger}+\mu\right)\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle .
@@ -4584,7 +4572,7 @@ To calculate the result of
 \begin_inset Formula $F_{m}$
 \end_inset
 
- in terms of linear combination of 
+ in terms of a linear combination of 
 \begin_inset Formula $f_{k}$
 \end_inset
 
@@ -4604,7 +4592,7 @@ reference "eq:overlap_Ff_relation"
 \end_inset
 
  through the exponential.
- This is done in the Appendix 
+ This is done in Appendix 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:app_AFF"
@@ -4652,7 +4640,7 @@ reference "eq:cub_Amu"
 \end_inset
 
 .
- Finally, the vacuum expectation values on RHS of 
+ Finally, the vacuum expectation values on the rhs of 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:olp_vev_v"
@@ -4679,7 +4667,7 @@ reference "eq:olp_vev_v"
 \begin_inset Formula $\left(-\right)^{P}$
 \end_inset
 
- the signature of permutation 
+ is the signature of permutation 
 \begin_inset Formula $P$
 \end_inset
 
@@ -4687,7 +4675,7 @@ reference "eq:olp_vev_v"
 \begin_inset Formula ${\sum}^{\prime}$
 \end_inset
 
- indicates sum over permutations satisfying 
+ indicates the sum over permutations satisfying 
 \begin_inset Formula 
 \begin{align*}
 P\left(1\right) & <P\left(2\right),\quad P\left(3\right)<P\left(4\right),\cdots,P\left(2n-1\right)<P\left(2n\right),\\
@@ -4700,11 +4688,11 @@ P\left(1\right) & <P\left(3\right)<P\left(5\right)<\cdots<P\left(2n-1\right).
 \end_layout
 
 \begin_layout Standard
-Combining above together, we can calculate the one-loop self-energy of the
- ground state.
+Combining the above together, we can calculate the one-loop self-energy
+ of the ground state.
  As the complete formula is very complicated, we do not bother writing it
  here.
- In appendix 
+ In Appendix 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:app_example"
@@ -4718,17 +4706,17 @@ reference "eq:olp_DeltaE"
 
 \end_inset
 
- to calculate the one-loop self-energies of 
-\begin_inset Formula $M=3,\, s=1$
+ to calculate the one-loop self-energies of the 
+\begin_inset Formula $M=3,\,s=1$
 \end_inset
 
  and 
-\begin_inset Formula $M=3,\, s=2$
+\begin_inset Formula $M=3,\,s=2$
 \end_inset
 
  cases.
  For 
-\begin_inset Formula $M=3,\, s=1$
+\begin_inset Formula $M=3,\,s=1$
 \end_inset
 
 , we have
@@ -4740,7 +4728,7 @@ reference "eq:olp_DeltaE"
 \end_inset
 
  and for 
-\begin_inset Formula $M=3,\, s=2$
+\begin_inset Formula $M=3,\,s=2$
 \end_inset
 
 , we have 
@@ -4771,7 +4759,7 @@ Large
 \begin_inset Formula $M$
 \end_inset
 
- Behavior
+ behavior
 \end_layout
 
 \begin_layout Standard
@@ -4805,20 +4793,20 @@ reference "eq:olp_DeltaE"
 
 \end_inset
 
- only depends on the ration 
+ only depends on the ratio 
 \begin_inset Formula $K/M$
 \end_inset
 
-, therefore, can be considered as 
+ and therefore can be considered as 
 \begin_inset Formula $\mathcal{O}\left(1\right)$
 \end_inset
 
 .
- So when 
+ So, when 
 \begin_inset Formula $M$
 \end_inset
 
- is large 
+ is large, 
 \begin_inset Formula 
 \begin{equation}
 \Delta E_{G}\sim\frac{1}{N^{2}}\sum_{K=1}^{M-1}{\sum_{p,q}}^{\prime}\frac{KLM\left|\det C\right|^{s}}{E_{G}-E_{p}-E_{q}}.\label{eq:olp_largeM}
@@ -4896,7 +4884,7 @@ We then consider the large
 \begin_inset Formula $q$
 \end_inset
 
- can be ground states, and hence, 
+ can be ground states, and hence 
 \begin_inset Formula $1/\left(E_{G}-E_{p}-E_{q}\right)\sim\mathcal{O}\left(M\right)$
 \end_inset
 
@@ -4921,7 +4909,7 @@ reference "eq:diag_ground_energy"
 \begin_inset Formula $M$
 \end_inset
 
--bit ground state and one of the small strings must have even bit number.
+-bit ground state, and one of the small strings must have an even bit number.
  It implies that the ground state of one small chain is forbidden by the
  cyclic constraint 
 \begin_inset CommandInset ref
@@ -4944,7 +4932,7 @@ reference "eq:dia_cyclic_constraint_s"
 \end_layout
 
 \begin_layout Standard
-Combining above together, we have
+Combining the above together, we have
 \begin_inset Formula 
 \begin{equation}
 \Delta E_{G}\sim\begin{cases}
@@ -4968,7 +4956,7 @@ reference "eq:largeM_DeltaE"
 \begin_inset Formula $1+1$
 \end_inset
 
- dimension is regained.
+ dimensions is regained.
  In the lightcone coordinates, 
 \begin_inset Formula $P^{+}$
 \end_inset
@@ -4977,7 +4965,7 @@ reference "eq:largeM_DeltaE"
 \begin_inset Formula $mM$
 \end_inset
 
- and 
+, and 
 \begin_inset Formula $P^{-}$
 \end_inset
 
@@ -4986,7 +4974,7 @@ reference "eq:largeM_DeltaE"
 \end_inset
 
 .
- So the Poincaré invariant dispersion relation 
+ So, the Poincaré invariant dispersion relation 
 \begin_inset Formula $P^{-}\sim1/P^{+}$
 \end_inset
 
@@ -4995,7 +4983,7 @@ reference "eq:largeM_DeltaE"
 \end_inset
 
 .
- Therefore the Lorentz invariance requires 
+ Therefore, the Lorentz invariance requires 
 \begin_inset Formula $s=24$
 \end_inset
 
@@ -5004,7 +4992,7 @@ reference "eq:largeM_DeltaE"
 \begin_inset Formula $s=24$
 \end_inset
 
- case is called protostring model
+ case is called the protostring model
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Thorn:2015wli"
@@ -5021,7 +5009,20 @@ name "sec:Numerical-Results"
 
 \end_inset
 
-Numerical Results
+Numerical results
+\end_layout
+
+\begin_layout Standard
+We have derived a formula for the one-loop correction to the ground energy.
+ As Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:app_example"
+
+\end_inset
+
+ shows, however, the calculation is tedious even for the simplest case.
+ We therefore turn to numerical computation
 \begin_inset Foot
 status open
 
@@ -5039,20 +5040,7 @@ key "Chen:2015GitHub"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-We have derived a formula for the one-loop correction to the ground energy.
- As appendix 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:app_example"
-
-\end_inset
-
- shows, however, the calculation is tedious even for the simplest case.
- We therefore turn to numerical computation.
+.
  As the complexity of the calculation grows dramatically, the highest 
 \begin_inset Formula $M$
 \end_inset
@@ -5065,7 +5053,7 @@ reference "sec:app_example"
 \begin_inset Formula $s=2$
 \end_inset
 
-, and continue decreasing as 
+ and continues decreasing as 
 \begin_inset Formula $s$
 \end_inset
 
@@ -5079,7 +5067,7 @@ reference "sec:app_example"
 \begin_inset Formula $\Delta E$
 \end_inset
 
-, and also, suppress the 
+ and also suppress the 
 \begin_inset Formula $1/N^{2}$
 \end_inset
 
@@ -5121,7 +5109,7 @@ reference "fig:E_compare"
 \end_inset
 
  case.
- The solid lines are exact numerical results and the dashed lines are 
+ The solid lines are exact numerical results, and the dashed lines are 
 \begin_inset Formula $\mathcal{O}\left(1/N^{2}\right)$
 \end_inset
 
@@ -5139,7 +5127,7 @@ reference "fig:E_compare"
 \begin_inset Formula $M=3$
 \end_inset
 
- are lower than the exact results while the perturbation results of 
+ are lower than the exact results, while the perturbation results of 
 \begin_inset Formula $M=5$
 \end_inset
 
@@ -5187,7 +5175,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -5196,11 +5184,11 @@ name "fig:E_compare"
 
 \end_inset
 
-Ground energy as function of 
+Ground energy as a function of 
 \begin_inset Formula $1/N$
 \end_inset
 
- for 
+ for the 
 \begin_inset Formula $s=1,\,\xi=0$
 \end_inset
 
@@ -5208,7 +5196,7 @@ Ground energy as function of
 \begin_inset Formula $s=1.\,\xi=1$
 \end_inset
 
- case.
+ cases.
  The solid lines plot the exact numerical results by the method of ref.
  
 \begin_inset CommandInset citation
@@ -5293,7 +5281,7 @@ Since the power of
 \begin_inset Formula $\Delta E_{i}$
 \end_inset
 
- is one lower than that of 
+ is 1 lower than that of 
 \begin_inset Formula $\Delta E$
 \end_inset
 
@@ -5345,7 +5333,8 @@ The plots of
 \begin_inset Formula $i=K/M$
 \end_inset
 
- are shown in figure 
+ are shown in Fig.
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:SubEvsMxi0"
@@ -5356,7 +5345,7 @@ reference "fig:SubEvsMxi0"
 \begin_inset Formula $\xi=0$
 \end_inset
 
- for all the four plots.
+ for all four plots.
  When 
 \begin_inset Formula $s$
 \end_inset
@@ -5377,7 +5366,7 @@ reference "fig:SubEvsMxi0"
 \begin_inset Formula $K$
 \end_inset
 
- points, for the reason will be clear shortly.
+ points, for a reason will be clear shortly.
  For 
 \begin_inset Formula $s=2,\,3,\,4$
 \end_inset
@@ -5450,7 +5439,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -5472,11 +5461,11 @@ name "fig:SubEvsMxi0"
 \begin_inset Formula $s$
 \end_inset
 
- cases, the curves above horizontal axis are for odd 
+ cases, the curves above the horizontal axis are for odd 
 \begin_inset Formula $K$
 \end_inset
 
- points and the curves below are for even 
+ points, and the curves below are for even 
 \begin_inset Formula $K$
 \end_inset
 
@@ -5515,7 +5504,7 @@ The fact that there are two curves for each
 \begin_inset Formula $K=2$
 \end_inset
 
-, where the former has much lower contribution to 
+, where the former has a much lower contribution to 
 \begin_inset Formula $\Delta E$
 \end_inset
 
@@ -5564,19 +5553,20 @@ reference "eq:dia_cyclic_constraint_s"
 
 \end_inset
 
-, differs only by 
+, differ only by 
 \begin_inset Formula $\mathcal{O}\left(1\right)$
 \end_inset
 
 .
- Now we compare these two cases in the low energy regime, in which the gap
- between energy levels and the lowest energies are at most of order 
+ Now, we compare these two cases in the low energy regime, in which the
+ gap between energy levels and the lowest energies are at most of order
+ 
 \begin_inset Formula $1/M$
 \end_inset
 
 .
  Consider the numbers of states in the low energy regime.
- Because of the cyclic constraint, only chains with even bit number have
+ Because of the cyclic constraint, only chains with an even bit number have
  excited states with energy gaps of order 
 \begin_inset Formula $1/M$
 \end_inset
@@ -5634,7 +5624,7 @@ reference "eq:dia_cyclic_constraint_s"
 \begin_inset Formula $K$
 \end_inset
 
- cases have lower contribution to 
+ cases have a lower contribution to 
 \begin_inset Formula $\Delta E$
 \end_inset
 
@@ -5684,7 +5674,8 @@ reference "fig:SubEvsMs2"
 \begin_inset Formula $\xi=1.5$
 \end_inset
 
- cases show a smooth asymptotic behavior as the cases in figure 
+ cases show a smooth asymptotic behavior as the cases in Fig.
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:SubEvsMxi0"
@@ -5713,16 +5704,16 @@ reference "fig:SubEvsMxi0"
 \begin_inset Formula $\Delta E$
 \end_inset
 
- decrease as 
+ decreases as 
 \begin_inset Formula $M$
 \end_inset
 
  increases.
- So 
+ So, 
 \begin_inset Formula $\Delta E$
 \end_inset
 
- is not bounded from below and the system is not stable.
+ is not bounded from below, and the system is not stable.
  In contrast, when 
 \begin_inset Formula $\xi>1$
 \end_inset
@@ -5731,7 +5722,7 @@ reference "fig:SubEvsMxi0"
 \begin_inset Formula $M$
 \end_inset
 
- increase, which implies a stable system.
+ increases, which implies a stable system.
  This is related to a special feature of the 
 \begin_inset Formula $\xi=1$
 \end_inset
@@ -5762,8 +5753,8 @@ reference "eq:App_ham_subh:1"
 \begin_inset Formula $\phi_{12\cdots s}$
 \end_inset
 
- is a scalar and this term behaves like a scalar potential with negative
- coefficient, which lead to a dangerous instability.
+ is a scalar and this term behaves like a scalar potential with a negative
+ coefficient, which leads to a dangerous instability.
  But when 
 \begin_inset Formula $\xi=1$
 \end_inset
@@ -5841,7 +5832,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -5913,7 +5904,7 @@ reference "fig:EvS"
 \begin_inset Formula $M=5$
 \end_inset
 
- we sampled 
+, we sampled 
 \begin_inset Formula $s$
 \end_inset
 
@@ -5925,7 +5916,7 @@ reference "fig:EvS"
 \begin_inset Formula $M=6$
 \end_inset
 
- only even 
+, only even 
 \begin_inset Formula $s$
 \end_inset
 
@@ -5938,7 +5929,7 @@ reference "fig:EvS"
 \begin_inset Formula $M$
 \end_inset
 
- we choose 
+, we choose 
 \begin_inset Formula $\xi=0,\,1,\,2,\,3$
 \end_inset
 
@@ -5948,11 +5939,11 @@ reference "fig:EvS"
 \end_inset
 
 , all the curves almost rise linearly.
- Of all the four curves, 
+ Of all four curves, 
 \begin_inset Formula $\xi=3$
 \end_inset
 
- is the steepest one and 
+ is the steepest one, and 
 \begin_inset Formula $\xi=1$
 \end_inset
 
@@ -6018,7 +6009,7 @@ reference "fig:EvS"
 \begin_inset Formula $\xi=1$
 \end_inset
 
- has lower slope than others is also related to that 
+ has a lower slope than others is also related to the fact that 
 \begin_inset Formula $\xi=1$
 \end_inset
 
@@ -6056,7 +6047,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -6069,7 +6060,7 @@ name "fig:EvS"
 \begin_inset Formula $\ln\left|\Delta\hat{E}\right|$
 \end_inset
 
- as function of 
+ as a function of 
 \begin_inset Formula $s$
 \end_inset
 
@@ -6149,8 +6140,8 @@ key "Thorn:2017pri"
 
 .
  Out of the 24 dimensions, 16 of them are paired to form 8 compactified
- bosonic dimensions and the rest 8 remain as fermionic dimension.
- Thus, it has the same degree of freedoms as the superstring model.
+ bosonic dimensions, and the rest 8 remain as fermionic dimensions.
+ Thus, it has the same degrees of freedom as the superstring model.
  The large 
 \begin_inset Formula $M$
 \end_inset
@@ -6190,7 +6181,7 @@ The future research of this work can be done in several ways.
 
  cases.
  One can also apply the formalism to other calculations, e.g., four strings
- interaction, or to study higher loop corrections and find the Feynman rules
+ interaction, or to study higher-loop corrections and find the Feynman rules
  of the model.
 \end_layout
 
@@ -6230,7 +6221,7 @@ name "sec:app_hamiltonian"
 
 \end_inset
 
-The Hamiltonian and its action on color singlets
+Hamiltonian and its action on color singlets
 \end_layout
 
 \begin_layout Standard
@@ -6266,7 +6257,7 @@ The Hamiltonian of the model consists of
 \begin_inset Formula $\mathcal{O}\left(1\right)$
 \end_inset
 
- terms are the generalization of the Hamiltonian of 
+ terms are the generalization of the Hamiltonian of the 
 \begin_inset Formula $s=1$
 \end_inset
 
@@ -6416,7 +6407,7 @@ reference "eq:App_ham_Hs_1"
 
 \end_inset
 
- if one identify 
+ if one identifies 
 \begin_inset Formula $\bar{\phi}$
 \end_inset
 
@@ -6449,7 +6440,7 @@ key "Chen:2016hkz,Sun:2014dga"
 
 \end_inset
 
- shows, the 
+ show, the 
 \begin_inset Formula $N=\infty$
 \end_inset
 
@@ -6474,7 +6465,7 @@ By analogy with
 \begin_inset Formula $\Delta H^{s=1}$
 \end_inset
 
- can be generalized to arbitrary 
+ can be generalized to the arbitrary 
 \begin_inset Formula $s$
 \end_inset
 
@@ -6515,12 +6506,12 @@ end{subequations}
 
 \end_inset
 
-Combining two parts together, we have the complete form of Hamiltonian for
- arbitrary 
+Combining the two parts together, we have the complete form of the Hamiltonian
+ for arbitrary 
 \begin_inset Formula $s$
 \end_inset
 
-: 
+, 
 \begin_inset Formula 
 \begin{equation}
 H=\sum_{i=1}^{5}H_{i}+s\xi\Delta H
@@ -6629,7 +6620,7 @@ H_{5}T\left(\theta_{1},\cdots,\theta_{M}\right)\ket{0} & =-2i\sum_{k=1}^{M}\frac
 \begin_inset Formula $\Delta H$
 \end_inset
 
- on single trace state is
+ on a single trace state is
 \begin_inset Formula 
 \[
 \Delta HT\left(\theta_{1},\dots,\theta_{M}\right)\ket{0}=\frac{2}{N}\sum_{i=1}^{M}\sum_{j\neq i+1}^{M}T\left(\theta_{j},\dots\theta_{i}\right)T\left(\theta_{i+1},\dots\theta_{j-1}\right)\ket{0}.
@@ -6670,7 +6661,7 @@ H_{2}T\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right
 \begin_inset Formula $\Delta H$
 \end_inset
 
- on double trace states is
+ on double traces is
 \begin_inset Formula 
 \begin{align*}
 \Delta HT\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right)\ket{0}_{\mathrm{Fussion}} & =\frac{2}{N}\sum_{k=1}^{K}\sum_{l=1}^{L}T\left(\theta_{k+1}\cdots\theta_{k}\eta_{l}\cdots\eta_{l-1}\right)\ket{0}\\
@@ -6685,7 +6676,7 @@ H_{2}T\left(\theta_{1}\cdots\theta_{K}\right)T\left(\eta_{1}\cdots\eta_{L}\right
 \begin_layout Subsection
 \begin_inset CommandInset label
 LatexCommand label
-name "sub:DeltaH"
+name "subsec:DeltaH"
 
 \end_inset
 
@@ -6697,7 +6688,7 @@ Derivation of
 \end_layout
 
 \begin_layout Standard
-It is not obvious of how to generalize 
+It is not obvious how to generalize 
 \begin_inset Formula $\Delta H^{s=1}$
 \end_inset
 
@@ -6714,7 +6705,7 @@ It is not obvious of how to generalize
 
 \end_inset
 
- which has been proved in Appendix E of ref.
+ which has been proven in Appendix E of ref.
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -6727,7 +6718,7 @@ key "Chen:2016hkz"
 \end_inset
 
 .
- Here the color operator 
+ Here, the color operator 
 \begin_inset Formula $G$
 \end_inset
 
@@ -6772,7 +6763,7 @@ G_{\alpha}^{\beta}=\sum_{n=0}^{s}\frac{1}{n!}\left(\bar{\phi}_{a_{1}\cdots a_{n}
 \begin_inset Formula $s=1$
 \end_inset
 
- we have
+, we have
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Chen:2016hkz"
@@ -6831,7 +6822,7 @@ To find
 
 \end_inset
 
- We calculate each term on RHS of 
+ We calculate each term on the rhs of 
 \begin_inset Formula $\tr G^{2}$
 \end_inset
 
@@ -6867,7 +6858,7 @@ To find
 
 \end_inset
 
- Combining above together, we have
+ Combining the above together, we have
 \begin_inset Formula 
 \begin{align*}
 \tr G^{2} & =\sum_{n=0}^{s}\sum_{k=0}^{s}\frac{\left(-1\right)^{nk}}{n!k!}\tr\bar{\phi}_{a_{1}\cdots a_{n}}\normord{\phi_{a_{1}\cdots a_{n}}\bar{\phi}_{b_{1}\cdots b_{k}}}\phi_{b_{1}\cdots b_{k}}\\
@@ -6952,7 +6943,7 @@ Verifying the normalization condition for
 \end_layout
 
 \begin_layout Standard
-In this appendix we show that the conjugate eigenfunction of 
+In this Appendix we show that the conjugate eigenfunction of 
 \begin_inset Formula $s=1$
 \end_inset
 
@@ -7005,7 +6996,11 @@ reference "eq:App_psiG_alpha_prod"
 \end_inset
 
  here.
- But we have verified it by Mathematica program.
+ But we have verified it by the 
+\shape italic
+Mathematica
+\shape default
+ program.
 \end_layout
 
 \end_inset
@@ -7081,7 +7076,7 @@ To show
 
 \end_inset
 
-RHS of 
+The rhs of 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:App_psiG_norm1"
@@ -7107,7 +7102,7 @@ which can be verified by checking that
 
 \begin_inset Formula 
 \[
-\left[\tilde{F}_{k}^{\dagger\pm},-s_{l}+c_{l}\alpha_{M-l}\alpha_{l}\right]=0,\quad k\neq l,\, k\neq M-l.
+\left[\tilde{F}_{k}^{\dagger\pm},-s_{l}+c_{l}\alpha_{M-l}\alpha_{l}\right]=0,\quad k\neq l,\,k\neq M-l.
 \]
 
 \end_inset
@@ -7144,7 +7139,7 @@ Calculation of
 \end_layout
 
 \begin_layout Standard
-In this appendix, we will find the expression of 
+In this Appendix, we will find the expression of 
 \begin_inset Formula $h_{kl}^{a}$
 \end_inset
 
@@ -7168,7 +7163,7 @@ h_{kl}=-2\left(1-2\theta_{k}\frac{d}{d\theta_{k}}\right)-2\theta_{k}\frac{d}{d\t
 
 \end_inset
 
-We now temporary drop the last two constant terms and will add them back
+We now temporarily drop the last two constant terms and will add them back
  in the end of the calculation.
 \end_layout
 
@@ -7207,7 +7202,7 @@ reference "eq:dia_fourier:2"
 
 \end_inset
 
- Substituting above into 
+ Substituting the above into 
 \begin_inset Formula $h_{kl}$
 \end_inset
 
@@ -7505,7 +7500,7 @@ Calculation of
 \end_layout
 
 \begin_layout Standard
-In this appendix we will derive the formula 
+In this Appendix we will derive the formula 
 \begin_inset Formula 
 \begin{equation}
 \left\langle \cdots\bar{A}_{nm}F_{n}^{\dagger}F_{m}^{\dagger}\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle =-\frac{2}{M}\left[\tr\left(S^{*}C^{-1}\bar{A}\right)+B_{mn}\frac{\partial}{\partial D_{mn}}\right]\left\langle \cdots\exp\left(\frac{1}{2}f_{k}^{\dagger}D_{kl}f_{l}^{\dagger}\right)\right\rangle \label{eq:App_AFF_1}
@@ -7521,7 +7516,7 @@ In this appendix we will derive the formula
 \begin_inset Formula $B=C^{-1}\bar{A}\left(C^{-1}\right)^{T}$
 \end_inset
 
-, and relations among 
+, and the relations among 
 \begin_inset Formula $F_{n}^{\dagger}$
 \end_inset
 
@@ -7557,7 +7552,7 @@ Let
 \begin_inset Formula $\ket{G}=\exp\left(X\right)\ket{0}$
 \end_inset
 
-, then 
+; then 
 \family roman
 \series medium
 \shape up
@@ -7577,7 +7572,7 @@ F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\ket{G}=\exp\left(X\right)\left(\bar{A
 
 \end_inset
 
-Now let us calculate each term in the parenthesis of RHS of eq.
+Now let us calculate each term in the parentheses of the rhs of eq.
  
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -7623,7 +7618,7 @@ label{eq:App_AFF_subres}
 
 \end_inset
 
-For the second term of RHS of 
+For the second term of the rhs of 
 \family roman
 \series medium
 \shape up
@@ -7670,7 +7665,7 @@ reference "eq:App_AFF_res1"
 \begin_inset Formula $\left[AB,C\right]=A\left\{ B,C\right\} -\left\{ A,C\right\} B$
 \end_inset
 
- and in the last step the property that 
+ and in the last step we used the property that 
 \begin_inset Formula $D_{kl}$
 \end_inset
 
@@ -7689,7 +7684,7 @@ reference "eq:App_AFF_res1"
 
 \end_inset
 
- It then follows 
+ It then follows that
 \begin_inset Formula 
 \begin{equation}
 \left[X,F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\right]\ket{0}=\left[2f_{k}^{\dagger}\left(DS^{\dagger}\bar{A}C^{*}\right)_{kl}f_{l}^{\dagger}-\tr\left(\bar{A}S^{*}DS^{\dagger}\right)\right]\ket{0}.\label{eq:App_AFF_subres:2}
@@ -7697,7 +7692,7 @@ reference "eq:App_AFF_res1"
 
 \end_inset
 
- For the third term RHS of 
+ For the third term of the rhs of 
 \family roman
 \series medium
 \shape up
@@ -7786,7 +7781,7 @@ F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\ket{G} & =\left[f_{k}^{\dagger}\left(
 
 \end_inset
 
- where in the third equality we antisymmetrized 
+ where in the third equality we antisymmetrized the 
 \begin_inset Formula $2DS^{\dagger}\bar{A}C^{*}$
 \end_inset
 
@@ -7803,7 +7798,7 @@ F_{n}^{\dagger}\bar{A}_{nm}F_{m}^{\dagger}\ket{G} & =\left[f_{k}^{\dagger}\left(
 \end_inset
 
  are antisymmetric matrices.
- Now 
+ Now, 
 \begin_inset Formula 
 \[
 C^{*}+S^{*}D=C^{*}-C^{*}D^{*}D=C^{*}\left(I-D^{*}D\right)=C^{*}\left(I+DD^{\dagger}\right)^{T}=C^{*}\left(C^{-1}C^{-1\dagger}\right)^{T}=\left(C^{-1}\right)^{T},
@@ -7811,7 +7806,7 @@ C^{*}+S^{*}D=C^{*}-C^{*}D^{*}D=C^{*}\left(I-D^{*}D\right)=C^{*}\left(I+DD^{\dagg
 
 \end_inset
 
- where in the second to last equality 
+ where in the second-to-last equality 
 \begin_inset Formula $I+DD^{\dagger}=C^{-1}C^{-1\dagger}$
 \end_inset
 
@@ -7864,7 +7859,7 @@ Examples of
 \end_layout
 
 \begin_layout Standard
-In this appendix, as a demo of using 
+In this Appendix, as a demo of using 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:olp_DeltaE"
@@ -7872,12 +7867,12 @@ reference "eq:olp_DeltaE"
 \end_inset
 
  to calculate one-loop self-energy, let us consider the one-loop self-energy
- for the ground state of 
-\begin_inset Formula $M=3,\, s=1$
+ for the ground state of the 
+\begin_inset Formula $M=3,\,s=1$
 \end_inset
 
  and 
-\begin_inset Formula $M=3,\, s=2$
+\begin_inset Formula $M=3,\,s=2$
 \end_inset
 
  cases.
@@ -7885,7 +7880,7 @@ reference "eq:olp_DeltaE"
 \begin_inset Formula $M=3$
 \end_inset
 
-, we only need to calculate 
+, we only need to calculate the 
 \begin_inset Formula $K=1$
 \end_inset
 
@@ -7992,7 +7987,7 @@ For
 \begin_inset Formula $2$
 \end_inset
 
--bit chains are shown in table 
+-bit chains are shown in Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Energy-eigenstates-1"
@@ -8001,6 +7996,10 @@ reference "tab:Energy-eigenstates-1"
 
 .
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -8015,11 +8014,11 @@ status open
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="5">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -8197,7 +8196,7 @@ odd
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -8236,7 +8235,7 @@ The contribution of
 
 \end_inset
 
-So we need to calculate 
+So, we need to calculate 
 \begin_inset Formula $\left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{V,W}$
 \end_inset
 
@@ -8263,7 +8262,7 @@ So we need to calculate
 
 \end_inset
 
- Likewise
+ Likewise,
 \begin_inset Formula 
 \begin{align*}
 \left\langle F_{1}^{\left(2\right)}f_{0}\right\rangle _{W} & =\frac{4}{M}B_{01}^{\left(W\right)}=2\sqrt{\frac{2}{3}}e^{3i\pi/4},\\
@@ -8309,7 +8308,7 @@ For
 \end_inset
 
  case.
- But as table 
+ But as Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:Energy-eigenstates-2"
@@ -8348,6 +8347,10 @@ Since we have calculated the
 
 .
  
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -8362,11 +8365,11 @@ status open
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="5">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -8600,7 +8603,7 @@ even
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -8660,7 +8663,7 @@ For
 
 \end_inset
 
- Substituting above into eq.
+ Substituting the above into eq.
  
 \begin_inset CommandInset ref
 LatexCommand eqref
